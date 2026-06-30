@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You – TheBestBundle</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="TheBestBundle Home">
+        <span class="logo-text">TheBestBundle</span>
+      </a>
+      <div class="lang-switcher" id="langSwitcher" role="navigation" aria-label="Language selector">
+        <button class="lang-btn active" data-lang="en" aria-label="English">🇺🇸 EN</button>
+        <button class="lang-btn" data-lang="ht" aria-label="Kreyòl Ayisyen">🇭🇹 Kreyòl</button>
+        <button class="lang-btn" data-lang="fr" aria-label="Français">🇫🇷 FR</button>
+        <button class="lang-btn" data-lang="es" aria-label="Español">🇪🇸 ES</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== THANK YOU PAGE ===================== -->
+  <main class="ty-page">
+    <div class="ty-card">
+
+      <div class="ty-icon">🎉</div>
+      <h1 class="ty-title" data-i18n="tyTitle">Payment Successful!</h1>
+      <p class="ty-subtitle" data-i18n="tySubtitle">Choose your products below. We'll email them in 10 minutes.</p>
+
+      <!-- Product Selection Form (submitted via Netlify Forms) -->
+      <form
+        name="product-selection"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        id="productForm"
+        onsubmit="handleFormSubmit(event)"
+      >
+        <!-- Netlify honeypot (hidden from humans) -->
+        <p hidden><label>Don't fill this out: <input name="bot-field" /></label></p>
+
+        <!-- Hidden fields populated by JS -->
+        <input type="hidden" name="pack_id" id="hiddenPackId" value="" />
+        <input type="hidden" name="session_id" id="hiddenSessionId" value="" />
+        <input type="hidden" name="selected_products" id="hiddenSelectedProducts" value="" />
+
+        <!-- Customer Email -->
+        <div class="ty-email-field">
+          <label for="customerEmail" data-i18n="tyEmailLabel">Your Email Address</label>
+          <input
+            type="email"
+            id="customerEmail"
+            name="customer_email"
+            required
+            autocomplete="email"
+            data-i18n-placeholder="tyEmailPlaceholder"
+            placeholder="you@example.com"
+          />
+        </div>
+
+        <!-- Product List -->
+        <p class="ty-form-title" data-i18n="tyPickTitle">Select Your Products</p>
+
+        <div class="ty-counter">
+          <span data-i18n="tyCounterPre">You can select up to</span>
+          <strong id="maxCount">—</strong>
+          <span data-i18n="tyCounterPost">products.</span>
+          <span data-i18n="tyCounterSelected">Selected:</span>
+          <strong id="selectedCount">0</strong>
+        </div>
+
+        <div class="products-list" id="productsList">
+          <!-- Ebooks -->
+          <label class="product-item">
+            <input type="checkbox" name="products" value="Ebook – Digital Marketing Mastery" />
+            <span>📘 Digital Marketing Mastery</span>
+          </label>
+          <label class="product-item">
+            <input type="checkbox" name="products" value="Ebook – Social Media Growth Guide" />
+            <span>📗 Social Media Growth Guide</span>
+          </label>
+          <label class="product-item">
+            <input type="checkbox" name="products" value="Ebook – Email Marketing Blueprint" />
+            <span>📙 Email Marketing Blueprint</span>
+          </label>
+          <label class="product-item">
+            <input type="checkbox" name="products" value="Ebook – Passive Income Secrets" />
+            <span>📕 Passive Income Secrets</span>
+          </label>
+          <label class="product-item">
+            <input type="checkbox" name="products" value="Ebook – Freelance Success Formula" />
+            <span>📒 Freelance Success Formula</span>
+          </label>
+          <label class="product-item">
+            <input type="checkbox" name="products" value="Ebook – Content Creation Bible" />
+            <span>📓 Content Creation Bible</span>
+          </label>
+          <label class="product-item">
+            <input type="checkbox" name="products" value="Ebook – SEO Fundamentals" />
+            <span>📔 SEO Fundamentals</span>
+          </label>
+          <label class="product-item">
+            <input type="checkbox" name="products" value="Ebook – E-commerce Starter Guide" />
+            <span>📖 E-commerce Starter Guide</span>
+          </label>
+          <!-- Templates -->
+          <label class="product-item">
+            <input type="checkbox" name="products" value="Template – Business Plan Canva Kit" />
+            <span>🎨 Business Plan Canva Kit</span>
+          </label>
+          <label class="product-item">
+            <input type="checkbox" name="products" value="Template – Social Media Content Calendar" />
+            <span>📅 Social Media Content Calendar</span>
+          </label>
+          <label class="product-item">
+            <input type="checkbox" name="products" value="Template – Invoice & Proposal Pack" />
+            <span>🧾 Invoice & Proposal Pack</span>
+          </label>
+          <label class="product-item">
+            <input type="checkbox" name="products" value="Template – Landing Page Figma Template" />
+            <span>🖥️ Landing Page Figma Template</span>
+          </label>
+          <label class="product-item">
+            <input type="checkbox" name="products" value="Template – Email Newsletter Kit" />
+            <span>✉️ Email Newsletter Kit</span>
+          </label>
+          <label class="product-item">
+            <input type="checkbox" name="products" value="Template – Brand Identity Starter Kit" />
+            <span>🎯 Brand Identity Starter Kit</span>
+          </label>
+          <label class="product-item">
+            <input type="checkbox" name="products" value="Template – YouTube Channel Art Pack" />
+            <span>▶️ YouTube Channel Art Pack</span>
+          </label>
+          <label class="product-item">
+            <input type="checkbox" name="products" value="Template – Digital Product Launch Kit" />
+            <span>🚀 Digital Product Launch Kit</span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-gold btn-pack ty-submit-btn" data-i18n="tySubmitBtn">
+          Send My Products →
+        </button>
+
+      </form>
+
+      <!-- Success message (shown after submit) -->
+      <div class="ty-success-msg" id="tySuccessMsg" data-i18n="tySuccessMsg" role="alert">
+        ✅ Your selection has been received! Check your email in 10 minutes.
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span class="logo-text footer-logo">TheBestBundle</span>
+      <p class="footer-copy">© 2026 TheBestBundle. <span data-i18n="footerRights">All rights reserved.</span></p>
+    </div>
+  </footer>
+
+  <script>
+    /* ============================================================
+       Thank-You Page Script
+       ============================================================ */
+
+    /* ---------- Pack limits ---------- */
+    const PACK_LIMITS = {
+      pack2:  2,
+      pack3:  3,
+      pack5:  5,
+      pack10: null  // null = unlimited (all products)
+    };
+
+    /* ---------- Translations (subset for this page) ---------- */
+    const TY_TRANSLATIONS = {
+      en: {
+        tyTitle:           'Payment Successful!',
+        tySubtitle:        "Choose your products below. We'll email them in 10 minutes.",
+        tyEmailLabel:      'Your Email Address',
+        tyEmailPlaceholder:'you@example.com',
+        tyPickTitle:       'Select Your Products',
+        tyCounterPre:      'You can select up to',
+        tyCounterPost:     'products.',
+        tyCounterSelected: 'Selected:',
+        tySubmitBtn:       'Send My Products →',
+        tySuccessMsg:      '✅ Your selection has been received! Check your email in 10 minutes.',
+        footerRights:      'All rights reserved.'
+      },
+      ht: {
+        tyTitle:           'Peman an Reyisi!',
+        tySubtitle:        'Chwazi pwodui ou vle yo anba a. N ap voye yo nan imèl ou nan 10 minit.',
+        tyEmailLabel:      'Adrès Imèl Ou',
+        tyEmailPlaceholder:'ou@egzanp.com',
+        tyPickTitle:       'Chwazi Pwodui Ou Yo',
+        tyCounterPre:      'Ou ka chwazi jiska',
+        tyCounterPost:     'pwodui.',
+        tyCounterSelected: 'Chwazi:',
+        tySubmitBtn:       'Voye Pwodui Mwen Yo →',
+        tySuccessMsg:      '✅ Nou resevwa chwa ou! Tcheke imèl ou nan 10 minit.',
+        footerRights:      'Tout dwa rezève.'
+      },
+      fr: {
+        tyTitle:           'Paiement Réussi !',
+        tySubtitle:        'Choisissez vos produits ci-dessous. Nous vous les enverrons par e-mail dans 10 minutes.',
+        tyEmailLabel:      'Votre Adresse E-mail',
+        tyEmailPlaceholder:'vous@exemple.com',
+        tyPickTitle:       'Sélectionnez Vos Produits',
+        tyCounterPre:      'Vous pouvez sélectionner jusqu\'à',
+        tyCounterPost:     'produits.',
+        tyCounterSelected: 'Sélectionnés :',
+        tySubmitBtn:       'Envoyer Mes Produits →',
+        tySuccessMsg:      '✅ Votre sélection a été reçue ! Vérifiez votre e-mail dans 10 minutes.',
+        footerRights:      'Tous droits réservés.'
+      },
+      es: {
+        tyTitle:           '¡Pago Exitoso!',
+        tySubtitle:        'Elige tus productos abajo. Te los enviaremos por correo en 10 minutos.',
+        tyEmailLabel:      'Tu Dirección de Correo',
+        tyEmailPlaceholder:'tu@ejemplo.com',
+        tyPickTitle:       'Selecciona Tus Productos',
+        tyCounterPre:      'Puedes seleccionar hasta',
+        tyCounterPost:     'productos.',
+        tyCounterSelected: 'Seleccionados:',
+        tySubmitBtn:       'Enviar Mis Productos →',
+        tySuccessMsg:      '✅ ¡Tu selección fue recibida! Revisa tu correo en 10 minutos.',
+        footerRights:      'Todos los derechos reservados.'
+      }
+    };
+
+    /* ---------- Read URL params ---------- */
+    function getUrlParam(name) {
+      return new URLSearchParams(window.location.search).get(name) || '';
+    }
+
+    /* ---------- Apply language ---------- */
+    function applyLang(lang) {
+      const t = TY_TRANSLATIONS[lang] || TY_TRANSLATIONS['en'];
+      document.querySelectorAll('[data-i18n]').forEach(function (el) {
+        const key = el.getAttribute('data-i18n');
+        if (t[key] !== undefined) el.innerHTML = t[key];
+      });
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(function (el) {
+        const key = el.getAttribute('data-i18n-placeholder');
+        if (t[key] !== undefined) el.setAttribute('placeholder', t[key]);
+      });
+      document.documentElement.setAttribute('lang', lang);
+      document.querySelectorAll('.lang-btn').forEach(function (btn) {
+        btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+      });
+      try { localStorage.setItem('tbb_lang', lang); } catch(e){}
+    }
+
+    /* ---------- Init ---------- */
+    document.addEventListener('DOMContentLoaded', function () {
+      const packId    = getUrlParam('pack') || 'pack2';
+      const sessionId = getUrlParam('session_id') || '';
+      const limit     = PACK_LIMITS[packId];
+
+      // Populate hidden fields
+      document.getElementById('hiddenPackId').value    = packId;
+      document.getElementById('hiddenSessionId').value = sessionId;
+
+      // Set max count display
+      const maxCountEl = document.getElementById('maxCount');
+      if (limit === null) {
+        maxCountEl.textContent = '∞';
+      } else {
+        maxCountEl.textContent = limit;
+      }
+
+      // Checkbox logic: enforce limit
+      const checkboxes = document.querySelectorAll('#productsList input[type="checkbox"]');
+      const selectedCountEl = document.getElementById('selectedCount');
+
+      function updateCounter() {
+        const checked = document.querySelectorAll('#productsList input[type="checkbox"]:checked');
+        selectedCountEl.textContent = checked.length;
+
+        // Collect selected product names for hidden field
+        const selected = Array.from(checked).map(cb => cb.value);
+        document.getElementById('hiddenSelectedProducts').value = selected.join(' | ');
+
+        // Enforce limit: disable unchecked if at limit
+        if (limit !== null) {
+          checkboxes.forEach(function (cb) {
+            if (!cb.checked) {
+              cb.disabled = checked.length >= limit;
+              cb.closest('.product-item').style.opacity = checked.length >= limit ? '0.4' : '1';
+            }
+          });
+        }
+
+        // Style selected items
+        checkboxes.forEach(function (cb) {
+          cb.closest('.product-item').classList.toggle('selected', cb.checked);
+        });
+      }
+
+      checkboxes.forEach(function (cb) {
+        cb.addEventListener('change', updateCounter);
+      });
+
+      updateCounter();
+
+      // Language switcher
+      document.querySelectorAll('.lang-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          applyLang(this.getAttribute('data-lang'));
+        });
+      });
+
+      // Detect saved/browser language
+      let savedLang = 'en';
+      try {
+        const stored = localStorage.getItem('tbb_lang');
+        if (stored && TY_TRANSLATIONS[stored]) savedLang = stored;
+      } catch(e){}
+      applyLang(savedLang);
+    });
+
+    /* ---------- Form Submit ---------- */
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const form = document.getElementById('productForm');
+      const data = new FormData(form);
+
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(data).toString()
+      })
+      .then(function (res) {
+        if (res.ok) {
+          form.style.display = 'none';
+          const msg = document.getElementById('tySuccessMsg');
+          msg.style.display = 'block';
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+          throw new Error('Form submission failed.');
+        }
+      })
+      .catch(function (err) {
+        alert('Error submitting form. Please try again or contact support.');
+        console.error(err);
+      });
+    }
+  </script>
+
+</body>
+</html>
