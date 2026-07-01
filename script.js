@@ -7,7 +7,7 @@
 
 /* ---------- Stripe Public Key ---------- */
 const STRIPE_PUBLIC_KEY = 'pk_live_51TXX89Rtp4gVtODydZxYlNUY39a726EJikJoAJQMLvlKcZ1ATvfaqqgVP0Abhpy7cguHNl3lfriosXNxQGDUfjQz00LccqSNa6';
-
+const stripe = Stripe(STRIPE_PUBLIC_KEY);
 /* ---------- Prices Object ---------- */
 const PRI = {
   pack2:  37,
