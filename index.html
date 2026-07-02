@@ -1,195 +1,154 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Best Bundle - 10 E-books Business + PLR</title>
+    <title>E-book Store | PLR Rights</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- HEADER -->
     <header class="header">
         <div class="container">
-            <div class="logo">The Best Bundle</div>
-            <nav class="nav">
-                <a href="#books">E-books</a>
-                <a href="#packs">Packs</a>
-                <a href="#faq">FAQ</a>
-                <button class="cart-btn" onclick="openCart()">Panier</button>
-            </nav>
+            <div class="logo">E-book Store</div>
+            <div class="cart-icon" onclick="openCart()">
+                🛒 <span id="cart-count">0</span>
+            </div>
         </div>
     </header>
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="container">
-            <h1>10 E-books Business Exclusifs</h1>
-            <p>Tous inclus avec <strong>DROIT PLR</strong> : Modifiez, Revendez, Gardez 100% des profits</p>
-            <a href="#books" class="cta-btn">Voir les E-books</a>
-        </div>
-    </section>
+    <main class="container">
+        <section class="hero">
+            <h1>10 Premium E-books with PLR Rights</h1>
+            <p>Buy once. Sell unlimited times. Keep 100% of profits.</p>
+        </section>
 
-    <!-- BOOKS SECTION -->
-    <section class="books-section" id="books">
-        <div class="container">
-            <h2 class="section-title">Nos 10 E-books Business</h2>
-            <p style="text-align: center; margin-bottom: 3rem; color: #6b7280;">Chaque e-book à <strong>27€</strong> avec DROIT PLR inclus</p>
-            
-            <div class="books-grid">
-                <!-- ROW 1 -->
-                <div class="book-card">
-                    <img src="img/decouvre-ta-niche-parfaite.jpg" alt="Decouvre ta niche parfaite" class="book-cover">
-                    <h3 class="book-title">Decouvre ta niche parfaite</h3>
-                    <div class="book-price">27€</div>
-                    <button class="add-to-cart-btn" onclick="handleSingleCheckout('decouvre-ta-niche-parfaite')">Acheter - 27€</button>
-                    <button class="add-to-cart-btn secondary" onclick="addToCart('decouvre-ta-niche-parfaite', 'Decouvre ta niche parfaite')">Ajouter au panier</button>
-                </div>
-
-                <div class="book-card">
-                    <img src="img/ton-plan-daction-en-business.jpg" alt="ton plan d'action en business" class="book-cover">
-                    <h3 class="book-title">ton plan d'action en business</h3>
-                    <div class="book-price">27€</div>
-                    <button class="add-to-cart-btn" onclick="handleSingleCheckout('ton-plan-daction-en-business')">Acheter - 27€</button>
-                    <button class="add-to-cart-btn secondary" onclick="addToCart('ton-plan-daction-en-business', 'ton plan d\'action en business')">Ajouter au panier</button>
-                </div>
-
-                <div class="book-card">
-                    <img src="img/comment-etre-finance-rapidement.jpg" alt="Comment Être Financé Rapidement" class="book-cover">
-                    <h3 class="book-title">Comment Être Financé Rapidement</h3>
-                    <div class="book-price">27€</div>
-                    <button class="add-to-cart-btn" onclick="handleSingleCheckout('comment-etre-finance-rapidement')">Acheter - 27€</button>
-                    <button class="add-to-cart-btn secondary" onclick="addToCart('comment-etre-finance-rapidement', 'Comment Être Financé Rapidement')">Ajouter au panier</button>
-                </div>
-
-                <div class="book-card">
-                    <img src="img/protege-ton-entreprise-legalement.jpg" alt="Protège ton Entreprise Légalement" class="book-cover">
-                    <h3 class="book-title">Protège ton Entreprise Légalement</h3>
-                    <div class="book-price">27€</div>
-                    <button class="add-to-cart-btn" onclick="handleSingleCheckout('protege-ton-entreprise-legalement')">Acheter - 27€</button>
-                    <button class="add-to-cart-btn secondary" onclick="addToCart('protege-ton-entreprise-legalement', 'Protège ton Entreprise Légalement')">Ajouter au panier</button>
-                </div>
-
-                <div class="book-card">
-                    <img src="img/cree-une-presence-en-ligne.jpg" alt="Crée une presence en ligne" class="book-cover">
-                    <h3 class="book-title">Crée une presence en ligne</h3>
-                    <div class="book-price">27€</div>
-                    <button class="add-to-cart-btn" onclick="handleSingleCheckout('cree-une-presence-en-ligne')">Acheter - 27€</button>
-                    <button class="add-to-cart-btn secondary" onclick="addToCart('cree-une-presence-en-ligne', 'Crée une presence en ligne')">Ajouter au panier</button>
-                </div>
-
-                <!-- ROW 2 -->
-                <div class="book-card">
-                    <img src="img/traffic-leads-ventes-le-systeme.jpg" alt="traffic leads ventes Le système" class="book-cover">
-                    <h3 class="book-title">traffic leads ventes Le système</h3>
-                    <div class="book-price">27€</div>
-                    <button class="add-to-cart-btn" onclick="handleSingleCheckout('traffic-leads-ventes-le-systeme')">Acheter - 27€</button>
-                    <button class="add-to-cart-btn secondary" onclick="addToCart('traffic-leads-ventes-le-systeme', 'traffic leads ventes Le système')">Ajouter au panier</button>
-                </div>
-
-                <div class="book-card">
-                    <img src="img/discipline-financiere.jpg" alt="Discipline Financière" class="book-cover">
-                    <h3 class="book-title">Discipline Financière</h3>
-                    <div class="book-price">27€</div>
-                    <button class="add-to-cart-btn" onclick="handleSingleCheckout('discipline-financiere')">Acheter - 27€</button>
-                    <button class="add-to-cart-btn secondary" onclick="addToCart('discipline-financiere', 'Discipline Financière')">Ajouter au panier</button>
-                </div>
-
-                <div class="book-card">
-                    <img src="img/lart-de-vendre-en-2026.jpg" alt="l'art de vendre en 2026" class="book-cover">
-                    <h3 class="book-title">l'art de vendre en 2026</h3>
-                    <div class="book-price">27€</div>
-                    <button class="add-to-cart-btn" onclick="handleSingleCheckout('lart-de-vendre-en-2026')">Acheter - 27€</button>
-                    <button class="add-to-cart-btn secondary" onclick="addToCart('lart-de-vendre-en-2026', 'l\'art de vendre en 2026')">Ajouter au panier</button>
-                </div>
-
-                <div class="book-card">
-                    <img src="img/de-salaries-a-mentalite-dentrepreneur.jpg" alt="De salariés à Mentalité d'entrepreneur" class="book-cover">
-                    <h3 class="book-title">De salariés à Mentalité d'entrepreneur</h3>
-                    <div class="book-price">27€</div>
-                    <button class="add-to-cart-btn" onclick="handleSingleCheckout('de-salaries-a-mentalite-dentrepreneur')">Acheter - 27€</button>
-                    <button class="add-to-cart-btn secondary" onclick="addToCart('de-salaries-a-mentalite-dentrepreneur', 'De salariés à Mentalité d\'entrepreneur')">Ajouter au panier</button>
-                </div>
-
-                <div class="book-card">
-                    <img src="img/automatise-ton-business-en-30-jours.jpg" alt="Automatise Ton Business en 30 Jours" class="book-cover">
-                    <h3 class="book-title">Automatise Ton Business en 30 Jours</h3>
-                    <div class="book-price">27€</div>
-                    <button class="add-to-cart-btn" onclick="handleSingleCheckout('automatise-ton-business-en-30-jours')">Acheter - 27€</button>
-                    <button class="add-to-cart-btn secondary" onclick="addToCart('automatise-ton-business-en-30-jours', 'Automatise Ton Business en 30 Jours')">Ajouter au panier</button>
-                </div>
+        <section class="books-grid">
+            <!-- Row 1 -->
+            <div class="book-card">
+                <img src="img/decouvre-ta-niche-parfaite.jpg" alt="Find Your Perfect Niche">
+                <h3>Find Your Perfect Niche</h3>
+                <div class="book-price">$27</div>
+                <button class="buy-btn" onclick="handleSingleCheckout('decouvre-ta-niche-parfaite')">Buy - $27</button>
+                <button class="add-to-cart-btn" onclick="addToCart('decouvre-ta-niche-parfaite', 'Find Your Perfect Niche')">Add to Cart</button>
             </div>
-        </div>
-    </section>
 
-    <!-- PACKS SECTION -->
-    <section class="packs-section" id="packs">
-        <div class="container">
-            <h2 class="section-title">Packs Économiques + DROIT PLR</h2>
+            <div class="book-card">
+                <img src="img/facebook-marketplace.jpg" alt="Facebook Marketplace Mastery">
+                <h3>Facebook Marketplace Mastery</h3>
+                <div class="book-price">$27</div>
+                <button class="buy-btn" onclick="handleSingleCheckout('facebook-marketplace')">Buy - $27</button>
+                <button class="add-to-cart-btn" onclick="addToCart('facebook-marketplace', 'Facebook Marketplace Mastery')">Add to Cart</button>
+            </div>
+
+            <div class="book-card">
+                <img src="img/start-at-home.jpg" alt="Start a Business from Home">
+                <h3>Start a Business from Home</h3>
+                <div class="book-price">$27</div>
+                <button class="buy-btn" onclick="handleSingleCheckout('start-at-home')">Buy - $27</button>
+                <button class="add-to-cart-btn" onclick="addToCart('start-at-home', 'Start a Business from Home')">Add to Cart</button>
+            </div>
+
+            <div class="book-card">
+                <img src="img/organise-ton-temps.jpg" alt="Master Your Time">
+                <h3>Master Your Time</h3>
+                <div class="book-price">$27</div>
+                <button class="buy-btn" onclick="handleSingleCheckout('organise-ton-temps')">Buy - $27</button>
+                <button class="add-to-cart-btn" onclick="addToCart('organise-ton-temps', 'Master Your Time')">Add to Cart</button>
+            </div>
+
+            <div class="book-card">
+                <img src="img/child-sleep.jpg" alt="Baby Sleep Guide">
+                <h3>Baby Sleep Guide</h3>
+                <div class="book-price">$27</div>
+                <button class="buy-btn" onclick="handleSingleCheckout('child-sleep')">Buy - $27</button>
+                <button class="add-to-cart-btn" onclick="addToCart('child-sleep', 'Baby Sleep Guide')">Add to Cart</button>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="book-card">
+                <img src="img/positive-baby.jpg" alt="Positive Parenting">
+                <h3>Positive Parenting</h3>
+                <div class="book-price">$27</div>
+                <button class="buy-btn" onclick="handleSingleCheckout('positive-baby')">Buy - $27</button>
+                <button class="add-to-cart-btn" onclick="addToCart('positive-baby', 'Positive Parenting')">Add to Cart</button>
+            </div>
+
+            <div class="book-card">
+                <img src="img/how-to-beat-bad-boss.jpg" alt="How to Beat a Bad Boss">
+                <h3>How to Beat a Bad Boss</h3>
+                <div class="book-price">$27</div>
+                <button class="buy-btn" onclick="handleSingleCheckout('how-to-beat-bad-boss')">Buy - $27</button>
+                <button class="add-to-cart-btn" onclick="addToCart('how-to-beat-bad-boss', 'How to Beat a Bad Boss')">Add to Cart</button>
+            </div>
+
+            <div class="book-card">
+                <img src="img/women-with-adhd.jpg" alt="Women with ADHD">
+                <h3>Women with ADHD</h3>
+                <div class="book-price">$27</div>
+                <button class="buy-btn" onclick="handleSingleCheckout('women-with-adhd')">Buy - $27</button>
+                <button class="add-to-cart-btn" onclick="addToCart('women-with-adhd', 'Women with ADHD')">Add to Cart</button>
+            </div>
+
+            <div class="book-card">
+                <img src="img/365-days-couple.jpg" alt="365 Days for Couples">
+                <h3>365 Days for Couples</h3>
+                <div class="book-price">$27</div>
+                <button class="buy-btn" onclick="handleSingleCheckout('365-days-couple')">Buy - $27</button>
+                <button class="add-to-cart-btn" onclick="addToCart('365-days-couple', '365 Days for Couples')">Add to Cart</button>
+            </div>
+
+            <div class="book-card">
+                <img src="img/365-jours-bonheur.jpg" alt="365 Days of Happiness">
+                <h3>365 Days of Happiness</h3>
+                <div class="book-price">$27</div>
+                <button class="buy-btn" onclick="handleSingleCheckout('365-jours-bonheur')">Buy - $27</button>
+                <button class="add-to-cart-btn" onclick="addToCart('365-jours-bonheur', '365 Days of Happiness')">Add to Cart</button>
+            </div>
+        </section>
+
+        <section class="packs">
+            <h2>Save with Bundles</h2>
             <div class="packs-grid">
                 <div class="pack-card">
-                    <h3>Pack 3 E-books</h3>
-                    <div class="pack-price">37€</div>
-                    <p>Choisis 3 e-books au panier</p>
-                    <button class="pack-btn" onclick="selectPack('3-books', this)">Sélectionner</button>
+                    <h3>3 E-books Pack</h3>
+                    <div class="pack-price">$37</div>
+                    <p>Save $44</p>
+                    <button class="pack-btn" onclick="selectPack('3-books', this)">Select Pack</button>
                 </div>
                 <div class="pack-card">
-                    <h3>Pack 5 E-books</h3>
-                    <div class="pack-price">57€</div>
-                    <p>Choisis 5 e-books au panier</p>
-                    <button class="pack-btn" onclick="selectPack('5-books', this)">Sélectionner</button>
-                </div>
-                <div class="pack-card">
-                    <h3>Pack 8 E-books</h3>
-                    <div class="pack-price">87€</div>
-                    <p>Choisis 8 e-books au panier</p>
-                    <button class="pack-btn" onclick="selectPack('8-books', this)">Sélectionner</button>
+                    <h3>5 E-books Pack</h3>
+                    <div class="pack-price">$57</div>
+                    <p>Save $78</p>
+                    <button class="pack-btn" onclick="selectPack('5-books', this)">Select Pack</button>
                 </div>
                 <div class="pack-card featured">
-                    <div class="badge">MEILLEURE OFFRE</div>
-                    <h3>Pack Complet 10 E-books</h3>
-                    <div class="pack-price">157€</div>
-                    <p>Tous les e-books + <strong>DROIT PLR</strong></p>
-                    <button class="pack-btn" onclick="selectPack('10-books', this)">Sélectionner</button>
+                    <h3>8 E-books Pack</h3>
+                    <div class="pack-price">$87</div>
+                    <p>Save $129</p>
+                    <button class="pack-btn" onclick="selectPack('8-books', this)">Select Pack</button>
+                </div>
+                <div class="pack-card">
+                    <h3>Complete Pack + PLR</h3>
+                    <div class="pack-price">$157</div>
+                    <p>Save $113 + Resell Rights</p>
+                    <button class="pack-btn" onclick="selectPack('10-books', this)">Select Pack</button>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- FAQ -->
-    <section class="faq-section" id="faq">
-        <div class="container">
-            <h2 class="section-title">Questions Fréquentes</h2>
-            <div class="faq-item">
-                <h3>Qu'est-ce que le DROIT PLR ?</h3>
-                <p>Private Label Rights : Vous pouvez modifier les e-books, changer le nom d'auteur, et les revendre comme les vôtres. Vous gardez 100% des profits.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Comment je reçois les e-books ?</h3>
-                <p>Accès instantané par email après paiement. Fichiers PDF + DOC modifiables.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 The Best Bundle. Tous droits réservés.</p>
-        </div>
-    </footer>
-
-    <!-- CART OVERLAY -->
-    <div class="cart-overlay" id="cart-overlay">
-        <div class="cart">
+    <div id="cart-overlay" class="cart-overlay" onclick="closeCart()">
+        <div class="cart" onclick="event.stopPropagation()">
             <div class="cart-header">
-                <h3>Votre Panier</h3>
-                <button class="close-cart" onclick="closeCart()">&times;</button>
+                <h2>Your Cart</h2>
+                <button class="close-cart" onclick="closeCart()">×</button>
             </div>
-            <div class="cart-items" id="cart-items"></div>
+            <div id="cart-items" class="cart-items">
+                <p style="text-align: center; color: #6b7280;">Your cart is empty</p>
+            </div>
             <div class="cart-footer">
-                <div class="cart-total">
-                    <strong>Total: <span id="cart-total">0€</span></strong>
-                </div>
-                <button class="checkout-btn" onclick="checkout()">Procéder au paiement sécurisé</button>
+                <div class="cart-total">Total: <span id="cart-total">$0</span></div>
+                <button class="checkout-btn" onclick="checkout()">Secure Checkout</button>
             </div>
         </div>
     </div>
