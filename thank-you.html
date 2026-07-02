@@ -33,128 +33,148 @@
 
       <div class="ty-icon">🎉</div>
       <h1 class="ty-title" data-i18n="tyTitle">Payment Successful!</h1>
-      <p class="ty-subtitle" data-i18n="tySubtitle">Choose your products below. We'll email them in 10 minutes.</p>
-
-      <!-- Product Selection Form (submitted via Netlify Forms) -->
-      <form
-        name="product-selection"
-        method="POST"
-        data-netlify="true"
-        netlify-honeypot="bot-field"
-        id="productForm"
-        onsubmit="handleFormSubmit(event)"
-      >
-        <!-- Netlify honeypot (hidden from humans) -->
-        <p hidden><label>Don't fill this out: <input name="bot-field" /></label></p>
-
-        <!-- Hidden fields populated by JS -->
-        <input type="hidden" name="pack_id" id="hiddenPackId" value="" />
-        <input type="hidden" name="session_id" id="hiddenSessionId" value="" />
-        <input type="hidden" name="selected_products" id="hiddenSelectedProducts" value="" />
-
-        <!-- Customer Email -->
-        <div class="ty-email-field">
-          <label for="customerEmail" data-i18n="tyEmailLabel">Your Email Address</label>
-          <input
-            type="email"
-            id="customerEmail"
-            name="customer_email"
-            required
-            autocomplete="email"
-            data-i18n-placeholder="tyEmailPlaceholder"
-            placeholder="you@example.com"
-          />
+      
+      <!-- INSTANT DOWNLOAD MODE: Shows if?sku= is in URL -->
+      <div id="instant-download" style="display: none;">
+        <p class="ty-subtitle" data-i18n="tyInstantSubtitle">Your ebook is ready. Click below to download:</p>
+        <div id="download-btn-wrap" style="margin: 30px 0;">
+          <a id="ebook-download-btn" href="#" target="_blank" class="btn btn-gold btn-pack" style="font-size: 18px; padding: 15px 30px;">
+            📥 Télécharger maintenant
+          </a>
         </div>
+        <p style="font-size: 14px; opacity: 0.7;" data-i18n="tyEmailNote">We've also sent a copy to your email.</p>
+      </div>
 
-        <!-- Product List -->
-        <p class="ty-form-title" data-i18n="tyPickTitle">Select Your Products</p>
+      <!-- PACK SELECTION MODE: Shows if no?sku= in URL -->
+      <div id="pack-selection">
+        <p class="ty-subtitle" data-i18n="tySubtitle">Choose your products below. We'll email them in 10 minutes.</p>
 
-        <div class="ty-counter">
-          <span data-i18n="tyCounterPre">You can select up to</span>
-          <strong id="maxCount">—</strong>
-          <span data-i18n="tyCounterPost">products.</span>
-          <span data-i18n="tyCounterSelected">Selected:</span>
-          <strong id="selectedCount">0</strong>
-        </div>
+        <!-- Product Selection Form (submitted via Netlify Forms) -->
+        <form
+          name="product-selection"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          id="productForm"
+          onsubmit="handleFormSubmit(event)"
+        >
+          <!-- Netlify honeypot (hidden from humans) -->
+          <p hidden><label>Don't fill this out: <input name="bot-field" /></label></p>
 
-        <div class="products-list" id="productsList">
-          <!-- Ebooks -->
-          <label class="product-item">
-            <input type="checkbox" name="products" value="Ebook – Digital Marketing Mastery" />
-            <span>📘 Digital Marketing Mastery</span>
-          </label>
-          <label class="product-item">
-            <input type="checkbox" name="products" value="Ebook – Social Media Growth Guide" />
-            <span>📗 Social Media Growth Guide</span>
-          </label>
-          <label class="product-item">
-            <input type="checkbox" name="products" value="Ebook – Email Marketing Blueprint" />
-            <span>📙 Email Marketing Blueprint</span>
-          </label>
-          <label class="product-item">
-            <input type="checkbox" name="products" value="Ebook – Passive Income Secrets" />
-            <span>📕 Passive Income Secrets</span>
-          </label>
-          <label class="product-item">
-            <input type="checkbox" name="products" value="Ebook – Freelance Success Formula" />
-            <span>📒 Freelance Success Formula</span>
-          </label>
-          <label class="product-item">
-            <input type="checkbox" name="products" value="Ebook – Content Creation Bible" />
-            <span>📓 Content Creation Bible</span>
-          </label>
-          <label class="product-item">
-            <input type="checkbox" name="products" value="Ebook – SEO Fundamentals" />
-            <span>📔 SEO Fundamentals</span>
-          </label>
-          <label class="product-item">
-            <input type="checkbox" name="products" value="Ebook – E-commerce Starter Guide" />
-            <span>📖 E-commerce Starter Guide</span>
-          </label>
-          <!-- Templates -->
-          <label class="product-item">
-            <input type="checkbox" name="products" value="Template – Business Plan Canva Kit" />
-            <span>🎨 Business Plan Canva Kit</span>
-          </label>
-          <label class="product-item">
-            <input type="checkbox" name="products" value="Template – Social Media Content Calendar" />
-            <span>📅 Social Media Content Calendar</span>
-          </label>
-          <label class="product-item">
-            <input type="checkbox" name="products" value="Template – Invoice & Proposal Pack" />
-            <span>🧾 Invoice & Proposal Pack</span>
-          </label>
-          <label class="product-item">
-            <input type="checkbox" name="products" value="Template – Landing Page Figma Template" />
-            <span>🖥️ Landing Page Figma Template</span>
-          </label>
-          <label class="product-item">
-            <input type="checkbox" name="products" value="Template – Email Newsletter Kit" />
-            <span>✉️ Email Newsletter Kit</span>
-          </label>
-          <label class="product-item">
-            <input type="checkbox" name="products" value="Template – Brand Identity Starter Kit" />
-            <span>🎯 Brand Identity Starter Kit</span>
-          </label>
-          <label class="product-item">
-            <input type="checkbox" name="products" value="Template – YouTube Channel Art Pack" />
-            <span>▶️ YouTube Channel Art Pack</span>
-          </label>
-          <label class="product-item">
-            <input type="checkbox" name="products" value="Template – Digital Product Launch Kit" />
-            <span>🚀 Digital Product Launch Kit</span>
-          </label>
-        </div>
+          <!-- Hidden fields populated by JS -->
+          <input type="hidden" name="pack_id" id="hiddenPackId" value="" />
+          <input type="hidden" name="session_id" id="hiddenSessionId" value="" />
+          <input type="hidden" name="selected_products" id="hiddenSelectedProducts" value="" />
 
-        <button type="submit" class="btn btn-gold btn-pack ty-submit-btn" data-i18n="tySubmitBtn">
-          Send My Products →
-        </button>
+          <!-- Customer Email -->
+          <div class="ty-email-field">
+            <label for="customerEmail" data-i18n="tyEmailLabel">Your Email Address</label>
+            <input
+              type="email"
+              id="customerEmail"
+              name="customer_email"
+              required
+              autocomplete="email"
+              data-i18n-placeholder="tyEmailPlaceholder"
+              placeholder="you@example.com"
+            />
+          </div>
 
-      </form>
+          <!-- Product List -->
+          <p class="ty-form-title" data-i18n="tyPickTitle">Select Your Products</p>
+
+          <div class="ty-counter">
+            <span data-i18n="tyCounterPre">You can select up to</span>
+            <strong id="maxCount">—</strong>
+            <span data-i18n="tyCounterPost">products.</span>
+            <span data-i18n="tyCounterSelected">Selected:</span>
+            <strong id="selectedCount">0</strong>
+          </div>
+
+          <div class="products-list" id="productsList">
+            <!-- Ebooks -->
+            <label class="product-item">
+              <input type="checkbox" name="products" value="Ebook – Digital Marketing Mastery" />
+              <span>📘 Digital Marketing Mastery</span>
+            </label>
+            <label class="product-item">
+              <input type="checkbox" name="products" value="Ebook – Social Media Growth Guide" />
+              <span>📗 Social Media Growth Guide</span>
+            </label>
+            <label class="product-item">
+              <input type="checkbox" name="products" value="Ebook – Email Marketing Blueprint" />
+              <span>📙 Email Marketing Blueprint</span>
+            </label>
+            <label class="product-item">
+              <input type="checkbox" name="products" value="Ebook – Passive Income Secrets" />
+              <span>📕 Passive Income Secrets</span>
+            </label>
+            <label class="product-item">
+              <input type="checkbox" name="products" value="Ebook – Freelance Success Formula" />
+              <span>📒 Freelance Success Formula</span>
+            </label>
+            <label class="product-item">
+              <input type="checkbox" name="products" value="Ebook – Content Creation Bible" />
+              <span>📓 Content Creation Bible</span>
+            </label>
+            <label class="product-item">
+              <input type="checkbox" name="products" value="Ebook – SEO Fundamentals" />
+              <span>📔 SEO Fundamentals</span>
+            </label>
+            <label class="product-item">
+              <input type="checkbox" name="products" value="Ebook – E-commerce Starter Guide" />
+              <span>📖 E-commerce Starter Guide</span>
+            </label>
+            <!-- Templates -->
+            <label class="product-item">
+              <input type="checkbox" name="products" value="Template – Business Plan Canva Kit" />
+              <span>🎨 Business Plan Canva Kit</span>
+            </label>
+            <label class="product-item">
+              <input type="checkbox" name="products" value="Template – Social Media Content Calendar" />
+              <span>📅 Social Media Content Calendar</span>
+            </label>
+            <label class="product-item">
+              <input type="checkbox" name="products" value="Template – Invoice & Proposal Pack" />
+              <span>🧾 Invoice & Proposal Pack</span>
+            </label>
+            <label class="product-item">
+              <input type="checkbox" name="products" value="Template – Landing Page Figma Template" />
+              <span>🖥️ Landing Page Figma Template</span>
+            </label>
+            <label class="product-item">
+              <input type="checkbox" name="products" value="Template – Email Newsletter Kit" />
+              <span>✉️ Email Newsletter Kit</span>
+            </label>
+            <label class="product-item">
+              <input type="checkbox" name="products" value="Template – Brand Identity Starter Kit" />
+              <span>🎯 Brand Identity Starter Kit</span>
+            </label>
+            <label class="product-item">
+              <input type="checkbox" name="products" value="Template – YouTube Channel Art Pack" />
+              <span>▶️ YouTube Channel Art Pack</span>
+            </label>
+            <label class="product-item">
+              <input type="checkbox" name="products" value="Template – Digital Product Launch Kit" />
+              <span>🚀 Digital Product Launch Kit</span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-gold btn-pack ty-submit-btn" data-i18n="tySubmitBtn">
+            Send My Products →
+          </button>
+
+        </form>
+      </div>
 
       <!-- Success message (shown after submit) -->
-      <div class="ty-success-msg" id="tySuccessMsg" data-i18n="tySuccessMsg" role="alert">
+      <div class="ty-success-msg" id="tySuccessMsg" data-i18n="tySuccessMsg" role="alert" style="display: none;">
         ✅ Your selection has been received! Check your email in 10 minutes.
+      </div>
+
+      <!-- Error message for invalid SKU -->
+      <div id="tyErrorMsg" style="display: none; color: #ff4444; margin-top: 20px;">
+        ❌ Product not found. Please contact support with your order details.
       </div>
 
     </div>
@@ -170,70 +190,96 @@
 
   <script>
     /* ============================================================
-       Thank-You Page Script
+       Thank-You Page Script - Updated with Instant Download
        ============================================================ */
+
+    /* ---------- STEP 2: ADD YOUR 14 PDF LINKS HERE ---------- */
+    const DOWNLOAD_MAP = {
+      'Découvre ta niche parfaite': '',
+      'Ton plan d\'action en business': '',
+      'Comment Être Financé Rapidement': '',
+      'Protège ton Entreprise Légalement': '',
+      'Crée une présence en ligne': '',
+      'TRAFFIC LEADS VENTES — LE SYSTÈME': '',
+      'DISCIPLINE FINANCIÈRE': '',
+      'L\'art de vendre en 2026': '',
+      'De salariés à Mentalité d\'entrepreneur': '',
+      'AUTOMATISE TON BUSINESS EN 30 JOURS': '',
+      'pack2': '',
+      'Pack 3': '',
+      'Pack 5': '',
+      'Pack 10': ''
+    };
 
     /* ---------- Pack limits ---------- */
     const PACK_LIMITS = {
-      pack2:  2,
-      pack3:  3,
-      pack5:  5,
-      pack10: null  // null = unlimited (all products)
+      pack2: 2,
+      pack3: 3,
+      pack5: 5,
+      pack10: null // null = unlimited (all products)
     };
 
     /* ---------- Translations (subset for this page) ---------- */
     const TY_TRANSLATIONS = {
       en: {
-        tyTitle:           'Payment Successful!',
-        tySubtitle:        "Choose your products below. We'll email them in 10 minutes.",
-        tyEmailLabel:      'Your Email Address',
+        tyTitle: 'Payment Successful!',
+        tySubtitle: "Choose your products below. We'll email them in 10 minutes.",
+        tyInstantSubtitle: "Your ebook is ready. Click below to download:",
+        tyEmailNote: "We've also sent a copy to your email.",
+        tyEmailLabel: 'Your Email Address',
         tyEmailPlaceholder:'you@example.com',
-        tyPickTitle:       'Select Your Products',
-        tyCounterPre:      'You can select up to',
-        tyCounterPost:     'products.',
+        tyPickTitle: 'Select Your Products',
+        tyCounterPre: 'You can select up to',
+        tyCounterPost: 'products.',
         tyCounterSelected: 'Selected:',
-        tySubmitBtn:       'Send My Products →',
-        tySuccessMsg:      '✅ Your selection has been received! Check your email in 10 minutes.',
-        footerRights:      'All rights reserved.'
+        tySubmitBtn: 'Send My Products →',
+        tySuccessMsg: '✅ Your selection has been received! Check your email in 10 minutes.',
+        footerRights: 'All rights reserved.'
       },
       ht: {
-        tyTitle:           'Peman an Reyisi!',
-        tySubtitle:        'Chwazi pwodui ou vle yo anba a. N ap voye yo nan imèl ou nan 10 minit.',
-        tyEmailLabel:      'Adrès Imèl Ou',
+        tyTitle: 'Peman an Reyisi!',
+        tySubtitle: 'Chwazi pwodui ou vle yo anba a. N ap voye yo nan imèl ou nan 10 minit.',
+        tyInstantSubtitle: 'Ebook ou pare. Klike anba a pou telechaje:',
+        tyEmailNote: 'Nou voye yon kopi nan imèl ou tou.',
+        tyEmailLabel: 'Adrès Imèl Ou',
         tyEmailPlaceholder:'ou@egzanp.com',
-        tyPickTitle:       'Chwazi Pwodui Ou Yo',
-        tyCounterPre:      'Ou ka chwazi jiska',
-        tyCounterPost:     'pwodui.',
+        tyPickTitle: 'Chwazi Pwodui Ou Yo',
+        tyCounterPre: 'Ou ka chwazi jiska',
+        tyCounterPost: 'pwodui.',
         tyCounterSelected: 'Chwazi:',
-        tySubmitBtn:       'Voye Pwodui Mwen Yo →',
-        tySuccessMsg:      '✅ Nou resevwa chwa ou! Tcheke imèl ou nan 10 minit.',
-        footerRights:      'Tout dwa rezève.'
+        tySubmitBtn: 'Voye Pwodui Mwen Yo →',
+        tySuccessMsg: '✅ Nou resevwa chwa ou! Tcheke imèl ou nan 10 minit.',
+        footerRights: 'Tout dwa rezève.'
       },
       fr: {
-        tyTitle:           'Paiement Réussi !',
-        tySubtitle:        'Choisissez vos produits ci-dessous. Nous vous les enverrons par e-mail dans 10 minutes.',
-        tyEmailLabel:      'Votre Adresse E-mail',
+        tyTitle: 'Paiement Réussi!',
+        tySubtitle: 'Choisissez vos produits ci-dessous. Nous vous les enverrons par e-mail dans 10 minutes.',
+        tyInstantSubtitle: 'Votre ebook est prêt. Cliquez ci-dessous pour télécharger :',
+        tyEmailNote: 'Nous avons aussi envoyé une copie à votre e-mail.',
+        tyEmailLabel: 'Votre Adresse E-mail',
         tyEmailPlaceholder:'vous@exemple.com',
-        tyPickTitle:       'Sélectionnez Vos Produits',
-        tyCounterPre:      'Vous pouvez sélectionner jusqu\'à',
-        tyCounterPost:     'produits.',
+        tyPickTitle: 'Sélectionnez Vos Produits',
+        tyCounterPre: 'Vous pouvez sélectionner jusqu\'à',
+        tyCounterPost: 'produits.',
         tyCounterSelected: 'Sélectionnés :',
-        tySubmitBtn:       'Envoyer Mes Produits →',
-        tySuccessMsg:      '✅ Votre sélection a été reçue ! Vérifiez votre e-mail dans 10 minutes.',
-        footerRights:      'Tous droits réservés.'
+        tySubmitBtn: 'Envoyer Mes Produits →',
+        tySuccessMsg: '✅ Votre sélection a été reçue! Vérifiez votre e-mail dans 10 minutes.',
+        footerRights: 'Tous droits réservés.'
       },
       es: {
-        tyTitle:           '¡Pago Exitoso!',
-        tySubtitle:        'Elige tus productos abajo. Te los enviaremos por correo en 10 minutos.',
-        tyEmailLabel:      'Tu Dirección de Correo',
+        tyTitle: '¡Pago Exitoso!',
+        tySubtitle: 'Elige tus productos abajo. Te los enviaremos por correo en 10 minutos.',
+        tyInstantSubtitle: 'Tu ebook está listo. Haz clic abajo para descargar:',
+        tyEmailNote: 'También enviamos una copia a tu correo.',
+        tyEmailLabel: 'Tu Dirección de Correo',
         tyEmailPlaceholder:'tu@ejemplo.com',
-        tyPickTitle:       'Selecciona Tus Productos',
-        tyCounterPre:      'Puedes seleccionar hasta',
-        tyCounterPost:     'productos.',
+        tyPickTitle: 'Selecciona Tus Productos',
+        tyCounterPre: 'Puedes seleccionar hasta',
+        tyCounterPost: 'productos.',
         tyCounterSelected: 'Seleccionados:',
-        tySubmitBtn:       'Enviar Mis Productos →',
-        tySuccessMsg:      '✅ ¡Tu selección fue recibida! Revisa tu correo en 10 minutos.',
-        footerRights:      'Todos los derechos reservados.'
+        tySubmitBtn: 'Enviar Mis Productos →',
+        tySuccessMsg: '✅ ¡Tu selección fue recibida! Revisa tu correo en 10 minutos.',
+        footerRights: 'Todos los derechos reservados.'
       }
     };
 
@@ -247,11 +293,11 @@
       const t = TY_TRANSLATIONS[lang] || TY_TRANSLATIONS['en'];
       document.querySelectorAll('[data-i18n]').forEach(function (el) {
         const key = el.getAttribute('data-i18n');
-        if (t[key] !== undefined) el.innerHTML = t[key];
+        if (t[key]!== undefined) el.innerHTML = t[key];
       });
       document.querySelectorAll('[data-i18n-placeholder]').forEach(function (el) {
         const key = el.getAttribute('data-i18n-placeholder');
-        if (t[key] !== undefined) el.setAttribute('placeholder', t[key]);
+        if (t[key]!== undefined) el.setAttribute('placeholder', t[key]);
       });
       document.documentElement.setAttribute('lang', lang);
       document.querySelectorAll('.lang-btn').forEach(function (btn) {
@@ -262,55 +308,71 @@
 
     /* ---------- Init ---------- */
     document.addEventListener('DOMContentLoaded', function () {
-      const packId    = getUrlParam('pack') || 'pack2';
+      const sku = getUrlParam('sku');
+      const packId = getUrlParam('pack') || 'pack2';
       const sessionId = getUrlParam('session_id') || '';
-      const limit     = PACK_LIMITS[packId];
-
-      // Populate hidden fields
-      document.getElementById('hiddenPackId').value    = packId;
-      document.getElementById('hiddenSessionId').value = sessionId;
-
-      // Set max count display
-      const maxCountEl = document.getElementById('maxCount');
-      if (limit === null) {
-        maxCountEl.textContent = '∞';
+      
+      // CHECK FOR INSTANT DOWNLOAD MODE
+      if (sku && DOWNLOAD_MAP[sku]) {
+        document.getElementById('instant-download').style.display = 'block';
+        document.getElementById('pack-selection').style.display = 'none';
+        document.getElementById('ebook-download-btn').href = DOWNLOAD_MAP[sku];
+      } else if (sku &&!DOWNLOAD_MAP[sku]) {
+        // SKU exists but no URL yet
+        document.getElementById('instant-download').style.display = 'block';
+        document.getElementById('pack-selection').style.display = 'none';
+        document.getElementById('download-btn-wrap').style.display = 'none';
+        document.getElementById('tyErrorMsg').style.display = 'block';
       } else {
-        maxCountEl.textContent = limit;
-      }
+        // PACK SELECTION MODE - Your original code
+        const limit = PACK_LIMITS[packId];
 
-      // Checkbox logic: enforce limit
-      const checkboxes = document.querySelectorAll('#productsList input[type="checkbox"]');
-      const selectedCountEl = document.getElementById('selectedCount');
+        // Populate hidden fields
+        document.getElementById('hiddenPackId').value = packId;
+        document.getElementById('hiddenSessionId').value = sessionId;
 
-      function updateCounter() {
-        const checked = document.querySelectorAll('#productsList input[type="checkbox"]:checked');
-        selectedCountEl.textContent = checked.length;
+        // Set max count display
+        const maxCountEl = document.getElementById('maxCount');
+        if (limit === null) {
+          maxCountEl.textContent = '∞';
+        } else {
+          maxCountEl.textContent = limit;
+        }
 
-        // Collect selected product names for hidden field
-        const selected = Array.from(checked).map(cb => cb.value);
-        document.getElementById('hiddenSelectedProducts').value = selected.join(' | ');
+        // Checkbox logic: enforce limit
+        const checkboxes = document.querySelectorAll('#productsList input[type="checkbox"]');
+        const selectedCountEl = document.getElementById('selectedCount');
 
-        // Enforce limit: disable unchecked if at limit
-        if (limit !== null) {
+        function updateCounter() {
+          const checked = document.querySelectorAll('#productsList input[type="checkbox"]:checked');
+          selectedCountEl.textContent = checked.length;
+
+          // Collect selected product names for hidden field
+          const selected = Array.from(checked).map(cb => cb.value);
+          document.getElementById('hiddenSelectedProducts').value = selected.join(' | ');
+
+          // Enforce limit: disable unchecked if at limit
+          if (limit!== null) {
+            checkboxes.forEach(function (cb) {
+              if (!cb.checked) {
+                cb.disabled = checked.length >= limit;
+                cb.closest('.product-item').style.opacity = checked.length >= limit? '0.4' : '1';
+              }
+            });
+          }
+
+          // Style selected items
           checkboxes.forEach(function (cb) {
-            if (!cb.checked) {
-              cb.disabled = checked.length >= limit;
-              cb.closest('.product-item').style.opacity = checked.length >= limit ? '0.4' : '1';
-            }
+            cb.closest('.product-item').classList.toggle('selected', cb.checked);
           });
         }
 
-        // Style selected items
         checkboxes.forEach(function (cb) {
-          cb.closest('.product-item').classList.toggle('selected', cb.checked);
+          cb.addEventListener('change', updateCounter);
         });
+
+        updateCounter();
       }
-
-      checkboxes.forEach(function (cb) {
-        cb.addEventListener('change', updateCounter);
-      });
-
-      updateCounter();
 
       // Language switcher
       document.querySelectorAll('.lang-btn').forEach(function (btn) {
@@ -339,7 +401,7 @@
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(data).toString()
       })
-      .then(function (res) {
+     .then(function (res) {
         if (res.ok) {
           form.style.display = 'none';
           const msg = document.getElementById('tySuccessMsg');
@@ -349,7 +411,7 @@
           throw new Error('Form submission failed.');
         }
       })
-      .catch(function (err) {
+     .catch(function (err) {
         alert('Error submitting form. Please try again or contact support.');
         console.error(err);
       });
