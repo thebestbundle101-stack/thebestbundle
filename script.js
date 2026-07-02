@@ -88,7 +88,7 @@ function updateCartUI() {
                     <h4>${packNames[selectedPack]}</h4>
                     <p>Quantité: 1</p>
                 </div>
-                <div class="cart-item-price">${total}€</div>
+                <div class="cart-item-price">$${total}</div>
             </div>
         `;
     } else {
@@ -99,9 +99,9 @@ function updateCartUI() {
                 <div class="cart-item">
                     <div class="cart-item-info">
                         <h4>${item.name}</h4>
-                        <p>Quantité: ${item.quantity} x ${SINGLE_PRICE}€</p>
+                        <p>Quantité: ${item.quantity} x $${SINGLE_PRICE}</p>
                     </div>
-                    <div class="cart-item-price">${itemTotal}€</div>
+                    <div class="cart-item-price">$${itemTotal}</div>
                 </div>
             `;
         });
@@ -111,7 +111,7 @@ function updateCartUI() {
         cartItemsContainer.innerHTML = '<p style="text-align: center; color: #6b7280;">Votre panier est vide</p>';
     }
 
-    cartTotal.textContent = `${total}€`;
+    cartTotal.textContent = `$${total}`;
 }
 
 function openCart() {
