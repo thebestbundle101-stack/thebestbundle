@@ -95,7 +95,7 @@ exports.handler = async function (event, context) {
         }
       ],
       mode: 'payment',
-      success_url: siteUrl + '/thank-you.html?session_id={CHECKOUT_SESSION_ID}&pack=' + packId,
+     success_url: siteUrl + '/thank-you.html?session_id={CHECKOUT_SESSION_ID}&sku=' + encodeURIComponent(pack.name) ,
       cancel_url: siteUrl + '/#packs',
       metadata: {
         packId: packId,
