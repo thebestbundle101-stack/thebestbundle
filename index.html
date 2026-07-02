@@ -1,246 +1,199 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TheBestBundle – Digital Ebooks & Templates</title>
-  <meta name="description" content="Buy ebooks and templates individually or save with bundles. Choose your pack and download instantly." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://js.stripe.com/v3/"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Best Bundle - 10 E-books Business + PLR</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- ===================== HEADER ===================== -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="/" class="logo" aria-label="TheBestBundle Home">
-        <span class="logo-text">TheBestBundle</span>
-      </a>
-      <div class="lang-switcher" id="langSwitcher" role="navigation" aria-label="Language selector">
-        <button class="lang-btn active" data-lang="en" aria-label="English">🇺🇸 EN</button>
-        <button class="lang-btn" data-lang="ht" aria-label="Kreyòl Ayisyen">🇭🇹 Kreyòl</button>
-        <button class="lang-btn" data-lang="fr" aria-label="Français">🇫🇷 FR</button>
-        <button class="lang-btn" data-lang="es" aria-label="Español">🇪🇸 ES</button>
-      </div>
-    </div>
-  </header>
-
-  <!-- ===================== HERO ===================== -->
-  <section class="hero" id="hero">
-    <div class="container hero-inner">
-      <div class="hero-badge">
-        <span data-i18n="heroBadge">Digital Products</span>
-      </div>
-      <h1 class="hero-title" data-i18n="heroTitle">Build Your Digital Bundle</h1>
-      <p class="hero-slogan" data-i18n="heroSlogan">Buy Ebooks &amp; Templates Individually or Save with Bundles</p>
-      <a href="#packs" class="btn btn-gold btn-lg" data-i18n="heroCta">See All Bundles →</a>
-    </div>
-  </section>
-
-  <!-- ===================== HOW IT WORKS ===================== -->
-  <section class="how-it-works" id="how-it-works">
-    <div class="container">
-      <h2 class="section-title" data-i18n="howTitle">How It Works</h2>
-      <div class="steps-grid">
-        <div class="step-card">
-          <div class="step-icon">📦</div>
-          <div class="step-number">1</div>
-          <p class="step-text" data-i18n="step1">Choose Your Pack</p>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">The Best Bundle</div>
+            <nav class="nav">
+                <a href="#books">E-books</a>
+                <a href="#packs">Packs</a>
+                <a href="#faq">FAQ</a>
+                <button class="cart-btn" onclick="openCart()">Panier</button>
+            </nav>
         </div>
-        <div class="step-divider" aria-hidden="true">→</div>
-        <div class="step-card">
-          <div class="step-icon">📚</div>
-          <div class="step-number">2</div>
-          <p class="step-text" data-i18n="step2">Pick Any Ebooks &amp; Templates</p>
-        </div>
-        <div class="step-divider" aria-hidden="true">→</div>
-        <div class="step-card">
-          <div class="step-icon">⚡</div>
-          <div class="step-number">3</div>
-          <p class="step-text" data-i18n="step3">Download Instantly</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- ===================== PACKS ===================== -->
-  <section class="packs-section" id="packs">
-    <div class="container">
-      <h2 class="section-title" data-i18n="packsTitle">Our Featured Packs</h2>
-      <p class="section-subtitle" data-i18n="packsSubtitle">Choose from our entire collection of ebooks and templates</p>
-      <div class="packs-grid">
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <h1>10 E-books Business Exclusifs</h1>
+            <p>Tous inclus avec <strong>DROIT PLR</strong> : Modifiez, Revendez, Gardez 100% des profits</p>
+            <a href="#books" class="cta-btn">Voir les E-books</a>
+        </div>
+    </section>
 
-        <!-- Starter Pack -->
-        <div class="pack-card" data-pack-id="pack2">
-          <div class="pack-header">
-            <h3 class="pack-name">Starter Pack</h3>
-            <div class="pack-price-block">
-              <span class="price" data-pack="pack2">$37</span>
+    <!-- BOOKS SECTION -->
+    <section class="books-section" id="books">
+        <div class="container">
+            <h2 class="section-title">Nos 10 E-books Business</h2>
+            <p style="text-align: center; margin-bottom: 3rem; color: #6b7280;">Chaque e-book à <strong>27€</strong> avec DROIT PLR inclus</p>
+            
+            <div class="books-grid">
+                <!-- ROW 1 -->
+                <div class="book-card">
+                    <img src="img/decouvre-ta-niche-parfaite.jpg" alt="Decouvre ta niche parfaite" class="book-cover">
+                    <h3 class="book-title">Decouvre ta niche parfaite</h3>
+                    <div class="book-price">27€</div>
+                    <button class="add-to-cart-btn" onclick="handleSingleCheckout('decouvre-ta-niche-parfaite')">Acheter - 27€</button>
+                    <button class="add-to-cart-btn secondary" onclick="addToCart('decouvre-ta-niche-parfaite', 'Decouvre ta niche parfaite')">Ajouter au panier</button>
+                </div>
+
+                <div class="book-card">
+                    <img src="img/ton-plan-daction-en-business.jpg" alt="ton plan d'action en business" class="book-cover">
+                    <h3 class="book-title">ton plan d'action en business</h3>
+                    <div class="book-price">27€</div>
+                    <button class="add-to-cart-btn" onclick="handleSingleCheckout('ton-plan-daction-en-business')">Acheter - 27€</button>
+                    <button class="add-to-cart-btn secondary" onclick="addToCart('ton-plan-daction-en-business', 'ton plan d\'action en business')">Ajouter au panier</button>
+                </div>
+
+                <div class="book-card">
+                    <img src="img/comment-etre-finance-rapidement.jpg" alt="Comment Être Financé Rapidement" class="book-cover">
+                    <h3 class="book-title">Comment Être Financé Rapidement</h3>
+                    <div class="book-price">27€</div>
+                    <button class="add-to-cart-btn" onclick="handleSingleCheckout('comment-etre-finance-rapidement')">Acheter - 27€</button>
+                    <button class="add-to-cart-btn secondary" onclick="addToCart('comment-etre-finance-rapidement', 'Comment Être Financé Rapidement')">Ajouter au panier</button>
+                </div>
+
+                <div class="book-card">
+                    <img src="img/protege-ton-entreprise-legalement.jpg" alt="Protège ton Entreprise Légalement" class="book-cover">
+                    <h3 class="book-title">Protège ton Entreprise Légalement</h3>
+                    <div class="book-price">27€</div>
+                    <button class="add-to-cart-btn" onclick="handleSingleCheckout('protege-ton-entreprise-legalement')">Acheter - 27€</button>
+                    <button class="add-to-cart-btn secondary" onclick="addToCart('protege-ton-entreprise-legalement', 'Protège ton Entreprise Légalement')">Ajouter au panier</button>
+                </div>
+
+                <div class="book-card">
+                    <img src="img/cree-une-presence-en-ligne.jpg" alt="Crée une presence en ligne" class="book-cover">
+                    <h3 class="book-title">Crée une presence en ligne</h3>
+                    <div class="book-price">27€</div>
+                    <button class="add-to-cart-btn" onclick="handleSingleCheckout('cree-une-presence-en-ligne')">Acheter - 27€</button>
+                    <button class="add-to-cart-btn secondary" onclick="addToCart('cree-une-presence-en-ligne', 'Crée une presence en ligne')">Ajouter au panier</button>
+                </div>
+
+                <!-- ROW 2 -->
+                <div class="book-card">
+                    <img src="img/traffic-leads-ventes-le-systeme.jpg" alt="traffic leads ventes Le système" class="book-cover">
+                    <h3 class="book-title">traffic leads ventes Le système</h3>
+                    <div class="book-price">27€</div>
+                    <button class="add-to-cart-btn" onclick="handleSingleCheckout('traffic-leads-ventes-le-systeme')">Acheter - 27€</button>
+                    <button class="add-to-cart-btn secondary" onclick="addToCart('traffic-leads-ventes-le-systeme', 'traffic leads ventes Le système')">Ajouter au panier</button>
+                </div>
+
+                <div class="book-card">
+                    <img src="img/discipline-financiere.jpg" alt="Discipline Financière" class="book-cover">
+                    <h3 class="book-title">Discipline Financière</h3>
+                    <div class="book-price">27€</div>
+                    <button class="add-to-cart-btn" onclick="handleSingleCheckout('discipline-financiere')">Acheter - 27€</button>
+                    <button class="add-to-cart-btn secondary" onclick="addToCart('discipline-financiere', 'Discipline Financière')">Ajouter au panier</button>
+                </div>
+
+                <div class="book-card">
+                    <img src="img/lart-de-vendre-en-2026.jpg" alt="l'art de vendre en 2026" class="book-cover">
+                    <h3 class="book-title">l'art de vendre en 2026</h3>
+                    <div class="book-price">27€</div>
+                    <button class="add-to-cart-btn" onclick="handleSingleCheckout('lart-de-vendre-en-2026')">Acheter - 27€</button>
+                    <button class="add-to-cart-btn secondary" onclick="addToCart('lart-de-vendre-en-2026', 'l\'art de vendre en 2026')">Ajouter au panier</button>
+                </div>
+
+                <div class="book-card">
+                    <img src="img/de-salaries-a-mentalite-dentrepreneur.jpg" alt="De salariés à Mentalité d'entrepreneur" class="book-cover">
+                    <h3 class="book-title">De salariés à Mentalité d'entrepreneur</h3>
+                    <div class="book-price">27€</div>
+                    <button class="add-to-cart-btn" onclick="handleSingleCheckout('de-salaries-a-mentalite-dentrepreneur')">Acheter - 27€</button>
+                    <button class="add-to-cart-btn secondary" onclick="addToCart('de-salaries-a-mentalite-dentrepreneur', 'De salariés à Mentalité d\'entrepreneur')">Ajouter au panier</button>
+                </div>
+
+                <div class="book-card">
+                    <img src="img/automatise-ton-business-en-30-jours.jpg" alt="Automatise Ton Business en 30 Jours" class="book-cover">
+                    <h3 class="book-title">Automatise Ton Business en 30 Jours</h3>
+                    <div class="book-price">27€</div>
+                    <button class="add-to-cart-btn" onclick="handleSingleCheckout('automatise-ton-business-en-30-jours')">Acheter - 27€</button>
+                    <button class="add-to-cart-btn secondary" onclick="addToCart('automatise-ton-business-en-30-jours', 'Automatise Ton Business en 30 Jours')">Ajouter au panier</button>
+                </div>
             </div>
-          </div>
-          <p class="pack-pick" data-i18n="packPick2">Choose 2 products</p>
-          <p class="pack-desc" data-i18n="packsDesc">Choose from our entire collection of ebooks and templates</p>
-          <button class="btn btn-gold btn-pack" id="pack-2" onclick="handleCheckout('pack2')" data-i18n="packCta">
-            Get Starter Pack →
-          </button>
-          <!-- KOLE BOUTON PAYPAL LA ISIT LA SI BEZWEN -->
         </div>
+    </section>
 
-        <!-- Creator Pack -->
-        <div class="pack-card pack-featured" data-pack-id="pack3">
-          <div class="pack-ribbon" data-i18n="ribbonPopular">Most Popular</div>
-          <div class="pack-header">
-            <h3 class="pack-name">Creator Pack</h3>
-            <div class="pack-price-block">
-              <span class="price" data-pack="pack3">$47</span>
+    <!-- PACKS SECTION -->
+    <section class="packs-section" id="packs">
+        <div class="container">
+            <h2 class="section-title">Packs Économiques + DROIT PLR</h2>
+            <div class="packs-grid">
+                <div class="pack-card">
+                    <h3>Pack 3 E-books</h3>
+                    <div class="pack-price">37€</div>
+                    <p>Choisis 3 e-books au panier</p>
+                    <button class="pack-btn" onclick="selectPack('3-books', this)">Sélectionner</button>
+                </div>
+                <div class="pack-card">
+                    <h3>Pack 5 E-books</h3>
+                    <div class="pack-price">57€</div>
+                    <p>Choisis 5 e-books au panier</p>
+                    <button class="pack-btn" onclick="selectPack('5-books', this)">Sélectionner</button>
+                </div>
+                <div class="pack-card">
+                    <h3>Pack 8 E-books</h3>
+                    <div class="pack-price">87€</div>
+                    <p>Choisis 8 e-books au panier</p>
+                    <button class="pack-btn" onclick="selectPack('8-books', this)">Sélectionner</button>
+                </div>
+                <div class="pack-card featured">
+                    <div class="badge">MEILLEURE OFFRE</div>
+                    <h3>Pack Complet 10 E-books</h3>
+                    <div class="pack-price">157€</div>
+                    <p>Tous les e-books + <strong>DROIT PLR</strong></p>
+                    <button class="pack-btn" onclick="selectPack('10-books', this)">Sélectionner</button>
+                </div>
             </div>
-          </div>
-          <p class="pack-pick" data-i18n="packPick3">Choose 3 products</p>
-          <p class="pack-desc" data-i18n="packsDesc">Choose from our entire collection of ebooks and templates</p>
-          <button class="btn btn-gold btn-pack" id="pack-3" onclick="handleCheckout('pack3')" data-i18n="packCta">
-            Get Creator Pack →
-          </button>
-          <!-- KOLE BOUTON PAYPAL LA ISIT LA SI BEZWEN -->
         </div>
+    </section>
 
-        <!-- Pro Pack -->
-        <div class="pack-card" data-pack-id="pack5">
-          <div class="pack-header">
-            <h3 class="pack-name">Pro Pack</h3>
-            <div class="pack-price-block">
-              <span class="price" data-pack="pack5">$67</span>
+    <!-- FAQ -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <h2 class="section-title">Questions Fréquentes</h2>
+            <div class="faq-item">
+                <h3>Qu'est-ce que le DROIT PLR ?</h3>
+                <p>Private Label Rights : Vous pouvez modifier les e-books, changer le nom d'auteur, et les revendre comme les vôtres. Vous gardez 100% des profits.</p>
             </div>
-          </div>
-          <p class="pack-pick" data-i18n="packPick5">Choose 5 products</p>
-          <p class="pack-desc" data-i18n="packsDesc">Choose from our entire collection of ebooks and templates</p>
-          <button class="btn btn-gold btn-pack" id="pack-5" onclick="handleCheckout('pack5')" data-i18n="packCta">
-            Get Pro Pack →
-          </button>
-          <!-- KOLE BOUTON PAYPAL LA ISIT LA SI BEZWEN -->
-        </div>
-
-        <!-- Complete Vault -->
-        <div class="pack-card pack-vault" data-pack-id="pack10">
-          <div class="pack-header">
-            <h3 class="pack-name">Complete Vault</h3>
-            <div class="pack-price-block">
-              <span class="price" data-pack="pack10">$97</span>
+            <div class="faq-item">
+                <h3>Comment je reçois les e-books ?</h3>
+                <p>Accès instantané par email après paiement. Fichiers PDF + DOC modifiables.</p>
             </div>
-          </div>
-          <p class="pack-pick" data-i18n="packPick10">Get All Ebooks + All Templates</p>
-          <p class="pack-desc" data-i18n="packsDesc">Choose from our entire collection of ebooks and templates</p>
-          <button class="btn btn-gold btn-pack" id="pack-10" onclick="handleCheckout('pack10')" data-i18n="packCtaVault">
-            Get Complete Vault →
-          </button>
-          <!-- KOLE BOUTON PAYPAL LA ISIT LA SI BEZWEN -->
         </div>
+    </section>
 
-      </div>
-    </div>
-  </section>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 The Best Bundle. Tous droits réservés.</p>
+        </div>
+    </footer>
 
-  <!-- ===================== BUY INDIVIDUALLY ===================== -->
-  <section class="individual-section" id="individual">
-    <div class="container individual-inner">
-      <h2 class="section-title" data-i18n="indivTitle">Prefer to Buy Individually?</h2>
-      <p class="section-subtitle" data-i18n="indivSubtitle">Browse all our ebooks and templates</p>
-      <div class="indiv-buttons">
-        <a href="#" class="btn btn-outline" data-i18n="indivEbooks">All Ebooks →</a>
-        <a href="#" class="btn btn-outline" data-i18n="indivTemplates">All Templates →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== SOCIAL PROOF ===================== -->
-  <section class="proof-section" id="proof">
-    <div class="container">
-      <h2 class="proof-headline" data-i18n="proofHeadline">2,000+ Creators Use Our Products</h2>
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <div class="testimonial-stars" aria-label="5 stars">★★★★★</div>
-          <p class="testimonial-text" data-i18n="testimonial1Text">"The Creator Pack gave me everything I needed to launch my digital business. Incredible value!"</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar" aria-hidden="true">S</div>
-            <div>
-              <strong class="testimonial-name">Sarah M.</strong>
-              <span class="testimonial-role" data-i18n="testimonial1Role">Content Creator</span>
+    <!-- CART OVERLAY -->
+    <div class="cart-overlay" id="cart-overlay">
+        <div class="cart">
+            <div class="cart-header">
+                <h3>Votre Panier</h3>
+                <button class="close-cart" onclick="closeCart()">&times;</button>
             </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="testimonial-stars" aria-label="5 stars">★★★★★</div>
-          <p class="testimonial-text" data-i18n="testimonial2Text">"I bought the Pro Pack and the templates saved me weeks of work. Highly recommend!"</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar" aria-hidden="true">J</div>
-            <div>
-              <strong class="testimonial-name">Jean-Pierre L.</strong>
-              <span class="testimonial-role" data-i18n="testimonial2Role">Entrepreneur</span>
+            <div class="cart-items" id="cart-items"></div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <strong>Total: <span id="cart-total">0€</span></strong>
+                </div>
+                <button class="checkout-btn" onclick="checkout()">Procéder au paiement sécurisé</button>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </section>
 
-  <!-- ===================== FAQ ===================== -->
-  <section class="faq-section" id="faq">
-    <div class="container">
-      <h2 class="section-title" data-i18n="faqTitle">FAQ</h2>
-      <div class="faq-list">
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false" data-i18n="faq1Q">
-            Can I choose any ebook or template in the bundle?
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </button>
-          <div class="faq-answer" hidden>
-            <p data-i18n="faq1A">Yes. You can pick from our entire collection. After purchase, you'll get an email to select your products.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false" data-i18n="faq2Q">
-            How do I receive my products after purchase?
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </button>
-          <div class="faq-answer" hidden>
-            <p data-i18n="faq2A">After your payment is confirmed, you'll be redirected to a page where you select your products. We'll send them to your email within 10 minutes.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false" data-i18n="faq3Q">
-            What payment methods are accepted?
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </button>
-          <div class="faq-answer" hidden>
-            <p data-i18n="faq3A">We accept Credit/Debit Cards, Apple Pay, Google Pay, US Bank Transfers (ACH), Klarna, and Link by Stripe.</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== FOOTER ===================== -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <span class="logo-text footer-logo">TheBestBundle</span>
-      <p class="footer-copy">© 2026 TheBestBundle. <span data-i18n="footerRights">All rights reserved.</span></p>
-    </div>
-  </footer>
-
-  <!-- ===================== STRIPE LOADING OVERLAY ===================== -->
-  <div class="checkout-overlay" id="checkoutOverlay" aria-hidden="true">
-    <div class="checkout-spinner">
-      <div class="spinner"></div>
-      <p data-i18n="checkoutLoading">Redirecting to secure checkout…</p>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
