@@ -90,6 +90,15 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            text-decoration: none;
+            color: #FFFFFF;
+            transition: all 0.3s;
+        }
+        
+        .book-card:hover {
+            border-color: #FFD700;
+            transform: translateY(-3px);
+            background: #222;
         }
         
         /* Item #2: How It Works Section */
@@ -172,6 +181,8 @@
             border-radius: 12px;
             padding: 30px 20px;
             position: relative;
+            display: flex;
+            flex-direction: column;
         }
         
         .pack-card.popular {
@@ -214,6 +225,7 @@
             margin: 20px 0;
             font-size: 12px;
             color: #ccc;
+            flex-grow: 1;
         }
         
         .pack-books div {
@@ -224,6 +236,25 @@
             color: #FFFFFF;
             font-size: 12px;
             margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .pack-button {
+            background: #FFD700;
+            color: #000000;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+            transition: transform 0.2s;
+        }
+        
+        .pack-button:hover {
+            transform: scale(1.05);
         }
         
         /* Item #5: Social Proof Section */
@@ -341,16 +372,16 @@
             <p class="subtitle">Buy Ebooks individually $27 per unit or save with Bundle</p>
             
             <div class="books-grid">
-                <div class="book-card">Decouvre ta niche parfaite</div>
-                <div class="book-card">ton plan d’action en business</div>
-                <div class="book-card">Comment Être Financé Rapidement</div>
-                <div class="book-card">Protège ton Entreprise Légalement</div>
-                <div class="book-card">Crée une presence en ligne</div>
-                <div class="book-card">traffic leads ventes Le système</div>
-                <div class="book-card">Discipline Financière</div>
-                <div class="book-card">l’art de vendre en 2026</div>
-                <div class="book-card">De salariés à Mentalité d’entrepreneur</div>
-                <div class="book-card">Automatise Ton Business en 30 Jours</div>
+                <a href="https://buy.stripe.com/3cIfZj8cg0PS67d9KX8N200" class="book-card" target="_blank">Decouvre ta niche parfaite</a>
+                <a href="https://buy.stripe.com/bJe28t1NS6ac1QXf5h8N201" class="book-card" target="_blank">ton plan d’action en business</a>
+                <a href="https://buy.stripe.com/fZu00l504568antcX98N202" class="book-card" target="_blank">Comment Être Financé Rapidement</a>
+                <a href="https://buy.stripe.com/7sY28t6484242V1aP18N203" class="book-card" target="_blank">Protège ton Entreprise Légalement</a>
+                <a href="https://buy.stripe.com/7sY7sN8cg0PSeDJ1er8N204" class="book-card" target="_blank">Crée une presence en ligne</a>
+                <a href="https://buy.stripe.com/cNi8wRakocyA7bh1er8N205" class="book-card" target="_blank">traffic leads ventes Le système</a>
+                <a href="https://buy.stripe.com/00w28t1NS4249jp0an8N206" class="book-card" target="_blank">Discipline Financière</a>
+                <a href="https://buy.stripe.com/aFa6oJ5045682V1aP18N207" class="book-card" target="_blank">l’art de vendre en 2026</a>
+                <a href="https://buy.stripe.com/00w8wR2RWdCE1QXg9l8N208" class="book-card" target="_blank">De salariés à Mentalité d’entrepreneur</a>
+                <a href="https://buy.stripe.com/8x26oJ2RWgOQ9jp5uH8N209" class="book-card" target="_blank">Automatise Ton Business en 30 Jours</a>
             </div>
         </section>
     </div>
@@ -397,6 +428,7 @@
                         <div>• ton plan d’action en business</div>
                     </div>
                     <div class="pack-note">Choose from our entire collection of ebooks</div>
+                    <a href="https://buy.stripe.com/5kQ8wRboscyAgLR0an8N20a" class="pack-button" target="_blank">Buy Starter Pack</a>
                 </div>
                 
                 <div class="pack-card popular">
@@ -410,6 +442,7 @@
                         <div>• l’art de vendre en 2026</div>
                     </div>
                     <div class="pack-note">Choose from our entire collection of ebooks</div>
+                    <a href="https://buy.stripe.com/dRm8wR2RWeGIeDJf5h8N20b" class="pack-button" target="_blank">Buy Creator Pack</a>
                 </div>
                 
                 <div class="pack-card">
@@ -424,6 +457,7 @@
                         <div>• Automatise Ton Business en 30 Jours</div>
                     </div>
                     <div class="pack-note">Choose from our entire collection of ebooks</div>
+                    <a href="https://buy.stripe.com/00w9AVako5682V14qD8N20c" class="pack-button" target="_blank">Buy Pro Pack</a>
                 </div>
                 
                 <div class="pack-card">
@@ -434,6 +468,7 @@
                         <div>• All 10 books included</div>
                     </div>
                     <div class="pack-note">Choose from our entire collection of ebooks</div>
+                    <a href="https://buy.stripe.com/9B65kF504buw5390an8N20d" class="pack-button" target="_blank">Buy Vault Pack</a>
                 </div>
             </div>
         </div>
@@ -486,6 +521,10 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        function scrollToPacks() {
+            document.getElementById('packs').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>
