@@ -1,422 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thank You – TheBestBundle</title>
-  <meta name="robots" content="noindex, nofollow" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - TheBestBundle</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Item #8: Website Background */
+        body {
+            background-color: #000000;
+            color: #FFFFFF;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            flex: 1;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            color: #FFD700;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Thank You Section */
+        .thank-you-wrap {
+            text-align: center;
+            padding: 60px 0 40px;
+        }
+
+        .check-icon {
+            color: #FFD700;
+            font-size: 80px;
+            margin-bottom: 20px;
+        }
+
+        .thank-you-wrap h1 {
+            color: #FFFFFF;
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .thank-you-wrap .subtitle {
+            color: #FFFFFF;
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        /* Track List - All 8 Items */
+        .track-box {
+            background: #1a1a1a;
+            border: 2px solid #FFD700;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: left;
+            margin-bottom: 40px;
+        }
+
+        .track-title {
+            color: #FFD700;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .track-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 18px;
+            color: #FFFFFF;
+        }
+
+        .track-item i {
+            color: #FFD700;
+            font-size: 20px;
+            margin-top: 2px;
+            min-width: 20px;
+        }
+
+        .track-item span {
+            font-size: 16px;
+        }
+
+        /* Download Button */
+        .download-section {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .download-btn {
+            background: #FFD700;
+            color: #000000;
+            border: none;
+            padding: 18px 50px;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.2s;
+        }
+
+        .download-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .download-note {
+            color: #FFFFFF;
+            font-size: 14px;
+            margin-top: 15px;
+        }
+
+        /* Support */
+        .support {
+            text-align: center;
+            padding: 40px 0;
+            color: #FFFFFF;
+        }
+
+        .support a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid #333;
+            margin-top: auto;
+        }
+
+        .footer .brand {
+            color: #FFD700;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .footer .copyright {
+            color: #FFFFFF;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .thank-you-wrap h1 {
+                font-size: 32px;
+            }
+            .track-box {
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">Thebestbundle</div>
+        </header>
 
-  <!-- ===================== HEADER ===================== -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="/" class="logo" aria-label="TheBestBundle Home">
-        <span class="logo-text">TheBestBundle</span>
-      </a>
-      <div class="lang-switcher" id="langSwitcher" role="navigation" aria-label="Language selector">
-        <button class="lang-btn active" data-lang="en" aria-label="English">🇺🇸 EN</button>
-        <button class="lang-btn" data-lang="ht" aria-label="Kreyòl Ayisyen">🇭🇹 Kreyòl</button>
-        <button class="lang-btn" data-lang="fr" aria-label="Français">🇫🇷 FR</button>
-        <button class="lang-btn" data-lang="es" aria-label="Español">🇪🇸 ES</button>
-      </div>
-    </div>
-  </header>
+        <section class="thank-you-wrap">
+            <div class="check-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h1>Thank You For Your Purchase!</h1>
+            <p class="subtitle">Your order is confirmed. Check your email for download links.</p>
+        </section>
 
-  <!-- ===================== THANK YOU PAGE ===================== -->
-  <main class="ty-page">
-    <div class="ty-card">
-
-      <div class="ty-icon">🎉</div>
-      <h1 class="ty-title" data-i18n="tyTitle">Payment Successful!</h1>
-      
-      <!-- INSTANT DOWNLOAD MODE: Shows if?sku= is in URL -->
-      <div id="instant-download" style="display: none;">
-        <p class="ty-subtitle" data-i18n="tyInstantSubtitle">Your ebook is ready. Click below to download:</p>
-        <div id="download-btn-wrap" style="margin: 30px 0;">
-          <a id="ebook-download-btn" href="#" target="_blank" class="btn btn-gold btn-pack" style="font-size: 18px; padding: 15px 30px;">
-            📥 Télécharger maintenant
-          </a>
+        <!-- All 8 Items Track List -->
+        <div class="track-box">
+            <div class="track-title">What Happens Next:</div>
+            
+            <div class="track-item">
+                <i class="fas fa-1"></i>
+                <span><strong>Item #1:</strong> Payment confirmed - Order received in our system</span>
+            </div>
+            
+            <div class="track-item">
+                <i class="fas fa-2"></i>
+                <span><strong>Item #2:</strong> Email sent - Check your inbox for download links</span>
+            </div>
+            
+            <div class="track-item">
+                <i class="fas fa-3"></i>
+                <span><strong>Item #3:</strong> Access your ebooks - Click the download button below</span>
+            </div>
+            
+            <div class="track-item">
+                <i class="fas fa-4"></i>
+                <span><strong>Item #4:</strong> Save your files - Download to your device for lifetime access</span>
+            </div>
+            
+            <div class="track-item">
+                <i class="fas fa-5"></i>
+                <span><strong>Item #5:</strong> Start reading - Open PDFs on any device, anytime</span>
+            </div>
+            
+            <div class="track-item">
+                <i class="fas fa-6"></i>
+                <span><strong>Item #6:</strong> Get support - Email us if you need help with downloads</span>
+            </div>
+            
+            <div class="track-item">
+                <i class="fas fa-7"></i>
+                <span><strong>Item #7:</strong> Bonus updates - You'll get new versions when we update ebooks</span>
+            </div>
+            
+            <div class="track-item">
+                <i class="fas fa-8"></i>
+                <span><strong>Item #8:</strong> Join community - Follow us for tips to grow your business</span>
+            </div>
         </div>
-        <p style="font-size: 14px; opacity: 0.7;" data-i18n="tyEmailNote">We've also sent a copy to your email.</p>
-      </div>
 
-      <!-- PACK SELECTION MODE: Shows if no?sku= in URL -->
-      <div id="pack-selection">
-        <p class="ty-subtitle" data-i18n="tySubtitle">Choose your products below. We'll email them in 10 minutes.</p>
+        <div class="download-section">
+            <a href="#" class="download-btn">
+                <i class="fas fa-download"></i> Download Your Ebooks
+            </a>
+            <p class="download-note">Link expires in 7 days. Save your files now.</p>
+        </div>
 
-        <!-- Product Selection Form (submitted via Netlify Forms) -->
-        <form
-          name="product-selection"
-          method="POST"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
-          id="productForm"
-          onsubmit="handleFormSubmit(event)"
-        >
-          <!-- Netlify honeypot (hidden from humans) -->
-          <p hidden><label>Don't fill this out: <input name="bot-field" /></label></p>
-
-          <!-- Hidden fields populated by JS -->
-          <input type="hidden" name="pack_id" id="hiddenPackId" value="" />
-          <input type="hidden" name="session_id" id="hiddenSessionId" value="" />
-          <input type="hidden" name="selected_products" id="hiddenSelectedProducts" value="" />
-
-          <!-- Customer Email -->
-          <div class="ty-email-field">
-            <label for="customerEmail" data-i18n="tyEmailLabel">Your Email Address</label>
-            <input
-              type="email"
-              id="customerEmail"
-              name="customer_email"
-              required
-              autocomplete="email"
-              data-i18n-placeholder="tyEmailPlaceholder"
-              placeholder="you@example.com"
-            />
-          </div>
-
-          <!-- Product List -->
-          <p class="ty-form-title" data-i18n="tyPickTitle">Select Your Products</p>
-
-          <div class="ty-counter">
-            <span data-i18n="tyCounterPre">You can select up to</span>
-            <strong id="maxCount">—</strong>
-            <span data-i18n="tyCounterPost">products.</span>
-            <span data-i18n="tyCounterSelected">Selected:</span>
-            <strong id="selectedCount">0</strong>
-          </div>
-
-          <div class="products-list" id="productsList">
-            <!-- Ebooks -->
-            <label class="product-item">
-              <input type="checkbox" name="products" value="Ebook – Digital Marketing Mastery" />
-              <span>📘 Digital Marketing Mastery</span>
-            </label>
-            <label class="product-item">
-              <input type="checkbox" name="products" value="Ebook – Social Media Growth Guide" />
-              <span>📗 Social Media Growth Guide</span>
-            </label>
-            <label class="product-item">
-              <input type="checkbox" name="products" value="Ebook – Email Marketing Blueprint" />
-              <span>📙 Email Marketing Blueprint</span>
-            </label>
-            <label class="product-item">
-              <input type="checkbox" name="products" value="Ebook – Passive Income Secrets" />
-              <span>📕 Passive Income Secrets</span>
-            </label>
-            <label class="product-item">
-              <input type="checkbox" name="products" value="Ebook – Freelance Success Formula" />
-              <span>📒 Freelance Success Formula</span>
-            </label>
-            <label class="product-item">
-              <input type="checkbox" name="products" value="Ebook – Content Creation Bible" />
-              <span>📓 Content Creation Bible</span>
-            </label>
-            <label class="product-item">
-              <input type="checkbox" name="products" value="Ebook – SEO Fundamentals" />
-              <span>📔 SEO Fundamentals</span>
-            </label>
-            <label class="product-item">
-              <input type="checkbox" name="products" value="Ebook – E-commerce Starter Guide" />
-              <span>📖 E-commerce Starter Guide</span>
-            </label>
-            <!-- Templates -->
-            <label class="product-item">
-              <input type="checkbox" name="products" value="Template – Business Plan Canva Kit" />
-              <span>🎨 Business Plan Canva Kit</span>
-            </label>
-            <label class="product-item">
-              <input type="checkbox" name="products" value="Template – Social Media Content Calendar" />
-              <span>📅 Social Media Content Calendar</span>
-            </label>
-            <label class="product-item">
-              <input type="checkbox" name="products" value="Template – Invoice & Proposal Pack" />
-              <span>🧾 Invoice & Proposal Pack</span>
-            </label>
-            <label class="product-item">
-              <input type="checkbox" name="products" value="Template – Landing Page Figma Template" />
-              <span>🖥️ Landing Page Figma Template</span>
-            </label>
-            <label class="product-item">
-              <input type="checkbox" name="products" value="Template – Email Newsletter Kit" />
-              <span>✉️ Email Newsletter Kit</span>
-            </label>
-            <label class="product-item">
-              <input type="checkbox" name="products" value="Template – Brand Identity Starter Kit" />
-              <span>🎯 Brand Identity Starter Kit</span>
-            </label>
-            <label class="product-item">
-              <input type="checkbox" name="products" value="Template – YouTube Channel Art Pack" />
-              <span>▶️ YouTube Channel Art Pack</span>
-            </label>
-            <label class="product-item">
-              <input type="checkbox" name="products" value="Template – Digital Product Launch Kit" />
-              <span>🚀 Digital Product Launch Kit</span>
-            </label>
-          </div>
-
-          <button type="submit" class="btn btn-gold btn-pack ty-submit-btn" data-i18n="tySubmitBtn">
-            Send My Products →
-          </button>
-
-        </form>
-      </div>
-
-      <!-- Success message (shown after submit) -->
-      <div class="ty-success-msg" id="tySuccessMsg" data-i18n="tySuccessMsg" role="alert" style="display: none;">
-        ✅ Your selection has been received! Check your email in 10 minutes.
-      </div>
-
-      <!-- Error message for invalid SKU -->
-      <div id="tyErrorMsg" style="display: none; color: #ff4444; margin-top: 20px;">
-        ❌ Product not found. Please contact support with your order details.
-      </div>
-
+        <div class="support">
+            <p>Need help? Email us at <a href="mailto:support@thebestbundle.com">support@thebestbundle.com</a></p>
+        </div>
     </div>
-  </main>
 
-  <!-- ===================== FOOTER ===================== -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <span class="logo-text footer-logo">TheBestBundle</span>
-      <p class="footer-copy">© 2026 TheBestBundle. <span data-i18n="footerRights">All rights reserved.</span></p>
-    </div>
-  </footer>
-
-  <script>
-    /* ============================================================
-       Thank-You Page Script - Updated with Instant Download
-       ============================================================ */
-
-    /* ---------- STEP 2: ADD YOUR 14 PDF LINKS HERE ---------- */
-    const DOWNLOAD_MAP = {
-      'Découvre ta niche parfaite': '',
-      'Ton plan d\'action en business': '',
-      'Comment Être Financé Rapidement': '',
-      'Protège ton Entreprise Légalement': '',
-      'Crée une présence en ligne': '',
-      'TRAFFIC LEADS VENTES — LE SYSTÈME': '',
-      'DISCIPLINE FINANCIÈRE': '',
-      'L\'art de vendre en 2026': '',
-      'De salariés à Mentalité d\'entrepreneur': '',
-      'AUTOMATISE TON BUSINESS EN 30 JOURS': '',
-      'pack2': '',
-      'Pack 3': '',
-      'Pack 5': '',
-      'Pack 10': ''
-    };
-
-    /* ---------- Pack limits ---------- */
-    const PACK_LIMITS = {
-      pack2: 2,
-      pack3: 3,
-      pack5: 5,
-      pack10: null // null = unlimited (all products)
-    };
-
-    /* ---------- Translations (subset for this page) ---------- */
-    const TY_TRANSLATIONS = {
-      en: {
-        tyTitle: 'Payment Successful!',
-        tySubtitle: "Choose your products below. We'll email them in 10 minutes.",
-        tyInstantSubtitle: "Your ebook is ready. Click below to download:",
-        tyEmailNote: "We've also sent a copy to your email.",
-        tyEmailLabel: 'Your Email Address',
-        tyEmailPlaceholder:'you@example.com',
-        tyPickTitle: 'Select Your Products',
-        tyCounterPre: 'You can select up to',
-        tyCounterPost: 'products.',
-        tyCounterSelected: 'Selected:',
-        tySubmitBtn: 'Send My Products →',
-        tySuccessMsg: '✅ Your selection has been received! Check your email in 10 minutes.',
-        footerRights: 'All rights reserved.'
-      },
-      ht: {
-        tyTitle: 'Peman an Reyisi!',
-        tySubtitle: 'Chwazi pwodui ou vle yo anba a. N ap voye yo nan imèl ou nan 10 minit.',
-        tyInstantSubtitle: 'Ebook ou pare. Klike anba a pou telechaje:',
-        tyEmailNote: 'Nou voye yon kopi nan imèl ou tou.',
-        tyEmailLabel: 'Adrès Imèl Ou',
-        tyEmailPlaceholder:'ou@egzanp.com',
-        tyPickTitle: 'Chwazi Pwodui Ou Yo',
-        tyCounterPre: 'Ou ka chwazi jiska',
-        tyCounterPost: 'pwodui.',
-        tyCounterSelected: 'Chwazi:',
-        tySubmitBtn: 'Voye Pwodui Mwen Yo →',
-        tySuccessMsg: '✅ Nou resevwa chwa ou! Tcheke imèl ou nan 10 minit.',
-        footerRights: 'Tout dwa rezève.'
-      },
-      fr: {
-        tyTitle: 'Paiement Réussi!',
-        tySubtitle: 'Choisissez vos produits ci-dessous. Nous vous les enverrons par e-mail dans 10 minutes.',
-        tyInstantSubtitle: 'Votre ebook est prêt. Cliquez ci-dessous pour télécharger :',
-        tyEmailNote: 'Nous avons aussi envoyé une copie à votre e-mail.',
-        tyEmailLabel: 'Votre Adresse E-mail',
-        tyEmailPlaceholder:'vous@exemple.com',
-        tyPickTitle: 'Sélectionnez Vos Produits',
-        tyCounterPre: 'Vous pouvez sélectionner jusqu\'à',
-        tyCounterPost: 'produits.',
-        tyCounterSelected: 'Sélectionnés :',
-        tySubmitBtn: 'Envoyer Mes Produits →',
-        tySuccessMsg: '✅ Votre sélection a été reçue! Vérifiez votre e-mail dans 10 minutes.',
-        footerRights: 'Tous droits réservés.'
-      },
-      es: {
-        tyTitle: '¡Pago Exitoso!',
-        tySubtitle: 'Elige tus productos abajo. Te los enviaremos por correo en 10 minutos.',
-        tyInstantSubtitle: 'Tu ebook está listo. Haz clic abajo para descargar:',
-        tyEmailNote: 'También enviamos una copia a tu correo.',
-        tyEmailLabel: 'Tu Dirección de Correo',
-        tyEmailPlaceholder:'tu@ejemplo.com',
-        tyPickTitle: 'Selecciona Tus Productos',
-        tyCounterPre: 'Puedes seleccionar hasta',
-        tyCounterPost: 'productos.',
-        tyCounterSelected: 'Seleccionados:',
-        tySubmitBtn: 'Enviar Mis Productos →',
-        tySuccessMsg: '✅ ¡Tu selección fue recibida! Revisa tu correo en 10 minutos.',
-        footerRights: 'Todos los derechos reservados.'
-      }
-    };
-
-    /* ---------- Read URL params ---------- */
-    function getUrlParam(name) {
-      return new URLSearchParams(window.location.search).get(name) || '';
-    }
-
-    /* ---------- Apply language ---------- */
-    function applyLang(lang) {
-      const t = TY_TRANSLATIONS[lang] || TY_TRANSLATIONS['en'];
-      document.querySelectorAll('[data-i18n]').forEach(function (el) {
-        const key = el.getAttribute('data-i18n');
-        if (t[key]!== undefined) el.innerHTML = t[key];
-      });
-      document.querySelectorAll('[data-i18n-placeholder]').forEach(function (el) {
-        const key = el.getAttribute('data-i18n-placeholder');
-        if (t[key]!== undefined) el.setAttribute('placeholder', t[key]);
-      });
-      document.documentElement.setAttribute('lang', lang);
-      document.querySelectorAll('.lang-btn').forEach(function (btn) {
-        btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
-      });
-      try { localStorage.setItem('tbb_lang', lang); } catch(e){}
-    }
-
-    /* ---------- Init ---------- */
-    document.addEventListener('DOMContentLoaded', function () {
-      const sku = getUrlParam('sku');
-      const packId = getUrlParam('pack') || 'pack2';
-      const sessionId = getUrlParam('session_id') || '';
-      
-      // CHECK FOR INSTANT DOWNLOAD MODE
-      if (sku && DOWNLOAD_MAP[sku]) {
-        document.getElementById('instant-download').style.display = 'block';
-        document.getElementById('pack-selection').style.display = 'none';
-        document.getElementById('ebook-download-btn').href = DOWNLOAD_MAP[sku];
-      } else if (sku &&!DOWNLOAD_MAP[sku]) {
-        // SKU exists but no URL yet
-        document.getElementById('instant-download').style.display = 'block';
-        document.getElementById('pack-selection').style.display = 'none';
-        document.getElementById('download-btn-wrap').style.display = 'none';
-        document.getElementById('tyErrorMsg').style.display = 'block';
-      } else {
-        // PACK SELECTION MODE - Your original code
-        const limit = PACK_LIMITS[packId];
-
-        // Populate hidden fields
-        document.getElementById('hiddenPackId').value = packId;
-        document.getElementById('hiddenSessionId').value = sessionId;
-
-        // Set max count display
-        const maxCountEl = document.getElementById('maxCount');
-        if (limit === null) {
-          maxCountEl.textContent = '∞';
-        } else {
-          maxCountEl.textContent = limit;
-        }
-
-        // Checkbox logic: enforce limit
-        const checkboxes = document.querySelectorAll('#productsList input[type="checkbox"]');
-        const selectedCountEl = document.getElementById('selectedCount');
-
-        function updateCounter() {
-          const checked = document.querySelectorAll('#productsList input[type="checkbox"]:checked');
-          selectedCountEl.textContent = checked.length;
-
-          // Collect selected product names for hidden field
-          const selected = Array.from(checked).map(cb => cb.value);
-          document.getElementById('hiddenSelectedProducts').value = selected.join(' | ');
-
-          // Enforce limit: disable unchecked if at limit
-          if (limit!== null) {
-            checkboxes.forEach(function (cb) {
-              if (!cb.checked) {
-                cb.disabled = checked.length >= limit;
-                cb.closest('.product-item').style.opacity = checked.length >= limit? '0.4' : '1';
-              }
-            });
-          }
-
-          // Style selected items
-          checkboxes.forEach(function (cb) {
-            cb.closest('.product-item').classList.toggle('selected', cb.checked);
-          });
-        }
-
-        checkboxes.forEach(function (cb) {
-          cb.addEventListener('change', updateCounter);
-        });
-
-        updateCounter();
-      }
-
-      // Language switcher
-      document.querySelectorAll('.lang-btn').forEach(function (btn) {
-        btn.addEventListener('click', function () {
-          applyLang(this.getAttribute('data-lang'));
-        });
-      });
-
-      // Detect saved/browser language
-      let savedLang = 'en';
-      try {
-        const stored = localStorage.getItem('tbb_lang');
-        if (stored && TY_TRANSLATIONS[stored]) savedLang = stored;
-      } catch(e){}
-      applyLang(savedLang);
-    });
-
-    /* ---------- Form Submit ---------- */
-    function handleFormSubmit(e) {
-      e.preventDefault();
-      const form = document.getElementById('productForm');
-      const data = new FormData(form);
-
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(data).toString()
-      })
-     .then(function (res) {
-        if (res.ok) {
-          form.style.display = 'none';
-          const msg = document.getElementById('tySuccessMsg');
-          msg.style.display = 'block';
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        } else {
-          throw new Error('Form submission failed.');
-        }
-      })
-     .catch(function (err) {
-        alert('Error submitting form. Please try again or contact support.');
-        console.error(err);
-      });
-    }
-  </script>
-
+    <footer class="footer">
+        <div class="container">
+            <div class="brand">THEBESTBUNDLE</div>
+            <div class="copyright">2026 THEBESTBUNDLE. All rights reserved</div>
+        </div>
+    </footer>
 </body>
 </html>
