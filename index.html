@@ -24,21 +24,22 @@
     border-bottom: 1px solid #333;
   }
 .logo { color: #FFD700; font-size: 24px; font-weight: bold; }
-.language { display: flex; gap: 8px; background: #1a1a1a; padding: 8px; border-radius: 25px; }
+.language { display: flex; gap: 4px; background: #1a1a1a; padding: 8px; border-radius: 25px; }
 .language a {
     color: #FFFFFF;
     text-decoration: none;
-    padding: 6px 12px;
+    padding: 6px 8px;
     border-radius: 20px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 12px;
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 4px;
     transition: all 0.3s;
+    white-space: nowrap;
   }
 .language a.active,.language a:hover { background: #FFD700; color: #000000; }
-.flag { font-size: 16px; }
+.flag { font-size: 13px; }
 .hero { text-align: center; padding: 40px 0 60px; }
 .hero.tag { color: #FFD700; font-size: 14px; margin-bottom: 10px; }
 .hero h1 { color: #FFFFFF; font-size: 48px; font-weight: bold; margin-bottom: 15px; }
@@ -119,8 +120,9 @@
 .books-grid { grid-template-columns: repeat(2, 1fr); }
 .hero h1 { font-size: 32px; }
 .steps { gap: 30px; }
-.language a { padding: 6px 8px; font-size: 12px; }
-.flag { font-size: 14px; }
+.language { gap: 3px; padding: 6px; }
+.language a { padding: 5px 6px; font-size: 10px; }
+.flag { font-size: 11px; }
         }
     </style>
 </head>
@@ -266,7 +268,7 @@
                     <div class="reviewer-title" data-translate="entrepreneur">Entrepreneur</div>
                 </div>
                 <div class="review-card">
-                    <div class="stars">★★★★★</div>
+                    <div class="stars">★★★</div>
                     <div class="review-text" data-translate="review3">"The Vault Pack is the best investment I've made for my business. All 10 books are gold!"</div>
                     <div class="reviewer">Marie D.</div>
                     <div class="reviewer-title" data-translate="coach">Business Coach</div>
@@ -514,7 +516,7 @@
                 });
             });
 
-            // Load saved language
+            // Default to English on first load
             const savedLang = localStorage.getItem('language') || 'en';
             setLanguage(savedLang);
         });
