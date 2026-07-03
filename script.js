@@ -177,8 +177,8 @@ function setLanguage(lang) {
 
     document.querySelectorAll('[data-translate]').forEach(el => {
         const key = el.dataset.translate;
-        if(translations && translations[key]) {
-            el.innerText = translations[key];
+        if(translations && translations && translations[key]) {
+        el.innerText = translations[key];
         }
     });
 
