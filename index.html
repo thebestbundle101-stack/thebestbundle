@@ -8,65 +8,65 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { background-color: #000000; color: #FFFFFF; font-family: 'Arial', sans-serif; line-height: 1.6; }
-     .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-     .header { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; }
-     .logo { color: #FFD700; font-size: 24px; font-weight: bold; }
-     .language a { color: #FFFFFF; text-decoration: none; margin: 0 5px; cursor: pointer; }
-     .language a.active,.language a:hover { color: #FFD700; }
-     .hero { text-align: center; padding: 40px 0 60px; }
-     .hero.tag { color: #FFD700; font-size: 14px; margin-bottom: 10px; }
-     .hero h1 { color: #FFFFFF; font-size: 48px; font-weight: bold; margin-bottom: 15px; }
-     .hero.subtitle { color: #FFFFFF; font-size: 18px; margin-bottom: 40px; }
-     .books-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 15px; margin-bottom: 40px; }
-     .book-card { background: #1a1a1a; border: 1px solid #333; padding: 15px 10px; border-radius: 8px; font-size: 12px; text-align: center; min-height: 80px; display: flex; align-items: center; justify-content: center; text-decoration: none; color: #FFFFFF; transition: all 0.3s; cursor: pointer; position: relative; z-index: 1; }
-     .book-card:hover { border-color: #FFD700; transform: translateY(-3px); background: #222; }
-     .how-it-works { text-align: center; padding: 60px 0; }
-     .section-title { color: #FFFFFF; font-size: 36px; margin-bottom: 50px; }
-     .steps { display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; }
-     .step { text-align: center; }
-     .step i { font-size: 40px; color: #FFD700; margin-bottom: 15px; }
-     .step h3 { color: #FFFFFF; font-size: 18px; }
-     .cta-button-wrap { text-align: center; padding: 20px 0 60px; }
-     .cta-button { background: #FFD700; color: #000000; border: none; padding: 15px 40px; font-size: 18px; font-weight: bold; border-radius: 8px; cursor: pointer; transition: transform 0.2s; }
-     .cta-button:hover { transform: scale(1.05); }
-     .packs { padding: 60px 0; text-align: center; }
-     .packs.subtitle { color: #FFFFFF; margin-bottom: 40px; }
-     .packs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-top: 40px; }
-     .pack-card { background: #1a1a1a; border: 2px solid #333; border-radius: 12px; padding: 30px 20px; position: relative; display: flex; flex-direction: column; }
-     .pack-card.popular { border-color: #FFD700; }
-     .popular-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #FFD700; color: #000000; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: bold; }
-     .pack-name { color: #FFFFFF; font-size: 24px; margin-bottom: 10px; }
-     .pack-price { color: #FFD700; font-size: 36px; font-weight: bold; margin-bottom: 15px; }
-     .pack-desc { color: #FFFFFF; margin-bottom: 20px; }
-     .pack-books { text-align: left; margin: 20px 0; font-size: 12px; color: #ccc; flex-grow: 1; }
-     .pack-books div { margin-bottom: 5px; }
-     .pack-note { color: #FFFFFF; font-size: 12px; margin-top: 20px; margin-bottom: 20px; }
-     .pack-button { background: #FFD700; color: #000000; border: none; padding: 12px 20px; font-size: 16px; font-weight: bold; border-radius: 8px; cursor: pointer; text-decoration: none; display: block; transition: transform 0.2s; }
-     .pack-button:hover { transform: scale(1.05); }
-     .social-proof { padding: 60px 0; text-align: center; }
-     .social-proof h2 { color: #FFFFFF; font-size: 36px; margin-bottom: 50px; }
-     .reviews { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
-     .review-card { background: #1a1a1a; border: 1px solid #333; padding: 25px; border-radius: 12px; text-align: left; }
-     .stars { color: #FFD700; font-size: 20px; margin-bottom: 15px; }
-     .review-text { color: #FFFFFF; margin-bottom: 15px; font-style: italic; }
-     .reviewer { color: #FFFFFF; font-weight: bold; }
-     .reviewer-title { color: #FFFFFF; font-size: 14px; }
-     .faq { padding: 60px 0; text-align: center; }
-     .faq-list { max-width: 800px; margin: 40px auto 0; text-align: left; }
-     .faq-item { background: #1a1a1a; border: 1px solid #333; padding: 20px; margin-bottom: 15px; border-radius: 8px; color: #FFFFFF; cursor: pointer; transition: all 0.3s; }
-     .faq-item:hover { border-color: #FFD700; }
-     .faq-question { display: flex; justify-content: space-between; align-items: center; font-weight: bold; }
-     .faq-question i { transition: transform 0.3s; }
-     .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease, margin-top 0.3s ease; color: #ccc; }
-     .faq-item.active.faq-answer { max-height: 200px; margin-top: 15px; }
-     .faq-item.active.faq-question i { transform: rotate(180deg); }
-     .footer { text-align: center; padding: 40px 0; border-top: 1px solid #333; }
-     .footer.brand { color: #FFD700; font-size: 24px; font-weight: bold; margin-bottom: 10px; }
-     .footer.copyright { color: #FFFFFF; font-size: 14px; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .header { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; }
+    .logo { color: #FFD700; font-size: 24px; font-weight: bold; }
+    .language a { color: #FFFFFF; text-decoration: none; margin: 0 5px; cursor: pointer; }
+    .language a.active,.language a:hover { color: #FFD700; }
+    .hero { text-align: center; padding: 40px 0 60px; }
+    .hero.tag { color: #FFD700; font-size: 14px; margin-bottom: 10px; }
+    .hero h1 { color: #FFFFFF; font-size: 48px; font-weight: bold; margin-bottom: 15px; }
+    .hero.subtitle { color: #FFFFFF; font-size: 18px; margin-bottom: 40px; }
+    .books-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 15px; margin-bottom: 40px; }
+    .book-card { background: #1a1a1a; border: 1px solid #333; padding: 15px 10px; border-radius: 8px; font-size: 12px; text-align: center; min-height: 80px; display: flex; align-items: center; justify-content: center; text-decoration: none; color: #FFFFFF; transition: all 0.3s; cursor: pointer; position: relative; z-index: 1; }
+    .book-card:hover { border-color: #FFD700; transform: translateY(-3px); background: #222; }
+    .how-it-works { text-align: center; padding: 60px 0; }
+    .section-title { color: #FFFFFF; font-size: 36px; margin-bottom: 50px; }
+    .steps { display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; }
+    .step { text-align: center; }
+    .step i { font-size: 40px; color: #FFD700; margin-bottom: 15px; }
+    .step h3 { color: #FFFFFF; font-size: 18px; }
+    .cta-button-wrap { text-align: center; padding: 20px 0 60px; }
+    .cta-button { background: #FFD700; color: #000000; border: none; padding: 15px 40px; font-size: 18px; font-weight: bold; border-radius: 8px; cursor: pointer; transition: transform 0.2s; }
+    .cta-button:hover { transform: scale(1.05); }
+    .packs { padding: 60px 0; text-align: center; }
+    .packs.subtitle { color: #FFFFFF; margin-bottom: 40px; }
+    .packs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-top: 40px; }
+    .pack-card { background: #1a1a1a; border: 2px solid #333; border-radius: 12px; padding: 30px 20px; position: relative; display: flex; flex-direction: column; }
+    .pack-card.popular { border-color: #FFD700; }
+    .popular-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #FFD700; color: #000000; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: bold; }
+    .pack-name { color: #FFFFFF; font-size: 24px; margin-bottom: 10px; }
+    .pack-price { color: #FFD700; font-size: 36px; font-weight: bold; margin-bottom: 15px; }
+    .pack-desc { color: #FFFFFF; margin-bottom: 20px; }
+    .pack-books { text-align: left; margin: 20px 0; font-size: 12px; color: #ccc; flex-grow: 1; }
+    .pack-books div { margin-bottom: 5px; }
+    .pack-note { color: #FFFFFF; font-size: 12px; margin-top: 20px; margin-bottom: 20px; }
+    .pack-button { background: #FFD700; color: #000000; border: none; padding: 12px 20px; font-size: 16px; font-weight: bold; border-radius: 8px; cursor: pointer; text-decoration: none; display: block; transition: transform 0.2s; }
+    .pack-button:hover { transform: scale(1.05); }
+    .social-proof { padding: 60px 0; text-align: center; }
+    .social-proof h2 { color: #FFFFFF; font-size: 36px; margin-bottom: 50px; }
+    .reviews { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+    .review-card { background: #1a1a1a; border: 1px solid #333; padding: 25px; border-radius: 12px; text-align: left; }
+    .stars { color: #FFD700; font-size: 20px; margin-bottom: 15px; }
+    .review-text { color: #FFFFFF; margin-bottom: 15px; font-style: italic; }
+    .reviewer { color: #FFFFFF; font-weight: bold; }
+    .reviewer-title { color: #FFFFFF; font-size: 14px; }
+    .faq { padding: 60px 0; text-align: center; }
+    .faq-list { max-width: 800px; margin: 40px auto 0; text-align: left; }
+    .faq-item { background: #1a1a1a; border: 1px solid #333; padding: 20px; margin-bottom: 15px; border-radius: 8px; color: #FFFFFF; cursor: pointer; transition: all 0.3s; }
+    .faq-item:hover { border-color: #FFD700; }
+    .faq-question { display: flex; justify-content: space-between; align-items: center; font-weight: bold; }
+    .faq-question i { transition: transform 0.3s; }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease, margin-top 0.3s ease; color: #ccc; }
+    .faq-item.active.faq-answer { max-height: 200px; margin-top: 15px; }
+    .faq-item.active.faq-question i { transform: rotate(180deg); }
+    .footer { text-align: center; padding: 40px 0; border-top: 1px solid #333; }
+    .footer.brand { color: #FFD700; font-size: 24px; font-weight: bold; margin-bottom: 10px; }
+    .footer.copyright { color: #FFFFFF; font-size: 14px; }
         @media (max-width: 768px) {
-         .books-grid { grid-template-columns: repeat(2, 1fr); }
-         .hero h1 { font-size: 32px; }
-         .steps { gap: 30px; }
+        .books-grid { grid-template-columns: repeat(2, 1fr); }
+        .hero h1 { font-size: 32px; }
+        .steps { gap: 30px; }
         }
     </style>
 </head>
@@ -254,7 +254,6 @@
             document.getElementById('packs').scrollIntoView({ behavior: 'smooth' });
         }
 
-        // Translations
         const translations = {
             en: {
                 tag: "Digital Products",
@@ -423,26 +422,23 @@
         };
 
         function setLanguage(lang) {
-            // Update active button
             document.querySelectorAll('.lang-btn').forEach(btn => {
                 btn.classList.remove('active');
                 if(btn.dataset.lang === lang) btn.classList.add('active');
             });
 
-            // Update all translatable text - FIXED: was translations[key], now translations[lang][key]
             document.querySelectorAll('[data-translate]').forEach(el => {
                 const key = el.dataset.translate;
-                if(translations[lang] && translations[lang][key]) {
-                    el.innerText = translations[lang][key];
+                if(translations && translations[key]) {
+                    el.innerText = translations[key];
                 }
             });
 
             localStorage.setItem('language', lang);
         }
 
-        // Run after DOM loads
         document.addEventListener('DOMContentLoaded', function() {
-            // FAQ Accordion - FIXED: wrapped in DOMContentLoaded
+            // FAQ Accordion
             document.querySelectorAll('.faq-item').forEach(item => {
                 item.addEventListener('click', () => {
                     item.classList.toggle('active');
