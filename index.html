@@ -3,153 +3,488 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-book Store | PLR Rights</title>
-    <link rel="stylesheet" href="style.css">
+    <title>TheBestBundle - Build Your Digital Bundle</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Item #8: Website Background */
+        body {
+            background-color: #000000;
+            color: #FFFFFF;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Item #1: Header + Hero Section */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            color: #FFD700;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .language {
+            color: #FFFFFF;
+        }
+        
+        .language .active {
+            color: #FFD700;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 40px 0 60px;
+        }
+        
+        .hero .tag {
+            color: #FFD700;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        
+        .hero h1 {
+            color: #FFFFFF;
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .hero .subtitle {
+            color: #FFFFFF;
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+        
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+        
+        .book-card {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            padding: 15px 10px;
+            border-radius: 8px;
+            font-size: 12px;
+            text-align: center;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Item #2: How It Works Section */
+        .how-it-works {
+            text-align: center;
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            color: #FFFFFF;
+            font-size: 36px;
+            margin-bottom: 50px;
+        }
+        
+        .steps {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+        
+        .step {
+            text-align: center;
+        }
+        
+        .step i {
+            font-size: 40px;
+            color: #FFD700;
+            margin-bottom: 15px;
+        }
+        
+        .step h3 {
+            color: #FFFFFF;
+            font-size: 18px;
+        }
+        
+        /* Item #3: Button */
+        .cta-button-wrap {
+            text-align: center;
+            padding: 20px 0 60px;
+        }
+        
+        .cta-button {
+            background: #FFD700;
+            color: #000000;
+            border: none;
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Item #4: Our Featured Packs Section */
+        .packs {
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .packs .subtitle {
+            color: #FFFFFF;
+            margin-bottom: 40px;
+        }
+        
+        .packs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .pack-card {
+            background: #1a1a1a;
+            border: 2px solid #333;
+            border-radius: 12px;
+            padding: 30px 20px;
+            position: relative;
+        }
+        
+        .pack-card.popular {
+            border-color: #FFD700;
+        }
+        
+        .popular-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #FFD700;
+            color: #000000;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        .pack-name {
+            color: #FFFFFF;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .pack-price {
+            color: #FFD700;
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .pack-desc {
+            color: #FFFFFF;
+            margin-bottom: 20px;
+        }
+        
+        .pack-books {
+            text-align: left;
+            margin: 20px 0;
+            font-size: 12px;
+            color: #ccc;
+        }
+        
+        .pack-books div {
+            margin-bottom: 5px;
+        }
+        
+        .pack-note {
+            color: #FFFFFF;
+            font-size: 12px;
+            margin-top: 20px;
+        }
+        
+        /* Item #5: Social Proof Section */
+        .social-proof {
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .social-proof h2 {
+            color: #FFFFFF;
+            font-size: 36px;
+            margin-bottom: 50px;
+        }
+        
+        .reviews {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .review-card {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: left;
+        }
+        
+        .stars {
+            color: #FFD700;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .review-text {
+            color: #FFFFFF;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+        
+        .reviewer {
+            color: #FFFFFF;
+            font-weight: bold;
+        }
+        
+        .reviewer-title {
+            color: #FFFFFF;
+            font-size: 14px;
+        }
+        
+        /* Item #6: FAQ Section */
+        .faq {
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .faq-list {
+            max-width: 800px;
+            margin: 40px auto 0;
+            text-align: left;
+        }
+        
+        .faq-item {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            color: #FFFFFF;
+        }
+        
+        /* Item #7: Footer Section */
+        .footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid #333;
+        }
+        
+        .footer .brand {
+            color: #FFD700;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .footer .copyright {
+            color: #FFFFFF;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            .books-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .hero h1 {
+                font-size: 32px;
+            }
+            .steps {
+                gap: 30px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header class="header">
+    <!-- Item #1: Header + Hero Section -->
+    <div class="container">
+        <header class="header">
+            <div class="logo">Thebestbundle</div>
+            <div class="language"><span class="active">EN</span> Kreyòl FR ES</div>
+        </header>
+        
+        <section class="hero">
+            <div class="tag">Digital Products</div>
+            <h1>BUILD YOUR DIGITAL BUNDLE</h1>
+            <p class="subtitle">Buy Ebooks individually $27 per unit or save with Bundle</p>
+            
+            <div class="books-grid">
+                <div class="book-card">Decouvre ta niche parfaite</div>
+                <div class="book-card">ton plan d’action en business</div>
+                <div class="book-card">Comment Être Financé Rapidement</div>
+                <div class="book-card">Protège ton Entreprise Légalement</div>
+                <div class="book-card">Crée une presence en ligne</div>
+                <div class="book-card">traffic leads ventes Le système</div>
+                <div class="book-card">Discipline Financière</div>
+                <div class="book-card">l’art de vendre en 2026</div>
+                <div class="book-card">De salariés à Mentalité d’entrepreneur</div>
+                <div class="book-card">Automatise Ton Business en 30 Jours</div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Item #2: How It Works Section -->
+    <section class="how-it-works">
         <div class="container">
-            <div class="logo">E-book Store</div>
-            <div class="cart-icon" onclick="openCart()">
-                🛒 <span id="cart-count">0</span>
+            <h2 class="section-title">How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <i class="fas fa-box"></i>
+                    <h3>Choose Your Pack</h3>
+                </div>
+                <div class="step">
+                    <i class="fas fa-book"></i>
+                    <h3>Pick Any Ebooks</h3>
+                </div>
+                <div class="step">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Download Instantly</h3>
+                </div>
             </div>
         </div>
-    </header>
+    </section>
 
-    <main class="container">
-        <section class="hero">
-            <h1>10 Premium E-books with PLR Rights</h1>
-            <p>Buy once. Sell unlimited times. Keep 100% of profits.</p>
-        </section>
+    <!-- Item #3: Button -->
+    <div class="cta-button-wrap">
+        <button class="cta-button" onclick="scrollToPacks()">See All Bundles →</button>
+    </div>
 
-        <section class="books-grid">
-            <div class="book-card">
-                <img src="img/decouvre-ta-niche-parfaite.jpg" alt="Decouvre ta niche parfaite">
-                <h3>Decouvre ta niche parfaite</h3>
-                <div class="book-price">$27</div>
-                <button class="buy-btn" onclick="handleSingleCheckout('decouvre-ta-niche-parfaite')">Buy - $27</button>
-                <button class="add-to-cart-btn" onclick="addToCart('decouvre-ta-niche-parfaite', 'Decouvre ta niche parfaite')">Add to Cart</button>
-            </div>
-
-            <div class="book-card">
-                <img src="img/ton-plan-daction-en-business.JPG" alt="ton plan d’action en business">
-                <h3>ton plan d’action en business</h3>
-                <div class="book-price">$27</div>
-                <button class="buy-btn" onclick="handleSingleCheckout('ton-plan-daction-en-business')">Buy - $27</button>
-                <button class="add-to-cart-btn" onclick="addToCart('ton-plan-daction-en-business', 'ton plan d’action en business')">Add to Cart</button>
-            </div>
-
-            <div class="book-card">
-                <img src="img/comment-etre-finance-rapidement.PNG" alt="Comment Être Financé Rapidement">
-                <h3>Comment Être Financé Rapidement</h3>
-                <div class="book-price">$27</div>
-                <button class="buy-btn" onclick="handleSingleCheckout('comment-etre-finance-rapidement')">Buy - $27</button>
-                <button class="add-to-cart-btn" onclick="addToCart('comment-etre-finance-rapidement', 'Comment Être Financé Rapidement')">Add to Cart</button>
-            </div>
-
-            <div class="book-card">
-                <img src="img/protege-ton-entreprise-legalement.PNG" alt="Protège ton Entreprise Légalement">
-                <h3>Protège ton Entreprise Légalement</h3>
-                <div class="book-price">$27</div>
-                <button class="buy-btn" onclick="handleSingleCheckout('protege-ton-entreprise-legalement')">Buy - $27</button>
-                <button class="add-to-cart-btn" onclick="addToCart('protege-ton-entreprise-legalement', 'Protège ton Entreprise Légalement')">Add to Cart</button>
-            </div>
-
-            <div class="book-card">
-                <img src="img/cree-une-presence-en-ligne.JPG" alt="Crée une presence en ligne">
-                <h3>Crée une presence en ligne</h3>
-                <div class="book-price">$27</div>
-                <button class="buy-btn" onclick="handleSingleCheckout('cree-une-presence-en-ligne')">Buy - $27</button>
-                <button class="add-to-cart-btn" onclick="addToCart('cree-une-presence-en-ligne', 'Crée une presence en ligne')">Add to Cart</button>
-            </div>
-
-            <div class="book-card">
-                <img src="img/traffic-leads-ventes-le-systeme.JPG" alt="traffic leads ventes Le système">
-                <h3>traffic leads ventes Le système</h3>
-                <div class="book-price">$27</div>
-                <button class="buy-btn" onclick="handleSingleCheckout('traffic-leads-ventes-le-systeme')">Buy - $27</button>
-                <button class="add-to-cart-btn" onclick="addToCart('traffic-leads-ventes-le-systeme', 'traffic leads ventes Le système')">Add to Cart</button>
-            </div>
-
-            <div class="book-card">
-                <img src="img/discipline-financiere.JPG" alt="Discipline Financière">
-                <h3>Discipline Financière</h3>
-                <div class="book-price">$27</div>
-                <button class="buy-btn" onclick="handleSingleCheckout('discipline-financiere')">Buy - $27</button>
-                <button class="add-to-cart-btn" onclick="addToCart('discipline-financiere', 'Discipline Financière')">Add to Cart</button>
-            </div>
-
-            <div class="book-card">
-                <img src="img/lart-de-vendre-2026.JPEG" alt="l’art de vendre en 2026">
-                <h3>l’art de vendre en 2026</h3>
-                <div class="book-price">$27</div>
-                <button class="buy-btn" onclick="handleSingleCheckout('lart-de-vendre-2026')">Buy - $27</button>
-                <button class="add-to-cart-btn" onclick="addToCart('lart-de-vendre-2026', 'l’art de vendre en 2026')">Add to Cart</button>
-            </div>
-
-            <div class="book-card">
-                <img src="img/de-salaries-a-mentalite-dentrepreneur.JPG" alt="De salariés à Mentalité d’entrepreneur">
-                <h3>De salariés à Mentalité d’entrepreneur</h3>
-                <div class="book-price">$27</div>
-                <button class="buy-btn" onclick="handleSingleCheckout('de-salaries-a-mentalite-dentrepreneur')">Buy - $27</button>
-                <button class="add-to-cart-btn" onclick="addToCart('de-salaries-a-mentalite-dentrepreneur', 'De salariés à Mentalité d’entrepreneur')">Add to Cart</button>
-            </div>
-
-            <div class="book-card">
-                <img src="img/automatise-ton-business-en-30-jours.JPG" alt="Automatise Ton Business en 30 Jours">
-                <h3>Automatise Ton Business en 30 Jours</h3>
-                <div class="book-price">$27</div>
-                <button class="buy-btn" onclick="handleSingleCheckout('automatise-ton-business-en-30-jours')">Buy - $27</button>
-                <button class="add-to-cart-btn" onclick="addToCart('automatise-ton-business-en-30-jours', 'Automatise Ton Business en 30 Jours')">Add to Cart</button>
-            </div>
-        </section>
-
-        <section class="packs">
-            <h2>Save with Bundles</h2>
+    <!-- Item #4: Our Featured Packs Section -->
+    <section class="packs" id="packs">
+        <div class="container">
+            <h2 class="section-title">Our Featured Packs</h2>
+            <p class="subtitle">Choose from our entire collection of ebooks</p>
+            
             <div class="packs-grid">
                 <div class="pack-card">
-                    <h3>3 E-books Pack</h3>
+                    <div class="pack-name">Starter Pack</div>
                     <div class="pack-price">$37</div>
-                    <p>Save $44</p>
-                    <button class="pack-btn" onclick="selectPack('3-books', this)">Select Pack</button>
+                    <div class="pack-desc">Get 2 books from 10 books</div>
+                    <div class="pack-books">
+                        <div>• Decouvre ta niche parfaite</div>
+                        <div>• ton plan d’action en business</div>
+                    </div>
+                    <div class="pack-note">Choose from our entire collection of ebooks</div>
                 </div>
-                <div class="pack-card">
-                    <h3>5 E-books Pack</h3>
+                
+                <div class="pack-card popular">
+                    <div class="popular-badge">MOST POPULAR</div>
+                    <div class="pack-name">Creator Pack</div>
                     <div class="pack-price">$57</div>
-                    <p>Save $78</p>
-                    <button class="pack-btn" onclick="selectPack('5-books', this)">Select Pack</button>
+                    <div class="pack-desc">Get 3 books</div>
+                    <div class="pack-books">
+                        <div>• Comment Être Financé Rapidement</div>
+                        <div>• Crée une presence en ligne</div>
+                        <div>• l’art de vendre en 2026</div>
+                    </div>
+                    <div class="pack-note">Choose from our entire collection of ebooks</div>
                 </div>
-                <div class="pack-card featured">
-                    <h3>8 E-books Pack</h3>
-                    <div class="pack-price">$87</div>
-                    <p>Save $129</p>
-                    <button class="pack-btn" onclick="selectPack('8-books', this)">Select Pack</button>
-                </div>
+                
                 <div class="pack-card">
-                    <h3>Complete Pack + PLR</h3>
-                    <div class="pack-price">$157</div>
-                    <p>Save $113 + Resell Rights</p>
-                    <button class="pack-btn" onclick="selectPack('10-books', this)">Select Pack</button>
+                    <div class="pack-name">Pro Pack</div>
+                    <div class="pack-price">$87</div>
+                    <div class="pack-desc">Get 5 books</div>
+                    <div class="pack-books">
+                        <div>• Protège ton Entreprise Légalement</div>
+                        <div>• traffic leads ventes Le système</div>
+                        <div>• Discipline Financière</div>
+                        <div>• De salariés à Mentalité d’entrepreneur</div>
+                        <div>• Automatise Ton Business en 30 Jours</div>
+                    </div>
+                    <div class="pack-note">Choose from our entire collection of ebooks</div>
                 </div>
-            </div>
-        </section>
-    </main>
-
-    <div id="cart-overlay" class="cart-overlay" onclick="closeCart()">
-        <div class="cart" onclick="event.stopPropagation()">
-            <div class="cart-header">
-                <h2>Your Cart</h2>
-                <button class="close-cart" onclick="closeCart()">×</button>
-            </div>
-            <div id="cart-items" class="cart-items">
-                <p style="text-align: center; color: #6b7280;">Your cart is empty</p>
-            </div>
-            <div class="cart-footer">
-                <div class="cart-total">Total: <span id="cart-total">$0</span></div>
-                <button class="checkout-btn" onclick="checkout()">Secure Checkout</button>
+                
+                <div class="pack-card">
+                    <div class="pack-name">Vault Pack</div>
+                    <div class="pack-price">$157</div>
+                    <div class="pack-desc">Get all 10 books</div>
+                    <div class="pack-books">
+                        <div>• All 10 books included</div>
+                    </div>
+                    <div class="pack-note">Choose from our entire collection of ebooks</div>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Item #5: Social Proof Section -->
+    <section class="social-proof">
+        <div class="container">
+            <h2>500+ creators use our Products already</h2>
+            <div class="reviews">
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <div class="review-text">"The Creator Pack gave me everything I needed to launch my digital business. Incredible value!"</div>
+                    <div class="reviewer">Sarah M.</div>
+                    <div class="reviewer-title">Content Creator</div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <div class="review-text">"I bought the Pro Pack and the ebooks saved me weeks of work. Highly recommend!"</div>
+                    <div class="reviewer">Jean-Pierre L.</div>
+                    <div class="reviewer-title">Entrepreneur</div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <div class="review-text">"The Vault Pack is the best investment I've made for my business. All 10 books are gold!"</div>
+                    <div class="reviewer">Marie D.</div>
+                    <div class="reviewer-title">Business Coach</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Item #6: FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">FAQ</h2>
+            <div class="faq-list">
+                <div class="faq-item">Can I choose any ebook in the bundle?</div>
+                <div class="faq-item">How do I receive my products after purchase?</div>
+                <div class="faq-item">What payment methods are accepted?</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Item #7: Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="brand">THEBESTBUNDLE</div>
+            <div class="copyright">2026 THEBESTBUNDLE. All rights reserved</div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
