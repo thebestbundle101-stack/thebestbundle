@@ -1,7 +1,7 @@
 {
   "name": "thebestbundle",
   "version": "1.0.0",
-  "description": "TheBestBundle – Digital Ebooks & Templates",
+  "description": "TheBestBundle – Digital Ebooks",
   "private": true,
   "dependencies": {
     "stripe": "^14.0.0"
