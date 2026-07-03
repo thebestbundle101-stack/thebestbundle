@@ -12,7 +12,6 @@
             box-sizing: border-box;
         }
         
-        /* Item #8: Website Background */
         body {
             background-color: #000000;
             color: #FFFFFF;
@@ -26,7 +25,6 @@
             padding: 0 20px;
         }
         
-        /* Item #1: Header + Hero Section */
         .header {
             display: flex;
             justify-content: space-between;
@@ -44,7 +42,14 @@
             color: #FFFFFF;
         }
         
-        .language .active {
+        .language a {
+            color: #FFFFFF;
+            text-decoration: none;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        
+        .language a.active, .language a:hover {
             color: #FFD700;
         }
         
@@ -93,6 +98,9 @@
             text-decoration: none;
             color: #FFFFFF;
             transition: all 0.3s;
+            cursor: pointer;
+            position: relative;
+            z-index: 1;
         }
         
         .book-card:hover {
@@ -101,7 +109,6 @@
             background: #222;
         }
         
-        /* Item #2: How It Works Section */
         .how-it-works {
             text-align: center;
             padding: 60px 0;
@@ -135,7 +142,6 @@
             font-size: 18px;
         }
         
-        /* Item #3: Button */
         .cta-button-wrap {
             text-align: center;
             padding: 20px 0 60px;
@@ -157,7 +163,6 @@
             transform: scale(1.05);
         }
         
-        /* Item #4: Our Featured Packs Section */
         .packs {
             padding: 60px 0;
             text-align: center;
@@ -257,7 +262,6 @@
             transform: scale(1.05);
         }
         
-        /* Item #5: Social Proof Section */
         .social-proof {
             padding: 60px 0;
             text-align: center;
@@ -305,7 +309,6 @@
             font-size: 14px;
         }
         
-        /* Item #6: FAQ Section */
         .faq {
             padding: 60px 0;
             text-align: center;
@@ -326,7 +329,6 @@
             color: #FFFFFF;
         }
         
-        /* Item #7: Footer Section */
         .footer {
             text-align: center;
             padding: 40px 0;
@@ -359,11 +361,15 @@
     </style>
 </head>
 <body>
-    <!-- Item #1: Header + Hero Section -->
     <div class="container">
         <header class="header">
             <div class="logo">Thebestbundle</div>
-            <div class="language"><span class="active">EN</span> Kreyòl FR ES</div>
+            <div class="language">
+                <a href="#" class="active">EN</a> 
+                <a href="#">Kreyòl</a> 
+                <a href="#">FR</a> 
+                <a href="#">ES</a>
+            </div>
         </header>
         
         <section class="hero">
@@ -386,7 +392,6 @@
         </section>
     </div>
 
-    <!-- Item #2: How It Works Section -->
     <section class="how-it-works">
         <div class="container">
             <h2 class="section-title">How It Works</h2>
@@ -407,12 +412,10 @@
         </div>
     </section>
 
-    <!-- Item #3: Button -->
     <div class="cta-button-wrap">
         <button class="cta-button" onclick="scrollToPacks()">See All Bundles →</button>
     </div>
 
-    <!-- Item #4: Our Featured Packs Section -->
     <section class="packs" id="packs">
         <div class="container">
             <h2 class="section-title">Our Featured Packs</h2>
@@ -474,7 +477,6 @@
         </div>
     </section>
 
-    <!-- Item #5: Social Proof Section -->
     <section class="social-proof">
         <div class="container">
             <h2>500+ creators use our Products already</h2>
@@ -501,7 +503,6 @@
         </div>
     </section>
 
-    <!-- Item #6: FAQ Section -->
     <section class="faq">
         <div class="container">
             <h2 class="section-title">FAQ</h2>
@@ -513,7 +514,6 @@
         </div>
     </section>
 
-    <!-- Item #7: Footer Section -->
     <footer class="footer">
         <div class="container">
             <div class="brand">THEBESTBUNDLE</div>
