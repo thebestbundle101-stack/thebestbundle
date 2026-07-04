@@ -9,7 +9,7 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { background-color: #000000; color: #FFFFFF; font-family: 'Arial', sans-serif; line-height: 1.6; padding-top: 80px; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        .header { display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; position: fixed; top: 0; left: 0; right: 0; background: rgba(0,0,0,0.95); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 1px solid #333; }
+        .header { display: flex; justify-content: center; align-items: center; padding: 15px 20px; position: fixed; top: 0; left: 0; right: 0; background: rgba(0,0,0,0.95); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 1px solid #333; }
         .logo { color: #FFD700; font-size: 24px; font-weight: bold; }
         .hero { text-align: center; padding: 40px 0 60px; }
         .hero .tag { color: #FFD700; font-size: 20px; margin-bottom: 10px; font-weight: bold; text-transform: uppercase; }
@@ -60,48 +60,12 @@
         .footer { text-align: center; padding: 40px 0; border-top: 1px solid #333; }
         .footer .brand { color: #FFD700; font-size: 24px; font-weight: bold; margin-bottom: 10px; }
         .footer .copyright { color: #FFFFFF; font-size: 14px; }
-        
-        /* Cart Styles */
-        #cart-icon { position: fixed; top: 20px; left: 20px; cursor: pointer; z-index: 1001; background: rgba(0,0,0,0.8); padding: 10px; border-radius: 8px; border: 1px solid #333; }
-        #cart-icon:hover { border-color: #FFD700; }
-        #cart-count { position: absolute; top: -8px; right: -12px; background: #FFD700; color: #000; border-radius: 50%; padding: 2px 6px; font-size: 12px; font-weight: bold; min-width: 20px; text-align: center; }
-        #cart-sidebar { position: fixed; top: 0; left: -350px; width: 350px; height: 100%; background: #111; color: #fff; transition: 0.3s; z-index: 1002; padding: 20px; overflow-y: auto; border-right: 2px solid #FFD700; }
-        #cart-sidebar h3 { margin-top: 0; margin-bottom: 20px; color: #FFD700; }
-        .cart-close { position: absolute; top: 20px; right: 20px; background: none; border: none; color: #fff; font-size: 28px; cursor: pointer; }
-        .cart-close:hover { color: #FFD700; }
-        .cart-item { margin: 15px 0; border-bottom: 1px solid #333; padding-bottom: 10px; display: flex; justify-content: space-between; align-items: center; }
-        .cart-item-remove { background: #ff4444; color: white; border: none; padding: 4px 10px; cursor: pointer; border-radius: 4px; font-size: 12px; }
-        .cart-item-remove:hover { background: #cc0000; }
-        .cart-total { margin-top: 30px; padding-top: 20px; border-top: 2px solid #FFD700; font-size: 20px; }
-        .checkout-btn { width: 100%; background: #FFD700; color: #000; padding: 15px; border: none; border-radius: 8px; font-weight: bold; margin-top: 20px; cursor: pointer; font-size: 16px; }
-        .checkout-btn:hover { transform: scale(1.02); }
-        .empty-cart { color: #888; text-align: center; margin-top: 40px; }
-
         @media (max-width: 992px) { .books-grid { grid-template-columns: repeat(3, 1fr); } }
-        @media (max-width: 768px) { .books-grid { grid-template-columns: repeat(2, 1fr); } .hero h1 { font-size: 32px; } .steps { gap: 30px; } .logo { font-size: 20px; } .section-title { font-size: 28px; } #cart-sidebar { width: 300px; left: -300px; } }
+        @media (max-width: 768px) { .books-grid { grid-template-columns: repeat(2, 1fr); } .hero h1 { font-size: 32px; } .steps { gap: 30px; } .logo { font-size: 20px; } .section-title { font-size: 28px; } }
         @media (max-width: 480px) { .header { padding: 12px 15px; } .container { padding: 0 15px; } .hero h1 { font-size: 28px; } }
     </style>
 </head>
 <body>
-    <!-- Cart Icon -->
-    <div id="cart-icon">
-        <span style="font-size: 28px; position: relative; color: #FFD700;">
-            🛒
-            <span id="cart-count">0</span>
-        </span>
-    </div>
-
-    <!-- Cart Sidebar -->
-    <div id="cart-sidebar">
-        <button class="cart-close" onclick="closeCart()">×</button>
-        <h3>Your Cart</h3>
-        <div id="cart-items"></div>
-        <div class="cart-total">
-            <strong>Total: $<span id="cart-total">0</span></strong>
-        </div>
-        <button class="checkout-btn" onclick="checkout()">Checkout</button>
-    </div>
-
     <header class="header">
         <div class="logo">TheBestBundle</div>
     </header>
@@ -187,7 +151,7 @@
                         <div>• ton plan d’action en business</div>
                     </div>
                     <div class="pack-note">Choose from our entire collection of ebooks</div>
-                    <button class="pack-button" onclick="addToCart('Starter Pack', 37)">Buy Starter Pack</button>
+                    <a href="https://buy.stripe.com/5kQ8wRboscyAgLR0an8N20a" class="pack-button" target="_blank">Buy Starter Pack</a>
                 </div>
                 <div class="pack-card popular">
                     <div class="popular-badge">MOST POPULAR</div>
@@ -201,7 +165,7 @@
                         <div>• l’art de vendre en 2026</div>
                     </div>
                     <div class="pack-note">Choose from our entire collection of ebooks</div>
-                    <button class="pack-button" onclick="addToCart('Creator Pack', 57)">Buy Creator Pack</button>
+                    <a href="https://buy.stripe.com/dRm8wR2RWeGIeDJf5h8N20b" class="pack-button" target="_blank">Buy Creator Pack</a>
                 </div>
                 <div class="pack-card">
                     <img src="img/propack.jpg" alt="Pro Pack">
@@ -216,7 +180,7 @@
                         <div>• Automatise Ton Business en 30 Jours</div>
                     </div>
                     <div class="pack-note">Choose from our entire collection of ebooks</div>
-                    <button class="pack-button" onclick="addToCart('Pro Pack', 87)">Buy Pro Pack</button>
+                    <a href="https://buy.stripe.com/00w9AVako5682V14qD8N20c" class="pack-button" target="_blank">Buy Pro Pack</a>
                 </div>
                 <div class="pack-card">
                     <img src="img/vaultpack.jpg" alt="Vault Pack">
@@ -227,7 +191,7 @@
                         <div>• All 10 books included</div>
                     </div>
                     <div class="pack-note">Choose from our entire collection of ebooks</div>
-                    <button class="pack-button" onclick="addToCart('Vault Pack', 157)">Buy Vault Pack</button>
+                    <a href="https://buy.stripe.com/9B65kF504buw5390an8N20d" class="pack-button" target="_blank">Buy Vault Pack</a>
                 </div>
             </div>
         </div>
@@ -273,60 +237,5 @@
             <div class="copyright">2026 THEBESTBUNDLE. All rights reserved</div>
         </div>
     </footer>
-
-    <script>
-        let cart = [];
-
-        document.getElementById('cart-icon').onclick = () => {
-            document.getElementById('cart-sidebar').style.left = '0px';
-        }
-
-        function closeCart() {
-            document.getElementById('cart-sidebar').style.left = '-350px';
-        }
-
-        function addToCart(name, price) {
-            cart.push({name, price});
-            updateCart();
-            document.getElementById('cart-sidebar').style.left = '0px';
-        }
-
-        function updateCart() {
-            document.getElementById('cart-count').innerText = cart.length;
-            let itemsHTML = '';
-            let total = 0;
-            if (cart.length === 0) {
-                itemsHTML = '<p class="empty-cart">Cart is empty</p>';
-            } else {
-                cart.forEach((item, index) => {
-                    itemsHTML += `<div class="cart-item">
-                        <span>${item.name} - $${item.price}</span>
-                        <button class="cart-item-remove" onclick="removeFromCart(${index})">×</button>
-                    </div>`;
-                    total += item.price;
-                });
-            }
-            document.getElementById('cart-items').innerHTML = itemsHTML;
-            document.getElementById('cart-total').innerText = total;
-        }
-
-        function removeFromCart(index) {
-            cart.splice(index, 1);
-            updateCart();
-        }
-
-        function checkout() {
-            if (cart.length === 0) {
-                alert('Your cart is empty!');
-                return;
-            }
-            // Replace this with your actual checkout logic
-            alert('Checkout with ' + cart.length + ' items. Total: $' + cart.reduce((sum, item) => sum + item.price, 0));
-            // Example: window.location.href = 'https://buy.stripe.com/your-checkout-link';
-        }
-
-        // Initialize cart on page load
-        updateCart();
-    </script>
 </body>
 </html>
