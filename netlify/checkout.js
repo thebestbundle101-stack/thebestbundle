@@ -10,31 +10,98 @@
 
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
-/* ---------- Pack Definitions ---------- */
-const PACKS = {
-  pack2: {
+/* ---------- Product Definitions ---------- */
+const PRODUCTS = {
+  // Individual Ebooks - $27 each
+  'book1': {
+    name: 'Decouvre ta niche parfaite',
+    description: 'Individual ebook from TheBestBundle',
+    amount: 2700,   // in cents ($27.00)
+    type: 'ebook'
+  },
+  'book2': {
+    name: 'ton plan d’action en business',
+    description: 'Individual ebook from TheBestBundle',
+    amount: 2700,
+    type: 'ebook'
+  },
+  'book3': {
+    name: 'Comment Être Financé Rapidement',
+    description: 'Individual ebook from TheBestBundle',
+    amount: 2700,
+    type: 'ebook'
+  },
+  'book4': {
+    name: 'Protège ton Entreprise Légalement',
+    description: 'Individual ebook from TheBestBundle',
+    amount: 2700,
+    type: 'ebook'
+  },
+  'book5': {
+    name: 'Crée une presence en ligne',
+    description: 'Individual ebook from TheBestBundle',
+    amount: 2700,
+    type: 'ebook'
+  },
+  'book6': {
+    name: 'traffic leads ventes Le système',
+    description: 'Individual ebook from TheBestBundle',
+    amount: 2700,
+    type: 'ebook'
+  },
+  'book7': {
+    name: 'Discipline Financière',
+    description: 'Individual ebook from TheBestBundle',
+    amount: 2700,
+    type: 'ebook'
+  },
+  'book8': {
+    name: 'l’art de vendre en 2026',
+    description: 'Individual ebook from TheBestBundle',
+    amount: 2700,
+    type: 'ebook'
+  },
+  'book9': {
+    name: 'De salariés à Mentalité d’entrepreneur',
+    description: 'Individual ebook from TheBestBundle',
+    amount: 2700,
+    type: 'ebook'
+  },
+  'book10': {
+    name: 'Automatise Ton Business en 30 Jours',
+    description: 'Individual ebook from TheBestBundle',
+    amount: 2700,
+    type: 'ebook'
+  },
+
+  // Packs - Updated Prices
+  'starter': {
     name: 'Starter Pack',
-    description: 'Choose 2 ebooks or templates from our entire collection.',
-    amount: 3700,   // in cents ($37.00)
+    description: 'Choose 2 ebooks from our entire collection of 10 books.',
+    amount: 3700,   // $37.00
+    type: 'pack',
     quantity: 2
   },
-  pack3: {
+  'creator': {
     name: 'Creator Pack',
-    description: 'Choose 3 ebooks or templates from our entire collection.',
-    amount: 4700,   // in cents ($47.00)
+    description: 'Choose 3 ebooks from our entire collection of 10 books.',
+    amount: 5700,   // $57.00
+    type: 'pack',
     quantity: 3
   },
-  pack5: {
+  'pro': {
     name: 'Pro Pack',
-    description: 'Choose 5 ebooks or templates from our entire collection.',
-    amount: 6700,   // in cents ($67.00)
+    description: 'Choose 5 ebooks from our entire collection of 10 books.',
+    amount: 8700,   // $87.00
+    type: 'pack',
     quantity: 5
   },
-  pack10: {
-    name: 'Complete Vault',
-    description: 'Get all ebooks and all templates from our entire collection.',
-    amount: 9700,   // in cents ($97.00)
-    quantity: 'all'
+  'vault': {
+    name: 'Vault Pack',
+    description: 'Get all 10 ebooks from our entire collection.',
+    amount: 15700,  // $157.00
+    type: 'pack',
+    quantity: 10
   }
 };
 
@@ -48,10 +115,10 @@ exports.handler = async function (event, context) {
     };
   }
 
-  let packId;
+  let productId;
   try {
     const body = JSON.parse(event.body || '{}');
-    packId = body.packId;
+    productId = body.productId || body.packId; // support both keys
   } catch (e) {
     return {
       statusCode: 400,
@@ -59,11 +126,11 @@ exports.handler = async function (event, context) {
     };
   }
 
-  const pack = PACKS[packId];
-  if (!pack) {
+  const product = PRODUCTS[productId];
+  if (!product) {
     return {
       statusCode: 400,
-      body: JSON.stringify({ error: 'Invalid pack ID: ' + packId })
+      body: JSON.stringify({ error: 'Invalid product ID: ' + productId })
     };
   }
 
@@ -77,30 +144,29 @@ exports.handler = async function (event, context) {
         'us_bank_account',
         'klarna',
         'link'
-        // Apple Pay and Google Pay are enabled automatically for 'card' when
-        // the customer's browser/device supports them — no extra config needed.
       ],
       line_items: [
         {
           price_data: {
             currency: 'usd',
             product_data: {
-              name: pack.name,
-              description: pack.description,
-              images: [siteUrl + '/og-image.png']  // optional: add your product image
+              name: product.name,
+              description: product.description,
+              images: [siteUrl + '/og-image.png']
             },
-            unit_amount: pack.amount
+            unit_amount: product.amount
           },
           quantity: 1
         }
       ],
       mode: 'payment',
-     success_url: siteUrl + '/thank-you.html?session_id={CHECKOUT_SESSION_ID}&sku=' + encodeURIComponent(pack.name) ,
+      success_url: siteUrl + '/thank-you.html?session_id={CHECKOUT_SESSION_ID}&sku=' + encodeURIComponent(product.name),
       cancel_url: siteUrl + '/#packs',
       metadata: {
-        packId: packId,
-        packName: pack.name,
-        productQuantity: String(pack.quantity)
+        productId: productId,
+        productName: product.name,
+        productType: product.type,
+        productQuantity: String(product.quantity || 1)
       },
       billing_address_collection: 'auto',
       allow_promotion_codes: true
