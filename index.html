@@ -9,28 +9,17 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { background-color: #000000; color: #FFFFFF; font-family: 'Arial', sans-serif; line-height: 1.6; padding-top: 80px; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(0,0,0,0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            border-bottom: 1px solid #333;
-        }
+        .header { display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; position: fixed; top: 0; left: 0; right: 0; background: rgba(0,0,0,0.95); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 1px solid #333; }
         .logo { color: #FFD700; font-size: 24px; font-weight: bold; }
         .hero { text-align: center; padding: 40px 0 60px; }
         .hero .tag { color: #FFD700; font-size: 14px; margin-bottom: 10px; }
         .hero h1 { color: #FFFFFF; font-size: 48px; font-weight: bold; margin-bottom: 15px; }
         .hero .subtitle { color: #FFFFFF; font-size: 18px; margin-bottom: 40px; }
         .books-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 15px; margin-bottom: 40px; }
-        .book-card { background: #1a1a1a; border: 1px solid #333; padding: 15px 10px; border-radius: 8px; font-size: 12px; text-align: center; min-height: 80px; display: flex; align-items: center; justify-content: center; text-decoration: none; color: #FFFFFF; transition: all 0.3s; cursor: pointer; position: relative; z-index: 1; }
+        .book-card { background: #1a1a1a; border: 1px solid #333; padding: 12px; border-radius: 8px; font-size: 11px; text-align: center; display: flex; flex-direction: column; align-items: center; text-decoration: none; color: #FFFFFF; transition: all 0.3s; gap: 8px; min-height: 240px; }
+        .book-card img { width: 100%; max-width: 130px; height: 180px; object-fit: cover; border-radius: 4px; border: 1px solid #333; }
         .book-card:hover { border-color: #FFD700; transform: translateY(-3px); background: #222; }
+        .book-card:hover img { border-color: #FFD700; }
         .how-it-works { text-align: center; padding: 60px 0; }
         .section-title { color: #FFFFFF; font-size: 36px; margin-bottom: 50px; }
         .steps { display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; }
@@ -65,21 +54,9 @@
         .footer { text-align: center; padding: 40px 0; border-top: 1px solid #333; }
         .footer .brand { color: #FFD700; font-size: 24px; font-weight: bold; margin-bottom: 10px; }
         .footer .copyright { color: #FFFFFF; font-size: 14px; }
-        @media (max-width: 992px) {
-            .books-grid { grid-template-columns: repeat(3, 1fr); }
-        }
-        @media (max-width: 768px) {
-            .books-grid { grid-template-columns: repeat(2, 1fr); }
-            .hero h1 { font-size: 32px; }
-            .steps { gap: 30px; }
-            .logo { font-size: 20px; }
-            .section-title { font-size: 28px; }
-        }
-        @media (max-width: 480px) {
-            .header { padding: 12px 15px; }
-            .container { padding: 0 15px; }
-            .hero h1 { font-size: 28px; }
-        }
+        @media (max-width: 992px) { .books-grid { grid-template-columns: repeat(3, 1fr); } }
+        @media (max-width: 768px) { .books-grid { grid-template-columns: repeat(2, 1fr); } .hero h1 { font-size: 32px; } .steps { gap: 30px; } .logo { font-size: 20px; } .section-title { font-size: 28px; } }
+        @media (max-width: 480px) { .header { padding: 12px 15px; } .container { padding: 0 15px; } .hero h1 { font-size: 28px; } }
     </style>
 </head>
 <body>
@@ -94,16 +71,46 @@
             <p class="subtitle">Buy Ebooks individually $27 per unit or save with Bundle</p>
 
             <div class="books-grid">
-                <a href="https://buy.stripe.com/3cIfZj8cg0PS67d9KX8N200" class="book-card" target="_blank">Decouvre ta niche parfaite</a>
-                <a href="https://buy.stripe.com/bJe28t1NS6ac1QXf5h8N201" class="book-card" target="_blank">ton plan d’action en business</a>
-                <a href="https://buy.stripe.com/fZu00l504568antcX98N202" class="book-card" target="_blank">Comment Être Financé Rapidement</a>
-                <a href="https://buy.stripe.com/7sY28t6484242V1aP18N203" class="book-card" target="_blank">Protège ton Entreprise Légalement</a>
-                <a href="https://buy.stripe.com/7sY7sN8cg0PSeDJ1er8N204" class="book-card" target="_blank">Crée une presence en ligne</a>
-                <a href="https://buy.stripe.com/cNi8wRakocyA7bh1er8N205" class="book-card" target="_blank">traffic leads ventes Le système</a>
-                <a href="https://buy.stripe.com/00w28t1NS4249jp0an8N206" class="book-card" target="_blank">Discipline Financière</a>
-                <a href="https://buy.stripe.com/aFa6oJ5045682V1aP18N207" class="book-card" target="_blank">l’art de vendre en 2026</a>
-                <a href="https://buy.stripe.com/00w8wR2RWdCE1QXg9l8N208" class="book-card" target="_blank">De salariés à Mentalité d’entrepreneur</a>
-                <a href="https://buy.stripe.com/8x26oJ2RWgOQ9jp5uH8N209" class="book-card" target="_blank">Automatise Ton Business en 30 Jours</a>
+                <a href="https://buy.stripe.com/3cIfZj8cg0PS67d9KX8N200" class="book-card" target="_blank">
+                    <img src="img/decouvre-ta-niche-parfaite.jpg" alt="Decouvre ta niche parfaite">
+                    <span>Decouvre ta niche parfaite</span>
+                </a>
+                <a href="https://buy.stripe.com/bJe28t1NS6ac1QXf5h8N201" class="book-card" target="_blank">
+                    <img src="img/ton-plan-daction-en-business.J..." alt="ton plan d’action en business">
+                    <span>ton plan d’action en business</span>
+                </a>
+                <a href="https://buy.stripe.com/fZu00l504568antcX98N202" class="book-card" target="_blank">
+                    <img src="img/comment-etre-finance-rapidem..." alt="Comment Être Financé Rapidement">
+                    <span>Comment Être Financé Rapidement</span>
+                </a>
+                <a href="https://buy.stripe.com/7sY28t6484242V1aP18N203" class="book-card" target="_blank">
+                    <img src="img/protege-ton-entreprise-legalem..." alt="Protège ton Entreprise Légalement">
+                    <span>Protège ton Entreprise Légalement</span>
+                </a>
+                <a href="https://buy.stripe.com/7sY7sN8cg0PSeDJ1er8N204" class="book-card" target="_blank">
+                    <img src="img/cree-une-presence-en-ligne.JPG" alt="Crée une presence en ligne">
+                    <span>Crée une presence en ligne</span>
+                </a>
+                <a href="https://buy.stripe.com/cNi8wRakocyA7bh1er8N205" class="book-card" target="_blank">
+                    <img src="img/traffic-leads-ventes-le-systeme..." alt="traffic leads ventes Le système">
+                    <span>traffic leads ventes Le système</span>
+                </a>
+                <a href="https://buy.stripe.com/00w28t1NS4249jp0an8N206" class="book-card" target="_blank">
+                    <img src="img/discipline-financiere.JPG" alt="Discipline Financière">
+                    <span>Discipline Financière</span>
+                </a>
+                <a href="https://buy.stripe.com/aFa6oJ5045682V1aP18N207" class="book-card" target="_blank">
+                    <img src="img/lart-de-vendre-2026.JPEG" alt="l’art de vendre en 2026">
+                    <span>l’art de vendre en 2026</span>
+                </a>
+                <a href="https://buy.stripe.com/00w8wR2RWdCE1QXg9l8N208" class="book-card" target="_blank">
+                    <img src="img/de-salaries-a-mentalite-dentre..." alt="De salariés à Mentalité d’entrepreneur">
+                    <span>De salariés à Mentalité d’entrepreneur</span>
+                </a>
+                <a href="https://buy.stripe.com/8x26oJ2RWgOQ9jp5uH8N209" class="book-card" target="_blank">
+                    <img src="img/automatise-ton-business-en-3..." alt="Automatise Ton Business en 30 Jours">
+                    <span>Automatise Ton Business en 30 Jours</span>
+                </a>
             </div>
         </section>
     </div>
@@ -112,31 +119,21 @@
         <div class="container">
             <h2 class="section-title">How It Works</h2>
             <div class="steps">
-                <div class="step">
-                    <i class="fas fa-box"></i>
-                    <h3>Choose Your Pack</h3>
-                </div>
-                <div class="step">
-                    <i class="fas fa-book"></i>
-                    <h3>Pick Any Ebooks</h3>
-                </div>
-                <div class="step">
-                    <i class="fas fa-bolt"></i>
-                    <h3>Download Instantly</h3>
-                </div>
+                <div class="step"><i class="fas fa-box"></i><h3>Choose Your Pack</h3></div>
+                <div class="step"><i class="fas fa-book"></i><h3>Pick Any Ebooks</h3></div>
+                <div class="step"><i class="fas fa-bolt"></i><h3>Download Instantly</h3></div>
             </div>
         </div>
     </section>
 
     <div class="cta-button-wrap">
-        <button class="cta-button" onclick="scrollToPacks()">See All Bundles →</button>
+        <button class="cta-button" onclick="document.getElementById('packs').scrollIntoView({behavior: 'smooth'})">See All Bundles →</button>
     </div>
 
     <section class="packs" id="packs">
         <div class="container">
             <h2 class="section-title">Our Featured Packs</h2>
             <p class="subtitle">Choose from our entire collection of ebooks</p>
-
             <div class="packs-grid">
                 <div class="pack-card">
                     <div class="pack-name">Starter Pack</div>
@@ -149,7 +146,6 @@
                     <div class="pack-note">Choose from our entire collection of ebooks</div>
                     <a href="https://buy.stripe.com/5kQ8wRboscyAgLR0an8N20a" class="pack-button" target="_blank">Buy Starter Pack</a>
                 </div>
-
                 <div class="pack-card popular">
                     <div class="popular-badge">MOST POPULAR</div>
                     <div class="pack-name">Creator Pack</div>
@@ -163,7 +159,6 @@
                     <div class="pack-note">Choose from our entire collection of ebooks</div>
                     <a href="https://buy.stripe.com/dRm8wR2RWeGIeDJf5h8N20b" class="pack-button" target="_blank">Buy Creator Pack</a>
                 </div>
-
                 <div class="pack-card">
                     <div class="pack-name">Pro Pack</div>
                     <div class="pack-price">$87</div>
@@ -178,7 +173,6 @@
                     <div class="pack-note">Choose from our entire collection of ebooks</div>
                     <a href="https://buy.stripe.com/00w9AVako5682V14qD8N20c" class="pack-button" target="_blank">Buy Pro Pack</a>
                 </div>
-
                 <div class="pack-card">
                     <div class="pack-name">Vault Pack</div>
                     <div class="pack-price">$157</div>
@@ -225,11 +219,5 @@
             <div class="copyright">2026 THEBESTBUNDLE. All rights reserved</div>
         </div>
     </footer>
-
-    <script>
-        function scrollToPacks() {
-            document.getElementById('packs').scrollIntoView({ behavior: 'smooth' });
-        }
-    </script>
 </body>
 </html>
