@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TheBestBundle - Build Your Digital Bundle</title>
+    <title>TheBestBundle - Construisez Votre Pack Numérique</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { background-color: #000000; color: #FFFFFF; font-family: 'Arial', sans-serif; line-height: 1.6; padding-top: 80px; }
+        .lang-bar { position: fixed; top: 0; left: 0; right: 0; background: #0066FF; color: #FFFFFF; text-align: center; padding: 10px 20px; font-weight: bold; z-index: 1001; font-size: 14px; }
+        .lang-bar a { color: #FFFFFF; text-decoration: none; }
+        .lang-bar a:hover { text-decoration: underline; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        .header { display: flex; justify-content: center; align-items: center; padding: 15px 20px; position: fixed; top: 0; left: 0; right: 0; background: rgba(0,0,0,0.95); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 1px solid #333; }
+        .header { display: flex; justify-content: center; align-items: center; padding: 15px 20px; position: fixed; top: 38px; left: 0; right: 0; background: rgba(0,0,0,0.95); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 1px solid #333; }
         .logo { color: #FFD700; font-size: 24px; font-weight: bold; }
         .hero { text-align: center; padding: 40px 0 60px; }
         .hero .tag { color: #FFD700; font-size: 20px; margin-bottom: 10px; font-weight: bold; text-transform: uppercase; }
@@ -61,11 +64,15 @@
         .footer .brand { color: #FFD700; font-size: 24px; font-weight: bold; margin-bottom: 10px; }
         .footer .copyright { color: #FFFFFF; font-size: 14px; }
         @media (max-width: 992px) { .books-grid { grid-template-columns: repeat(3, 1fr); } }
-        @media (max-width: 768px) { .books-grid { grid-template-columns: repeat(2, 1fr); } .hero h1 { font-size: 32px; } .steps { gap: 30px; } .logo { font-size: 20px; } .section-title { font-size: 28px; } }
+        @media (max-width: 768px) { .books-grid { grid-template-columns: repeat(2, 1fr); } .hero h1 { font-size: 32px; } .steps { gap: 30px; } .logo { font-size: 20px; } .section-title { font-size: 28px; } body { padding-top: 118px; } .header { top: 38px; } }
         @media (max-width: 480px) { .header { padding: 12px 15px; } .container { padding: 0 15px; } .hero h1 { font-size: 28px; } }
     </style>
 </head>
 <body>
+    <div class="lang-bar">
+        <a href="/en/">📗 Switch to English Books</a>
+    </div>
+    
     <header class="header">
         <div class="logo">TheBestBundle</div>
     </header>
@@ -123,55 +130,55 @@
 
     <section class="how-it-works">
         <div class="container">
-            <h2 class="section-title">How It Works</h2>
+            <h2 class="section-title">Comment Ça Marche</h2>
             <div class="steps">
-                <div class="step"><i class="fas fa-box"></i><h3>Choose Your Pack</h3></div>
-                <div class="step"><i class="fas fa-book"></i><h3>Pick Any Ebooks</h3></div>
-                <div class="step"><i class="fas fa-bolt"></i><h3>Download Instantly</h3></div>
+                <div class="step"><i class="fas fa-box"></i><h3>Choisissez Votre Pack</h3></div>
+                <div class="step"><i class="fas fa-book"></i><h3>Sélectionnez Vos Ebooks</h3></div>
+                <div class="step"><i class="fas fa-bolt"></i><h3>Téléchargez Instantanément</h3></div>
             </div>
         </div>
     </section>
 
     <div class="cta-button-wrap">
-        <button class="cta-button" onclick="document.getElementById('packs').scrollIntoView({behavior: 'smooth'})">See All Bundles →</button>
+        <button class="cta-button" onclick="document.getElementById('packs').scrollIntoView({behavior: 'smooth'})">Voir Tous Les Packs →</button>
     </div>
 
     <section class="packs" id="packs">
         <div class="container">
-            <h2 class="section-title">Our Featured Packs</h2>
-            <p class="subtitle">Choose from our entire collection of ebooks</p>
+            <h2 class="section-title">Nos Packs Vedettes</h2>
+            <p class="subtitle">Choisissez parmi notre collection complète d'ebooks</p>
             <div class="packs-grid">
                 <div class="pack-card">
                     <img src="img/starterpack.jpg" alt="Starter Pack">
                     <div class="pack-name">Starter Pack</div>
                     <div class="pack-price">$37</div>
-                    <div class="pack-desc">Get 2 books from 10 books</div>
+                    <div class="pack-desc">Obtenez 2 livres parmi 10 livres</div>
                     <div class="pack-books">
                         <div>• Decouvre ta niche parfaite</div>
                         <div>• ton plan d’action en business</div>
                     </div>
-                    <div class="pack-note">Choose from our entire collection of ebooks</div>
-                    <a href="https://buy.stripe.com/5kQ8wRboscyAgLR0an8N20a" class="pack-button" target="_blank">Buy Starter Pack</a>
+                    <div class="pack-note">Choisissez parmi notre collection complète d'ebooks</div>
+                    <a href="https://buy.stripe.com/5kQ8wRboscyAgLR0an8N20a" class="pack-button" target="_blank">Acheter Starter Pack</a>
                 </div>
                 <div class="pack-card popular">
-                    <div class="popular-badge">MOST POPULAR</div>
+                    <div class="popular-badge">PLUS POPULAIRE</div>
                     <img src="img/creatorpack.jpg" alt="Creator Pack">
                     <div class="pack-name">Creator Pack</div>
                     <div class="pack-price">$57</div>
-                    <div class="pack-desc">Get 3 books</div>
+                    <div class="pack-desc">Obtenez 3 livres</div>
                     <div class="pack-books">
                         <div>• Comment Être Financé Rapidement</div>
                         <div>• Crée une presence en ligne</div>
                         <div>• l’art de vendre en 2026</div>
                     </div>
-                    <div class="pack-note">Choose from our entire collection of ebooks</div>
-                    <a href="https://buy.stripe.com/dRm8wR2RWeGIeDJf5h8N20b" class="pack-button" target="_blank">Buy Creator Pack</a>
+                    <div class="pack-note">Choisissez parmi notre collection complète d'ebooks</div>
+                    <a href="https://buy.stripe.com/dRm8wR2RWeGIeDJf5h8N20b" class="pack-button" target="_blank">Acheter Creator Pack</a>
                 </div>
                 <div class="pack-card">
                     <img src="img/propack.jpg" alt="Pro Pack">
                     <div class="pack-name">Pro Pack</div>
                     <div class="pack-price">$87</div>
-                    <div class="pack-desc">Get 5 books</div>
+                    <div class="pack-desc">Obtenez 5 livres</div>
                     <div class="pack-books">
                         <div>• Protège ton Entreprise Légalement</div>
                         <div>• traffic leads ventes Le système</div>
@@ -179,19 +186,19 @@
                         <div>• De salariés à Mentalité d’entrepreneur</div>
                         <div>• Automatise Ton Business en 30 Jours</div>
                     </div>
-                    <div class="pack-note">Choose from our entire collection of ebooks</div>
-                    <a href="https://buy.stripe.com/00w9AVako5682V14qD8N20c" class="pack-button" target="_blank">Buy Pro Pack</a>
+                    <div class="pack-note">Choisissez parmi notre collection complète d'ebooks</div>
+                    <a href="https://buy.stripe.com/00w9AVako5682V14qD8N20c" class="pack-button" target="_blank">Acheter Pro Pack</a>
                 </div>
                 <div class="pack-card">
                     <img src="img/vaultpack.jpg" alt="Vault Pack">
                     <div class="pack-name">Vault Pack</div>
                     <div class="pack-price">$157</div>
-                    <div class="pack-desc">Get all 10 books</div>
+                    <div class="pack-desc">Obtenez les 10 livres</div>
                     <div class="pack-books">
-                        <div>• All 10 books included</div>
+                        <div>• Les 10 livres inclus</div>
                     </div>
-                    <div class="pack-note">Choose from our entire collection of ebooks</div>
-                    <a href="https://buy.stripe.com/9B65kF504buw5390an8N20d" class="pack-button" target="_blank">Buy Vault Pack</a>
+                    <div class="pack-note">Choisissez parmi notre collection complète d'ebooks</div>
+                    <a href="https://buy.stripe.com/9B65kF504buw5390an8N20d" class="pack-button" target="_blank">Acheter Vault Pack</a>
                 </div>
             </div>
         </div>
@@ -199,25 +206,25 @@
 
     <section class="social-proof">
         <div class="container">
-            <h2>500+ creators use our Products already</h2>
+            <h2>Plus de 500 créateurs utilisent déjà nos produits</h2>
             <div class="reviews">
                 <div class="review-card">
                     <div class="stars">★★★★★</div>
-                    <div class="review-text">"The Creator Pack gave me everything I needed to launch my digital business. Incredible value!"</div>
+                    <div class="review-text">"Le Creator Pack m'a donné tout ce dont j'avais besoin pour lancer mon business digital. Valeur incroyable !"</div>
                     <div class="reviewer">Sarah M.</div>
-                    <div class="reviewer-title">Content Creator</div>
+                    <div class="reviewer-title">Créatrice de Contenu</div>
                 </div>
                 <div class="review-card">
                     <div class="stars">★★★★★</div>
-                    <div class="review-text">"I bought the Pro Pack and the ebooks saved me weeks of work. Highly recommend!"</div>
+                    <div class="review-text">"J'ai acheté le Pro Pack et les ebooks m'ont fait gagner des semaines de travail. Je recommande fortement !"</div>
                     <div class="reviewer">Jean-Pierre L.</div>
                     <div class="reviewer-title">Entrepreneur</div>
                 </div>
                 <div class="review-card">
                     <div class="stars">★★★★★</div>
-                    <div class="review-text">"The Vault Pack is the best investment I've made for my business. All 10 books are gold!"</div>
+                    <div class="review-text">"Le Vault Pack est le meilleur investissement que j'ai fait pour mon business. Les 10 livres sont de l'or !"</div>
                     <div class="reviewer">Marie D.</div>
-                    <div class="reviewer-title">Business Coach</div>
+                    <div class="reviewer-title">Coach Business</div>
                 </div>
             </div>
         </div>
@@ -225,16 +232,16 @@
 
     <section class="contact-section">
         <div class="container">
-            <h2>Need Help?</h2>
-            <p>Questions about the packs or ebooks? We're here for you.</p>
-            <a href="mailto:Thebestbundle101@gmail.com" class="contact-button">Contact Us</a>
+            <h2>Besoin d'Aide ?</h2>
+            <p>Des questions sur les packs ou les ebooks ? Nous sommes là pour vous.</p>
+            <a href="mailto:Thebestbundle101@gmail.com" class="contact-button">Nous Contacter</a>
         </div>
     </section>
 
     <footer class="footer">
         <div class="container">
             <div class="brand">THEBESTBUNDLE</div>
-            <div class="copyright">2026 THEBESTBUNDLE. All rights reserved</div>
+            <div class="copyright">2026 THEBESTBUNDLE. Tous droits réservés</div>
         </div>
     </footer>
 </body>
