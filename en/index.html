@@ -7,38 +7,36 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background-color: #000000; color: #FFFFFF; font-family: 'Arial', sans-serif; line-height: 1.6; padding-top: 80px; }
-        .lang-bar { position: fixed; top: 0; left: 0; right: 0; background: #FFD700; color: #000000; text-align: center; padding: 10px 20px; font-weight: bold; z-index: 1001; font-size: 14px; }
-        .lang-bar a { color: #000000; text-decoration: none; }
-        .lang-bar a:hover { text-decoration: underline; }
+        body { background-color: #ffffff; color: #1a1a1a; font-family: 'Arial', sans-serif; line-height: 1.6; padding-top: 80px; }
+        .lang-bar { display: none !important; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        .header { display: flex; justify-content: center; align-items: center; padding: 15px 20px; position: fixed; top: 38px; left: 0; right: 0; background: rgba(0,0,0,0.95); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 1px solid #333; }
+        .header { display: flex; justify-content: center; align-items: center; padding: 15px 20px; position: fixed; top: 0; left: 0; right: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 1px solid #eee; }
         .logo { color: #FFD700; font-size: 24px; font-weight: bold; }
         .hero { text-align: center; padding: 40px 0 60px; }
         .hero .tag { color: #FFD700; font-size: 20px; margin-bottom: 10px; font-weight: bold; text-transform: uppercase; }
-        .hero h1 { color: #FFFFFF; font-size: 48px; font-weight: bold; margin-bottom: 15px; }
-        .hero .subtitle { color: #FFFFFF; font-size: 18px; margin-bottom: 40px; }
-        .coming-soon { background: #1a1a1a; border: 2px dashed #FFD700; padding: 60px 20px; border-radius: 12px; margin-bottom: 40px; }
+        .hero h1 { color: #1a1a1a; font-size: 48px; font-weight: bold; margin-bottom: 15px; }
+        .hero .subtitle { color: #555; font-size: 18px; margin-bottom: 40px; }
+        .coming-soon { background: #f8f8f8; border: 2px dashed #FFD700; padding: 60px 20px; border-radius: 12px; margin-bottom: 40px; }
         .coming-soon h3 { color: #FFD700; font-size: 32px; margin-bottom: 15px; }
-        .coming-soon p { color: #FFFFFF; font-size: 18px; }
+        .coming-soon p { color: #1a1a1a; font-size: 18px; }
         .how-it-works { text-align: center; padding: 60px 0; }
-        .section-title { color: #FFFFFF; font-size: 36px; margin-bottom: 50px; }
+        .section-title { color: #1a1a1a; font-size: 36px; margin-bottom: 50px; }
         .steps { display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; }
         .step { text-align: center; }
         .step i { font-size: 40px; color: #FFD700; margin-bottom: 15px; }
-        .step h3 { color: #FFFFFF; font-size: 18px; }
+        .step h3 { color: #1a1a1a; font-size: 18px; }
         .cta-button-wrap { text-align: center; padding: 20px 0 60px; }
         .cta-button { background: #FFD700; color: #000000; border: none; padding: 15px 40px; font-size: 18px; font-weight: bold; border-radius: 8px; cursor: pointer; transition: transform 0.2s; }
         .cta-button:hover { transform: scale(1.05); }
-        .contact-section { text-align: center; padding: 60px 20px; background: #0a0a0a; border-top: 1px solid #333; }
-        .contact-section h2 { color: #FFFFFF; font-size: 32px; margin-bottom: 20px; }
-        .contact-section p { color: #aaa; font-size: 18px; margin-bottom: 30px; }
+        .contact-section { text-align: center; padding: 60px 20px; background: #f5f5f5; border-top: 1px solid #ddd; }
+        .contact-section h2 { color: #1a1a1a; font-size: 32px; margin-bottom: 20px; }
+        .contact-section p { color: #666; font-size: 18px; margin-bottom: 30px; }
         .contact-button { background: #FFD700; color: #000000; padding: 15px 35px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 18px; display: inline-block; transition: transform 0.2s; }
         .contact-button:hover { transform: scale(1.05); }
-        .footer { text-align: center; padding: 40px 0; border-top: 1px solid #333; }
+        .footer { text-align: center; padding: 40px 0; border-top: 1px solid #ddd; }
         .footer .brand { color: #FFD700; font-size: 24px; font-weight: bold; margin-bottom: 10px; }
-        .footer .copyright { color: #FFFFFF; font-size: 14px; }
-        @media (max-width: 768px) { .hero h1 { font-size: 32px; } .steps { gap: 30px; } .logo { font-size: 20px; } .section-title { font-size: 28px; } body { padding-top: 118px; } .header { top: 38px; } }
+        .footer .copyright { color: #666; font-size: 14px; }
+        @media (max-width: 768px) { .hero h1 { font-size: 32px; } .steps { gap: 30px; } .logo { font-size: 20px; } .section-title { font-size: 28px; } body { padding-top: 80px; } .header { top: 0; } }
         @media (max-width: 480px) { .header { padding: 12px 15px; } .container { padding: 0 15px; } .hero h1 { font-size: 28px; } }
     </style>
 </head>
