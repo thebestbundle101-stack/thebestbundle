@@ -3,62 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TheBestBundle - Build Your Digital Bundle</title>
+    <title>TheBestBundle - Build Your Digital Pack</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background-color: #ffffff; color: #1a1a1a; font-family: 'Arial', sans-serif; line-height: 1.6; padding-top: 80px; }
+        body { background-color: #FFFFFF; color: #1a1a1a; font-family: 'Arial', sans-serif; line-height: 1.6; padding-top: 80px; }
         .lang-bar { display: none !important; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        .header { display: flex; justify-content: center; align-items: center; padding: 15px 20px; position: fixed; top: 0; left: 0; right: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 1px solid #eee; }
-        .logo { color: #FFD700; font-size: 24px; font-weight: bold; }
+        
+        /* HEADER - Logo left, FR switch right */
+        .header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 15px 20px; 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            right: 0; 
+            background: rgba(255,255,255,0.95); 
+            backdrop-filter: blur(10px); 
+            z-index: 1000; 
+            border-bottom: 1px solid #eee; 
+        }
+        .logo { color: #1E3A8A; font-size: 24px; font-weight: bold; }
+        .lang-switch { 
+            border: 1px solid #1E3A8A; 
+            color: #1E3A8A; 
+            background: #FFFFFF;
+            padding: 8px 16px; 
+            border-radius: 6px; 
+            text-decoration: none; 
+            font-weight: 600; 
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+        .lang-switch:hover { 
+            background: #1E3A8A; 
+            color: #FFFFFF; 
+        }
+
         .hero { text-align: center; padding: 40px 0 60px; }
-        .hero .tag { color: #FFD700; font-size: 20px; margin-bottom: 10px; font-weight: bold; text-transform: uppercase; }
-        .hero h1 { color: #1a1a1a; font-size: 48px; font-weight: bold; margin-bottom: 15px; }
+        .hero .tag { color: #1E3A8A; font-size: 20px; margin-bottom: 10px; font-weight: bold; text-transform: uppercase; }
+        .hero h1 { color: #111827; font-size: 48px; font-weight: bold; margin-bottom: 15px; }
         .hero .subtitle { color: #555; font-size: 18px; margin-bottom: 40px; }
-        .coming-soon { background: #f8f8f8; border: 2px dashed #FFD700; padding: 60px 20px; border-radius: 12px; margin-bottom: 40px; }
-        .coming-soon h3 { color: #FFD700; font-size: 32px; margin-bottom: 15px; }
-        .coming-soon p { color: #1a1a1a; font-size: 18px; }
+        
+        .books-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 15px; margin-bottom: 40px; }
+        .book-card { 
+            background: #FFFFFF; 
+            border: 2px solid #1E3A8A; 
+            padding: 12px; 
+            border-radius: 8px; 
+            font-size: 11px; 
+            text-align: center; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center;
+            text-decoration: none; 
+            color: #111827; 
+            transition: all 0.3s; 
+            gap: 8px; 
+            min-height: 240px; 
+            font-weight: 600;
+        }
+        .book-card .coming-soon { 
+            color: #1E3A8A; 
+            font-size: 16px; 
+            font-weight: bold; 
+            text-transform: uppercase;
+        }
+        .book-card:hover { transform: translateY(-3px); background: #F9FAFB; }
+
+        /* HOW IT WORKS */
         .how-it-works { text-align: center; padding: 60px 0; }
-        .section-title { color: #1a1a1a; font-size: 36px; margin-bottom: 50px; }
-        .steps { display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; }
-        .step { text-align: center; }
-        .step i { font-size: 40px; color: #FFD700; margin-bottom: 15px; }
-        .step h3 { color: #1a1a1a; font-size: 18px; }
+        .section-title { color: #111827; font-size: 2rem; font-weight: 700; margin-bottom: 50px; }
+        .steps { display: flex; justify-content: center; gap: 20px; flex-wrap: nowrap; }
+        .step { text-align: center; flex: 1; }
+        .step i { font-size: 40px; color: #1E3A8A; margin-bottom: 15px; }
+        .step h3 { color: #111827; font-size: 18px; font-weight: 600; }
+
         .cta-button-wrap { text-align: center; padding: 20px 0 60px; }
-        .cta-button { background: #FFD700; color: #000000; border: none; padding: 15px 40px; font-size: 18px; font-weight: bold; border-radius: 8px; cursor: pointer; transition: transform 0.2s; }
+        .cta-button { background: #1E3A8A; color: #FFFFFF; border: none; padding: 15px 40px; font-size: 18px; font-weight: bold; border-radius: 8px; cursor: pointer; transition: transform 0.2s; }
         .cta-button:hover { transform: scale(1.05); }
-        .contact-section { text-align: center; padding: 60px 20px; background: #f5f5f5; border-top: 1px solid #ddd; }
-        .contact-section h2 { color: #1a1a1a; font-size: 32px; margin-bottom: 20px; }
-        .contact-section p { color: #666; font-size: 18px; margin-bottom: 30px; }
-        .contact-button { background: #FFD700; color: #000000; padding: 15px 35px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 18px; display: inline-block; transition: transform 0.2s; }
+
+        /* PACKS */
+        .packs { padding: 60px 0; text-align: center; }
+        .packs .subtitle { color: #6B7280; margin-bottom: 40px; }
+        .packs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-top: 40px; }
+        .pack-card { 
+            background: #FFFFFF; 
+            border: 2px solid #1E3A8A; 
+            border-radius: 12px; 
+            padding: 30px 20px; 
+            position: relative; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center;
+            min-height: 350px;
+        }
+        .pack-card.popular { border-color: #1E3A8A; }
+        .popular-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #1E3A8A; color: #FFFFFF; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: bold; }
+        .pack-name { color: #111827; font-size: 24px; margin-bottom: 10px; font-weight: 700; }
+        .pack-price { color: #1E3A8A; font-size: 36px; font-weight: bold; margin-bottom: 15px; }
+        .coming-soon-pack { 
+            color: #1E3A8A; 
+            font-size: 20px; 
+            font-weight: bold; 
+            text-transform: uppercase;
+            margin: 20px 0;
+        }
+        .pack-button { background: #9CA3AF; color: #FFFFFF; border: none; padding: 12px 20px; font-size: 16px; font-weight: bold; border-radius: 8px; cursor: not-allowed; text-decoration: none; display: block; }
+
+        /* REVIEWS */
+        .social-proof { padding: 60px 0; text-align: center; }
+        .social-proof h2 { color: #111827; font-size: 36px; margin-bottom: 50px; font-weight: 700; }
+        .reviews { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        .review-card { background: #FFFFFF; border: 2px solid #1E3A8A; padding: 25px; border-radius: 12px; text-align: left; }
+        .stars { color: #1E3A8A; font-size: 20px; margin-bottom: 15px; }
+        .review-text { color: #111827; margin-bottom: 15px; font-style: italic; }
+        .reviewer { color: #111827; font-weight: bold; }
+        .reviewer-title { color: #6B7280; font-size: 14px; }
+
+        /* CONTACT + FOOTER */
+        .contact-section { text-align: center; padding: 60px 20px; background: #F9FAFB; border-top: 1px solid #ddd; }
+        .contact-section h2 { color: #111827; font-size: 32px; margin-bottom: 20px; font-weight: 700; }
+        .contact-section p { color: #6B7280; font-size: 18px; margin-bottom: 30px; }
+        .contact-button { background: #1E3A8A; color: #FFFFFF; padding: 15px 35px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 18px; display: inline-block; transition: transform 0.2s; }
         .contact-button:hover { transform: scale(1.05); }
-        .footer { text-align: center; padding: 40px 0; border-top: 1px solid #ddd; }
-        .footer .brand { color: #FFD700; font-size: 24px; font-weight: bold; margin-bottom: 10px; }
-        .footer .copyright { color: #666; font-size: 14px; }
-        @media (max-width: 768px) { .hero h1 { font-size: 32px; } .steps { gap: 30px; } .logo { font-size: 20px; } .section-title { font-size: 28px; } body { padding-top: 80px; } .header { top: 0; } }
-        @media (max-width: 480px) { .header { padding: 12px 15px; } .container { padding: 0 15px; } .hero h1 { font-size: 28px; } }
+        
+        .footer { text-align: center; padding: 40px 0; border-top: 1px solid #ddd; background: #FFFFFF; }
+        .footer .brand { color: #1E3A8A; font-size: 24px; font-weight: bold; margin-bottom: 10px; }
+        .footer .copyright { color: #6B7280; font-size: 14px; }
+
+        @media (max-width: 992px) { 
+            .books-grid { grid-template-columns: repeat(3, 1fr); } 
+            .steps { flex-wrap: wrap; }
+        }
+        @media (max-width: 768px) { 
+            .books-grid { grid-template-columns: repeat(2, 1fr); } 
+            .hero h1 { font-size: 32px; } 
+            .steps { gap: 30px; flex-direction: column; } 
+            .logo { font-size: 20px; } 
+            .section-title { font-size: 28px; } 
+            body { padding-top: 80px; } 
+            .header { top: 0; } 
+        }
+        @media (max-width: 480px) { 
+            .header { padding: 12px 15px; } 
+            .container { padding: 0 15px; } 
+            .hero h1 { font-size: 28px; } 
+            .lang-switch { padding: 6px 12px; font-size: 12px; }
+        }
     </style>
 </head>
 <body>
-    <div class="lang-bar">
-        <a href="/">📘 Voir les livres français</a>
-    </div>
-    
     <header class="header">
         <div class="logo">TheBestBundle</div>
+        <a href="/thebestbundle/" class="lang-switch">FR</a>
     </header>
 
     <div class="container">
         <section class="hero">
             <div class="tag">Digital Products</div>
-            <h1>BUILD YOUR DIGITAL BUNDLE</h1>
-            <p class="subtitle">Buy Ebooks individually [SET YOUR PRICE] per unit or save with Bundle</p>
+            <h1>BUILD YOUR PACK</h1>
+            <p class="subtitle">English version coming soon. Stay tuned for our new collection.</p>
 
-            <div class="coming-soon">
-                <h3>🚀 English Ebooks Coming Soon</h3>
-                <p>We're preparing 10 premium ebooks in English. Launching very soon!</p>
-                <p style="margin-top: 20px; color: #FFD700;">Want to be notified? Contact us below.</p>
+            <div class="books-grid">
+                <div class="book-card"><span class="coming-soon">Coming Soon</span></div>
+                <div class="book-card"><span class="coming-soon">Coming Soon</span></div>
+                <div class="book-card"><span class="coming-soon">Coming Soon</span></div>
+                <div class="book-card"><span class="coming-soon">Coming Soon</span></div>
+                <div class="book-card"><span class="coming-soon">Coming Soon</span></div>
+                <div class="book-card"><span class="coming-soon">Coming Soon</span></div>
+                <div class="book-card"><span class="coming-soon">Coming Soon</span></div>
+                <div class="book-card"><span class="coming-soon">Coming Soon</span></div>
+                <div class="book-card"><span class="coming-soon">Coming Soon</span></div>
+                <div class="book-card"><span class="coming-soon">Coming Soon</span></div>
             </div>
         </section>
     </div>
@@ -68,8 +189,68 @@
             <h2 class="section-title">How It Works</h2>
             <div class="steps">
                 <div class="step"><i class="fas fa-box"></i><h3>Choose Your Pack</h3></div>
-                <div class="step"><i class="fas fa-book"></i><h3>Pick Any Ebooks</h3></div>
-                <div class="step"><i class="fas fa-bolt"></i><h3>Download Instantly</h3></div>
+                <div class="step"><i class="fas fa-book"></i><h3>Select Your Ebooks</h3></div>
+                <div class="step"><i class="fas fa-bolt"></i><h3>Instant Download</h3></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="cta-button-wrap">
+        <button class="cta-button" onclick="document.getElementById('packs').scrollIntoView({behavior: 'smooth'})">View All Packs →</button>
+    </div>
+
+    <section class="packs" id="packs">
+        <div class="container">
+            <h2 class="section-title">Our Featured Packs</h2>
+            <p class="subtitle">New English ebooks launching soon</p>
+            <div class="packs-grid">
+                <div class="pack-card">
+                    <div class="pack-name">Starter Pack</div>
+                    <div class="coming-soon-pack">Coming Soon</div>
+                    <div class="pack-button">Not Available Yet</div>
+                </div>
+                <div class="pack-card popular">
+                    <div class="popular-badge">MOST POPULAR</div>
+                    <div class="pack-name">Creator Pack</div>
+                    <div class="coming-soon-pack">Coming Soon</div>
+                    <div class="pack-button">Not Available Yet</div>
+                </div>
+                <div class="pack-card">
+                    <div class="pack-name">Pro Pack</div>
+                    <div class="coming-soon-pack">Coming Soon</div>
+                    <div class="pack-button">Not Available Yet</div>
+                </div>
+                <div class="pack-card">
+                    <div class="pack-name">Vault Pack</div>
+                    <div class="coming-soon-pack">Coming Soon</div>
+                    <div class="pack-button">Not Available Yet</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="social-proof">
+        <div class="container">
+            <h2>500+ Creators Already Use Our Products</h2>
+            <div class="reviews">
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <div class="review-text">"The French version helped me launch my digital business. Can't wait for the English ebooks!"</div>
+                    <div class="reviewer">Alex K.</div>
+                    <div class="reviewer-title">Content Creator</div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <div class="review-text">"Signed up to get notified when the English packs drop. The concept is genius!"</div>
+                    <div class="reviewer">Jordan M.</div>
+                    <div class="reviewer-title">Entrepreneur</div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <div class="review-text">"Following TheBestBundle for the English launch. The French testimonials look amazing!"</div>
+                    <div class="reviewer">Taylor R.</div>
+                    <div class="reviewer-title">Business Coach</div>
+                </div>
             </div>
         </div>
     </section>
