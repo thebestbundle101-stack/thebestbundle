@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheBestBundle - Build Your Digital Bundle</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: #000000; color: #FFFFFF; font-family: 'Arial', sans-serif; line-height: 1.6; padding-top: 80px; }
+        .lang-bar { position: fixed; top: 0; left: 0; right: 0; background: #FFD700; color: #000000; text-align: center; padding: 10px 20px; font-weight: bold; z-index: 1001; font-size: 14px; }
+        .lang-bar a { color: #000000; text-decoration: none; }
+        .lang-bar a:hover { text-decoration: underline; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .header { display: flex; justify-content: center; align-items: center; padding: 15px 20px; position: fixed; top: 38px; left: 0; right: 0; background: rgba(0,0,0,0.95); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 1px solid #333; }
+        .logo { color: #FFD700; font-size: 24px; font-weight: bold; }
+        .hero { text-align: center; padding: 40px 0 60px; }
+        .hero .tag { color: #FFD700; font-size: 20px; margin-bottom: 10px; font-weight: bold; text-transform: uppercase; }
+        .hero h1 { color: #FFFFFF; font-size: 48px; font-weight: bold; margin-bottom: 15px; }
+        .hero .subtitle { color: #FFFFFF; font-size: 18px; margin-bottom: 40px; }
+        .coming-soon { background: #1a1a1a; border: 2px dashed #FFD700; padding: 60px 20px; border-radius: 12px; margin-bottom: 40px; }
+        .coming-soon h3 { color: #FFD700; font-size: 32px; margin-bottom: 15px; }
+        .coming-soon p { color: #FFFFFF; font-size: 18px; }
+        .how-it-works { text-align: center; padding: 60px 0; }
+        .section-title { color: #FFFFFF; font-size: 36px; margin-bottom: 50px; }
+        .steps { display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; }
+        .step { text-align: center; }
+        .step i { font-size: 40px; color: #FFD700; margin-bottom: 15px; }
+        .step h3 { color: #FFFFFF; font-size: 18px; }
+        .cta-button-wrap { text-align: center; padding: 20px 0 60px; }
+        .cta-button { background: #FFD700; color: #000000; border: none; padding: 15px 40px; font-size: 18px; font-weight: bold; border-radius: 8px; cursor: pointer; transition: transform 0.2s; }
+        .cta-button:hover { transform: scale(1.05); }
+        .contact-section { text-align: center; padding: 60px 20px; background: #0a0a0a; border-top: 1px solid #333; }
+        .contact-section h2 { color: #FFFFFF; font-size: 32px; margin-bottom: 20px; }
+        .contact-section p { color: #aaa; font-size: 18px; margin-bottom: 30px; }
+        .contact-button { background: #FFD700; color: #000000; padding: 15px 35px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 18px; display: inline-block; transition: transform 0.2s; }
+        .contact-button:hover { transform: scale(1.05); }
+        .footer { text-align: center; padding: 40px 0; border-top: 1px solid #333; }
+        .footer .brand { color: #FFD700; font-size: 24px; font-weight: bold; margin-bottom: 10px; }
+        .footer .copyright { color: #FFFFFF; font-size: 14px; }
+        @media (max-width: 768px) { .hero h1 { font-size: 32px; } .steps { gap: 30px; } .logo { font-size: 20px; } .section-title { font-size: 28px; } body { padding-top: 118px; } .header { top: 38px; } }
+        @media (max-width: 480px) { .header { padding: 12px 15px; } .container { padding: 0 15px; } .hero h1 { font-size: 28px; } }
+    </style>
+</head>
+<body>
+    <div class="lang-bar">
+        <a href="/">📘 Voir les livres français</a>
+    </div>
+    
+    <header class="header">
+        <div class="logo">TheBestBundle</div>
+    </header>
+
+    <div class="container">
+        <section class="hero">
+            <div class="tag">Digital Products</div>
+            <h1>BUILD YOUR DIGITAL BUNDLE</h1>
+            <p class="subtitle">Buy Ebooks individually [SET YOUR PRICE] per unit or save with Bundle</p>
+
+            <div class="coming-soon">
+                <h3>🚀 English Ebooks Coming Soon</h3>
+                <p>We're preparing 10 premium ebooks in English. Launching very soon!</p>
+                <p style="margin-top: 20px; color: #FFD700;">Want to be notified? Contact us below.</p>
+            </div>
+        </section>
+    </div>
+
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="steps">
+                <div class="step"><i class="fas fa-box"></i><h3>Choose Your Pack</h3></div>
+                <div class="step"><i class="fas fa-book"></i><h3>Pick Any Ebooks</h3></div>
+                <div class="step"><i class="fas fa-bolt"></i><h3>Download Instantly</h3></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <h2>Need Help?</h2>
+            <p>Questions about upcoming English packs? We're here for you.</p>
+            <a href="mailto:Thebestbundle101@gmail.com" class="contact-button">Contact Us</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="brand">THEBESTBUNDLE</div>
+            <div class="copyright">2026 THEBESTBUNDLE. All rights reserved</div>
+        </div>
+    </footer>
+</body>
+</html>
