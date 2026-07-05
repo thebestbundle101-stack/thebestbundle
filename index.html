@@ -7,63 +7,147 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background-color: #ffffff; color: #1a1a1a; font-family: 'Arial', sans-serif; line-height: 1.6; padding-top: 80px; }
+        body { background-color: #FFFFFF; color: #1a1a1a; font-family: 'Arial', sans-serif; line-height: 1.6; padding-top: 80px; }
         .lang-bar { display: none !important; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        .header { display: flex; justify-content: center; align-items: center; padding: 15px 20px; position: fixed; top: 0; left: 0; right: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 1px solid #eee; }
-        .logo { color: #FFD700; font-size: 24px; font-weight: bold; }
+        
+        /* HEADER - Logo left, EN switch right */
+        .header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 15px 20px; 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            right: 0; 
+            background: rgba(255,255,255,0.95); 
+            backdrop-filter: blur(10px); 
+            z-index: 1000; 
+            border-bottom: 1px solid #eee; 
+        }
+        .logo { color: #0F766E; font-size: 24px; font-weight: bold; }
+        .lang-switch { 
+            border: 1px solid #0F766E; 
+            color: #0F766E; 
+            background: #FFFFFF;
+            padding: 8px 16px; 
+            border-radius: 6px; 
+            text-decoration: none; 
+            font-weight: 600; 
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+        .lang-switch:hover { 
+            background: #0F766E; 
+            color: #FFFFFF; 
+        }
+
         .hero { text-align: center; padding: 40px 0 60px; }
-        .hero .tag { color: #FFD700; font-size: 20px; margin-bottom: 10px; font-weight: bold; text-transform: uppercase; }
-        .hero h1 { color: #1a1a1a; font-size: 48px; font-weight: bold; margin-bottom: 15px; }
+        .hero .tag { color: #0F766E; font-size: 20px; margin-bottom: 10px; font-weight: bold; text-transform: uppercase; }
+        .hero h1 { color: #111827; font-size: 48px; font-weight: bold; margin-bottom: 15px; }
+        /* EXCLUDED: Keep original color for pricing text */
         .hero .subtitle { color: #555; font-size: 18px; margin-bottom: 40px; }
+        
         .books-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 15px; margin-bottom: 40px; }
-        .book-card { background: #f8f8f8; border: 1px solid #ddd; padding: 12px; border-radius: 8px; font-size: 11px; text-align: center; display: flex; flex-direction: column; align-items: center; text-decoration: none; color: #1a1a1a; transition: all 0.3s; gap: 8px; min-height: 240px; }
+        .book-card { 
+            background: #FFFFFF; 
+            border: 2px solid #0F766E; 
+            padding: 12px; 
+            border-radius: 8px; 
+            font-size: 11px; 
+            text-align: center; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            text-decoration: none; 
+            color: #111827; 
+            transition: all 0.3s; 
+            gap: 8px; 
+            min-height: 240px; 
+            font-weight: 600;
+        }
         .book-card img { width: 100%; max-width: 130px; height: 180px; object-fit: cover; border-radius: 4px; border: 1px solid #ddd; }
-        .book-card:hover { border-color: #FFD700; transform: translateY(-3px); background: #fff; }
-        .book-card:hover img { border-color: #FFD700; }
+        .book-card:hover { transform: translateY(-3px); background: #F9FAFB; }
+        .book-card:hover img { border-color: #0F766E; }
+
+        /* COMMENT ÇA MARCHE */
         .how-it-works { text-align: center; padding: 60px 0; }
-        .section-title { color: #1a1a1a; font-size: 36px; margin-bottom: 50px; }
-        .steps { display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; }
-        .step { text-align: center; }
-        .step i { font-size: 40px; color: #FFD700; margin-bottom: 15px; }
-        .step h3 { color: #1a1a1a; font-size: 18px; }
+        .section-title { color: #111827; font-size: 2rem; font-weight: 700; margin-bottom: 50px; }
+        .steps { display: flex; justify-content: center; gap: 20px; flex-wrap: nowrap; }
+        .step { text-align: center; flex: 1; }
+        .step i { font-size: 40px; color: #0F766E; margin-bottom: 15px; }
+        .step h3 { color: #111827; font-size: 18px; font-weight: 600; }
+
         .cta-button-wrap { text-align: center; padding: 20px 0 60px; }
-        .cta-button { background: #FFD700; color: #000000; border: none; padding: 15px 40px; font-size: 18px; font-weight: bold; border-radius: 8px; cursor: pointer; transition: transform 0.2s; }
+        .cta-button { background: #0F766E; color: #FFFFFF; border: none; padding: 15px 40px; font-size: 18px; font-weight: bold; border-radius: 8px; cursor: pointer; transition: transform 0.2s; }
         .cta-button:hover { transform: scale(1.05); }
+
+        /* PACKS */
         .packs { padding: 60px 0; text-align: center; }
-        .packs .subtitle { color: #555; margin-bottom: 40px; }
+        .packs .subtitle { color: #6B7280; margin-bottom: 40px; }
         .packs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-top: 40px; }
-        .pack-card { background: #f8f8f8; border: 2px solid #ddd; border-radius: 12px; padding: 30px 20px; position: relative; display: flex; flex-direction: column; }
-        .pack-card.popular { border-color: #FFD700; }
+        .pack-card { 
+            background: #FFFFFF; 
+            border: 2px solid #0F766E; 
+            border-radius: 12px; 
+            padding: 30px 20px; 
+            position: relative; 
+            display: flex; 
+            flex-direction: column; 
+        }
+        .pack-card.popular { border-color: #0F766E; }
         .pack-card img { width: 100%; max-width: 200px; height: 150px; object-fit: cover; border-radius: 8px; margin: 0 auto 15px; border: 1px solid #ddd; }
-        .popular-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #FFD700; color: #000000; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: bold; }
-        .pack-name { color: #1a1a1a; font-size: 24px; margin-bottom: 10px; }
-        .pack-price { color: #FFD700; font-size: 36px; font-weight: bold; margin-bottom: 15px; }
-        .pack-desc { color: #555; margin-bottom: 20px; }
-        .pack-books { text-align: left; margin: 20px 0; font-size: 12px; color: #666; flex-grow: 1; }
+        .popular-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #0F766E; color: #FFFFFF; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: bold; }
+        .pack-name { color: #111827; font-size: 24px; margin-bottom: 10px; font-weight: 700; }
+        .pack-price { color: #0F766E; font-size: 36px; font-weight: bold; margin-bottom: 15px; }
+        .pack-desc { color: #6B7280; margin-bottom: 20px; }
+        .pack-books { text-align: left; margin: 20px 0; font-size: 12px; color: #111827; flex-grow: 1; font-weight: 600; }
         .pack-books div { margin-bottom: 5px; }
-        .pack-note { color: #555; font-size: 12px; margin-top: 20px; margin-bottom: 20px; }
-        .pack-button { background: #FFD700; color: #000000; border: none; padding: 12px 20px; font-size: 16px; font-weight: bold; border-radius: 8px; cursor: pointer; text-decoration: none; display: block; transition: transform 0.2s; }
+        .pack-note { color: #6B7280; font-size: 12px; margin-top: 20px; margin-bottom: 20px; }
+        .pack-button { background: #0F766E; color: #FFFFFF; border: none; padding: 12px 20px; font-size: 16px; font-weight: bold; border-radius: 8px; cursor: pointer; text-decoration: none; display: block; transition: transform 0.2s; }
         .pack-button:hover { transform: scale(1.05); }
+
+        /* REVIEWS */
         .social-proof { padding: 60px 0; text-align: center; }
-        .social-proof h2 { color: #1a1a1a; font-size: 36px; margin-bottom: 50px; }
+        .social-proof h2 { color: #111827; font-size: 36px; margin-bottom: 50px; font-weight: 700; }
         .reviews { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
-        .review-card { background: #f8f8f8; border: 1px solid #ddd; padding: 25px; border-radius: 12px; text-align: left; }
-        .stars { color: #FFD700; font-size: 20px; margin-bottom: 15px; }
-        .review-text { color: #1a1a1a; margin-bottom: 15px; font-style: italic; }
-        .reviewer { color: #1a1a1a; font-weight: bold; }
-        .reviewer-title { color: #666; font-size: 14px; }
-        .contact-section { text-align: center; padding: 60px 20px; background: #f5f5f5; border-top: 1px solid #ddd; }
-        .contact-section h2 { color: #1a1a1a; font-size: 32px; margin-bottom: 20px; }
-        .contact-section p { color: #666; font-size: 18px; margin-bottom: 30px; }
-        .contact-button { background: #FFD700; color: #000000; padding: 15px 35px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 18px; display: inline-block; transition: transform 0.2s; }
+        .review-card { background: #FFFFFF; border: 2px solid #0F766E; padding: 25px; border-radius: 12px; text-align: left; }
+        .stars { color: #0F766E; font-size: 20px; margin-bottom: 15px; }
+        .review-text { color: #111827; margin-bottom: 15px; font-style: italic; }
+        .reviewer { color: #111827; font-weight: bold; }
+        .reviewer-title { color: #6B7280; font-size: 14px; }
+
+        /* CONTACT + FOOTER */
+        .contact-section { text-align: center; padding: 60px 20px; background: #F9FAFB; border-top: 1px solid #ddd; }
+        .contact-section h2 { color: #111827; font-size: 32px; margin-bottom: 20px; font-weight: 700; }
+        .contact-section p { color: #6B7280; font-size: 18px; margin-bottom: 30px; }
+        .contact-button { background: #0F766E; color: #FFFFFF; padding: 15px 35px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 18px; display: inline-block; transition: transform 0.2s; }
         .contact-button:hover { transform: scale(1.05); }
-        .footer { text-align: center; padding: 40px 0; border-top: 1px solid #ddd; }
-        .footer .brand { color: #FFD700; font-size: 24px; font-weight: bold; margin-bottom: 10px; }
-        .footer .copyright { color: #666; font-size: 14px; }
-        @media (max-width: 992px) { .books-grid { grid-template-columns: repeat(3, 1fr); } }
-        @media (max-width: 768px) { .books-grid { grid-template-columns: repeat(2, 1fr); } .hero h1 { font-size: 32px; } .steps { gap: 30px; } .logo { font-size: 20px; } .section-title { font-size: 28px; } body { padding-top: 80px; } .header { top: 0; } }
-        @media (max-width: 480px) { .header { padding: 12px 15px; } .container { padding: 0 15px; } .hero h1 { font-size: 28px; } }
+        
+        .footer { text-align: center; padding: 40px 0; border-top: 1px solid #ddd; background: #FFFFFF; }
+        .footer .brand { color: #0F766E; font-size: 24px; font-weight: bold; margin-bottom: 10px; }
+        .footer .copyright { color: #6B7280; font-size: 14px; }
+
+        @media (max-width: 992px) { 
+            .books-grid { grid-template-columns: repeat(3, 1fr); } 
+            .steps { flex-wrap: wrap; }
+        }
+        @media (max-width: 768px) { 
+            .books-grid { grid-template-columns: repeat(2, 1fr); } 
+            .hero h1 { font-size: 32px; } 
+            .steps { gap: 30px; flex-direction: column; } 
+            .logo { font-size: 20px; } 
+            .section-title { font-size: 28px; } 
+            body { padding-top: 80px; } 
+            .header { top: 0; } 
+        }
+        @media (max-width: 480px) { 
+            .header { padding: 12px 15px; } 
+            .container { padding: 0 15px; } 
+            .hero h1 { font-size: 28px; } 
+            .lang-switch { padding: 6px 12px; font-size: 12px; }
+        }
     </style>
 </head>
 <body>
@@ -73,6 +157,7 @@
     
     <header class="header">
         <div class="logo">TheBestBundle</div>
+        <a href="/en/" class="lang-switch">EN</a>
     </header>
 
     <div class="container">
