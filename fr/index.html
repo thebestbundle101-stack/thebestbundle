@@ -1,1 +1,358 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JPG5GRWX53"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-JPG5GRWX53');
+  </script>
+  <meta charset="UTF-8">     
+  
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheBestBundle - Créez Votre Pack Numérique</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: #FFFFFF; color: #1a1a1a; font-family: 'Arial', sans-serif; line-height: 1.6; padding-top: 80px; }
+        .lang-bar { display: none !important; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        /* HEADER - Logo left, EN switch right */
+        .header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 15px 20px; 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            right: 0; 
+            background: rgba(255,255,255,0.95); 
+            backdrop-filter: blur(10px); 
+            z-index: 1000; 
+            border-bottom: 1px solid #eee; 
+        }
+        .logo { color: #0F766E; font-size: 24px; font-weight: bold; }
+        .lang-switch { 
+            border: 1px solid #0F766E; 
+            color: #0F766E; 
+            background: #FFFFFF;
+            padding: 8px 16px; 
+            border-radius: 6px; 
+            text-decoration: none; 
+            font-weight: 600; 
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+        .lang-switch:hover { 
+            background: #0F766E; 
+            color: #FFFFFF; 
+        }
+
+        .hero { text-align: center; padding: 40px 0 60px; }
+        .hero .tag { color: #0F766E; font-size: 20px; margin-bottom: 10px; font-weight: bold; text-transform: uppercase; }
+        .hero h1 { color: #111827; font-size: 48px; font-weight: bold; margin-bottom: 15px; }
+        .hero .subtitle { color: #555; font-size: 18px; margin-bottom: 40px; }
+        
+        .books-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 15px; margin-bottom: 40px; }
+        .book-card { 
+            background: #FFFFFF; 
+            border: 2px solid #0F766E; 
+            padding: 12px; 
+            border-radius: 8px; 
+            font-size: 11px; 
+            text-align: center; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            text-decoration: none; 
+            color: #111827; 
+            transition: all 0.3s; 
+            gap: 8px; 
+            min-height: 240px; 
+            font-weight: 600;
+        }
+        .book-card img { width: 100%; max-width: 130px; height: 180px; object-fit: cover; border-radius: 4px; border: 1px solid #ddd; }
+        .book-card:hover { transform: translateY(-3px); background: #F9FAFB; }
+        .book-card:hover img { border-color: #0F766E; }
+
+        .how-it-works { text-align: center; padding: 60px 0; }
+        .section-title { color: #111827; font-size: 2rem; font-weight: 700; margin-bottom: 50px; }
+        .steps { display: flex; justify-content: center; gap: 20px; flex-wrap: nowrap; }
+        .step { text-align: center; flex: 1; }
+        .step i { font-size: 40px; color: #0F766E; margin-bottom: 15px; }
+        .step h3 { color: #111827; font-size: 18px; font-weight: 600; }
+
+        .cta-button-wrap { text-align: center; padding: 20px 0 60px; }
+        .cta-button { background: #0F766E; color: #FFFFFF; border: none; padding: 15px 40px; font-size: 18px; font-weight: bold; border-radius: 8px; cursor: pointer; transition: transform 0.2s; }
+        .cta-button:hover { transform: scale(1.05); }
+
+        .packs { padding: 60px 0; text-align: center; }
+        .packs .subtitle { color: #6B7280; margin-bottom: 40px; }
+        .packs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-top: 40px; }
+        .pack-card { 
+            background: #FFFFFF; 
+            border: 2px solid #0F766E; 
+            border-radius: 12px; 
+            padding: 30px 20px; 
+            position: relative; 
+            display: flex; 
+            flex-direction: column; 
+        }
+        .pack-card.popular { border-color: #0F766E; }
+        .pack-card img { width: 100%; max-width: 200px; height: 150px; object-fit: cover; border-radius: 8px; margin: 0 auto 15px; border: 1px solid #ddd; }
+        .popular-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #0F766E; color: #FFFFFF; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: bold; }
+        .pack-name { color: #111827; font-size: 24px; margin-bottom: 10px; font-weight: 700; }
+        .pack-price { color: #0F766E; font-size: 36px; font-weight: bold; margin-bottom: 15px; }
+        .pack-desc { color: #6B7280; margin-bottom: 20px; }
+        .pack-books { text-align: left; margin: 20px 0; font-size: 12px; color: #111827; flex-grow: 1; font-weight: 600; }
+        .pack-books div { margin-bottom: 5px; }
+        .pack-note { color: #6B7280; font-size: 12px; margin-top: 20px; margin-bottom: 20px; }
+        .pack-button { background: #0F766E; color: #FFFFFF; border: none; padding: 12px 20px; font-size: 16px; font-weight: bold; border-radius: 8px; cursor: pointer; text-decoration: none; display: block; transition: transform 0.2s; }
+        .pack-button:hover { transform: scale(1.05); }
+
+        .social-proof { padding: 60px 0; text-align: center; }
+        .social-proof h2 { color: #111827; font-size: 36px; margin-bottom: 50px; font-weight: 700; }
+        .reviews { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        .review-card { background: #FFFFFF; border: 2px solid #0F766E; padding: 25px; border-radius: 12px; text-align: left; }
+        .stars { color: #0F766E; font-size: 20px; margin-bottom: 15px; }
+        .review-text { color: #111827; margin-bottom: 15px; font-style: italic; }
+        .reviewer { color: #111827; font-weight: bold; }
+        .reviewer-title { color: #6B7280; font-size: 14px; }
+
+        .contact-section { text-align: center; padding: 60px 20px; background: #F9FAFB; border-top: 1px solid #ddd; }
+        .contact-section h2 { color: #111827; font-size: 32px; margin-bottom: 20px; font-weight: 700; }
+        .contact-section p { color: #6B7280; font-size: 18px; margin-bottom: 30px; }
+        .contact-button { background: #0F766E; color: #FFFFFF; padding: 15px 35px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 18px; display: inline-block; transition: transform 0.2s; }
+        .contact-button:hover { transform: scale(1.05); }
+        
+        .footer { text-align: center; padding: 40px 0; border-top: 1px solid #ddd; background: #FFFFFF; }
+        .footer .brand { color: #0F766E; font-size: 24px; font-weight: bold; margin-bottom: 10px; }
+        .footer .copyright { color: #6B7280; font-size: 14px; }
+
+        @media (max-width: 992px) { 
+            .books-grid { grid-template-columns: repeat(3, 1fr); } 
+            .steps { flex-wrap: wrap; }
+        }
+        @media (max-width: 768px) { 
+            .books-grid { grid-template-columns: repeat(2, 1fr); } 
+            .hero h1 { font-size: 32px; } 
+            .steps { gap: 30px; flex-direction: column; } 
+            .logo { font-size: 20px; } 
+            .section-title { font-size: 28px; } 
+            body { padding-top: 80px; } 
+            .header { top: 0; } 
+        }
+        @media (max-width: 480px) { 
+            .header { padding: 12px 15px; } 
+            .container { padding: 0 15px; } 
+            .hero h1 { font-size: 28px; } 
+            .lang-switch { padding: 6px 12px; font-size: 12px; }
+        }
+      
+      .back-btn{
+    text-decoration:none;
+    color:#1E3A8A;
+    font-weight:bold;
+    border:2px solid #1E3A8A;
+    padding:10px 18px;
+    border-radius:8px;
+    transition:.3s;
+}
+
+.back-btn:hover{
+    background:#1E3A8A;
+    color:#ffffff;
+}
+      
+    </style>
+</head>
+<body>
+    <div class="lang-bar">
+        <a href="/thebestbundle/en/">📗 Switch to English Books</a>
+    </div>
+    
+    <header class="header">
+        <div class="logo">TheBestBundle</div>
+    <a href="/thebestbundle/en/" class="back-btn">
+    ← Retour
+    </a>
+      
+    </header>
+  
+    <div class="container">
+        <section class="hero">
+            <div class="tag">Produits digitaux</div>
+            <h1>CRÉEZ VOTRE PACK</h1>
+            <p class="subtitle">Achetez nos ebooks à l’unité pour $17 ou économisez avec un pack.</p>
+
+            <div class="books-grid">
+                <a href="https://buy.stripe.com/3cIfZj8cg0PS67d9KX8N200" class="book-card" target="_blank">
+                    <img src="img/book1.jpg" alt="Decouvre ta niche parfaite">
+                    <span>Decouvre ta niche parfaite</span>
+                </a>
+                <a href="https://buy.stripe.com/bJe28t1NS6ac1QXf5h8N201" class="book-card" target="_blank">
+                    <img src="img/book2.jpg" alt="ton plan d’action en business">
+                    <span>ton plan d’action en business</span>
+                </a>
+                <a href="https://buy.stripe.com/fZu00l504568antcX98N202" class="book-card" target="_blank">
+                    <img src="img/book3.jpg" alt="Comment Être Financé Rapidement">
+                    <span>Comment Être Financé Rapidement</span>
+                </a>
+                <a href="https://buy.stripe.com/7sY28t6484242V1aP18N203" class="book-card" target="_blank">
+                    <img src="img/book4.jpg" alt="Protège ton Entreprise Légalement">
+                    <span>Protège ton Entreprise Légalement</span>
+                </a>
+                <a href="https://buy.stripe.com/7sY7sN8cg0PSeDJ1er8N204" class="book-card" target="_blank">
+                    <img src="img/book5.jpg" alt="Crée une presence en ligne">
+                    <span>Crée une presence en ligne</span>
+                </a>
+                <a href="https://buy.stripe.com/cNi8wRakocyA7bh1er8N205" class="book-card" target="_blank">
+                    <img src="img/book6.jpg" alt="traffic leads ventes Le système">
+                    <span>traffic leads ventes Le système</span>
+                </a>
+                <a href="https://buy.stripe.com/00w28t1NS4249jp0an8N206" class="book-card" target="_blank">
+                    <img src="img/book7.jpg" alt="Discipline Financière">
+                    <span>Discipline Financière</span>
+                </a>
+                <a href="https://buy.stripe.com/aFa6oJ5045682V1aP18N207" class="book-card" target="_blank">
+                    <img src="img/book8.jpg" alt="l’art de vendre en 2026">
+                    <span>l’art de vendre en 2026</span>
+                </a>
+                <a href="https://buy.stripe.com/00w8wR2RWdCE1QXg9l8N208" class="book-card" target="_blank">
+                    <img src="img/book9.jpg" alt="De salariés à Mentalité d’entrepreneur">
+                    <span>De salariés à Mentalité d’entrepreneur</span>
+                </a>
+                <a href="https://buy.stripe.com/8x26oJ2RWgOQ9jp5uH8N209" class="book-card" target="_blank">
+                    <img src="img/book10.jpg" alt="Automatise Ton Business en 30 Jours">
+                    <span>Automatise Ton Business en 30 Jours</span>
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">Comment Ça Marche</h2>
+            <div class="steps">
+                <div class="step"><i class="fas fa-box"></i><h3>Choisissez Votre Pack</h3></div>
+                <div class="step"><i class="fas fa-book"></i><h3>Sélectionnez Vos Ebooks</h3></div>
+                <div class="step"><i class="fas fa-bolt"></i><h3>Téléchargez Instantanément</h3></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="cta-button-wrap">
+        <button class="cta-button" onclick="document.getElementById('packs').scrollIntoView({behavior: 'smooth'})">Voir Tous Les Packs →</button>
+    </div>
+
+    <section class="packs" id="packs">
+        <div class="container">
+            <h2 class="section-title">Nos Packs Vedettes</h2>
+            <p class="subtitle">Choisissez parmi notre collection complète d'ebooks</p>
+            <div class="packs-grid">
+                <div class="pack-card">
+                    <img src="img/starterpack.jpg" alt="Starter Pack">
+                    <div class="pack-name">Starter Pack</div>
+                    <div class="pack-price">$27</div>
+                    <div class="pack-desc">Obtenez 2 livres parmi 10 livres</div>
+                    <div class="pack-books">
+                        <div>• Crée ta présence en ligne</div>
+                        <div>• TRAFFIC LEADS VENTES — LE SYSTÈME</div>
+                    </div>
+                    <div class="pack-note">Choisissez parmi notre collection complète d'ebooks</div>
+                    <a href="https://buy.stripe.com/5kQ8wRboscyAgLR0an8N20a" class="pack-button" target="_blank">Acheter Starter Pack</a>
+                </div>
+                <div class="pack-card popular">
+                    <div class="popular-badge">PLUS POPULAIRE</div>
+                    <img src="img/creatorpack.jpeg" alt="Creator Pack">
+                    <div class="pack-name">Creator Pack</div>
+                    <div class="pack-price">$47</div>
+                    <div class="pack-desc">Obtenez 3 livres parmi 10 livres</div>
+                    <div class="pack-books">
+                        <div>• Automatise ton Business en 30 jours</div>
+                        <div>• De salariés à Mentalité d'entrepreneur</div>
+                        <div>• l’art de vendre en 2026</div>
+                    </div>
+                    <div class="pack-note">Choisissez parmi notre collection complète d'ebooks</div>
+                    <a href="https://buy.stripe.com/dRm8wR2RWeGIeDJf5h8N20b" class="pack-button" target="_blank">Acheter Creator Pack</a>
+                </div>
+                <div class="pack-card">
+                    <img src="img/propack.jpeg" alt="Pro Pack">
+                    <div class="pack-name">Pro Pack</div>
+                    <div class="pack-price">$77</div>
+                    <div class="pack-desc">Obtenez 5 livres parmi 10 livres</div>
+                    <div class="pack-books">
+                        <div>• Comment Être Financé Rapidement</div>
+                        <div>• Découvre ta niche parfaite</div>
+                        <div>• Discipline Financière</div>
+                        <div>• Protege ton Entreprise Légalement</div>
+                        <div>• Ton Plan d'Action en Business</div>
+                    </div>
+                    <div class="pack-note">Choisissez parmi notre collection complète d'ebooks</div>
+                    <a href="https://buy.stripe.com/00w9AVako5682V14qD8N20c" class="pack-button" target="_blank">Acheter Pro Pack</a>
+                </div>
+                <div class="pack-card">
+                    <img src="img/vaultpack.jpeg" alt="Vault Pack">
+                    <div class="pack-name">Vault Pack</div>
+                    <div class="pack-price">$117</div>
+                    <div class="pack-desc">Obtenez les 10 livres</div>
+                    <div class="pack-books">
+                        <div>• Les 10 livres inclus</div>
+                    </div>
+                    <div class="pack-note">Choisissez parmi notre collection complète d'ebooks</div>
+                    <a href="https://buy.stripe.com/9B65kF504buw5390an8N20d" class="pack-button" target="_blank">Acheter Vault Pack</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="social-proof">
+        <div class="container">
+            <h2>Plus de 500 créateurs utilisent déjà nos produits</h2>
+            <div class="reviews">
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <div class="review-text">"Le Creator Pack m'a donné tout ce dont j'avais besoin pour lancer mon business digital. Valeur incroyable !"</div>
+                    <div class="reviewer">Sarah M.</div>
+                    <div class="reviewer-title">Créatrice de Contenu</div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <div class="review-text">"J'ai acheté le Pro Pack et les ebooks m'ont fait gagner des semaines de travail. Je recommande fortement !"</div>
+                    <div class="reviewer">Jean-Pierre L.</div>
+                    <div class="reviewer-title">Entrepreneur</div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <div class="review-text">"Le Vault Pack est le meilleur investissement que j'ai fait pour mon business. Les 10 livres sont de l'or !"</div>
+                    <div class="reviewer">Marie D.</div>
+                    <div class="reviewer-title">Coach Business</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <h2>Besoin d'Aide ?</h2>
+            <p>Des questions sur les packs ou les ebooks ? Nous sommes là pour vous.</p>
+            <a href="mailto:Thebestbundle101@gmail.com" class="contact-button">Nous Contacter</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="brand">THEBESTBUNDLE</div>
+            <div class="copyright">2026 THEBESTBUNDLE. Tous droits réservés</div>
+        </div>
+    </footer>
+</body>
+</html>
 
