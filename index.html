@@ -1947,6 +1947,14 @@ continueShoppingCart.addEventListener(
     closeCartPanel
 );
 
+  reviewCartBtn.addEventListener('click', function () {
+  if (cart.length === 0) return;
+
+  if (cart.length === 1 && cart[0].stripe) {
+    window.location.href = cart[0].stripe;
+  }
+});   
+
 
 document.addEventListener(
     'keydown',
