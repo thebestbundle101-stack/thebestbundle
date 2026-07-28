@@ -1955,27 +1955,50 @@ continueShoppingCart.addEventListener(
 );
 
 
-reviewCartBtn.addEventListener(
-    'click',
-    function(){
+reviewCartBtn.addEventListener('click', async function () {
 
-        if(shoppingCart.length === 0){
-            return;
+    if (shoppingCart.length === 0) {
+        return;
+    }
+
+    // Single product → use Stripe Payment Link
+    if (shoppingCart.length === 1 && shoppingCart[0].stripe) {
+        window.location.href = shoppingCart[0].stripe;
+        return;
+    }
+
+    // Multiple products → create Stripe Checkout Session
+    try {
+
+        const response = await fetch('/api/create-checkout-session', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                items: shoppingCart.map(item => ({
+                    priceId: item.priceId
+                }))
+            })
+        });
+
+        const data = await response.json();
+
+        if (data.url) {
+            window.location.href = data.url;
+        } else {
+            alert('Unable to create checkout session.');
         }
 
-        if(
-            shoppingCart.length === 1 &&
-            shoppingCart[0].stripe
-        ){
+    } catch (err) {
 
-            window.location.href =
-                shoppingCart[0].stripe;
+        console.error(err);
 
-        }
+        alert('Checkout failed.');
 
     }
-);
 
+});
 
 document.addEventListener(
     'keydown',
