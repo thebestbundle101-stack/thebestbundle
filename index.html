@@ -1436,7 +1436,7 @@ document.addEventListener(
 
 </script>
 
-    <!-- =========================================
+<!-- =========================================
      PART 7 — SHOPPING CART PANEL
 ========================================= -->
 
@@ -1503,6 +1503,7 @@ document.addEventListener(
     background:transparent;
     color:var(--navy);
     border-radius:8px;
+    cursor:pointer;
 }
 
 .close-cart:hover{
@@ -1569,6 +1570,7 @@ document.addEventListener(
     border-radius:6px;
     background:#FEE2E2;
     color:#B91C1C;
+    cursor:pointer;
 }
 
 .cart-footer{
@@ -1592,6 +1594,7 @@ document.addEventListener(
 
 .cart-review-btn{
     width:100%;
+    cursor:pointer;
 }
 
 .continue-shopping-cart{
@@ -1600,6 +1603,7 @@ document.addEventListener(
     border:2px solid var(--navy);
     background:var(--white);
     color:var(--navy);
+    cursor:pointer;
 }
 
 @media(max-width:420px){
@@ -1684,11 +1688,11 @@ document.addEventListener(
         </div>
 
         <button
-  type="button"
-  class="btn btn-gold cart-review-btn"
-  id="reviewCartBtn">
-  Review Cart
-</button>
+            type="button"
+            class="btn btn-gold cart-review-btn"
+            id="reviewCartBtn">
+            Review Cart
+        </button>
 
         <button
             type="button"
@@ -1727,6 +1731,9 @@ const cartItems =
 
 const cartTotal =
     document.getElementById('cartTotal');
+
+const reviewCartBtn =
+    document.getElementById('reviewCartBtn');
 
 
 let shoppingCart =
@@ -1941,19 +1948,33 @@ cartOverlay.addEventListener(
     closeCartPanel
 );
 
+
 continueShoppingCart.addEventListener(
-  'click',
-  closeCartPanel
+    'click',
+    closeCartPanel
 );
 
-reviewCartBtn.addEventListener('click', function () {
-  if (cart.length === 0) return;
 
-  if (cart.length === 1 && cart[0].stripe) {
-    window.location.href = cart[0].stripe;
-  }
-});
+reviewCartBtn.addEventListener(
+    'click',
+    function(){
 
+        if(shoppingCart.length === 0){
+            return;
+        }
+
+        if(
+            shoppingCart.length === 1 &&
+            shoppingCart[0].stripe
+        ){
+
+            window.location.href =
+                shoppingCart[0].stripe;
+
+        }
+
+    }
+);
 
 
 document.addEventListener(
@@ -1971,7 +1992,7 @@ document.addEventListener(
 renderCart();
 
 </script>
-
+     
     <!-- =========================================
      PART 8 — PRODUCT PREVIEW + BUY NOW
      + ADD TO CART
