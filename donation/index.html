@@ -1,1 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Support TheBestBundle</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#f4f6fb;
+color:#222;
+line-height:1.6;
+}
+
+a{
+text-decoration:none;
+}
+
+.hero{
+background:#0B2341;
+color:#fff;
+padding:70px 20px;
+text-align:center;
+}
+
+.hero-icon{
+width:90px;
+height:90px;
+margin:0 auto 25px;
+border-radius:50%;
+background:#D4AF37;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:42px;
+color:#0B2341;
+font-weight:bold;
+}
+
+.hero h1{
+font-size:42px;
+margin-bottom:15px;
+}
+
+.hero p{
+max-width:700px;
+margin:auto;
+font-size:18px;
+opacity:.95;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+padding:40px 20px;
+}
+
+.card{
+background:#fff;
+border-radius:20px;
+padding:35px;
+box-shadow:0 10px 30px rgba(0,0,0,.10);
+}
+
+.card h2{
+text-align:center;
+font-size:32px;
+margin-bottom:30px;
+}
+
+.toggle{
+display:flex;
+gap:15px;
+margin-bottom:30px;
+}
+
+.toggle button{
+flex:1;
+padding:15px;
+border:none;
+border-radius:10px;
+font-size:17px;
+cursor:pointer;
+background:#e8e8e8;
+transition:.3s;
+}
+
+.toggle button.active{
+background:#0B2341;
+color:white;
+}
+
+.amount-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:15px;
+margin-bottom:30px;
+}
+
+.amount-btn{
+padding:18px;
+border:2px solid #ddd;
+background:white;
+border-radius:12px;
+font-size:20px;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+}
+
+.amount-btn:hover{
+border-color:#0B2341;
+}
+
+.amount-btn.selected{
+background:#0B2341;
+color:white;
+border-color:#0B2341;
+}
+
+  .amount-btn.selected{
+background:#0B2341;
+color:white;
+border-color:#0B2341;
+}
+
+.custom-input,
+.text-input{
+
+width:100%;
+padding:15px;
+margin-bottom:18px;
+border:1px solid #d8d8d8;
+border-radius:10px;
+font-size:16px;
+
+}
+
+.donate-btn{
+
+width:100%;
+padding:18px;
+border:none;
+border-radius:12px;
+background:#0B2341;
+color:white;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+
+}
+
+.donate-btn:hover{
+
+background:#12345f;
+
+}
+
+.security{
+
+margin-top:18px;
+text-align:center;
+font-size:15px;
+color:#666;
+
+}
+
+.thank-you{
+
+padding:70px 20px;
+text-align:center;
+
+}
+
+.thank-you h2{
+
+font-size:34px;
+margin-bottom:15px;
+
+}
+
+.thank-you p{
+
+max-width:700px;
+margin:auto;
+font-size:18px;
+color:#555;
+
+}
+
+.return-home{
+
+text-align:center;
+padding-bottom:60px;
+
+}
+
+.return-home a{
+
+display:inline-block;
+padding:15px 35px;
+background:#0B2341;
+color:white;
+border-radius:10px;
+font-weight:bold;
+transition:.3s;
+
+}
+
+.return-home a:hover{
+
+background:#12345f;
+
+}
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:34px;
+
+}
+
+.amount-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.toggle{
+
+flex-direction:column;
+
+}
+
+.card{
+
+padding:25px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<section class="hero">
+
+<div class="hero-icon">
+
+❤
+
+</div>
+
+<h1>Support TheBestBundle</h1>
+
+<p>
+
+Your contribution helps us continue creating affordable, high-quality digital products for everyone.
+
+</p>
+
+</section>
+
+<div class="container">
+
+<div class="card">
+
+<h2>Make a Contribution</h2>
+
+ <div class="toggle">
+
+<button class="active" type="button">
+
+One Time
+
+</button>
+
+<button type="button">
+
+Monthly (Coming Soon)
+
+</button>
+
+</div>
+
+<div class="amount-grid">
+
+<button
+class="amount-btn"
+data-link="https://buy.stripe.com/4gM9AV648gOQeDJ5uH8N20e">
+
+$1
+
+</button>
+
+<button
+class="amount-btn"
+data-link="https://buy.stripe.com/5kQcN72RWbuw1QXcX98N20f">
+
+$5
+
+</button>
+
+<button
+class="amount-btn"
+data-link="https://buy.stripe.com/3cI5kFbos0PS67d6yL8N20h">
+
+$25
+
+</button>
+
+</div>
+
+<input
+type="text"
+class="custom-input"
+placeholder="Custom amount (optional)">
+
+<input
+type="text"
+class="text-input"
+placeholder="Your name (optional)">
+
+<input
+type="email"
+class="text-input"
+placeholder="Your email (optional)">
+
+<button
+class="donate-btn"
+id="continueDonate">
+
+Continue to Donate
+
+</button>
+
+<div class="security">
+
+🔒 Secure payment powered by Stripe
+
+</div>
+
+</div>
+
+</div>
+
+<section class="thank-you">
+
+<h2>
+
+Thank You!
+
+</h2>
+
+<p>
+
+Every contribution helps TheBestBundle continue creating professional digital products, ebooks, planners, and templates for our growing community.
+
+</p>
+
+</section> 
+
+  <div class="return-home">
+
+<a href="../index.html">
+
+← Return Home
+
+</a>
+
+</div>
+
+<script>
+
+let selectedLink = "";
+
+const amountButtons = document.querySelectorAll(".amount-btn");
+
+amountButtons.forEach(button => {
+
+button.addEventListener("click", function(){
+
+amountButtons.forEach(btn=>btn.classList.remove("selected"));
+
+this.classList.add("selected");
+
+selectedLink = this.dataset.link;
+
+});
+
+});
+
+document.getElementById("continueDonate").addEventListener("click", function(){
+
+if(selectedLink===""){
+
+alert("Please select a donation amount before continuing.");
+
+return;
+
+}
+
+window.location.href = selectedLink;
+
+});
+
+</script>
+
+  </body>
+
+</html>
