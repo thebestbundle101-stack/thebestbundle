@@ -3,371 +3,354 @@
 
 <head>
 
-<!-- =========================================
-     THEBESTBUNDLE 3.0
-     MAIN HOMEPAGE
-========================================= -->
+    <!-- =========================================
+         THEBESTBUNDLE 3.1
+         MAIN HOMEPAGE
+    ========================================== -->
 
-<meta charset="UTF-8">
+    <!-- Character Encoding -->
+    <meta charset="UTF-8">
 
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0">
+    <!-- Responsive Layout -->
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-<title>
-    TheBestBundle | Learn • Create • Grow
-</title>
+    <!-- Browser Compatibility -->
+    <meta
+        http-equiv="X-UA-Compatible"
+        content="IE=edge">
 
-<meta
-    name="description"
-    content="Discover premium eBooks, templates, bundles, courses and digital resources from TheBestBundle. Learn, Create and Grow.">
+    <!-- Theme -->
+    <meta
+        name="theme-color"
+        content="#071A33">
 
-<meta
-    name="theme-color"
-    content="#071A33">
+    <meta
+        name="color-scheme"
+        content="dark light">
 
+    <!-- SEO -->
+    <title>
+        TheBestBundle | Learn • Create • Grow
+    </title>
 
-<!-- =========================================
-     GOOGLE ANALYTICS
-========================================= -->
+    <meta
+        name="description"
+        content="Discover premium eBooks, templates, bundles, courses and digital resources from TheBestBundle. Learn, Create and Grow.">
 
-<script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-JPG5GRWX53">
-</script>
+    <!-- =========================================
+         GOOGLE ANALYTICS
+    ========================================== -->
 
-<script>
+    <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-JPG5GRWX53">
+    </script>
 
-window.dataLayer = window.dataLayer || [];
+    <script>
 
-function gtag(){
-    dataLayer.push(arguments);
-}
+        window.dataLayer = window.dataLayer || [];
 
-gtag('js', new Date());
+        function gtag() {
+            dataLayer.push(arguments);
+        }
 
-gtag('config', 'G-JPG5GRWX53');
+        gtag("js", new Date());
 
-</script>
+        gtag("config", "G-JPG5GRWX53");
 
+    </script>
 
-<!-- =========================================
-     FAVICON
-========================================= -->
+    <!-- =========================================
+         FAVICONS
+    ========================================== -->
 
-<link
-    rel="icon"
-    href="/thebestbundle/images/favicon.ico"
-    type="image/x-icon">
+    <link
+        rel="icon"
+        href="/thebestbundle/images/favicon.ico"
+        type="image/x-icon">
 
-<link
-    rel="icon"
-    type="image/png"
-    sizes="32x32"
-    href="/thebestbundle/images/favicon.png">
+    <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="/thebestbundle/images/favicon.png">
 
-<link
-    rel="apple-touch-icon"
-    href="/thebestbundle/images/favicon.png">
+    <link
+        rel="apple-touch-icon"
+        href="/thebestbundle/images/favicon.png">
 
+    <!-- =========================================
+         FONT AWESOME
+    ========================================== -->
 
-<!-- =========================================
-     FONT AWESOME ICONS
-========================================= -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- =========================================
+         GLOBAL STYLES
+    ========================================== -->
 
+    <style>
 
-<!-- =========================================
-     THEBESTBUNDLE 3.0 GLOBAL STYLES
-========================================= -->
+        :root {
 
-<style>
+            /* Brand Colors */
 
-:root{
+            --navy: #071A33;
+            --navy-light: #0D2B50;
+            --navy-soft: #123761;
 
-    /* Main Brand Colors */
+            --gold: #F4C542;
+            --gold-dark: #D9A91A;
 
-    --navy:#071A33;
-    --navy-light:#0D2B50;
-    --navy-soft:#123761;
+            --white: #FFFFFF;
+            --off-white: #F8FAFC;
 
-    --gold:#F4C542;
-    --gold-dark:#D9A91A;
+            --text-dark: #172033;
+            --text-gray: #64748B;
 
-    --white:#FFFFFF;
-    --off-white:#F8FAFC;
+            --border: #E2E8F0;
 
-    --text-dark:#172033;
-    --text-gray:#64748B;
+            /* Layout */
 
-    --border:#E2E8F0;
+            --max-width: 1200px;
 
-    /* Layout */
+            /* Effects */
 
-    --max-width:1200px;
+            --shadow:
+                0 12px 35px rgba(0,0,0,.12);
 
-    /* Effects */
+            --radius: 14px;
 
-    --shadow:
-        0 12px 35px rgba(0,0,0,.12);
+        }
 
-    --radius:14px;
+        /* =========================================
+           RESET
+        ========================================== */
 
-}
+        *,
+        *::before,
+        *::after{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
 
+        html{
+            scroll-behavior:smooth;
+        }
 
-/* =========================================
-   RESET
-========================================= */
+        body{
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
 
+            background:var(--navy);
+            color:var(--white);
 
-html{
-    scroll-behavior:smooth;
-}
+            line-height:1.6;
 
+            overflow-x:hidden;
 
-body{
+            text-rendering:optimizeLegibility;
 
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
+            -webkit-font-smoothing:antialiased;
+            -moz-osx-font-smoothing:grayscale;
 
-    background:var(--navy);
+        }
 
-    color:var(--white);
+        body.menu-open{
+            overflow:hidden;
+        }
 
-    line-height:1.6;
+        img{
+            display:block;
+            max-width:100%;
+            height:auto;
+        }
 
-    overflow-x:hidden;
+        a{
+            color:inherit;
+            text-decoration:none;
+        }
 
-}
+        button,
+        input{
+            font:inherit;
+        }
 
+        button{
+            cursor:pointer;
+            border:none;
+            background:none;
+        }
 
-body.menu-open{
-    overflow:hidden;
-}
+         /* =========================================
+           ACCESSIBILITY
+        ========================================== */
 
+        button:focus-visible,
+        a:focus-visible,
+        input:focus-visible{
 
-img{
-    max-width:100%;
-    height:auto;
-    display:block;
-}
+            outline:3px solid var(--gold);
+            outline-offset:4px;
 
+        }
 
-a{
-    color:inherit;
-    text-decoration:none;
-}
+        /* =========================================
+           MAIN CONTAINER
+        ========================================== */
 
+        .container{
 
-button,
-input{
-    font:inherit;
-}
+            width:90%;
+            max-width:var(--max-width);
+            margin:0 auto;
 
+        }
 
-button{
-    cursor:pointer;
-}
+        /* =========================================
+           BRAND BUTTONS
+        ========================================== */
 
+        .btn{
 
-/* =========================================
-   ACCESSIBILITY
-========================================= */
+            display:inline-flex;
+            align-items:center;
+            justify-content:center;
+            gap:10px;
 
-button:focus-visible,
-a:focus-visible,
-input:focus-visible{
+            min-height:52px;
 
-    outline:3px solid var(--gold);
+            padding:14px 30px;
 
-    outline-offset:4px;
+            border:none;
+            border-radius:8px;
 
-}
+            font-size:16px;
+            font-weight:700;
 
+            transition:
+                transform .2s ease,
+                box-shadow .2s ease,
+                background .2s ease;
 
-/* =========================================
-   MAIN CONTAINER
-========================================= */
+        }
 
-.container{
+        .btn:hover{
+            transform:translateY(-2px);
+        }
 
-    width:90%;
+        .btn-gold{
 
-    max-width:var(--max-width);
+            background:var(--gold);
+            color:var(--navy);
 
-    margin:0 auto;
+            box-shadow:
+                0 7px 22px rgba(244,197,66,.22);
 
-}
+        }
 
+        .btn-gold:hover{
+            background:var(--gold-dark);
+        }
 
-/* =========================================
-   BRAND BUTTONS
-========================================= */
+        .btn-navy{
 
-.btn{
+            background:var(--navy);
+            color:var(--white);
 
-    display:inline-flex;
+        }
 
-    align-items:center;
+        .btn-white{
 
-    justify-content:center;
+            background:var(--white);
+            color:var(--navy);
 
-    gap:10px;
+        }
 
-    min-height:52px;
+        /* =========================================
+           SECTION TITLES
+        ========================================== */
 
-    padding:14px 30px;
+        .section-title{
 
-    border:none;
+            font-size:clamp(30px,5vw,48px);
+            line-height:1.15;
+            font-weight:800;
 
-    border-radius:8px;
+            margin-bottom:20px;
 
-    font-size:16px;
+        }
 
-    font-weight:700;
+        .gold-text{
+            color:var(--gold);
+        }
 
-    transition:
-        transform .2s ease,
-        box-shadow .2s ease,
-        background .2s ease;
+        /* =========================================
+           SCREEN READER
+        ========================================== */
 
-}
+        .sr-only{
 
+            position:absolute;
 
-.btn:hover{
-    transform:translateY(-2px);
-}
+            width:1px;
+            height:1px;
 
+            padding:0;
+            margin:-1px;
 
-.btn-gold{
+            overflow:hidden;
 
-    background:var(--gold);
+            clip:rect(0,0,0,0);
 
-    color:var(--navy);
+            white-space:nowrap;
 
-    box-shadow:
-        0 7px 22px rgba(244,197,66,.22);
+            border:0;
 
-}
+        }
 
+        /* =========================================
+           RESPONSIVE FOUNDATION
+        ========================================== */
 
-.btn-gold:hover{
-    background:var(--gold-dark);
-}
+        @media (max-width:768px){
 
+            .container{
+                width:88%;
+            }
 
-.btn-navy{
+            .btn{
 
-    background:var(--navy);
+                min-height:50px;
+                padding:13px 25px;
 
-    color:var(--white);
+            }
 
-}
+        }
 
+        @media (max-width:420px){
 
-.btn-white{
+            .container{
+                width:90%;
+            }
 
-    background:var(--white);
+        }
 
-    color:var(--navy);
-
-}
-
-
-/* =========================================
-   SECTION TITLES
-========================================= */
-
-.section-title{
-
-    font-size:clamp(30px,5vw,48px);
-
-    line-height:1.15;
-
-    font-weight:800;
-
-    margin-bottom:20px;
-
-}
-
-
-.gold-text{
-    color:var(--gold);
-}
-
-
-/* =========================================
-   SCREEN-READER TEXT
-========================================= */
-
-.sr-only{
-
-    position:absolute;
-
-    width:1px;
-
-    height:1px;
-
-    padding:0;
-
-    margin:-1px;
-
-    overflow:hidden;
-
-    clip:rect(0,0,0,0);
-
-    white-space:nowrap;
-
-    border:0;
-
-}
-
-
-/* =========================================
-   RESPONSIVE FOUNDATION
-========================================= */
-
-@media (max-width:768px){
-
-    .container{
-        width:88%;
-    }
-
-    .btn{
-        min-height:50px;
-        padding:13px 25px;
-    }
-
-}
-
-
-@media (max-width:420px){
-
-    .container{
-        width:90%;
-    }
-
-}
-
-</style>
+    </style>
 
 </head>
 
 <body>
 
-    <!-- =========================================
+     <!-- =========================================
      PART 2 — HEADER
 ========================================= -->
 
@@ -383,8 +366,9 @@ input:focus-visible{
 .header-inner{
     width:90%;
     max-width:var(--max-width);
-    margin:0 auto;
     min-height:100px;
+    margin:0 auto;
+
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -411,25 +395,40 @@ input:focus-visible{
 
 .cart-button,
 .menu-button{
+
     position:relative;
+
     display:flex;
     align-items:center;
     justify-content:center;
-    background:transparent;
-    border:none;
-    color:var(--white);
+
     width:48px;
     height:48px;
+
+    border:none;
     border-radius:8px;
+
+    background:transparent;
+    color:var(--white);
+
     transition:
         background .2s ease,
-        color .2s ease;
+        color .2s ease,
+        transform .2s ease;
+
 }
 
 .cart-button:hover,
 .menu-button:hover{
+
     background:rgba(255,255,255,.08);
     color:var(--gold);
+
+}
+
+.cart-button:active,
+.menu-button:active{
+    transform:scale(.97);
 }
 
 .cart-button i{
@@ -441,25 +440,33 @@ input:focus-visible{
 }
 
 .cart-count{
+
     position:absolute;
-    top:1px;
+
+    top:2px;
     right:0;
+
     min-width:20px;
     height:20px;
+
     padding:0 5px;
-    border-radius:50px;
+
+    border-radius:999px;
+
     background:var(--gold);
     color:var(--navy);
+
     font-size:12px;
     font-weight:800;
+
     line-height:20px;
     text-align:center;
+
 }
 
-@media(max-width:768px){
+@media (max-width:768px){
 
     .header-inner{
-        width:90%;
         min-height:84px;
     }
 
@@ -487,7 +494,7 @@ input:focus-visible{
 
 }
 
-@media(max-width:420px){
+@media (max-width:420px){
 
     .header-logo img{
         height:58px;
@@ -501,7 +508,6 @@ input:focus-visible{
 
 </style>
 
-
 <header class="main-header">
 
     <div class="header-inner">
@@ -513,36 +519,38 @@ input:focus-visible{
 
             <img
                 src="images/logo.png"
-                alt="TheBestBundle">
+                alt="TheBestBundle"
+                loading="eager"
+                decoding="async">
 
         </a>
-
 
         <div class="header-actions">
 
             <button
-                type="button"
-                class="cart-button"
                 id="cartButton"
-                aria-label="Open shopping cart">
+                class="cart-button"
+                type="button"
+                aria-label="Open shopping cart"
+                aria-controls="shoppingCart">
 
                 <i class="fa-solid fa-cart-shopping"></i>
 
                 <span
-                    class="cart-count"
-                    id="cartCount">
+                    id="cartCount"
+                    class="cart-count">
                     0
                 </span>
 
             </button>
 
-
             <button
-                type="button"
-                class="menu-button"
                 id="menuButton"
+                class="menu-button"
+                type="button"
                 aria-label="Open navigation menu"
-                aria-expanded="false">
+                aria-expanded="false"
+                aria-controls="sideMenu">
 
                 <i class="fa-solid fa-bars"></i>
 
@@ -555,67 +563,96 @@ input:focus-visible{
 </header>
 
     <!-- =========================================
-     PART 3 — LANDING HERO
+     PART 3 — HERO
 ========================================= -->
 
 <style>
 
 .hero{
     position:relative;
-    background:var(--navy);
-    min-height:620px;
+    overflow:hidden;
+
     display:flex;
     align-items:center;
-    text-align:center;
-    overflow:hidden;
+    justify-content:center;
+
+    min-height:620px;
+
     padding:80px 0 110px;
+
+    background:var(--navy);
+
+    text-align:center;
 }
 
-.hero::before{
-    content:"";
-    position:absolute;
-    width:500px;
-    height:500px;
-    border-radius:50%;
-    background:rgba(244,197,66,.05);
-    top:-250px;
-    left:-220px;
-}
-
+.hero::before,
 .hero::after{
     content:"";
     position:absolute;
+    border-radius:50%;
+    pointer-events:none;
+}
+
+.hero::before{
+
+    width:500px;
+    height:500px;
+
+    top:-250px;
+    left:-220px;
+
+    background:rgba(244,197,66,.05);
+
+}
+
+.hero::after{
+
     width:450px;
     height:450px;
-    border-radius:50%;
-    background:rgba(255,255,255,.025);
+
     right:-220px;
     bottom:-250px;
+
+    background:rgba(255,255,255,.025);
+
 }
 
 .hero-content{
     position:relative;
     z-index:2;
+
+    width:100%;
     max-width:900px;
+
     margin:0 auto;
 }
 
 .hero-eyebrow{
+
     display:inline-block;
+
+    margin-bottom:24px;
+
     color:var(--gold);
+
     font-size:15px;
     font-weight:800;
+
     letter-spacing:3px;
     text-transform:uppercase;
-    margin-bottom:24px;
+
 }
 
 .hero h1{
-    font-size:clamp(44px,7vw,76px);
-    line-height:1.08;
-    font-weight:800;
-    color:var(--white);
+
     margin-bottom:28px;
+
+    color:var(--white);
+
+    font-size:clamp(44px,7vw,76px);
+    font-weight:800;
+    line-height:1.08;
+
 }
 
 .hero h1 span{
@@ -623,31 +660,52 @@ input:focus-visible{
 }
 
 .hero-description{
+
     max-width:740px;
+
     margin:0 auto 38px;
+
     color:rgba(255,255,255,.88);
+
     font-size:20px;
     line-height:1.75;
+
 }
 
 .hero-tagline{
+
+    margin-bottom:35px;
+
     color:var(--gold);
+
     font-size:17px;
     font-weight:700;
+
     letter-spacing:1.5px;
-    margin-bottom:35px;
+
 }
 
-.hero-cta{
-    min-width:190px;
-    font-size:17px;
+.hero-gold-divider{
+
+    width:150px;
+    height:4px;
+
+    margin:42px auto 24px;
+
+    border-radius:999px;
+
+    background:var(--gold);
+
 }
 
-@media(max-width:768px){
+@media (max-width:768px){
 
     .hero{
+
         min-height:600px;
+
         padding:70px 0 95px;
+
     }
 
     .hero h1{
@@ -655,22 +713,30 @@ input:focus-visible{
     }
 
     .hero-description{
+
         font-size:18px;
         line-height:1.65;
+
     }
 
     .hero-eyebrow{
+
         font-size:13px;
+
         letter-spacing:2px;
+
     }
 
 }
 
-@media(max-width:420px){
+@media (max-width:420px){
 
     .hero{
+
         min-height:560px;
+
         padding:55px 0 85px;
+
     }
 
     .hero h1{
@@ -689,7 +755,6 @@ input:focus-visible{
 
 </style>
 
-
 <section class="hero">
 
     <div class="container">
@@ -702,7 +767,7 @@ input:focus-visible{
 
             <h1>
                 Premium Digital Resources
-                to <span>Learn, Create & Grow.</span>
+                to <span>Learn, Create &amp; Grow.</span>
             </h1>
 
             <p class="hero-description">
@@ -715,7 +780,10 @@ input:focus-visible{
                 LEARN • CREATE • GROW
             </div>
 
-            <div class="hero-gold-divider" aria-hidden="true"></div>
+            <div
+                class="hero-gold-divider"
+                aria-hidden="true">
+            </div>
 
         </div>
 
@@ -723,18 +791,21 @@ input:focus-visible{
 
 </section>
 
-    <!-- =========================================
-     PART 4 — MISSION + FREE WELCOME EBOOK
+     <!-- =========================================
+     PART 4 — MISSION + FREE WELCOME GUIDE
 ========================================= -->
 
 <style>
 
 .welcome-section{
     position:relative;
-    background:var(--navy);
-    padding:80px 0 120px;
-    text-align:center;
     overflow:hidden;
+
+    padding:80px 0 120px;
+
+    background:var(--navy);
+
+    text-align:center;
 }
 
 .welcome-content{
@@ -743,10 +814,14 @@ input:focus-visible{
 }
 
 .welcome-section h2{
+
+    margin-bottom:25px;
+
+    color:var(--white);
+
     font-size:clamp(32px,5vw,48px);
     line-height:1.2;
-    color:var(--white);
-    margin-bottom:25px;
+
 }
 
 .welcome-section h2 span{
@@ -754,47 +829,69 @@ input:focus-visible{
 }
 
 .welcome-intro{
+
     max-width:780px;
+
     margin:0 auto 22px;
+
+    color:rgba(255,255,255,.88);
+
     font-size:19px;
     line-height:1.8;
-    color:rgba(255,255,255,.88);
+
 }
 
 .welcome-offerings{
+
     max-width:760px;
+
     margin:0 auto 35px;
+
+    color:rgba(255,255,255,.78);
+
     font-size:17px;
     line-height:1.8;
-    color:rgba(255,255,255,.78);
+
 }
 
 .read-now-btn{
+
     min-width:180px;
+
     margin-bottom:45px;
+
     text-transform:uppercase;
     letter-spacing:1px;
+
 }
 
 .welcome-book{
+
     width:100%;
     max-width:330px;
+
     margin:0 auto;
+
 }
 
 .welcome-book img{
+
     width:100%;
     height:auto;
+
     object-fit:contain;
+
     filter:drop-shadow(0 18px 25px rgba(0,0,0,.30));
+
     transition:transform .3s ease;
+
 }
 
 .welcome-book img:hover{
     transform:translateY(-5px);
 }
 
-@media(max-width:768px){
+@media (max-width:768px){
 
     .welcome-section{
         padding:65px 0 100px;
@@ -815,7 +912,7 @@ input:focus-visible{
 
 }
 
-@media(max-width:420px){
+@media (max-width:420px){
 
     .welcome-section{
         padding:55px 0 85px;
@@ -830,21 +927,12 @@ input:focus-visible{
     }
 
 }
-/* HERO / MISSION GOLD DIVIDER */
 
-.hero-gold-divider{
-  width:150px;
-  height:4px;
-  background:#F4C542;
-  border-radius:999px;
-  margin:42px auto 24px;
-}
 </style>
 
-
 <section
-    class="welcome-section"
-    id="welcome">
+    id="welcome"
+    class="welcome-section">
 
     <div class="container">
 
@@ -873,14 +961,18 @@ input:focus-visible{
                 class="btn btn-gold read-now-btn"
                 target="_blank"
                 rel="noopener noreferrer">
+
                 Read Now
+
             </a>
 
             <div class="welcome-book">
 
                 <img
                     src="images/Welcome-to-TheBestBundle.png"
-                    alt="Welcome to TheBestBundle Guide">
+                    alt="Welcome to TheBestBundle Guide"
+                    loading="lazy"
+                    decoding="async">
 
             </div>
 
@@ -890,8 +982,8 @@ input:focus-visible{
 
 </section>
 
-    <!-- =========================================
-     PART 5 — WHITE TRANSITION + FOOTER
+     <!-- =========================================
+     PART 5 — FOOTER
 ========================================= -->
 
 <style>
@@ -899,8 +991,8 @@ input:focus-visible{
 .footer-transition{
     position:relative;
     height:70px;
-    background:var(--navy);
     overflow:hidden;
+    background:var(--navy);
 }
 
 .footer-transition::after{
@@ -908,11 +1000,14 @@ input:focus-visible{
     position:absolute;
     left:-5%;
     bottom:-45px;
+
     width:110%;
     height:100px;
+
     background:var(--white);
-    border-radius:50% 50% 0 0 / 100% 100% 0 0;
+
     border-top:3px solid var(--gold);
+    border-radius:50% 50% 0 0 / 100% 100% 0 0;
 }
 
 .site-footer{
@@ -925,26 +1020,26 @@ input:focus-visible{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:55px;
-    align-items:start;
 }
 
 .footer-column h3{
+    margin-bottom:20px;
     font-size:20px;
     font-weight:800;
-    margin-bottom:20px;
-    color:var(--navy);
 }
 
 .footer-column a{
     display:block;
     width:fit-content;
+
+    margin-bottom:13px;
+
     color:var(--navy);
+
     font-size:16px;
     font-weight:600;
-    margin-bottom:13px;
-    transition:
-        color .2s ease,
-        transform .2s ease;
+
+    transition:.2s ease;
 }
 
 .footer-column a:hover{
@@ -962,36 +1057,42 @@ input:focus-visible{
     display:flex;
     align-items:center;
     gap:10px;
-    margin:0;
 }
 
 .footer-social i{
     width:22px;
-    font-size:20px;
     text-align:center;
+    font-size:20px;
 }
 
 .footer-subscribe{
-    display:inline-flex !important;
+    display:inline-flex!important;
     align-items:center;
     justify-content:center;
-    margin-top:10px !important;
+
+    margin-top:10px!important;
+
     padding:11px 20px;
-    background:var(--gold);
-    color:var(--navy) !important;
+
     border-radius:7px;
-    font-weight:800 !important;
+
+    background:var(--gold);
+
+    color:var(--navy)!important;
+
+    font-weight:800!important;
 }
 
 .footer-subscribe:hover{
     background:var(--gold-dark);
-    transform:translateY(-2px) !important;
 }
 
 .footer-bottom{
     margin-top:50px;
     padding-top:25px;
+
     border-top:1px solid var(--border);
+
     text-align:center;
 }
 
@@ -1007,7 +1108,7 @@ input:focus-visible{
     font-size:14px;
 }
 
-@media(max-width:768px){
+@media (max-width:768px){
 
     .footer-transition{
         height:55px;
@@ -1022,10 +1123,6 @@ input:focus-visible{
         gap:35px;
     }
 
-    .footer-column{
-        text-align:left;
-    }
-
     .footer-bottom{
         margin-top:40px;
     }
@@ -1034,392 +1131,46 @@ input:focus-visible{
 
 </style>
 
-
 <div
     class="footer-transition"
     aria-hidden="true">
 </div>
 
-
-     
-<!-- ========================================= -->
-<!-- EVERYTHING YOU'LL FIND AT THEBESTBUNDLE -->
-<!-- ========================================= -->
-
-<section class="explore-section">
-
-    <div class="container">
-
-        <div class="section-header">
-
-            <h2>Everything You'll Find at TheBestBundle</h2>
-
-            <p class="section-subtitle">
-                Discover a growing collection of digital products and services designed to help you learn, create, and grow—from free resources and premium eBooks to bundles, templates, courses, and more.
-            </p>
-
-        </div>
-
-        <div class="explore-grid">
-
-            <!-- Freebie -->
-
-            <div class="explore-card">
-
-                <div class="icon-circle">
-                    <i class="fa-solid fa-gift"></i>
-                </div>
-
-                <h3>Freebie</h3>
-
-                <p>
-                    Start with our free Welcome Guide.
-                </p>
-
-            </div>
-
-            <!-- eBooks -->
-
-            <div class="explore-card">
-
-                <div class="icon-circle">
-                    <i class="fa-solid fa-book-open"></i>
-                </div>
-
-                <h3>eBooks</h3>
-
-                <p>
-                    Explore premium educational digital books.
-                </p>
-
-            </div>
-
-            <!-- Bundles -->
-
-            <div class="explore-card">
-
-                <div class="icon-circle">
-                    <i class="fa-solid fa-box-open"></i>
-                </div>
-
-                <h3>Bundles</h3>
-
-                <p>
-                    Discover value-packed digital collections.
-                </p>
-
-            </div>
-
-            <!-- Templates -->
-
-            <div class="explore-card">
-
-                <div class="icon-circle">
-                    <i class="fa-solid fa-file-lines"></i>
-                </div>
-
-                <h3>Templates</h3>
-
-                <p>
-                    Printable planners, trackers and resources.
-                </p>
-
-            </div>
-
-            <!-- Courses -->
-
-            <div class="explore-card">
-
-                <span class="coming-soon">COMING SOON</span>
-
-                <div class="icon-circle">
-                    <i class="fa-solid fa-graduation-cap"></i>
-                </div>
-
-                <h3>Courses</h3>
-
-                <p>
-                    Future educational courses and learning resources.
-                </p>
-
-            </div>
-
-            <!-- French Collection -->
-
-            <div class="explore-card">
-
-                <div class="icon-circle">
-                    <i class="fa-solid fa-language"></i>
-                </div>
-
-                <h3>French Collection</h3>
-
-                <p>
-                    Explore TheBestBundle's French digital library.
-                </p>
-
-            </div>
-
-            <!-- Merchandise -->
-
-            <div class="explore-card">
-
-                <span class="coming-soon">COMING SOON</span>
-
-                <div class="icon-circle">
-                    <i class="fa-solid fa-shirt"></i>
-                </div>
-
-                <h3>Merchandise</h3>
-
-                <p>
-                    Future merchandise offered through third-party vendors.
-                </p>
-
-            </div>
-
-            <!-- Reviews -->
-
-            <div class="explore-card">
-
-                <div class="icon-circle">
-                    <i class="fa-solid fa-star"></i>
-                </div>
-
-                <h3>Reviews</h3>
-
-                <p>
-                    Read customer experiences and feedback.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ========================================= -->
-<!-- HOW IT WORKS -->
-<!-- ========================================= -->
-
-<section class="how-section">
-
-    <div class="container">
-
-        <div class="how-header">
-            <h2>How It Works</h2>
-
-            <p>
-                Find what you need and choose the shopping option that works for you.
-            </p>
-        </div>
-
-        <div class="steps-grid">
-
-            <div class="step-card">
-                <div class="step-number">1</div>
-
-                <h3>Explore</h3>
-
-                <p>
-                    Browse eBooks, templates, bundles and other available digital resources.
-                </p>
-            </div>
-
-            <div class="step-card">
-                <div class="step-number">2</div>
-
-                <h3>Choose</h3>
-
-                <p>
-                    Select Buy Now for a direct purchase or Add to Cart to continue shopping.
-                </p>
-            </div>
-
-            <div class="step-card">
-                <div class="step-number">3</div>
-
-                <h3>Checkout</h3>
-
-                <p>
-                    Review your selection and continue to secure payment when you are ready.
-                </p>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ========================================= -->
-<!-- SHOP WITH CONFIDENCE -->
-<!-- ========================================= -->
-
-<section class="trust-section">
-
-    <div class="container">
-
-        <div class="trust-header">
-
-            <h2>Shop With Confidence</h2>
-
-            <p>
-                A simple and secure experience for every digital purchase.
-            </p>
-
-        </div>
-
-        <div class="trust-grid">
-
-            <div class="trust-card">
-
-                <div class="trust-icon">
-                    <i class="fa-solid fa-lock"></i>
-                </div>
-
-                <h3>Secure Checkout</h3>
-
-                <p>
-                    All payments are securely processed through Stripe.
-                </p>
-
-            </div>
-
-            <div class="trust-card">
-
-                <div class="trust-icon">
-                    <i class="fa-solid fa-bolt"></i>
-                </div>
-
-                <h3>Instant Access</h3>
-
-                <p>
-                    Receive your digital products immediately after purchase.
-                </p>
-
-            </div>
-
-            <div class="trust-card">
-
-                <div class="trust-icon">
-                    <i class="fa-solid fa-download"></i>
-                </div>
-
-                <h3>Digital Downloads</h3>
-
-                <p>
-                    Download your files anytime from your secure delivery page.
-                </p>
-
-            </div>
-
-            <div class="trust-card">
-
-                <div class="trust-icon">
-                    <i class="fa-solid fa-headset"></i>
-                </div>
-
-                <h3>Customer Support</h3>
-
-                <p>
-                    Need help? We're here to assist you whenever you need us.
-                </p>
-
-            </div>
-
-            <div class="trust-card">
-
-                <div class="trust-icon">
-                    <i class="fa-solid fa-globe"></i>
-                </div>
-
-                <h3>Worldwide Access</h3>
-
-                <p>
-                    Shop from anywhere and access your digital library instantly.
-                </p>
-
-            </div>
-
-            <div class="trust-card">
-
-                <div class="trust-icon">
-                    <i class="fa-solid fa-book-open"></i>
-                </div>
-
-                <h3>Growing Library</h3>
-
-                <p>
-                    New eBooks, templates, bundles and resources are added regularly.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-     
 <footer class="site-footer">
 
     <div class="container">
 
         <div class="footer-grid">
 
-
             <div class="footer-column">
 
                 <h3>Quick Links</h3>
 
-                <a href="about.html">
-                    About Us
-                </a>
+                <a href="about.html">About Us</a>
 
-           <a href="donation/index.html">
-              Donation
-           </a> 
-                 
+                <a href="donation/index.html">Donation</a>
+
             </div>
-
 
             <div class="footer-column">
 
                 <h3>Support</h3>
 
-                <a href="contact.html">
-                    Contact
-                </a>
+                <a href="contact.html">Contact</a>
 
-                <a href="faq.html">
-                    FAQ
-                </a>
+                <a href="faq.html">FAQ</a>
 
-                <a href="privacy.html">
-                    Privacy Policy
-                </a>
+                <a href="privacy.html">Privacy Policy</a>
 
-                <a href="terms.html">
-                    Terms &amp; Conditions
-                </a>
+                <a href="terms.html">Terms &amp; Conditions</a>
 
-                <a href="refund.html">
-                    Refund Policy
-                </a>
+                <a href="refund.html">Refund Policy</a>
 
-                <a href="cookie.html">
-                    Cookie Policy
-                </a>
+                <a href="cookie.html">Cookie Policy</a>
 
-                <a href="secure-checkout.html">
-                    Secure Checkout
-                </a>
+                <a href="secure-checkout.html">Secure Checkout</a>
 
             </div>
-
 
             <div class="footer-column">
 
@@ -1427,14 +1178,24 @@ input:focus-visible{
 
                 <div class="footer-social">
 
-                    <a href="#">
+                    <a
+                        href="#"
+                        aria-label="TikTok">
+
                         <i class="fa-brands fa-tiktok"></i>
+
                         TikTok
+
                     </a>
 
-                    <a href="#">
+                    <a
+                        href="#"
+                        aria-label="Instagram">
+
                         <i class="fa-brands fa-instagram"></i>
+
                         Instagram
+
                     </a>
 
                     <a
@@ -1442,6 +1203,7 @@ input:focus-visible{
                         class="footer-subscribe">
 
                         <i class="fa-solid fa-envelope"></i>
+
                         Subscribe
 
                     </a>
@@ -1450,9 +1212,7 @@ input:focus-visible{
 
             </div>
 
-
         </div>
-
 
         <div class="footer-bottom">
 
@@ -1469,8 +1229,8 @@ input:focus-visible{
     </div>
 
 </footer>
-
-    <!-- =========================================
+         
+ <!-- =========================================
      PART 6 — SLIDE-OUT NAVIGATION MENU
 ========================================= -->
 
@@ -1482,11 +1242,14 @@ input:focus-visible{
     background:rgba(7,26,51,.68);
     backdrop-filter:blur(3px);
     -webkit-backdrop-filter:blur(3px);
+
     opacity:0;
     visibility:hidden;
+
     transition:
         opacity .3s ease,
         visibility .3s ease;
+
     z-index:1998;
 }
 
@@ -1499,15 +1262,24 @@ input:focus-visible{
     position:fixed;
     top:0;
     right:-100%;
+
     width:min(420px,82%);
     height:100vh;
+
+    padding:25px 28px 35px;
+
     background:var(--white);
     color:var(--navy);
-    z-index:1999;
-    padding:25px 28px 35px;
+
     overflow-y:auto;
+    overscroll-behavior:contain;
+    -webkit-overflow-scrolling:touch;
+
     box-shadow:-15px 0 40px rgba(0,0,0,.18);
+
     transition:right .35s ease;
+
+    z-index:1999;
 }
 
 .side-menu.active{
@@ -1518,8 +1290,10 @@ input:focus-visible{
     display:flex;
     align-items:center;
     justify-content:space-between;
-    padding-bottom:20px;
+
     margin-bottom:15px;
+    padding-bottom:20px;
+
     border-bottom:1px solid var(--border);
 }
 
@@ -1530,15 +1304,18 @@ input:focus-visible{
 }
 
 .close-menu{
-    width:44px;
-    height:44px;
     display:flex;
     align-items:center;
     justify-content:center;
+
+    width:44px;
+    height:44px;
+
     background:transparent;
-    border:none;
-    color:var(--navy);
+
     border-radius:8px;
+
+    color:var(--navy);
 }
 
 .close-menu:hover{
@@ -1557,12 +1334,18 @@ input:focus-visible{
 .menu-links a{
     display:flex;
     align-items:center;
+
     min-height:55px;
+
     padding:10px 5px;
+
     border-bottom:1px solid var(--border);
+
     color:var(--navy);
+
     font-size:18px;
     font-weight:700;
+
     transition:
         color .2s ease,
         padding-left .2s ease;
@@ -1576,14 +1359,22 @@ input:focus-visible{
 .menu-donation{
     display:flex !important;
     justify-content:center;
+
     margin-top:25px;
+
     min-height:54px !important;
+
     padding:14px 20px !important;
+
     background:var(--gold);
+
     color:var(--navy) !important;
+
     border:none !important;
     border-radius:8px;
+
     text-align:center;
+
     font-weight:800 !important;
 }
 
@@ -1600,8 +1391,8 @@ input:focus-visible{
     }
 
     .menu-links a{
-        font-size:17px;
         min-height:52px;
+        font-size:17px;
     }
 
 }
@@ -1610,26 +1401,32 @@ input:focus-visible{
 
 
 <div
+    id="menuOverlay"
     class="menu-overlay"
-    id="menuOverlay">
+    aria-hidden="true">
 </div>
 
 
 <aside
-    class="side-menu"
     id="sideMenu"
-    aria-hidden="true">
+    class="side-menu"
+    aria-hidden="true"
+    aria-labelledby="menuTitle">
 
     <div class="side-menu-header">
 
-        <div class="side-menu-title">
+        <div
+            id="menuTitle"
+            class="side-menu-title">
+
             Menu
+
         </div>
 
         <button
-            type="button"
-            class="close-menu"
             id="closeMenu"
+            class="close-menu"
+            type="button"
             aria-label="Close navigation menu">
 
             <i class="fa-solid fa-xmark"></i>
@@ -1643,43 +1440,29 @@ input:focus-visible{
         class="menu-links"
         aria-label="Main navigation">
 
-        <a href="freebie.html">
-            Freebie
-        </a>
+        <a href="freebie.html">Freebie</a>
 
-        <a href="ebooks.html">
-            eBooks
-        </a>
+        <a href="ebooks.html">eBooks</a>
 
-        <a href="bundles.html">
-            Bundles
-        </a>
+        <a href="bundles.html">Bundles</a>
 
-        <a href="templates.html">
-            Templates
-        </a>
+        <a href="templates.html">Templates</a>
 
-        <a href="courses.html">
-            Courses
-        </a>
+        <a href="courses.html">Courses</a>
 
-        <a href="/thebestbundle/fr/">
-            French Collection
-        </a>
+        <a href="/thebestbundle/fr/">French Collection</a>
 
-        <a href="merchandise.html">
-            Merchandise
-        </a>
+        <a href="merchandise.html">Merchandise</a>
 
-        <a href="reviews.html">
-            Reviews
-        </a>
+        <a href="reviews.html">Reviews</a>
 
         <a
-    href="donation/index.html"
-    class="menu-donation">
-    Donation
-</a>
+            href="donation/index.html"
+            class="menu-donation">
+
+            Donation
+
+        </a>
 
     </nav>
 
@@ -1688,76 +1471,61 @@ input:focus-visible{
 
 <script>
 
-const menuButton = document.getElementById('menuButton');
-const closeMenu = document.getElementById('closeMenu');
-const sideMenu = document.getElementById('sideMenu');
-const menuOverlay = document.getElementById('menuOverlay');
+const menuButton = document.getElementById("menuButton");
+const closeMenu = document.getElementById("closeMenu");
+const sideMenu = document.getElementById("sideMenu");
+const menuOverlay = document.getElementById("menuOverlay");
 
 function openSideMenu(){
 
-    sideMenu.classList.add('active');
-    menuOverlay.classList.add('active');
+    sideMenu.classList.add("active");
+    menuOverlay.classList.add("active");
 
-    document.body.classList.add('menu-open');
+    document.body.classList.add("menu-open");
 
-    menuButton.setAttribute(
-        'aria-expanded',
-        'true'
-    );
+    menuButton.setAttribute("aria-expanded","true");
 
-    sideMenu.setAttribute(
-        'aria-hidden',
-        'false'
-    );
+    sideMenu.setAttribute("aria-hidden","false");
 
 }
 
 function closeSideMenu(){
 
-    sideMenu.classList.remove('active');
-    menuOverlay.classList.remove('active');
+    sideMenu.classList.remove("active");
+    menuOverlay.classList.remove("active");
 
-    document.body.classList.remove('menu-open');
+    document.body.classList.remove("menu-open");
 
-    menuButton.setAttribute(
-        'aria-expanded',
-        'false'
-    );
+    menuButton.setAttribute("aria-expanded","false");
 
-    sideMenu.setAttribute(
-        'aria-hidden',
-        'true'
-    );
+    sideMenu.setAttribute("aria-hidden","true");
 
 }
 
-menuButton.addEventListener(
-    'click',
-    openSideMenu
-);
+if(menuButton){
+    menuButton.addEventListener("click", openSideMenu);
+}
 
-closeMenu.addEventListener(
-    'click',
-    closeSideMenu
-);
+if(closeMenu){
+    closeMenu.addEventListener("click", closeSideMenu);
+}
 
-menuOverlay.addEventListener(
-    'click',
-    closeSideMenu
-);
+if(menuOverlay){
+    menuOverlay.addEventListener("click", closeSideMenu);
+}
 
-document.addEventListener(
-    'keydown',
-    function(event){
+document.addEventListener("keydown", function(event){
 
-        if(event.key === 'Escape'){
-            closeSideMenu();
-        }
-
+    if(
+        event.key === "Escape" &&
+        sideMenu.classList.contains("active")
+    ){
+        closeSideMenu();
     }
-);
 
-</script>
+});
+
+</script>   
 
 <!-- =========================================
      PART 7 — SHOPPING CART PANEL
@@ -1796,7 +1564,9 @@ document.addEventListener(
     display:flex;
     flex-direction:column;
     box-shadow:-15px 0 40px rgba(0,0,0,.18);
-    transition:right .35s ease;
+    transition:
+        right .35s ease,
+        box-shadow .35s ease;
 }
 
 .cart-panel.active{
@@ -1840,6 +1610,8 @@ document.addEventListener(
 .cart-items{
     flex:1;
     overflow-y:auto;
+    overscroll-behavior:contain;
+    -webkit-overflow-scrolling:touch;
     padding:20px 26px;
 }
 
@@ -1946,21 +1718,21 @@ document.addEventListener(
 
 </style>
 
-
 <div
     class="cart-overlay"
-    id="cartOverlay">
+    id="cartOverlay"
+    aria-hidden="true">
 </div>
-
 
 <aside
     class="cart-panel"
     id="cartPanel"
-    aria-hidden="true">
+    aria-hidden="true"
+    aria-labelledby="cartTitle">
 
     <div class="cart-header">
 
-        <h2>
+        <h2 id="cartTitle">
             Your Cart
         </h2>
 
@@ -1976,8 +1748,7 @@ document.addEventListener(
 
     </div>
 
-
-    <div
+         <div
         class="cart-items"
         id="cartItems">
 
@@ -1992,7 +1763,6 @@ document.addEventListener(
         </div>
 
     </div>
-
 
     <div class="cart-footer">
 
@@ -2014,20 +1784,23 @@ document.addEventListener(
             type="button"
             class="btn btn-gold cart-review-btn"
             id="reviewCartBtn">
+
             Review Cart
+
         </button>
 
         <button
             type="button"
             class="btn continue-shopping-cart"
             id="continueShoppingCart">
+
             Continue Shopping
+
         </button>
 
     </div>
 
 </aside>
-
 
 <script>
 
@@ -2058,14 +1831,12 @@ const cartTotal =
 const reviewCartBtn =
     document.getElementById('reviewCartBtn');
 
-
 let shoppingCart =
     JSON.parse(
         localStorage.getItem(
             'theBestBundleCart'
         )
     ) || [];
-
 
 function saveCart(){
 
@@ -2075,7 +1846,6 @@ function saveCart(){
     );
 
 }
-
 
 function openCart(){
 
@@ -2094,7 +1864,6 @@ function openCart(){
 
 }
 
-
 function closeCartPanel(){
 
     cartPanel.classList.remove('active');
@@ -2110,11 +1879,12 @@ function closeCartPanel(){
 
 }
 
-
 function renderCart(){
 
-    cartCount.textContent =
-        shoppingCart.length;
+    if(cartCount){
+        cartCount.textContent =
+            shoppingCart.length;
+    }
 
     if(shoppingCart.length === 0){
 
@@ -2123,9 +1893,7 @@ function renderCart(){
 
                 <i class="fa-solid fa-cart-shopping"></i>
 
-                <p>
-                    Your cart is empty.
-                </p>
+                <p>Your cart is empty.</p>
 
             </div>
         `;
@@ -2137,106 +1905,87 @@ function renderCart(){
 
     }
 
-
     cartItems.innerHTML = '';
 
     let total = 0;
 
+       shoppingCart.forEach(function(product,index){
 
-    shoppingCart.forEach(
-        function(product,index){
+        total += Number(product.price);
 
-            total += Number(product.price);
+        const item =
+            document.createElement('div');
 
-            const item =
-                document.createElement('div');
+        item.className =
+            'cart-item';
 
-            item.className =
-                'cart-item';
+        item.innerHTML = `
 
-            item.innerHTML = `
+            <img
+                src="${product.image}"
+                alt="${product.name}">
 
-                <img
-                    src="${product.image}"
-                    alt="${product.name}">
+            <div class="cart-item-info">
 
-                <div class="cart-item-info">
+                <h3>${product.name}</h3>
 
-                    <h3>
-                        ${product.name}
-                    </h3>
-
-                    <div class="cart-item-price">
-                        $${Number(product.price).toFixed(2)}
-                    </div>
-
+                <div class="cart-item-price">
+                    $${Number(product.price).toFixed(2)}
                 </div>
 
-                <button
-                    type="button"
-                    class="remove-cart-item"
-                    data-index="${index}"
-                    aria-label="Remove ${product.name}">
+            </div>
 
-                    <i class="fa-solid fa-trash"></i>
+            <button
+                type="button"
+                class="remove-cart-item"
+                data-index="${index}"
+                aria-label="Remove ${product.name}">
 
-                </button>
+                <i class="fa-solid fa-trash"></i>
 
-            `;
+            </button>
 
-            cartItems.appendChild(item);
+        `;
 
-        }
-    );
+        cartItems.appendChild(item);
 
+    });
 
     cartTotal.textContent =
         '$' + total.toFixed(2);
 
-
     document
-        .querySelectorAll(
-            '.remove-cart-item'
-        )
-        .forEach(
-            function(button){
+        .querySelectorAll('.remove-cart-item')
+        .forEach(function(button){
 
-                button.addEventListener(
-                    'click',
-                    function(){
+            button.addEventListener(
+                'click',
+                function(){
 
-                        const index =
-                            Number(
-                                this.dataset.index
-                            );
+                    const index =
+                        Number(this.dataset.index);
 
-                        shoppingCart.splice(
-                            index,
-                            1
-                        );
+                    shoppingCart.splice(index,1);
 
-                        saveCart();
+                    saveCart();
 
-                        renderCart();
+                    renderCart();
 
-                    }
-                );
+                }
+            );
 
-            }
-        );
+        });
 
 }
-
 
 function addToCart(product){
 
     const alreadyAdded =
-        shoppingCart.some(
-            function(item){
-                return item.id === product.id;
-            }
-        );
+        shoppingCart.some(function(item){
 
+            return item.id === product.id;
+
+        });
 
     if(!alreadyAdded){
 
@@ -2246,74 +1995,97 @@ function addToCart(product){
 
     }
 
-
     renderCart();
 
     openCart();
 
 }
 
+if(cartButton){
+    cartButton.addEventListener(
+        'click',
+        openCart
+    );
+}
 
-cartButton.addEventListener(
-    'click',
-    openCart
-);
+if(closeCart){
+    closeCart.addEventListener(
+        'click',
+        closeCartPanel
+    );
+}
 
+if(cartOverlay){
+    cartOverlay.addEventListener(
+        'click',
+        closeCartPanel
+    );
+}
 
-closeCart.addEventListener(
-    'click',
-    closeCartPanel
-);
+if(continueShoppingCart){
+    continueShoppingCart.addEventListener(
+        'click',
+        closeCartPanel
+    );
+}
 
+if(reviewCartBtn){
 
-cartOverlay.addEventListener(
-    'click',
-    closeCartPanel
-);
+reviewCartBtn.addEventListener(
+'click',
+async function(){
 
-
-continueShoppingCart.addEventListener(
-    'click',
-    closeCartPanel
-);
-
-
-reviewCartBtn.addEventListener('click', async function () {
-
-    if (shoppingCart.length === 0) {
+    if(shoppingCart.length===0){
         return;
     }
 
-    // Single product → use Stripe Payment Link
-    if (shoppingCart.length === 1 && shoppingCart[0].stripe) {
-        window.location.href = shoppingCart[0].stripe;
+    if(
+        shoppingCart.length===1 &&
+        shoppingCart[0].stripe
+    ){
+
+        window.location.href =
+            shoppingCart[0].stripe;
+
         return;
+
     }
 
-    // Multiple products → create Stripe Checkout Session
-    try {
+    try{
 
-        const response = await fetch('/api/create-checkout-session', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                items: shoppingCart.map(item => ({
-                    priceId: item.priceId
-                }))
-            })
-        });
+        const response =
+            await fetch(
+                '/api/create-checkout-session',
+                {
+                    method:'POST',
+                    headers:{
+                        'Content-Type':'application/json'
+                    },
+                    body:JSON.stringify({
+                        items:shoppingCart.map(item=>({
+                            priceId:item.priceId
+                        }))
+                    })
+                }
+            );
 
-        const data = await response.json();
+        const data =
+            await response.json();
 
-        if (data.url) {
-            window.location.href = data.url;
-        } else {
-            alert('Unable to create checkout session.');
+        if(data.url){
+
+            window.location.href =
+                data.url;
+
+        }else{
+
+            alert(
+                'Unable to create checkout session.'
+            );
+
         }
 
-    } catch (err) {
+    }catch(err){
 
         console.error(err);
 
@@ -2323,21 +2095,28 @@ reviewCartBtn.addEventListener('click', async function () {
 
 });
 
+}
+
 document.addEventListener(
     'keydown',
     function(event){
 
-        if(event.key === 'Escape'){
+        if(
+            event.key==='Escape' &&
+            cartPanel &&
+            cartPanel.classList.contains('active')
+        ){
+
             closeCartPanel();
+
         }
 
     }
 );
 
-
 renderCart();
 
-</script>
+</script>  
      
     <!-- =========================================
      PART 8 — PRODUCT PREVIEW + BUY NOW
@@ -2512,7 +2291,6 @@ renderCart();
 
 </style>
 
-
 <section class="shop-preview">
 
     <div class="container">
@@ -2530,11 +2308,9 @@ renderCart();
 
         </div>
 
-
         <div class="shop-grid">
 
-
-            <!-- EBOOK -->
+                    <!-- EBOOK -->
 
             <article class="shop-card">
 
@@ -2573,7 +2349,9 @@ renderCart();
                             class="btn btn-gold"
                             target="_blank"
                             rel="noopener noreferrer">
+
                             Buy Now
+
                         </a>
 
                         <button
@@ -2585,7 +2363,9 @@ renderCart();
                             data-price-id="price_1TxiMYRtp4gVtODy5zcyFkVG"
                             data-image="images/the-longevity-blueprint-cover.png"
                             data-stripe="https://buy.stripe.com/00w7sN3W08ik8flaP18N20q">
+
                             Add to Cart
+
                         </button>
 
                     </div>
@@ -2634,7 +2414,9 @@ renderCart();
                             class="btn btn-gold"
                             target="_blank"
                             rel="noopener noreferrer">
+
                             Buy Now
+
                         </a>
 
                         <button
@@ -2646,17 +2428,18 @@ renderCart();
                             data-price-id="price_1TvBJbRtp4gVtODyrjej3HJB"
                             data-image="images/30-Day-Wellness-Planner.png"
                             data-stripe="https://buy.stripe.com/8x228t1NSbuwdzF8GT8N20l">
+
                             Add to Cart
+
                         </button>
 
                     </div>
 
                 </div>
 
-            </article>
+            </article>  
 
-
-            <!-- BUNDLE -->
+                         <!-- BUNDLE -->
 
             <article class="shop-card">
 
@@ -2695,7 +2478,9 @@ renderCart();
                             class="btn btn-gold"
                             target="_blank"
                             rel="noopener noreferrer">
+
                             Buy Now
+
                         </a>
 
                         <button
@@ -2704,10 +2489,12 @@ renderCart();
                             data-id="starter-bundle"
                             data-name="Starter Bundle"
                             data-price="27"
-                             data-price-id=price_1TweJORtp4gVtODymXOzvXjB
+                            data-price-id="price_1TweJORtp4gVtODymXOzvXjB"
                             data-image="images/starter-bundle.png"
                             data-stripe="https://buy.stripe.com/28E6oJ504fKMfHNf5h8N20p">
+
                             Add to Cart
+
                         </button>
 
                     </div>
@@ -2716,16 +2503,16 @@ renderCart();
 
             </article>
 
-
         </div>
-
 
         <div class="shop-all">
 
             <a
                 href="ebooks.html"
                 class="btn btn-navy">
+
                 Explore All Products
+
             </a>
 
         </div>
@@ -2734,42 +2521,45 @@ renderCart();
 
 </section>
 
-
 <script>
 
-document
-    .querySelectorAll('.add-cart-btn')
-    .forEach(function(button){
+const addCartButtons =
+    document.querySelectorAll('.add-cart-btn');
 
-        button.addEventListener(
-            'click',
-            function(){
+addCartButtons.forEach(function(button){
 
-                const product = {
+    button.addEventListener(
+        'click',
+        function(){
 
-                    id:
-                        this.dataset.id,
+            const product = {
 
-                    name:
-                        this.dataset.name,
+                id:
+                    this.dataset.id,
 
-                    price:
-                        Number(this.dataset.price),
+                name:
+                    this.dataset.name,
 
-                    image:
-                        this.dataset.image,
+                price:
+                    Number(this.dataset.price),
 
-                    stripe:
-                        this.dataset.stripe
+                image:
+                    this.dataset.image,
 
-                };
+                stripe:
+                    this.dataset.stripe,
 
-                addToCart(product);
+                priceId:
+                    this.dataset.priceId
 
-            }
-        );
+            };
 
-    });
+            addToCart(product);
+
+        }
+    );
+
+});
 
 </script>
 
@@ -2831,6 +2621,14 @@ document
     transform:translateY(-5px);
     box-shadow:0 14px 32px rgba(7,26,51,.12);
     border-color:var(--gold);
+}
+
+.category-card:focus-visible{
+
+    outline:3px solid var(--gold);
+
+    outline-offset:4px;
+
 }
 
 .category-icon{
@@ -2901,7 +2699,6 @@ document
 
 </style>
 
-
 <section class="category-directory">
 
     <div class="container">
@@ -2919,13 +2716,12 @@ document
 
         </div>
 
-
         <div class="category-grid">
 
-
-            <a
+                        <a
                 href="freebie.html"
-                class="category-card">
+                class="category-card"
+                aria-label="Browse Freebie">
 
                 <div class="category-icon">
                     <i class="fa-solid fa-gift"></i>
@@ -2942,7 +2738,8 @@ document
 
             <a
                 href="ebooks.html"
-                class="category-card">
+                class="category-card"
+                aria-label="Browse eBooks">
 
                 <div class="category-icon">
                     <i class="fa-solid fa-book-open"></i>
@@ -2959,7 +2756,8 @@ document
 
             <a
                 href="bundles.html"
-                class="category-card">
+                class="category-card"
+                aria-label="Browse Bundles">
 
                 <div class="category-icon">
                     <i class="fa-solid fa-box-open"></i>
@@ -2976,7 +2774,8 @@ document
 
             <a
                 href="templates.html"
-                class="category-card">
+                class="category-card"
+                aria-label="Browse Templates">
 
                 <div class="category-icon">
                     <i class="fa-solid fa-file-lines"></i>
@@ -2993,7 +2792,8 @@ document
 
             <a
                 href="courses.html"
-                class="category-card coming-soon">
+                class="category-card coming-soon"
+                aria-label="Browse Courses">
 
                 <span class="coming-soon-label">
                     Coming Soon
@@ -3011,10 +2811,10 @@ document
 
             </a>
 
-
-            <a
+                        <a
                 href="/thebestbundle/fr/"
-                class="category-card">
+                class="category-card"
+                aria-label="Browse French Collection">
 
                 <div class="category-icon">
                     <i class="fa-solid fa-language"></i>
@@ -3031,7 +2831,8 @@ document
 
             <a
                 href="merchandise.html"
-                class="category-card coming-soon">
+                class="category-card coming-soon"
+                aria-label="Browse Merchandise">
 
                 <span class="coming-soon-label">
                     Coming Soon
@@ -3052,7 +2853,8 @@ document
 
             <a
                 href="reviews.html"
-                class="category-card">
+                class="category-card"
+                aria-label="Browse Reviews">
 
                 <div class="category-icon">
                     <i class="fa-solid fa-star"></i>
@@ -3066,14 +2868,13 @@ document
 
             </a>
 
-
         </div>
 
     </div>
 
-</section>
+</section> 
 
-    <!-- =========================================
+<!-- =========================================
      PART 10 — TRUST + HOW IT WORKS
 ========================================= -->
 
@@ -3116,6 +2917,21 @@ document
     border-radius:var(--radius);
     background:var(--white);
     box-shadow:0 8px 25px rgba(7,26,51,.06);
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease;
+}
+
+.trust-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 14px 32px rgba(7,26,51,.12);
+    border-color:var(--gold);
+}
+
+.trust-card:focus-visible{
+    outline:3px solid var(--gold);
+    outline-offset:4px;
 }
 
 .trust-icon{
@@ -3141,7 +2957,6 @@ document
     font-size:14px;
     line-height:1.6;
 }
-
 
 .how-section{
     background:var(--navy);
@@ -3235,10 +3050,176 @@ document
 
 </style>
 
+     <section class="trust-section">
 
+    <div class="container">
 
+        <div class="trust-header">
 
-    <!-- =========================================
+            <h2>
+                Shop With Confidence
+            </h2>
+
+            <p>
+                Every product is designed to provide professional quality,
+                instant access, and a secure purchasing experience through
+                TheBestBundle.
+            </p>
+
+        </div>
+
+        <div class="trust-grid">
+
+            <div class="trust-card">
+
+                <div class="trust-icon">
+                    <i class="fa-solid fa-download"></i>
+                </div>
+
+                <h3>
+                    Instant Download
+                </h3>
+
+                <p>
+                    Access your digital products immediately after completing your purchase.
+                </p>
+
+            </div>
+
+            <div class="trust-card">
+
+                <div class="trust-icon">
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+
+                <h3>
+                    Secure Payments
+                </h3>
+
+                <p>
+                    All transactions are processed securely through Stripe for your protection.
+                </p>
+
+            </div>
+
+            <div class="trust-card">
+
+                <div class="trust-icon">
+                    <i class="fa-solid fa-medal"></i>
+                </div>
+
+                <h3>
+                    Premium Quality
+                </h3>
+
+                <p>
+                    Professionally designed eBooks, templates, and bundles built to deliver real value.
+                </p>
+
+            </div>
+
+            <div class="trust-card">
+
+                <div class="trust-icon">
+                    <i class="fa-solid fa-headset"></i>
+                </div>
+
+                <h3>
+                    Customer Support
+                </h3>
+
+                <p>
+                    We're here to help whenever you need assistance with your digital purchases.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+     <section class="how-section">
+
+    <div class="container">
+
+        <div class="how-header">
+
+            <h2>
+                How It Works
+            </h2>
+
+            <p>
+                Getting your digital products is quick, secure, and simple.
+                Follow these three easy steps to start enjoying your purchase.
+            </p>
+
+        </div>
+
+        <div class="how-grid">
+
+            <div class="how-step">
+
+                <div class="step-number">
+                    1
+                </div>
+
+                <h3>
+                    Choose Your Products
+                </h3>
+
+                <p>
+                    Browse our collection of premium eBooks, templates,
+                    bundles, and digital resources, then add your favorites
+                    to your cart or purchase instantly.
+                </p>
+
+            </div>
+
+            <div class="how-step">
+
+                <div class="step-number">
+                    2
+                </div>
+
+                <h3>
+                    Secure Checkout
+                </h3>
+
+                <p>
+                    Complete your order using our secure Stripe-powered
+                    checkout with trusted payment processing and encrypted
+                    transactions.
+                </p>
+
+            </div>
+
+            <div class="how-step">
+
+                <div class="step-number">
+                    3
+                </div>
+
+                <h3>
+                    Download & Enjoy
+                </h3>
+
+                <p>
+                    Receive instant access to your digital downloads and
+                    start using your new resources immediately on your
+                    favorite device.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+     
+<!-- =========================================
      PART 11 — NEWSLETTER / SUBSCRIBE
 ========================================= -->
 
@@ -3259,6 +3240,14 @@ document
     border:1px solid var(--border);
     border-radius:var(--radius);
     box-shadow:0 12px 35px rgba(7,26,51,.08);
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.subscribe-box:hover{
+    transform:translateY(-4px);
+    box-shadow:0 18px 40px rgba(7,26,51,.10);
 }
 
 .subscribe-icon{
@@ -3309,6 +3298,8 @@ document
 
 .subscribe-form input:focus{
     border-color:var(--navy);
+    outline:none;
+    box-shadow:0 0 0 4px rgba(7,26,51,.12);
 }
 
 .subscribe-form button{
@@ -3344,8 +3335,7 @@ document
 
 </style>
 
-
-<section
+     <section
     class="subscribe-section"
     id="subscribe">
 
@@ -3363,21 +3353,21 @@ document
 
             <p>
                 Subscribe for updates about new eBooks,
-                templates, bundles, courses, free resources
-                and future TheBestBundle releases.
+                templates, bundles, courses, free resources,
+                exclusive offers, and future TheBestBundle releases.
             </p>
-
 
             <form
                 class="subscribe-form"
                 action="https://formspree.io/f/xkodngya"
-                method="POST">
+                method="POST"
+                aria-label="Newsletter subscription"
+                novalidate>
 
                 <input
                     type="hidden"
                     name="_next"
                     value="https://thebestbundle101-stack.github.io/thebestbundle/newsletter-success.html">
-
 
                 <label
                     for="subscriberEmail"
@@ -3391,8 +3381,9 @@ document
                     name="email"
                     placeholder="Enter your email address"
                     autocomplete="email"
+                    inputmode="email"
+                    spellcheck="false"
                     required>
-
 
                 <button
                     type="submit"
@@ -3402,9 +3393,8 @@ document
 
             </form>
 
-
             <p class="subscribe-note">
-                Receive TheBestBundle news and product updates.
+                We respect your privacy. No spam—just TheBestBundle news, product updates, and exclusive digital resources.
             </p>
 
         </div>
@@ -3412,8 +3402,8 @@ document
     </div>
 
 </section>
-
-    <!-- =========================================
+     
+<!-- =========================================
      PART 12 — FINAL HOMEPAGE JAVASCRIPT
      + CLOSING TAGS
 ========================================= -->
@@ -3430,7 +3420,7 @@ const currentPage =
     window.location.hash;
 
 sessionStorage.setItem(
-    'theBestBundleLastPage',
+    "theBestBundleLastPage",
     currentPage
 );
 
@@ -3440,15 +3430,30 @@ sessionStorage.setItem(
 ========================================= */
 
 window.addEventListener(
-    'storage',
+    "storage",
     function(event){
 
-        if(event.key === 'theBestBundleCart'){
+        if(event.key === "theBestBundleCart"){
 
-            shoppingCart =
-                JSON.parse(event.newValue) || [];
+            try{
 
-            renderCart();
+                shoppingCart =
+                    JSON.parse(event.newValue || "[]");
+
+                if(typeof renderCart === "function"){
+
+                    renderCart();
+
+                }
+
+            }catch(error){
+
+                console.error(
+                    "Unable to synchronize cart:",
+                    error
+                );
+
+            }
 
         }
 
@@ -3461,14 +3466,18 @@ window.addEventListener(
 ========================================= */
 
 document
-    .querySelectorAll('.menu-links a')
+    .querySelectorAll(".menu-links a")
     .forEach(function(link){
 
         link.addEventListener(
-            'click',
+            "click",
             function(){
 
-                closeSideMenu();
+                if(typeof closeSideMenu === "function"){
+
+                    closeSideMenu();
+
+                }
 
             }
         );
@@ -3486,7 +3495,7 @@ document
     .forEach(function(link){
 
         link.addEventListener(
-            'click',
+            "click",
             function(event){
 
                 event.preventDefault();
@@ -3501,7 +3510,7 @@ document
 </body>
 
 </html>
-
+     
 <!-- =========================================
      PART 13 — EBOOKS PAGE
      CREATE A NEW FILE: ebooks.html
@@ -4979,7 +4988,9 @@ button{
                             Buy Now
                         </a>
 
-                        <button
+
+                         
+                         <button
                             type="button"
                             class="btn cart-button add-to-cart"
                             data-id="fitness-activity-tracker"
