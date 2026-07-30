@@ -3811,7 +3811,7 @@ button{
 
 .product-actions{
     display:grid;
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:repeat(2,minmax(140px,1fr));
     gap:10px;
 }
 
@@ -3834,9 +3834,10 @@ button{
 }
 
 .cart-button{
-    background:var(--white);
-    color:var(--navy);
+    background:var(--navy);
+    color:var(--white);
     border:2px solid var(--navy);
+    white-space:nowrap;
 }
 
 .cart-button:hover{
@@ -4089,9 +4090,9 @@ button{
                         Premium eBook
                     </div>
 
-                    <h2>
+                    <h2>The Natural Anti-Aging Guide</h2>
                         
-                    </h2>
+                    
 
                     <p>
                         A 30-page wellness guide covering nutrition,
