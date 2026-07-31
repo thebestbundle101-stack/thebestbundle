@@ -768,6 +768,48 @@ document.addEventListener(
     'DOMContentLoaded',
     loadCart
 );
+
+const checkoutButton = document.getElementById('checkoutButton');
+
+if (checkoutButton) {
+
+    checkoutButton.addEventListener('click', async function () {
+
+        if (ebookCart.length === 0) {
+            alert('Your cart is empty.');
+            return;
+        }
+
+        try {
+
+            const response = await fetch('/api/create-checkout-session', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    items: ebookCart
+                })
+            });
+
+            const data = await response.json();
+
+            if (data.url) {
+                window.location.href = data.url;
+            } else {
+                alert('Checkout failed.');
+            }
+
+        } catch (error) {
+
+            console.error(error);
+            alert('Checkout failed.');
+
+        }
+
+    });
+
+}
      
 </script>
 
