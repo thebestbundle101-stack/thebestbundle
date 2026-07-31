@@ -657,12 +657,12 @@ document
                     name:this.dataset.name,
                     price:Number(this.dataset.price),
                     image:this.dataset.image,
-                    stripe:this.dataset.stripe
+                    stripe:this.dataset.stripe,
+                    priceId:this.dataset.priceId
+                 };
 
-                };
-
-
-                const alreadyExists =
+                
+         const alreadyExists =
                     ebookCart.some(
                         function(item){
                             return item.id === product.id;
