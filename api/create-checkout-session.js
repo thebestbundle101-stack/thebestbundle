@@ -46,8 +46,8 @@ module.exports = async function handler(req, res) {
     console.error("Stripe checkout error:", error);
 
     return res.status(500).json({
-      error: "Unable to create checkout session"
-    });
+    error: error.message
+});
 
   }
 
