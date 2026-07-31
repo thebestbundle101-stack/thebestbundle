@@ -730,7 +730,7 @@ updatePageCartCount();
 function loadCart(){
 
     const cart =
-        JSON.parse(localStorage.getItem('cart')) || [];
+        JSON.parse(localStorage.getItem('theBestBundleCart')) || [];
 
     const cartItems =
         document.getElementById('cartItems');
