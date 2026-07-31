@@ -392,6 +392,64 @@ button{
 
 }
 
+/* =========================
+   SHOPPING CART
+========================= */
+
+.cart-section{
+    max-width:1200px;
+    margin:60px auto;
+    padding:0 20px;
+}
+
+.cart-container{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:30px;
+    align-items:start;
+}
+
+.cart-items,
+.cart-summary{
+    background:#fff;
+    border:1px solid #e5e7eb;
+    border-radius:16px;
+    padding:24px;
+}
+
+.cart-items h2,
+.cart-summary h2{
+    margin-top:0;
+    margin-bottom:20px;
+}
+
+.summary-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px 0;
+    border-bottom:1px solid #ececec;
+}
+
+.summary-row:last-of-type{
+    border-bottom:none;
+    font-size:1.1rem;
+    font-weight:700;
+}
+
+.cart-summary .btn{
+    width:100%;
+    margin-top:15px;
+}
+
+@media (max-width:768px){
+
+    .cart-container{
+        grid-template-columns:1fr;
+    }
+
+}
+     
 </style>
 
 </head>
@@ -492,7 +550,47 @@ button{
 
 </section>
 
+<main class="cart-section">
 
+    <div class="cart-container">
+
+        <div class="cart-items">
+
+            <h2>Your Cart</h2>
+
+            <div id="cartItems">
+                <!-- Cart items will appear here automatically -->
+            </div>
+
+        </div>
+
+        <aside class="cart-summary">
+
+            <h2>Order Summary</h2>
+
+            <div class="summary-row">
+                <span>Items</span>
+                <span id="cartCount">0</span>
+            </div>
+
+            <div class="summary-row">
+                <span>Total</span>
+                <strong id="cartTotal">$0.00</strong>
+            </div>
+
+            <button id="checkoutButton" class="btn primary-btn">
+                Proceed to Checkout
+            </button>
+
+            <a href="ebooks.html" class="btn secondary-btn">
+                Continue Shopping
+            </a>
+
+        </aside>
+
+    </div>
+
+</main>
 
 
 
@@ -629,6 +727,48 @@ function returnToPreviousPage(){
 
 updatePageCartCount();
 
+function loadCart(){
+
+    const cart =
+        JSON.parse(localStorage.getItem('cart')) || [];
+
+    const cartItems =
+        document.getElementById('cartItems');
+
+    const cartCount =
+        document.getElementById('cartCount');
+
+    const cartTotal =
+        document.getElementById('cartTotal');
+
+    cartItems.innerHTML = '';
+
+    let total = 0;
+
+    cart.forEach((item,index)=>{
+
+        total += Number(item.price);
+
+        cartItems.innerHTML += `
+            <div class="cart-item">
+                <strong>${item.name}</strong><br>
+                $${Number(item.price).toFixed(2)}
+            </div>
+        `;
+
+    });
+
+    cartCount.textContent = cart.length;
+    cartTotal.textContent =
+        '$' + total.toFixed(2);
+
+}
+
+document.addEventListener(
+    'DOMContentLoaded',
+    loadCart
+);
+     
 </script>
 
 
