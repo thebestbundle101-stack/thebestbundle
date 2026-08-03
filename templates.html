@@ -229,8 +229,8 @@ button{
 
 .products-grid{
     display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:30px;
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
 }
 
 .product-card{
@@ -353,14 +353,22 @@ button{
 
 /* RESPONSIVE */
 
-@media(max-width:750px){
+@media (max-width:950px){
+
+    .products-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+}
+
+@media (max-width:650px){
 
     .products-grid{
         grid-template-columns:1fr;
     }
 
     .product-card{
-        max-width:440px;
+        max-width:430px;
         width:100%;
         margin:0 auto;
     }
@@ -371,7 +379,7 @@ button{
 
 }
 
-@media(max-width:380px){
+@media (max-width:380px){
 
     .product-actions{
         grid-template-columns:1fr;
