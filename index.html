@@ -3787,13 +3787,13 @@ button{
 }
 
 .cart-button{
-    background:var(--white);
-    color:var(--navy);
-    border:2px solid var(--navy);
+    background:var(--navy);
+    color:var(--white);
+    border:none;
 }
 
 .cart-button:hover{
-    background:var(--navy);
+    background:#0d274d;
     color:var(--white);
 }
 
@@ -4029,15 +4029,16 @@ button{
                         </a>
 
                         <button
-                            type="button"
-                            class="btn cart-button add-to-cart"
-                            data-id="starter-bundle"
-                            data-name="Starter Bundle"
-                            data-price="27"
-                            data-image="images/starter-bundle.png"
-                            data-stripe="https://buy.stripe.com/28E6oJ504fKMfHNf5h8N20p">
-                            Add to Cart
-                        </button>
+    type="button"
+    class="btn cart-button add-to-cart"
+    data-id="starter-bundle"
+    data-name="Starter Bundle"
+    data-price="27"
+    data-price-id="YOUR_STRIPE_PRICE_ID"
+    data-image="images/Starter-Bundle.png"
+    data-stripe="YOUR_STRIPE_CHECKOUT_LINK">
+    Add to Cart
+</button>
 
                     </div>
 
