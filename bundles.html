@@ -790,16 +790,16 @@ document
             'click',
             function(){
 
-                const product = {
+               const product = {
 
-                    id:this.dataset.id,
-                    name:this.dataset.name,
-                    price:Number(this.dataset.price),
-                    image:this.dataset.image,
-                    stripe:this.dataset.stripe
+    id:this.dataset.id,
+    name:this.dataset.name,
+    price:Number(this.dataset.price),
+    image:this.dataset.image,
+    stripe:this.dataset.stripe,
+    priceId:this.dataset.priceId
 
-                };
-
+};
 
                 const alreadyExists =
                     bundleCart.some(
