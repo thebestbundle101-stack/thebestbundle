@@ -57,6 +57,4 @@ console.log("Received items:", JSON.stringify(items, null, 2));
     });
 
 }
-  }
-
-};
+  };
