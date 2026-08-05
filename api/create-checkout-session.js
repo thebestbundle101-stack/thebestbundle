@@ -44,12 +44,16 @@ console.log("Received items:", JSON.stringify(items, null, 2));
 
   } catch (error) {
 
-    console.error("Stripe checkout error:", error);
+     console.error("Stripe checkout error:", {
+        message: error.message,
+        type: error.type,
+        code: error.code,
+        param: error.param,
+        raw: error.raw
+    });
 
     return res.status(500).json({
-    error: error.message
-});
+        error: error.message
+    });
 
-  }
-
-};
+}
