@@ -1,0 +1,580 @@
+<!-- =========================================
+     PART 16 — FREE RESOURCES PAGE
+     FILE: freebie.html
+========================================= -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+<title>
+    Free Resources | TheBestBundle
+</title>
+
+<meta
+    name="description"
+    content="Explore free digital resources from TheBestBundle including free eBooks, templates, courses, planners, guides, checklists and downloadable content.">
+
+<meta
+    name="theme-color"
+    content="#071A33">
+
+<link
+    rel="icon"
+    href="/thebestbundle/images/favicon.ico"
+    type="image/x-icon">
+
+<link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="/thebestbundle/images/favicon.png">
+
+<link
+    rel="apple-touch-icon"
+    href="/thebestbundle/images/favicon.png">
+
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+<style>
+
+  :root{
+    --navy:#071A33;
+    --gold:#F4C542;
+    --gold-dark:#D9A91A;
+    --white:#FFFFFF;
+    --off-white:#F8FAFC;
+    --text-gray:#64748B;
+    --border:#E2E8F0;
+    --max-width:1200px;
+    --radius:14px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:var(--off-white);
+    color:var(--navy);
+    line-height:1.6;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+button{
+    font:inherit;
+    cursor:pointer;
+}
+
+.container{
+    width:90%;
+    max-width:var(--max-width);
+    margin:0 auto;
+}
+
+
+/* HEADER */
+
+.page-header{
+    background:var(--navy);
+    color:var(--white);
+}
+
+.header-inner{
+    min-height:90px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.header-logo img{
+    height:70px;
+    width:auto;
+}
+
+.home-button{
+    width:46px;
+    height:46px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:8px;
+    color:var(--white);
+    font-size:23px;
+}
+
+.home-button:hover{
+    background:rgba(255,255,255,.08);
+    color:var(--gold);
+}
+
+
+/* BACK */
+
+.back-row{
+    background:var(--white);
+    border-bottom:1px solid var(--border);
+}
+
+.back-inner{
+    min-height:60px;
+    display:flex;
+    align-items:center;
+}
+
+.back-button{
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    border:none;
+    background:transparent;
+    color:var(--navy);
+    font-weight:700;
+}
+
+.back-button:hover{
+    color:var(--gold-dark);
+}
+
+
+/* HERO */
+
+.freebie-hero{
+    background:var(--navy);
+    color:var(--white);
+    padding:80px 0 100px;
+    text-align:center;
+}
+
+.free-label{
+    display:inline-block;
+    padding:7px 16px;
+    margin-bottom:20px;
+    border-radius:30px;
+    background:var(--gold);
+    color:var(--navy);
+    font-size:13px;
+    font-weight:900;
+    letter-spacing:1px;
+}
+
+.freebie-content{
+    max-width:800px;
+    margin:0 auto;
+}
+
+.freebie-content h1{
+    font-size:clamp(42px,7vw,64px);
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.freebie-content p{
+    color:rgba(255,255,255,.82);
+    font-size:18px;
+    line-height:1.8;
+}
+
+
+/* FREE RESOURCES */
+
+.resources-section{
+    padding:80px 0 100px;
+}
+
+.section-heading{
+    text-align:center;
+    margin-bottom:55px;
+}
+
+.section-heading h2{
+    font-size:clamp(30px,5vw,44px);
+    margin-bottom:14px;
+}
+
+.section-heading p{
+    color:var(--text-gray);
+    font-size:17px;
+}
+
+.resources-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
+}
+
+.resource-card{
+    display:flex;
+    flex-direction:column;
+    background:var(--white);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(7,26,51,.08);
+}
+
+.resource-image{
+    padding:28px;
+    background:var(--off-white);
+}
+
+.resource-image img{
+    max-width:240px;
+    margin:0 auto;
+}
+
+.resource-info{
+    padding:26px;
+    display:flex;
+    flex-direction:column;
+    flex:1;
+}
+
+.resource-label{
+    color:var(--gold-dark);
+    font-size:12px;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    margin-bottom:8px;
+}
+
+.resource-info h3{
+    font-size:24px;
+    margin-bottom:12px;
+}
+
+.resource-info p{
+    color:var(--text-gray);
+    margin-bottom:22px;
+}
+
+.read-button{
+    margin-top:auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:50px;
+    border-radius:8px;
+    background:var(--gold);
+    color:var(--navy);
+    font-weight:800;
+}
+
+.read-button:hover{
+    background:var(--gold-dark);
+}
+
+
+/* FOOTER */
+
+.footer{
+    background:var(--navy);
+    color:var(--white);
+    padding:35px 0;
+    text-align:center;
+}
+
+.footer-tagline{
+    color:var(--gold);
+    font-weight:800;
+    letter-spacing:1px;
+    margin-bottom:7px;
+}
+
+.footer p{
+    color:rgba(255,255,255,.7);
+    font-size:13px;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:950px){
+
+    .resources-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:650px){
+
+    .resources-grid{
+        grid-template-columns:1fr;
+    }
+
+    .resource-card{
+        max-width:430px;
+        margin:0 auto;
+    }
+
+    .freebie-hero{
+        padding:60px 0 75px;
+    }
+
+}
+
+  <body>
+
+
+<header class="page-header">
+
+    <div class="container header-inner">
+
+        <a
+            href="index.html"
+            class="header-logo">
+
+            <img
+                src="images/logo.png"
+                alt="TheBestBundle">
+
+        </a>
+
+
+        <a
+            href="index.html"
+            class="home-button"
+            aria-label="Home">
+
+            <i class="fa-solid fa-house"></i>
+
+        </a>
+
+    </div>
+
+</header>
+
+
+<div class="back-row">
+
+    <div class="container back-inner">
+
+        <button
+            type="button"
+            class="back-button"
+            onclick="returnToPreviousPage()">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Back
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<main>
+
+  <main>
+
+
+<section class="freebie-hero">
+
+    <div class="container">
+
+        <div class="freebie-content">
+
+            <span class="free-label">
+                FREE DIGITAL LIBRARY
+            </span>
+
+            <h1>
+                Free Resources
+            </h1>
+
+            <p>
+
+                Discover free digital resources from
+                <strong>TheBestBundle</strong>.
+
+                Explore free eBooks, templates,
+                courses, planners, checklists,
+                guides and other downloadable
+                content — all completely free.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="resources-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2>
+                Free Resources
+            </h2>
+
+            <p>
+
+                Browse our growing collection
+                of premium digital resources
+                available completely free.
+
+            </p>
+
+        </div>
+
+
+        <div class="resources-grid">
+
+  <div class="resources-grid">
+
+
+    <!-- FREE RESOURCE #1 -->
+
+    <article class="resource-card">
+
+        <div class="resource-image">
+
+            <img
+                src="images/Welcome-to-TheBestBundle.png"
+                alt="Welcome to TheBestBundle">
+
+        </div>
+
+        <div class="resource-info">
+
+            <div class="resource-label">
+
+                FREE EBOOK
+
+            </div>
+
+            <h3>
+
+                Welcome to
+                TheBestBundle
+
+            </h3>
+
+            <p>
+
+                Start your journey with our
+                official 15-page Welcome Guide.
+
+                Learn about TheBestBundle,
+                discover our growing digital
+                library, and explore everything
+                our platform has to offer.
+
+            </p>
+
+            <a
+                href="https://drive.google.com/file/d/1Dj-GWpsxWE1ML-5lx3ZDwWd5AIEIyBLq"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="read-button">
+
+                <i class="fa-solid fa-book-open"></i>
+
+                &nbsp;
+
+                Read Now
+
+            </a>
+
+        </div>
+
+    </article>
+
+
+    <!--
+    =================================================
+
+    FUTURE FREE RESOURCE
+
+    Copy this entire article below whenever
+    you add another free resource.
+
+    =================================================
+    -->
+
+
+</div>
+
+    </div>
+
+</section>
+
+  <footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-tagline">
+
+            LEARN • CREATE • GROW
+
+        </div>
+
+        <p>
+
+            © 2026 TheBestBundle. All Rights Reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+
+  <script>
+
+function returnToPreviousPage(){
+
+    if(window.history.length > 1){
+
+        window.history.back();
+
+    }else{
+
+        window.location.href =
+            "index.html";
+
+    }
+
+}
+
+</script>
+
+  </body>
+
+</html>
+  
