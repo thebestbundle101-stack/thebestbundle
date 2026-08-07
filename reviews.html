@@ -1,1 +1,688 @@
 
+<!-- =========================================
+     PART 19 — REVIEWS PAGE
+     CREATE A NEW FILE: reviews.html
+========================================= -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+<title>
+    Reviews | TheBestBundle
+</title>
+
+<meta
+    name="description"
+    content="Read customer reviews and experiences with TheBestBundle digital products and resources.">
+
+<meta
+    name="theme-color"
+    content="#071A33">
+
+<link
+    rel="icon"
+    href="/thebestbundle/images/favicon.ico"
+    type="image/x-icon">
+
+<link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="/thebestbundle/images/favicon.png">
+
+<link
+    rel="apple-touch-icon"
+    href="/thebestbundle/images/favicon.png">
+
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+<style>
+
+:root{
+    --navy:#071A33;
+    --gold:#F4C542;
+    --gold-dark:#D9A91A;
+    --white:#FFFFFF;
+    --off-white:#F8FAFC;
+    --text-gray:#64748B;
+    --border:#E2E8F0;
+    --max-width:1100px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:var(--off-white);
+    color:var(--navy);
+    line-height:1.6;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+button,
+input,
+textarea{
+    font:inherit;
+}
+
+button{
+    cursor:pointer;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+.container{
+    width:90%;
+    max-width:var(--max-width);
+    margin:0 auto;
+}
+
+
+/* HEADER */
+
+.page-header{
+    background:var(--navy);
+    color:var(--white);
+}
+
+.header-inner{
+    min-height:90px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.header-logo img{
+    height:70px;
+    width:auto;
+}
+
+.home-button{
+    width:46px;
+    height:46px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:8px;
+    color:var(--white);
+    font-size:23px;
+}
+
+.home-button:hover{
+    background:rgba(255,255,255,.08);
+    color:var(--gold);
+}
+
+
+/* BACK */
+
+.back-row{
+    background:var(--white);
+    border-bottom:1px solid var(--border);
+}
+
+.back-inner{
+    min-height:60px;
+    display:flex;
+    align-items:center;
+}
+
+.back-button{
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    border:none;
+    background:transparent;
+    color:var(--navy);
+    font-weight:700;
+}
+
+.back-button:hover{
+    color:var(--gold-dark);
+}
+
+
+/* HERO */
+
+.reviews-hero{
+    padding:75px 0 85px;
+    background:var(--navy);
+    color:var(--white);
+    text-align:center;
+}
+
+.reviews-hero span{
+    display:block;
+    margin-bottom:15px;
+    color:var(--gold);
+    font-size:14px;
+    font-weight:800;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.reviews-hero h1{
+    font-size:clamp(40px,7vw,64px);
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.reviews-hero p{
+    max-width:680px;
+    margin:0 auto;
+    color:rgba(255,255,255,.82);
+    font-size:18px;
+}
+
+
+/* REVIEW AREA */
+
+.reviews-section{
+    padding:85px 0;
+}
+
+.reviews-heading{
+    max-width:720px;
+    margin:0 auto 45px;
+    text-align:center;
+}
+
+.reviews-heading h2{
+    font-size:clamp(30px,5vw,44px);
+    margin-bottom:14px;
+}
+
+.reviews-heading p{
+    color:var(--text-gray);
+    font-size:17px;
+}
+
+.review-placeholder{
+    max-width:760px;
+    margin:0 auto;
+    padding:50px 30px;
+    background:var(--white);
+    border:1px solid var(--border);
+    border-radius:14px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(7,26,51,.06);
+}
+
+.review-placeholder-icon{
+    width:70px;
+    height:70px;
+    margin:0 auto 20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:var(--navy);
+    color:var(--gold);
+    font-size:29px;
+}
+
+.review-placeholder h3{
+    font-size:25px;
+    margin-bottom:12px;
+}
+
+.review-placeholder p{
+    max-width:580px;
+    margin:0 auto;
+    color:var(--text-gray);
+}
+
+
+/* REVIEW FORM */
+
+.review-form-section{
+    padding:85px 0;
+    background:var(--white);
+}
+
+.review-form-box{
+    max-width:760px;
+    margin:0 auto;
+    padding:40px;
+    border:1px solid var(--border);
+    border-radius:14px;
+    box-shadow:0 10px 30px rgba(7,26,51,.06);
+}
+
+.review-form-box h2{
+    text-align:center;
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.review-form-intro{
+    text-align:center;
+    color:var(--text-gray);
+    margin-bottom:30px;
+}
+
+.form-group{
+    margin-bottom:20px;
+}
+
+.form-group label{
+    display:block;
+    margin-bottom:7px;
+    font-weight:700;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select{
+    width:100%;
+    padding:14px 15px;
+    border:1px solid var(--border);
+    border-radius:8px;
+    background:var(--white);
+    color:var(--navy);
+    font-size:16px;
+}
+
+.form-group textarea{
+    min-height:140px;
+    resize:vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus{
+    outline:2px solid var(--gold);
+    border-color:var(--gold-dark);
+}
+
+.submit-review{
+    width:100%;
+    min-height:52px;
+    border:none;
+    border-radius:8px;
+    background:var(--gold);
+    color:var(--navy);
+    font-weight:900;
+}
+
+.submit-review:hover{
+    background:var(--gold-dark);
+}
+
+.review-note{
+    margin-top:15px;
+    text-align:center;
+    color:var(--text-gray);
+    font-size:13px;
+}
+
+
+/* FOOTER */
+
+.footer{
+    background:var(--navy);
+    color:var(--white);
+    padding:35px 0;
+    text-align:center;
+}
+
+.footer-tagline{
+    color:var(--gold);
+    font-weight:800;
+    letter-spacing:1px;
+    margin-bottom:7px;
+}
+
+.footer p{
+    color:rgba(255,255,255,.7);
+    font-size:13px;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:650px){
+
+    .reviews-hero{
+        padding:60px 0 70px;
+    }
+
+    .reviews-section,
+    .review-form-section{
+        padding:65px 0;
+    }
+
+    .review-form-box{
+        padding:30px 20px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header class="page-header">
+
+    <div class="container header-inner">
+
+        <a
+            href="index.html"
+            class="header-logo">
+
+            <img
+                src="images/logo.png"
+                alt="TheBestBundle">
+
+        </a>
+
+        <a
+            href="index.html"
+            class="home-button"
+            aria-label="Return home">
+
+            <i class="fa-solid fa-house"></i>
+
+        </a>
+
+    </div>
+
+</header>
+
+
+<div class="back-row">
+
+    <div class="container back-inner">
+
+        <button
+            type="button"
+            class="back-button"
+            onclick="returnToPreviousPage()">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Back
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<main>
+
+
+<section class="reviews-hero">
+
+    <div class="container">
+
+        <span>
+            Customer Experiences
+        </span>
+
+        <h1>
+            Reviews
+        </h1>
+
+        <p>
+            Customer feedback helps future visitors
+            learn more about their experience with
+            TheBestBundle products and resources.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="reviews-section">
+
+    <div class="container">
+
+        <div class="reviews-heading">
+
+            <h2>
+                Customer Reviews
+            </h2>
+
+            <p>
+                Verified customer reviews will appear
+                here as our community grows.
+            </p>
+
+        </div>
+
+
+        <div class="review-placeholder">
+
+            <div class="review-placeholder-icon">
+
+                <i class="fa-solid fa-star"></i>
+
+            </div>
+
+            <h3>
+                Reviews Coming Soon
+            </h3>
+
+            <p>
+                We will publish genuine customer feedback
+                as it becomes available. TheBestBundle does
+                not use fabricated customer testimonials.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="review-form-section">
+
+    <div class="container">
+
+        <div class="review-form-box">
+
+            <h2>
+                Share Your Experience
+            </h2>
+
+            <p class="review-form-intro">
+                Purchased or used a TheBestBundle resource?
+                Send us your feedback.
+            </p>
+
+
+            <form
+                action="https://formspree.io/f/xkodngya"
+                method="POST">
+
+
+                <input
+                    type="hidden"
+                    name="form_type"
+                    value="Customer Review">
+
+
+                <div class="form-group">
+
+                    <label for="reviewName">
+                        Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="reviewName"
+                        name="name"
+                        placeholder="Your name"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="reviewEmail">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="reviewEmail"
+                        name="email"
+                        placeholder="Your email address"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="reviewRating">
+                        Rating
+                    </label>
+
+                    <select
+                        id="reviewRating"
+                        name="rating"
+                        required>
+
+                        <option value="">
+                            Select a rating
+                        </option>
+
+                        <option value="5 Stars">
+                            ★★★★★ — 5 Stars
+                        </option>
+
+                        <option value="4 Stars">
+                            ★★★★ — 4 Stars
+                        </option>
+
+                        <option value="3 Stars">
+                            ★★★ — 3 Stars
+                        </option>
+
+                        <option value="2 Stars">
+                            ★★ — 2 Stars
+                        </option>
+
+                        <option value="1 Star">
+                            ★ — 1 Star
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="reviewMessage">
+                        Your Review
+                    </label>
+
+                    <textarea
+                        id="reviewMessage"
+                        name="review"
+                        placeholder="Tell us about your experience..."
+                        required></textarea>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="submit-review">
+
+                    Submit Review
+
+                </button>
+
+
+                <p class="review-note">
+                    Reviews may be checked before being
+                    displayed publicly.
+                </p>
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-tagline">
+            LEARN • CREATE • GROW
+        </div>
+
+        <p>
+            © 2026 TheBestBundle. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+function returnToPreviousPage(){
+
+    if(window.history.length > 1){
+
+        window.history.back();
+
+    }else{
+
+        window.location.href =
+            'index.html';
+
+    }
+
+}
+
+</script>
+
+
+</body>
+
+</html>
