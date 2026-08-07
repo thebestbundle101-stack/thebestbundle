@@ -1,1 +1,79 @@
+/* CONTINUE DONATION */
 
+document
+    .getElementById('donateButton')
+    .addEventListener(
+        'click',
+        function(){
+
+            if(!donationAmount || donationAmount < 1){
+
+                alert(
+                    'Please select or enter a donation amount.'
+                );
+
+                return;
+
+            }
+
+            const donationData = {
+
+                frequency: donationFrequency,
+
+                amount: donationAmount,
+
+                name: document
+                    .getElementById('donorName')
+                    .value,
+
+                email: document
+                    .getElementById('donorEmail')
+                    .value
+
+            };
+
+            sessionStorage.setItem(
+                'theBestBundleDonation',
+                JSON.stringify(donationData)
+            );
+
+
+            /* STRIPE CHECKOUT */
+
+            let stripeLink = "";
+
+            if(donationAmount === 1){
+
+                stripeLink =
+                "https://buy.stripe.com/4gM9AV648gOQeDJ5uH8N20e";
+
+            }
+
+            else if(donationAmount === 5){
+
+                stripeLink =
+                "https://buy.stripe.com/5kQcN72RWbuw1QXcX98N20f";
+
+            }
+
+            else if(donationAmount === 25){
+
+                stripeLink =
+                "https://buy.stripe.com/3cI5kFbos0PS67d6yL8N20h";
+
+            }
+
+            else{
+
+                alert(
+                    "Custom donation amounts are coming soon. Please choose one of the available donation options."
+                );
+
+                return;
+
+            }
+
+            window.location.href = stripeLink;
+
+        }
+    );
