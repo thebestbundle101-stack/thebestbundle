@@ -1,1 +1,947 @@
+<!-- =========================================
+     PART 25 — FAQ PAGE
+     CREATE A NEW FILE: faq.html
+========================================= -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+<title>FAQ | TheBestBundle</title>
+
+<meta
+    name="description"
+    content="Frequently asked questions about TheBestBundle digital products, downloads, payments, licenses and support.">
+
+<meta
+    name="theme-color"
+    content="#071A33">
+
+<link
+    rel="icon"
+    href="/thebestbundle/images/favicon.ico"
+    type="image/x-icon">
+
+<link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="/thebestbundle/images/favicon.png">
+
+<link
+    rel="apple-touch-icon"
+    href="/thebestbundle/images/favicon.png">
+
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+<style>
+
+:root{
+    --navy:#071A33;
+    --gold:#F4C542;
+    --gold-dark:#D9A91A;
+    --white:#FFFFFF;
+    --off-white:#F8FAFC;
+    --gray:#64748B;
+    --border:#E2E8F0;
+    --max-width:900px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:var(--off-white);
+    color:var(--navy);
+    line-height:1.6;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+button{
+    font:inherit;
+    cursor:pointer;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+.container{
+    width:90%;
+    max-width:var(--max-width);
+    margin:auto;
+}
+
+
+/* HEADER */
+
+.page-header{
+    background:var(--navy);
+    color:var(--white);
+}
+
+.header-inner{
+    min-height:90px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.header-logo img{
+    height:70px;
+    width:auto;
+}
+
+.home-button{
+    width:46px;
+    height:46px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:8px;
+    color:var(--white);
+    font-size:23px;
+}
+
+.home-button:hover{
+    color:var(--gold);
+    background:rgba(255,255,255,.08);
+}
+
+
+/* BACK */
+
+.back-row{
+    background:var(--white);
+    border-bottom:1px solid var(--border);
+}
+
+.back-inner{
+    min-height:60px;
+    display:flex;
+    align-items:center;
+}
+
+.back-button{
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    border:none;
+    background:transparent;
+    color:var(--navy);
+    font-weight:800;
+}
+
+.back-button:hover{
+    color:var(--gold-dark);
+}
+
+
+/* HERO */
+
+.faq-hero{
+    padding:70px 0;
+    background:var(--navy);
+    color:var(--white);
+    text-align:center;
+}
+
+.faq-icon{
+    width:70px;
+    height:70px;
+    margin:0 auto 20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:var(--gold);
+    color:var(--navy);
+    font-size:30px;
+}
+
+.faq-hero h1{
+    font-size:clamp(40px,7vw,60px);
+    line-height:1.1;
+    margin-bottom:17px;
+}
+
+.faq-hero h1 span{
+    color:var(--gold);
+}
+
+.faq-hero p{
+    max-width:650px;
+    margin:auto;
+    color:rgba(255,255,255,.8);
+    font-size:17px;
+}
+
+
+/* FAQ */
+
+.faq-section{
+    padding:75px 0 90px;
+}
+
+.faq-heading{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.faq-heading h2{
+    font-size:clamp(29px,5vw,40px);
+    margin-bottom:10px;
+}
+
+.faq-heading p{
+    color:var(--gray);
+}
+
+
+/* ACCORDION */
+
+.faq-list{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+
+.faq-item{
+    overflow:hidden;
+    background:var(--white);
+    border:1px solid var(--border);
+    border-radius:11px;
+}
+
+.faq-question{
+    width:100%;
+    min-height:70px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    padding:18px 22px;
+    border:none;
+    background:var(--white);
+    color:var(--navy);
+    text-align:left;
+    font-weight:800;
+    font-size:16px;
+}
+
+.faq-question:hover{
+    background:#FFFBEB;
+}
+
+.faq-question i{
+    color:var(--gold-dark);
+    transition:transform .25s ease;
+}
+
+.faq-item.active .faq-question i{
+    transform:rotate(180deg);
+}
+
+.faq-answer{
+    display:none;
+    padding:0 22px 22px;
+    color:#475569;
+}
+
+.faq-answer p{
+    margin-bottom:10px;
+}
+
+.faq-answer p:last-child{
+    margin-bottom:0;
+}
+
+.faq-item.active .faq-answer{
+    display:block;
+}
+
+
+/* CONTACT CTA */
+
+.faq-contact{
+    padding:70px 0;
+    background:var(--white);
+    text-align:center;
+}
+
+.faq-contact h2{
+    font-size:clamp(28px,5vw,39px);
+    margin-bottom:12px;
+}
+
+.faq-contact p{
+    max-width:620px;
+    margin:0 auto 25px;
+    color:var(--gray);
+}
+
+.contact-button{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
+    min-height:50px;
+    padding:12px 28px;
+    border-radius:8px;
+    background:var(--gold);
+    color:var(--navy);
+    font-weight:900;
+}
+
+.contact-button:hover{
+    background:var(--gold-dark);
+}
+
+
+/* FOOTER */
+
+.footer{
+    padding:35px 0;
+    background:var(--navy);
+    color:var(--white);
+    text-align:center;
+}
+
+.footer-tagline{
+    margin-bottom:7px;
+    color:var(--gold);
+    font-weight:800;
+    letter-spacing:1px;
+}
+
+.footer p{
+    color:rgba(255,255,255,.7);
+    font-size:13px;
+}
+
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+    .faq-hero{
+        padding:55px 0;
+    }
+
+    .faq-section{
+        padding:60px 0 70px;
+    }
+
+    .faq-question{
+        padding:17px;
+        font-size:15px;
+    }
+
+    .faq-answer{
+        padding:0 17px 20px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header class="page-header">
+
+<div class="container header-inner">
+
+    <a
+        href="index.html"
+        class="header-logo">
+
+        <img
+            src="images/logo.png"
+            alt="TheBestBundle">
+
+    </a>
+
+
+    <a
+        href="index.html"
+        class="home-button"
+        aria-label="Return home">
+
+        <i class="fa-solid fa-house"></i>
+
+    </a>
+
+</div>
+
+</header>
+
+
+<div class="back-row">
+
+<div class="container back-inner">
+
+    <button
+        type="button"
+        class="back-button"
+        onclick="returnToPreviousPage()">
+
+        <i class="fa-solid fa-arrow-left"></i>
+
+        Back
+
+    </button>
+
+</div>
+
+</div>
+
+
+<section class="faq-hero">
+
+<div class="container">
+
+    <div class="faq-icon">
+
+        <i class="fa-solid fa-circle-question"></i>
+
+    </div>
+
+    <h1>
+        Frequently Asked
+        <span>Questions</span>
+    </h1>
+
+    <p>
+        Find answers to common questions about
+        TheBestBundle products, payments,
+        downloads and licenses.
+    </p>
+
+</div>
+
+</section>
+
+
+<main class="faq-section">
+
+<div class="container">
+
+
+    <div class="faq-heading">
+
+        <h2>
+            How Can We Help?
+        </h2>
+
+        <p>
+            Tap a question below to view the answer.
+        </p>
+
+    </div>
+
+
+    <div class="faq-list">
+
+
+        <!-- QUESTION 1 -->
+
+        <div class="faq-item">
+
+            <button
+                type="button"
+                class="faq-question">
+
+                <span>
+                    What is TheBestBundle?
+                </span>
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </button>
+
+            <div class="faq-answer">
+
+                <p>
+                    TheBestBundle is a digital resource
+                    platform offering professionally designed
+                    eBooks, templates, planners, bundles and
+                    other digital resources.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- QUESTION 2 -->
+
+        <div class="faq-item">
+
+            <button
+                type="button"
+                class="faq-question">
+
+                <span>
+                    Are your products digital?
+                </span>
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </button>
+
+            <div class="faq-answer">
+
+                <p>
+                    Yes. Unless a product is specifically
+                    identified as physical merchandise,
+                    products sold directly by TheBestBundle
+                    are digital products.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- QUESTION 3 -->
+
+        <div class="faq-item">
+
+            <button
+                type="button"
+                class="faq-question">
+
+                <span>
+                    How do I receive my digital product?
+                </span>
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </button>
+
+            <div class="faq-answer">
+
+                <p>
+                    Access or delivery information is
+                    provided according to the delivery
+                    method connected to the product
+                    you purchase.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- QUESTION 4 -->
+
+        <div class="faq-item">
+
+            <button
+                type="button"
+                class="faq-question">
+
+                <span>
+                    What payment processor does TheBestBundle use?
+                </span>
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </button>
+
+            <div class="faq-answer">
+
+                <p>
+                    Eligible online payments are processed
+                    securely through Stripe.
+                </p>
+
+                <p>
+                    TheBestBundle does not directly store
+                    your complete credit or debit card
+                    number on its website checkout pages.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- QUESTION 5 -->
+
+        <div class="faq-item">
+
+            <button
+                type="button"
+                class="faq-question">
+
+                <span>
+                    What is a Resell Rights (RR) License?
+                </span>
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </button>
+
+            <div class="faq-answer">
+
+                <p>
+                    Certain TheBestBundle products include
+                    Resell Rights. When RR is included,
+                    the specific license supplied with
+                    that product explains what the buyer
+                    may and may not do with it.
+                </p>
+
+                <p>
+                    A product should not be assumed to
+                    include Resell Rights unless the
+                    product description or included
+                    license specifically states that it does.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- QUESTION 6 -->
+
+        <div class="faq-item">
+
+            <button
+                type="button"
+                class="faq-question">
+
+                <span>
+                    Can I print the eBooks and templates?
+                </span>
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </button>
+
+            <div class="faq-answer">
+
+                <p>
+                    Many of our digital resources are
+                    designed for digital use and home
+                    printing. Please review the individual
+                    product description and license for
+                    any product-specific restrictions.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- QUESTION 7 -->
+
+        <div class="faq-item">
+
+            <button
+                type="button"
+                class="faq-question">
+
+                <span>
+                    Can I buy more than one product?
+                </span>
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </button>
+
+            <div class="faq-answer">
+
+                <p>
+                    TheBestBundle is being designed with
+                    shopping cart functionality so customers
+                    can select multiple products before
+                    checkout where supported.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- QUESTION 8 -->
+
+        <div class="faq-item">
+
+            <button
+                type="button"
+                class="faq-question">
+
+                <span>
+                    Do you offer refunds?
+                </span>
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </button>
+
+            <div class="faq-answer">
+
+                <p>
+                    Because digital products can generally
+                    be accessed or downloaded immediately,
+                    refund eligibility may be limited.
+                </p>
+
+                <p>
+                    Please review our Refund Policy for
+                    the complete terms that apply to
+                    your purchase.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- QUESTION 9 -->
+
+        <div class="faq-item">
+
+            <button
+                type="button"
+                class="faq-question">
+
+                <span>
+                    Do you have a French collection?
+                </span>
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </button>
+
+            <div class="faq-answer">
+
+                <p>
+                    Yes. TheBestBundle includes a French
+                    collection alongside its growing
+                    English digital library.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- QUESTION 10 -->
+
+        <div class="faq-item">
+
+            <button
+                type="button"
+                class="faq-question">
+
+                <span>
+                    Will TheBestBundle offer courses?
+                </span>
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </button>
+
+            <div class="faq-answer">
+
+                <p>
+                    Courses are planned as part of the
+                    future expansion of TheBestBundle.
+                    Availability will be announced when
+                    courses are ready.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- QUESTION 11 -->
+
+        <div class="faq-item">
+
+            <button
+                type="button"
+                class="faq-question">
+
+                <span>
+                    Will you sell merchandise?
+                </span>
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </button>
+
+            <div class="faq-answer">
+
+                <p>
+                    TheBestBundle plans to introduce
+                    selected merchandise in the future.
+                    Physical products may be offered
+                    through independent third-party
+                    vendors or fulfillment partners.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- QUESTION 12 -->
+
+        <div class="faq-item">
+
+            <button
+                type="button"
+                class="faq-question">
+
+                <span>
+                    How can I contact TheBestBundle?
+                </span>
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </button>
+
+            <div class="faq-answer">
+
+                <p>
+                    You can use our Contact page for
+                    questions about products, purchases,
+                    downloads or general support.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</main>
+
+
+<section class="faq-contact">
+
+<div class="container">
+
+    <h2>
+        Still Have a Question?
+    </h2>
+
+    <p>
+        If you couldn't find the answer you need,
+        send us a message through our support page.
+    </p>
+
+    <a
+        href="contact.html"
+        class="contact-button">
+
+        <i class="fa-solid fa-envelope"></i>
+
+        Contact Us
+
+    </a>
+
+</div>
+
+</section>
+
+
+<footer class="footer">
+
+<div class="container">
+
+    <div class="footer-tagline">
+        LEARN • CREATE • GROW
+    </div>
+
+    <p>
+        © 2026 TheBestBundle. All Rights Reserved.
+    </p>
+
+</div>
+
+</footer>
+
+
+<script>
+
+
+/* FAQ ACCORDION */
+
+document
+    .querySelectorAll('.faq-question')
+    .forEach(function(question){
+
+        question.addEventListener(
+            'click',
+            function(){
+
+                const item =
+                    this.parentElement;
+
+                item.classList.toggle(
+                    'active'
+                );
+
+            }
+        );
+
+    });
+
+
+/* RETURN TO PREVIOUS PAGE */
+
+function returnToPreviousPage(){
+
+    if(window.history.length > 1){
+
+        window.history.back();
+
+    }else{
+
+        window.location.href =
+            'index.html';
+
+    }
+
+}
+
+</script>
+
+
+</body>
+
+</html>
 
