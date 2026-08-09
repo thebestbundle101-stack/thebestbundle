@@ -773,41 +773,28 @@ const checkoutButton = document.getElementById('checkoutButton');
 
 if (checkoutButton) {
 
-    checkoutButton.addEventListener('click', async function () {
+    checkoutButton.addEventListener('click', function () {
 
-        if (ebookCart.length === 0) {
-            alert('Your cart is empty.');
-            return;
-        }
+    if (ebookCart.length === 0) {
+        alert('Your cart is empty.');
+        return;
+    }
 
-        try {
+    const starterBundle = ebookCart.find(
+        item => item.id === 'starter-bundle'
+    );
 
-            const response = await fetch('/api/create-checkout-session', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    items: ebookCart
-                })
-            });
+    if (starterBundle) {
 
-            const data = await response.json();
+        window.location.href =
+            'https://buy.stripe.com/28E6oJ504fKMfHNf5h8N20p';
 
-            if (data.url) {
-                window.location.href = data.url;
-            } else {
-                alert('Checkout failed.');
-            }
+        return;
+    }
 
-        } catch (error) {
+    alert('This product is not available for checkout yet.');
 
-            console.error(error);
-            alert('Checkout failed.');
-
-        }
-
-    });
+});
 
 }
      
