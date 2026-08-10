@@ -293,11 +293,7 @@ button{
   padding:0 9px
  }
 
- .header-tool.news{
-  display:none
  }
-
-}
 
 @media(max-width:760px){
 
@@ -325,9 +321,9 @@ button{
   flex-shrink:0
  }
 
- .header-tool:not(.icon){
-  display:none
- }
+.header-tool:not(.icon):not(.news){
+    display:none
+}
 
  .desktop-nav a:first-child:after{
   bottom:-18px
