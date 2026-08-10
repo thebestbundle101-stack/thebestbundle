@@ -1073,27 +1073,82 @@ function matchesProduct(
     query
 ){
 
-    const text = (
+    const searchQuery =
+        query
+        .toLowerCase()
+        .trim();
+
+
+    const category =
+        product.category
+        .toLowerCase()
+        .trim();
+
+
+    /*
+     * Category searches stay inside
+     * their correct product category.
+     */
+
+    const categoryMap = {
+
+        "ebooks":"ebooks",
+        "ebook":"ebooks",
+
+        "templates":"templates",
+        "template":"templates",
+
+        "bundles":"bundles",
+        "bundle":"bundles",
+
+        "courses":"courses",
+        "course":"courses",
+
+        "merchandise":"merchandise",
+        "merch":"merchandise",
+
+        "free resources":"free resources",
+        "free resource":"free resources",
+
+        "french collection":"french collection",
+        "french":"french collection"
+
+    };
+
+
+    if(categoryMap[searchQuery]){
+
+        return category ===
+            categoryMap[searchQuery];
+
+    }
+
+
+    /*
+     * Normal searches can search
+     * across the entire collection.
+     */
+
+    const searchableText = (
 
         product.title +
         " " +
-        product.category +
+        product.description +
         " " +
-        product.description
+        product.category
 
     ).toLowerCase();
 
 
     const words =
-        query
-            .toLowerCase()
-            .split(/\s+/)
-            .filter(Boolean);
+        searchQuery
+        .split(/\s+/)
+        .filter(Boolean);
 
 
     return words.every(
         word =>
-            text.includes(word)
+            searchableText.includes(word)
     );
 
 }
