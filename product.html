@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+<title>Product | TheBestBundle</title>
+
+<meta
+    name="description"
+    content="Explore premium digital products from TheBestBundle.">
+
+<link
+    rel="preconnect"
+    href="https://fonts.googleapis.com">
+
+<link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+<style>
+
+:root{
+    --navy:#071A33;
+    --navy2:#0D2B50;
+    --gold:#F4C542;
+    --gold-dark:#D9A91A;
+    --white:#FFFFFF;
+    --off:#F7F9FC;
+    --text:#142033;
+    --muted:#657184;
+    --border:#D9E0E8;
+}
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+
+    font-family:
+        Inter,
+        Arial,
+        sans-serif;
+
+    background:var(--off);
+
+    color:var(--text);
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+
+/* HEADER */
+
+.header{
+    background:var(--navy);
+    color:white;
+    padding:18px 20px;
+}
+
+.header-inner{
+    max-width:1180px;
+    margin:auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    color:white;
+    font-size:21px;
+    font-weight:800;
+}
+
+.logo span{
+    color:var(--gold);
+}
+
+.header-actions{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.header-icon{
+    width:45px;
+    height:45px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:white;
+
+    border-radius:8px;
+
+    font-size:21px;
+}
+
+.header-icon:hover{
+    color:var(--gold);
+    background:rgba(255,255,255,.08);
+}
+
+.cart-icon{
+    position:relative;
+}
+
+.cart-count{
+    position:absolute;
+
+    top:-2px;
+    right:-3px;
+
+    min-width:19px;
+    height:19px;
+
+    padding:0 5px;
+
+    border-radius:30px;
+
+    background:var(--gold);
+
+    color:var(--navy);
+
+    font-size:11px;
+
+    font-weight:800;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+
+/* BACK */
+
+.back-row{
+    background:white;
+    border-bottom:1px solid var(--border);
+}
+
+.back-inner{
+    max-width:1180px;
+    margin:auto;
+
+    padding:18px 20px;
+}
+
+.back-link{
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+
+    font-weight:800;
+    color:var(--navy);
+}
+
+
+/* PRODUCT */
+
+.product-section{
+    max-width:1180px;
+
+    margin:auto;
+
+    padding:
+        60px 20px 90px;
+}
+
+.product-box{
+    background:white;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 15px 45px
+        rgba(7,26,51,.08);
+
+    display:grid;
+
+    grid-template-columns:
+        1fr 1fr;
+}
+
+
+/* IMAGE */
+
+.product-image{
+    min-height:650px;
+
+    background:#f8fafc;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:50px;
+}
+
+.product-image img{
+    width:100%;
+    max-width:480px;
+    max-height:560px;
+
+    object-fit:contain;
+}
+
+
+/* INFO */
+
+.product-info{
+    padding:55px 50px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.product-category{
+    color:var(--gold-dark);
+
+    font-size:13px;
+
+    font-weight:800;
+
+    letter-spacing:1.7px;
+
+    text-transform:uppercase;
+
+    margin-bottom:14px;
+}
+
+.product-info h1{
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(38px,5vw,58px);
+
+    line-height:1.08;
+
+    margin:
+        0 0 22px;
+
+    color:var(--navy);
+}
+
+.product-description{
+    color:var(--muted);
+
+    font-size:17px;
+
+    line-height:1.75;
+
+    margin:
+        0 0 25px;
+}
+
+.product-price{
+    font-size:34px;
+
+    font-weight:800;
+
+    color:var(--navy);
+
+    margin-bottom:28px;
+}
+
+.free-price{
+    color:#14833b;
+}
+
+
+/* BUTTONS */
+
+.product-actions{
+    display:grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:12px;
+}
+
+.btn{
+    min-height:55px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:9px;
+
+    font-size:16px;
+
+    font-weight:800;
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:12px 18px;
+}
+
+.buy-button{
+    background:var(--gold);
+    color:var(--navy);
+}
+
+.buy-button:hover{
+    background:#ffd35c;
+}
+
+.cart-button{
+    background:var(--navy);
+    color:white;
+}
+
+.cart-button:hover{
+    background:#0d274d;
+}
+
+.read-button{
+    background:var(--gold);
+    color:var(--navy);
+}
+
+.read-button:hover{
+    background:#ffd35c;
+}
+
+
+/* MESSAGE */
+
+.cart-message{
+    min-height:24px;
+
+    margin-top:16px;
+
+    color:#14833b;
+
+    font-weight:700;
+
+    text-align:center;
+}
+
+
+/* FOOTER */
+
+.footer{
+    background:var(--navy);
+
+    color:#dce5ef;
+
+    text-align:center;
+
+    padding:35px 20px;
+
+    font-size:14px;
+}
+
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+    .product-box{
+        grid-template-columns:1fr;
+    }
+
+    .product-image{
+        min-height:450px;
+    }
+
+    .product-info{
+        padding:
+            40px 30px 45px;
+    }
+
+}
+
+
+@media(max-width:600px){
+
+    .product-section{
+        padding:
+            30px 15px 60px;
+    }
+
+    .product-image{
+        min-height:390px;
+        padding:30px;
+    }
+
+    .product-info{
+        padding:
+            35px 25px 40px;
+    }
+
+    .product-info h1{
+        font-size:40px;
+    }
+
+    .product-actions{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header class="header">
+
+    <div class="header-inner">
+
+        <a
+            href="index.html"
+            class="logo">
+
+            TheBest<span>Bundle</span>
+
+        </a>
+
+
+        <div class="header-actions">
+
+            <a
+                href="cart.html"
+                class="header-icon cart-icon"
+                aria-label="Shopping Cart">
+
+                <i
+                    class="fa-solid fa-cart-shopping">
+                </i>
+
+                <span
+                    class="cart-count"
+                    id="cartCount">
+
+                    0
+
+                </span>
+
+            </a>
+
+
+            <a
+                href="index.html"
+                class="header-icon"
+                aria-label="Home">
+
+                <i
+                    class="fa-solid fa-house">
+                </i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<div class="back-row">
+
+    <div class="back-inner">
+
+        <a
+            href="javascript:history.back()"
+            class="back-link">
+
+            <i
+                class="fa-solid fa-arrow-left">
+            </i>
+
+            Back
+
+        </a>
+
+    </div>
+
+</div>
+
+
+<main class="product-section">
+
+    <div
+        class="product-box"
+        id="productBox">
+
+        <!-- Filled by JavaScript -->
+
+    </div>
+
+</main>
+
+
+<footer class="footer">
+
+    © 2026 TheBestBundle. All Rights Reserved.
+
+</footer>
+
+
+<script>
+
+
+/* =========================================
+   PRODUCT DATABASE
+========================================= */
+
+const products = {
+
+    "look-20-years-younger":{
+
+        title:
+        "How to Look 20 Years Younger Than Your Age",
+
+        category:"Premium eBook",
+
+        price:17,
+
+        image:
+        "images/How-to-Look-20-Years-Younger-Than-Your-Age.png",
+
+        description:
+        "A 30-page premium guide featuring practical, science-informed strategies for nutrition, skincare, movement, sleep and healthy aging. Includes Resell Rights.",
+
+        stripe:
+        "https://buy.stripe.com/8x228tcswgOQeDJe1d8N20i",
+
+        priceId:
+        "price_1TtXCXRtp4gVtODyNK9vhXIm",
+
+        cartId:
+        "look-20-years-younger",
+
+        type:"paid"
+
+    },
+
+
+    "natural-anti-aging":{
+
+        title:
+        "The Natural Anti-Aging Guide",
+
+        category:"Premium eBook",
+
+        price:17,
+
+        image:
+        "images/The-Natural-Anti-Aging-Guide.png",
+
+        description:
+        "A 30-page wellness guide covering nutrition, hydration, exercise, sleep, stress management, skincare and healthy daily habits. Includes Resell Rights.",
+
+        stripe:
+        "https://buy.stripe.com/eVqfZj1NS5681QX2iv8N20k",
+
+        priceId:
+        "price_1TupuwRtp4gVtODyHnJCanv1",
+
+        cartId:
+        "natural-anti-aging",
+
+        type:"paid"
+
+    },
+
+
+    "longevity-blueprint":{
+
+        title:
+        "The Longevity Blueprint",
+
+        category:"Premium eBook",
+
+        price:17,
+
+        image:
+        "images/the-longevity-blueprint-cover.png",
+
+        description:
+        "A practical guide to sustainable habits for a longer, healthier and stronger life, including nutrition, movement, sleep, mindset and prevention. Includes Resell Rights.",
+
+        stripe:
+        "https://buy.stripe.com/00w7sN3W08ik8flaP18N20q",
+
+        priceId:
+        "price_1TxiMYRtp4gVtODy5zcyFkVG",
+
+        cartId:
+        "longevity-blueprint",
+
+        type:"paid"
+
+    },
+
+
+    "30-day-wellness-planner":{
+
+        title:
+        "30-Day Wellness Planner",
+
+        category:"Printable Template",
+
+        price:9,
+
+        image:
+        "images/30-Day-Wellness-Planner.png",
+
+        description:
+        "A 15-page printable wellness planner with goal setting, healthy habit trackers, daily logs and self-care worksheets.",
+
+        stripe:
+        "https://buy.stripe.com/8x228t1NSbuwdzF8GT8N20l",
+
+        priceId:
+        "price_1TvBJbRtp4gVtODyrjej3HJB",
+
+        cartId:
+        "30-day-wellness-planner",
+
+        type:"paid"
+
+    },
+
+
+    "healthy-meal-planner":{
+
+        title:
+        "The Healthy Meal Planner",
+
+        category:"Printable Template",
+
+        price:9,
+
+        image:
+        "images/The-Healthy-Meal-Planner.png",
+
+        description:
+        "A 15-page printable meal planner with weekly meal plans, grocery lists, nutrition trackers, healthy recipes and hydration logs.",
+
+        stripe:
+        "https://buy.stripe.com/bJe9AV8cgeGIbrxf5h8N20m",
+
+        priceId:
+        "price_1TvUP9Rtp4gVtODyGkcBsA4M",
+
+        cartId:
+        "healthy-meal-planner",
+
+        type:"paid"
+
+    },
+
+
+    "fitness-activity-tracker":{
+
+        title:
+        "Fitness & Activity Tracker",
+
+        category:"Printable Template",
+
+        price:9,
+
+        image:
+        "images/Fitness-&-Activity-Tracker.png",
+
+        description:
+        "A 15-page printable fitness planner featuring workout logs, fitness goals, cardio, hydration, habit tracking and body measurements.",
+
+        stripe:
+        "https://buy.stripe.com/7sYbJ38cgfKMgLRe1d8N20n",
+
+        priceId:
+        "price_1TwIUbRtp4gVtODyic0F839X",
+
+        cartId:
+        "fitness-activity-tracker",
+
+        type:"paid"
+
+    },
+
+
+    "self-care-habit-journal":{
+
+        title:
+        "Self-Care & Habit Journal",
+
+        category:"Printable Template",
+
+        price:9,
+
+        image:
+        "images/Self-Care-Habit-Journal-Cover.png",
+
+        description:
+        "A 15-page printable self-care planner with habit trackers, mood journal, gratitude pages, wellness goals and weekly reflections. Includes Resell Rights.",
+
+        stripe:
+        "https://buy.stripe.com/6oU9AVgIMaqs3Z56yL8N20o",
+
+        priceId:
+        "price_1TwaNvRtp4gVtODylH8f7MZZ",
+
+        cartId:
+        "self-care-habit-journal",
+
+        type:"paid"
+
+    },
+
+
+    "starter-bundle":{
+
+        title:
+        "Starter Bundle",
+
+        category:"Digital Bundle",
+
+        price:27,
+
+        image:
+        "images/starter-bundle.png",
+
+        description:
+        "A complete starter collection of premium health and wellness digital resources. Includes 2 Premium eBooks + 4 Professional Templates and Resell Rights.",
+
+        stripe:
+        "https://buy.stripe.com/28E6oJ504fKMfHNf5h8N20p",
+
+        priceId:
+        "price_1TweJORtp4gVtODymXOzvXjB",
+
+        cartId:
+        "starter-bundle",
+
+        type:"paid"
+
+    },
+
+
+    "welcome-guide":{
+
+        title:
+        "Welcome to TheBestBundle",
+
+        category:"Free Resource",
+
+        price:0,
+
+        image:
+        "images/Welcome-to-TheBestBundle.png",
+
+        description:
+        "Start your journey with our official 15-page Welcome Guide.",
+
+        freeUrl:
+        "https://drive.google.com/file/d/1Dj-GWpsxWE1ML-5lx3ZDwWd5AIEIyBLq",
+
+        type:"free"
+
+    }
+
+};
+
+
+/* =========================================
+   GET PRODUCT
+========================================= */
+
+const params =
+    new URLSearchParams(
+        window.location.search
+    );
+
+
+const productId =
+    params.get("id");
+
+
+const product =
+    products[productId];
+
+
+const productBox =
+    document.getElementById(
+        "productBox"
+    );
+
+
+/* =========================================
+   ESCAPE
+========================================= */
+
+function escapeHtml(text){
+
+    return String(text)
+
+        .replace(/&/g,"&amp;")
+
+        .replace(/</g,"&lt;")
+
+        .replace(/>/g,"&gt;")
+
+        .replace(/"/g,"&quot;")
+
+        .replace(/'/g,"&#039;");
+
+}
+
+
+/* =========================================
+   INVALID PRODUCT
+========================================= */
+
+if(!product){
+
+    productBox.innerHTML = `
+
+        <div
+            style="
+                grid-column:1/-1;
+                padding:80px 30px;
+                text-align:center;
+            ">
+
+            <h1>
+                Product Not Found
+            </h1>
+
+            <p>
+                We couldn't find this product.
+            </p>
+
+            <a
+                href="index.html"
+                style="
+                    display:inline-flex;
+                    margin-top:20px;
+                    padding:14px 25px;
+                    background:#F4C542;
+                    color:#071A33;
+                    border-radius:8px;
+                    font-weight:800;
+                ">
+
+                Back to Home
+
+            </a>
+
+        </div>
+
+    `;
+
+}
+
+
+/* =========================================
+   DISPLAY PRODUCT
+========================================= */
+
+else{
+
+    document.title =
+        product.title +
+        " | TheBestBundle";
+
+
+    const isFree =
+        product.type === "free";
+
+
+    const priceText =
+        isFree
+        ? "Free"
+        : `$${product.price}`;
+
+
+    const priceClass =
+        isFree
+        ? "free-price"
+        : "";
+
+
+    productBox.innerHTML = `
+
+        <div class="product-image">
+
+            <img
+                src="${escapeHtml(product.image)}"
+                alt="${escapeHtml(product.title)}">
+
+        </div>
+
+
+        <div class="product-info">
+
+            <div class="product-category">
+
+                ${escapeHtml(product.category)}
+
+            </div>
+
+
+            <h1>
+
+                ${escapeHtml(product.title)}
+
+            </h1>
+
+
+            <p class="product-description">
+
+                ${escapeHtml(product.description)}
+
+            </p>
+
+
+            <div
+                class="product-price ${priceClass}">
+
+                ${priceText}
+
+            </div>
+
+
+            ${
+                isFree
+
+                ?
+
+                `
+
+                <div class="product-actions">
+
+                    <a
+                        href="${product.freeUrl}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn read-button">
+
+                        <i
+                            class="fa-solid fa-book-open"
+                            style="margin-right:8px;">
+                        </i>
+
+                        Read Now
+
+                    </a>
+
+                </div>
+
+                `
+
+                :
+
+                `
+
+                <div class="product-actions">
+
+                    <a
+                        href="${product.stripe}"
+                        class="btn buy-button">
+
+                        Buy Now
+
+                    </a>
+
+
+                    <button
+                        type="button"
+                        class="btn cart-button"
+                        id="addToCart">
+
+                        Add to Cart
+
+                    </button>
+
+                </div>
+
+
+                <div
+                    class="cart-message"
+                    id="cartMessage">
+                </div>
+
+                `
+            }
+
+        </div>
+
+    `;
+
+
+    /* =========================================
+       CART
+    ========================================= */
+
+    if(!isFree){
+
+        let cart =
+            JSON.parse(
+                localStorage.getItem(
+                    "theBestBundleCart"
+                )
+            ) || [];
+
+
+        function updateCartCount(){
+
+            document.getElementById(
+                "cartCount"
+            ).textContent =
+                cart.length;
+
+        }
+
+
+        const addButton =
+            document.getElementById(
+                "addToCart"
+            );
+
+
+        const cartMessage =
+            document.getElementById(
+                "cartMessage"
+            );
+
+
+        addButton.addEventListener(
+            "click",
+            function(){
+
+                const item = {
+
+                    id:product.cartId,
+
+                    name:product.title,
+
+                    price:Number(
+                        product.price
+                    ),
+
+                    image:product.image,
+
+                    stripe:product.stripe,
+
+                    priceId:product.priceId
+
+                };
+
+
+                const exists =
+                    cart.some(
+                        cartItem =>
+                            cartItem.id ===
+                            item.id
+                    );
+
+
+                if(!exists){
+
+                    cart.push(item);
+
+                    localStorage.setItem(
+                        "theBestBundleCart",
+                        JSON.stringify(cart)
+                    );
+
+                    cartMessage.textContent =
+                        "✓ Added to your cart";
+
+                }else{
+
+                    cartMessage.textContent =
+                        "✓ This product is already in your cart";
+
+                }
+
+
+                updateCartCount();
+
+
+                setTimeout(
+                    function(){
+
+                        cartMessage.textContent =
+                            "";
+
+                    },
+                    2500
+                );
+
+            }
+        );
+
+
+        updateCartCount();
+
+    }
+
+}
+
+</script>
+
+
+</body>
+
+</html>
