@@ -321,10 +321,27 @@ button{
   flex-shrink:0
  }
 
-.header-tool:not(.icon):not(.news){
+.header-tool:not(.icon):not(.gold-border):not(.news){
     display:none
 }
 
+.header-tool.icon{
+    order:1
+}
+
+.header-tool.gold-border{
+    display:flex;
+    order:2
+}
+
+.cart-wrap{
+    order:3
+}
+
+.header-tool.news{
+    display:flex;
+    order:4
+}
  .desktop-nav a:first-child:after{
   bottom:-18px
  }
