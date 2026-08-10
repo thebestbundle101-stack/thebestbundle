@@ -2799,10 +2799,10 @@ $("searchForm").addEventListener(
 
         if(q){
 
-            closeSearch();
-
-        }
-
+window.location.href =
+"search.html?q=" +
+encodeURIComponent(q);
+            
     }
 );
 
