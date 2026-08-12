@@ -1,358 +1,2253 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-<!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JPG5GRWX53"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-  
-    gtag('config', 'G-JPG5GRWX53');
-  </script>
-  <meta charset="UTF-8">     
-  
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Collection Française | TheBestBundle</title>
+
+<meta
+    name="description"
+    content="Découvrez la Collection Française de TheBestBundle : eBooks numériques premium et packs digitaux."
+>
+
+<meta
+    name="theme-color"
+    content="#071A33"
+>
+
+<link
+    rel="icon"
+    href="/thebestbundle/images/favicon.ico"
+    type="image/x-icon"
+>
+
+<link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="/thebestbundle/images/favicon.png"
+>
+
+<link
+    rel="apple-touch-icon"
+    href="/thebestbundle/images/favicon.png"
+>
+
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+>
 
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TheBestBundle - Créez Votre Pack Numérique</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background-color: #FFFFFF; color: #1a1a1a; font-family: 'Arial', sans-serif; line-height: 1.6; padding-top: 80px; }
-        .lang-bar { display: none !important; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        
-        /* HEADER - Logo left, EN switch right */
-        .header { 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            padding: 15px 20px; 
-            position: fixed; 
-            top: 0; 
-            left: 0; 
-            right: 0; 
-            background: rgba(255,255,255,0.95); 
-            backdrop-filter: blur(10px); 
-            z-index: 1000; 
-            border-bottom: 1px solid #eee; 
-        }
-        .logo { color: #0F766E; font-size: 24px; font-weight: bold; }
-        .lang-switch { 
-            border: 1px solid #0F766E; 
-            color: #0F766E; 
-            background: #FFFFFF;
-            padding: 8px 16px; 
-            border-radius: 6px; 
-            text-decoration: none; 
-            font-weight: 600; 
-            font-size: 14px;
-            transition: all 0.2s;
-        }
-        .lang-switch:hover { 
-            background: #0F766E; 
-            color: #FFFFFF; 
-        }
+<style>
 
-        .hero { text-align: center; padding: 40px 0 60px; }
-        .hero .tag { color: #0F766E; font-size: 20px; margin-bottom: 10px; font-weight: bold; text-transform: uppercase; }
-        .hero h1 { color: #111827; font-size: 48px; font-weight: bold; margin-bottom: 15px; }
-        .hero .subtitle { color: #555; font-size: 18px; margin-bottom: 40px; }
-        
-        .books-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 15px; margin-bottom: 40px; }
-        .book-card { 
-            background: #FFFFFF; 
-            border: 2px solid #0F766E; 
-            padding: 12px; 
-            border-radius: 8px; 
-            font-size: 11px; 
-            text-align: center; 
-            display: flex; 
-            flex-direction: column; 
-            align-items: center; 
-            text-decoration: none; 
-            color: #111827; 
-            transition: all 0.3s; 
-            gap: 8px; 
-            min-height: 240px; 
-            font-weight: 600;
-        }
-        .book-card img { width: 100%; max-width: 130px; height: 180px; object-fit: cover; border-radius: 4px; border: 1px solid #ddd; }
-        .book-card:hover { transform: translateY(-3px); background: #F9FAFB; }
-        .book-card:hover img { border-color: #0F766E; }
+/* =====================================================
+   THEBESTBUNDLE — FRENCH COLLECTION
+   MODEL 3
+===================================================== */
 
-        .how-it-works { text-align: center; padding: 60px 0; }
-        .section-title { color: #111827; font-size: 2rem; font-weight: 700; margin-bottom: 50px; }
-        .steps { display: flex; justify-content: center; gap: 20px; flex-wrap: nowrap; }
-        .step { text-align: center; flex: 1; }
-        .step i { font-size: 40px; color: #0F766E; margin-bottom: 15px; }
-        .step h3 { color: #111827; font-size: 18px; font-weight: 600; }
+:root{
 
-        .cta-button-wrap { text-align: center; padding: 20px 0 60px; }
-        .cta-button { background: #0F766E; color: #FFFFFF; border: none; padding: 15px 40px; font-size: 18px; font-weight: bold; border-radius: 8px; cursor: pointer; transition: transform 0.2s; }
-        .cta-button:hover { transform: scale(1.05); }
+    --navy:#071A33;
+    --navy-light:#0D2B50;
 
-        .packs { padding: 60px 0; text-align: center; }
-        .packs .subtitle { color: #6B7280; margin-bottom: 40px; }
-        .packs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-top: 40px; }
-        .pack-card { 
-            background: #FFFFFF; 
-            border: 2px solid #0F766E; 
-            border-radius: 12px; 
-            padding: 30px 20px; 
-            position: relative; 
-            display: flex; 
-            flex-direction: column; 
-        }
-        .pack-card.popular { border-color: #0F766E; }
-        .pack-card img { width: 100%; max-width: 200px; height: 150px; object-fit: cover; border-radius: 8px; margin: 0 auto 15px; border: 1px solid #ddd; }
-        .popular-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #0F766E; color: #FFFFFF; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: bold; }
-        .pack-name { color: #111827; font-size: 24px; margin-bottom: 10px; font-weight: 700; }
-        .pack-price { color: #0F766E; font-size: 36px; font-weight: bold; margin-bottom: 15px; }
-        .pack-desc { color: #6B7280; margin-bottom: 20px; }
-        .pack-books { text-align: left; margin: 20px 0; font-size: 12px; color: #111827; flex-grow: 1; font-weight: 600; }
-        .pack-books div { margin-bottom: 5px; }
-        .pack-note { color: #6B7280; font-size: 12px; margin-top: 20px; margin-bottom: 20px; }
-        .pack-button { background: #0F766E; color: #FFFFFF; border: none; padding: 12px 20px; font-size: 16px; font-weight: bold; border-radius: 8px; cursor: pointer; text-decoration: none; display: block; transition: transform 0.2s; }
-        .pack-button:hover { transform: scale(1.05); }
+    --gold:#F4C542;
+    --gold-dark:#D9A91A;
 
-        .social-proof { padding: 60px 0; text-align: center; }
-        .social-proof h2 { color: #111827; font-size: 36px; margin-bottom: 50px; font-weight: 700; }
-        .reviews { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
-        .review-card { background: #FFFFFF; border: 2px solid #0F766E; padding: 25px; border-radius: 12px; text-align: left; }
-        .stars { color: #0F766E; font-size: 20px; margin-bottom: 15px; }
-        .review-text { color: #111827; margin-bottom: 15px; font-style: italic; }
-        .reviewer { color: #111827; font-weight: bold; }
-        .reviewer-title { color: #6B7280; font-size: 14px; }
+    --white:#FFFFFF;
+    --off-white:#F8FAFC;
 
-        .contact-section { text-align: center; padding: 60px 20px; background: #F9FAFB; border-top: 1px solid #ddd; }
-        .contact-section h2 { color: #111827; font-size: 32px; margin-bottom: 20px; font-weight: 700; }
-        .contact-section p { color: #6B7280; font-size: 18px; margin-bottom: 30px; }
-        .contact-button { background: #0F766E; color: #FFFFFF; padding: 15px 35px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 18px; display: inline-block; transition: transform 0.2s; }
-        .contact-button:hover { transform: scale(1.05); }
-        
-        .footer { text-align: center; padding: 40px 0; border-top: 1px solid #ddd; background: #FFFFFF; }
-        .footer .brand { color: #0F766E; font-size: 24px; font-weight: bold; margin-bottom: 10px; }
-        .footer .copyright { color: #6B7280; font-size: 14px; }
+    --text:#172033;
+    --text-gray:#64748B;
 
-        @media (max-width: 992px) { 
-            .books-grid { grid-template-columns: repeat(3, 1fr); } 
-            .steps { flex-wrap: wrap; }
-        }
-        @media (max-width: 768px) { 
-            .books-grid { grid-template-columns: repeat(2, 1fr); } 
-            .hero h1 { font-size: 32px; } 
-            .steps { gap: 30px; flex-direction: column; } 
-            .logo { font-size: 20px; } 
-            .section-title { font-size: 28px; } 
-            body { padding-top: 80px; } 
-            .header { top: 0; } 
-        }
-        @media (max-width: 480px) { 
-            .header { padding: 12px 15px; } 
-            .container { padding: 0 15px; } 
-            .hero h1 { font-size: 28px; } 
-            .lang-switch { padding: 6px 12px; font-size: 12px; }
-        }
-      
-      .back-btn{
+    --border:#E2E8F0;
+
+    --max-width:1200px;
+
+    --radius:16px;
+
+}
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+body{
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        var(--off-white);
+
+    color:
+        var(--text);
+
+    line-height:
+        1.6;
+
+}
+
+
+img{
+
+    max-width:100%;
+    display:block;
+
+}
+
+
+a{
+
     text-decoration:none;
-    color:#1E3A8A;
-    font-weight:bold;
-    border:2px solid #1E3A8A;
-    padding:10px 18px;
-    border-radius:8px;
-    transition:.3s;
+    color:inherit;
+
 }
 
-.back-btn:hover{
-    background:#1E3A8A;
-    color:#ffffff;
+
+button{
+
+    font:inherit;
+    cursor:pointer;
+
 }
-      
-    </style>
+
+
+.container{
+
+    width:90%;
+    max-width:var(--max-width);
+    margin:0 auto;
+
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.page-header{
+
+    background:
+        var(--navy);
+
+    color:
+        var(--white);
+
+}
+
+
+.header-inner{
+
+    min-height:90px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+}
+
+
+.header-logo img{
+
+    height:70px;
+    width:auto;
+
+}
+
+
+.header-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+
+.header-icon{
+
+    position:relative;
+
+    width:46px;
+    height:46px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border:none;
+
+    border-radius:9px;
+
+    background:
+        transparent;
+
+    color:
+        var(--white);
+
+    font-size:22px;
+
+}
+
+
+.header-icon:hover{
+
+    background:
+        rgba(255,255,255,.08);
+
+    color:
+        var(--gold);
+
+}
+
+
+.cart-count{
+
+    position:absolute;
+
+    top:-2px;
+    right:-2px;
+
+    min-width:19px;
+    height:19px;
+
+    padding:
+        0 5px;
+
+    border-radius:
+        30px;
+
+    background:
+        var(--gold);
+
+    color:
+        var(--navy);
+
+    font-size:11px;
+
+    font-weight:800;
+
+    line-height:19px;
+
+    text-align:center;
+
+}
+
+
+/* =====================================================
+   LANGUAGE / BACK BAR
+===================================================== */
+
+.back-row{
+
+    background:
+        var(--white);
+
+    border-bottom:
+        1px solid var(--border);
+
+}
+
+
+.back-inner{
+
+    min-height:60px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:15px;
+
+}
+
+
+.back-button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:9px;
+
+    border:none;
+
+    background:
+        transparent;
+
+    color:
+        var(--navy);
+
+    font-weight:800;
+
+}
+
+
+.back-button:hover{
+
+    color:
+        var(--gold-dark);
+
+}
+
+
+.english-link{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:
+        8px 14px;
+
+    border:
+        1px solid var(--navy);
+
+    border-radius:
+        8px;
+
+    color:
+        var(--navy);
+
+    font-size:13px;
+
+    font-weight:800;
+
+}
+
+
+.english-link:hover{
+
+    background:
+        var(--navy);
+
+    color:
+        var(--white);
+
+}
+
+
+/* =====================================================
+   PREMIUM HERO
+===================================================== */
+
+.french-hero{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(244,196,63,.12),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(244,196,63,.08),
+            transparent 32%
+        ),
+
+        linear-gradient(
+            135deg,
+            #071A33,
+            #0D2B50
+        );
+
+    color:
+        var(--white);
+
+    padding:
+        75px 20px 85px;
+
+    text-align:center;
+
+}
+
+
+.hero-inner{
+
+    max-width:850px;
+
+    margin:
+        0 auto;
+
+}
+
+
+.eyebrow{
+
+    color:
+        var(--gold);
+
+    font-size:
+        13px;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        2.5px;
+
+    text-transform:
+        uppercase;
+
+    margin-bottom:
+        15px;
+
+}
+
+
+/* Eiffel Tower graphic */
+
+.eiffel{
+
+    width:85px;
+
+    height:100px;
+
+    margin:
+        0 auto 22px;
+
+    position:relative;
+
+}
+
+
+.eiffel::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    top:0;
+
+    transform:
+        translateX(-50%);
+
+    width:4px;
+
+    height:100px;
+
+    background:
+        var(--gold);
+
+    border-radius:4px;
+
+    box-shadow:
+        0 0 18px rgba(244,196,63,.28);
+
+}
+
+
+.eiffel::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:0;
+
+    transform:
+        translateX(-50%);
+
+    width:72px;
+
+    height:5px;
+
+    background:
+        var(--gold);
+
+    border-radius:20px;
+
+}
+
+
+.eiffel-top{
+
+    position:absolute;
+
+    left:50%;
+
+    top:5px;
+
+    transform:
+        translateX(-50%);
+
+    width:35px;
+
+    height:35px;
+
+    border-left:
+        3px solid var(--gold);
+
+    border-right:
+        3px solid var(--gold);
+
+    transform-origin:
+        bottom center;
+
+}
+
+
+.eiffel-mid{
+
+    position:absolute;
+
+    left:50%;
+
+    top:30px;
+
+    transform:
+        translateX(-50%);
+
+    width:60px;
+
+    height:3px;
+
+    background:
+        var(--gold);
+
+}
+
+
+.eiffel-low{
+
+    position:absolute;
+
+    left:50%;
+
+    top:55px;
+
+    transform:
+        translateX(-50%);
+
+    width:70px;
+
+    height:3px;
+
+    background:
+        var(--gold);
+
+}
+
+
+.french-hero h1{
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(40px,7vw,68px);
+
+    line-height:
+        1.05;
+
+    margin-bottom:
+        20px;
+
+}
+
+
+.french-hero p{
+
+    max-width:
+        720px;
+
+    margin:
+        0 auto;
+
+    color:
+        rgba(255,255,255,.84);
+
+    font-size:
+        18px;
+
+}
+
+
+/* =====================================================
+   SECTION TITLES
+===================================================== */
+
+.collection-section{
+
+    padding:
+        75px 0 90px;
+
+}
+
+
+.section-heading{
+
+    text-align:center;
+
+    max-width:
+        750px;
+
+    margin:
+        0 auto 40px;
+
+}
+
+
+.section-heading span{
+
+    display:block;
+
+    color:
+        var(--gold-dark);
+
+    font-size:
+        12px;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        1.8px;
+
+    text-transform:
+        uppercase;
+
+    margin-bottom:
+        8px;
+
+}
+
+
+.section-heading h2{
+
+    color:
+        var(--navy);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(30px,5vw,42px);
+
+    margin-bottom:
+        12px;
+
+}
+
+
+.section-heading p{
+
+    color:
+        var(--text-gray);
+
+    font-size:
+        16px;
+
+}
+
+
+/* =====================================================
+   EBOOKS
+===================================================== */
+
+.products-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:
+        28px;
+
+}
+
+
+.product-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+    overflow:hidden;
+
+    background:
+        var(--white);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        var(--radius);
+
+    box-shadow:
+        0 10px 30px rgba(7,26,51,.08);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+
+}
+
+
+.product-card:hover{
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        0 18px 42px rgba(7,26,51,.13);
+
+}
+
+
+.product-image{
+
+    min-height:
+        340px;
+
+    padding:
+        25px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:
+        var(--off-white);
+
+}
+
+
+.product-image img{
+
+    width:
+        100%;
+
+    max-width:
+        245px;
+
+    max-height:
+        305px;
+
+    object-fit:
+        contain;
+
+}
+
+
+.product-info{
+
+    flex:
+        1;
+
+    display:flex;
+
+    flex-direction:
+        column;
+
+    padding:
+        26px;
+
+}
+
+
+.product-label{
+
+    color:
+        var(--gold-dark);
+
+    font-size:
+        12px;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        1.5px;
+
+    text-transform:
+        uppercase;
+
+    margin-bottom:
+        8px;
+
+}
+
+
+.product-info h3{
+
+    color:
+        var(--navy);
+
+    font-size:
+        22px;
+
+    line-height:
+        1.3;
+
+    margin-bottom:
+        12px;
+
+}
+
+
+.product-info p{
+
+    color:
+        var(--text-gray);
+
+    font-size:
+        14px;
+
+    margin-bottom:
+        20px;
+
+}
+
+
+.product-price{
+
+    margin-top:
+        auto;
+
+    margin-bottom:
+        18px;
+
+    color:
+        var(--navy);
+
+    font-size:
+        26px;
+
+    font-weight:
+        900;
+
+}
+
+
+.product-actions{
+
+    display:grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        10px;
+
+}
+
+
+.btn{
+
+    min-height:
+        48px;
+
+    padding:
+        12px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:
+        8px;
+
+    border:
+        none;
+
+    font-size:
+        13px;
+
+    font-weight:
+        900;
+
+    text-align:center;
+
+}
+
+
+.buy-button{
+
+    background:
+        var(--gold);
+
+    color:
+        var(--navy);
+
+}
+
+
+.buy-button:hover{
+
+    background:
+        #ffd75e;
+
+}
+
+
+.cart-button{
+
+    background:
+        var(--navy);
+
+    color:
+        var(--white);
+
+}
+
+
+.cart-button:hover{
+
+    background:
+        var(--navy-light);
+
+}
+
+
+/* =====================================================
+   BUNDLES
+===================================================== */
+
+.bundles-section{
+
+    padding:
+        80px 0 100px;
+
+    background:
+        var(--white);
+
+}
+
+
+.bundle-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:
+        22px;
+
+}
+
+
+.bundle-card{
+
+    position:relative;
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:
+        var(--white);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        var(--radius);
+
+    overflow:hidden;
+
+    box-shadow:
+        0 10px 28px rgba(7,26,51,.07);
+
+}
+
+
+.bundle-card.featured{
+
+    border:
+        2px solid var(--gold);
+
+}
+
+
+.bundle-image{
+
+    min-height:
+        210px;
+
+    padding:
+        20px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:
+        var(--off-white);
+
+}
+
+
+.bundle-image img{
+
+    width:
+        100%;
+
+    max-width:
+        190px;
+
+    max-height:
+        175px;
+
+    object-fit:
+        contain;
+
+}
+
+
+.bundle-content{
+
+    flex:
+        1;
+
+    display:flex;
+
+    flex-direction:
+        column;
+
+    padding:
+        22px;
+
+}
+
+
+.bundle-label{
+
+    color:
+        var(--gold-dark);
+
+    font-size:
+        11px;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        1.3px;
+
+    text-transform:
+        uppercase;
+
+    margin-bottom:
+        7px;
+
+}
+
+
+.bundle-content h3{
+
+    color:
+        var(--navy);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        23px;
+
+    margin-bottom:
+        10px;
+
+}
+
+
+.bundle-content p{
+
+    color:
+        var(--text-gray);
+
+    font-size:
+        14px;
+
+    margin-bottom:
+        15px;
+
+}
+
+
+.bundle-includes{
+
+    margin-top:
+        auto;
+
+    padding:
+        12px;
+
+    border-radius:
+        8px;
+
+    background:
+        var(--off-white);
+
+    color:
+        var(--navy);
+
+    font-size:
+        13px;
+
+    font-weight:
+        800;
+
+    margin-bottom:
+        16px;
+
+}
+
+
+.bundle-price{
+
+    font-size:
+        26px;
+
+    font-weight:
+        900;
+
+    color:
+        var(--navy);
+
+    margin-bottom:
+        15px;
+
+}
+
+
+.bundle-actions{
+
+    display:grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        8px;
+
+}
+
+
+.popular-badge{
+
+    position:absolute;
+
+    top:12px;
+
+    left:12px;
+
+    background:
+        var(--gold);
+
+    color:
+        var(--navy);
+
+    padding:
+        6px 10px;
+
+    border-radius:
+        20px;
+
+    font-size:
+        10px;
+
+    font-weight:
+        900;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer{
+
+    background:
+        var(--navy);
+
+    color:
+        var(--white);
+
+    padding:
+        38px 0;
+
+    text-align:center;
+
+}
+
+
+.footer-brand{
+
+    color:
+        var(--gold);
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        1px;
+
+    margin-bottom:
+        8px;
+
+}
+
+
+.footer p{
+
+    color:
+        rgba(255,255,255,.7);
+
+    font-size:
+        13px;
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:1050px){
+
+    .bundle-grid{
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+    }
+
+}
+
+
+@media(max-width:900px){
+
+    .products-grid{
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+    }
+
+}
+
+
+@media(max-width:650px){
+
+    .products-grid,
+    .bundle-grid{
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .product-card,
+    .bundle-card{
+
+        max-width:
+            430px;
+
+        width:
+            100%;
+
+        margin:
+            0 auto;
+
+    }
+
+
+    .french-hero{
+
+        padding:
+            60px 20px 70px;
+
+    }
+
+
+    .back-inner{
+
+        min-height:
+            56px;
+
+    }
+
+
+    .product-actions,
+    .bundle-actions{
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+}
+
+
+@media(max-width:420px){
+
+    .header-logo img{
+
+        height:
+            58px;
+
+    }
+
+
+    .english-link{
+
+        padding:
+            7px 10px;
+
+        font-size:
+            11px;
+
+    }
+
+}
+
+</style>
+
 </head>
+
+
 <body>
-    <div class="lang-bar">
-        <a href="/thebestbundle/">📗 Switch to English Books</a>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="page-header">
+
+    <div class="container header-inner">
+
+        <a
+            href="../index.html"
+            class="header-logo">
+
+            <img
+                src="../images/logo.png"
+                alt="TheBestBundle">
+
+        </a>
+
+
+        <div class="header-actions">
+
+            <button
+                type="button"
+                class="header-icon"
+                id="pageCartButton"
+                aria-label="Panier">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                <span
+                    class="cart-count"
+                    id="pageCartCount">
+                    0
+                </span>
+
+            </button>
+
+
+            <a
+                href="../index.html"
+                class="header-icon"
+                aria-label="Accueil">
+
+                <i class="fa-solid fa-house"></i>
+
+            </a>
+
+        </div>
+
     </div>
-    
-    <header class="header">
-        <div class="logo">TheBestBundle</div>
-    <a href="/thebestbundle/" class="back-btn">
-    ← Retour
-    </a>
-      
-    </header>
-  
+
+</header>
+
+
+<!-- =====================================================
+     BACK / LANGUAGE
+===================================================== -->
+
+<div class="back-row">
+
+    <div class="container back-inner">
+
+        <button
+            type="button"
+            class="back-button"
+            onclick="returnToPreviousPage()">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Retour
+
+        </button>
+
+
+        <a
+            href="../index.html"
+            class="english-link">
+
+            🇺🇸 English Collection
+
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="french-hero">
+
+    <div class="hero-inner">
+
+        <div class="eyebrow">
+            THEBESTBUNDLE • COLLECTION FRANÇAISE
+        </div>
+
+
+        <div class="eiffel" aria-hidden="true">
+
+            <div class="eiffel-top"></div>
+
+            <div class="eiffel-mid"></div>
+
+            <div class="eiffel-low"></div>
+
+        </div>
+
+
+        <h1>
+            Collection Française
+        </h1>
+
+
+        <p>
+            Découvrez nos eBooks numériques et nos packs
+            premium conçus pour vous aider à apprendre,
+            créer et développer vos projets.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     EBOOKS
+===================================================== -->
+
+<section class="collection-section">
+
     <div class="container">
-        <section class="hero">
-            <div class="tag">Produits digitaux</div>
-            <h1>CRÉEZ VOTRE PACK</h1>
-            <p class="subtitle">Achetez nos ebooks à l’unité pour $17 ou économisez avec un pack.</p>
 
-            <div class="books-grid">
-                <a href="https://buy.stripe.com/3cIfZj8cg0PS67d9KX8N200" class="book-card" target="_blank">
-                    <img src="img/book1.jpg" alt="Decouvre ta niche parfaite">
-                    <span>Decouvre ta niche parfaite</span>
-                </a>
-                <a href="https://buy.stripe.com/bJe28t1NS6ac1QXf5h8N201" class="book-card" target="_blank">
-                    <img src="img/book2.jpg" alt="ton plan d’action en business">
-                    <span>ton plan d’action en business</span>
-                </a>
-                <a href="https://buy.stripe.com/fZu00l504568antcX98N202" class="book-card" target="_blank">
-                    <img src="img/book3.jpg" alt="Comment Être Financé Rapidement">
-                    <span>Comment Être Financé Rapidement</span>
-                </a>
-                <a href="https://buy.stripe.com/7sY28t6484242V1aP18N203" class="book-card" target="_blank">
-                    <img src="img/book4.jpg" alt="Protège ton Entreprise Légalement">
-                    <span>Protège ton Entreprise Légalement</span>
-                </a>
-                <a href="https://buy.stripe.com/7sY7sN8cg0PSeDJ1er8N204" class="book-card" target="_blank">
-                    <img src="img/book5.jpg" alt="Crée une presence en ligne">
-                    <span>Crée une presence en ligne</span>
-                </a>
-                <a href="https://buy.stripe.com/cNi8wRakocyA7bh1er8N205" class="book-card" target="_blank">
-                    <img src="img/book6.jpg" alt="traffic leads ventes Le système">
-                    <span>traffic leads ventes Le système</span>
-                </a>
-                <a href="https://buy.stripe.com/00w28t1NS4249jp0an8N206" class="book-card" target="_blank">
-                    <img src="img/book7.jpg" alt="Discipline Financière">
-                    <span>Discipline Financière</span>
-                </a>
-                <a href="https://buy.stripe.com/aFa6oJ5045682V1aP18N207" class="book-card" target="_blank">
-                    <img src="img/book8.jpg" alt="l’art de vendre en 2026">
-                    <span>l’art de vendre en 2026</span>
-                </a>
-                <a href="https://buy.stripe.com/00w8wR2RWdCE1QXg9l8N208" class="book-card" target="_blank">
-                    <img src="img/book9.jpg" alt="De salariés à Mentalité d’entrepreneur">
-                    <span>De salariés à Mentalité d’entrepreneur</span>
-                </a>
-                <a href="https://buy.stripe.com/8x26oJ2RWgOQ9jp5uH8N209" class="book-card" target="_blank">
-                    <img src="img/book10.jpg" alt="Automatise Ton Business en 30 Jours">
-                    <span>Automatise Ton Business en 30 Jours</span>
-                </a>
-            </div>
-        </section>
+        <div class="section-heading">
+
+            <span>
+                Nos eBooks
+            </span>
+
+            <h2>
+                eBooks Premium
+            </h2>
+
+            <p>
+                Découvrez nos guides numériques disponibles
+                en français.
+            </p>
+
+        </div>
+
+
+        <div class="products-grid">
+
+
+            <!-- FRENCH EBOOK 1 -->
+
+            <article class="product-card">
+
+                <div class="product-image">
+
+                    <img
+                        src="img/book1.jpg"
+                        alt="Découvre ta niche parfaite">
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <div class="product-label">
+                        eBook Premium
+                    </div>
+
+
+                    <h3>
+                        Découvre ta niche parfaite
+                    </h3>
+
+
+                    <p>
+                        Un guide pratique pour identifier
+                        une niche adaptée à votre projet
+                        et commencer à construire votre
+                        activité numérique.
+                    </p>
+
+
+                    <div class="product-price">
+                        $17
+                    </div>
+
+
+                    <div class="product-actions">
+
+                        <a
+                            href="https://buy.stripe.com/3cIfZj8cg0PS67d9KX8N200"
+                            class="btn buy-button"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            Acheter maintenant
+
+                        </a>
+
+
+                        <button
+                            type="button"
+                            class="btn cart-button add-to-cart"
+
+                            data-id="fr-decouvre-ta-niche"
+
+                            data-name="Découvre ta niche parfaite"
+
+                            data-price="17"
+
+                            data-price-id=""
+
+                            data-image="img/book1.jpg"
+
+                            data-stripe="https://buy.stripe.com/3cIfZj8cg0PS67d9KX8N200">
+
+                            Ajouter au panier
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- FRENCH EBOOK 2 -->
+
+            <article class="product-card">
+
+                <div class="product-image">
+
+                    <img
+                        src="img/book2.jpg"
+                        alt="Ton plan d’action en business">
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <div class="product-label">
+                        eBook Premium
+                    </div>
+
+
+                    <h3>
+                        Ton plan d’action en business
+                    </h3>
+
+
+                    <p>
+                        Un guide pratique pour structurer
+                        vos idées et transformer votre projet
+                        en véritable plan d'action.
+                    </p>
+
+
+                    <div class="product-price">
+                        $17
+                    </div>
+
+
+                    <div class="product-actions">
+
+                        <a
+                            href="https://buy.stripe.com/bJe28t1NS6ac1QXf5h8N201"
+                            class="btn buy-button"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            Acheter maintenant
+
+                        </a>
+
+
+                        <button
+                            type="button"
+                            class="btn cart-button add-to-cart"
+
+                            data-id="fr-plan-business"
+
+                            data-name="Ton plan d’action en business"
+
+                            data-price="17"
+
+                            data-price-id=""
+
+                            data-image="img/book2.jpg"
+
+                            data-stripe="https://buy.stripe.com/bJe28t1NS6ac1QXf5h8N201">
+
+                            Ajouter au panier
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
     </div>
 
-    <section class="how-it-works">
-        <div class="container">
-            <h2 class="section-title">Comment Ça Marche</h2>
-            <div class="steps">
-                <div class="step"><i class="fas fa-box"></i><h3>Choisissez Votre Pack</h3></div>
-                <div class="step"><i class="fas fa-book"></i><h3>Sélectionnez Vos Ebooks</h3></div>
-                <div class="step"><i class="fas fa-bolt"></i><h3>Téléchargez Instantanément</h3></div>
-            </div>
-        </div>
-    </section>
+</section>
 
-    <div class="cta-button-wrap">
-        <button class="cta-button" onclick="document.getElementById('packs').scrollIntoView({behavior: 'smooth'})">Voir Tous Les Packs →</button>
+
+<!-- =====================================================
+     BUNDLES
+===================================================== -->
+
+<section class="bundles-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span>
+                Plus de valeur
+            </span>
+
+            <h2>
+                Nos Packs Premium
+            </h2>
+
+            <p>
+                Économisez davantage avec nos collections
+                de produits numériques.
+            </p>
+
+        </div>
+
+
+        <div class="bundle-grid">
+
+
+            <!-- STARTER -->
+
+            <article class="bundle-card">
+
+                <div class="bundle-image">
+
+                    <img
+                        src="img/starterpack.jpg"
+                        alt="Pack Starter">
+
+                </div>
+
+
+                <div class="bundle-content">
+
+                    <div class="bundle-label">
+                        Collection Starter
+                    </div>
+
+
+                    <h3>
+                        Pack Starter
+                    </h3>
+
+
+                    <p>
+                        Une première collection premium
+                        pour commencer votre bibliothèque
+                        numérique.
+                    </p>
+
+
+                    <div class="bundle-includes">
+                        2 eBooks + 4 Templates
+                    </div>
+
+
+                    <div class="bundle-price">
+                        $27
+                    </div>
+
+
+                    <div class="bundle-actions">
+
+                        <a
+                            href="https://buy.stripe.com/5kQ8wRboscyAgLR0an8N20a"
+                            class="btn buy-button"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            Acheter
+
+                        </a>
+
+
+                        <button
+                            type="button"
+                            class="btn cart-button add-to-cart"
+
+                            data-id="fr-starter-bundle"
+
+                            data-name="Pack Starter"
+
+                            data-price="27"
+
+                            data-price-id=""
+
+                            data-image="img/starterpack.jpg"
+
+                            data-stripe="https://buy.stripe.com/5kQ8wRboscyAgLR0an8N20a">
+
+                            Ajouter
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CREATOR -->
+
+            <article class="bundle-card featured">
+
+                <div class="popular-badge">
+                    Populaire
+                </div>
+
+
+                <div class="bundle-image">
+
+                    <img
+                        src="img/creatorpack.jpeg"
+                        alt="Pack Créateur">
+
+                </div>
+
+
+                <div class="bundle-content">
+
+                    <div class="bundle-label">
+                        Collection Créateur
+                    </div>
+
+
+                    <h3>
+                        Pack Créateur
+                    </h3>
+
+
+                    <p>
+                        Une collection plus complète pour
+                        développer votre activité numérique.
+                    </p>
+
+
+                    <div class="bundle-includes">
+                        3 eBooks + 6 Templates
+                    </div>
+
+
+                    <div class="bundle-price">
+                        $37
+                    </div>
+
+
+                    <div class="bundle-actions">
+
+                        <a
+                            href="https://buy.stripe.com/dRm8wR2RWeGIeDJf5h8N20b"
+                            class="btn buy-button"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            Acheter
+
+                        </a>
+
+
+                        <button
+                            type="button"
+                            class="btn cart-button add-to-cart"
+
+                            data-id="fr-creator-bundle"
+
+                            data-name="Pack Créateur"
+
+                            data-price="37"
+
+                            data-price-id=""
+
+                            data-image="img/creatorpack.jpeg"
+
+                            data-stripe="https://buy.stripe.com/dRm8wR2RWeGIeDJf5h8N20b">
+
+                            Ajouter
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRO -->
+
+            <article class="bundle-card">
+
+                <div class="bundle-image">
+
+                    <img
+                        src="img/propack.jpeg"
+                        alt="Pack Pro">
+
+                </div>
+
+
+                <div class="bundle-content">
+
+                    <div class="bundle-label">
+                        Collection Pro
+                    </div>
+
+
+                    <h3>
+                        Pack Pro
+                    </h3>
+
+
+                    <p>
+                        Une bibliothèque numérique étendue
+                        pour les entrepreneurs et créateurs.
+                    </p>
+
+
+                    <div class="bundle-includes">
+                        5 eBooks + 10 Templates
+                    </div>
+
+
+                    <div class="bundle-price">
+                        $57
+                    </div>
+
+
+                    <div class="bundle-actions">
+
+                        <a
+                            href="https://buy.stripe.com/00w9AVako5682V14qD8N20c"
+                            class="btn buy-button"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            Acheter
+
+                        </a>
+
+
+                        <button
+                            type="button"
+                            class="btn cart-button add-to-cart"
+
+                            data-id="fr-pro-bundle"
+
+                            data-name="Pack Pro"
+
+                            data-price="57"
+
+                            data-price-id=""
+
+                            data-image="img/propack.jpeg"
+
+                            data-stripe="https://buy.stripe.com/00w9AVako5682V14qD8N20c">
+
+                            Ajouter
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- VAULT -->
+
+            <article class="bundle-card">
+
+                <div class="bundle-image">
+
+                    <img
+                        src="img/vaultpack.jpeg"
+                        alt="Pack Vault">
+
+                </div>
+
+
+                <div class="bundle-content">
+
+                    <div class="bundle-label">
+                        Collection Ultime
+                    </div>
+
+
+                    <h3>
+                        Pack Vault
+                    </h3>
+
+
+                    <p>
+                        Notre collection la plus complète
+                        pour accéder à un maximum de ressources.
+                    </p>
+
+
+                    <div class="bundle-includes">
+                        10 eBooks + 20 Templates
+                    </div>
+
+
+                    <div class="bundle-price">
+                        $97
+                    </div>
+
+
+                    <div class="bundle-actions">
+
+                        <a
+                            href="https://buy.stripe.com/9B65kF504buw5390an8N20d"
+                            class="btn buy-button"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            Acheter
+
+                        </a>
+
+
+                        <button
+                            type="button"
+                            class="btn cart-button add-to-cart"
+
+                            data-id="fr-vault-bundle"
+
+                            data-name="Pack Vault"
+
+                            data-price="97"
+
+                            data-price-id=""
+
+                            data-image="img/vaultpack.jpeg"
+
+                            data-stripe="https://buy.stripe.com/9B65kF504buw5390an8N20d">
+
+                            Ajouter
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
     </div>
 
-    <section class="packs" id="packs">
-        <div class="container">
-            <h2 class="section-title">Nos Packs Vedettes</h2>
-            <p class="subtitle">Choisissez parmi notre collection complète d'ebooks</p>
-            <div class="packs-grid">
-                <div class="pack-card">
-                    <img src="img/starterpack.jpg" alt="Starter Pack">
-                    <div class="pack-name">Starter Pack</div>
-                    <div class="pack-price">$27</div>
-                    <div class="pack-desc">Obtenez 2 livres parmi 10 livres</div>
-                    <div class="pack-books">
-                        <div>• Crée ta présence en ligne</div>
-                        <div>• TRAFFIC LEADS VENTES — LE SYSTÈME</div>
-                    </div>
-                    <div class="pack-note">Choisissez parmi notre collection complète d'ebooks</div>
-                    <a href="https://buy.stripe.com/5kQ8wRboscyAgLR0an8N20a" class="pack-button" target="_blank">Acheter Starter Pack</a>
-                </div>
-                <div class="pack-card popular">
-                    <div class="popular-badge">PLUS POPULAIRE</div>
-                    <img src="img/creatorpack.jpeg" alt="Creator Pack">
-                    <div class="pack-name">Creator Pack</div>
-                    <div class="pack-price">$47</div>
-                    <div class="pack-desc">Obtenez 3 livres parmi 10 livres</div>
-                    <div class="pack-books">
-                        <div>• Automatise ton Business en 30 jours</div>
-                        <div>• De salariés à Mentalité d'entrepreneur</div>
-                        <div>• l’art de vendre en 2026</div>
-                    </div>
-                    <div class="pack-note">Choisissez parmi notre collection complète d'ebooks</div>
-                    <a href="https://buy.stripe.com/dRm8wR2RWeGIeDJf5h8N20b" class="pack-button" target="_blank">Acheter Creator Pack</a>
-                </div>
-                <div class="pack-card">
-                    <img src="img/propack.jpeg" alt="Pro Pack">
-                    <div class="pack-name">Pro Pack</div>
-                    <div class="pack-price">$77</div>
-                    <div class="pack-desc">Obtenez 5 livres parmi 10 livres</div>
-                    <div class="pack-books">
-                        <div>• Comment Être Financé Rapidement</div>
-                        <div>• Découvre ta niche parfaite</div>
-                        <div>• Discipline Financière</div>
-                        <div>• Protege ton Entreprise Légalement</div>
-                        <div>• Ton Plan d'Action en Business</div>
-                    </div>
-                    <div class="pack-note">Choisissez parmi notre collection complète d'ebooks</div>
-                    <a href="https://buy.stripe.com/00w9AVako5682V14qD8N20c" class="pack-button" target="_blank">Acheter Pro Pack</a>
-                </div>
-                <div class="pack-card">
-                    <img src="img/vaultpack.jpeg" alt="Vault Pack">
-                    <div class="pack-name">Vault Pack</div>
-                    <div class="pack-price">$117</div>
-                    <div class="pack-desc">Obtenez les 10 livres</div>
-                    <div class="pack-books">
-                        <div>• Les 10 livres inclus</div>
-                    </div>
-                    <div class="pack-note">Choisissez parmi notre collection complète d'ebooks</div>
-                    <a href="https://buy.stripe.com/9B65kF504buw5390an8N20d" class="pack-button" target="_blank">Acheter Vault Pack</a>
-                </div>
-            </div>
-        </div>
-    </section>
+</section>
 
-    <section class="social-proof">
-        <div class="container">
-            <h2>Plus de 500 créateurs utilisent déjà nos produits</h2>
-            <div class="reviews">
-                <div class="review-card">
-                    <div class="stars">★★★★★</div>
-                    <div class="review-text">"Le Creator Pack m'a donné tout ce dont j'avais besoin pour lancer mon business digital. Valeur incroyable !"</div>
-                    <div class="reviewer">Sarah M.</div>
-                    <div class="reviewer-title">Créatrice de Contenu</div>
-                </div>
-                <div class="review-card">
-                    <div class="stars">★★★★★</div>
-                    <div class="review-text">"J'ai acheté le Pro Pack et les ebooks m'ont fait gagner des semaines de travail. Je recommande fortement !"</div>
-                    <div class="reviewer">Jean-Pierre L.</div>
-                    <div class="reviewer-title">Entrepreneur</div>
-                </div>
-                <div class="review-card">
-                    <div class="stars">★★★★★</div>
-                    <div class="review-text">"Le Vault Pack est le meilleur investissement que j'ai fait pour mon business. Les 10 livres sont de l'or !"</div>
-                    <div class="reviewer">Marie D.</div>
-                    <div class="reviewer-title">Coach Business</div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section class="contact-section">
-        <div class="container">
-            <h2>Besoin d'Aide ?</h2>
-            <p>Des questions sur les packs ou les ebooks ? Nous sommes là pour vous.</p>
-            <a href="mailto:Thebestbundle101@gmail.com" class="contact-button">Nous Contacter</a>
-        </div>
-    </section>
+<!-- =====================================================
+   FOOTER
+===================================================== -->
 
-    <footer class="footer">
-        <div class="container">
-            <div class="brand">THEBESTBUNDLE</div>
-            <div class="copyright">2026 THEBESTBUNDLE. Tous droits réservés</div>
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-brand">
+            THEBESTBUNDLE
         </div>
-    </footer>
+
+        <p>
+            © 2026 TheBestBundle. Tous droits réservés.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+/* =====================================================
+   SHARED THEBESTBUNDLE CART
+===================================================== */
+
+let frenchCart =
+    JSON.parse(
+        localStorage.getItem(
+            'theBestBundleCart'
+        )
+    ) || [];
+
+
+const pageCartCount =
+    document.getElementById(
+        'pageCartCount'
+    );
+
+
+function updateCartCount(){
+
+    pageCartCount.textContent =
+        frenchCart.length;
+
+}
+
+
+function saveCart(){
+
+    localStorage.setItem(
+        'theBestBundleCart',
+        JSON.stringify(
+            frenchCart
+        )
+    );
+
+    updateCartCount();
+
+}
+
+
+/* =====================================================
+   ADD TO CART
+===================================================== */
+
+document
+    .querySelectorAll(
+        '.add-to-cart'
+    )
+    .forEach(function(button){
+
+        button.addEventListener(
+            'click',
+            function(){
+
+                const product = {
+
+                    id:
+                        this.dataset.id,
+
+                    name:
+                        this.dataset.name,
+
+                    price:
+                        Number(
+                            this.dataset.price
+                        ),
+
+                    image:
+                        this.dataset.image,
+
+                    stripe:
+                        this.dataset.stripe,
+
+                    priceId:
+                        this.dataset.priceId
+
+                };
+
+
+                const alreadyExists =
+                    frenchCart.some(
+                        function(item){
+
+                            return item.id ===
+                                product.id;
+
+                        }
+                    );
+
+
+                if(!alreadyExists){
+
+                    frenchCart.push(
+                        product
+                    );
+
+                    saveCart();
+
+                }
+
+
+                const originalText =
+                    this.textContent;
+
+
+                this.textContent =
+                    '✓ Ajouté';
+
+
+                setTimeout(
+                    () => {
+
+                        this.textContent =
+                            originalText;
+
+                    },
+                    1200
+                );
+
+            }
+        );
+
+    });
+
+
+/* =====================================================
+   CART
+===================================================== */
+
+document
+    .getElementById(
+        'pageCartButton'
+    )
+    .addEventListener(
+        'click',
+        function(){
+
+            window.location.href =
+                '../cart.html';
+
+        }
+    );
+
+
+/* =====================================================
+   BACK
+===================================================== */
+
+function returnToPreviousPage(){
+
+    if(
+        window.history.length > 1
+    ){
+
+        window.history.back();
+
+    }else{
+
+        window.location.href =
+            '../index.html';
+
+    }
+
+}
+
+
+/* =====================================================
+   INITIALIZE
+===================================================== */
+
+updateCartCount();
+
+</script>
+
+
 </body>
-</html>
 
+</html>
