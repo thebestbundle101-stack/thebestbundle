@@ -264,7 +264,7 @@ button{
 .ebooks-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:18px;
+    gap:20px;
 }
 
 .ebook-card{
@@ -285,6 +285,7 @@ button{
     align-items:center;
     justify-content:center;
     margin-bottom:12px;
+    background:white;
 }
 
 .ebook-cover img{
@@ -294,7 +295,7 @@ button{
 }
 
 .ebook-title{
-    min-height:58px;
+    min-height:52px;
     display:flex;
     align-items:flex-start;
     justify-content:center;
@@ -303,12 +304,28 @@ button{
     font-weight:800;
     color:var(--navy);
     padding:0 5px;
+    margin-bottom:8px;
+}
+
+
+/* =========================================================
+   EBOOK DESCRIPTION
+========================================================= */
+
+.ebook-description{
+    min-height:78px;
+    padding:0 10px;
+    color:#64748B;
+    font-size:12px;
+    line-height:1.5;
+    text-align:center;
+    margin-bottom:6px;
 }
 
 .ebook-price{
     font-size:22px;
     font-weight:900;
-    margin:12px 0;
+    margin:10px 0 12px;
 }
 
 .buy-btn{
@@ -356,7 +373,7 @@ button{
 .packs{
     display:grid;
     grid-template-columns:repeat(2,1fr);
-    gap:22px;
+    gap:24px;
 }
 
 
@@ -369,13 +386,10 @@ button{
     color:var(--navy);
     border:1px solid #D7C995;
     border-radius:14px;
-    min-height:430px;
+    min-height:560px;
     padding:18px;
-    display:grid;
-    grid-template-columns:1.15fr .85fr;
-    grid-template-rows:auto auto auto;
-    column-gap:18px;
-    align-items:center;
+    display:flex;
+    flex-direction:column;
     box-shadow:0 6px 20px rgba(7,26,51,.09);
     overflow:hidden;
 }
@@ -387,15 +401,15 @@ button{
 
 .pack-image{
     width:100%;
-    height:245px;
+    height:290px;
     display:flex;
     align-items:center;
     justify-content:center;
-    grid-column:1;
-    grid-row:1 / span 2;
-    background:white;
+    background:#FFFFFF;
     border-radius:10px;
     overflow:hidden;
+    margin-bottom:18px;
+    padding:8px;
 }
 
 .pack-image img{
@@ -411,9 +425,8 @@ button{
 
 .pack-info{
     min-width:0;
-    grid-column:2;
-    grid-row:1 / span 2;
-    align-self:center;
+    text-align:center;
+    flex:1;
 }
 
 .pack-name{
@@ -421,48 +434,53 @@ button{
     font-size:23px;
     font-weight:900;
     text-transform:uppercase;
-    line-height:1.1;
-    margin-bottom:12px;
+    line-height:1.15;
+    margin-bottom:9px;
 }
 
 .pack-desc{
-    font-size:16px;
+    font-size:15px;
     line-height:1.45;
     color:#334155;
     font-weight:600;
-    margin-bottom:15px;
+    margin-bottom:13px;
 }
 
 .pack-icons{
     display:grid;
     grid-template-columns:repeat(2,1fr);
-    gap:12px 8px;
+    gap:9px;
     color:var(--navy);
-    font-size:13px;
+    font-size:11px;
     font-weight:800;
+}
+
+.pack-icons span{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:5px;
 }
 
 .pack-icons i{
     color:var(--gold-dark);
-    font-size:20px;
+    font-size:17px;
 }
 
 
 /* =========================================================
-   PACK RIGHT / PRICE / BUTTONS
+   PACK PRICE / BUTTONS
 ========================================================= */
 
 .pack-right{
-    grid-column:1 / span 2;
-    grid-row:3;
     width:100%;
-    text-align:right;
     display:grid;
     grid-template-columns:auto 1fr;
     gap:15px;
     align-items:center;
     border-top:1px solid #E4D9A8;
     padding-top:15px;
+    margin-top:16px;
 }
 
 .pack-price{
@@ -475,15 +493,15 @@ button{
 .pack-buttons{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:10px;
+    gap:9px;
 }
 
 .pack-buy,
 .pack-cart{
-    min-height:44px;
+    min-height:46px;
     border-radius:6px;
-    padding:8px 10px;
-    font-size:11px;
+    padding:8px 8px;
+    font-size:10px;
     font-weight:900;
     white-space:nowrap;
     display:flex;
@@ -586,7 +604,12 @@ button{
 
     .ebook-title{
         font-size:13px;
-        min-height:54px;
+        min-height:52px;
+    }
+
+    .ebook-description{
+        font-size:11px;
+        min-height:78px;
     }
 
     .ebook-price{
@@ -609,22 +632,12 @@ button{
     }
 
     .pack-card{
-        min-height:390px;
+        min-height:500px;
         padding:14px;
-        grid-template-columns:1fr;
-        grid-template-rows:auto auto auto;
-        gap:12px;
     }
 
     .pack-image{
-        grid-column:1;
-        grid-row:1;
-        height:210px;
-    }
-
-    .pack-info{
-        grid-column:1;
-        grid-row:2;
+        height:250px;
     }
 
     .pack-name{
@@ -632,23 +645,15 @@ button{
     }
 
     .pack-desc{
-        font-size:14px;
+        font-size:13px;
     }
 
     .pack-icons{
-        font-size:11px;
-        gap:8px;
+        font-size:10px;
     }
 
     .pack-icons i{
-        font-size:17px;
-    }
-
-    .pack-right{
-        grid-column:1;
-        grid-row:3;
-        grid-template-columns:auto 1fr;
-        gap:8px;
+        font-size:16px;
     }
 
     .pack-price{
@@ -662,7 +667,7 @@ button{
 
     .pack-buy,
     .pack-cart{
-        min-height:38px;
+        min-height:40px;
         font-size:9px;
     }
 
@@ -733,10 +738,13 @@ button{
         font-size:27px;
     }
 
-    /* EBOOKS = 2 COLUMNS */
+
+    /* =====================================================
+       EBOOKS — 2 COLUMNS
+    ===================================================== */
 
     .ebooks-grid{
-        grid-template-columns:repeat(2,1fr);
+        grid-template-columns:repeat(2,minmax(0,1fr));
         gap:12px;
     }
 
@@ -746,7 +754,7 @@ button{
     }
 
     .ebook-cover{
-        height:230px;
+        height:225px;
         margin-bottom:9px;
     }
 
@@ -754,11 +762,21 @@ button{
         font-size:12px;
         line-height:1.3;
         min-height:55px;
+        padding:0 3px;
+        margin-bottom:5px;
+    }
+
+    .ebook-description{
+        font-size:10px;
+        line-height:1.45;
+        min-height:82px;
+        padding:0 4px;
+        margin-bottom:4px;
     }
 
     .ebook-price{
         font-size:19px;
-        margin:9px 0;
+        margin:8px 0 10px;
     }
 
     .buy-btn{
@@ -773,51 +791,49 @@ button{
     }
 
 
-    /* PACKS = 2 COLUMNS */
+    /* =====================================================
+       PACKS — 2 COLUMNS × 2 ROWS
+       LARGE / READABLE
+    ===================================================== */
 
     .packs{
-        grid-template-columns:repeat(2,1fr);
+        grid-template-columns:repeat(2,minmax(0,1fr));
         gap:12px;
     }
 
     .pack-card{
-        min-height:350px;
+        min-height:470px;
         padding:9px;
         border-radius:10px;
-        grid-template-columns:1fr;
-        grid-template-rows:auto auto auto;
-        gap:7px;
     }
 
     .pack-image{
-        width:100%;
-        height:160px;
-        grid-column:1;
-        grid-row:1;
+        height:190px;
+        padding:7px;
+        margin-bottom:12px;
         border-radius:7px;
-    }
-
-    .pack-info{
-        grid-column:1;
-        grid-row:2;
     }
 
     .pack-name{
         font-size:14px;
-        line-height:1.15;
-        margin-bottom:6px;
+        line-height:1.2;
+        margin-bottom:7px;
     }
 
     .pack-desc{
         font-size:10px;
-        line-height:1.35;
-        margin-bottom:8px;
+        line-height:1.4;
+        margin-bottom:10px;
     }
 
     .pack-icons{
         grid-template-columns:repeat(2,1fr);
-        gap:6px 4px;
+        gap:7px 4px;
         font-size:8px;
+    }
+
+    .pack-icons span{
+        gap:3px;
     }
 
     .pack-icons i{
@@ -825,18 +841,17 @@ button{
     }
 
     .pack-right{
-        grid-column:1;
-        grid-row:3;
         display:flex;
         flex-direction:column;
         gap:7px;
         align-items:stretch;
         border-top:1px solid #E4D9A8;
-        padding-top:8px;
+        padding-top:9px;
+        margin-top:10px;
     }
 
     .pack-price{
-        font-size:22px;
+        font-size:23px;
         text-align:center;
     }
 
@@ -848,7 +863,7 @@ button{
 
     .pack-buy,
     .pack-cart{
-        min-height:34px;
+        min-height:36px;
         padding:6px 3px;
         font-size:7px;
     }
@@ -883,10 +898,11 @@ button{
         padding-right:7px;
     }
 
+
     /* EBOOKS */
 
     .ebooks-grid{
-        grid-template-columns:repeat(2,1fr);
+        grid-template-columns:repeat(2,minmax(0,1fr));
         gap:9px;
     }
 
@@ -895,12 +911,18 @@ button{
     }
 
     .ebook-cover{
-        height:190px;
+        height:185px;
     }
 
     .ebook-title{
         font-size:10px;
         min-height:48px;
+    }
+
+    .ebook-description{
+        font-size:9px;
+        min-height:78px;
+        line-height:1.4;
     }
 
     .ebook-price{
@@ -919,32 +941,34 @@ button{
     }
 
 
-    /* PACKS */
+    /* PACKS — STILL 2 COLUMNS */
 
     .packs{
-        grid-template-columns:repeat(2,1fr);
+        grid-template-columns:repeat(2,minmax(0,1fr));
         gap:8px;
     }
 
     .pack-card{
-        min-height:320px;
+        min-height:440px;
         padding:7px;
     }
 
     .pack-image{
-        height:135px;
+        height:155px;
+        padding:6px;
     }
 
     .pack-name{
-        font-size:12px;
+        font-size:11px;
     }
 
     .pack-desc{
-        font-size:9px;
+        font-size:8.5px;
     }
 
     .pack-icons{
         font-size:7px;
+        gap:5px 3px;
     }
 
     .pack-icons i{
@@ -972,12 +996,12 @@ button{
 @media(min-width:1100px){
 
     .pack-card{
-        min-height:470px;
+        min-height:590px;
         padding:20px;
     }
 
     .pack-image{
-        height:270px;
+        height:315px;
     }
 
     .pack-name{
@@ -1064,8 +1088,10 @@ button{
 
     </a>
 
+    <!-- ENGLISH COLLECTION → HOMEPAGE -->
+
     <a
-        href="ebooks.html"
+        href="index.html"
         class="english-link">
 
         🇺🇸 English Collection
@@ -1133,7 +1159,9 @@ button{
     <div class="ebooks-grid">
 
 
-        <!-- 1 -->
+        <!-- =================================================
+             EBOOK 1
+        ================================================== -->
 
         <article class="ebook-card">
 
@@ -1145,6 +1173,12 @@ button{
 
             <div class="ebook-title">
                 Découvre ta niche parfaite
+            </div>
+
+            <div class="ebook-description">
+                Découvrez comment identifier une niche rentable,
+                trouver votre positionnement et transformer votre
+                passion en opportunité de business.
             </div>
 
             <div class="ebook-price">
@@ -1175,7 +1209,9 @@ button{
         </article>
 
 
-        <!-- 2 -->
+        <!-- =================================================
+             EBOOK 2
+        ================================================== -->
 
         <article class="ebook-card">
 
@@ -1187,6 +1223,12 @@ button{
 
             <div class="ebook-title">
                 Ton plan d’action en business
+            </div>
+
+            <div class="ebook-description">
+                Construisez un plan d’action clair et structuré
+                pour lancer, organiser et développer votre
+                activité avec plus de stratégie et de confiance.
             </div>
 
             <div class="ebook-price">
@@ -1217,7 +1259,9 @@ button{
         </article>
 
 
-        <!-- 3 -->
+        <!-- =================================================
+             EBOOK 3
+        ================================================== -->
 
         <article class="ebook-card">
 
@@ -1229,6 +1273,12 @@ button{
 
             <div class="ebook-title">
                 Comment Être Financé Rapidement
+            </div>
+
+            <div class="ebook-description">
+                Découvrez les bases essentielles pour mieux
+                préparer votre demande de financement, présenter
+                votre projet et améliorer votre stratégie financière.
             </div>
 
             <div class="ebook-price">
@@ -1259,7 +1309,9 @@ button{
         </article>
 
 
-        <!-- 4 -->
+        <!-- =================================================
+             EBOOK 4
+        ================================================== -->
 
         <article class="ebook-card">
 
@@ -1271,6 +1323,12 @@ button{
 
             <div class="ebook-title">
                 Protège ton Entreprise Légalement
+            </div>
+
+            <div class="ebook-description">
+                Apprenez les principes essentiels pour protéger
+                votre entreprise, réduire les risques et prendre
+                de meilleures décisions pour votre activité.
             </div>
 
             <div class="ebook-price">
@@ -1301,7 +1359,9 @@ button{
         </article>
 
 
-        <!-- 5 -->
+        <!-- =================================================
+             EBOOK 5
+        ================================================== -->
 
         <article class="ebook-card">
 
@@ -1313,6 +1373,12 @@ button{
 
             <div class="ebook-title">
                 Crée ta présence en ligne
+            </div>
+
+            <div class="ebook-description">
+                Apprenez à construire une présence en ligne
+                professionnelle, développer votre visibilité et
+                présenter votre marque efficacement.
             </div>
 
             <div class="ebook-price">
@@ -1343,7 +1409,9 @@ button{
         </article>
 
 
-        <!-- 6 -->
+        <!-- =================================================
+             EBOOK 6
+        ================================================== -->
 
         <article class="ebook-card">
 
@@ -1356,6 +1424,12 @@ button{
             <div class="ebook-title">
                 Traffic Leads Ventes —
                 Le Système
+            </div>
+
+            <div class="ebook-description">
+                Découvrez un système structuré pour attirer du
+                trafic, générer des leads qualifiés et transformer
+                davantage de prospects en ventes.
             </div>
 
             <div class="ebook-price">
@@ -1386,7 +1460,9 @@ button{
         </article>
 
 
-        <!-- 7 -->
+        <!-- =================================================
+             EBOOK 7
+        ================================================== -->
 
         <article class="ebook-card">
 
@@ -1398,6 +1474,12 @@ button{
 
             <div class="ebook-title">
                 Discipline Financière
+            </div>
+
+            <div class="ebook-description">
+                Développez de meilleures habitudes financières,
+                apprenez à gérer votre argent et construisez une
+                stratégie plus solide pour votre avenir.
             </div>
 
             <div class="ebook-price">
@@ -1428,7 +1510,9 @@ button{
         </article>
 
 
-        <!-- 8 -->
+        <!-- =================================================
+             EBOOK 8
+        ================================================== -->
 
         <article class="ebook-card">
 
@@ -1440,6 +1524,12 @@ button{
 
             <div class="ebook-title">
                 L’art de vendre en 2026
+            </div>
+
+            <div class="ebook-description">
+                Découvrez des méthodes modernes pour mieux
+                comprendre vos clients, améliorer votre approche
+                commerciale et augmenter vos ventes.
             </div>
 
             <div class="ebook-price">
@@ -1470,7 +1560,9 @@ button{
         </article>
 
 
-        <!-- 9 -->
+        <!-- =================================================
+             EBOOK 9
+        ================================================== -->
 
         <article class="ebook-card">
 
@@ -1483,6 +1575,12 @@ button{
             <div class="ebook-title">
                 De salariés à Mentalité
                 d’entrepreneur
+            </div>
+
+            <div class="ebook-description">
+                Changez votre façon de penser, développez une
+                mentalité entrepreneuriale et découvrez les bases
+                pour avancer vers plus d’indépendance.
             </div>
 
             <div class="ebook-price">
@@ -1513,7 +1611,9 @@ button{
         </article>
 
 
-        <!-- 10 -->
+        <!-- =================================================
+             EBOOK 10
+        ================================================== -->
 
         <article class="ebook-card">
 
@@ -1526,6 +1626,12 @@ button{
             <div class="ebook-title">
                 Automatise Ton Business
                 en 30 Jours
+            </div>
+
+            <div class="ebook-description">
+                Découvrez comment identifier les tâches répétitives,
+                utiliser l’automatisation et créer un système plus
+                efficace pour gagner du temps.
             </div>
 
             <div class="ebook-price">
