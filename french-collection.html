@@ -450,7 +450,6 @@ button{
 
 /* =========================================================
    TRUST
-   UNCHANGED
 ========================================================= */
 
 .trust{
@@ -540,14 +539,27 @@ button{
     }
 
     .pack-card{
-        min-height:100px;
-        grid-template-columns:70px 1fr auto;
-        gap:10px;
+        min-height:110px;
+        grid-template-columns:78px 1fr auto;
+        gap:12px;
+        padding:10px;
     }
 
     .pack-image{
-        width:65px;
-        height:82px;
+        width:72px;
+        height:90px;
+    }
+
+    .pack-name{
+        font-size:14px;
+    }
+
+    .pack-desc{
+        font-size:9px;
+    }
+
+    .pack-price{
+        font-size:21px;
     }
 
 }
@@ -556,6 +568,7 @@ button{
 /* =========================================================
    MOBILE
    2 COLUMNS
+   LARGER EBOOKS + LARGER PACKS
 ========================================================= */
 
 @media(max-width:600px){
@@ -592,7 +605,10 @@ button{
         padding:34px 10px;
     }
 
-    /* 2 COLUMNS ON PHONE */
+
+    /* =====================================================
+       EBOOKS — 2 COLUMNS
+    ===================================================== */
 
     .ebooks-grid{
         grid-template-columns:repeat(2,minmax(0,1fr));
@@ -631,48 +647,60 @@ button{
         font-size:11px;
     }
 
+
+    /* =====================================================
+       PACKS — BIGGER ON PHONE
+    ===================================================== */
+
     .packs{
-        gap:10px;
+        gap:12px;
     }
 
     .pack-card{
-        grid-template-columns:62px 1fr auto;
-        gap:8px;
-        min-height:92px;
-        padding:8px;
+        grid-template-columns:78px 1fr auto;
+        gap:12px;
+        min-height:125px;
+        padding:12px;
+        border-radius:10px;
     }
 
     .pack-image{
-        width:58px;
-        height:72px;
+        width:74px;
+        height:96px;
     }
 
     .pack-name{
-        font-size:11px;
+        font-size:13px;
+        margin-bottom:5px;
     }
 
     .pack-desc{
-        font-size:8px;
-        margin-bottom:6px;
+        font-size:9px;
+        margin-bottom:8px;
     }
 
     .pack-icons{
-        font-size:9px;
-        gap:7px;
+        font-size:10px;
+        gap:8px;
     }
 
     .pack-right{
-        min-width:92px;
+        min-width:108px;
     }
 
     .pack-price{
-        font-size:18px;
+        font-size:22px;
+        margin-bottom:8px;
+    }
+
+    .pack-buttons{
+        gap:6px;
     }
 
     .pack-buy,
     .pack-cart{
-        font-size:6px;
-        padding:5px 3px;
+        font-size:7px;
+        padding:7px 5px;
     }
 
 }
@@ -681,6 +709,7 @@ button{
 /* =========================================================
    VERY SMALL PHONES
    STILL 2 COLUMNS
+   BIGGER PACKS
 ========================================================= */
 
 @media(max-width:360px){
@@ -689,6 +718,9 @@ button{
         padding-left:7px;
         padding-right:7px;
     }
+
+
+    /* EBOOKS — STILL 2 COLUMNS */
 
     .ebooks-grid{
         grid-template-columns:repeat(2,minmax(0,1fr));
@@ -722,42 +754,54 @@ button{
         font-size:10px;
     }
 
+
+    /* PACKS — STILL BIG */
+
     .pack-card{
-        grid-template-columns:55px 1fr 86px;
-        gap:6px;
-        min-height:88px;
+        grid-template-columns:70px 1fr 100px;
+        gap:9px;
+        min-height:120px;
+        padding:10px;
+        border-radius:10px;
     }
 
     .pack-image{
-        width:52px;
-        height:68px;
+        width:66px;
+        height:88px;
     }
 
     .pack-name{
-        font-size:9px;
+        font-size:11px;
+        margin-bottom:4px;
     }
 
     .pack-desc{
-        font-size:7px;
+        font-size:8px;
+        margin-bottom:7px;
     }
 
     .pack-icons{
-        font-size:8px;
-        gap:5px;
+        font-size:9px;
+        gap:7px;
     }
 
     .pack-right{
-        min-width:86px;
+        min-width:100px;
     }
 
     .pack-price{
-        font-size:17px;
+        font-size:20px;
+        margin-bottom:7px;
+    }
+
+    .pack-buttons{
+        gap:5px;
     }
 
     .pack-buy,
     .pack-cart{
-        font-size:5.5px;
-        padding:4px 2px;
+        font-size:6.5px;
+        padding:6px 4px;
     }
 
 }
