@@ -19,7 +19,7 @@
 <style>
 
 /* =========================================================
-   THEBESTBUNDLE — FRENCH COLLECTION — MODEL 3
+   THEBESTBUNDLE — FRENCH COLLECTION
 ========================================================= */
 
 :root{
@@ -147,13 +147,14 @@ button{
 
 
 /* =========================================================
-   HERO — MODEL 3
+   HERO
 ========================================================= */
 
 .hero{
     position:relative;
     min-height:360px;
     overflow:hidden;
+
     background:
         linear-gradient(
             90deg,
@@ -226,27 +227,27 @@ button{
 ========================================================= */
 
 .section{
-    max-width:1050px;
+    max-width:1200px;
     margin:auto;
-    padding:42px 12px;
+    padding:48px 18px;
 }
 
 .section-heading{
     text-align:center;
-    margin-bottom:28px;
+    margin-bottom:30px;
 }
 
 .section-kicker{
     color:var(--gold-dark);
-    font-size:12px;
+    font-size:13px;
     font-weight:900;
-    letter-spacing:1.5px;
-    margin-bottom:7px;
+    letter-spacing:1.8px;
+    margin-bottom:8px;
 }
 
 .section-title{
     font-family:Georgia,serif;
-    font-size:27px;
+    font-size:32px;
 }
 
 .section-title i{
@@ -269,21 +270,21 @@ button{
 .ebook-card{
     background:white;
     border:1px solid #D7C995;
-    border-radius:9px;
+    border-radius:10px;
     padding:12px 10px 12px;
     text-align:center;
     display:flex;
     flex-direction:column;
     min-width:0;
-    box-shadow:0 4px 14px rgba(7,26,51,.09);
+    box-shadow:0 5px 18px rgba(7,26,51,.08);
 }
 
 .ebook-cover{
-    height:245px;
+    height:330px;
     display:flex;
     align-items:center;
     justify-content:center;
-    margin-bottom:10px;
+    margin-bottom:12px;
 }
 
 .ebook-cover img{
@@ -293,34 +294,35 @@ button{
 }
 
 .ebook-title{
-    min-height:52px;
+    min-height:58px;
     display:flex;
     align-items:flex-start;
     justify-content:center;
-    font-size:13px;
+    font-size:15px;
     line-height:1.3;
     font-weight:800;
     color:var(--navy);
+    padding:0 5px;
 }
 
 .ebook-price{
-    font-size:17px;
+    font-size:22px;
     font-weight:900;
-    margin:9px 0;
+    margin:12px 0;
 }
 
 .buy-btn{
     width:100%;
-    min-height:36px;
+    min-height:48px;
     border:none;
-    border-radius:5px;
+    border-radius:7px;
     background:var(--gold);
     color:var(--navy);
-    font-size:10px;
+    font-size:13px;
     font-weight:900;
     line-height:1.1;
-    padding:7px 4px;
-    margin-bottom:6px;
+    padding:8px 5px;
+    margin-bottom:8px;
 }
 
 .buy-btn:hover{
@@ -329,12 +331,12 @@ button{
 
 .cart-btn{
     width:100%;
-    min-height:34px;
+    min-height:46px;
     border:1px solid var(--navy);
-    border-radius:5px;
+    border-radius:7px;
     background:var(--navy);
     color:white;
-    font-size:13px;
+    font-size:18px;
 }
 
 .cart-btn:hover{
@@ -344,38 +346,56 @@ button{
 
 /* =========================================================
    PACKS
+   2 COLUMNS × 2 ROWS
 ========================================================= */
 
 .packs-section{
-    padding-top:12px;
+    padding-top:20px;
 }
 
 .packs{
-    display:flex;
-    flex-direction:column;
-    gap:12px;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
 }
+
+
+/* =========================================================
+   LARGE PACK CARD
+========================================================= */
 
 .pack-card{
-    background:var(--navy);
-    color:white;
-    border:1px solid #243B5A;
-    border-radius:10px;
-    min-height:105px;
-    padding:10px 12px;
+    background:white;
+    color:var(--navy);
+    border:1px solid #D7C995;
+    border-radius:14px;
+    min-height:430px;
+    padding:18px;
     display:grid;
-    grid-template-columns:78px 1fr auto;
-    gap:13px;
+    grid-template-columns:1.15fr .85fr;
+    grid-template-rows:auto auto auto;
+    column-gap:18px;
     align-items:center;
-    box-shadow:0 5px 14px rgba(7,26,51,.14);
+    box-shadow:0 6px 20px rgba(7,26,51,.09);
+    overflow:hidden;
 }
 
+
+/* =========================================================
+   PACK IMAGE
+========================================================= */
+
 .pack-image{
-    width:72px;
-    height:88px;
+    width:100%;
+    height:245px;
     display:flex;
     align-items:center;
     justify-content:center;
+    grid-column:1;
+    grid-row:1 / span 2;
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
 }
 
 .pack-image img{
@@ -384,56 +404,92 @@ button{
     object-fit:contain;
 }
 
+
+/* =========================================================
+   PACK INFO
+========================================================= */
+
 .pack-info{
     min-width:0;
+    grid-column:2;
+    grid-row:1 / span 2;
+    align-self:center;
 }
 
 .pack-name{
-    color:var(--gold);
-    font-size:15px;
+    color:var(--navy);
+    font-size:23px;
     font-weight:900;
     text-transform:uppercase;
-    margin-bottom:4px;
+    line-height:1.1;
+    margin-bottom:12px;
 }
 
 .pack-desc{
-    font-size:10px;
-    color:rgba(255,255,255,.85);
-    margin-bottom:7px;
+    font-size:16px;
+    line-height:1.45;
+    color:#334155;
+    font-weight:600;
+    margin-bottom:15px;
 }
 
 .pack-icons{
-    display:flex;
-    gap:10px;
-    color:var(--gold);
-    font-size:11px;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px 8px;
+    color:var(--navy);
+    font-size:13px;
+    font-weight:800;
 }
 
+.pack-icons i{
+    color:var(--gold-dark);
+    font-size:20px;
+}
+
+
+/* =========================================================
+   PACK RIGHT / PRICE / BUTTONS
+========================================================= */
+
 .pack-right{
+    grid-column:1 / span 2;
+    grid-row:3;
+    width:100%;
     text-align:right;
-    min-width:125px;
+    display:grid;
+    grid-template-columns:auto 1fr;
+    gap:15px;
+    align-items:center;
+    border-top:1px solid #E4D9A8;
+    padding-top:15px;
 }
 
 .pack-price{
-    color:var(--gold);
-    font-size:22px;
+    color:var(--navy);
+    font-size:30px;
     font-weight:900;
-    margin-bottom:7px;
+    white-space:nowrap;
 }
 
 .pack-buttons{
-    display:flex;
-    flex-direction:column;
-    gap:5px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
 }
 
 .pack-buy,
 .pack-cart{
-    border-radius:4px;
-    padding:6px 8px;
-    font-size:8px;
+    min-height:44px;
+    border-radius:6px;
+    padding:8px 10px;
+    font-size:11px;
     font-weight:900;
     white-space:nowrap;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
 }
 
 .pack-buy{
@@ -441,15 +497,24 @@ button{
     color:var(--navy);
 }
 
+.pack-buy:hover{
+    background:var(--gold-dark);
+}
+
 .pack-cart{
-    background:transparent;
-    color:white;
-    border:1px solid var(--gold);
+    background:white;
+    color:var(--navy);
+    border:1px solid var(--navy);
+}
+
+.pack-cart:hover{
+    background:#F4F6F8;
 }
 
 
 /* =========================================================
    TRUST
+   DO NOT CHANGE
 ========================================================= */
 
 .trust{
@@ -502,64 +567,103 @@ button{
 
 /* =========================================================
    TABLET
-   3 COLUMNS
 ========================================================= */
 
-@media(max-width:900px) and (min-width:601px){
+@media(max-width:900px){
+
+    .section{
+        padding:42px 14px;
+    }
 
     .ebooks-grid{
         grid-template-columns:repeat(3,1fr);
         gap:14px;
     }
 
-    .ebook-card{
-        padding:10px 8px;
-    }
-
     .ebook-cover{
-        height:220px;
+        height:270px;
     }
 
     .ebook-title{
-        font-size:12px;
-        min-height:50px;
+        font-size:13px;
+        min-height:54px;
     }
 
     .ebook-price{
-        font-size:16px;
+        font-size:20px;
     }
 
     .buy-btn{
-        font-size:9px;
-        min-height:34px;
+        min-height:44px;
+        font-size:11px;
     }
 
     .cart-btn{
-        min-height:32px;
+        min-height:42px;
+        font-size:16px;
+    }
+
+    .packs{
+        grid-template-columns:repeat(2,1fr);
+        gap:16px;
     }
 
     .pack-card{
-        min-height:110px;
-        grid-template-columns:78px 1fr auto;
+        min-height:390px;
+        padding:14px;
+        grid-template-columns:1fr;
+        grid-template-rows:auto auto auto;
         gap:12px;
-        padding:10px;
     }
 
     .pack-image{
-        width:72px;
-        height:90px;
+        grid-column:1;
+        grid-row:1;
+        height:210px;
+    }
+
+    .pack-info{
+        grid-column:1;
+        grid-row:2;
     }
 
     .pack-name{
-        font-size:14px;
+        font-size:19px;
     }
 
     .pack-desc{
-        font-size:9px;
+        font-size:14px;
+    }
+
+    .pack-icons{
+        font-size:11px;
+        gap:8px;
+    }
+
+    .pack-icons i{
+        font-size:17px;
+    }
+
+    .pack-right{
+        grid-column:1;
+        grid-row:3;
+        grid-template-columns:auto 1fr;
+        gap:8px;
     }
 
     .pack-price{
-        font-size:21px;
+        font-size:25px;
+    }
+
+    .pack-buttons{
+        grid-template-columns:1fr;
+        gap:6px;
+    }
+
+    .pack-buy,
+    .pack-cart{
+        min-height:38px;
+        font-size:9px;
     }
 
 }
@@ -568,7 +672,6 @@ button{
 /* =========================================================
    MOBILE
    2 COLUMNS
-   LARGER EBOOKS + LARGER PACKS
 ========================================================= */
 
 @media(max-width:600px){
@@ -582,8 +685,25 @@ button{
         height:38px;
     }
 
+    .header-actions{
+        gap:14px;
+    }
+
+    .header-icon{
+        font-size:19px;
+    }
+
     .nav-row{
         padding:8px 12px;
+    }
+
+    .back-link{
+        font-size:13px;
+    }
+
+    .english-link{
+        font-size:11px;
+        padding:7px 9px;
     }
 
     .hero{
@@ -602,105 +722,150 @@ button{
     }
 
     .section{
-        padding:34px 10px;
+        padding:36px 10px;
     }
 
+    .section-heading{
+        margin-bottom:24px;
+    }
 
-    /* =====================================================
-       EBOOKS — 2 COLUMNS
-    ===================================================== */
+    .section-title{
+        font-size:27px;
+    }
+
+    /* EBOOKS = 2 COLUMNS */
 
     .ebooks-grid{
-        grid-template-columns:repeat(2,minmax(0,1fr));
+        grid-template-columns:repeat(2,1fr);
         gap:12px;
     }
 
     .ebook-card{
-        padding:9px 7px 9px;
-        border-radius:7px;
+        padding:8px 6px 9px;
+        border-radius:8px;
     }
 
     .ebook-cover{
-        height:190px;
+        height:230px;
         margin-bottom:9px;
     }
 
     .ebook-title{
-        font-size:11px;
-        min-height:52px;
+        font-size:12px;
         line-height:1.3;
+        min-height:55px;
     }
 
     .ebook-price{
-        font-size:15px;
-        margin:7px 0;
+        font-size:19px;
+        margin:9px 0;
     }
 
     .buy-btn{
-        font-size:8px;
-        min-height:33px;
+        min-height:42px;
+        font-size:9px;
         padding:6px 2px;
     }
 
     .cart-btn{
-        min-height:31px;
-        font-size:11px;
+        min-height:40px;
+        font-size:16px;
     }
 
 
-    /* =====================================================
-       PACKS — BIGGER ON PHONE
-    ===================================================== */
+    /* PACKS = 2 COLUMNS */
 
     .packs{
+        grid-template-columns:repeat(2,1fr);
         gap:12px;
     }
 
     .pack-card{
-        grid-template-columns:78px 1fr auto;
-        gap:12px;
-        min-height:125px;
-        padding:12px;
+        min-height:350px;
+        padding:9px;
         border-radius:10px;
+        grid-template-columns:1fr;
+        grid-template-rows:auto auto auto;
+        gap:7px;
     }
 
     .pack-image{
-        width:74px;
-        height:96px;
+        width:100%;
+        height:155px;
+        grid-column:1;
+        grid-row:1;
+        border-radius:7px;
+    }
+
+    .pack-info{
+        grid-column:1;
+        grid-row:2;
     }
 
     .pack-name{
-        font-size:13px;
-        margin-bottom:5px;
+        font-size:14px;
+        line-height:1.15;
+        margin-bottom:6px;
     }
 
     .pack-desc{
-        font-size:9px;
+        font-size:10px;
+        line-height:1.35;
         margin-bottom:8px;
     }
 
     .pack-icons{
-        font-size:10px;
-        gap:8px;
+        grid-template-columns:repeat(2,1fr);
+        gap:6px 4px;
+        font-size:8px;
+    }
+
+    .pack-icons i{
+        font-size:14px;
     }
 
     .pack-right{
-        min-width:108px;
+        grid-column:1;
+        grid-row:3;
+        display:flex;
+        flex-direction:column;
+        gap:7px;
+        align-items:stretch;
+        border-top:1px solid #E4D9A8;
+        padding-top:8px;
     }
 
     .pack-price{
         font-size:22px;
-        margin-bottom:8px;
+        text-align:center;
     }
 
     .pack-buttons{
-        gap:6px;
+        display:grid;
+        grid-template-columns:1fr;
+        gap:5px;
     }
 
     .pack-buy,
     .pack-cart{
+        min-height:34px;
+        padding:6px 3px;
         font-size:7px;
-        padding:7px 5px;
+    }
+
+
+    /* TRUST — ORIGINAL */
+
+    .trust{
+        gap:8px;
+    }
+
+    .trust-item{
+        font-size:7px;
+    }
+
+    .trust-item i{
+        font-size:17px;
     }
 
 }
@@ -709,7 +874,6 @@ button{
 /* =========================================================
    VERY SMALL PHONES
    STILL 2 COLUMNS
-   BIGGER PACKS
 ========================================================= */
 
 @media(max-width:360px){
@@ -719,89 +883,119 @@ button{
         padding-right:7px;
     }
 
-
-    /* EBOOKS — STILL 2 COLUMNS */
+    /* EBOOKS */
 
     .ebooks-grid{
-        grid-template-columns:repeat(2,minmax(0,1fr));
+        grid-template-columns:repeat(2,1fr);
         gap:9px;
     }
 
     .ebook-card{
-        padding:8px 5px 8px;
+        padding:6px 4px 7px;
     }
 
     .ebook-cover{
-        height:170px;
+        height:190px;
     }
 
     .ebook-title{
         font-size:10px;
-        min-height:50px;
+        min-height:48px;
     }
 
     .ebook-price{
-        font-size:14px;
+        font-size:17px;
+        margin:7px 0;
     }
 
     .buy-btn{
+        min-height:38px;
         font-size:7px;
-        min-height:31px;
     }
 
     .cart-btn{
-        min-height:29px;
-        font-size:10px;
+        min-height:36px;
+        font-size:14px;
     }
 
 
-    /* PACKS — STILL BIG */
+    /* PACKS */
+
+    .packs{
+        grid-template-columns:repeat(2,1fr);
+        gap:8px;
+    }
 
     .pack-card{
-        grid-template-columns:70px 1fr 100px;
-        gap:9px;
-        min-height:120px;
-        padding:10px;
-        border-radius:10px;
+        min-height:320px;
+        padding:7px;
     }
 
     .pack-image{
-        width:66px;
-        height:88px;
+        height:135px;
     }
 
     .pack-name{
-        font-size:11px;
-        margin-bottom:4px;
+        font-size:12px;
     }
 
     .pack-desc{
-        font-size:8px;
-        margin-bottom:7px;
+        font-size:9px;
     }
 
     .pack-icons{
-        font-size:9px;
-        gap:7px;
+        font-size:7px;
     }
 
-    .pack-right{
-        min-width:100px;
+    .pack-icons i{
+        font-size:12px;
     }
 
     .pack-price{
         font-size:20px;
-        margin-bottom:7px;
-    }
-
-    .pack-buttons{
-        gap:5px;
     }
 
     .pack-buy,
     .pack-cart{
-        font-size:6.5px;
-        padding:6px 4px;
+        min-height:32px;
+        font-size:6px;
+        padding:5px 2px;
+    }
+
+}
+
+
+/* =========================================================
+   LARGE SCREENS
+========================================================= */
+
+@media(min-width:1100px){
+
+    .pack-card{
+        min-height:470px;
+        padding:20px;
+    }
+
+    .pack-image{
+        height:270px;
+    }
+
+    .pack-name{
+        font-size:25px;
+    }
+
+    .pack-desc{
+        font-size:17px;
+    }
+
+    .pack-price{
+        font-size:34px;
+    }
+
+    .pack-buy,
+    .pack-cart{
+        min-height:48px;
+        font-size:12px;
     }
 
 }
@@ -1397,7 +1591,7 @@ button{
             <div class="pack-image">
                 <img
                     src="images/starterpack.jpg"
-                    alt="Pack Starter">
+                    alt="Starter Bundle">
             </div>
 
             <div class="pack-info">
@@ -1411,10 +1605,27 @@ button{
                 </div>
 
                 <div class="pack-icons">
-                    <i class="fa-solid fa-book"></i>
-                    <i class="fa-solid fa-file-lines"></i>
-                    <i class="fa-solid fa-download"></i>
-                    <i class="fa-solid fa-gift"></i>
+
+                    <span>
+                        <i class="fa-solid fa-book"></i>
+                        eBooks
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-file-lines"></i>
+                        Templates
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-download"></i>
+                        Téléchargement
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-gift"></i>
+                        Bonus
+                    </span>
+
                 </div>
 
             </div>
@@ -1475,10 +1686,27 @@ button{
                 </div>
 
                 <div class="pack-icons">
-                    <i class="fa-solid fa-book"></i>
-                    <i class="fa-solid fa-file-lines"></i>
-                    <i class="fa-solid fa-download"></i>
-                    <i class="fa-solid fa-gift"></i>
+
+                    <span>
+                        <i class="fa-solid fa-book"></i>
+                        eBooks
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-file-lines"></i>
+                        Templates
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-download"></i>
+                        Téléchargement
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-gift"></i>
+                        Bonus
+                    </span>
+
                 </div>
 
             </div>
@@ -1539,10 +1767,27 @@ button{
                 </div>
 
                 <div class="pack-icons">
-                    <i class="fa-solid fa-book"></i>
-                    <i class="fa-solid fa-file-lines"></i>
-                    <i class="fa-solid fa-download"></i>
-                    <i class="fa-solid fa-gift"></i>
+
+                    <span>
+                        <i class="fa-solid fa-book"></i>
+                        eBooks
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-file-lines"></i>
+                        Templates
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-download"></i>
+                        Téléchargement
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-gift"></i>
+                        Bonus
+                    </span>
+
                 </div>
 
             </div>
@@ -1603,10 +1848,27 @@ button{
                 </div>
 
                 <div class="pack-icons">
-                    <i class="fa-solid fa-book"></i>
-                    <i class="fa-solid fa-file-lines"></i>
-                    <i class="fa-solid fa-download"></i>
-                    <i class="fa-solid fa-gift"></i>
+
+                    <span>
+                        <i class="fa-solid fa-book"></i>
+                        eBooks
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-file-lines"></i>
+                        Templates
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-download"></i>
+                        Téléchargement
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-gift"></i>
+                        Bonus
+                    </span>
+
                 </div>
 
             </div>
@@ -1649,7 +1911,10 @@ button{
     </div>
 
 
-    <!-- TRUST -->
+    <!-- ==================================================
+         TRUST
+         ORIGINAL — UNCHANGED
+    ================================================== -->
 
     <div class="trust">
 
