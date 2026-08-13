@@ -529,9 +529,54 @@ button{
     font-size:8px;
 }
 
+/* =========================================================
+   TABLET / MOBILE
+========================================================= */
+
+@media(max-width:900px){
+
+    .ebooks-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:16px;
+    }
+
+    .ebook-cover{
+        height:240px;
+    }
+
+    .ebook-title{
+        font-size:14px;
+    }
+
+    .pack-card{
+        grid-template-columns:120px 1fr 150px;
+        gap:16px;
+        min-height:165px;
+        padding:15px;
+    }
+
+    .pack-image{
+        width:115px;
+        height:135px;
+    }
+
+    .pack-name{
+        font-size:18px;
+    }
+
+    .pack-desc{
+        font-size:13px;
+    }
+
+    .pack-price{
+        font-size:27px;
+    }
+
+}
+
 
 /* =========================================================
-   MOBILE
+   PHONE
 ========================================================= */
 
 @media(max-width:600px){
@@ -565,81 +610,102 @@ button{
     }
 
     .section{
-        padding:34px 8px;
+        padding:34px 12px;
     }
 
+    /*
+       2 COLUMNS ON PHONE
+       Keeps products large enough to see.
+    */
     .ebooks-grid{
-        grid-template-columns:repeat(5,1fr);
-        gap:5px;
+        grid-template-columns:repeat(2,1fr);
+        gap:12px;
     }
 
     .ebook-card{
-        padding:5px 3px 6px;
-        border-radius:5px;
+        padding:9px 8px 11px;
+        border-radius:9px;
     }
 
     .ebook-cover{
-        height:118px;
+        height:190px;
+        margin-bottom:10px;
     }
 
     .ebook-title{
-        font-size:8px;
-        min-height:50px;
+        font-size:11px;
+        min-height:48px;
     }
 
     .ebook-price{
-        font-size:12px;
-        margin:5px 0;
+        font-size:16px;
+        margin:7px 0;
     }
 
     .buy-btn{
-        font-size:6.5px;
-        min-height:27px;
-        padding:4px 1px;
+        font-size:8px;
+        min-height:35px;
+        padding:7px 2px;
     }
 
     .cart-btn{
-        min-height:25px;
-        font-size:10px;
+        min-height:34px;
+        font-size:12px;
     }
 
+    /*
+       LARGE MOBILE BUNDLES
+    */
     .pack-card{
-        grid-template-columns:52px 1fr auto;
-        gap:7px;
-        min-height:78px;
-        padding:7px;
+        grid-template-columns:90px 1fr;
+        gap:12px;
+        min-height:145px;
+        padding:13px;
     }
 
     .pack-image{
-        width:48px;
-        height:60px;
+        width:88px;
+        height:115px;
     }
 
     .pack-name{
-        font-size:10px;
+        font-size:15px;
     }
 
     .pack-desc{
-        font-size:7px;
+        font-size:11px;
+        margin-bottom:10px;
     }
 
     .pack-icons{
-        font-size:8px;
-        gap:6px;
+        font-size:12px;
+        gap:8px;
     }
 
     .pack-right{
-        min-width:82px;
+        grid-column:1 / -1;
+        text-align:left;
+        min-width:0;
+        display:grid;
+        grid-template-columns:auto 1fr;
+        gap:12px;
+        align-items:center;
     }
 
     .pack-price{
-        font-size:17px;
+        font-size:24px;
+        margin-bottom:0;
+    }
+
+    .pack-buttons{
+        flex-direction:row;
     }
 
     .pack-buy,
     .pack-cart{
-        font-size:5.5px;
-        padding:4px 3px;
+        flex:1;
+        font-size:8px;
+        padding:8px 5px;
     }
 
 }
@@ -651,33 +717,38 @@ button{
 
 @media(max-width:360px){
 
+    .ebooks-grid{
+        grid-template-columns:1fr;
+    }
+
     .ebook-cover{
-        height:105px;
+        height:270px;
     }
 
     .ebook-title{
-        font-size:7px;
+        font-size:14px;
     }
 
     .pack-card{
-        grid-template-columns:45px 1fr 75px;
+        grid-template-columns:75px 1fr;
     }
 
     .pack-image{
-        width:42px;
-        height:55px;
+        width:72px;
+        height:95px;
+    }
+
+    .pack-right{
+        grid-template-columns:1fr;
+    }
+
+    .pack-buttons{
+        flex-direction:column;
     }
 
 }
 
-</style>
-
-</head>
-
-
-<body>
-
-
+      
 <!-- ======================================================
      HEADER
 ====================================================== -->
