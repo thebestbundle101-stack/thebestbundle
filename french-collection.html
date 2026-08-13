@@ -257,33 +257,41 @@ button{
 
 /* =========================================================
    EBOOK GRID
-   EXACTLY 5 COLUMNS × 2 ROWS
+   3 COLUMNS — LARGE PREMIUM CARDS
 ========================================================= */
 
 .ebooks-grid{
     display:grid;
-    grid-template-columns:repeat(5,1fr);
-    gap:8px;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
 }
 
 .ebook-card{
     background:white;
     border:1px solid #D7C995;
-    border-radius:7px;
-    padding:7px 5px 8px;
+    border-radius:12px;
+    padding:14px 14px 16px;
     text-align:center;
     display:flex;
     flex-direction:column;
     min-width:0;
-    box-shadow:0 3px 10px rgba(7,26,51,.07);
+    box-shadow:0 6px 18px rgba(7,26,51,.09);
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.ebook-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 26px rgba(7,26,51,.15);
 }
 
 .ebook-cover{
-    height:150px;
+    height:285px;
     display:flex;
     align-items:center;
     justify-content:center;
-    margin-bottom:7px;
+    margin-bottom:14px;
 }
 
 .ebook-cover img{
@@ -293,34 +301,38 @@ button{
 }
 
 .ebook-title{
-    min-height:46px;
+    min-height:52px;
     display:flex;
     align-items:flex-start;
     justify-content:center;
-    font-size:10px;
-    line-height:1.25;
+    font-size:15px;
+    line-height:1.3;
     font-weight:800;
     color:var(--navy);
+    padding:0 5px;
 }
 
 .ebook-price{
-    font-size:14px;
+    font-size:19px;
     font-weight:900;
-    margin:7px 0;
+    margin:10px 0;
 }
 
 .buy-btn{
     width:100%;
-    min-height:28px;
+    min-height:42px;
     border:none;
-    border-radius:4px;
+    border-radius:6px;
     background:var(--gold);
     color:var(--navy);
-    font-size:8px;
+    font-size:11px;
     font-weight:900;
     line-height:1.1;
-    padding:5px 2px;
-    margin-bottom:5px;
+    padding:9px 5px;
+    margin-bottom:7px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 
 .buy-btn:hover{
@@ -329,50 +341,58 @@ button{
 
 .cart-btn{
     width:100%;
-    min-height:27px;
+    min-height:40px;
     border:1px solid var(--navy);
-    border-radius:4px;
+    border-radius:6px;
     background:var(--navy);
     color:white;
-    font-size:11px;
+    font-size:14px;
 }
 
 .cart-btn:hover{
     background:#102D52;
 }
 
-
 /* =========================================================
    PACKS
+   LARGE PREMIUM BUNDLE CARDS
 ========================================================= */
 
 .packs-section{
-    padding-top:12px;
+    padding-top:30px;
 }
 
 .packs{
     display:flex;
     flex-direction:column;
-    gap:8px;
+    gap:18px;
 }
 
 .pack-card{
     background:var(--navy);
     color:white;
     border:1px solid #243B5A;
-    border-radius:8px;
-    min-height:86px;
-    padding:8px 10px;
+    border-radius:14px;
+    min-height:190px;
+    padding:18px 22px;
     display:grid;
-    grid-template-columns:62px 1fr auto;
-    gap:10px;
+    grid-template-columns:150px 1fr 190px;
+    gap:22px;
     align-items:center;
-    box-shadow:0 4px 12px rgba(7,26,51,.12);
+    box-shadow:0 8px 22px rgba(7,26,51,.15);
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.pack-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 14px 30px rgba(7,26,51,.20);
 }
 
 .pack-image{
-    width:58px;
-    height:70px;
+    width:145px;
+    height:155px;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -390,55 +410,62 @@ button{
 
 .pack-name{
     color:var(--gold);
-    font-size:13px;
+    font-size:22px;
     font-weight:900;
     text-transform:uppercase;
-    margin-bottom:3px;
+    margin-bottom:8px;
+    letter-spacing:.5px;
 }
 
 .pack-desc{
-    font-size:9px;
-    color:rgba(255,255,255,.85);
-    margin-bottom:6px;
+    font-size:15px;
+    color:rgba(255,255,255,.88);
+    margin-bottom:14px;
+    font-weight:600;
 }
 
 .pack-icons{
     display:flex;
-    gap:9px;
+    gap:14px;
     color:var(--gold);
-    font-size:10px;
+    font-size:16px;
 }
 
 .pack-right{
     text-align:right;
-    min-width:105px;
+    min-width:170px;
 }
 
 .pack-price{
     color:var(--gold);
-    font-size:20px;
+    font-size:32px;
     font-weight:900;
-    margin-bottom:6px;
+    margin-bottom:12px;
 }
 
 .pack-buttons{
     display:flex;
     flex-direction:column;
-    gap:4px;
+    gap:7px;
 }
 
 .pack-buy,
 .pack-cart{
-    border-radius:3px;
-    padding:5px 7px;
-    font-size:7px;
+    border-radius:5px;
+    padding:10px 12px;
+    font-size:10px;
     font-weight:900;
     white-space:nowrap;
+    text-align:center;
 }
 
 .pack-buy{
     background:var(--gold);
     color:var(--navy);
+}
+
+.pack-buy:hover{
+    background:var(--gold-dark);
 }
 
 .pack-cart{
@@ -447,7 +474,10 @@ button{
     border:1px solid var(--gold);
 }
 
-
+.pack-cart:hover{
+    background:rgba(244,197,66,.12);
+}
+      
 /* =========================================================
    TRUST
 ========================================================= */
