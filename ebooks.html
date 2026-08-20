@@ -446,9 +446,6 @@ button{
     gap:
         24px;
 
-    min-height:
-        790px;
-
 }
 
 
@@ -484,8 +481,8 @@ button{
         translateY(0);
 
     transition:
-        opacity .35s ease,
-        transform .35s ease;
+        opacity .4s ease,
+        transform .4s ease;
 
 }
 
@@ -561,10 +558,12 @@ button{
     padding:
         18px;
 
-    flex:1;
-
 }
 
+
+/* =========================================
+   PRODUCT LABEL
+========================================= */
 
 .product-label{
 
@@ -588,6 +587,10 @@ button{
 
 }
 
+
+/* =========================================
+   PRODUCT TITLE
+========================================= */
 
 .product-info h2{
 
@@ -643,7 +646,7 @@ button{
 .product-price{
 
     margin-top:
-        auto;
+        4px;
 
     margin-bottom:
         12px;
@@ -808,9 +811,6 @@ button{
         gap:
             18px;
 
-        min-height:
-            700px;
-
     }
 
 
@@ -892,9 +892,6 @@ button{
 
         gap:
             14px;
-
-        min-height:
-            790px;
 
     }
 
@@ -1067,9 +1064,6 @@ button{
 
         gap:
             10px;
-
-        min-height:
-            720px;
 
     }
 
@@ -1453,78 +1447,56 @@ const productsGrid =
 
 
 /* =========================================
-   ROTATION INDEX
+   CURRENT EBOOK ORDER
 ========================================= */
 
-let rotationIndex = 0;
+/*
+    All 4 ebooks are ALWAYS displayed.
+
+    The order of the 4 ebooks changes
+    every 10 seconds.
+*/
+
+let ebookOrder =
+    [...ebooks];
 
 
 /* =========================================
-   DETERMINE NUMBER OF VISIBLE PRODUCTS
+   SHUFFLE EBOOK POSITIONS
 ========================================= */
 
-function getVisibleProductCount(){
-
-    const width =
-        window.innerWidth;
-
+function shuffleEbooks(){
 
     /*
-        Portrait phone:
-        2 eBooks
+        Fisher-Yates shuffle.
+
+        This changes ONLY the position
+        of the existing ebooks.
+
+        No ebook is removed.
     */
-
-    if(width <= 650){
-
-        return 2;
-
-    }
-
-
-    /*
-        Landscape phone,
-        tablet and desktop:
-        3 eBooks
-    */
-
-    return 3;
-
-}
-
-
-/* =========================================
-   GET CURRENT GROUP OF EBOOKS
-========================================= */
-
-function getVisibleEbooks(){
-
-    const visibleCount =
-        getVisibleProductCount();
-
-
-    const visible = [];
-
 
     for(
-        let i = 0;
-        i < visibleCount;
-        i++
+        let i = ebookOrder.length - 1;
+        i > 0;
+        i--
     ){
 
-        const index =
-            (
-                rotationIndex + i
-            ) % ebooks.length;
+        const j =
+            Math.floor(
+                Math.random() * (i + 1)
+            );
 
 
-        visible.push(
-            ebooks[index]
-        );
+        [
+            ebookOrder[i],
+            ebookOrder[j]
+        ] = [
+            ebookOrder[j],
+            ebookOrder[i]
+        ];
 
     }
-
-
-    return visible;
 
 }
 
@@ -1624,19 +1596,28 @@ function createProductCard(
 
 
 /* =========================================
-   RENDER PRODUCT CARDS
+   RENDER ALL 4 EBOOKS
 ========================================= */
 
 function renderProductCards(){
 
-    productsGrid.innerHTML = "";
+    productsGrid.innerHTML =
+        "";
 
 
-    const visibleEbooks =
-        getVisibleEbooks();
+    /*
+        IMPORTANT:
 
+        Render ALL ebooks.
 
-    visibleEbooks.forEach(
+        We do NOT use a visible-count
+        anymore.
+
+        This means all 4 remain on
+        the same page.
+    */
+
+    ebookOrder.forEach(
         function(product){
 
             productsGrid.appendChild(
@@ -1652,7 +1633,7 @@ function renderProductCards(){
 
 
 /* =========================================
-   RENDER PRODUCTS WITH ANIMATION
+   RENDER PRODUCTS
 ========================================= */
 
 function renderProducts(
@@ -1668,10 +1649,19 @@ function renderProducts(
     }
 
 
+    /*
+        Fade the existing cards out.
+    */
+
     productsGrid.classList.add(
         "is-changing"
     );
 
+
+    /*
+        Wait for the fade-out,
+        then change their positions.
+    */
 
     setTimeout(
         function(){
@@ -1680,8 +1670,9 @@ function renderProducts(
 
 
             /*
-                Remove the fading class
-                after the new cards are inserted.
+                Allow the browser to
+                display the new cards,
+                then fade them back in.
             */
 
             requestAnimationFrame(
@@ -1695,7 +1686,7 @@ function renderProducts(
             );
 
         },
-        350
+        400
     );
 
 }
@@ -1709,108 +1700,31 @@ renderProducts();
 
 
 /* =========================================
-   AUTOMATIC EBOOK ROTATION
+   AUTOMATIC POSITION ROTATION
 ========================================= */
 
 /*
-    IMPORTANT:
+    The page keeps ALL 4 ebooks.
 
-    We move by the number of visible cards.
+    Every 10 seconds:
 
-    Portrait:
-        1 + 2
-        then 3 + 4
-        then 1 + 2
-
-    Landscape:
-        1 + 2 + 3
-        then 4 + 1 + 2
-        then 3 + 4 + 1
-
-    The rotation happens every 10 seconds.
+        1. Shuffle the 4 ebooks.
+        2. Keep all 4 visible.
+        3. Put them in different positions.
+        4. Fade smoothly between positions.
 */
 
-function rotateEbooks(){
-
-    const visibleCount =
-        getVisibleProductCount();
-
-
-    rotationIndex =
-        (
-            rotationIndex +
-            visibleCount
-        ) % ebooks.length;
-
-
-    renderProducts(true);
-
-}
-
-
-/*
-    10,000 milliseconds
-    =
-    10 seconds
-*/
-
-let rotationTimer =
+const rotationTimer =
     setInterval(
-        rotateEbooks,
+        function(){
+
+            shuffleEbooks();
+
+            renderProducts(true);
+
+        },
         10000
     );
-
-
-/* =========================================
-   HANDLE SCREEN ROTATION / RESIZE
-========================================= */
-
-let previousVisibleCount =
-    getVisibleProductCount();
-
-
-window.addEventListener(
-    "resize",
-    function(){
-
-        const currentVisibleCount =
-            getVisibleProductCount();
-
-
-        if(
-            currentVisibleCount !==
-            previousVisibleCount
-        ){
-
-            previousVisibleCount =
-                currentVisibleCount;
-
-
-            /*
-                Keep the rotation
-                aligned with the new
-                number of columns.
-            */
-
-            rotationIndex =
-                Math.floor(
-                    rotationIndex /
-                    currentVisibleCount
-                ) *
-                currentVisibleCount;
-
-
-            rotationIndex =
-                rotationIndex %
-                ebooks.length;
-
-
-            renderProducts();
-
-        }
-
-    }
-);
 
 
 /* =========================================
