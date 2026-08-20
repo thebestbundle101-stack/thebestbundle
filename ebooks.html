@@ -474,6 +474,32 @@ button{
     box-shadow:
         0 8px 24px rgba(7,26,51,.07);
 
+    opacity:
+        1;
+
+    transform:
+        translateY(0);
+
+    transition:
+        opacity .25s ease,
+        transform .25s ease;
+
+}
+
+
+/* =========================================
+   ROTATION ANIMATION
+========================================= */
+
+.products-grid.is-changing
+.product-card{
+
+    opacity:
+        0;
+
+    transform:
+        translateY(6px);
+
 }
 
 
@@ -574,7 +600,9 @@ button{
 }
 
 
-/* SHORT DESCRIPTION */
+/* =========================================
+   SHORT DESCRIPTION
+========================================= */
 
 .product-info p{
 
@@ -1012,7 +1040,6 @@ button{
 /* =========================================
    VERY SMALL PHONES
    STILL 2 PRODUCT COLUMNS
-   BUTTONS ALSO STAY SIDE-BY-SIDE
 ========================================= */
 
 @media(max-width:380px){
@@ -1209,248 +1236,9 @@ button{
 
     <div class="container">
 
-        <div class="products-grid">
-
-
-            <!-- =================================
-                 EBOOK 1
-            ================================== -->
-
-            <article class="product-card">
-
-                <div class="product-image">
-
-                    <img
-                        src="images/How-to-Look-20-Years-Younger-Than-Your-Age.png"
-                        alt="How to Look 20 Years Younger Than Your Age">
-
-                </div>
-
-                <div class="product-info">
-
-                    <div class="product-label">
-                        Premium eBook
-                    </div>
-
-                    <h2>
-                        How to Look 20 Years Younger Than Your Age
-                    </h2>
-
-                    <p>
-                        Practical strategies for skincare,
-                        nutrition, movement, sleep and healthy aging.
-                    </p>
-
-                    <div class="product-price">
-                        $17
-                    </div>
-
-                    <div class="product-actions">
-
-                        <a
-                            href="https://buy.stripe.com/8x228tcswgOQeDJe1d8N20i"
-                            class="btn buy-button">
-                            Buy Now
-                        </a>
-
-                        <button
-                            type="button"
-                            class="btn cart-button add-to-cart"
-                            data-id="look-20-years-younger"
-                            data-name="How to Look 20 Years Younger Than Your Age"
-                            data-price="17"
-                            data-price-id="price_1TtXCXRtp4gVtODyNK9vhXIm"
-                            data-image="images/How-to-Look-20-Years-Younger-Than-Your-Age.png"
-                            data-stripe="https://buy.stripe.com/8x228tcswgOQeDJe1d8N20i">
-                            Add to Cart
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- =================================
-                 EBOOK 2
-            ================================== -->
-
-            <article class="product-card">
-
-                <div class="product-image">
-
-                    <img
-                        src="images/The-Natural-Anti-Aging-Guide.png"
-                        alt="The Natural Anti-Aging Guide">
-
-                </div>
-
-                <div class="product-info">
-
-                    <div class="product-label">
-                        Premium eBook
-                    </div>
-
-                    <h2>
-                        The Natural Anti-Aging Guide
-                    </h2>
-
-                    <p>
-                        A practical wellness guide covering
-                        nutrition, exercise, sleep and skincare.
-                    </p>
-
-                    <div class="product-price">
-                        $17
-                    </div>
-
-                    <div class="product-actions">
-
-                        <a
-                            href="https://buy.stripe.com/eVqfZj1NS5681QX2iv8N20k"
-                            class="btn buy-button">
-                            Buy Now
-                        </a>
-
-                        <button
-                            type="button"
-                            class="btn cart-button add-to-cart"
-                            data-id="natural-anti-aging"
-                            data-name="The Natural Anti-Aging Guide"
-                            data-price="17"
-                            data-price-id="price_1TupuwRtp4gVtODyHnJCanv1"
-                            data-image="images/The-Natural-Anti-Aging-Guide.png"
-                            data-stripe="https://buy.stripe.com/eVqfZj1NS5681QX2iv8N20k">
-                            Add to Cart
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- =================================
-                 EBOOK 3
-            ================================== -->
-
-            <article class="product-card">
-
-                <div class="product-image">
-
-                    <img
-                        src="images/the-longevity-blueprint-cover.png"
-                        alt="The Longevity Blueprint">
-
-                </div>
-
-                <div class="product-info">
-
-                    <div class="product-label">
-                        Premium eBook
-                    </div>
-
-                    <h2>
-                        The Longevity Blueprint
-                    </h2>
-
-                    <p>
-                        A practical guide to nutrition,
-                        movement, sleep, mindset and prevention.
-                    </p>
-
-                    <div class="product-price">
-                        $17
-                    </div>
-
-                    <div class="product-actions">
-
-                        <a
-                            href="https://buy.stripe.com/00w7sN3W08ik8flaP18N20q"
-                            class="btn buy-button">
-                            Buy Now
-                        </a>
-
-                        <button
-                            type="button"
-                            class="btn cart-button add-to-cart"
-                            data-id="longevity-blueprint"
-                            data-name="The Longevity Blueprint"
-                            data-price="17"
-                            data-price-id="price_1TxiMYRtp4gVtODy5zcyFkVG"
-                            data-image="images/the-longevity-blueprint-cover.png"
-                            data-stripe="https://buy.stripe.com/00w7sN3W08ik8flaP18N20q">
-                            Add to Cart
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- =================================
-                 EBOOK 4
-            ================================== -->
-
-            <article class="product-card">
-
-                <div class="product-image">
-
-                    <img
-                        src="images/healthy-hormones-cover.png"
-                        alt="The Healthy Hormones & Vitality Guide">
-
-                </div>
-
-                <div class="product-info">
-
-                    <div class="product-label">
-                        Premium eBook
-                    </div>
-
-                    <h2>
-                        The Healthy Hormones & Vitality Guide
-                    </h2>
-
-                    <p>
-                        An educational guide covering hormones,
-                        nutrition, sleep, movement and everyday vitality.
-                    </p>
-
-                    <div class="product-price">
-                        $17
-                    </div>
-
-                    <div class="product-actions">
-
-                        <a
-                            href="#"
-                            class="btn buy-button">
-                            Buy Now
-                        </a>
-
-                        <button
-                            type="button"
-                            class="btn cart-button add-to-cart"
-                            data-id="healthy-hormones"
-                            data-name="The Healthy Hormones & Vitality Guide"
-                            data-price="17"
-                            data-price-id=""
-                            data-image="images/healthy-hormones-cover.png"
-                            data-stripe="">
-                            Add to Cart
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </article>
-
+        <div
+            class="products-grid"
+            id="productsGrid">
 
         </div>
 
@@ -1481,19 +1269,136 @@ button{
 
 
 <!-- =========================================
-     CART SCRIPT
+     EBOOK ROTATION + CART SCRIPT
 ========================================= -->
 
 <script>
 
+
+/* =========================================
+   EBOOK DATA
+========================================= */
+
+const ebooks = [
+
+    {
+        id:
+            "look-20-years-younger",
+
+        name:
+            "How to Look 20 Years Younger Than Your Age",
+
+        image:
+            "images/How-to-Look-20-Years-Younger-Than-Your-Age.png",
+
+        description:
+            "Practical strategies for skincare, nutrition, movement, sleep and healthy aging.",
+
+        price:
+            17,
+
+        priceId:
+            "price_1TtXCXRtp4gVtODyNK9vhXIm",
+
+        stripe:
+            "https://buy.stripe.com/8x228tcswgOQeDJe1d8N20i"
+
+    },
+
+
+    {
+        id:
+            "natural-anti-aging",
+
+        name:
+            "The Natural Anti-Aging Guide",
+
+        image:
+            "images/The-Natural-Anti-Aging-Guide.png",
+
+        description:
+            "A practical wellness guide covering nutrition, exercise, sleep and skincare.",
+
+        price:
+            17,
+
+        priceId:
+            "price_1TupuwRtp4gVtODyHnJCanv1",
+
+        stripe:
+            "https://buy.stripe.com/eVqfZj1NS5681QX2iv8N20k"
+
+    },
+
+
+    {
+        id:
+            "longevity-blueprint",
+
+        name:
+            "The Longevity Blueprint",
+
+        image:
+            "images/the-longevity-blueprint-cover.png",
+
+        description:
+            "A practical guide to nutrition, movement, sleep, mindset and prevention.",
+
+        price:
+            17,
+
+        priceId:
+            "price_1TxiMYRtp4gVtODy5zcyFkVG",
+
+        stripe:
+            "https://buy.stripe.com/00w7sN3W08ik8flaP18N20q"
+
+    },
+
+
+    {
+        id:
+            "healthy-hormones",
+
+        name:
+            "The Healthy Hormones & Vitality Guide",
+
+        image:
+            "images/healthy-hormones-cover.png",
+
+        description:
+            "An educational guide covering hormones, nutrition, sleep, movement and everyday vitality.",
+
+        price:
+            17,
+
+        priceId:
+            "",
+
+        stripe:
+            ""
+
+    }
+
+];
+
+
+/* =========================================
+   CART
+========================================= */
+
 let ebookCart =
     JSON.parse(
-        localStorage.getItem('theBestBundleCart')
+        localStorage.getItem(
+            "theBestBundleCart"
+        )
     ) || [];
 
 
 const pageCartCount =
-    document.getElementById('pageCartCount');
+    document.getElementById(
+        "pageCartCount"
+    );
 
 
 function updatePageCartCount(){
@@ -1507,8 +1412,10 @@ function updatePageCartCount(){
 function saveEbookCart(){
 
     localStorage.setItem(
-        'theBestBundleCart',
-        JSON.stringify(ebookCart)
+        "theBestBundleCart",
+        JSON.stringify(
+            ebookCart
+        )
     );
 
     updatePageCartCount();
@@ -1516,102 +1423,465 @@ function saveEbookCart(){
 }
 
 
-document
-    .querySelectorAll('.add-to-cart')
-    .forEach(function(button){
+/* =========================================
+   PRODUCT GRID
+========================================= */
 
-        button.addEventListener(
-            'click',
-            function(){
-
-                const product = {
-
-                    id:this.dataset.id,
-
-                    name:this.dataset.name,
-
-                    price:Number(
-                        this.dataset.price
-                    ),
-
-                    image:this.dataset.image,
-
-                    stripe:this.dataset.stripe,
-
-                    priceId:this.dataset.priceId
-
-                };
-
-
-                const alreadyExists =
-                    ebookCart.some(
-                        function(item){
-
-                            return item.id === product.id;
-
-                        }
-                    );
-
-
-                if(!alreadyExists){
-
-                    ebookCart.push(product);
-
-                    saveEbookCart();
-
-                }
-
-
-                this.textContent =
-                    '✓ Added';
-
-
-                setTimeout(
-                    () => {
-
-                        this.textContent =
-                            'Add to Cart';
-
-                    },
-                    1200
-                );
-
-            }
-        );
-
-    });
-
-
-document
-    .getElementById('pageCartButton')
-    .addEventListener(
-        'click',
-        function(){
-
-            window.location.href =
-                'cart.html';
-
-        }
+const productsGrid =
+    document.getElementById(
+        "productsGrid"
     );
 
 
-function returnToPreviousPage(){
+/* =========================================
+   ROTATION INDEX
+========================================= */
 
-    if(window.history.length > 1){
+let rotationIndex = 0;
 
-        window.history.back();
+
+/* =========================================
+   DETERMINE NUMBER OF VISIBLE PRODUCTS
+========================================= */
+
+function getVisibleProductCount(){
+
+    const width =
+        window.innerWidth;
+
+
+    /*
+        Phone portrait:
+        2 columns
+    */
+
+    if(width <= 650){
+
+        return 2;
+
+    }
+
+
+    /*
+        Landscape phone,
+        tablet and desktop:
+        3 columns
+    */
+
+    return 3;
+
+}
+
+
+/* =========================================
+   GET PRODUCTS FOR CURRENT ROTATION
+========================================= */
+
+function getVisibleEbooks(){
+
+    const visibleCount =
+        getVisibleProductCount();
+
+
+    const visible = [];
+
+
+    for(
+        let i = 0;
+        i < visibleCount;
+        i++
+    ){
+
+        const index =
+            (
+                rotationIndex + i
+            ) % ebooks.length;
+
+
+        visible.push(
+            ebooks[index]
+        );
+
+    }
+
+
+    return visible;
+
+}
+
+
+/* =========================================
+   CREATE PRODUCT CARD
+========================================= */
+
+function createProductCard(
+    product
+){
+
+    const card =
+        document.createElement(
+            "article"
+        );
+
+
+    card.className =
+        "product-card";
+
+
+    card.innerHTML = `
+
+        <div class="product-image">
+
+            <img
+                src="${product.image}"
+                alt="${product.name}">
+
+        </div>
+
+
+        <div class="product-info">
+
+            <div class="product-label">
+                Premium eBook
+            </div>
+
+
+            <h2>
+                ${product.name}
+            </h2>
+
+
+            <p>
+                ${product.description}
+            </p>
+
+
+            <div class="product-price">
+                $${product.price}
+            </div>
+
+
+            <div class="product-actions">
+
+                <a
+                    href="${product.stripe || "#"}"
+                    class="btn buy-button">
+
+                    Buy Now
+
+                </a>
+
+
+                <button
+                    type="button"
+                    class="btn cart-button add-to-cart"
+
+                    data-id="${product.id}"
+
+                    data-name="${product.name}"
+
+                    data-price="${product.price}"
+
+                    data-price-id="${product.priceId}"
+
+                    data-image="${product.image}"
+
+                    data-stripe="${product.stripe}">
+
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+    `;
+
+
+    return card;
+
+}
+
+
+/* =========================================
+   RENDER PRODUCTS
+========================================= */
+
+function renderProducts(
+    animate = false
+){
+
+    if(animate){
+
+        productsGrid.classList.add(
+            "is-changing"
+        );
+
+
+        setTimeout(
+            function(){
+
+                renderProductCards();
+
+                productsGrid.classList.remove(
+                    "is-changing"
+                );
+
+            },
+            250
+        );
 
     }else{
 
-        window.location.href =
-            'index.html';
+        renderProductCards();
 
     }
 
 }
 
 
+/* =========================================
+   PLACE PRODUCT CARDS
+========================================= */
+
+function renderProductCards(){
+
+    productsGrid.innerHTML = "";
+
+
+    const visibleEbooks =
+        getVisibleEbooks();
+
+
+    visibleEbooks.forEach(
+        function(product){
+
+            productsGrid.appendChild(
+                createProductCard(
+                    product
+                )
+            );
+
+        }
+    );
+
+}
+
+
+/* =========================================
+   INITIAL DISPLAY
+========================================= */
+
+renderProducts();
+
+
+/* =========================================
+   AUTOMATIC ROTATION
+   CHANGE EVERY 10 SECONDS
+========================================= */
+
+function rotateEbooks(){
+
+    rotationIndex =
+        (
+            rotationIndex + 1
+        ) % ebooks.length;
+
+
+    renderProducts(true);
+
+}
+
+
+/*
+    10,000 milliseconds
+    = 10 seconds
+*/
+
+let rotationTimer =
+    setInterval(
+        rotateEbooks,
+        10000
+    );
+
+
+/* =========================================
+   HANDLE SCREEN ROTATION / RESIZE
+========================================= */
+
+let previousVisibleCount =
+    getVisibleProductCount();
+
+
+window.addEventListener(
+    "resize",
+    function(){
+
+        const currentVisibleCount =
+            getVisibleProductCount();
+
+
+        if(
+            currentVisibleCount !==
+            previousVisibleCount
+        ){
+
+            previousVisibleCount =
+                currentVisibleCount;
+
+
+            renderProducts();
+
+        }
+
+    }
+);
+
+
+/* =========================================
+   ADD TO CART
+========================================= */
+
+productsGrid.addEventListener(
+    "click",
+    function(event){
+
+        const button =
+            event.target.closest(
+                ".add-to-cart"
+            );
+
+
+        if(!button){
+
+            return;
+
+        }
+
+
+        const product = {
+
+            id:
+                button.dataset.id,
+
+            name:
+                button.dataset.name,
+
+            price:
+                Number(
+                    button.dataset.price
+                ),
+
+            image:
+                button.dataset.image,
+
+            stripe:
+                button.dataset.stripe,
+
+            priceId:
+                button.dataset.priceId
+
+        };
+
+
+        const alreadyExists =
+            ebookCart.some(
+                function(item){
+
+                    return (
+                        item.id ===
+                        product.id
+                    );
+
+                }
+            );
+
+
+        if(!alreadyExists){
+
+            ebookCart.push(
+                product
+            );
+
+            saveEbookCart();
+
+        }
+
+
+        button.textContent =
+            "✓ Added";
+
+
+        setTimeout(
+            function(){
+
+                if(
+                    document.body.contains(
+                        button
+                    )
+                ){
+
+                    button.textContent =
+                        "Add to Cart";
+
+                }
+
+            },
+            1200
+        );
+
+    }
+);
+
+
+/* =========================================
+   CART BUTTON
+========================================= */
+
+document
+    .getElementById(
+        "pageCartButton"
+    )
+    .addEventListener(
+        "click",
+        function(){
+
+            window.location.href =
+                "cart.html";
+
+        }
+    );
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+function returnToPreviousPage(){
+
+    if(
+        window.history.length > 1
+    ){
+
+        window.history.back();
+
+    }else{
+
+        window.location.href =
+            "index.html";
+
+    }
+
+}
+
+
+/* =========================================
+   INITIAL CART COUNT
+========================================= */
+
 updatePageCartCount();
+
 
 </script>
 
