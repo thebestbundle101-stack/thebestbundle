@@ -1,7 +1,6 @@
-
 <!-- =========================================
      PART 13 — EBOOKS PAGE
-     CREATE A NEW FILE: ebooks.html
+     FILE: ebooks.html
 ========================================= -->
 
 <!DOCTYPE html>
@@ -49,19 +48,36 @@
 
 <style>
 
+/* =========================================
+   VARIABLES
+========================================= */
+
 :root{
+
     --navy:#071A33;
     --navy-light:#0D2B50;
+
     --gold:#F4C542;
     --gold-dark:#D9A91A;
+
     --white:#FFFFFF;
     --off-white:#F8FAFC;
+
     --text-dark:#172033;
     --text-gray:#64748B;
+
     --border:#E2E8F0;
+
     --max-width:1200px;
+
     --radius:14px;
+
 }
+
+
+/* =========================================
+   RESET
+========================================= */
 
 *{
     margin:0;
@@ -69,329 +85,1005 @@
     box-sizing:border-box;
 }
 
+
 html{
     scroll-behavior:smooth;
 }
 
+
 body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:var(--off-white);
-    color:var(--navy);
-    line-height:1.6;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        var(--off-white);
+
+    color:
+        var(--navy);
+
+    line-height:
+        1.5;
+
 }
+
 
 img{
+
     max-width:100%;
+
     display:block;
+
 }
+
 
 a{
+
     color:inherit;
+
     text-decoration:none;
+
 }
+
 
 button{
+
     font:inherit;
+
     cursor:pointer;
+
 }
+
 
 .container{
+
     width:90%;
-    max-width:var(--max-width);
-    margin:0 auto;
+
+    max-width:
+        var(--max-width);
+
+    margin:
+        0 auto;
+
 }
 
 
-/* HEADER */
+/* =========================================
+   HEADER
+========================================= */
 
 .page-header{
-    background:var(--navy);
-    color:var(--white);
+
+    background:
+        var(--navy);
+
+    color:
+        var(--white);
+
 }
+
 
 .header-inner{
-    min-height:90px;
+
+    min-height:
+        90px;
+
     display:flex;
+
     align-items:center;
-    justify-content:space-between;
-    gap:20px;
+
+    justify-content:
+        space-between;
+
+    gap:
+        20px;
+
 }
+
 
 .header-logo img{
-    height:70px;
+
+    height:
+        70px;
+
     width:auto;
+
 }
+
 
 .header-actions{
+
     display:flex;
+
     align-items:center;
-    gap:12px;
+
+    gap:
+        12px;
+
 }
+
 
 .header-icon{
+
     position:relative;
-    width:46px;
-    height:46px;
+
+    width:
+        46px;
+
+    height:
+        46px;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     border:none;
-    border-radius:8px;
-    background:transparent;
-    color:var(--white);
-    font-size:24px;
+
+    border-radius:
+        8px;
+
+    background:
+        transparent;
+
+    color:
+        var(--white);
+
+    font-size:
+        24px;
+
 }
+
 
 .header-icon:hover{
-    background:rgba(255,255,255,.08);
-    color:var(--gold);
+
+    background:
+        rgba(255,255,255,.08);
+
+    color:
+        var(--gold);
+
 }
+
 
 .cart-count{
+
     position:absolute;
-    top:0;
-    right:0;
-    min-width:19px;
-    height:19px;
-    padding:0 5px;
-    border-radius:30px;
-    background:var(--gold);
-    color:var(--navy);
-    font-size:11px;
-    font-weight:800;
-    line-height:19px;
+
+    top:
+        0;
+
+    right:
+        0;
+
+    min-width:
+        19px;
+
+    height:
+        19px;
+
+    padding:
+        0 5px;
+
+    border-radius:
+        30px;
+
+    background:
+        var(--gold);
+
+    color:
+        var(--navy);
+
+    font-size:
+        11px;
+
+    font-weight:
+        800;
+
+    line-height:
+        19px;
+
 }
 
 
-/* BACK BUTTON */
+/* =========================================
+   BACK BUTTON
+========================================= */
 
 .back-row{
-    background:var(--white);
-    border-bottom:1px solid var(--border);
+
+    background:
+        var(--white);
+
+    border-bottom:
+        1px solid var(--border);
+
 }
+
 
 .back-inner{
-    min-height:60px;
+
+    min-height:
+        60px;
+
     display:flex;
+
     align-items:center;
+
 }
+
 
 .back-button{
+
     display:inline-flex;
+
     align-items:center;
-    gap:9px;
-    color:var(--navy);
-    font-weight:700;
+
+    gap:
+        9px;
+
+    color:
+        var(--navy);
+
+    font-weight:
+        700;
+
     border:none;
-    background:transparent;
+
+    background:
+        transparent;
+
 }
+
 
 .back-button:hover{
-    color:var(--gold-dark);
+
+    color:
+        var(--gold-dark);
+
 }
 
 
-/* PAGE INTRO */
+/* =========================================
+   PAGE HERO
+========================================= */
 
 .page-hero{
-    background:var(--navy);
-    color:var(--white);
-    padding:75px 0 90px;
-    text-align:center;
+
+    background:
+        var(--navy);
+
+    color:
+        var(--white);
+
+    padding:
+        65px 0 70px;
+
+    text-align:
+        center;
+
 }
+
 
 .page-hero span{
+
     display:block;
-    color:var(--gold);
-    font-size:14px;
-    font-weight:800;
-    letter-spacing:2px;
-    text-transform:uppercase;
-    margin-bottom:15px;
+
+    color:
+        var(--gold);
+
+    font-size:
+        14px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        2px;
+
+    text-transform:
+        uppercase;
+
+    margin-bottom:
+        14px;
+
 }
+
 
 .page-hero h1{
-    font-size:clamp(40px,7vw,64px);
-    line-height:1.1;
-    margin-bottom:20px;
+
+    font-size:
+        clamp(38px,7vw,64px);
+
+    line-height:
+        1.1;
+
+    margin-bottom:
+        18px;
+
 }
+
 
 .page-hero p{
-    max-width:700px;
-    margin:0 auto;
-    color:rgba(255,255,255,.82);
-    font-size:18px;
+
+    max-width:
+        700px;
+
+    margin:
+        0 auto;
+
+    color:
+        rgba(255,255,255,.82);
+
+    font-size:
+        18px;
+
 }
 
 
-/* PRODUCTS */
+/* =========================================
+   PRODUCTS SECTION
+========================================= */
 
 .products-section{
-    padding:80px 0 100px;
+
+    padding:
+        55px 0 80px;
+
 }
+
 
 .products-grid{
+
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:28px;
+
+    grid-template-columns:
+        repeat(3,minmax(0,1fr));
+
+    gap:
+        24px;
+
 }
+
+
+/* =========================================
+   PRODUCT CARD
+========================================= */
 
 .product-card{
+
     display:flex;
-    flex-direction:column;
+
+    flex-direction:
+        column;
+
     overflow:hidden;
-    background:var(--white);
-    border:1px solid var(--border);
-    border-radius:var(--radius);
-    box-shadow:0 10px 30px rgba(7,26,51,.08);
+
+    background:
+        var(--white);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        var(--radius);
+
+    box-shadow:
+        0 8px 24px rgba(7,26,51,.07);
+
 }
+
+
+/* =========================================
+   PRODUCT IMAGE
+========================================= */
 
 .product-image{
-    min-height:330px;
-    padding:25px;
+
+    height:
+        260px;
+
+    padding:
+        18px;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
-    background:var(--off-white);
+
+    background:
+        var(--off-white);
+
 }
+
 
 .product-image img{
-    width:100%;
-    max-width:240px;
-    max-height:300px;
-    object-fit:contain;
+
+    width:
+        auto;
+
+    max-width:
+        82%;
+
+    height:
+        220px;
+
+    object-fit:
+        contain;
+
 }
+
+
+/* =========================================
+   PRODUCT INFORMATION
+========================================= */
 
 .product-info{
-    flex:1;
+
     display:flex;
-    flex-direction:column;
-    padding:18px;
+
+    flex-direction:
+        column;
+
+    padding:
+        18px;
+
+    flex:1;
+
 }
+
 
 .product-label{
-    color:var(--gold-dark);
-    font-size:12px;
-    font-weight:800;
-    letter-spacing:1.5px;
-    text-transform:uppercase;
-    margin-bottom:8px;
+
+    color:
+        var(--gold-dark);
+
+    font-size:
+        11px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        1.5px;
+
+    text-transform:
+        uppercase;
+
+    margin-bottom:
+        6px;
+
 }
+
 
 .product-info h2{
-    font-size:22px;
-    line-height:1.3;
-    margin-bottom:12px;
+
+    font-size:
+        19px;
+
+    line-height:
+        1.25;
+
+    margin-bottom:
+        8px;
+
 }
+
+
+/* SHORT DESCRIPTION */
 
 .product-info p{
-    color:var(--text-gray);
-    font-size:15px;
-    margin-bottom:18px;
+
+    color:
+        var(--text-gray);
+
+    font-size:
+        13px;
+
+    line-height:
+        1.45;
+
+    margin-bottom:
+        12px;
+
+    display:
+        -webkit-box;
+
+    -webkit-box-orient:
+        vertical;
+
+    -webkit-line-clamp:
+        3;
+
+    overflow:
+        hidden;
+
 }
+
+
+/* =========================================
+   PRICE
+========================================= */
 
 .product-price{
-    margin-top:auto;
-    margin-bottom:18px;
-    font-size:25px;
-    font-weight:800;
+
+    margin-top:
+        auto;
+
+    margin-bottom:
+        12px;
+
+    font-size:
+        23px;
+
+    font-weight:
+        800;
+
 }
+
+
+/* =========================================
+   PRODUCT BUTTONS
+========================================= */
 
 .product-actions{
+
     display:grid;
-    grid-template-columns:repeat(2,minmax(140px,1fr));
-    gap:10px;
+
+    grid-template-columns:
+        repeat(2,minmax(0,1fr));
+
+    gap:
+        8px;
+
 }
+
 
 .btn{
-    min-height:48px;
-    padding:12px;
+
+    min-height:
+        44px;
+
+    padding:
+        9px 6px;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
-    border-radius:8px;
+
+    border-radius:
+        8px;
+
     border:none;
-    font-size:14px;
-    font-weight:800;
-    text-align:center;
+
+    font-size:
+        12px;
+
+    font-weight:
+        800;
+
+    text-align:
+        center;
+
+    white-space:
+        nowrap;
+
 }
+
 
 .buy-button{
-    background:var(--gold);
-    color:var(--navy);
+
+    background:
+        var(--gold);
+
+    color:
+        var(--navy);
+
 }
+
 
 .cart-button{
-    background:var(--navy);
-    color:var(--white);
-    border:2px solid var(--navy);
-    white-space:nowrap;
+
+    background:
+        var(--navy);
+
+    color:
+        var(--white);
+
+    border:
+        2px solid var(--navy);
+
 }
+
 
 .cart-button:hover{
-    background:var(--navy);
-    color:var(--white);
+
+    background:
+        var(--navy);
+
+    color:
+        var(--white);
+
 }
 
 
-/* FOOTER */
+/* =========================================
+   FOOTER
+========================================= */
 
 .footer{
-    background:var(--navy);
-    color:var(--white);
-    padding:35px 0;
-    text-align:center;
+
+    background:
+        var(--navy);
+
+    color:
+        var(--white);
+
+    padding:
+        35px 0;
+
+    text-align:
+        center;
+
 }
+
 
 .footer-tagline{
-    color:var(--gold);
-    font-weight:800;
-    letter-spacing:1px;
-    margin-bottom:7px;
+
+    color:
+        var(--gold);
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        1px;
+
+    margin-bottom:
+        7px;
+
 }
+
 
 .footer p{
-    color:rgba(255,255,255,.7);
-    font-size:13px;
+
+    color:
+        rgba(255,255,255,.7);
+
+    font-size:
+        13px;
+
 }
 
 
-/* RESPONSIVE */
+/* =========================================
+   TABLET / LANDSCAPE PHONE / DESKTOP
+   3 COLUMNS
+========================================= */
 
 @media(max-width:950px){
 
     .products-grid{
-        grid-template-columns:repeat(2,1fr);
+
+        grid-template-columns:
+            repeat(3,minmax(0,1fr));
+
+        gap:
+            18px;
+
+    }
+
+    .product-image{
+
+        height:
+            230px;
+
+        padding:
+            14px;
+
+    }
+
+    .product-image img{
+
+        height:
+            195px;
+
+    }
+
+    .product-info{
+
+        padding:
+            15px;
+
+    }
+
+    .product-info h2{
+
+        font-size:
+            17px;
+
+    }
+
+    .product-info p{
+
+        font-size:
+            12px;
+
+    }
+
+    .product-price{
+
+        font-size:
+            21px;
+
+    }
+
+    .btn{
+
+        font-size:
+            11px;
+
+        min-height:
+            42px;
+
     }
 
 }
+
+
+/* =========================================
+   PHONE PORTRAIT
+   2 COLUMNS
+========================================= */
 
 @media(max-width:650px){
 
     .products-grid{
-        grid-template-columns:repeat(2,minmax(0,1fr);
+
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+
+        gap:
+            14px;
+
     }
+
 
     .product-card{
-        max-width:none;
-        width:100%;
-        margin:0;
+
+        max-width:
+            none;
+
+        width:
+            100%;
+
+        margin:
+            0;
+
     }
+
+
+    .product-image{
+
+        height:
+            190px;
+
+        padding:
+            10px;
+
+    }
+
+
+    .product-image img{
+
+        height:
+            165px;
+
+        max-width:
+            88%;
+
+    }
+
+
+    .product-info{
+
+        padding:
+            13px;
+
+    }
+
+
+    .product-label{
+
+        font-size:
+            9px;
+
+        letter-spacing:
+            1px;
+
+        margin-bottom:
+            5px;
+
+    }
+
+
+    .product-info h2{
+
+        font-size:
+            15px;
+
+        line-height:
+            1.25;
+
+        margin-bottom:
+            7px;
+
+    }
+
+
+    .product-info p{
+
+        font-size:
+            11px;
+
+        line-height:
+            1.4;
+
+        margin-bottom:
+            9px;
+
+        -webkit-line-clamp:
+            2;
+
+    }
+
+
+    .product-price{
+
+        font-size:
+            20px;
+
+        margin-bottom:
+            9px;
+
+    }
+
 
     .product-actions{
-        grid-template-columns:1fr;
+
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+
+        gap:
+            6px;
+
     }
 
+
+    .btn{
+
+        min-height:
+            40px;
+
+        padding:
+            7px 3px;
+
+        font-size:
+            10px;
+
+    }
+
+
     .page-hero{
-        padding:60px 0 70px;
+
+        padding:
+            55px 0 60px;
+
+    }
+
+
+    .page-hero h1{
+
+        font-size:
+            42px;
+
+    }
+
+
+    .page-hero p{
+
+        font-size:
+            15px;
+
+        padding:
+            0 10px;
+
     }
 
 }
 
+
+/* =========================================
+   VERY SMALL PHONES
+   STILL 2 PRODUCT COLUMNS
+   BUTTONS ALSO STAY SIDE-BY-SIDE
+========================================= */
+
 @media(max-width:380px){
 
-    .product-actions{
-        grid-template-columns:1fr;
+    .products-grid{
+
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+
+        gap:
+            10px;
+
+    }
+
+
+    .product-image{
+
+        height:
+            175px;
+
+    }
+
+
+    .product-image img{
+
+        height:
+            150px;
+
+    }
+
+
+    .product-info{
+
+        padding:
+            10px;
+
+    }
+
+
+    .product-info h2{
+
+        font-size:
+            14px;
+
+    }
+
+
+    .product-info p{
+
+        font-size:
+            10px;
+
+    }
+
+
+    .product-price{
+
+        font-size:
+            18px;
+
+    }
+
+
+    .btn{
+
+        font-size:
+            9px;
+
+        min-height:
+            38px;
+
     }
 
 }
@@ -403,6 +1095,10 @@ button{
 
 <body>
 
+
+<!-- =========================================
+     HEADER
+========================================= -->
 
 <header class="page-header">
 
@@ -454,6 +1150,10 @@ button{
 </header>
 
 
+<!-- =========================================
+     BACK BUTTON
+========================================= -->
+
 <div class="back-row">
 
     <div class="container back-inner">
@@ -473,6 +1173,10 @@ button{
 
 </div>
 
+
+<!-- =========================================
+     PAGE HERO
+========================================= -->
 
 <section class="page-hero">
 
@@ -497,6 +1201,10 @@ button{
 </section>
 
 
+<!-- =========================================
+     PRODUCTS
+========================================= -->
+
 <main class="products-section">
 
     <div class="container">
@@ -504,7 +1212,9 @@ button{
         <div class="products-grid">
 
 
-            <!-- EBOOK 1 -->
+            <!-- =================================
+                 EBOOK 1
+            ================================== -->
 
             <article class="product-card">
 
@@ -527,10 +1237,8 @@ button{
                     </h2>
 
                     <p>
-                        A 30-page premium guide featuring practical,
-                        science-informed strategies for nutrition,
-                        skincare, movement, sleep and healthy aging.
-                        Includes Resell Rights.
+                        Practical strategies for skincare,
+                        nutrition, movement, sleep and healthy aging.
                     </p>
 
                     <div class="product-price">
@@ -564,7 +1272,9 @@ button{
             </article>
 
 
-            <!-- EBOOK 2 -->
+            <!-- =================================
+                 EBOOK 2
+            ================================== -->
 
             <article class="product-card">
 
@@ -582,15 +1292,13 @@ button{
                         Premium eBook
                     </div>
 
-                    <h2>The Natural Anti-Aging Guide</h2>
-                        
-                    
+                    <h2>
+                        The Natural Anti-Aging Guide
+                    </h2>
 
                     <p>
-                        A 30-page wellness guide covering nutrition,
-                        hydration, exercise, sleep, stress management,
-                        skincare and healthy daily habits.
-                        Includes Resell Rights.
+                        A practical wellness guide covering
+                        nutrition, exercise, sleep and skincare.
                     </p>
 
                     <div class="product-price">
@@ -624,7 +1332,9 @@ button{
             </article>
 
 
-            <!-- EBOOK 3 -->
+            <!-- =================================
+                 EBOOK 3
+            ================================== -->
 
             <article class="product-card">
 
@@ -647,10 +1357,8 @@ button{
                     </h2>
 
                     <p>
-                        A practical guide to sustainable habits
-                        for a longer, healthier and stronger life,
-                        including nutrition, movement, sleep,
-                        mindset and prevention. Includes Resell Rights.
+                        A practical guide to nutrition,
+                        movement, sleep, mindset and prevention.
                     </p>
 
                     <div class="product-price">
@@ -684,72 +1392,77 @@ button{
             </article>
 
 
-        
-<!-- EBOOK 4 -->
+            <!-- =================================
+                 EBOOK 4
+            ================================== -->
 
-<article class="product-card">
+            <article class="product-card">
 
-    <div class="product-image">
+                <div class="product-image">
 
-        <img
-            src="images/healthy-hormones-cover.png"
-            alt="The Healthy Hormones & Vitality Guide">
+                    <img
+                        src="images/healthy-hormones-cover.png"
+                        alt="The Healthy Hormones & Vitality Guide">
+
+                </div>
+
+                <div class="product-info">
+
+                    <div class="product-label">
+                        Premium eBook
+                    </div>
+
+                    <h2>
+                        The Healthy Hormones & Vitality Guide
+                    </h2>
+
+                    <p>
+                        An educational guide covering hormones,
+                        nutrition, sleep, movement and everyday vitality.
+                    </p>
+
+                    <div class="product-price">
+                        $17
+                    </div>
+
+                    <div class="product-actions">
+
+                        <a
+                            href="#"
+                            class="btn buy-button">
+                            Buy Now
+                        </a>
+
+                        <button
+                            type="button"
+                            class="btn cart-button add-to-cart"
+                            data-id="healthy-hormones"
+                            data-name="The Healthy Hormones & Vitality Guide"
+                            data-price="17"
+                            data-price-id=""
+                            data-image="images/healthy-hormones-cover.png"
+                            data-stripe="">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
 
     </div>
-
-    <div class="product-info">
-
-        <div class="product-label">
-            Premium eBook
-        </div>
-
-        <h2>
-            The Healthy Hormones & Vitality Guide
-        </h2>
-
-        <p>
-            A 30-page educational wellness guide exploring
-            hormones, nutrition, sleep, movement, stress,
-            metabolism, aging and everyday vitality.
-            Includes Master Resell Rights.
-        </p>
-
-        <div class="product-price">
-            $17
-        </div>
-
-        <div class="product-actions">
-
-            <a
-                href="#"
-                class="btn buy-button">
-                Buy Now
-            </a>
-
-            <button
-                type="button"
-                class="btn cart-button add-to-cart"
-                data-id="healthy-hormones"
-                data-name="The Healthy Hormones & Vitality Guide"
-                data-price="17"
-                data-price-id=""
-                data-image="images/healthy-hormones-cover.png"
-                data-stripe="">
-                Add to Cart
-            </button>
-
-        </div>
-
-    </div>
-
-</article>
-
-     </div>
-
-         </div>
 
 </main>
-     
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
 <footer class="footer">
 
     <div class="container">
@@ -766,6 +1479,10 @@ button{
 
 </footer>
 
+
+<!-- =========================================
+     CART SCRIPT
+========================================= -->
 
 <script>
 
@@ -810,18 +1527,28 @@ document
                 const product = {
 
                     id:this.dataset.id,
+
                     name:this.dataset.name,
-                    price:Number(this.dataset.price),
+
+                    price:Number(
+                        this.dataset.price
+                    ),
+
                     image:this.dataset.image,
+
                     stripe:this.dataset.stripe,
+
                     priceId:this.dataset.priceId
+
                 };
 
 
                 const alreadyExists =
                     ebookCart.some(
                         function(item){
+
                             return item.id === product.id;
+
                         }
                     );
 
@@ -838,10 +1565,13 @@ document
                 this.textContent =
                     '✓ Added';
 
+
                 setTimeout(
                     () => {
+
                         this.textContent =
                             'Add to Cart';
+
                     },
                     1200
                 );
