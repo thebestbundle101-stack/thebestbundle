@@ -446,6 +446,9 @@ button{
     gap:
         24px;
 
+    min-height:
+        790px;
+
 }
 
 
@@ -481,8 +484,8 @@ button{
         translateY(0);
 
     transition:
-        opacity .25s ease,
-        transform .25s ease;
+        opacity .35s ease,
+        transform .35s ease;
 
 }
 
@@ -498,7 +501,7 @@ button{
         0;
 
     transform:
-        translateY(6px);
+        translateY(8px);
 
 }
 
@@ -805,7 +808,11 @@ button{
         gap:
             18px;
 
+        min-height:
+            700px;
+
     }
+
 
     .product-image{
 
@@ -817,12 +824,14 @@ button{
 
     }
 
+
     .product-image img{
 
         height:
             195px;
 
     }
+
 
     .product-info{
 
@@ -831,12 +840,14 @@ button{
 
     }
 
+
     .product-info h2{
 
         font-size:
             17px;
 
     }
+
 
     .product-info p{
 
@@ -845,12 +856,14 @@ button{
 
     }
 
+
     .product-price{
 
         font-size:
             21px;
 
     }
+
 
     .btn{
 
@@ -879,6 +892,9 @@ button{
 
         gap:
             14px;
+
+        min-height:
+            790px;
 
     }
 
@@ -1051,6 +1067,9 @@ button{
 
         gap:
             10px;
+
+        min-height:
+            720px;
 
     }
 
@@ -1451,8 +1470,8 @@ function getVisibleProductCount(){
 
 
     /*
-        Phone portrait:
-        2 columns
+        Portrait phone:
+        2 eBooks
     */
 
     if(width <= 650){
@@ -1465,7 +1484,7 @@ function getVisibleProductCount(){
     /*
         Landscape phone,
         tablet and desktop:
-        3 columns
+        3 eBooks
     */
 
     return 3;
@@ -1474,7 +1493,7 @@ function getVisibleProductCount(){
 
 
 /* =========================================
-   GET PRODUCTS FOR CURRENT ROTATION
+   GET CURRENT GROUP OF EBOOKS
 ========================================= */
 
 function getVisibleEbooks(){
@@ -1605,44 +1624,7 @@ function createProductCard(
 
 
 /* =========================================
-   RENDER PRODUCTS
-========================================= */
-
-function renderProducts(
-    animate = false
-){
-
-    if(animate){
-
-        productsGrid.classList.add(
-            "is-changing"
-        );
-
-
-        setTimeout(
-            function(){
-
-                renderProductCards();
-
-                productsGrid.classList.remove(
-                    "is-changing"
-                );
-
-            },
-            250
-        );
-
-    }else{
-
-        renderProductCards();
-
-    }
-
-}
-
-
-/* =========================================
-   PLACE PRODUCT CARDS
+   RENDER PRODUCT CARDS
 ========================================= */
 
 function renderProductCards(){
@@ -1670,6 +1652,56 @@ function renderProductCards(){
 
 
 /* =========================================
+   RENDER PRODUCTS WITH ANIMATION
+========================================= */
+
+function renderProducts(
+    animate = false
+){
+
+    if(!animate){
+
+        renderProductCards();
+
+        return;
+
+    }
+
+
+    productsGrid.classList.add(
+        "is-changing"
+    );
+
+
+    setTimeout(
+        function(){
+
+            renderProductCards();
+
+
+            /*
+                Remove the fading class
+                after the new cards are inserted.
+            */
+
+            requestAnimationFrame(
+                function(){
+
+                    productsGrid.classList.remove(
+                        "is-changing"
+                    );
+
+                }
+            );
+
+        },
+        350
+    );
+
+}
+
+
+/* =========================================
    INITIAL DISPLAY
 ========================================= */
 
@@ -1677,15 +1709,37 @@ renderProducts();
 
 
 /* =========================================
-   AUTOMATIC ROTATION
-   CHANGE EVERY 10 SECONDS
+   AUTOMATIC EBOOK ROTATION
 ========================================= */
+
+/*
+    IMPORTANT:
+
+    We move by the number of visible cards.
+
+    Portrait:
+        1 + 2
+        then 3 + 4
+        then 1 + 2
+
+    Landscape:
+        1 + 2 + 3
+        then 4 + 1 + 2
+        then 3 + 4 + 1
+
+    The rotation happens every 10 seconds.
+*/
 
 function rotateEbooks(){
 
+    const visibleCount =
+        getVisibleProductCount();
+
+
     rotationIndex =
         (
-            rotationIndex + 1
+            rotationIndex +
+            visibleCount
         ) % ebooks.length;
 
 
@@ -1696,7 +1750,8 @@ function rotateEbooks(){
 
 /*
     10,000 milliseconds
-    = 10 seconds
+    =
+    10 seconds
 */
 
 let rotationTimer =
@@ -1729,6 +1784,25 @@ window.addEventListener(
 
             previousVisibleCount =
                 currentVisibleCount;
+
+
+            /*
+                Keep the rotation
+                aligned with the new
+                number of columns.
+            */
+
+            rotationIndex =
+                Math.floor(
+                    rotationIndex /
+                    currentVisibleCount
+                ) *
+                currentVisibleCount;
+
+
+            rotationIndex =
+                rotationIndex %
+                ebooks.length;
 
 
             renderProducts();
