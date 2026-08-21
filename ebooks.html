@@ -1391,6 +1391,31 @@ const ebooks = [
         stripe:
             "https://buy.stripe.com/8x25kFfEIdCE8fle1d8N20r"
 
+    },
+
+
+    {
+        id:
+            "ultimate-skincare-beauty-handbook",
+
+        name:
+            "The Ultimate Skincare & Beauty Handbook",
+
+        image:
+            "images/The-Ultimate-Skincare-Beauty-Handbook.png",
+
+        description:
+            "A premium guide to skincare, beauty routines, ingredients, healthy habits and long-term skin care.",
+
+        price:
+            17,
+
+        priceId:
+            "price_1U6jnVRtp4gVtODybqY7MaYs",
+
+        stripe:
+            "https://buy.stripe.com/eVq6oJ78cgOQeDJ8GT8N20s"
+
     }
 
 ];
@@ -1451,9 +1476,9 @@ const productsGrid =
 ========================================= */
 
 /*
-    All 4 ebooks are ALWAYS displayed.
+    All 5 ebooks are ALWAYS displayed.
 
-    The order of the 4 ebooks changes
+    The order of the 5 ebooks changes
     every 10 seconds.
 */
 
@@ -1596,7 +1621,7 @@ function createProductCard(
 
 
 /* =========================================
-   RENDER ALL 4 EBOOKS
+   RENDER ALL 5 EBOOKS
 ========================================= */
 
 function renderProductCards(){
@@ -1613,7 +1638,7 @@ function renderProductCards(){
         We do NOT use a visible-count
         anymore.
 
-        This means all 4 remain on
+        This means all 5 remain on
         the same page.
     */
 
@@ -1704,12 +1729,12 @@ renderProducts();
 ========================================= */
 
 /*
-    The page keeps ALL 4 ebooks.
+    The page keeps ALL 5 ebooks.
 
     Every 10 seconds:
 
-        1. Shuffle the 4 ebooks.
-        2. Keep all 4 visible.
+        1. Shuffle the 5 ebooks.
+        2. Keep all 5 visible.
         3. Put them in different positions.
         4. Fade smoothly between positions.
 */
