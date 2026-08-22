@@ -116,9 +116,11 @@ button{
 }
 
 
+/* UPDATED LOGO — DESKTOP 56px */
+
 .logo{
 
-    height:42px;
+    height:56px;
 
     width:auto;
 
@@ -460,7 +462,6 @@ button{
 
 /* =========================================================
    EBOOK GRID
-   DESKTOP / TABLET = 3 COLUMNS
 ========================================================= */
 
 .ebooks-grid{
@@ -530,12 +531,12 @@ button{
 
 
 /* =========================================================
-   EBOOK COVER — SHORTER
+   EBOOK COVER — SLIGHTLY SHORTER
 ========================================================= */
 
 .ebook-cover{
 
-    height:250px;
+    height:235px;
 
     display:flex;
 
@@ -720,7 +721,6 @@ button{
 
 /* =========================================================
    PACKS
-   2 COLUMNS × 2 ROWS
 ========================================================= */
 
 .packs-section{
@@ -1025,7 +1025,6 @@ button{
 
 /* =========================================================
    TRUST
-   DO NOT CHANGE
 ========================================================= */
 
 .trust{
@@ -1142,9 +1141,11 @@ button{
     }
 
 
+    /* SLIGHTLY SHORTER */
+
     .ebook-cover{
 
-        height:215px;
+        height:205px;
 
     }
 
@@ -1291,9 +1292,11 @@ button{
     }
 
 
+    /* UPDATED PHONE LOGO — 42px */
+
     .logo{
 
-        height:38px;
+        height:42px;
 
     }
 
@@ -1411,9 +1414,11 @@ button{
     }
 
 
+    /* SLIGHTLY SHORTER */
+
     .ebook-cover{
 
-        height:190px;
+        height:180px;
 
         margin-bottom:8px;
 
@@ -1686,9 +1691,11 @@ button{
     }
 
 
+    /* SLIGHTLY SHORTER */
+
     .ebook-cover{
 
-        height:165px;
+        height:155px;
 
     }
 
@@ -1893,7 +1900,7 @@ button{
 <header class="header">
 
     <img
-        src="images/logo.png"
+        src="images/Thebestbundle-transparent-logo.png"
         class="logo"
         alt="TheBestBundle">
 
@@ -2039,9 +2046,7 @@ button{
         id="ebooksGrid">
 
 
-        <!-- =================================================
-             EBOOK 1
-        ================================================== -->
+        <!-- EBOOK 1 -->
 
         <article class="ebook-card">
 
@@ -2108,9 +2113,7 @@ button{
         </article>
 
 
-        <!-- =================================================
-             EBOOK 2
-        ================================================== -->
+        <!-- EBOOK 2 -->
 
         <article class="ebook-card">
 
@@ -2177,9 +2180,7 @@ button{
         </article>
 
 
-        <!-- =================================================
-             EBOOK 3
-        ================================================== -->
+        <!-- EBOOK 3 -->
 
         <article class="ebook-card">
 
@@ -2246,9 +2247,7 @@ button{
         </article>
 
 
-        <!-- =================================================
-             EBOOK 4
-        ================================================== -->
+        <!-- EBOOK 4 -->
 
         <article class="ebook-card">
 
@@ -2315,9 +2314,7 @@ button{
         </article>
 
 
-        <!-- =================================================
-             EBOOK 5
-        ================================================== -->
+        <!-- EBOOK 5 -->
 
         <article class="ebook-card">
 
@@ -2384,9 +2381,7 @@ button{
         </article>
 
 
-        <!-- =================================================
-             EBOOK 6
-        ================================================== -->
+        <!-- EBOOK 6 -->
 
         <article class="ebook-card">
 
@@ -2454,9 +2449,7 @@ button{
         </article>
 
 
-        <!-- =================================================
-             EBOOK 7
-        ================================================== -->
+        <!-- EBOOK 7 -->
 
         <article class="ebook-card">
 
@@ -2523,9 +2516,7 @@ button{
         </article>
 
 
-        <!-- =================================================
-             EBOOK 8
-        ================================================== -->
+        <!-- EBOOK 8 -->
 
         <article class="ebook-card">
 
@@ -2592,9 +2583,7 @@ button{
         </article>
 
 
-        <!-- =================================================
-             EBOOK 9
-        ================================================== -->
+        <!-- EBOOK 9 -->
 
         <article class="ebook-card">
 
@@ -2662,9 +2651,7 @@ button{
         </article>
 
 
-        <!-- =================================================
-             EBOOK 10
-        ================================================== -->
+        <!-- EBOOK 10 -->
 
         <article class="ebook-card">
 
@@ -2767,9 +2754,7 @@ button{
     <div class="packs">
 
 
-        <!-- =================================================
-             STARTER
-        ================================================== -->
+        <!-- STARTER -->
 
         <article class="pack-card">
 
@@ -2891,9 +2876,7 @@ button{
         </article>
 
 
-        <!-- =================================================
-             CREATOR
-        ================================================== -->
+        <!-- CREATOR -->
 
         <article class="pack-card">
 
@@ -3015,9 +2998,7 @@ button{
         </article>
 
 
-        <!-- =================================================
-             PRO
-        ================================================== -->
+        <!-- PRO -->
 
         <article class="pack-card">
 
@@ -3139,9 +3120,7 @@ button{
         </article>
 
 
-        <!-- =================================================
-             VAULT
-        ================================================== -->
+        <!-- VAULT -->
 
         <article class="pack-card">
 
@@ -3446,11 +3425,6 @@ document
                         saveCart();
 
 
-                        /*
-                            Different feedback
-                            depending on button type.
-                        */
-
                         if(
                             this.classList.contains(
                                 "cart-btn"
@@ -3489,11 +3463,6 @@ document
 
 
                     }else{
-
-                        /*
-                            If already in cart,
-                            go directly to cart.
-                        */
 
                         window.location.href =
                             "cart.html";
