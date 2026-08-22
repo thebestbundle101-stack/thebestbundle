@@ -5,16 +5,22 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
 
-<title>Collection Française | TheBestBundle</title>
+<title>
+    Collection Française | TheBestBundle
+</title>
 
-<meta name="description"
-      content="Découvrez la Collection Française TheBestBundle : eBooks premium et packs numériques.">
+<meta
+    name="description"
+    content="Découvrez la Collection Française TheBestBundle : eBooks premium et packs numériques.">
 
-<link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 
 <style>
 
@@ -23,40 +29,65 @@
 ========================================================= */
 
 :root{
+
     --navy:#071A33;
     --navy2:#0D2342;
+
     --gold:#F4C542;
     --gold-dark:#D9A91A;
+
     --white:#FFFFFF;
     --cream:#FBFAF6;
+
     --gray:#64748B;
+
     --border:#D9DEE7;
+
 }
 
 *{
+
     margin:0;
     padding:0;
     box-sizing:border-box;
+
 }
 
 html{
+
     scroll-behavior:smooth;
+
 }
 
 body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:var(--cream);
-    color:var(--navy);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        var(--cream);
+
+    color:
+        var(--navy);
+
 }
 
 a{
+
     color:inherit;
+
     text-decoration:none;
+
 }
 
 button{
+
     font:inherit;
+
     cursor:pointer;
+
 }
 
 
@@ -65,51 +96,98 @@ button{
 ========================================================= */
 
 .header{
+
     height:68px;
-    background:var(--navy);
+
+    background:
+        var(--navy);
+
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
-    padding:0 18px;
+
+    padding:
+        0 18px;
+
     color:white;
+
 }
+
 
 .logo{
-    height:56px;
+
+    height:42px;
+
     width:auto;
+
 }
+
 
 .header-actions{
+
     display:flex;
+
     align-items:center;
+
     gap:16px;
+
 }
+
 
 .header-icon{
+
     position:relative;
+
     color:white;
+
     font-size:21px;
+
 }
+
 
 .header-icon:hover{
-    color:var(--gold);
+
+    color:
+        var(--gold);
+
 }
 
+
 .cart-count{
+
     position:absolute;
+
     top:-11px;
+
     right:-11px;
+
     min-width:18px;
+
     height:18px;
-    padding:0 4px;
+
+    padding:
+        0 4px;
+
     border-radius:20px;
-    background:var(--gold);
-    color:var(--navy);
+
+    background:
+        var(--gold);
+
+    color:
+        var(--navy);
+
     font-size:10px;
+
     font-weight:900;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
 }
 
 
@@ -118,31 +196,59 @@ button{
 ========================================================= */
 
 .nav-row{
+
     background:white;
+
     min-height:58px;
+
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
-    padding:8px 18px;
-    border-bottom:1px solid var(--border);
+
+    padding:
+        8px 18px;
+
+    border-bottom:
+        1px solid var(--border);
+
 }
+
 
 .back-link{
+
     font-weight:700;
+
     font-size:14px;
+
 }
+
 
 .english-link{
-    border:1px solid var(--navy);
+
+    border:
+        1px solid var(--navy);
+
     border-radius:7px;
-    padding:8px 13px;
+
+    padding:
+        8px 13px;
+
     font-weight:700;
+
     font-size:13px;
+
 }
 
+
 .english-link:hover{
-    background:var(--navy);
+
+    background:
+        var(--navy);
+
     color:white;
+
 }
 
 
@@ -151,74 +257,141 @@ button{
 ========================================================= */
 
 .hero{
+
     position:relative;
+
     min-height:360px;
+
     overflow:hidden;
 
     background:
+
         linear-gradient(
             90deg,
             rgba(7,26,51,.98) 0%,
             rgba(7,26,51,.94) 52%,
             rgba(7,26,51,.55) 100%
         ),
-        url("images/eiffel-tower.png") center right/cover no-repeat;
+
+        url("images/eiffel-tower.png")
+        center right/
+        cover
+        no-repeat;
 
     color:white;
-    padding:48px 25px 45px;
+
+    padding:
+        48px 25px 45px;
+
 }
+
 
 .hero-inner{
+
     max-width:1000px;
+
     margin:auto;
+
     position:relative;
+
     z-index:2;
+
 }
+
 
 .hero-line{
+
     width:45px;
+
     height:2px;
-    background:var(--gold);
+
+    background:
+        var(--gold);
+
     margin-bottom:14px;
+
 }
+
 
 .hero-kicker{
-    color:var(--gold);
+
+    color:
+        var(--gold);
+
     font-size:13px;
+
     font-weight:900;
+
     letter-spacing:2px;
+
     text-transform:uppercase;
+
     margin-bottom:18px;
+
 }
+
 
 .hero h1{
-    font-family:Georgia,serif;
-    font-size:clamp(40px,7vw,70px);
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(40px,7vw,70px);
+
     line-height:.95;
+
     max-width:520px;
+
     margin-bottom:20px;
+
 }
+
 
 .hero h1 span{
-    color:var(--gold);
+
+    color:
+        var(--gold);
+
 }
+
 
 .hero p{
+
     max-width:420px;
-    color:rgba(255,255,255,.88);
+
+    color:
+        rgba(255,255,255,.88);
+
     font-size:16px;
+
     line-height:1.55;
+
     margin-bottom:22px;
+
 }
 
+
 .hero-tag{
+
     display:inline-block;
-    border:1px solid var(--gold);
-    color:var(--gold);
-    padding:7px 12px;
+
+    border:
+        1px solid var(--gold);
+
+    color:
+        var(--gold);
+
+    padding:
+        7px 12px;
+
     font-size:10px;
+
     font-weight:900;
+
     letter-spacing:.6px;
+
 }
 
 
@@ -227,32 +400,61 @@ button{
 ========================================================= */
 
 .section{
+
     max-width:1200px;
+
     margin:auto;
-    padding:48px 18px;
+
+    padding:
+        48px 18px;
+
 }
+
 
 .section-heading{
+
     text-align:center;
+
     margin-bottom:30px;
+
 }
+
 
 .section-kicker{
-    color:var(--gold-dark);
+
+    color:
+        var(--gold-dark);
+
     font-size:13px;
+
     font-weight:900;
+
     letter-spacing:1.8px;
+
     margin-bottom:8px;
+
 }
+
 
 .section-title{
-    font-family:Georgia,serif;
+
+    font-family:
+        Georgia,
+        serif;
+
     font-size:32px;
+
 }
 
+
 .section-title i{
-    font-family:Arial,sans-serif;
+
+    font-family:
+        Arial,
+        sans-serif;
+
     font-style:normal;
+
 }
 
 
@@ -262,102 +464,257 @@ button{
 ========================================================= */
 
 .ebooks-grid{
+
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+
+    grid-template-columns:
+        repeat(3,1fr);
+
     gap:20px;
-}
 
-.ebook-card{
-    background:white;
-    border:1px solid #D7C995;
-    border-radius:10px;
-    padding:12px 10px 12px;
-    text-align:center;
-    display:flex;
-    flex-direction:column;
-    min-width:0;
-    box-shadow:0 5px 18px rgba(7,26,51,.08);
-}
-
-.ebook-cover{
-    height:330px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    margin-bottom:12px;
-    background:white;
-}
-
-.ebook-cover img{
-    width:100%;
-    height:100%;
-    object-fit:contain;
-}
-
-.ebook-title{
-    min-height:52px;
-    display:flex;
-    align-items:flex-start;
-    justify-content:center;
-    font-size:15px;
-    line-height:1.3;
-    font-weight:800;
-    color:var(--navy);
-    padding:0 5px;
-    margin-bottom:8px;
 }
 
 
 /* =========================================================
-   EBOOK DESCRIPTION
+   EBOOK CARD — COMPACT
+========================================================= */
+
+.ebook-card{
+
+    background:white;
+
+    border:
+        1px solid #D7C995;
+
+    border-radius:10px;
+
+    padding:
+        10px 9px 10px;
+
+    text-align:center;
+
+    display:flex;
+
+    flex-direction:column;
+
+    min-width:0;
+
+    box-shadow:
+        0 5px 18px rgba(7,26,51,.08);
+
+    opacity:1;
+
+    transform:
+        translateY(0);
+
+    transition:
+        opacity .4s ease,
+        transform .4s ease;
+
+}
+
+
+/* =========================================================
+   EBOOK ROTATION ANIMATION
+========================================================= */
+
+.ebooks-grid.is-changing
+.ebook-card{
+
+    opacity:0;
+
+    transform:
+        translateY(8px);
+
+}
+
+
+/* =========================================================
+   EBOOK COVER — SHORTER
+========================================================= */
+
+.ebook-cover{
+
+    height:250px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-bottom:10px;
+
+    background:white;
+
+}
+
+
+.ebook-cover img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:contain;
+
+}
+
+
+/* =========================================================
+   EBOOK TITLE — COMPACT
+========================================================= */
+
+.ebook-title{
+
+    min-height:46px;
+
+    display:flex;
+
+    align-items:flex-start;
+
+    justify-content:center;
+
+    font-size:15px;
+
+    line-height:1.25;
+
+    font-weight:800;
+
+    color:
+        var(--navy);
+
+    padding:
+        0 5px;
+
+    margin-bottom:6px;
+
+}
+
+
+/* =========================================================
+   EBOOK DESCRIPTION — SHORTER
 ========================================================= */
 
 .ebook-description{
-    min-height:78px;
-    padding:0 10px;
-    color:#64748B;
-    font-size:12px;
-    line-height:1.5;
+
+    min-height:62px;
+
+    padding:
+        0 8px;
+
+    color:
+        #64748B;
+
+    font-size:11px;
+
+    line-height:1.4;
+
     text-align:center;
-    margin-bottom:6px;
+
+    margin-bottom:4px;
+
+    display:
+        -webkit-box;
+
+    -webkit-box-orient:
+        vertical;
+
+    -webkit-line-clamp:3;
+
+    overflow:hidden;
+
 }
+
+
+/* =========================================================
+   EBOOK PRICE
+========================================================= */
 
 .ebook-price{
-    font-size:22px;
+
+    font-size:21px;
+
     font-weight:900;
-    margin:10px 0 12px;
+
+    margin:
+        8px 0 10px;
+
 }
+
+
+/* =========================================================
+   EBOOK BUY BUTTON
+========================================================= */
 
 .buy-btn{
+
     width:100%;
-    min-height:48px;
+
+    min-height:44px;
+
     border:none;
+
     border-radius:7px;
-    background:var(--gold);
-    color:var(--navy);
-    font-size:13px;
+
+    background:
+        var(--gold);
+
+    color:
+        var(--navy);
+
+    font-size:11px;
+
     font-weight:900;
+
     line-height:1.1;
-    padding:8px 5px;
-    margin-bottom:8px;
+
+    padding:
+        7px 5px;
+
+    margin-bottom:7px;
+
 }
+
 
 .buy-btn:hover{
-    background:var(--gold-dark);
+
+    background:
+        var(--gold-dark);
+
 }
+
+
+/* =========================================================
+   EBOOK CART BUTTON
+========================================================= */
 
 .cart-btn{
+
     width:100%;
-    min-height:46px;
-    border:1px solid var(--navy);
+
+    min-height:42px;
+
+    border:
+        1px solid var(--navy);
+
     border-radius:7px;
-    background:var(--navy);
+
+    background:
+        var(--navy);
+
     color:white;
-    font-size:18px;
+
+    font-size:17px;
+
 }
 
+
 .cart-btn:hover{
-    background:#102D52;
+
+    background:
+        #102D52;
+
 }
 
 
@@ -367,13 +724,21 @@ button{
 ========================================================= */
 
 .packs-section{
+
     padding-top:20px;
+
 }
 
+
 .packs{
+
     display:grid;
-    grid-template-columns:repeat(2,1fr);
+
+    grid-template-columns:
+        repeat(2,1fr);
+
     gap:24px;
+
 }
 
 
@@ -382,16 +747,30 @@ button{
 ========================================================= */
 
 .pack-card{
+
     background:white;
-    color:var(--navy);
-    border:1px solid #D7C995;
+
+    color:
+        var(--navy);
+
+    border:
+        1px solid #D7C995;
+
     border-radius:14px;
+
     min-height:560px;
+
     padding:18px;
+
     display:flex;
+
     flex-direction:column;
-    box-shadow:0 6px 20px rgba(7,26,51,.09);
+
+    box-shadow:
+        0 6px 20px rgba(7,26,51,.09);
+
     overflow:hidden;
+
 }
 
 
@@ -400,22 +779,38 @@ button{
 ========================================================= */
 
 .pack-image{
+
     width:100%;
+
     height:290px;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     background:#FFFFFF;
+
     border-radius:10px;
+
     overflow:hidden;
+
     margin-bottom:18px;
+
     padding:8px;
+
 }
 
+
 .pack-image img{
+
     width:100%;
+
     height:100%;
+
     object-fit:contain;
+
 }
 
 
@@ -424,47 +819,88 @@ button{
 ========================================================= */
 
 .pack-info{
+
     min-width:0;
+
     text-align:center;
+
     flex:1;
+
 }
+
 
 .pack-name{
-    color:var(--navy);
+
+    color:
+        var(--navy);
+
     font-size:23px;
+
     font-weight:900;
+
     text-transform:uppercase;
+
     line-height:1.15;
+
     margin-bottom:9px;
+
 }
+
 
 .pack-desc{
+
     font-size:15px;
+
     line-height:1.45;
+
     color:#334155;
+
     font-weight:600;
+
     margin-bottom:13px;
+
 }
+
 
 .pack-icons{
+
     display:grid;
-    grid-template-columns:repeat(2,1fr);
+
+    grid-template-columns:
+        repeat(2,1fr);
+
     gap:9px;
-    color:var(--navy);
+
+    color:
+        var(--navy);
+
     font-size:11px;
+
     font-weight:800;
+
 }
+
 
 .pack-icons span{
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     gap:5px;
+
 }
 
+
 .pack-icons i{
-    color:var(--gold-dark);
+
+    color:
+        var(--gold-dark);
+
     font-size:17px;
+
 }
 
 
@@ -473,60 +909,117 @@ button{
 ========================================================= */
 
 .pack-right{
+
     width:100%;
+
     display:grid;
-    grid-template-columns:auto 1fr;
+
+    grid-template-columns:
+        auto 1fr;
+
     gap:15px;
+
     align-items:center;
-    border-top:1px solid #E4D9A8;
+
+    border-top:
+        1px solid #E4D9A8;
+
     padding-top:15px;
+
     margin-top:16px;
+
 }
+
 
 .pack-price{
-    color:var(--navy);
+
+    color:
+        var(--navy);
+
     font-size:30px;
+
     font-weight:900;
+
     white-space:nowrap;
+
 }
 
+
 .pack-buttons{
+
     display:grid;
-    grid-template-columns:1fr 1fr;
+
+    grid-template-columns:
+        1fr 1fr;
+
     gap:9px;
+
 }
+
 
 .pack-buy,
 .pack-cart{
+
     min-height:46px;
+
     border-radius:6px;
-    padding:8px 8px;
+
+    padding:
+        8px 8px;
+
     font-size:10px;
+
     font-weight:900;
+
     white-space:nowrap;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     text-align:center;
+
 }
+
 
 .pack-buy{
-    background:var(--gold);
-    color:var(--navy);
+
+    background:
+        var(--gold);
+
+    color:
+        var(--navy);
+
 }
+
 
 .pack-buy:hover{
-    background:var(--gold-dark);
+
+    background:
+        var(--gold-dark);
+
 }
+
 
 .pack-cart{
+
     background:white;
-    color:var(--navy);
-    border:1px solid var(--navy);
+
+    color:
+        var(--navy);
+
+    border:
+        1px solid var(--navy);
+
 }
 
+
 .pack-cart:hover{
+
     background:#F4F6F8;
+
 }
 
 
@@ -536,24 +1029,45 @@ button{
 ========================================================= */
 
 .trust{
+
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+
+    grid-template-columns:
+        repeat(3,1fr);
+
     gap:12px;
-    padding:18px 0 10px;
+
+    padding:
+        18px 0 10px;
+
     text-align:center;
+
 }
+
 
 .trust-item{
+
     font-size:8px;
+
     font-weight:800;
-    color:var(--navy);
+
+    color:
+        var(--navy);
+
 }
 
+
 .trust-item i{
+
     display:block;
-    color:var(--navy);
+
+    color:
+        var(--navy);
+
     font-size:18px;
+
     margin-bottom:4px;
+
 }
 
 
@@ -562,24 +1076,45 @@ button{
 ========================================================= */
 
 .footer{
-    background:var(--navy);
+
+    background:
+        var(--navy);
+
     color:white;
+
     text-align:center;
-    padding:20px 10px;
+
+    padding:
+        20px 10px;
+
     margin-top:20px;
+
 }
+
 
 .footer-brand{
-    color:var(--gold);
+
+    color:
+        var(--gold);
+
     font-weight:900;
+
     letter-spacing:2px;
+
     font-size:12px;
+
     margin-bottom:6px;
+
 }
 
+
 .footer p{
-    color:rgba(255,255,255,.72);
+
+    color:
+        rgba(255,255,255,.72);
+
     font-size:8px;
+
 }
 
 
@@ -590,85 +1125,150 @@ button{
 @media(max-width:900px){
 
     .section{
-        padding:42px 14px;
+
+        padding:
+            42px 14px;
+
     }
+
 
     .ebooks-grid{
-        grid-template-columns:repeat(3,1fr);
+
+        grid-template-columns:
+            repeat(3,1fr);
+
         gap:14px;
+
     }
+
 
     .ebook-cover{
-        height:270px;
+
+        height:215px;
+
     }
+
 
     .ebook-title{
+
         font-size:13px;
-        min-height:52px;
+
+        min-height:46px;
+
     }
+
 
     .ebook-description{
-        font-size:11px;
-        min-height:78px;
+
+        font-size:10px;
+
+        min-height:65px;
+
     }
+
 
     .ebook-price{
+
         font-size:20px;
+
     }
+
 
     .buy-btn{
-        min-height:44px;
-        font-size:11px;
+
+        min-height:42px;
+
+        font-size:10px;
+
     }
+
 
     .cart-btn{
-        min-height:42px;
+
+        min-height:40px;
+
         font-size:16px;
+
     }
+
 
     .packs{
-        grid-template-columns:repeat(2,1fr);
+
+        grid-template-columns:
+            repeat(2,1fr);
+
         gap:16px;
+
     }
+
 
     .pack-card{
+
         min-height:500px;
+
         padding:14px;
+
     }
+
 
     .pack-image{
+
         height:250px;
+
     }
+
 
     .pack-name{
+
         font-size:19px;
+
     }
+
 
     .pack-desc{
+
         font-size:13px;
+
     }
+
 
     .pack-icons{
+
         font-size:10px;
+
     }
+
 
     .pack-icons i{
+
         font-size:16px;
+
     }
+
 
     .pack-price{
+
         font-size:25px;
+
     }
 
+
     .pack-buttons{
+
         grid-template-columns:1fr;
+
         gap:6px;
+
     }
+
 
     .pack-buy,
     .pack-cart{
+
         min-height:40px;
+
         font-size:9px;
+
     }
 
 }
@@ -682,205 +1282,369 @@ button{
 @media(max-width:600px){
 
     .header{
+
         height:62px;
-        padding:0 12px;
+
+        padding:
+            0 12px;
+
     }
+
 
     .logo{
-        height:42px;
+
+        height:38px;
+
     }
+
 
     .header-actions{
+
         gap:14px;
+
     }
+
 
     .header-icon{
+
         font-size:19px;
+
     }
+
 
     .nav-row{
-        padding:8px 12px;
+
+        padding:
+            8px 12px;
+
     }
+
 
     .back-link{
+
         font-size:13px;
+
     }
+
 
     .english-link{
+
         font-size:11px;
-        padding:7px 9px;
+
+        padding:
+            7px 9px;
+
     }
+
 
     .hero{
+
         min-height:345px;
-        padding:38px 18px 38px;
+
+        padding:
+            38px 18px 38px;
+
     }
+
 
     .hero h1{
+
         font-size:43px;
+
         max-width:310px;
+
     }
+
 
     .hero p{
+
         max-width:270px;
+
         font-size:13px;
+
     }
+
 
     .section{
-        padding:36px 10px;
+
+        padding:
+            36px 10px;
+
     }
+
 
     .section-heading{
+
         margin-bottom:24px;
+
     }
 
+
     .section-title{
+
         font-size:27px;
+
     }
 
 
     /* =====================================================
-       EBOOKS — 2 COLUMNS
+       EBOOKS — COMPACT 2 COLUMNS
     ===================================================== */
 
     .ebooks-grid{
-        grid-template-columns:repeat(2,minmax(0,1fr));
+
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+
         gap:12px;
+
     }
+
 
     .ebook-card{
-        padding:8px 6px 9px;
+
+        padding:
+            7px 6px 8px;
+
         border-radius:8px;
+
     }
+
 
     .ebook-cover{
-        height:225px;
-        margin-bottom:9px;
+
+        height:190px;
+
+        margin-bottom:8px;
+
     }
+
 
     .ebook-title{
-        font-size:12px;
-        line-height:1.3;
-        min-height:55px;
-        padding:0 3px;
-        margin-bottom:5px;
+
+        font-size:11px;
+
+        line-height:1.25;
+
+        min-height:48px;
+
+        padding:
+            0 3px;
+
+        margin-bottom:4px;
+
     }
+
 
     .ebook-description{
-        font-size:10px;
-        line-height:1.45;
-        min-height:82px;
-        padding:0 4px;
-        margin-bottom:4px;
+
+        font-size:9px;
+
+        line-height:1.4;
+
+        min-height:68px;
+
+        padding:
+            0 3px;
+
+        margin-bottom:3px;
+
+        -webkit-line-clamp:3;
+
     }
+
 
     .ebook-price{
-        font-size:19px;
-        margin:8px 0 10px;
+
+        font-size:18px;
+
+        margin:
+            7px 0 8px;
+
     }
+
 
     .buy-btn{
-        min-height:42px;
-        font-size:9px;
-        padding:6px 2px;
+
+        min-height:39px;
+
+        font-size:8px;
+
+        padding:
+            6px 2px;
+
     }
 
+
     .cart-btn{
-        min-height:40px;
-        font-size:16px;
+
+        min-height:38px;
+
+        font-size:15px;
+
     }
 
 
     /* =====================================================
        PACKS — 2 COLUMNS × 2 ROWS
-       LARGE / READABLE
     ===================================================== */
 
     .packs{
-        grid-template-columns:repeat(2,minmax(0,1fr));
+
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+
         gap:12px;
+
     }
+
 
     .pack-card{
+
         min-height:470px;
+
         padding:9px;
+
         border-radius:10px;
+
     }
+
 
     .pack-image{
+
         height:190px;
+
         padding:7px;
+
         margin-bottom:12px;
+
         border-radius:7px;
+
     }
+
 
     .pack-name{
+
         font-size:14px;
+
         line-height:1.2;
+
         margin-bottom:7px;
+
     }
+
 
     .pack-desc{
+
         font-size:10px;
+
         line-height:1.4;
+
         margin-bottom:10px;
+
     }
+
 
     .pack-icons{
-        grid-template-columns:repeat(2,1fr);
-        gap:7px 4px;
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+        gap:
+            7px 4px;
+
         font-size:8px;
+
     }
+
 
     .pack-icons span{
+
         gap:3px;
+
     }
+
 
     .pack-icons i{
+
         font-size:14px;
+
     }
+
 
     .pack-right{
+
         display:flex;
+
         flex-direction:column;
+
         gap:7px;
+
         align-items:stretch;
-        border-top:1px solid #E4D9A8;
+
+        border-top:
+            1px solid #E4D9A8;
+
         padding-top:9px;
+
         margin-top:10px;
+
     }
+
 
     .pack-price{
+
         font-size:23px;
+
         text-align:center;
+
     }
 
+
     .pack-buttons{
+
         display:grid;
+
         grid-template-columns:1fr;
+
         gap:5px;
+
     }
+
 
     .pack-buy,
     .pack-cart{
+
         min-height:36px;
-        padding:6px 3px;
+
+        padding:
+            6px 3px;
+
         font-size:7px;
+
     }
 
 
-    /* TRUST — ORIGINAL */
+    /* TRUST */
 
     .trust{
+
         gap:8px;
+
     }
+
 
     .trust-item{
+
         font-size:7px;
+
     }
 
+
     .trust-item i{
+
         font-size:17px;
+
     }
 
 }
@@ -894,96 +1658,167 @@ button{
 @media(max-width:360px){
 
     .section{
+
         padding-left:7px;
+
         padding-right:7px;
+
     }
 
 
     /* EBOOKS */
 
     .ebooks-grid{
-        grid-template-columns:repeat(2,minmax(0,1fr));
+
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+
         gap:9px;
+
     }
+
 
     .ebook-card{
-        padding:6px 4px 7px;
+
+        padding:
+            6px 4px 7px;
+
     }
+
 
     .ebook-cover{
-        height:185px;
+
+        height:165px;
+
     }
+
 
     .ebook-title{
+
         font-size:10px;
+
         min-height:48px;
+
     }
+
 
     .ebook-description{
-        font-size:9px;
-        min-height:78px;
+
+        font-size:8.5px;
+
+        min-height:70px;
+
         line-height:1.4;
+
     }
+
 
     .ebook-price{
+
         font-size:17px;
-        margin:7px 0;
+
+        margin:
+            7px 0;
+
     }
+
 
     .buy-btn{
+
         min-height:38px;
+
         font-size:7px;
+
     }
+
 
     .cart-btn{
+
         min-height:36px;
+
         font-size:14px;
+
     }
 
 
-    /* PACKS — STILL 2 COLUMNS */
+    /* PACKS */
 
     .packs{
-        grid-template-columns:repeat(2,minmax(0,1fr));
+
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+
         gap:8px;
+
     }
+
 
     .pack-card{
+
         min-height:440px;
+
         padding:7px;
+
     }
+
 
     .pack-image{
+
         height:155px;
+
         padding:6px;
+
     }
+
 
     .pack-name{
+
         font-size:11px;
+
     }
+
 
     .pack-desc{
+
         font-size:8.5px;
+
     }
+
 
     .pack-icons{
+
         font-size:7px;
-        gap:5px 3px;
+
+        gap:
+            5px 3px;
+
     }
+
 
     .pack-icons i{
+
         font-size:12px;
+
     }
 
+
     .pack-price{
+
         font-size:20px;
+
     }
+
 
     .pack-buy,
     .pack-cart{
+
         min-height:32px;
+
         font-size:6px;
-        padding:5px 2px;
+
+        padding:
+            5px 2px;
+
     }
 
 }
@@ -996,30 +1831,49 @@ button{
 @media(min-width:1100px){
 
     .pack-card{
+
         min-height:590px;
+
         padding:20px;
+
     }
+
 
     .pack-image{
+
         height:315px;
+
     }
+
 
     .pack-name{
+
         font-size:25px;
+
     }
+
 
     .pack-desc{
+
         font-size:17px;
+
     }
 
+
     .pack-price{
+
         font-size:34px;
+
     }
+
 
     .pack-buy,
     .pack-cart{
+
         min-height:48px;
+
         font-size:12px;
+
     }
 
 }
@@ -1039,9 +1893,10 @@ button{
 <header class="header">
 
     <img
-        src="images/Thebestbundle-transparent-logo.png"
+        src="images/logo.png"
         class="logo"
         alt="TheBestBundle">
+
 
     <div class="header-actions">
 
@@ -1055,10 +1910,13 @@ button{
             <span
                 class="cart-count"
                 id="cartCount">
+
                 0
+
             </span>
 
         </a>
+
 
         <a
             href="index.html"
@@ -1075,7 +1933,7 @@ button{
 
 
 <!-- ======================================================
-     NAV
+     NAVIGATION
 ====================================================== -->
 
 <div class="nav-row">
@@ -1088,7 +1946,6 @@ button{
 
     </a>
 
-    <!-- ENGLISH COLLECTION → HOMEPAGE -->
 
     <a
         href="index.html"
@@ -1111,24 +1968,39 @@ button{
 
         <div class="hero-line"></div>
 
+
         <div class="hero-kicker">
+
             THEBESTBUNDLE • COLLECTION
             FRANÇAISE
+
         </div>
 
+
         <h1>
+
             COLLECTION
-            <span>FRANÇAISE</span>
+
+            <span>
+                FRANÇAISE
+            </span>
+
         </h1>
 
+
         <p>
+
             Découvrez nos eBooks numériques
             et nos packs premium.
+
         </p>
 
+
         <div class="hero-tag">
+
             INVESTISSEZ EN VOUS,
             CHANGEZ VOTRE VIE
+
         </div>
 
     </div>
@@ -1145,18 +2017,26 @@ button{
     <div class="section-heading">
 
         <div class="section-kicker">
+
             <i class="fa-solid fa-book-open"></i>
+
             NOS EBOOKS
+
         </div>
 
+
         <h2 class="section-title">
+
             eBooks Premium
+
         </h2>
 
     </div>
 
 
-    <div class="ebooks-grid">
+    <div
+        class="ebooks-grid"
+        id="ebooksGrid">
 
 
         <!-- =================================================
@@ -1166,28 +2046,41 @@ button{
         <article class="ebook-card">
 
             <div class="ebook-cover">
+
                 <img
                     src="images/book1.jpg"
                     alt="Découvre ta niche parfaite">
+
             </div>
+
 
             <div class="ebook-title">
+
                 Découvre ta niche parfaite
+
             </div>
 
+
             <div class="ebook-description">
+
                 Découvrez comment identifier une niche rentable,
                 trouver votre positionnement et transformer votre
                 passion en opportunité de business.
+
             </div>
 
+
             <div class="ebook-price">
+
                 $17
+
             </div>
+
 
             <a
                 href="https://buy.stripe.com/3cIfZj8cg0PS67d9KX8N200"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="buy-btn">
 
                 ACHETER
@@ -1195,11 +2088,17 @@ button{
 
             </a>
 
+
             <button
+                type="button"
                 class="cart-btn add-to-cart"
+
                 data-id="fr-book-1"
+
                 data-name="Découvre ta niche parfaite"
+
                 data-price="17"
+
                 data-image="images/book1.jpg">
 
                 <i class="fa-solid fa-cart-shopping"></i>
@@ -1216,28 +2115,41 @@ button{
         <article class="ebook-card">
 
             <div class="ebook-cover">
+
                 <img
                     src="images/book2.jpg"
-                    alt="Ton plan d'action en business">
+                    alt="Ton plan d’action en business">
+
             </div>
+
 
             <div class="ebook-title">
+
                 Ton plan d’action en business
+
             </div>
 
+
             <div class="ebook-description">
+
                 Construisez un plan d’action clair et structuré
                 pour lancer, organiser et développer votre
                 activité avec plus de stratégie et de confiance.
+
             </div>
 
+
             <div class="ebook-price">
+
                 $17
+
             </div>
+
 
             <a
                 href="https://buy.stripe.com/bJe28t1NS6ac1QXf5h8N201"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="buy-btn">
 
                 ACHETER
@@ -1245,11 +2157,17 @@ button{
 
             </a>
 
+
             <button
+                type="button"
                 class="cart-btn add-to-cart"
+
                 data-id="fr-book-2"
+
                 data-name="Ton plan d’action en business"
+
                 data-price="17"
+
                 data-image="images/book2.jpg">
 
                 <i class="fa-solid fa-cart-shopping"></i>
@@ -1266,28 +2184,41 @@ button{
         <article class="ebook-card">
 
             <div class="ebook-cover">
+
                 <img
                     src="images/book3.jpg"
                     alt="Comment Être Financé Rapidement">
+
             </div>
+
 
             <div class="ebook-title">
+
                 Comment Être Financé Rapidement
+
             </div>
 
+
             <div class="ebook-description">
+
                 Découvrez les bases essentielles pour mieux
                 préparer votre demande de financement, présenter
                 votre projet et améliorer votre stratégie financière.
+
             </div>
 
+
             <div class="ebook-price">
+
                 $17
+
             </div>
+
 
             <a
                 href="https://buy.stripe.com/fZu00l504568antcX98N202"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="buy-btn">
 
                 ACHETER
@@ -1295,11 +2226,17 @@ button{
 
             </a>
 
+
             <button
+                type="button"
                 class="cart-btn add-to-cart"
+
                 data-id="fr-book-3"
+
                 data-name="Comment Être Financé Rapidement"
+
                 data-price="17"
+
                 data-image="images/book3.jpg">
 
                 <i class="fa-solid fa-cart-shopping"></i>
@@ -1316,28 +2253,41 @@ button{
         <article class="ebook-card">
 
             <div class="ebook-cover">
+
                 <img
                     src="images/book4.jpg"
                     alt="Protège ton Entreprise Légalement">
+
             </div>
+
 
             <div class="ebook-title">
+
                 Protège ton Entreprise Légalement
+
             </div>
 
+
             <div class="ebook-description">
+
                 Apprenez les principes essentiels pour protéger
                 votre entreprise, réduire les risques et prendre
                 de meilleures décisions pour votre activité.
+
             </div>
 
+
             <div class="ebook-price">
+
                 $17
+
             </div>
+
 
             <a
                 href="https://buy.stripe.com/7sY28t6484242V1aP18N203"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="buy-btn">
 
                 ACHETER
@@ -1345,11 +2295,17 @@ button{
 
             </a>
 
+
             <button
+                type="button"
                 class="cart-btn add-to-cart"
+
                 data-id="fr-book-4"
+
                 data-name="Protège ton Entreprise Légalement"
+
                 data-price="17"
+
                 data-image="images/book4.jpg">
 
                 <i class="fa-solid fa-cart-shopping"></i>
@@ -1366,28 +2322,41 @@ button{
         <article class="ebook-card">
 
             <div class="ebook-cover">
+
                 <img
                     src="images/book5.jpg"
                     alt="Crée ta présence en ligne">
+
             </div>
+
 
             <div class="ebook-title">
+
                 Crée ta présence en ligne
+
             </div>
 
+
             <div class="ebook-description">
+
                 Apprenez à construire une présence en ligne
                 professionnelle, développer votre visibilité et
                 présenter votre marque efficacement.
+
             </div>
 
+
             <div class="ebook-price">
+
                 $17
+
             </div>
+
 
             <a
                 href="https://buy.stripe.com/7sY7sN8cg0PSeDJ1er8N204"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="buy-btn">
 
                 ACHETER
@@ -1395,11 +2364,17 @@ button{
 
             </a>
 
+
             <button
+                type="button"
                 class="cart-btn add-to-cart"
+
                 data-id="fr-book-5"
+
                 data-name="Crée ta présence en ligne"
+
                 data-price="17"
+
                 data-image="images/book5.jpg">
 
                 <i class="fa-solid fa-cart-shopping"></i>
@@ -1416,29 +2391,42 @@ button{
         <article class="ebook-card">
 
             <div class="ebook-cover">
+
                 <img
                     src="images/book6.jpg"
                     alt="Traffic Leads Ventes">
+
             </div>
+
 
             <div class="ebook-title">
+
                 Traffic Leads Ventes —
                 Le Système
+
             </div>
 
+
             <div class="ebook-description">
+
                 Découvrez un système structuré pour attirer du
                 trafic, générer des leads qualifiés et transformer
                 davantage de prospects en ventes.
+
             </div>
 
+
             <div class="ebook-price">
+
                 $17
+
             </div>
+
 
             <a
                 href="https://buy.stripe.com/cNi8wRakocyA7bh1er8N205"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="buy-btn">
 
                 ACHETER
@@ -1446,11 +2434,17 @@ button{
 
             </a>
 
+
             <button
+                type="button"
                 class="cart-btn add-to-cart"
+
                 data-id="fr-book-6"
+
                 data-name="Traffic Leads Ventes — Le Système"
+
                 data-price="17"
+
                 data-image="images/book6.jpg">
 
                 <i class="fa-solid fa-cart-shopping"></i>
@@ -1467,28 +2461,41 @@ button{
         <article class="ebook-card">
 
             <div class="ebook-cover">
+
                 <img
                     src="images/book7.jpg"
                     alt="Discipline Financière">
+
             </div>
+
 
             <div class="ebook-title">
+
                 Discipline Financière
+
             </div>
 
+
             <div class="ebook-description">
+
                 Développez de meilleures habitudes financières,
                 apprenez à gérer votre argent et construisez une
                 stratégie plus solide pour votre avenir.
+
             </div>
 
+
             <div class="ebook-price">
+
                 $17
+
             </div>
+
 
             <a
                 href="https://buy.stripe.com/00w28t1NS4249jp0an8N206"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="buy-btn">
 
                 ACHETER
@@ -1496,11 +2503,17 @@ button{
 
             </a>
 
+
             <button
+                type="button"
                 class="cart-btn add-to-cart"
+
                 data-id="fr-book-7"
+
                 data-name="Discipline Financière"
+
                 data-price="17"
+
                 data-image="images/book7.jpg">
 
                 <i class="fa-solid fa-cart-shopping"></i>
@@ -1517,28 +2530,41 @@ button{
         <article class="ebook-card">
 
             <div class="ebook-cover">
+
                 <img
                     src="images/book8.jpg"
                     alt="L'art de vendre en 2026">
+
             </div>
+
 
             <div class="ebook-title">
+
                 L’art de vendre en 2026
+
             </div>
 
+
             <div class="ebook-description">
+
                 Découvrez des méthodes modernes pour mieux
                 comprendre vos clients, améliorer votre approche
                 commerciale et augmenter vos ventes.
+
             </div>
 
+
             <div class="ebook-price">
+
                 $17
+
             </div>
+
 
             <a
                 href="https://buy.stripe.com/aFa6oJ5045682V1aP18N207"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="buy-btn">
 
                 ACHETER
@@ -1546,11 +2572,17 @@ button{
 
             </a>
 
+
             <button
+                type="button"
                 class="cart-btn add-to-cart"
+
                 data-id="fr-book-8"
+
                 data-name="L’art de vendre en 2026"
+
                 data-price="17"
+
                 data-image="images/book8.jpg">
 
                 <i class="fa-solid fa-cart-shopping"></i>
@@ -1567,29 +2599,42 @@ button{
         <article class="ebook-card">
 
             <div class="ebook-cover">
+
                 <img
                     src="images/book9.jpg"
                     alt="De salariés à Mentalité d'entrepreneur">
+
             </div>
+
 
             <div class="ebook-title">
+
                 De salariés à Mentalité
                 d’entrepreneur
+
             </div>
 
+
             <div class="ebook-description">
+
                 Changez votre façon de penser, développez une
                 mentalité entrepreneuriale et découvrez les bases
                 pour avancer vers plus d’indépendance.
+
             </div>
 
+
             <div class="ebook-price">
+
                 $17
+
             </div>
+
 
             <a
                 href="https://buy.stripe.com/00w8wR2RWdCE1QXg9l8N208"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="buy-btn">
 
                 ACHETER
@@ -1597,11 +2642,17 @@ button{
 
             </a>
 
+
             <button
+                type="button"
                 class="cart-btn add-to-cart"
+
                 data-id="fr-book-9"
+
                 data-name="De salariés à Mentalité d’entrepreneur"
+
                 data-price="17"
+
                 data-image="images/book9.jpg">
 
                 <i class="fa-solid fa-cart-shopping"></i>
@@ -1618,29 +2669,42 @@ button{
         <article class="ebook-card">
 
             <div class="ebook-cover">
+
                 <img
                     src="images/book10.jpg"
                     alt="Automatise Ton Business en 30 Jours">
+
             </div>
+
 
             <div class="ebook-title">
+
                 Automatise Ton Business
                 en 30 Jours
+
             </div>
 
+
             <div class="ebook-description">
+
                 Découvrez comment identifier les tâches répétitives,
                 utiliser l’automatisation et créer un système plus
                 efficace pour gagner du temps.
+
             </div>
 
+
             <div class="ebook-price">
+
                 $17
+
             </div>
+
 
             <a
                 href="https://buy.stripe.com/8x26oJ2RWgOQ9jp5uH8N209"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="buy-btn">
 
                 ACHETER
@@ -1648,11 +2712,17 @@ button{
 
             </a>
 
+
             <button
+                type="button"
                 class="cart-btn add-to-cart"
+
                 data-id="fr-book-10"
+
                 data-name="Automatise Ton Business en 30 Jours"
+
                 data-price="17"
+
                 data-image="images/book10.jpg">
 
                 <i class="fa-solid fa-cart-shopping"></i>
@@ -1673,15 +2743,22 @@ button{
 
 <section class="section packs-section">
 
+
     <div class="section-heading">
 
         <div class="section-kicker">
+
             <i class="fa-solid fa-box-open"></i>
+
             NOS PACKS
+
         </div>
 
+
         <h2 class="section-title">
+
             Packs Premium
+
         </h2>
 
     </div>
@@ -1690,80 +2767,123 @@ button{
     <div class="packs">
 
 
-        <!-- STARTER -->
+        <!-- =================================================
+             STARTER
+        ================================================== -->
 
         <article class="pack-card">
 
+
             <div class="pack-image">
+
                 <img
                     src="images/starterpack.jpg"
                     alt="Starter Bundle">
+
             </div>
+
 
             <div class="pack-info">
 
                 <div class="pack-name">
+
                     Starter Bundle
+
                 </div>
 
+
                 <div class="pack-desc">
+
                     2 eBooks + 4 Templates
+
                 </div>
+
 
                 <div class="pack-icons">
 
+
                     <span>
+
                         <i class="fa-solid fa-book"></i>
+
                         eBooks
+
                     </span>
 
+
                     <span>
+
                         <i class="fa-solid fa-file-lines"></i>
+
                         Templates
+
                     </span>
 
+
                     <span>
+
                         <i class="fa-solid fa-download"></i>
+
                         Téléchargement
+
                     </span>
 
+
                     <span>
+
                         <i class="fa-solid fa-gift"></i>
+
                         Bonus
+
                     </span>
+
 
                 </div>
 
             </div>
 
+
             <div class="pack-right">
 
+
                 <div class="pack-price">
+
                     $27
+
                 </div>
 
+
                 <div class="pack-buttons">
+
 
                     <a
                         href="https://buy.stripe.com/5kQ8wRboscyAgLR0an8N20a"
                         target="_blank"
+                        rel="noopener noreferrer"
                         class="pack-buy">
 
                         ACHETER MAINTENANT
 
                     </a>
 
+
                     <button
+                        type="button"
                         class="pack-cart add-to-cart"
+
                         data-id="fr-starter-bundle"
+
                         data-name="Starter Bundle"
+
                         data-price="27"
+
                         data-image="images/starterpack.jpg">
 
                         AJOUTER AU PANIER
 
                     </button>
 
+
                 </div>
 
             </div>
@@ -1771,80 +2891,123 @@ button{
         </article>
 
 
-        <!-- CREATOR -->
+        <!-- =================================================
+             CREATOR
+        ================================================== -->
 
         <article class="pack-card">
 
+
             <div class="pack-image">
+
                 <img
                     src="images/creatorpack.jpg"
                     alt="Creator Bundle">
+
             </div>
+
 
             <div class="pack-info">
 
                 <div class="pack-name">
+
                     Creator Bundle
+
                 </div>
 
+
                 <div class="pack-desc">
+
                     3 eBooks + 6 Templates
+
                 </div>
+
 
                 <div class="pack-icons">
 
+
                     <span>
+
                         <i class="fa-solid fa-book"></i>
+
                         eBooks
+
                     </span>
 
+
                     <span>
+
                         <i class="fa-solid fa-file-lines"></i>
+
                         Templates
+
                     </span>
 
+
                     <span>
+
                         <i class="fa-solid fa-download"></i>
+
                         Téléchargement
+
                     </span>
 
+
                     <span>
+
                         <i class="fa-solid fa-gift"></i>
+
                         Bonus
+
                     </span>
+
 
                 </div>
 
             </div>
 
+
             <div class="pack-right">
 
+
                 <div class="pack-price">
+
                     $37
+
                 </div>
 
+
                 <div class="pack-buttons">
+
 
                     <a
                         href="https://buy.stripe.com/dRm8wR2RWeGIeDJf5h8N20b"
                         target="_blank"
+                        rel="noopener noreferrer"
                         class="pack-buy">
 
                         ACHETER MAINTENANT
 
                     </a>
 
+
                     <button
+                        type="button"
                         class="pack-cart add-to-cart"
+
                         data-id="fr-creator-bundle"
+
                         data-name="Creator Bundle"
+
                         data-price="37"
+
                         data-image="images/creatorpack.jpg">
 
                         AJOUTER AU PANIER
 
                     </button>
 
+
                 </div>
 
             </div>
@@ -1852,80 +3015,123 @@ button{
         </article>
 
 
-        <!-- PRO -->
+        <!-- =================================================
+             PRO
+        ================================================== -->
 
         <article class="pack-card">
 
+
             <div class="pack-image">
+
                 <img
                     src="images/propack.jpg"
                     alt="Pro Bundle">
+
             </div>
+
 
             <div class="pack-info">
 
                 <div class="pack-name">
+
                     Pro Bundle
+
                 </div>
 
+
                 <div class="pack-desc">
+
                     5 eBooks + 10 Templates
+
                 </div>
+
 
                 <div class="pack-icons">
 
+
                     <span>
+
                         <i class="fa-solid fa-book"></i>
+
                         eBooks
+
                     </span>
 
+
                     <span>
+
                         <i class="fa-solid fa-file-lines"></i>
+
                         Templates
+
                     </span>
 
+
                     <span>
+
                         <i class="fa-solid fa-download"></i>
+
                         Téléchargement
+
                     </span>
 
+
                     <span>
+
                         <i class="fa-solid fa-gift"></i>
+
                         Bonus
+
                     </span>
+
 
                 </div>
 
             </div>
 
+
             <div class="pack-right">
 
+
                 <div class="pack-price">
+
                     $57
+
                 </div>
 
+
                 <div class="pack-buttons">
+
 
                     <a
                         href="https://buy.stripe.com/00w9AVako5682V14qD8N20c"
                         target="_blank"
+                        rel="noopener noreferrer"
                         class="pack-buy">
 
                         ACHETER MAINTENANT
 
                     </a>
 
+
                     <button
+                        type="button"
                         class="pack-cart add-to-cart"
+
                         data-id="fr-pro-bundle"
+
                         data-name="Pro Bundle"
+
                         data-price="57"
+
                         data-image="images/propack.jpg">
 
                         AJOUTER AU PANIER
 
                     </button>
 
+
                 </div>
 
             </div>
@@ -1933,79 +3139,122 @@ button{
         </article>
 
 
-        <!-- VAULT -->
+        <!-- =================================================
+             VAULT
+        ================================================== -->
 
         <article class="pack-card">
 
+
             <div class="pack-image">
+
                 <img
                     src="images/vaultpack.jpg"
                     alt="Vault Bundle">
+
             </div>
+
 
             <div class="pack-info">
 
                 <div class="pack-name">
+
                     Vault Bundle
+
                 </div>
 
+
                 <div class="pack-desc">
+
                     10 eBooks + 20 Templates
+
                 </div>
+
 
                 <div class="pack-icons">
 
+
                     <span>
+
                         <i class="fa-solid fa-book"></i>
+
                         eBooks
+
                     </span>
 
+
                     <span>
+
                         <i class="fa-solid fa-file-lines"></i>
+
                         Templates
+
                     </span>
 
+
                     <span>
+
                         <i class="fa-solid fa-download"></i>
+
                         Téléchargement
+
                     </span>
 
+
                     <span>
+
                         <i class="fa-solid fa-gift"></i>
+
                         Bonus
+
                     </span>
+
 
                 </div>
 
             </div>
 
+
             <div class="pack-right">
 
+
                 <div class="pack-price">
+
                     $97
+
                 </div>
 
+
                 <div class="pack-buttons">
+
 
                     <a
                         href="https://buy.stripe.com/9B65kF504buw5390an8N20d"
                         target="_blank"
+                        rel="noopener noreferrer"
                         class="pack-buy">
 
                         ACHETER MAINTENANT
 
                     </a>
 
+
                     <button
+                        type="button"
                         class="pack-cart add-to-cart"
+
                         data-id="fr-vault-bundle"
+
                         data-name="Vault Bundle"
+
                         data-price="97"
+
                         data-image="images/vaultpack.jpg">
 
                         AJOUTER AU PANIER
 
                     </button>
+
 
                 </div>
 
@@ -2019,37 +3268,43 @@ button{
 
     <!-- ==================================================
          TRUST
-         ORIGINAL — UNCHANGED
     ================================================== -->
 
     <div class="trust">
+
 
         <div class="trust-item">
 
             <i class="fa-solid fa-shield-halved"></i>
 
             PAIEMENT<br>
+
             100% SÉCURISÉ
 
         </div>
+
 
         <div class="trust-item">
 
             <i class="fa-solid fa-bolt"></i>
 
             TÉLÉCHARGEMENT<br>
+
             IMMÉDIAT
 
         </div>
+
 
         <div class="trust-item">
 
             <i class="fa-solid fa-face-smile"></i>
 
             SATISFAIT OU<br>
+
             REMBOURSÉ
 
         </div>
+
 
     </div>
 
@@ -2063,35 +3318,58 @@ button{
 <footer class="footer">
 
     <div class="footer-brand">
+
         LEARN • CREATE • GROW
+
     </div>
 
+
     <p>
-        © 2026 TheBestBundle. Tous droits réservés.
+
+        © 2026 TheBestBundle.
+        Tous droits réservés.
+
     </p>
 
 </footer>
 
 
 <!-- ======================================================
-     SHARED CART
+     SHARED CART + EBOOK ROTATION
 ====================================================== -->
 
 <script>
 
-const CART_KEY = "theBestBundleCart";
+
+/* ======================================================
+   SHARED CART
+====================================================== */
+
+const CART_KEY =
+    "theBestBundleCart";
+
 
 let cart =
-    JSON.parse(localStorage.getItem(CART_KEY)) || [];
+    JSON.parse(
+        localStorage.getItem(
+            CART_KEY
+        )
+    ) || [];
 
 
 function updateCartCount(){
 
     const count =
-        document.getElementById("cartCount");
+        document.getElementById(
+            "cartCount"
+        );
+
 
     if(count){
-        count.textContent = cart.length;
+
+        count.textContent =
+            cart.length;
+
     }
 
 }
@@ -2101,73 +3379,228 @@ function saveCart(){
 
     localStorage.setItem(
         CART_KEY,
-        JSON.stringify(cart)
+        JSON.stringify(
+            cart
+        )
     );
+
 
     updateCartCount();
 
 }
 
 
+/* ======================================================
+   ADD TO CART
+====================================================== */
+
 document
-.querySelectorAll(".add-to-cart")
-.forEach(function(button){
+    .querySelectorAll(
+        ".add-to-cart"
+    )
+    .forEach(
+        function(button){
 
-    button.addEventListener("click",function(){
+            button.addEventListener(
+                "click",
+                function(){
 
-        const product = {
+                    const product = {
 
-            id:this.dataset.id,
+                        id:
+                            this.dataset.id,
 
-            name:this.dataset.name,
+                        name:
+                            this.dataset.name,
 
-            price:Number(this.dataset.price),
+                        price:
+                            Number(
+                                this.dataset.price
+                            ),
 
-            image:this.dataset.image
+                        image:
+                            this.dataset.image
 
-        };
-
-
-        const exists =
-            cart.some(function(item){
-
-                return item.id === product.id;
-
-            });
+                    };
 
 
-        if(!exists){
+                    const exists =
+                        cart.some(
+                            function(item){
 
-            cart.push(product);
+                                return (
+                                    item.id ===
+                                    product.id
+                                );
 
-            saveCart();
+                            }
+                        );
 
-            this.innerHTML =
-                "✓";
 
-            setTimeout(()=>{
+                    if(!exists){
 
-                this.innerHTML =
-                    '<i class="fa-solid fa-cart-shopping"></i>';
+                        cart.push(
+                            product
+                        );
 
-            },1000);
+                        saveCart();
 
-        }else{
 
-            window.location.href =
-                "cart.html";
+                        /*
+                            Different feedback
+                            depending on button type.
+                        */
+
+                        if(
+                            this.classList.contains(
+                                "cart-btn"
+                            )
+                        ){
+
+                            this.innerHTML =
+                                "✓";
+
+                            setTimeout(
+                                () => {
+
+                                    this.innerHTML =
+                                        '<i class="fa-solid fa-cart-shopping"></i>';
+
+                                },
+                                1000
+                            );
+
+                        }else{
+
+                            this.textContent =
+                                "✓ AJOUTÉ";
+
+                            setTimeout(
+                                () => {
+
+                                    this.textContent =
+                                        "AJOUTER AU PANIER";
+
+                                },
+                                1000
+                            );
+
+                        }
+
+
+                    }else{
+
+                        /*
+                            If already in cart,
+                            go directly to cart.
+                        */
+
+                        window.location.href =
+                            "cart.html";
+
+                    }
+
+                }
+            );
 
         }
+    );
 
-    });
 
-});
+/* ======================================================
+   FRENCH EBOOK ROTATION
+   EVERY 10 SECONDS
+====================================================== */
 
+const ebooksGrid =
+    document.getElementById(
+        "ebooksGrid"
+    );
+
+
+function rotateFrenchEbooks(){
+
+    if(!ebooksGrid){
+
+        return;
+
+    }
+
+
+    /*
+        Start fade/slide animation.
+    */
+
+    ebooksGrid.classList.add(
+        "is-changing"
+    );
+
+
+    /*
+        Wait for the fade-out,
+        then move the first ebook
+        to the end of the grid.
+    */
+
+    setTimeout(
+        function(){
+
+            const firstEbook =
+                ebooksGrid.querySelector(
+                    ".ebook-card"
+                );
+
+
+            if(firstEbook){
+
+                ebooksGrid.appendChild(
+                    firstEbook
+                );
+
+            }
+
+
+            /*
+                Fade the cards back in.
+            */
+
+            requestAnimationFrame(
+                function(){
+
+                    ebooksGrid.classList.remove(
+                        "is-changing"
+                    );
+
+                }
+            );
+
+        },
+        400
+    );
+
+}
+
+
+/*
+    Rotate every 10 seconds.
+*/
+
+setInterval(
+    rotateFrenchEbooks,
+    10000
+);
+
+
+/* ======================================================
+   INITIAL CART COUNT
+====================================================== */
 
 updateCartCount();
+
 
 </script>
 
 
 </body>
+
 </html>
