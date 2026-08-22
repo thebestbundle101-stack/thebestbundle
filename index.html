@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,8 +33,10 @@ gtag("config","G-JPG5GRWX53");
  --navy2:#0D2B50;
  --navy3:#123761;
 
- --gold:#F4C542;
- --gold2:#D9A91A;
+ /* PREMIUM LOGO GOLD */
+ --gold:#C9A45C;
+ --gold2:#B58B45;
+ --gold3:#D7B978;
 
  --white:#fff;
  --cream:#F8F7F2;
@@ -124,7 +125,7 @@ button{
 }
 
 .btn-gold:hover{
- background:#FFD95A
+ background:var(--gold3)
 }
 
 .btn-outline{
@@ -255,7 +256,7 @@ button{
 }
 
 .header-tool.news:hover{
- background:#FFD95A;
+ background:var(--gold3);
  color:var(--navy)
 }
 
@@ -369,14 +370,15 @@ button{
     }
 
 }
-    
+
+
 /* HERO — target screenshot structure */
 
 .hero{
  background:
  radial-gradient(
   circle at 80% 35%,
-  rgba(244,197,66,.12),
+  rgba(201,164,92,.12),
   transparent 28%
  ),
  radial-gradient(
@@ -481,8 +483,8 @@ button{
  width:430px;
  height:430px;
  border-radius:50%;
- border:1px solid rgba(244,197,66,.8);
- box-shadow:0 0 40px rgba(244,197,66,.15) inset
+ border:1px solid rgba(201,164,92,.8);
+ box-shadow:0 0 40px rgba(201,164,92,.15) inset
 }
 
 .hero-floor{
@@ -758,7 +760,7 @@ button{
  content:"";
  width:80px;
  height:1px;
- background:#D9B44B
+ background:var(--gold2)
 }
 
 .collection-grid{
@@ -855,7 +857,8 @@ button{
 
 }
 
-  /* BEST SELLERS */
+
+/* BEST SELLERS */
 
 .best{
     background:#fff;
@@ -954,7 +957,7 @@ button{
 }
 
 .mini-cart:hover{
-    background:#FFD95A
+    background:var(--gold3)
 }
 
 @media(max-width:1050px){
@@ -1521,7 +1524,7 @@ button{
             aria-label="TheBestBundle Home">
 
             <img
-                src="images/logo.png"
+                src="images/TheBestBundle_Premium_Logo.png"
                 alt="TheBestBundle"
                 loading="eager">
 
@@ -1614,7 +1617,6 @@ button{
     <div class="container hero-grid">
 
         <div class="hero-copy">
-
 
             <h1>
                 Premium Digital Resources for
@@ -1711,7 +1713,7 @@ button{
 
 </section>
 
-  <section class="container trust-bar" aria-label="Why customers choose TheBestBundle">
+<section class="container trust-bar" aria-label="Why customers choose TheBestBundle">
 
     <div class="trust-grid">
 
@@ -1903,31 +1905,31 @@ button{
 
                     <div class="product-bottom">
 
-    <span class="price">
-        $27
-    </span>
+                        <span class="price">
+                            $27
+                        </span>
 
-    <a
-        class="buy-now"
-        href="https://buy.stripe.com/28E6oJ504fKMfHNf5h8N20p"
-        target="_blank"
-        rel="noopener noreferrer">
-        Buy Now
-    </a>
+                        <a
+                            class="buy-now"
+                            href="https://buy.stripe.com/28E6oJ504fKMfHNf5h8N20p"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            Buy Now
+                        </a>
 
-    <button
-        class="mini-cart add-cart"
-        data-id="starter-bundle"
-        data-name="Starter Bundle"
-        data-price="27"
-        data-image="images/starter-bundle.png"
-        aria-label="Add Starter Bundle to cart">
+                        <button
+                            class="mini-cart add-cart"
+                            data-id="starter-bundle"
+                            data-name="Starter Bundle"
+                            data-price="27"
+                            data-image="images/starter-bundle.png"
+                            aria-label="Add Starter Bundle to cart">
 
-        <i class="fa-solid fa-cart-shopping"></i>
+                            <i class="fa-solid fa-cart-shopping"></i>
 
-    </button>
+                        </button>
 
-</div>
+                    </div>
 
                 </div>
 
@@ -1967,23 +1969,23 @@ button{
                         </span>
 
                         <a
-  class="buy-now"
-  href="#"
-  aria-label="Buy Creator Bundle"
->
-  Buy Now
-</a>
+                            class="buy-now"
+                            href="#"
+                            aria-label="Buy Creator Bundle">
+                            Buy Now
+                        </a>
 
-<button
-  class="mini-cart add-cart"
-  data-id="creator-bundle"
-  data-name="Creator Bundle"
-  data-price="37"
-  data-image="images/creator-bundle-temp.png"
-  aria-label="Add Creator Bundle to cart"
->
-  <i class="fa-solid fa-cart-shopping"></i>
-</button>
+                        <button
+                            class="mini-cart add-cart"
+                            data-id="creator-bundle"
+                            data-name="Creator Bundle"
+                            data-price="37"
+                            data-image="images/creator-bundle-temp.png"
+                            aria-label="Add Creator Bundle to cart">
+
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                        </button>
 
                     </div>
 
@@ -2025,23 +2027,24 @@ button{
                         </span>
 
                         <a
-  class="buy-now"
-  href="#"
-  aria-label="Buy Business Bundle"
->
-  Buy Now
-</a>
+                            class="buy-now"
+                            href="#"
+                            aria-label="Buy Business Bundle">
+                            Buy Now
+                        </a>
 
-<button
-  class="mini-cart add-cart"
-  data-id="business-bundle"
-  data-name="Business Bundle"
-  data-price="57"
-  data-image="images/business-bundle-temp.png"
-  aria-label="Add Business Bundle to cart"
->
-  <i class="fa-solid fa-cart-shopping"></i>
-</button>
+                        <button
+                            class="mini-cart add-cart"
+                            data-id="business-bundle"
+                            data-name="Business Bundle"
+                            data-price="57"
+                            data-image="images/business-bundle-temp.png"
+                            aria-label="Add Business Bundle to cart">
+
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                        </button>
+
                     </div>
 
                 </div>
@@ -2084,23 +2087,24 @@ button{
                         </span>
 
                         <a
-  class="buy-now"
-  href="#"
-  aria-label="Buy Health and Wellness Collection"
->
-  Buy Now
-</a>
+                            class="buy-now"
+                            href="#"
+                            aria-label="Buy Health and Wellness Collection">
+                            Buy Now
+                        </a>
 
-<button
-  class="mini-cart add-cart"
-  data-id="health-wellness"
-  data-name="Health &amp; Wellness Collection"
-  data-price="57"
-  data-image="images/health-wellness-collection-temp.png"
-  aria-label="Add Health and Wellness Collection to cart"
->
-  <i class="fa-solid fa-cart-shopping"></i>
-</button>
+                        <button
+                            class="mini-cart add-cart"
+                            data-id="health-wellness"
+                            data-name="Health &amp; Wellness Collection"
+                            data-price="57"
+                            data-image="images/health-wellness-collection-temp.png"
+                            aria-label="Add Health and Wellness Collection to cart">
+
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                        </button>
+
                     </div>
 
                 </div>
@@ -2141,23 +2145,23 @@ button{
                         </span>
 
                         <a
-  class="buy-now"
-  href="#"
-  aria-label="Buy Ultimate Bundle"
->
-  Buy Now
-</a>
+                            class="buy-now"
+                            href="#"
+                            aria-label="Buy Ultimate Bundle">
+                            Buy Now
+                        </a>
 
-<button
-  class="mini-cart add-cart"
-  data-id="ultimate-bundle"
-  data-name="Ultimate Bundle"
-  data-price="97"
-  data-image="images/ultimate-bundle-temp.png"
-  aria-label="Add Ultimate Bundle to cart"
->
-  <i class="fa-solid fa-cart-shopping"></i>
-</button>
+                        <button
+                            class="mini-cart add-cart"
+                            data-id="ultimate-bundle"
+                            data-name="Ultimate Bundle"
+                            data-price="97"
+                            data-image="images/ultimate-bundle-temp.png"
+                            aria-label="Add Ultimate Bundle to cart">
+
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                        </button>
 
                     </div>
 
@@ -2364,7 +2368,7 @@ button{
                     href="index.html">
 
                     <img
-                        src="images/logo.png"
+                        src="images/TheBestBundle_Premium_Logo.png"
                         alt="TheBestBundle">
 
                 </a>
@@ -2804,7 +2808,8 @@ $("searchForm").addEventListener(
 
     }
 );
-    
+
+
 /* Existing cart storage */
 
 let cart = [];
@@ -3201,4 +3206,3 @@ renderCart();
 </body>
 
 </html>
-
