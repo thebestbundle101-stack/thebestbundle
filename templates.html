@@ -1397,6 +1397,31 @@ const templates = [
         stripe:
             "https://buy.stripe.com/6oU9AVgIMaqs3Z56yL8N20o"
 
+    },
+
+
+    {
+        id:
+            "90-day-longevity-tracker",
+
+        name:
+            "90-Day Longevity Tracker & Habit Builder",
+
+        image:
+            "images/90-Day-Longevity-Tracker.png",
+
+        description:
+            "A 15-page printable wellness template designed to help you track daily habits, sleep, hydration, movement, nutrition, stress and overall wellness throughout a 90-day journey. Includes Master Resell Rights.",
+
+        price:
+            9,
+
+        priceId:
+            "price_1U8FjqRtp4gVtODyxxrBykoQ",
+
+        stripe:
+            "https://buy.stripe.com/aFa5kF9gkdCE7bh9KX8N20t"
+
     }
 
 ];
@@ -1457,31 +1482,28 @@ const productsGrid =
 ========================================= */
 
 /*
-    IMPORTANT:
-
-    All 4 templates are ALWAYS
+    All templates are ALWAYS
     displayed.
 
     Every 10 seconds the order
     changes.
 
+    With 5 templates, the order
+    rotates one position at a time.
+
     Example:
 
     FIRST:
-    1  2
-    3  4
+    1  2  3
+    4  5
 
     AFTER 10 SECONDS:
-    2  3
-    4  1
+    2  3  4
+    5  1
 
     AFTER 20 SECONDS:
-    3  4
+    3  4  5
     1  2
-
-    AFTER 30 SECONDS:
-    4  1
-    2  3
 
     Then it repeats.
 */
@@ -1706,7 +1728,7 @@ function rotateTemplates(){
         Move every template
         one position.
 
-        All 4 remain visible.
+        All templates remain visible.
     */
 
     rotationIndex =
