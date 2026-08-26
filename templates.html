@@ -1422,6 +1422,31 @@ const templates = [
         stripe:
             "https://buy.stripe.com/aFa5kF9gkdCE7bh9KX8N20t"
 
+    },
+
+
+    {
+        id:
+            "longevity-meal-planner",
+
+        name:
+            "The Longevity Meal Planner",
+
+        image:
+            "images/Longevity-Meal-Planner-Cover.png",
+
+        description:
+            "A 15-page printable nutrition planner with weekly meal plans, longevity food checklists, grocery lists, hydration tracking, mindful eating, meal prep, recipes and nutrition reviews. Includes Master Resell Rights.",
+
+        price:
+            9,
+
+        priceId:
+            "price_1U8lofRtp4gVtODyuDKSLFSP",
+
+        stripe:
+            "https://buy.stripe.com/eVqdRb0JO5685399KX8N20u"
+
     }
 
 ];
@@ -1482,28 +1507,32 @@ const productsGrid =
 ========================================= */
 
 /*
-    All templates are ALWAYS
+    All 6 templates are ALWAYS
     displayed.
 
     Every 10 seconds the order
     changes.
 
-    With 5 templates, the order
+    With 6 templates, the order
     rotates one position at a time.
 
     Example:
 
     FIRST:
     1  2  3
-    4  5
+    4  5  6
 
     AFTER 10 SECONDS:
     2  3  4
-    5  1
+    5  6  1
 
     AFTER 20 SECONDS:
     3  4  5
-    1  2
+    6  1  2
+
+    AFTER 30 SECONDS:
+    4  5  6
+    1  2  3
 
     Then it repeats.
 */
@@ -1728,7 +1757,7 @@ function rotateTemplates(){
         Move every template
         one position.
 
-        All templates remain visible.
+        All 6 templates remain visible.
     */
 
     rotationIndex =
