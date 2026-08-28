@@ -1447,6 +1447,31 @@ const templates = [
         stripe:
             "https://buy.stripe.com/eVqdRb0JO5685399KX8N20u"
 
+    },
+
+
+    {
+        id:
+            "hormone-balance-symptom-cycle-tracker",
+
+        name:
+            "Hormone Balance Symptom & Cycle Tracker",
+
+        image:
+            "images/Hormone-Balance-Symptom-Cycle-Tracker-Mockup.png",
+
+        description:
+            "A 15-page printable wellness tracker designed to help users track mood, energy, sleep, stress, cravings, cycle patterns, nutrition, movement and overall wellness. Includes guided reflections, weekly scorecards, personal wellness insights and Master Resell Rights.",
+
+        price:
+            9,
+
+        priceId:
+            "price_1U9H8fRtp4gVtODyrDdjmNRM",
+
+        stripe:
+            "https://buy.stripe.com/eVq5kF2RWcyAfHN2iv8N20v"
+
     }
 
 ];
@@ -1507,34 +1532,14 @@ const productsGrid =
 ========================================= */
 
 /*
-    All 6 templates are ALWAYS
+    All 7 templates are ALWAYS
     displayed.
 
     Every 10 seconds the order
     changes.
 
-    With 6 templates, the order
+    With 7 templates, the order
     rotates one position at a time.
-
-    Example:
-
-    FIRST:
-    1  2  3
-    4  5  6
-
-    AFTER 10 SECONDS:
-    2  3  4
-    5  6  1
-
-    AFTER 20 SECONDS:
-    3  4  5
-    6  1  2
-
-    AFTER 30 SECONDS:
-    4  5  6
-    1  2  3
-
-    Then it repeats.
 */
 
 let rotationIndex = 0;
@@ -1757,7 +1762,7 @@ function rotateTemplates(){
         Move every template
         one position.
 
-        All 6 templates remain visible.
+        All 7 templates remain visible.
     */
 
     rotationIndex =
