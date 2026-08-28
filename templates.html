@@ -1472,6 +1472,31 @@ const templates = [
         stripe:
             "https://buy.stripe.com/eVq5kF2RWcyAfHN2iv8N20v"
 
+    },
+
+
+    {
+        id:
+            "14-day-vitality-reset-planner",
+
+        name:
+            "14-Day Vitality Reset Planner",
+
+        image:
+            "images/14-Day-Vitality-Reset-Planner-Cover.png",
+
+        description:
+            "A 15-page printable vitality planner designed to help build supportive wellness routines around hydration, nourishing nutrition, movement, stress management, sleep, mindful eating and self-care. Includes daily check-ins, habit tracking, weekly reflection, final wellness review and Master Resell Rights.",
+
+        price:
+            9,
+
+        priceId:
+            "price_1U9JDcRtp4gVtODydF6xfJZ2",
+
+        stripe:
+            "https://buy.stripe.com/8x2fZjgIMdCEdzF2iv8N20w"
+
     }
 
 ];
@@ -1532,14 +1557,33 @@ const productsGrid =
 ========================================= */
 
 /*
-    All 7 templates are ALWAYS
+    All 8 templates are ALWAYS
     displayed.
 
     Every 10 seconds the order
     changes.
 
-    With 7 templates, the order
+    With 8 templates, the order
     rotates one position at a time.
+
+    Example:
+
+    FIRST:
+    1  2  3
+    4  5  6
+    7  8
+
+    AFTER 10 SECONDS:
+    2  3  4
+    5  6  7
+    8  1
+
+    AFTER 20 SECONDS:
+    3  4  5
+    6  7  8
+    1  2
+
+    Then it continues.
 */
 
 let rotationIndex = 0;
@@ -1762,7 +1806,7 @@ function rotateTemplates(){
         Move every template
         one position.
 
-        All 7 templates remain visible.
+        All 8 templates remain visible.
     */
 
     rotationIndex =
