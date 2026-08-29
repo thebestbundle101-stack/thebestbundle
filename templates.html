@@ -1497,6 +1497,31 @@ const templates = [
         stripe:
             "https://buy.stripe.com/8x2fZjgIMdCEdzF2iv8N20w"
 
+    },
+
+
+    {
+        id:
+            "personalized-skincare-routine-builder",
+
+        name:
+            "Personalized Skincare Routine Builder",
+
+        image:
+            "images/Personalized_Skincare_Routine_Builder_Cover.png",
+
+        description:
+            "A 15-page printable skincare planner designed to help you understand your skin, organize your AM and PM routines, track skincare products, monitor skin concerns, review progress and build supportive beauty and lifestyle habits. Includes Master Resell Rights.",
+
+        price:
+            9,
+
+        priceId:
+            "price_1U9o6ERtp4gVtODy75L1Tc0V",
+
+        stripe:
+            "https://buy.stripe.com/cNiaEZ504eGIbrx7CP8N20x"
+
     }
 
 ];
@@ -1557,33 +1582,14 @@ const productsGrid =
 ========================================= */
 
 /*
-    All 8 templates are ALWAYS
+    All 9 templates are ALWAYS
     displayed.
 
     Every 10 seconds the order
     changes.
 
-    With 8 templates, the order
+    With 9 templates, the order
     rotates one position at a time.
-
-    Example:
-
-    FIRST:
-    1  2  3
-    4  5  6
-    7  8
-
-    AFTER 10 SECONDS:
-    2  3  4
-    5  6  7
-    8  1
-
-    AFTER 20 SECONDS:
-    3  4  5
-    6  7  8
-    1  2
-
-    Then it continues.
 */
 
 let rotationIndex = 0;
@@ -1806,7 +1812,7 @@ function rotateTemplates(){
         Move every template
         one position.
 
-        All 8 templates remain visible.
+        All 9 templates remain visible.
     */
 
     rotationIndex =
