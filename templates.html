@@ -796,7 +796,6 @@ button{
 
 /* =========================================
    TABLET / LANDSCAPE PHONE / DESKTOP
-   3 COLUMNS
 ========================================= */
 
 @media(max-width:950px){
@@ -878,7 +877,6 @@ button{
 
 /* =========================================
    PHONE PORTRAIT
-   2 COLUMNS
 ========================================= */
 
 @media(max-width:650px){
@@ -996,9 +994,6 @@ button{
 
     .product-actions{
 
-        grid-template-columns:
-            repeat(2,minmax(0,1fr));
-
         gap:
             6px;
 
@@ -1058,7 +1053,6 @@ button{
 
 /* =========================================
    VERY SMALL PHONES
-   STILL 2 COLUMNS
 ========================================= */
 
 @media(max-width:380px){
@@ -1522,6 +1516,31 @@ const templates = [
         stripe:
             "https://buy.stripe.com/cNiaEZ504eGIbrx7CP8N20x"
 
+    },
+
+
+    {
+        id:
+            "30-day-glow-up-transformation-journal",
+
+        name:
+            "30-Day Glow-Up Transformation Journal",
+
+        image:
+            "images/30-Day_Glow-Up_Transformation_Journal_Cover.png",
+
+        description:
+            "A 15-page printable glow-up journal designed to help you build healthy beauty, wellness and self-care routines while tracking your skin, hair, confidence, habits and personal transformation. Includes Master Resell Rights.",
+
+        price:
+            9,
+
+        priceId:
+            "price_1UA2A5Rtp4gVtODy3OunRkrI",
+
+        stripe:
+            "https://buy.stripe.com/9B628t8cgcyAgLR4qD8N20y"
+
     }
 
 ];
@@ -1582,13 +1601,13 @@ const productsGrid =
 ========================================= */
 
 /*
-    All 9 templates are ALWAYS
+    All 10 templates are ALWAYS
     displayed.
 
     Every 10 seconds the order
     changes.
 
-    With 9 templates, the order
+    With 10 templates, the order
     rotates one position at a time.
 */
 
@@ -1812,7 +1831,7 @@ function rotateTemplates(){
         Move every template
         one position.
 
-        All 9 templates remain visible.
+        All 10 templates remain visible.
     */
 
     rotationIndex =
