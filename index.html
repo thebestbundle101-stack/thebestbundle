@@ -643,39 +643,6 @@ button{
 }
 
 
-@media(max-width:1080px) and (orientation:landscape){
-
- .header-tool.icon{
-
-  order:1;
-
- }
-
- .header-tool.gold-border{
-
-  display:flex;
-
-  order:2;
-
- }
-
- .cart-wrap{
-
-  order:3;
-
- }
-
- .header-tool.news{
-
-  display:flex;
-
-  order:4;
-
- }
-
-}
-
-
 
 /* HERO */
 
@@ -760,21 +727,6 @@ button{
 }
 
 
-.eyebrow{
-
- color:var(--gold);
-
- font-size:12px;
-
- font-weight:800;
-
- letter-spacing:1.5px;
-
- margin-bottom:12px;
-
-}
-
-
 .hero h1{
 
  font-family:Georgia,"Times New Roman",serif;
@@ -837,7 +789,7 @@ button{
 
 
 
-/* HERO BUNDLE GRAPHICS */
+/* HERO BUNDLE DISPLAY */
 
 
 .hero-art{
@@ -852,60 +804,21 @@ button{
 
  justify-content:center;
 
- perspective:1200px;
-
 }
 
 
-/* PREMIUM GOLD CIRCLE */
-
-
-.hero-art:before{
-
- content:"";
-
- position:absolute;
-
- width:430px;
-
- height:430px;
-
- border-radius:50%;
-
- border:2px solid rgba(244,197,66,.85);
-
- background:
-
- radial-gradient(
-  circle,
-  rgba(244,197,66,.12),
-  rgba(7,26,51,.05) 65%,
-  transparent 70%
- );
-
- box-shadow:
-
-  0 0 45px rgba(244,197,66,.22),
-
-  inset 0 0 40px rgba(244,197,66,.12);
-
- transition:.7s ease;
-
-}
-
-
-/* FLOOR */
+/* FLOOR SHADOW */
 
 
 .hero-floor{
 
  position:absolute;
 
- bottom:15px;
+ bottom:24px;
 
- width:86%;
+ width:84%;
 
- height:55px;
+ height:48px;
 
  border-radius:50%;
 
@@ -916,184 +829,36 @@ button{
 }
 
 
-/* CENTER BUNDLE */
+/* PREMIUM CENTER CARD */
 
 
-.hero-bundle{
-
- position:relative;
-
- width:290px;
-
- z-index:5;
-
- display:flex;
-
- align-items:center;
-
- justify-content:center;
-
- transition:
-
-  transform .7s ease,
-  opacity .5s ease;
-
- filter:
-
-  drop-shadow(
-   0 28px 30px rgba(0,0,0,.45)
-  );
-
-}
-
-
-/* CENTER BUNDLE FULL SIZE */
-
-
-.hero-bundle img{
-
- width:100%;
-
- max-height:350px;
-
- object-fit:contain;
-
- transition:
-
-  transform .7s ease,
-  opacity .5s ease;
-
-}
-
-
-/* CENTER BUNDLE TRANSITION */
-
-
-.hero-bundle.switching img{
-
- opacity:0;
-
- transform:
-
-  scale(.82)
-  rotateY(18deg);
-
-}
-
-
-.hero-bundle.active{
-
- transform:
-
-  scale(1.08);
-
-}
-
-
-/* SIDE BUNDLES */
-
-
-.hero-side{
+.hero-center-card{
 
  position:absolute;
 
- width:155px;
+ width:270px;
 
- z-index:3;
+ height:310px;
 
- filter:
+ border-radius:22px;
 
-  drop-shadow(
-   0 20px 20px rgba(0,0,0,.38)
+ border:1px solid rgba(244,197,66,.75);
+
+ background:
+
+  linear-gradient(
+   145deg,
+   rgba(255,255,255,.10),
+   rgba(7,26,51,.40)
   );
 
-}
+ box-shadow:
 
+  0 0 40px rgba(244,197,66,.15),
 
-.hero-side img{
+  inset 0 0 30px rgba(244,197,66,.08);
 
- width:100%;
-
- height:auto;
-
- object-fit:contain;
-
-}
-
-
-.hero-side.left{
-
- left:7%;
-
- transform:
-
-  rotate(-10deg)
-  translateY(18px);
-
-}
-
-
-.hero-side.right{
-
- right:7%;
-
- transform:
-
-  rotate(9deg)
-  translateY(18px);
-
-}
-
-
-/* SMALL BUNDLES */
-
-
-.hero-small{
-
- position:absolute;
-
- width:112px;
-
- z-index:2;
-
- filter:
-
-  drop-shadow(
-   0 16px 18px rgba(0,0,0,.35)
-  );
-
-}
-
-
-.hero-small img{
-
- width:100%;
-
- height:auto;
-
- object-fit:contain;
-
-}
-
-
-.hero-small.left{
-
- left:19%;
-
- bottom:50px;
-
- transform:rotate(-17deg);
-
-}
-
-
-.hero-small.right{
-
- right:19%;
-
- bottom:48px;
-
- transform:rotate(16deg);
+ z-index:1;
 
 }
 
@@ -1105,13 +870,13 @@ button{
 
  position:absolute;
 
- right:0;
+ right:1%;
 
- top:15px;
+ top:12px;
 
- width:88px;
+ width:78px;
 
- height:88px;
+ height:78px;
 
  border-radius:50%;
 
@@ -1127,7 +892,7 @@ button{
 
  text-align:center;
 
- font-size:10px;
+ font-size:9px;
 
  font-weight:900;
 
@@ -1137,7 +902,165 @@ button{
 
   0 10px 25px rgba(0,0,0,.22);
 
- z-index:7;
+ z-index:10;
+
+}
+
+
+/* HERO BUNDLE ITEMS */
+
+
+.hero-item{
+
+ position:absolute;
+
+ display:flex;
+
+ align-items:center;
+
+ justify-content:center;
+
+ transition:
+
+  left .8s ease,
+  right .8s ease,
+  bottom .8s ease,
+  top .8s ease,
+  transform .8s ease,
+  width .8s ease,
+  opacity .5s ease;
+
+ filter:
+
+  drop-shadow(
+   0 18px 22px rgba(0,0,0,.40)
+  );
+
+}
+
+
+.hero-item img{
+
+ width:100%;
+
+ height:100%;
+
+ object-fit:contain;
+
+}
+
+
+/* CENTER */
+
+
+.hero-item.center{
+
+ width:225px;
+
+ height:285px;
+
+ left:50%;
+
+ top:50%;
+
+ transform:translate(-50%,-50%);
+
+ z-index:6;
+
+}
+
+
+/* LEFT SIDE */
+
+
+.hero-item.left-side{
+
+ width:120px;
+
+ height:175px;
+
+ left:4%;
+
+ top:50%;
+
+ transform:
+
+  translateY(-48%)
+  rotate(-10deg);
+
+ z-index:4;
+
+}
+
+
+/* RIGHT SIDE */
+
+
+.hero-item.right-side{
+
+ width:120px;
+
+ height:175px;
+
+ right:4%;
+
+ top:50%;
+
+ transform:
+
+  translateY(-48%)
+  rotate(10deg);
+
+ z-index:4;
+
+}
+
+
+/* LEFT SMALL */
+
+
+.hero-item.left-small{
+
+ width:90px;
+
+ height:130px;
+
+ left:18%;
+
+ bottom:32px;
+
+ transform:rotate(-16deg);
+
+ z-index:3;
+
+}
+
+
+/* RIGHT SMALL */
+
+
+.hero-item.right-small{
+
+ width:90px;
+
+ height:130px;
+
+ right:18%;
+
+ bottom:32px;
+
+ transform:rotate(16deg);
+
+ z-index:3;
+
+}
+
+
+.hero-item.switching{
+
+ opacity:0;
+
+ transform:scale(.85);
 
 }
 
@@ -1178,29 +1101,59 @@ button{
 
  }
 
- .hero-art:before{
+ .hero-center-card{
 
-  width:310px;
+  width:215px;
 
-  height:310px;
-
- }
-
- .hero-bundle{
-
-  width:220px;
+  height:255px;
 
  }
 
- .hero-side{
+ .hero-item.center{
 
-  width:115px;
+  width:180px;
+
+  height:230px;
 
  }
 
- .hero-small{
+ .hero-item.left-side{
 
-  width:80px;
+  width:90px;
+
+  height:130px;
+
+  left:2%;
+
+ }
+
+ .hero-item.right-side{
+
+  width:90px;
+
+  height:130px;
+
+  right:2%;
+
+ }
+
+ .hero-item.left-small{
+
+  width:65px;
+
+  height:100px;
+
+  left:15%;
+
+ }
+
+ .hero-item.right-small{
+
+  width:65px;
+
+  height:100px;
+
+  right:15%;
 
  }
 
@@ -1223,43 +1176,73 @@ button{
 
  .hero-art{
 
-  min-height:275px;
+  min-height:285px;
 
  }
 
- .hero-art:before{
-
-  width:250px;
-
-  height:250px;
-
- }
-
- .hero-bundle{
+ .hero-center-card{
 
   width:180px;
 
- }
-
- .hero-side{
-
-  width:90px;
+  height:215px;
 
  }
 
- .hero-small{
+ .hero-item.center{
 
-  width:65px;
+  width:150px;
+
+  height:195px;
+
+ }
+
+ .hero-item.left-side{
+
+  width:70px;
+
+  height:105px;
+
+ }
+
+ .hero-item.right-side{
+
+  width:70px;
+
+  height:105px;
+
+ }
+
+ .hero-item.left-small{
+
+  width:52px;
+
+  height:75px;
+
+  left:14%;
+
+  bottom:25px;
+
+ }
+
+ .hero-item.right-small{
+
+  width:52px;
+
+  height:75px;
+
+  right:14%;
+
+  bottom:25px;
 
  }
 
  .quality-badge{
 
-  width:68px;
+  width:60px;
 
-  height:68px;
+  height:60px;
 
-  font-size:8px;
+  font-size:7px;
 
  }
 
@@ -1284,7 +1267,7 @@ button{
 
  box-shadow:
 
-  0 8px 28px rgba(7,26,51,.13);
+ 0 8px 28px rgba(7,26,51,.13);
 
  padding:18px 20px;
 
@@ -1529,7 +1512,7 @@ button{
 
  box-shadow:
 
-  0 12px 28px rgba(7,26,51,.12);
+ 0 12px 28px rgba(7,26,51,.12);
 
 }
 
@@ -1678,7 +1661,7 @@ button{
 
  box-shadow:
 
-  0 7px 22px rgba(7,26,51,.07);
+ 0 7px 22px rgba(7,26,51,.07);
 
  display:flex;
 
@@ -1695,21 +1678,21 @@ button{
 
  box-shadow:
 
-  0 14px 28px rgba(7,26,51,.12);
+ 0 14px 28px rgba(7,26,51,.12);
 
 }
 
 
-/* FULL SIZE BEST SELLER IMAGES */
+/* REDUCED BEST SELLER IMAGE SIZE */
 
 
 .product-image{
 
- height:260px;
+ height:205px;
 
- background:var(--navy);
+ background:#F7F8FA;
 
- padding:0;
+ padding:10px;
 
  overflow:hidden;
 
@@ -1728,7 +1711,7 @@ button{
 
  height:100%;
 
- object-fit:cover;
+ object-fit:contain;
 
 }
 
@@ -1800,6 +1783,8 @@ button{
 
  padding-top:10px;
 
+ gap:8px;
+
 }
 
 
@@ -1808,6 +1793,24 @@ button{
  font-size:17px;
 
  font-weight:900;
+
+}
+
+
+.buy-now{
+
+ font-size:11px;
+
+ font-weight:800;
+
+ color:var(--navy);
+
+}
+
+
+.buy-now:hover{
+
+ color:var(--gold2);
 
 }
 
@@ -1824,11 +1827,15 @@ button{
 
  color:var(--navy);
 
+ border:0;
+
  display:flex;
 
  align-items:center;
 
  justify-content:center;
+
+ flex-shrink:0;
 
 }
 
@@ -1872,7 +1879,7 @@ button{
 
  .product-image{
 
-  height:350px;
+  height:280px;
 
  }
 
@@ -1971,7 +1978,7 @@ button{
 
  box-shadow:
 
-  0 5px 16px rgba(7,26,51,.05);
+ 0 5px 16px rgba(7,26,51,.05);
 
 }
 
@@ -2233,9 +2240,7 @@ button{
 
  color:#fff;
 
- border-top:
-
-  1px solid rgba(255,255,255,.12);
+ border-top:1px solid rgba(255,255,255,.12);
 
  padding:38px 0 14px;
 
@@ -2248,11 +2253,11 @@ button{
 
  grid-template-columns:
 
-  1.4fr
-  .9fr
-  .9fr
-  .9fr
-  .9fr;
+ 1.4fr
+ .9fr
+ .9fr
+ .9fr
+ .9fr;
 
  gap:24px;
 
@@ -2326,9 +2331,7 @@ button{
 
  height:27px;
 
- border:
-
-  1px solid rgba(255,255,255,.25);
+ border:1px solid rgba(255,255,255,.25);
 
  border-radius:50%;
 
@@ -2388,9 +2391,7 @@ button{
 
 .copyright{
 
- border-top:
-
-  1px solid rgba(255,255,255,.12);
+ border-top:1px solid rgba(255,255,255,.12);
 
  margin-top:25px;
 
@@ -2500,7 +2501,7 @@ button{
 
  box-shadow:
 
-  -18px 0 45px rgba(0,0,0,.2);
+ -18px 0 45px rgba(0,0,0,.2);
 
  overflow:auto;
 
@@ -2543,6 +2544,8 @@ button{
  height:42px;
 
  border-radius:8px;
+
+ border:0;
 
  color:var(--navy);
 
@@ -2621,7 +2624,7 @@ button{
 
  box-shadow:
 
-  0 25px 70px rgba(0,0,0,.3);
+ 0 25px 70px rgba(0,0,0,.3);
 
 }
 
@@ -2707,9 +2710,9 @@ button{
 
  grid-template-columns:
 
-  60px
-  1fr
-  34px;
+ 60px
+ 1fr
+ 34px;
 
  gap:12px;
 
@@ -2760,6 +2763,8 @@ button{
  height:32px;
 
  border-radius:6px;
+
+ border:0;
 
  background:#FEE2E2;
 
@@ -2844,41 +2849,31 @@ button{
 
 
 <a
-    class="logo"
-    href="index.html"
-    aria-label="TheBestBundle Home">
+ class="logo"
+ href="index.html"
+ aria-label="TheBestBundle Home">
 
 <img
-    src="images/Thebestbundle-transparent-logo.png"
-    alt="TheBestBundle"
-    loading="eager">
+ src="images/Thebestbundle-transparent-logo.png"
+ alt="TheBestBundle"
+ loading="eager">
 
 </a>
 
 
 <nav
-    class="desktop-nav"
-    aria-label="Primary navigation">
+ class="desktop-nav"
+ aria-label="Primary navigation">
 
-<a href="index.html">
-Home
-</a>
+<a href="index.html">Home</a>
 
-<a href="courses.html">
-Courses
-</a>
+<a href="courses.html">Courses</a>
 
-<a href="merchandise.html">
-Merchandise
-</a>
+<a href="merchandise.html">Merchandise</a>
 
-<a href="reviews.html">
-Customer Reviews
-</a>
+<a href="reviews.html">Customer Reviews</a>
 
-<a href="contact.html">
-Contact
-</a>
+<a href="contact.html">Contact</a>
 
 </nav>
 
@@ -2887,9 +2882,9 @@ Contact
 
 
 <button
-    class="header-tool icon"
-    id="searchButton"
-    aria-label="Search">
+ class="header-tool icon"
+ id="searchButton"
+ aria-label="Search">
 
 <i class="fa-solid fa-magnifying-glass"></i>
 
@@ -2897,8 +2892,8 @@ Contact
 
 
 <a
-    class="header-tool gold-border"
-    href="donate.html">
+ class="header-tool gold-border"
+ href="donate.html">
 
 <i class="fa-solid fa-heart"></i>
 
@@ -2908,8 +2903,8 @@ Contact
 
 
 <a
-    class="header-tool news"
-    href="subscribe.html">
+ class="header-tool news"
+ href="subscribe.html">
 
 <i class="fa-regular fa-envelope"></i>
 
@@ -2921,9 +2916,9 @@ Contact
 <div class="cart-wrap">
 
 <button
-    class="header-tool icon"
-    id="cartButton"
-    aria-label="Open shopping cart">
+ class="header-tool icon"
+ id="cartButton"
+ aria-label="Open shopping cart">
 
 <i class="fa-solid fa-cart-shopping"></i>
 
@@ -2931,8 +2926,8 @@ Contact
 
 
 <span
-    class="cart-count"
-    id="cartCount">
+ class="cart-count"
+ id="cartCount">
 
 0
 
@@ -2942,7 +2937,6 @@ Contact
 
 
 </div>
-
 
 </div>
 
@@ -2989,8 +2983,8 @@ and digital resources created to help you achieve more.
 
 
 <button
-    class="btn btn-gold"
-    id="exploreCollection">
+ class="btn btn-gold"
+ id="exploreCollection">
 
 Explore Collection
 
@@ -3000,8 +2994,8 @@ Explore Collection
 
 
 <a
-    class="btn btn-outline"
-    href="freebie.html">
+ class="btn btn-outline"
+ href="freebie.html">
 
 Free Welcome Guide
 
@@ -3012,16 +3006,22 @@ Free Welcome Guide
 
 </div>
 
-
 </div>
 
 
+
+<!-- HERO BUNDLE SHOWCASE -->
+
+
 <div
-    class="hero-art"
-    aria-label="TheBestBundle premium bundle collection">
+ class="hero-art"
+ aria-label="TheBestBundle premium bundle collection">
 
 
 <div class="hero-floor"></div>
+
+
+<div class="hero-center-card"></div>
 
 
 <div class="quality-badge">
@@ -3035,58 +3035,52 @@ QUALITY
 </div>
 
 
-<div class="hero-small left">
+<div
+ class="hero-item center"
+ data-slot="center">
 
-<img
-    src="images/business-bundle-temp.png"
-    alt="Business Bundle">
-
-</div>
-
-
-<div class="hero-side left">
-
-<img
-    src="images/TheBestBundle_Creator_Bundle_Mockup.png"
-    alt="Creator Bundle">
+<img alt="Starter Bundle">
 
 </div>
 
-
-<!-- AUTOMATICALLY CHANGING CENTER BUNDLE -->
 
 <div
-    class="hero-bundle active"
-    id="heroBundle">
+ class="hero-item left-side"
+ data-slot="left-side">
 
-<img
-    id="heroBundleImage"
-    src="images/starter-bundle.png"
-    alt="TheBestBundle Starter Bundle">
+<img alt="Creator Bundle">
 
 </div>
 
 
-<div class="hero-side right">
+<div
+ class="hero-item left-small"
+ data-slot="left-small">
 
-<img
-    src="images/health-wellness-collection-temp.png"
-    alt="Health &amp; Wellness Collection">
-
-</div>
-
-
-<div class="hero-small right">
-
-<img
-    src="images/ultimate-bundle-temp.png"
-    alt="Ultimate Bundle">
+<img alt="Business Bundle">
 
 </div>
 
 
+<div
+ class="hero-item right-small"
+ data-slot="right-small">
+
+<img alt="Health and Wellness Collection">
+
 </div>
 
+
+<div
+ class="hero-item right-side"
+ data-slot="right-side">
+
+<img alt="Ultimate Bundle">
+
+</div>
+
+
+</div>
 
 </div>
 
@@ -3098,8 +3092,8 @@ QUALITY
 
 
 <section
-    class="container trust-bar"
-    aria-label="Why customers choose TheBestBundle">
+ class="container trust-bar"
+ aria-label="Why customers choose TheBestBundle">
 
 
 <div class="trust-grid">
@@ -3245,9 +3239,8 @@ EXPLORE OUR COLLECTION
 
 
 <a
-    class="collection-card dark"
-    href="ebooks.html">
-
+ class="collection-card dark"
+ href="ebooks.html">
 
 <div class="collection-icon">
 
@@ -3255,11 +3248,9 @@ EXPLORE OUR COLLECTION
 
 </div>
 
-
 <h3>
 PREMIUM EBOOKS
 </h3>
-
 
 <p>
 
@@ -3268,21 +3259,18 @@ business and personal growth.
 
 </p>
 
-
 <span class="collection-link">
 
 Explore eBooks →
 
 </span>
 
-
 </a>
 
 
 <a
-    class="collection-card"
-    href="templates.html">
-
+ class="collection-card"
+ href="templates.html">
 
 <div class="collection-icon">
 
@@ -3290,11 +3278,9 @@ Explore eBooks →
 
 </div>
 
-
 <h3>
 PRINTABLE TEMPLATES
 </h3>
-
 
 <p>
 
@@ -3303,21 +3289,18 @@ to organize your life and business.
 
 </p>
 
-
 <span class="collection-link">
 
 Explore Templates →
 
 </span>
 
-
 </a>
 
 
 <a
-    class="collection-card dark"
-    href="bundles.html">
-
+ class="collection-card dark"
+ href="bundles.html">
 
 <div class="collection-icon">
 
@@ -3325,11 +3308,9 @@ Explore Templates →
 
 </div>
 
-
 <h3>
 DIGITAL BUNDLES
 </h3>
-
 
 <p>
 
@@ -3338,21 +3319,18 @@ and get maximum value.
 
 </p>
 
-
 <span class="collection-link">
 
 Explore Bundles →
 
 </span>
 
-
 </a>
 
 
 <a
-    class="collection-card"
-    href="freebie.html">
-
+ class="collection-card"
+ href="freebie.html">
 
 <div class="collection-icon">
 
@@ -3360,11 +3338,9 @@ Explore Bundles →
 
 </div>
 
-
 <h3>
 FREE RESOURCES
 </h3>
-
 
 <p>
 
@@ -3373,13 +3349,11 @@ resources to get started today.
 
 </p>
 
-
 <span class="collection-link">
 
 Explore Freebies →
 
 </span>
-
 
 </a>
 
@@ -3410,9 +3384,6 @@ BEST SELLERS
 <div class="product-grid">
 
 
-<!-- STARTER -->
-
-
 <article class="product-card">
 
 <a href="bundles.html">
@@ -3420,21 +3391,18 @@ BEST SELLERS
 <div class="product-image">
 
 <img
-    src="images/starter-bundle.png"
-    alt="Starter Bundle">
+ src="images/starter-bundle.png"
+ alt="Starter Bundle">
 
 </div>
 
 </a>
 
-
 <div class="product-body">
-
 
 <h3>
 Starter Bundle
 </h3>
-
 
 <div class="product-meta">
 
@@ -3442,51 +3410,37 @@ Starter Bundle
 
 </div>
 
-
 <div class="product-rating">
 
-★★★★★
-
-<span>
-(254)
-</span>
+★★★★★ <span>(254)</span>
 
 </div>
 
-
 <div class="product-bottom">
 
-
-<span class="price">
-
-$27
-
-</span>
-
+<span class="price">$27</span>
 
 <a
-    class="buy-now"
-    href="https://buy.stripe.com/28E6oJ504fKMfHNf5h8N20p"
-    target="_blank"
-    rel="noopener noreferrer">
+ class="buy-now"
+ href="https://buy.stripe.com/28E6oJ504fKMfHNf5h8N20p"
+ target="_blank"
+ rel="noopener noreferrer">
 
 Buy Now
 
 </a>
 
-
 <button
-    class="mini-cart add-cart"
-    data-id="starter-bundle"
-    data-name="Starter Bundle"
-    data-price="27"
-    data-image="images/starter-bundle.png"
-    aria-label="Add Starter Bundle to cart">
+ class="mini-cart add-cart"
+ data-id="starter-bundle"
+ data-name="Starter Bundle"
+ data-price="27"
+ data-image="images/starter-bundle.png"
+ aria-label="Add Starter Bundle to cart">
 
 <i class="fa-solid fa-cart-shopping"></i>
 
 </button>
-
 
 </div>
 
@@ -3496,9 +3450,6 @@ Buy Now
 
 
 
-<!-- CREATOR -->
-
-
 <article class="product-card">
 
 <a href="bundles.html">
@@ -3506,21 +3457,18 @@ Buy Now
 <div class="product-image">
 
 <img
-    src="images/TheBestBundle_Creator_Bundle_Mockup.png"
-    alt="Creator Bundle">
+ src="images/TheBestBundle_Creator_Bundle_Mockup.png"
+ alt="Creator Bundle">
 
 </div>
 
 </a>
 
-
 <div class="product-body">
-
 
 <h3>
 Creator Bundle
 </h3>
-
 
 <div class="product-meta">
 
@@ -3528,50 +3476,35 @@ Creator Bundle
 
 </div>
 
-
 <div class="product-rating">
 
-★★★★★
-
-<span>
-(198)
-</span>
+★★★★★ <span>(198)</span>
 
 </div>
 
-
 <div class="product-bottom">
 
-
-<span class="price">
-
-$37
-
-</span>
-
+<span class="price">$37</span>
 
 <a
-    class="buy-now"
-    href="#"
-    aria-label="Buy Creator Bundle">
+ class="buy-now"
+ href="#">
 
 Buy Now
 
 </a>
 
-
 <button
-    class="mini-cart add-cart"
-    data-id="creator-bundle"
-    data-name="Creator Bundle"
-    data-price="37"
-    data-image="images/TheBestBundle_Creator_Bundle_Mockup.png"
-    aria-label="Add Creator Bundle to cart">
+ class="mini-cart add-cart"
+ data-id="creator-bundle"
+ data-name="Creator Bundle"
+ data-price="37"
+ data-image="images/TheBestBundle_Creator_Bundle_Mockup.png"
+ aria-label="Add Creator Bundle to cart">
 
 <i class="fa-solid fa-cart-shopping"></i>
 
 </button>
-
 
 </div>
 
@@ -3581,9 +3514,6 @@ Buy Now
 
 
 
-<!-- BUSINESS -->
-
-
 <article class="product-card">
 
 <a href="bundles.html">
@@ -3591,72 +3521,54 @@ Buy Now
 <div class="product-image">
 
 <img
-    src="images/business-bundle-temp.png"
-    alt="Business Bundle">
+ src="images/business-bundle-temp.png"
+ alt="Business Bundle">
 
 </div>
 
 </a>
 
-
 <div class="product-body">
-
 
 <h3>
 Business Bundle
 </h3>
 
-
 <div class="product-meta">
 
 5 eBooks + 10 Templates
 
 </div>
 
-
 <div class="product-rating">
 
-★★★★★
-
-<span>
-(142)
-</span>
+★★★★★ <span>(142)</span>
 
 </div>
 
-
 <div class="product-bottom">
 
-
-<span class="price">
-
-$57
-
-</span>
-
+<span class="price">$57</span>
 
 <a
-    class="buy-now"
-    href="#"
-    aria-label="Buy Business Bundle">
+ class="buy-now"
+ href="#">
 
 Buy Now
 
 </a>
 
-
 <button
-    class="mini-cart add-cart"
-    data-id="business-bundle"
-    data-name="Business Bundle"
-    data-price="57"
-    data-image="images/business-bundle-temp.png"
-    aria-label="Add Business Bundle to cart">
+ class="mini-cart add-cart"
+ data-id="business-bundle"
+ data-name="Business Bundle"
+ data-price="57"
+ data-image="images/business-bundle-temp.png"
+ aria-label="Add Business Bundle to cart">
 
 <i class="fa-solid fa-cart-shopping"></i>
 
 </button>
-
 
 </div>
 
@@ -3666,9 +3578,6 @@ Buy Now
 
 
 
-<!-- HEALTH -->
-
-
 <article class="product-card">
 
 <a href="bundles.html">
@@ -3676,72 +3585,54 @@ Buy Now
 <div class="product-image">
 
 <img
-    src="images/health-wellness-collection-temp.png"
-    alt="Health &amp; Wellness Collection">
+ src="images/health-wellness-collection-temp.png"
+ alt="Health and Wellness Collection">
 
 </div>
 
 </a>
 
-
 <div class="product-body">
-
 
 <h3>
 Health &amp; Wellness Collection
 </h3>
 
-
 <div class="product-meta">
 
 5 eBooks + 10 Templates
 
 </div>
 
-
 <div class="product-rating">
 
-★★★★★
-
-<span>
-(186)
-</span>
+★★★★★ <span>(186)</span>
 
 </div>
 
-
 <div class="product-bottom">
 
-
-<span class="price">
-
-$57
-
-</span>
-
+<span class="price">$57</span>
 
 <a
-    class="buy-now"
-    href="#"
-    aria-label="Buy Health and Wellness Collection">
+ class="buy-now"
+ href="#">
 
 Buy Now
 
 </a>
 
-
 <button
-    class="mini-cart add-cart"
-    data-id="health-wellness"
-    data-name="Health &amp; Wellness Collection"
-    data-price="57"
-    data-image="images/health-wellness-collection-temp.png"
-    aria-label="Add Health and Wellness Collection to cart">
+ class="mini-cart add-cart"
+ data-id="health-wellness"
+ data-name="Health & Wellness Collection"
+ data-price="57"
+ data-image="images/health-wellness-collection-temp.png"
+ aria-label="Add Health and Wellness Collection to cart">
 
 <i class="fa-solid fa-cart-shopping"></i>
 
 </button>
-
 
 </div>
 
@@ -3751,9 +3642,6 @@ Buy Now
 
 
 
-<!-- ULTIMATE -->
-
-
 <article class="product-card">
 
 <a href="bundles.html">
@@ -3761,21 +3649,18 @@ Buy Now
 <div class="product-image">
 
 <img
-    src="images/ultimate-bundle-temp.png"
-    alt="Ultimate Bundle">
+ src="images/ultimate-bundle-temp.png"
+ alt="Ultimate Bundle">
 
 </div>
 
 </a>
 
-
 <div class="product-body">
-
 
 <h3>
 Ultimate Bundle
 </h3>
-
 
 <div class="product-meta">
 
@@ -3783,50 +3668,35 @@ Ultimate Bundle
 
 </div>
 
-
 <div class="product-rating">
 
-★★★★★
-
-<span>
-(98)
-</span>
+★★★★★ <span>(98)</span>
 
 </div>
 
-
 <div class="product-bottom">
 
-
-<span class="price">
-
-$97
-
-</span>
-
+<span class="price">$97</span>
 
 <a
-    class="buy-now"
-    href="#"
-    aria-label="Buy Ultimate Bundle">
+ class="buy-now"
+ href="#">
 
 Buy Now
 
 </a>
 
-
 <button
-    class="mini-cart add-cart"
-    data-id="ultimate-bundle"
-    data-name="Ultimate Bundle"
-    data-price="97"
-    data-image="images/ultimate-bundle-temp.png"
-    aria-label="Add Ultimate Bundle to cart">
+ class="mini-cart add-cart"
+ data-id="ultimate-bundle"
+ data-name="Ultimate Bundle"
+ data-price="97"
+ data-image="images/ultimate-bundle-temp.png"
+ aria-label="Add Ultimate Bundle to cart">
 
 <i class="fa-solid fa-cart-shopping"></i>
 
 </button>
-
 
 </div>
 
@@ -3853,7 +3723,6 @@ Buy Now
 
 <div class="review-intro">
 
-
 <h2>
 
 WHAT OUR<br>
@@ -3862,7 +3731,6 @@ CUSTOMERS SAY
 
 </h2>
 
-
 <p>
 
 Join thousands of happy customers who are
@@ -3870,15 +3738,13 @@ achieving their goals with our resources.
 
 </p>
 
-
 <a
-    class="btn btn-dark"
-    href="reviews.html">
+ class="btn btn-dark"
+ href="reviews.html">
 
 Read All Reviews →
 
 </a>
-
 
 </div>
 
@@ -4004,13 +3870,11 @@ Verified Customer
 
 <div>
 
-
 <h2>
 
-STAY UPDATES
+STAY UPDATED
 
 </h2>
-
 
 <p>
 
@@ -4018,7 +3882,6 @@ Receive new releases, exclusive offers
 and free digital resources straight to your inbox.
 
 </p>
-
 
 </div>
 
@@ -4029,28 +3892,28 @@ and free digital resources straight to your inbox.
 
 
 <form
-    class="news-form-row"
-    action="https://formspree.io/f/xkodngya"
-    method="POST">
+ class="news-form-row"
+ action="https://formspree.io/f/xkodngya"
+ method="POST">
 
 
 <input
-    type="hidden"
-    name="_next"
-    value="https://thebestbundle101-stack.github.io/thebestbundle/newsletter-success.html">
+ type="hidden"
+ name="_next"
+ value="https://thebestbundle101-stack.github.io/thebestbundle/newsletter-success.html">
 
 
 <input
-    type="email"
-    name="email"
-    placeholder="Enter your email address"
-    autocomplete="email"
-    required>
+ type="email"
+ name="email"
+ placeholder="Enter your email address"
+ autocomplete="email"
+ required>
 
 
 <button
-    class="btn btn-gold"
-    type="submit">
+ class="btn btn-gold"
+ type="submit">
 
 Subscribe Now
 
@@ -4064,21 +3927,13 @@ Subscribe Now
 
 <div class="news-notes">
 
-<span>
-✓ Exclusive Offers
-</span>
+<span>✓ Exclusive Offers</span>
 
-<span>
-✓ New Releases
-</span>
+<span>✓ New Releases</span>
 
-<span>
-✓ Free Resources
-</span>
+<span>✓ Free Resources</span>
 
-<span>
-✓ Unsubscribe Anytime
-</span>
+<span>✓ Unsubscribe Anytime</span>
 
 </div>
 
@@ -4107,17 +3962,15 @@ Subscribe Now
 
 <div>
 
-
 <a
-    class="footer-logo"
-    href="index.html">
+ class="footer-logo"
+ href="index.html">
 
 <img
-    src="images/Thebestbundle-transparent-logo.png"
-    alt="TheBestBundle">
+ src="images/Thebestbundle-transparent-logo.png"
+ alt="TheBestBundle">
 
 </a>
-
 
 <p>
 
@@ -4126,9 +3979,7 @@ creating and growing every day.
 
 </p>
 
-
 <div class="social-row">
-
 
 <a href="#" aria-label="Instagram">
 
@@ -4136,13 +3987,11 @@ creating and growing every day.
 
 </a>
 
-
 <a href="#" aria-label="TikTok">
 
 <i class="fa-brands fa-tiktok"></i>
 
 </a>
-
 
 <a href="#" aria-label="Facebook">
 
@@ -4150,13 +3999,11 @@ creating and growing every day.
 
 </a>
 
-
 <a href="#" aria-label="Pinterest">
 
 <i class="fa-brands fa-pinterest-p"></i>
 
 </a>
-
 
 <a href="#" aria-label="YouTube">
 
@@ -4164,7 +4011,6 @@ creating and growing every day.
 
 </a>
 
-
 </div>
 
 </div>
@@ -4172,95 +4018,51 @@ creating and growing every day.
 
 <div>
 
+<h3>QUICK LINKS</h3>
 
-<h3>
-QUICK LINKS
-</h3>
+<a href="index.html">Home</a>
 
+<a href="courses.html">Courses</a>
 
-<a href="index.html">
-Home
-</a>
+<a href="templates.html">Explore Templates</a>
 
-<a href="courses.html">
-Courses
-</a>
+<a href="ebooks.html">Explore eBooks</a>
 
-<a href="templates.html">
-Explore Templates
-</a>
+<a href="bundles.html">Explore Bundles</a>
 
-<a href="ebooks.html">
-Explore eBooks
-</a>
+<a href="freebie.html">Explore Free Resources</a>
 
-<a href="bundles.html">
-Explore Bundles
-</a>
+<a href="merchandise.html">Merchandise</a>
 
-<a href="freebie.html">
-Explore Free Resources
-</a>
+<a href="contact.html">Contact</a>
 
-<a href="merchandise.html">
-Merchandise
-</a>
-
-<a href="contact.html">
-Contact
-</a>
-
-<a href="reviews.html">
-Customer Reviews
-</a>
-
+<a href="reviews.html">Customer Reviews</a>
 
 </div>
 
 
 <div>
 
+<h3>HELP &amp; SUPPORT</h3>
 
-<h3>
-HELP &amp; SUPPORT
-</h3>
+<a href="faq.html">FAQ</a>
 
+<a href="refund.html">Refund Policy</a>
 
-<a href="faq.html">
-FAQ
-</a>
+<a href="terms.html">Terms &amp; Conditions</a>
 
-<a href="refund.html">
-Refund Policy
-</a>
+<a href="privacy.html">Privacy Policy</a>
 
-<a href="terms.html">
-Terms &amp; Conditions
-</a>
+<a href="cookie.html">Cookie Policy</a>
 
-<a href="privacy.html">
-Privacy Policy
-</a>
-
-<a href="cookie.html">
-Cookie Policy
-</a>
-
-<a href="secure-checkout.html">
-Secure Checkout
-</a>
-
+<a href="secure-checkout.html">Secure Checkout</a>
 
 </div>
 
 
 <div>
 
-
-<h3>
-TOP CATEGORIES
-</h3>
-
+<h3>TOP CATEGORIES</h3>
 
 <a href="merchandise.html">
 
@@ -4268,13 +4070,11 @@ Health &amp; Wellness
 
 </a>
 
-
 <a href="ebooks.html">
 
 Personal Development
 
 </a>
-
 
 <a href="bundles.html">
 
@@ -4282,13 +4082,11 @@ Business &amp; Finance
 
 </a>
 
-
 <a href="templates.html">
 
 Productivity
 
 </a>
-
 
 <a href="courses.html">
 
@@ -4296,35 +4094,22 @@ Mindset &amp; Motivation
 
 </a>
 
-
 </div>
 
 
 <div>
 
-
-<h3>
-WE ACCEPT
-</h3>
-
+<h3>WE ACCEPT</h3>
 
 <div class="payment-row">
 
-<span class="payment">
-VISA
-</span>
+<span class="payment">VISA</span>
 
-<span class="payment">
-MC
-</span>
+<span class="payment">MC</span>
 
-<span class="payment">
-AMEX
-</span>
+<span class="payment">AMEX</span>
 
-<span class="payment">
-DISCOVER
-</span>
+<span class="payment">DISCOVER</span>
 
 </div>
 
@@ -4339,7 +4124,6 @@ CHECKOUT
 
 </div>
 
-
 </div>
 
 
@@ -4352,7 +4136,6 @@ CHECKOUT
 
 </div>
 
-
 </div>
 
 </footer>
@@ -4363,19 +4146,18 @@ CHECKOUT
 
 
 <div
-    class="overlay"
-    id="searchOverlay">
+ class="overlay"
+ id="searchOverlay">
 </div>
 
 
 <div
-    class="search-box"
-    id="searchBox"
-    hidden>
+ class="search-box"
+ id="searchBox"
+ hidden>
 
 
 <div class="search-title">
-
 
 <h2>
 
@@ -4383,40 +4165,35 @@ Search TheBestBundle
 
 </h2>
 
-
 <button
-    class="close-btn"
-    id="closeSearch"
-    aria-label="Close search">
+ class="close-btn"
+ id="closeSearch"
+ aria-label="Close search">
 
 <i class="fa-solid fa-xmark"></i>
 
 </button>
 
-
 </div>
 
 
 <form
-    class="search-row"
-    id="searchForm">
-
+ class="search-row"
+ id="searchForm">
 
 <input
-    id="siteSearch"
-    type="search"
-    placeholder="Search eBooks, templates, bundles..."
-    autocomplete="off">
-
+ id="siteSearch"
+ type="search"
+ placeholder="Search eBooks, templates, bundles..."
+ autocomplete="off">
 
 <button
-    class="btn btn-gold"
-    type="submit">
+ class="btn btn-gold"
+ type="submit">
 
 Search
 
 </button>
-
 
 </form>
 
@@ -4428,19 +4205,18 @@ Search
 
 
 <div
-    class="overlay"
-    id="menuOverlay">
+ class="overlay"
+ id="menuOverlay">
 </div>
 
 
 <aside
-    class="panel"
-    id="collectionPanel"
-    aria-label="Explore Collection">
+ class="panel"
+ id="collectionPanel"
+ aria-label="Explore Collection">
 
 
 <div class="panel-head">
-
 
 <h2>
 
@@ -4448,22 +4224,19 @@ Explore Collection
 
 </h2>
 
-
 <button
-    class="close-btn"
-    id="closeMenu"
-    aria-label="Close collection menu">
+ class="close-btn"
+ id="closeMenu"
+ aria-label="Close collection menu">
 
 <i class="fa-solid fa-xmark"></i>
 
 </button>
 
-
 </div>
 
 
 <nav class="collection-links">
-
 
 <a href="freebie.html">
 
@@ -4471,13 +4244,11 @@ Free Resources
 
 </a>
 
-
 <a href="ebooks.html">
 
 eBooks
 
 </a>
-
 
 <a href="bundles.html">
 
@@ -4485,13 +4256,11 @@ Bundles
 
 </a>
 
-
 <a href="templates.html">
 
 Templates
 
 </a>
-
 
 <a href="courses.html">
 
@@ -4499,13 +4268,11 @@ Courses
 
 </a>
 
-
 <a href="french-collection.html">
 
 French Collection
 
 </a>
-
 
 <a href="merchandise.html">
 
@@ -4513,22 +4280,19 @@ Merchandise
 
 </a>
 
-
 <a href="reviews.html">
 
 Customer Reviews
 
 </a>
 
-
 <a
-    class="donate-link"
-    href="donate.html">
+ class="donate-link"
+ href="donate.html">
 
 Donation
 
 </a>
-
 
 </nav>
 
@@ -4540,19 +4304,18 @@ Donation
 
 
 <div
-    class="overlay"
-    id="cartOverlay">
+ class="overlay"
+ id="cartOverlay">
 </div>
 
 
 <aside
-    class="panel"
-    id="cartPanel"
-    aria-label="Shopping cart">
+ class="panel"
+ id="cartPanel"
+ aria-label="Shopping cart">
 
 
 <div class="panel-head">
-
 
 <h2>
 
@@ -4560,23 +4323,21 @@ Your Cart
 
 </h2>
 
-
 <button
-    class="close-btn"
-    id="closeCart"
-    aria-label="Close cart">
+ class="close-btn"
+ id="closeCart"
+ aria-label="Close cart">
 
 <i class="fa-solid fa-xmark"></i>
 
 </button>
 
-
 </div>
 
 
 <div
-    class="cart-items"
-    id="cartItems">
+ class="cart-items"
+ id="cartItems">
 </div>
 
 
@@ -4585,13 +4346,11 @@ Your Cart
 
 <div class="cart-total">
 
-
 <span>
 
 Total
 
 </span>
-
 
 <span id="cartTotal">
 
@@ -4599,19 +4358,17 @@ $0.00
 
 </span>
 
-
 </div>
 
 
 <button
-    class="btn btn-gold"
-    id="reviewCart"
-    style="width:100%">
+ class="btn btn-gold"
+ id="reviewCart"
+ style="width:100%">
 
 Review Cart
 
 </button>
-
 
 </div>
 
@@ -4620,8 +4377,8 @@ Review Cart
 
 
 <div
-    class="toast"
-    id="toast">
+ class="toast"
+ id="toast">
 </div>
 
 
@@ -4630,7 +4387,7 @@ Review Cart
 
 
 const $ =
-    id => document.getElementById(id);
+ id => document.getElementById(id);
 
 
 
@@ -4784,7 +4541,6 @@ $("searchForm")
 
   }
 
-
  }
 );
 
@@ -4797,7 +4553,6 @@ let cart = [];
 
 
 try{
-
 
  cart =
   JSON.parse(
@@ -4823,7 +4578,6 @@ try{
 
 
 function saveCart(){
-
 
  localStorage.setItem(
   "theBestBundleCart",
@@ -4875,7 +4629,6 @@ function renderCart(){
 
  if(!cart.length){
 
-
   box.innerHTML =
 
    '<div class="empty-cart">' +
@@ -4908,17 +4661,11 @@ function renderCart(){
 
 
    const qty =
-
-    Number(
-     p.quantity
-    ) || 1;
+    Number(p.quantity) || 1;
 
 
    const price =
-
-    Number(
-     p.price
-    ) || 0;
+    Number(p.price) || 0;
 
 
    total +=
@@ -4963,7 +4710,6 @@ function renderCart(){
 
    box.appendChild(row);
 
-
   }
  );
 
@@ -4992,7 +4738,6 @@ function renderCart(){
 
       saveCart();
 
-
      }
     )
 
@@ -5003,7 +4748,6 @@ function renderCart(){
 
 
 function openCart(){
-
 
  $("cartPanel")
   .classList
@@ -5025,9 +4769,7 @@ function openCart(){
 }
 
 
-
 function closeCart(){
-
 
  $("cartPanel")
   .classList
@@ -5044,7 +4786,6 @@ function closeCart(){
   .remove("locked");
 
 }
-
 
 
 $("cartButton")
@@ -5073,14 +4814,12 @@ $("reviewCart")
  "click",
  () => {
 
-
   if(cart.length){
 
    window.location.href =
     "cart.html";
 
   }
-
 
  }
 );
@@ -5117,7 +4856,6 @@ document
 
      if(existing){
 
-
       existing.quantity =
 
        (
@@ -5126,37 +4864,27 @@ document
         ) || 1
        ) + 1;
 
-
      }else{
-
 
       cart.push({
 
-
-       id:
-        id,
-
+       id:id,
 
        name:
         btn.dataset.name,
-
 
        price:
         Number(
          btn.dataset.price
         ),
 
-
        image:
         btn.dataset.image,
-
 
        quantity:
         1
 
-
       });
-
 
      }
 
@@ -5166,10 +4894,8 @@ document
 
      openCart();
 
-
     }
    );
-
 
   }
  );
@@ -5186,16 +4912,13 @@ document.addEventListener(
 
   if(e.key === "Escape"){
 
-
    closeCollection();
 
    closeSearch();
 
    closeCart();
 
-
   }
-
 
  }
 );
@@ -5215,12 +4938,9 @@ window.addEventListener(
    "theBestBundleCart"
   ){
 
-
    try{
 
-
     cart =
-
      JSON.parse(
       e.newValue || "[]"
      );
@@ -5232,7 +4952,6 @@ window.addEventListener(
 
     }
 
-
    }catch(x){
 
     cart = [];
@@ -5242,9 +4961,7 @@ window.addEventListener(
 
    renderCart();
 
-
   }
-
 
  }
 );
@@ -5314,7 +5031,6 @@ document
     rel.join(" ")
    );
 
-
   }
  );
 
@@ -5330,7 +5046,7 @@ renderCart();
 
 
 
-/* HERO BUNDLE AUTOMATIC ROTATION */
+/* HERO BUNDLE ROTATION */
 
 
 const heroBundles = [
@@ -5378,80 +5094,128 @@ const heroBundles = [
 ];
 
 
-let currentHeroBundle = 0;
+/* POSITION ORDER:
+
+CENTER
+→ LEFT SIDE
+→ LEFT SMALL
+→ RIGHT SMALL
+→ RIGHT SIDE
+
+Every rotation moves the bundle
+into the next position.
+*/
 
 
-const heroBundle =
- document.getElementById(
-  "heroBundle"
+const heroSlots = [
+
+ "center",
+
+ "left-side",
+
+ "left-small",
+
+ "right-small",
+
+ "right-side"
+
+];
+
+
+let heroOffset = 0;
+
+
+const heroItems =
+ Array.from(
+  document.querySelectorAll(
+   ".hero-item"
+  )
  );
 
 
-const heroBundleImage =
- document.getElementById(
-  "heroBundleImage"
- );
+function renderHeroBundles(){
+
+ heroItems.forEach(
+  (item,index) => {
 
 
-function changeHeroBundle(){
+   const bundleIndex =
 
-
- heroBundle
-  .classList
-  .add("switching");
-
-
- setTimeout(
-
-  () => {
-
-
-   currentHeroBundle =
     (
-     currentHeroBundle + 1
+     index +
+     heroOffset
     ) %
     heroBundles.length;
 
 
    const bundle =
     heroBundles[
-     currentHeroBundle
+     bundleIndex
     ];
 
 
-   heroBundleImage.src =
-    bundle.image;
+   const img =
+    item.querySelector("img");
 
 
-   heroBundleImage.alt =
-    bundle.name;
+   item.classList.add(
+    "switching"
+   );
 
 
-   heroBundle
-    .classList
-    .remove("switching");
+   setTimeout(
+    () => {
 
 
-   heroBundle
-    .classList
-    .add("active");
+     img.src =
+      bundle.image;
 
 
-  },
+     img.alt =
+      bundle.name;
 
-  500
 
+     item.classList.remove(
+      "switching"
+     );
+
+
+    },
+    250
+   );
+
+  }
  );
-
 
 }
 
 
-/* CHANGE CENTER BUNDLE EVERY 10 SECONDS */
+function rotateHeroBundles(){
+
+ heroOffset =
+
+  (
+   heroOffset + 1
+  ) %
+  heroBundles.length;
+
+
+ renderHeroBundles();
+
+}
+
+
+/* INITIAL LOAD */
+
+
+renderHeroBundles();
+
+
+/* ROTATE EVERY 10 SECONDS */
 
 
 setInterval(
- changeHeroBundle,
+ rotateHeroBundles,
  10000
 );
 
