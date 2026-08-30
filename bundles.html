@@ -1,6 +1,6 @@
 <!-- =========================================
      PART 15 — BUNDLES PAGE
-     CREATE A NEW FILE: bundles.html
+     FILE: bundles.html
 ========================================= -->
 
 <!DOCTYPE html>
@@ -26,10 +26,12 @@
     name="theme-color"
     content="#071A33">
 
+
 <link
     rel="icon"
     href="/thebestbundle/images/favicon.ico"
     type="image/x-icon">
+
 
 <link
     rel="icon"
@@ -37,9 +39,11 @@
     sizes="32x32"
     href="/thebestbundle/images/favicon.png">
 
+
 <link
     rel="apple-touch-icon"
     href="/thebestbundle/images/favicon.png">
+
 
 <link
     rel="stylesheet"
@@ -48,385 +52,1203 @@
 
 <style>
 
+/* =========================================
+   VARIABLES
+========================================= */
+
 :root{
+
     --navy:#071A33;
+
+    --navy-light:#0D2B50;
+
     --gold:#F4C542;
+
     --gold-dark:#D9A91A;
+
     --white:#FFFFFF;
+
     --off-white:#F8FAFC;
+
     --text-gray:#64748B;
+
     --border:#E2E8F0;
+
     --max-width:1200px;
+
     --radius:14px;
+
 }
+
+
+/* =========================================
+   RESET
+========================================= */
 
 *{
+
     margin:0;
     padding:0;
+
     box-sizing:border-box;
+
 }
+
 
 html{
+
     scroll-behavior:smooth;
+
 }
+
 
 body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:var(--off-white);
-    color:var(--navy);
-    line-height:1.6;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        var(--off-white);
+
+    color:
+        var(--navy);
+
+    line-height:
+        1.5;
+
 }
+
 
 img{
+
     max-width:100%;
+
     display:block;
+
 }
+
 
 a{
+
     color:inherit;
+
     text-decoration:none;
+
 }
+
 
 button{
+
     font:inherit;
+
     cursor:pointer;
+
 }
+
 
 .container{
+
     width:90%;
-    max-width:var(--max-width);
-    margin:0 auto;
+
+    max-width:
+        var(--max-width);
+
+    margin:
+        0 auto;
+
 }
 
 
-/* HEADER */
+/* =========================================
+   HEADER
+========================================= */
 
 .page-header{
-    background:var(--navy);
-    color:var(--white);
+
+    background:
+        var(--navy);
+
+    color:
+        var(--white);
+
 }
+
 
 .header-inner{
-    min-height:90px;
+
+    min-height:
+        90px;
+
     display:flex;
+
     align-items:center;
-    justify-content:space-between;
-    gap:20px;
+
+    justify-content:
+        space-between;
+
+    gap:
+        20px;
+
 }
+
 
 .header-logo img{
-    height:56px;
+
+    height:
+        56px;
+
     width:auto;
+
 }
+
 
 .header-actions{
+
     display:flex;
+
     align-items:center;
-    gap:12px;
+
+    gap:
+        12px;
+
 }
+
 
 .header-icon{
+
     position:relative;
-    width:46px;
-    height:46px;
+
+    width:
+        46px;
+
+    height:
+        46px;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     border:none;
-    border-radius:8px;
-    background:transparent;
-    color:var(--white);
-    font-size:24px;
+
+    border-radius:
+        8px;
+
+    background:
+        transparent;
+
+    color:
+        var(--white);
+
+    font-size:
+        24px;
+
 }
+
 
 .header-icon:hover{
-    background:rgba(255,255,255,.08);
-    color:var(--gold);
+
+    background:
+        rgba(255,255,255,.08);
+
+    color:
+        var(--gold);
+
 }
+
 
 .cart-count{
+
     position:absolute;
-    top:0;
-    right:0;
-    min-width:19px;
-    height:19px;
-    padding:0 5px;
-    border-radius:30px;
-    background:var(--gold);
-    color:var(--navy);
-    font-size:11px;
-    font-weight:800;
-    line-height:19px;
+
+    top:
+        0;
+
+    right:
+        0;
+
+    min-width:
+        19px;
+
+    height:
+        19px;
+
+    padding:
+        0 5px;
+
+    border-radius:
+        30px;
+
+    background:
+        var(--gold);
+
+    color:
+        var(--navy);
+
+    font-size:
+        11px;
+
+    font-weight:
+        800;
+
+    line-height:
+        19px;
+
 }
 
 
-/* BACK */
+/* =========================================
+   BACK BUTTON
+========================================= */
 
 .back-row{
-    background:var(--white);
-    border-bottom:1px solid var(--border);
+
+    background:
+        var(--white);
+
+    border-bottom:
+        1px solid var(--border);
+
 }
+
 
 .back-inner{
-    min-height:60px;
+
+    min-height:
+        60px;
+
     display:flex;
+
     align-items:center;
+
 }
+
 
 .back-button{
+
     display:inline-flex;
+
     align-items:center;
-    gap:9px;
-    color:var(--navy);
-    font-weight:700;
+
+    gap:
+        9px;
+
+    color:
+        var(--navy);
+
+    font-weight:
+        700;
+
     border:none;
-    background:transparent;
+
+    background:
+        transparent;
+
 }
+
 
 .back-button:hover{
-    color:var(--gold-dark);
+
+    color:
+        var(--gold-dark);
+
 }
 
 
-/* HERO */
+/* =========================================
+   PAGE HERO
+========================================= */
 
 .page-hero{
-    background:var(--navy);
-    color:var(--white);
-    padding:75px 0 90px;
-    text-align:center;
+
+    background:
+        var(--navy);
+
+    color:
+        var(--white);
+
+    padding:
+        65px 0 70px;
+
+    text-align:
+        center;
+
 }
+
 
 .page-hero span{
+
     display:block;
-    color:var(--gold);
-    font-size:14px;
-    font-weight:800;
-    letter-spacing:2px;
-    text-transform:uppercase;
-    margin-bottom:15px;
+
+    color:
+        var(--gold);
+
+    font-size:
+        14px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        2px;
+
+    text-transform:
+        uppercase;
+
+    margin-bottom:
+        14px;
+
 }
+
 
 .page-hero h1{
-    font-size:clamp(40px,7vw,64px);
-    line-height:1.1;
-    margin-bottom:20px;
+
+    font-size:
+        clamp(38px,7vw,64px);
+
+    line-height:
+        1.1;
+
+    margin-bottom:
+        18px;
+
 }
+
 
 .page-hero p{
-    max-width:720px;
-    margin:0 auto;
-    color:rgba(255,255,255,.82);
-    font-size:18px;
+
+    max-width:
+        700px;
+
+    margin:
+        0 auto;
+
+    color:
+        rgba(255,255,255,.82);
+
+    font-size:
+        18px;
+
 }
 
 
-/* BUNDLES */
+/* =========================================
+   BUNDLES SECTION
+========================================= */
 
 .bundles-section{
-    padding:80px 0 100px;
+
+    padding:
+        55px 0 80px;
+
 }
+
 
 .bundle-grid{
+
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:28px;
+
+    grid-template-columns:
+        repeat(3,minmax(0,1fr));
+
+    gap:
+        24px;
+
 }
+
+
+/* =========================================
+   BUNDLE CARD
+========================================= */
 
 .bundle-card{
-    position:relative;
+
     display:flex;
-    flex-direction:column;
+
+    flex-direction:
+        column;
+
     overflow:hidden;
-    background:var(--white);
-    border:1px solid var(--border);
-    border-radius:var(--radius);
-    box-shadow:0 10px 30px rgba(7,26,51,.08);
+
+    background:
+        var(--white);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        var(--radius);
+
+    box-shadow:
+        0 8px 24px rgba(7,26,51,.07);
+
+    opacity:
+        1;
+
+    transform:
+        translateY(0);
+
+    transition:
+        opacity .35s ease,
+        transform .35s ease;
+
 }
+
+
+/* =========================================
+   ROTATION ANIMATION
+========================================= */
+
+.bundle-grid.is-changing
+.bundle-card{
+
+    opacity:
+        0;
+
+    transform:
+        translateY(8px);
+
+}
+
+
+/* =========================================
+   BUNDLE IMAGE
+========================================= */
 
 .bundle-image{
-    min-height:360px;
-    padding:30px;
+
+    height:
+        260px;
+
+    padding:
+        18px;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
-    background:var(--off-white);
+
+    background:
+        var(--off-white);
+
 }
+
 
 .bundle-image img{
-    width:100%;
-    max-width:300px;
-    max-height:320px;
-    object-fit:contain;
+
+    width:
+        auto;
+
+    max-width:
+        82%;
+
+    height:
+        220px;
+
+    object-fit:
+        contain;
+
 }
+
+
+/* =========================================
+   BUNDLE INFORMATION
+========================================= */
 
 .bundle-info{
-    flex:1;
+
     display:flex;
-    flex-direction:column;
-    padding:28px;
+
+    flex-direction:
+        column;
+
+    padding:
+        18px;
+
+    flex:
+        1;
+
 }
+
 
 .bundle-label{
-    color:var(--gold-dark);
-    font-size:12px;
-    font-weight:800;
-    letter-spacing:1.5px;
-    text-transform:uppercase;
-    margin-bottom:8px;
+
+    color:
+        var(--gold-dark);
+
+    font-size:
+        11px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        1.5px;
+
+    text-transform:
+        uppercase;
+
+    margin-bottom:
+        6px;
+
 }
+
 
 .bundle-info h2{
-    font-size:27px;
-    line-height:1.25;
-    margin-bottom:12px;
+
+    font-size:
+        19px;
+
+    line-height:
+        1.25;
+
+    margin-bottom:
+        8px;
+
 }
+
 
 .bundle-info p{
-    color:var(--text-gray);
-    font-size:15px;
-    margin-bottom:14px;
+
+    color:
+        var(--text-gray);
+
+    font-size:
+        13px;
+
+    line-height:
+        1.45;
+
+    margin-bottom:
+        12px;
+
+    display:
+        -webkit-box;
+
+    -webkit-box-orient:
+        vertical;
+
+    -webkit-line-clamp:
+        3;
+
+    overflow:
+        hidden;
+
 }
+
+
+/* =========================================
+   BUNDLE INCLUDES
+========================================= */
 
 .bundle-includes{
-    padding:16px 18px;
-    margin-bottom:20px;
-    background:var(--off-white);
-    border-radius:9px;
-    font-weight:700;
+
+    padding:
+        10px 12px;
+
+    margin-bottom:
+        12px;
+
+    background:
+        var(--off-white);
+
+    border-radius:
+        8px;
+
+    color:
+        var(--navy);
+
+    font-size:
+        12px;
+
+    font-weight:
+        700;
+
+    line-height:
+        1.4;
+
 }
+
+
+/* =========================================
+   PRICE
+========================================= */
 
 .bundle-price{
-    margin-top:auto;
-    margin-bottom:18px;
-    font-size:27px;
-    font-weight:800;
+
+    margin-top:
+        auto;
+
+    margin-bottom:
+        12px;
+
+    font-size:
+        23px;
+
+    font-weight:
+        800;
+
 }
+
+
+/* =========================================
+   BUTTONS
+========================================= */
 
 .bundle-actions{
+
     display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:10px;
+
+    grid-template-columns:
+        repeat(2,minmax(0,1fr));
+
+    gap:
+        8px;
+
 }
+
 
 .btn{
-    min-height:49px;
-    padding:12px;
+
+    min-height:
+        44px;
+
+    padding:
+        9px 6px;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
-    border-radius:8px;
+
+    border-radius:
+        8px;
+
     border:none;
-    font-size:14px;
-    font-weight:800;
-    text-align:center;
+
+    font-size:
+        12px;
+
+    font-weight:
+        800;
+
+    text-align:
+        center;
+
+    white-space:
+        nowrap;
+
 }
+
 
 .buy-button{
-    background:var(--gold);
-    color:var(--navy);
+
+    background:
+        var(--gold);
+
+    color:
+        var(--navy);
+
 }
+
 
 .cart-button{
-    background:var(--navy);
-    color:var(--white);
-    border:none;
+
+    background:
+        var(--navy);
+
+    color:
+        var(--white);
+
+    border:
+        2px solid var(--navy);
+
 }
+
 
 .cart-button:hover{
-    background:#0d274d;
-    color:var(--white);
+
+    background:
+        var(--navy);
+
+    color:
+        var(--white);
+
 }
 
-
-/* COMING SOON */
-
-.coming-card{
-    border:2px dashed var(--border);
-}
-
-.coming-badge{
-    display:inline-block;
-    width:fit-content;
-    padding:7px 12px;
-    margin-bottom:14px;
-    background:var(--gold);
-    color:var(--navy);
-    border-radius:30px;
-    font-size:12px;
-    font-weight:800;
-    text-transform:uppercase;
-}
 
 .coming-button{
-    width:100%;
-    background:var(--navy);
-    color:var(--white);
-    opacity:.65;
-    cursor:default;
+
+    width:
+        100%;
+
+    background:
+        var(--navy);
+
+    color:
+        var(--white);
+
+    opacity:
+        .65;
+
+    cursor:
+        default;
+
 }
 
-@media (max-width:768px){
 
-  .bundle-grid{
-    grid-template-columns:1fr;
-  }
+/* =========================================
+   COMING SOON BADGE
+========================================= */
+
+.coming-badge{
+
+    display:inline-block;
+
+    width:
+        fit-content;
+
+    padding:
+        6px 10px;
+
+    margin-bottom:
+        8px;
+
+    background:
+        var(--gold);
+
+    color:
+        var(--navy);
+
+    border-radius:
+        30px;
+
+    font-size:
+        10px;
+
+    font-weight:
+        800;
+
+    text-transform:
+        uppercase;
 
 }
-     
-/* FOOTER */
+
+
+/* =========================================
+   FOOTER
+========================================= */
 
 .footer{
-    background:var(--navy);
-    color:var(--white);
-    padding:35px 0;
-    text-align:center;
+
+    background:
+        var(--navy);
+
+    color:
+        var(--white);
+
+    padding:
+        35px 0;
+
+    text-align:
+        center;
+
 }
+
 
 .footer-tagline{
-    color:var(--gold);
-    font-weight:800;
-    letter-spacing:1px;
-    margin-bottom:7px;
+
+    color:
+        var(--gold);
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        1px;
+
+    margin-bottom:
+        7px;
+
 }
+
 
 .footer p{
-    color:rgba(255,255,255,.7);
-    font-size:13px;
-}
 
+    color:
+        rgba(255,255,255,.7);
 
-/* RESPONSIVE */
-
-@media (max-width:950px){
-
-    .bundle-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
+    font-size:
+        13px;
 
 }
 
-@media (max-width:650px){
 
-    .header-logo img{
-        height:42px;
-    }
+/* =========================================
+   TABLET / LANDSCAPE PHONE
+   3 COLUMNS
+========================================= */
+
+@media(max-width:950px){
 
     .bundle-grid{
-        grid-template-columns:1fr;
+
+        grid-template-columns:
+            repeat(3,minmax(0,1fr));
+
+        gap:
+            18px;
+
     }
+
+
+    .bundle-image{
+
+        height:
+            230px;
+
+        padding:
+            14px;
+
+    }
+
+
+    .bundle-image img{
+
+        height:
+            195px;
+
+    }
+
+
+    .bundle-info{
+
+        padding:
+            15px;
+
+    }
+
+
+    .bundle-info h2{
+
+        font-size:
+            17px;
+
+    }
+
+
+    .bundle-info p{
+
+        font-size:
+            12px;
+
+    }
+
+
+    .bundle-includes{
+
+        font-size:
+            11px;
+
+    }
+
+
+    .bundle-price{
+
+        font-size:
+            21px;
+
+    }
+
+
+    .btn{
+
+        font-size:
+            11px;
+
+        min-height:
+            42px;
+
+    }
+
+}
+
+
+/* =========================================
+   PHONE PORTRAIT
+   2 COLUMNS
+========================================= */
+
+@media(max-width:650px){
+
+    .bundle-grid{
+
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+
+        gap:
+            14px;
+
+    }
+
 
     .bundle-card{
-        max-width:460px;
-        width:100%;
-        margin:0 auto;
+
+        width:
+            100%;
+
     }
 
+
+    .bundle-image{
+
+        height:
+            190px;
+
+        padding:
+            10px;
+
+    }
+
+
+    .bundle-image img{
+
+        height:
+            165px;
+
+        max-width:
+            88%;
+
+    }
+
+
+    .bundle-info{
+
+        padding:
+            13px;
+
+    }
+
+
+    .bundle-label{
+
+        font-size:
+            9px;
+
+        letter-spacing:
+            1px;
+
+        margin-bottom:
+            5px;
+
+    }
+
+
+    .bundle-info h2{
+
+        font-size:
+            15px;
+
+        line-height:
+            1.25;
+
+        margin-bottom:
+            7px;
+
+    }
+
+
+    .bundle-info p{
+
+        font-size:
+            11px;
+
+        line-height:
+            1.4;
+
+        margin-bottom:
+            9px;
+
+        -webkit-line-clamp:
+            2;
+
+    }
+
+
+    .bundle-includes{
+
+        padding:
+            8px;
+
+        font-size:
+            10px;
+
+        margin-bottom:
+            9px;
+
+    }
+
+
+    .bundle-price{
+
+        font-size:
+            20px;
+
+        margin-bottom:
+            9px;
+
+    }
+
+
+    .bundle-actions{
+
+        gap:
+            6px;
+
+    }
+
+
+    .btn{
+
+        min-height:
+            40px;
+
+        padding:
+            7px 3px;
+
+        font-size:
+            10px;
+
+    }
+
+
     .page-hero{
-        padding:60px 0 70px;
+
+        padding:
+            55px 0 60px;
+
+    }
+
+
+    .page-hero h1{
+
+        font-size:
+            34px;
+
+    }
+
+
+    .page-hero p{
+
+        font-size:
+            15px;
+
+        padding:
+            0 10px;
+
+    }
+
+
+    .header-logo img{
+
+        height:
+            42px;
+
     }
 
 }
+
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media(max-width:380px){
+
+    .bundle-grid{
+
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+
+        gap:
+            10px;
+
+    }
+
+
+    .bundle-image{
+
+        height:
+            175px;
+
+    }
+
+
+    .bundle-image img{
+
+        height:
+            150px;
+
+    }
+
+
+    .bundle-info{
+
+        padding:
+            10px;
+
+    }
+
+
+    .bundle-info h2{
+
+        font-size:
+            14px;
+
+    }
+
+
+    .bundle-info p{
+
+        font-size:
+            10px;
+
+    }
+
+
+    .bundle-includes{
+
+        font-size:
+            9px;
+
+    }
+
+
+    .bundle-price{
+
+        font-size:
+            18px;
+
+    }
+
+
+    .btn{
+
+        font-size:
+            9px;
+
+        min-height:
+            38px;
+
+    }
+
+}
+
 </style>
 
 </head>
@@ -434,6 +1256,10 @@ button{
 
 <body>
 
+
+<!-- =========================================
+     HEADER
+========================================= -->
 
 <header class="page-header">
 
@@ -485,6 +1311,10 @@ button{
 </header>
 
 
+<!-- =========================================
+     BACK BUTTON
+========================================= -->
+
 <div class="back-row">
 
     <div class="container back-inner">
@@ -504,6 +1334,10 @@ button{
 
 </div>
 
+
+<!-- =========================================
+     PAGE HERO
+========================================= -->
 
 <section class="page-hero">
 
@@ -528,207 +1362,17 @@ button{
 </section>
 
 
+<!-- =========================================
+     BUNDLES
+========================================= -->
+
 <main class="bundles-section">
 
     <div class="container">
 
-        <div class="bundle-grid">
-
-
-            <!-- STARTER BUNDLE -->
-
-            <article class="bundle-card">
-
-                <div class="bundle-image">
-
-                    <img
-                        src="images/starter-bundle.png"
-                        alt="TheBestBundle Starter Bundle">
-
-                </div>
-
-                <div class="bundle-info">
-
-                    <div class="bundle-label">
-                        Starter Collection
-                    </div>
-
-                    <h2>
-                        Starter Bundle
-                    </h2>
-
-                    <p>
-                        A complete starter collection of premium
-                        health and wellness digital resources.
-                        Includes Resell Rights.
-                    </p>
-
-                    <div class="bundle-includes">
-                        2 Premium eBooks + 4 Professional Templates
-                    </div>
-
-                    <div class="bundle-price">
-                        $27
-                    </div>
-
-                    <div class="bundle-actions">
-
-                        <a
-                            href="https://buy.stripe.com/28E6oJ504fKMfHNf5h8N20p"
-                            class="btn buy-button">
-                            Buy Now
-                        </a>
-
-                        <button
-    type="button"
-    class="btn cart-button add-to-cart"
-    data-id="starter-bundle"
-    data-name="Starter Bundle"
-    data-price="27"
-    data-price-id="price_1TweJORtp4gVtODymXOzvXjB"
-    data-image="images/starter-bundle.png"
-    data-stripe="https://buy.stripe.com/28E6oJ504fKMfHNf5h8N20p">
-
-  Add to Cart
-</button>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- CREATOR BUNDLE -->
-
-            <article class="bundle-card coming-card">
-
-                <div class="bundle-info">
-
-                    <span class="coming-badge">
-                        In Development
-                    </span>
-
-                    <div class="bundle-label">
-                        Creator Collection
-                    </div>
-
-                    <h2>
-                        Creator Bundle
-                    </h2>
-
-                    <p>
-                        A larger premium collection created
-                        for customers who want more eBooks,
-                        templates and digital value together.
-                    </p>
-
-                    <div class="bundle-includes">
-                        3 Premium eBooks + 6 Professional Templates
-                    </div>
-
-                    <div class="bundle-price">
-                        $37
-                    </div>
-
-                    <button
-                        type="button"
-                        class="btn coming-button"
-                        disabled>
-                        Coming Soon
-                    </button>
-
-                </div>
-
-            </article>
-
-
-            <!-- PRO BUNDLE -->
-
-            <article class="bundle-card coming-card">
-
-                <div class="bundle-info">
-
-                    <span class="coming-badge">
-                        Coming Soon
-                    </span>
-
-                    <div class="bundle-label">
-                        Pro Collection
-                    </div>
-
-                    <h2>
-                        Pro Bundle
-                    </h2>
-
-                    <p>
-                        An expanded collection for customers
-                        looking for a larger premium digital library.
-                    </p>
-
-                    <div class="bundle-includes">
-                        5 Premium eBooks + 10 Professional Templates
-                    </div>
-
-                    <div class="bundle-price">
-                        $57
-                    </div>
-
-                    <button
-                        type="button"
-                        class="btn coming-button"
-                        disabled>
-                        Coming Soon
-                    </button>
-
-                </div>
-
-            </article>
-
-
-            <!-- VAULT BUNDLE -->
-
-            <article class="bundle-card coming-card">
-
-                <div class="bundle-info">
-
-                    <span class="coming-badge">
-                        Best Value • Coming Soon
-                    </span>
-
-                    <div class="bundle-label">
-                        Vault Collection
-                    </div>
-
-                    <h2>
-                        Vault Bundle
-                    </h2>
-
-                    <p>
-                        The ultimate TheBestBundle collection
-                        designed to deliver our largest selection
-                        of premium digital resources.
-                    </p>
-
-                    <div class="bundle-includes">
-                        10 Premium eBooks + 20 Professional Templates
-                    </div>
-
-                    <div class="bundle-price">
-                        $97
-                    </div>
-
-                    <button
-                        type="button"
-                        class="btn coming-button"
-                        disabled>
-                        Coming Soon
-                    </button>
-
-                </div>
-
-            </article>
-
+        <div
+            class="bundle-grid"
+            id="bundleGrid">
 
         </div>
 
@@ -736,6 +1380,10 @@ button{
 
 </main>
 
+
+<!-- =========================================
+     FOOTER
+========================================= -->
 
 <footer class="footer">
 
@@ -754,16 +1402,167 @@ button{
 </footer>
 
 
+<!-- =========================================
+     BUNDLE DATA + ROTATION + CART
+========================================= -->
+
 <script>
+
+
+/* =========================================
+   BUNDLE DATA
+========================================= */
+
+const bundles = [
+
+    {
+        id:
+            "starter-bundle",
+
+        name:
+            "Starter Bundle",
+
+        label:
+            "Starter Collection",
+
+        image:
+            "images/starter-bundle.png",
+
+        description:
+            "A complete starter collection of premium health and wellness digital resources. Includes Resell Rights.",
+
+        includes:
+            "2 Premium eBooks + 4 Professional Templates",
+
+        price:
+            27,
+
+        priceId:
+            "price_1TweJORtp4gVtODymXOzvXjB",
+
+        stripe:
+            "https://buy.stripe.com/28E6oJ504fKMfHNf5h8N20p",
+
+        active:
+            true
+
+    },
+
+
+    {
+        id:
+            "creator-bundle",
+
+        name:
+            "Creator Bundle",
+
+        label:
+            "Creator Collection",
+
+        image:
+            "images/creator-bundle.png",
+
+        description:
+            "A premium collection combining powerful wellness eBooks with professionally designed planners and templates. Includes Master Resell Rights.",
+
+        includes:
+            "3 Premium eBooks + 6 Professional Templates",
+
+        price:
+            37,
+
+        priceId:
+            "price_1UA3lXRtp4gVtODyq54xMbhJ",
+
+        stripe:
+            "https://buy.stripe.com/9B614p1NSeGI9jp9KX8N20z",
+
+        active:
+            true
+
+    },
+
+
+    {
+        id:
+            "pro-bundle",
+
+        name:
+            "Pro Bundle",
+
+        label:
+            "Pro Collection",
+
+        image:
+            "images/pro-bundle.png",
+
+        description:
+            "An expanded collection for customers looking for a larger premium digital library.",
+
+        includes:
+            "5 Premium eBooks + 10 Professional Templates",
+
+        price:
+            57,
+
+        active:
+            false,
+
+        badge:
+            "Coming Soon"
+
+    },
+
+
+    {
+        id:
+            "vault-bundle",
+
+        name:
+            "Vault Bundle",
+
+        label:
+            "Vault Collection",
+
+        image:
+            "images/vault-bundle.png",
+
+        description:
+            "The ultimate TheBestBundle collection designed to deliver our largest selection of premium digital resources.",
+
+        includes:
+            "10 Premium eBooks + 20 Professional Templates",
+
+        price:
+            97,
+
+        active:
+            false,
+
+        badge:
+            "Best Value • Coming Soon"
+
+    }
+
+];
+
+
+/* =========================================
+   CART
+========================================= */
 
 let bundleCart =
     JSON.parse(
-        localStorage.getItem('theBestBundleCart')
+        localStorage.getItem(
+            "theBestBundleCart"
+        )
     ) || [];
 
 
 const pageCartCount =
-    document.getElementById('pageCartCount');
+    document.getElementById(
+        "pageCartCount"
+    );
 
 
 function updatePageCartCount(){
@@ -777,8 +1576,10 @@ function updatePageCartCount(){
 function saveBundleCart(){
 
     localStorage.setItem(
-        'theBestBundleCart',
-        JSON.stringify(bundleCart)
+        "theBestBundleCart",
+        JSON.stringify(
+            bundleCart
+        )
     );
 
     updatePageCartCount();
@@ -786,89 +1587,535 @@ function saveBundleCart(){
 }
 
 
-document
-    .querySelectorAll('.add-to-cart')
-    .forEach(function(button){
+/* =========================================
+   BUNDLE GRID
+========================================= */
 
-        button.addEventListener(
-            'click',
-            function(){
+const bundleGrid =
+    document.getElementById(
+        "bundleGrid"
+    );
 
-               const product = {
 
-    id:this.dataset.id,
-    name:this.dataset.name,
-    price:Number(this.dataset.price),
-    image:this.dataset.image,
-    stripe:this.dataset.stripe,
-    priceId:this.dataset.priceId
+/* =========================================
+   ROTATION POSITION
+========================================= */
 
-};
+let rotationIndex = 0;
 
-                const alreadyExists =
-                    bundleCart.some(
-                        function(item){
-                            return item.id === product.id;
-                        }
+
+/* =========================================
+   GET CURRENT BUNDLE ORDER
+========================================= */
+
+function getOrderedBundles(){
+
+    const orderedBundles = [];
+
+
+    for(
+        let i = 0;
+        i < bundles.length;
+        i++
+    ){
+
+        const index =
+            (
+                rotationIndex + i
+            ) % bundles.length;
+
+
+        orderedBundles.push(
+            bundles[index]
+        );
+
+    }
+
+
+    return orderedBundles;
+
+}
+
+
+/* =========================================
+   CREATE ACTIVE BUNDLE CARD
+========================================= */
+
+function createActiveBundleCard(
+    bundle
+){
+
+    const card =
+        document.createElement(
+            "article"
+        );
+
+
+    card.className =
+        "bundle-card";
+
+
+    card.innerHTML = `
+
+        <div class="bundle-image">
+
+            <img
+                src="${bundle.image}"
+                alt="${bundle.name}">
+
+        </div>
+
+
+        <div class="bundle-info">
+
+            <div class="bundle-label">
+
+                ${bundle.label}
+
+            </div>
+
+
+            <h2>
+
+                ${bundle.name}
+
+            </h2>
+
+
+            <p>
+
+                ${bundle.description}
+
+            </p>
+
+
+            <div class="bundle-includes">
+
+                ${bundle.includes}
+
+            </div>
+
+
+            <div class="bundle-price">
+
+                $${bundle.price}
+
+            </div>
+
+
+            <div class="bundle-actions">
+
+                <a
+                    href="${bundle.stripe}"
+                    class="btn buy-button">
+
+                    Buy Now
+
+                </a>
+
+
+                <button
+                    type="button"
+                    class="btn cart-button add-to-cart"
+
+                    data-id="${bundle.id}"
+
+                    data-name="${bundle.name}"
+
+                    data-price="${bundle.price}"
+
+                    data-price-id="${bundle.priceId}"
+
+                    data-image="${bundle.image}"
+
+                    data-stripe="${bundle.stripe}">
+
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+    `;
+
+
+    return card;
+
+}
+
+
+/* =========================================
+   CREATE COMING SOON CARD
+========================================= */
+
+function createComingSoonCard(
+    bundle
+){
+
+    const card =
+        document.createElement(
+            "article"
+        );
+
+
+    card.className =
+        "bundle-card";
+
+
+    card.innerHTML = `
+
+        <div class="bundle-image">
+
+            <img
+                src="${bundle.image}"
+                alt="${bundle.name}">
+
+        </div>
+
+
+        <div class="bundle-info">
+
+            <span class="coming-badge">
+
+                ${bundle.badge}
+
+            </span>
+
+
+            <div class="bundle-label">
+
+                ${bundle.label}
+
+            </div>
+
+
+            <h2>
+
+                ${bundle.name}
+
+            </h2>
+
+
+            <p>
+
+                ${bundle.description}
+
+            </p>
+
+
+            <div class="bundle-includes">
+
+                ${bundle.includes}
+
+            </div>
+
+
+            <div class="bundle-price">
+
+                $${bundle.price}
+
+            </div>
+
+
+            <button
+                type="button"
+                class="btn coming-button"
+                disabled>
+
+                Coming Soon
+
+            </button>
+
+        </div>
+
+    `;
+
+
+    return card;
+
+}
+
+
+/* =========================================
+   CREATE BUNDLE CARD
+========================================= */
+
+function createBundleCard(
+    bundle
+){
+
+    if(
+        bundle.active
+    ){
+
+        return createActiveBundleCard(
+            bundle
+        );
+
+    }
+
+
+    return createComingSoonCard(
+        bundle
+    );
+
+}
+
+
+/* =========================================
+   RENDER ALL BUNDLES
+========================================= */
+
+function renderBundleCards(){
+
+    bundleGrid.innerHTML = "";
+
+
+    const orderedBundles =
+        getOrderedBundles();
+
+
+    orderedBundles.forEach(
+        function(bundle){
+
+            bundleGrid.appendChild(
+                createBundleCard(
+                    bundle
+                )
+            );
+
+        }
+    );
+
+}
+
+
+/* =========================================
+   RENDER WITH ANIMATION
+========================================= */
+
+function renderBundles(
+    animate = false
+){
+
+    if(!animate){
+
+        renderBundleCards();
+
+        return;
+
+    }
+
+
+    bundleGrid.classList.add(
+        "is-changing"
+    );
+
+
+    setTimeout(
+        function(){
+
+            renderBundleCards();
+
+
+            requestAnimationFrame(
+                function(){
+
+                    bundleGrid.classList.remove(
+                        "is-changing"
                     );
 
+                }
+            );
 
-                if(!alreadyExists){
+        },
+        350
+    );
 
-                    bundleCart.push(product);
+}
 
-                    saveBundleCart();
+
+/* =========================================
+   INITIAL DISPLAY
+========================================= */
+
+renderBundles();
+
+
+/* =========================================
+   AUTOMATIC ROTATION
+   EVERY 10 SECONDS
+========================================= */
+
+function rotateBundles(){
+
+    rotationIndex =
+        (
+            rotationIndex + 1
+        ) % bundles.length;
+
+
+    renderBundles(
+        true
+    );
+
+}
+
+
+let bundleRotationTimer =
+    setInterval(
+        rotateBundles,
+        10000
+    );
+
+
+/* =========================================
+   ADD TO CART
+========================================= */
+
+bundleGrid.addEventListener(
+    "click",
+    function(event){
+
+        const button =
+            event.target.closest(
+                ".add-to-cart"
+            );
+
+
+        if(!button){
+
+            return;
+
+        }
+
+
+        const product = {
+
+            id:
+                button.dataset.id,
+
+            name:
+                button.dataset.name,
+
+            price:
+                Number(
+                    button.dataset.price
+                ),
+
+            image:
+                button.dataset.image,
+
+            stripe:
+                button.dataset.stripe,
+
+            priceId:
+                button.dataset.priceId
+
+        };
+
+
+        const alreadyExists =
+            bundleCart.some(
+                function(item){
+
+                    return (
+                        item.id ===
+                        product.id
+                    );
+
+                }
+            );
+
+
+        if(!alreadyExists){
+
+            bundleCart.push(
+                product
+            );
+
+            saveBundleCart();
+
+        }
+
+
+        button.textContent =
+            "✓ Added";
+
+
+        setTimeout(
+            function(){
+
+                if(
+                    document.body.contains(
+                        button
+                    )
+                ){
+
+                    button.textContent =
+                        "Add to Cart";
 
                 }
 
-
-                this.textContent =
-                    '✓ Added';
-
-                setTimeout(
-                    () => {
-                        this.textContent =
-                            'Add to Cart';
-                    },
-                    1200
-                );
-
-            }
+            },
+            1200
         );
 
-    });
+    }
+);
 
+
+/* =========================================
+   CART BUTTON
+========================================= */
 
 document
-    .getElementById('pageCartButton')
+    .getElementById(
+        "pageCartButton"
+    )
     .addEventListener(
-        'click',
+        "click",
         function(){
 
             window.location.href =
-                'cart.html';
+                "cart.html";
 
         }
     );
 
 
+/* =========================================
+   BACK BUTTON
+========================================= */
+
 function returnToPreviousPage(){
 
-    if(window.history.length > 1){
+    if(
+        window.history.length > 1
+    ){
 
         window.history.back();
 
-    }else{
+    }
+
+    else{
 
         window.location.href =
-            'index.html';
+            "index.html";
 
     }
 
 }
 
 
+/* =========================================
+   INITIAL CART COUNT
+========================================= */
+
 updatePageCartCount();
+
 
 </script>
 
