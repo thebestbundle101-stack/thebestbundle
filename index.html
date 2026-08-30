@@ -1683,16 +1683,16 @@ button{
 }
 
 
-/* REDUCED BEST SELLER IMAGE SIZE */
+/* BEST SELLER IMAGE SIZE */
 
 
 .product-image{
 
- height:205px;
+ width:100%;
 
- background:#F7F8FA;
+ aspect-ratio:3 / 2;
 
- padding:10px;
+ background:#071A33;
 
  overflow:hidden;
 
@@ -1711,7 +1711,9 @@ button{
 
  height:100%;
 
- object-fit:contain;
+ object-fit:cover;
+
+ object-position:center;
 
 }
 
@@ -1874,12 +1876,6 @@ button{
  .product-grid{
 
   grid-template-columns:1fr;
-
- }
-
- .product-image{
-
-  height:280px;
 
  }
 
@@ -3384,6 +3380,9 @@ BEST SELLERS
 <div class="product-grid">
 
 
+<!-- STARTER BUNDLE -->
+
+
 <article class="product-card">
 
 <a href="bundles.html">
@@ -3391,7 +3390,7 @@ BEST SELLERS
 <div class="product-image">
 
 <img
- src="images/starter-bundle.png"
+ src="images/Starter-bundle-best-seller.png"
  alt="Starter Bundle">
 
 </div>
@@ -3435,7 +3434,7 @@ Buy Now
  data-id="starter-bundle"
  data-name="Starter Bundle"
  data-price="27"
- data-image="images/starter-bundle.png"
+ data-image="images/Starter-bundle-best-seller.png"
  aria-label="Add Starter Bundle to cart">
 
 <i class="fa-solid fa-cart-shopping"></i>
@@ -3450,6 +3449,9 @@ Buy Now
 
 
 
+<!-- CREATOR BUNDLE -->
+
+
 <article class="product-card">
 
 <a href="bundles.html">
@@ -3457,7 +3459,7 @@ Buy Now
 <div class="product-image">
 
 <img
- src="images/TheBestBundle_Creator_Bundle_Mockup.png"
+ src="images/creator-bundle-best-seller.png"
  alt="Creator Bundle">
 
 </div>
@@ -3499,7 +3501,7 @@ Buy Now
  data-id="creator-bundle"
  data-name="Creator Bundle"
  data-price="37"
- data-image="images/TheBestBundle_Creator_Bundle_Mockup.png"
+ data-image="images/creator-bundle-best-seller.png"
  aria-label="Add Creator Bundle to cart">
 
 <i class="fa-solid fa-cart-shopping"></i>
@@ -3512,6 +3514,9 @@ Buy Now
 
 </article>
 
+
+
+<!-- BUSINESS BUNDLE -->
 
 
 <article class="product-card">
@@ -3578,6 +3583,9 @@ Buy Now
 
 
 
+<!-- HEALTH & WELLNESS -->
+
+
 <article class="product-card">
 
 <a href="bundles.html">
@@ -3640,6 +3648,9 @@ Buy Now
 
 </article>
 
+
+
+<!-- ULTIMATE BUNDLE -->
 
 
 <article class="product-card">
@@ -4683,7 +4694,7 @@ function renderCart(){
    row.innerHTML =
 
     `<img
-      src="${p.image || "images/starter-bundle.png"}"
+      src="${p.image || "images/Starter-bundle-best-seller.png"}"
       alt="${p.name || "Product"}">
 
      <div>
@@ -5053,7 +5064,7 @@ const heroBundles = [
 
  {
   image:
-   "images/starter-bundle.png",
+   "images/Starter-bundle-best-seller.png",
 
   name:
    "TheBestBundle Starter Bundle"
@@ -5061,7 +5072,7 @@ const heroBundles = [
 
  {
   image:
-   "images/TheBestBundle_Creator_Bundle_Mockup.png",
+   "images/creator-bundle-best-seller.png",
 
   name:
    "TheBestBundle Creator Bundle"
@@ -5093,18 +5104,6 @@ const heroBundles = [
 
 ];
 
-
-/* POSITION ORDER:
-
-CENTER
-→ LEFT SIDE
-→ LEFT SMALL
-→ RIGHT SMALL
-→ RIGHT SIDE
-
-Every rotation moves the bundle
-into the next position.
-*/
 
 
 const heroSlots = [
@@ -5205,10 +5204,12 @@ function rotateHeroBundles(){
 }
 
 
+
 /* INITIAL LOAD */
 
 
 renderHeroBundles();
+
 
 
 /* ROTATE EVERY 10 SECONDS */
