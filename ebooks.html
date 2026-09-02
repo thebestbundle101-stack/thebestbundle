@@ -1297,7 +1297,6 @@ button{
 
 <script>
 
-
 /* =========================================
    EBOOK DATA
 ========================================= */
@@ -1426,6 +1425,31 @@ const ebooks = [
         stripe:
             "https://buy.stripe.com/eVq6oJ78cgOQeDJ8GT8N20s"
 
+    },
+
+
+    {
+        id:
+            "digital-business-blueprint",
+
+        name:
+            "The Digital Business Blueprint",
+
+        image:
+            "images/The-Digital-Business-Blueprint.png",
+
+        description:
+            "A step-by-step guide to choosing a profitable niche, building your offer, creating a sales funnel, launching your business and growing with confidence.",
+
+        price:
+            17,
+
+        priceId:
+            "price_1UB9awRtp4gVtODyLFhByrWI",
+
+        stripe:
+            "https://buy.stripe.com/5kQaEZgIMbuw0MT6yL8N20A"
+
     }
 
 ];
@@ -1486,9 +1510,9 @@ const productsGrid =
 ========================================= */
 
 /*
-    All 5 ebooks are ALWAYS displayed.
+    All 6 ebooks are ALWAYS displayed.
 
-    The order of the 5 ebooks changes
+    The order of the 6 ebooks changes
     every 10 seconds.
 */
 
@@ -1631,7 +1655,7 @@ function createProductCard(
 
 
 /* =========================================
-   RENDER ALL 5 EBOOKS
+   RENDER ALL 6 EBOOKS
 ========================================= */
 
 function renderProductCards(){
@@ -1645,11 +1669,10 @@ function renderProductCards(){
 
         Render ALL ebooks.
 
-        We do NOT use a visible-count
-        anymore.
+        No ebook is removed.
 
-        This means all 5 remain on
-        the same page.
+        This means all 6 remain
+        on the same page.
     */
 
     ebookOrder.forEach(
@@ -1684,31 +1707,16 @@ function renderProducts(
     }
 
 
-    /*
-        Fade the existing cards out.
-    */
-
     productsGrid.classList.add(
         "is-changing"
     );
 
-
-    /*
-        Wait for the fade-out,
-        then change their positions.
-    */
 
     setTimeout(
         function(){
 
             renderProductCards();
 
-
-            /*
-                Allow the browser to
-                display the new cards,
-                then fade them back in.
-            */
 
             requestAnimationFrame(
                 function(){
@@ -1737,17 +1745,6 @@ renderProducts();
 /* =========================================
    AUTOMATIC POSITION ROTATION
 ========================================= */
-
-/*
-    The page keeps ALL 5 ebooks.
-
-    Every 10 seconds:
-
-        1. Shuffle the 5 ebooks.
-        2. Keep all 5 visible.
-        3. Put them in different positions.
-        4. Fade smoothly between positions.
-*/
 
 const rotationTimer =
     setInterval(
@@ -1905,9 +1902,7 @@ function returnToPreviousPage(){
 
 updatePageCartCount();
 
-
 </script>
-
 
 </body>
 
