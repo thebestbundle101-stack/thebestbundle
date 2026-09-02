@@ -1450,6 +1450,31 @@ const ebooks = [
         stripe:
             "https://buy.stripe.com/5kQaEZgIMbuw0MT6yL8N20A"
 
+    },
+
+
+    {
+        id:
+            "digital-products-that-sell",
+
+        name:
+            "Digital Products That Sell",
+
+        image:
+            "images/digital-products-that-sell-cover.png",
+
+        description:
+            "Learn how to create, package, and sell profitable digital products online. A practical guide covering product ideas, creation, professional packaging, marketing, and selling strategies.",
+
+        price:
+            17,
+
+        priceId:
+            "price_1UBLgkRtp4gVtODyxYgYqRZ9",
+
+        stripe:
+            "https://buy.stripe.com/4gMfZj9gk1TW67d3mz8N20B"
+
     }
 
 ];
@@ -1509,13 +1534,6 @@ const productsGrid =
    CURRENT EBOOK ORDER
 ========================================= */
 
-/*
-    All 6 ebooks are ALWAYS displayed.
-
-    The order of the 6 ebooks changes
-    every 10 seconds.
-*/
-
 let ebookOrder =
     [...ebooks];
 
@@ -1525,15 +1543,6 @@ let ebookOrder =
 ========================================= */
 
 function shuffleEbooks(){
-
-    /*
-        Fisher-Yates shuffle.
-
-        This changes ONLY the position
-        of the existing ebooks.
-
-        No ebook is removed.
-    */
 
     for(
         let i = ebookOrder.length - 1;
@@ -1655,7 +1664,7 @@ function createProductCard(
 
 
 /* =========================================
-   RENDER ALL 6 EBOOKS
+   RENDER ALL EBOOKS
 ========================================= */
 
 function renderProductCards(){
@@ -1663,17 +1672,6 @@ function renderProductCards(){
     productsGrid.innerHTML =
         "";
 
-
-    /*
-        IMPORTANT:
-
-        Render ALL ebooks.
-
-        No ebook is removed.
-
-        This means all 6 remain
-        on the same page.
-    */
 
     ebookOrder.forEach(
         function(product){
