@@ -1414,7 +1414,7 @@ const templates = [
             "price_1U8FjqRtp4gVtODyxxrBykoQ",
 
         stripe:
-            "https://buy.stripe.com/aFa5kF9gkdCE7bh9KX8N20t"
+            "https://buy.stripe.com/aFa5kF2RW5685399KX8N20t"
 
     },
 
@@ -1541,6 +1541,35 @@ const templates = [
         stripe:
             "https://buy.stripe.com/9B628t8cgcyAgLR4qD8N20y"
 
+    },
+
+
+    /* =========================================
+       NEW TEMPLATE — BUSINESS STARTUP PLANNER
+    ========================================= */
+
+    {
+        id:
+            "business-startup-planner",
+
+        name:
+            "Business Startup Planner",
+
+        image:
+            "images/Business_Startup_Planner_3D_Cover.png",
+
+        description:
+            "A 15-page printable business planner designed to help turn your idea into a clear launch plan. Covers business ideas, niche selection, target customers, competitors, offers, pricing, branding, marketing, budgeting and a 30-day launch plan. Includes Master Resell Rights.",
+
+        price:
+            9,
+
+        priceId:
+            "price_1UCjj0Rtp4gVtODybcURLu53",
+
+        stripe:
+            "https://buy.stripe.com/8x29AVbosdCEeDJ9KX8N20F"
+
     }
 
 ];
@@ -1601,13 +1630,13 @@ const productsGrid =
 ========================================= */
 
 /*
-    All 10 templates are ALWAYS
+    All templates are ALWAYS
     displayed.
 
     Every 10 seconds the order
     changes.
 
-    With 10 templates, the order
+    With 11 templates, the order
     rotates one position at a time.
 */
 
@@ -1831,7 +1860,7 @@ function rotateTemplates(){
         Move every template
         one position.
 
-        All 10 templates remain visible.
+        All templates remain visible.
     */
 
     rotationIndex =
