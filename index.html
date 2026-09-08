@@ -1683,8 +1683,7 @@ button{
 }
 
 
-/* BEST SELLER IMAGE SIZE */
-
+/* PRODUCT IMAGE */
 
 .product-image{
 
@@ -1717,6 +1716,23 @@ button{
 
 }
 
+
+/* BUSINESS BUNDLE IMAGE */
+
+.business-bundle-image{
+
+ object-fit:cover !important;
+
+ object-position:center center !important;
+
+ width:100% !important;
+
+ height:100% !important;
+
+}
+
+
+/* PRODUCT BODY */
 
 .product-body{
 
@@ -3380,6 +3396,77 @@ BEST SELLERS
 <div class="product-grid">
 
 
+
+<!-- BUSINESS BUNDLE -->
+
+
+<article class="product-card">
+
+<a href="bundles.html">
+
+<div class="product-image">
+
+<img
+ class="business-bundle-image"
+ src="images/Business_Bundle_Cover.png"
+ alt="Business Bundle">
+
+</div>
+
+</a>
+
+<div class="product-body">
+
+<h3>
+Business Bundle
+</h3>
+
+<div class="product-meta">
+
+5 eBooks + 10 Templates
+
+</div>
+
+<div class="product-rating">
+
+★★★★★ <span>(142)</span>
+
+</div>
+
+<div class="product-bottom">
+
+<span class="price">$57</span>
+
+<a
+ class="buy-now"
+ href="https://buy.stripe.com/14AbJ3504cyA0MT7CP8N20P"
+ target="_blank"
+ rel="noopener noreferrer">
+
+Buy Now
+
+</a>
+
+<button
+ class="mini-cart add-cart"
+ data-id="business-bundle"
+ data-name="Business Bundle"
+ data-price="57"
+ data-image="images/Business_Bundle_Cover.png"
+ aria-label="Add Business Bundle to cart">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+</button>
+
+</div>
+
+</div>
+
+</article>
+
+
+
 <!-- STARTER BUNDLE -->
 
 
@@ -3503,73 +3590,6 @@ Buy Now
  data-price="37"
  data-image="images/creator-bundle-best-seller.png"
  aria-label="Add Creator Bundle to cart">
-
-<i class="fa-solid fa-cart-shopping"></i>
-
-</button>
-
-</div>
-
-</div>
-
-</article>
-
-
-
-<!-- BUSINESS BUNDLE -->
-
-
-<article class="product-card">
-
-<a href="bundles.html">
-
-<div class="product-image">
-
-<img
- src="images/business-bundle-temp.png"
- alt="Business Bundle">
-
-</div>
-
-</a>
-
-<div class="product-body">
-
-<h3>
-Business Bundle
-</h3>
-
-<div class="product-meta">
-
-5 eBooks + 10 Templates
-
-</div>
-
-<div class="product-rating">
-
-★★★★★ <span>(142)</span>
-
-</div>
-
-<div class="product-bottom">
-
-<span class="price">$57</span>
-
-<a
- class="buy-now"
- href="#">
-
-Buy Now
-
-</a>
-
-<button
- class="mini-cart add-cart"
- data-id="business-bundle"
- data-name="Business Bundle"
- data-price="57"
- data-image="images/business-bundle-temp.png"
- aria-label="Add Business Bundle to cart">
 
 <i class="fa-solid fa-cart-shopping"></i>
 
@@ -5080,7 +5100,7 @@ const heroBundles = [
 
  {
   image:
-   "images/business-bundle-temp.png",
+   "images/Business_Bundle_Cover.png",
 
   name:
    "TheBestBundle Business Bundle"
@@ -5212,7 +5232,7 @@ renderHeroBundles();
 
 
 
-/* ROTATE EVERY 20 SECONDS */
+/* ROTATE EVERY 15 SECONDS */
 
 
 setInterval(
