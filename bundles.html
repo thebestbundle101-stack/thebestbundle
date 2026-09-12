@@ -1542,7 +1542,7 @@ const bundles = [
         priceId:
              "price_1UEiWMRtp4gVtODyTO9FPlIb",
 
-         stripe:
+        stripe:
               "https://buy.stripe.com/28EdRbakoeGIdzF5uH8N20Q",
          
         active:
@@ -1676,6 +1676,19 @@ function createActiveBundleCard(
 
 
         <div class="bundle-info">
+
+            ${
+                bundle.badge
+                    ? `
+            <span class="coming-badge">
+
+                ${bundle.badge}
+
+            </span>
+            `
+                    : ""
+            }
+
 
             <div class="bundle-label">
 
