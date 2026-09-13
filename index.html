@@ -1562,9 +1562,9 @@ button{
 
 }
 
-/* VERY SMALL GOLD LIGHT
-   BEHIND PREMIUM EBOOKS
-   AND DIGITAL BUNDLES */
+/* TINY GOLD LIGHT
+   MATCHING THE HERO REFERENCE
+   ON PREMIUM EBOOKS AND DIGITAL BUNDLES */
 
 .collection-card:nth-child(1):before,
 .collection-card:nth-child(3):before{
@@ -1573,24 +1573,27 @@ button{
 
  position:absolute;
 
- width:32%;
+ width:52px;
 
- height:16px;
+ height:8px;
 
- left:34%;
+ left:50%;
 
- top:-4px;
+ top:-3px;
+
+ transform:translateX(-50%);
 
  background:
 
   radial-gradient(
    ellipse at center,
-   rgba(244,197,66,.42) 0%,
-   rgba(244,197,66,.18) 35%,
-   transparent 72%
+   rgba(244,197,66,.75) 0%,
+   rgba(244,197,66,.32) 28%,
+   rgba(244,197,66,.08) 55%,
+   transparent 75%
   );
 
- filter:blur(6px);
+ filter:blur(3px);
 
  z-index:0;
 
