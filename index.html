@@ -1556,6 +1556,54 @@ button{
 
  transition:.2s ease;
 
+ position:relative;
+
+ overflow:hidden;
+
+}
+
+/* VERY SMALL GOLD LIGHT
+   BEHIND PREMIUM EBOOKS
+   AND DIGITAL BUNDLES */
+
+.collection-card:nth-child(1):before,
+.collection-card:nth-child(3):before{
+
+ content:"";
+
+ position:absolute;
+
+ width:32%;
+
+ height:16px;
+
+ left:34%;
+
+ top:-4px;
+
+ background:
+
+  radial-gradient(
+   ellipse at center,
+   rgba(244,197,66,.42) 0%,
+   rgba(244,197,66,.18) 35%,
+   transparent 72%
+  );
+
+ filter:blur(6px);
+
+ z-index:0;
+
+ pointer-events:none;
+
+}
+
+.collection-card > *{
+
+ position:relative;
+
+ z-index:1;
+
 }
 
 .collection-card.dark{
