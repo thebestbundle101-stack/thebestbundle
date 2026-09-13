@@ -1558,28 +1558,27 @@ button{
 
  position:relative;
 
- overflow:hidden;
+ overflow:visible;
 
 }
 
 /* TINY GOLD LIGHT
-   MATCHING THE HERO REFERENCE
-   ON PREMIUM EBOOKS AND DIGITAL BUNDLES */
+   MATCHING THE REFERENCE
+   ON ALL FOUR COLLECTION CARDS */
 
-.collection-card:nth-child(1):before,
-.collection-card:nth-child(3):before{
+.collection-card:before{
 
  content:"";
 
  position:absolute;
 
- width:52px;
+ width:70px;
 
- height:8px;
+ height:10px;
 
  left:50%;
 
- top:-3px;
+ top:-4px;
 
  transform:translateX(-50%);
 
@@ -1587,15 +1586,51 @@ button{
 
   radial-gradient(
    ellipse at center,
-   rgba(244,197,66,.75) 0%,
-   rgba(244,197,66,.32) 28%,
-   rgba(244,197,66,.08) 55%,
-   transparent 75%
+   rgba(255,215,90,.95) 0%,
+   rgba(244,197,66,.70) 18%,
+   rgba(244,197,66,.32) 38%,
+   rgba(244,197,66,.10) 58%,
+   transparent 78%
   );
 
  filter:blur(3px);
 
- z-index:0;
+ z-index:5;
+
+ pointer-events:none;
+
+}
+
+.collection-card:after{
+
+ content:"";
+
+ position:absolute;
+
+ width:34px;
+
+ height:2px;
+
+ left:50%;
+
+ top:-1px;
+
+ transform:translateX(-50%);
+
+ background:
+
+  linear-gradient(
+   90deg,
+   transparent,
+   rgba(255,224,125,.95),
+   transparent
+  );
+
+ box-shadow:
+
+ 0 0 6px rgba(244,197,66,.75);
+
+ z-index:6;
 
  pointer-events:none;
 
@@ -1605,7 +1640,7 @@ button{
 
  position:relative;
 
- z-index:1;
+ z-index:7;
 
 }
 
