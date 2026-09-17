@@ -460,6 +460,7 @@ button{
 
 /* =========================================================
    EBOOK GRID
+   SAME GENERAL STRUCTURE AS ENGLISH EBOOK PAGE
 ========================================================= */
 
 .ebooks-grid{
@@ -467,18 +468,27 @@ button{
     display:grid;
 
     grid-template-columns:
-        repeat(3,1fr);
+        repeat(3,minmax(0,1fr));
 
     gap:20px;
+
+    align-items:start;
 
 }
 
 
 /* =========================================================
    EBOOK CARD
+   SMALLER / COMPACT
 ========================================================= */
 
 .ebook-card{
+
+    width:100%;
+
+    max-width:285px;
+
+    margin:0 auto;
 
     background:white;
 
@@ -488,7 +498,7 @@ button{
     border-radius:10px;
 
     padding:
-        10px 9px 10px;
+        9px;
 
     text-align:center;
 
@@ -501,14 +511,20 @@ button{
     box-shadow:
         0 5px 18px rgba(7,26,51,.08);
 
-    opacity:1;
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+
+}
+
+
+.ebook-card:hover{
 
     transform:
-        translateY(0);
+        translateY(-4px);
 
-    transition:
-        opacity .4s ease,
-        transform .4s ease;
+    box-shadow:
+        0 9px 25px rgba(7,26,51,.13);
 
 }
 
@@ -519,7 +535,9 @@ button{
 
 .ebook-cover{
 
-    height:235px;
+    width:100%;
+
+    height:220px;
 
     display:flex;
 
@@ -527,9 +545,11 @@ button{
 
     justify-content:center;
 
-    margin-bottom:10px;
+    margin-bottom:9px;
 
     background:white;
+
+    overflow:hidden;
 
 }
 
@@ -542,16 +562,18 @@ button{
 
     object-fit:contain;
 
+    display:block;
+
 }
 
 
 /* =========================================================
-   EBOOK TITLE
+   EBOOK INFO
 ========================================================= */
 
 .ebook-title{
 
-    min-height:46px;
+    min-height:42px;
 
     display:flex;
 
@@ -559,7 +581,7 @@ button{
 
     justify-content:center;
 
-    font-size:15px;
+    font-size:14px;
 
     line-height:1.25;
 
@@ -571,32 +593,28 @@ button{
     padding:
         0 5px;
 
-    margin-bottom:6px;
+    margin-bottom:5px;
 
 }
 
 
-/* =========================================================
-   EBOOK DESCRIPTION
-========================================================= */
-
 .ebook-description{
 
-    min-height:62px;
+    min-height:58px;
 
     padding:
-        0 8px;
+        0 7px;
 
     color:
         #64748B;
 
-    font-size:11px;
+    font-size:10px;
 
     line-height:1.4;
 
     text-align:center;
 
-    margin-bottom:4px;
+    margin-bottom:3px;
 
     display:
         -webkit-box;
@@ -617,25 +635,25 @@ button{
 
 .ebook-price{
 
-    font-size:21px;
+    font-size:20px;
 
     font-weight:900;
 
     margin:
-        8px 0 10px;
+        7px 0 8px;
 
 }
 
 
 /* =========================================================
-   EBOOK BUY BUTTON
+   BUY NOW
 ========================================================= */
 
 .buy-btn{
 
     width:100%;
 
-    min-height:44px;
+    min-height:40px;
 
     border:none;
 
@@ -647,16 +665,24 @@ button{
     color:
         var(--navy);
 
-    font-size:11px;
+    font-size:10px;
 
     font-weight:900;
 
     line-height:1.1;
 
     padding:
-        7px 5px;
+        6px 5px;
 
-    margin-bottom:7px;
+    margin-bottom:6px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
 
 }
 
@@ -670,14 +696,14 @@ button{
 
 
 /* =========================================================
-   EBOOK CART BUTTON
+   CART BUTTON
 ========================================================= */
 
 .cart-btn{
 
     width:100%;
 
-    min-height:42px;
+    min-height:38px;
 
     border:
         1px solid var(--navy);
@@ -689,7 +715,13 @@ button{
 
     color:white;
 
-    font-size:17px;
+    font-size:15px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
 
 }
 
@@ -1117,16 +1149,23 @@ button{
     .ebooks-grid{
 
         grid-template-columns:
-            repeat(3,1fr);
+            repeat(3,minmax(0,1fr));
 
         gap:14px;
 
     }
 
 
+    .ebook-card{
+
+        max-width:250px;
+
+    }
+
+
     .ebook-cover{
 
-        height:205px;
+        height:195px;
 
     }
 
@@ -1135,41 +1174,41 @@ button{
 
         font-size:13px;
 
-        min-height:46px;
+        min-height:44px;
 
     }
 
 
     .ebook-description{
 
-        font-size:10px;
+        font-size:9.5px;
 
-        min-height:65px;
+        min-height:62px;
 
     }
 
 
     .ebook-price{
 
-        font-size:20px;
+        font-size:19px;
 
     }
 
 
     .buy-btn{
 
-        min-height:42px;
+        min-height:39px;
 
-        font-size:10px;
+        font-size:9px;
 
     }
 
 
     .cart-btn{
 
-        min-height:40px;
+        min-height:38px;
 
-        font-size:16px;
+        font-size:15px;
 
     }
 
@@ -1380,6 +1419,8 @@ button{
 
     .ebook-card{
 
+        max-width:none;
+
         padding:
             7px 6px 8px;
 
@@ -1390,9 +1431,9 @@ button{
 
     .ebook-cover{
 
-        height:180px;
+        height:170px;
 
-        margin-bottom:8px;
+        margin-bottom:7px;
 
     }
 
@@ -1403,7 +1444,7 @@ button{
 
         line-height:1.25;
 
-        min-height:48px;
+        min-height:46px;
 
         padding:
             0 3px;
@@ -1415,11 +1456,11 @@ button{
 
     .ebook-description{
 
-        font-size:9px;
+        font-size:8.8px;
 
         line-height:1.4;
 
-        min-height:68px;
+        min-height:66px;
 
         padding:
             0 3px;
@@ -1433,19 +1474,19 @@ button{
 
     .ebook-price{
 
-        font-size:18px;
+        font-size:17px;
 
         margin:
-            7px 0 8px;
+            6px 0 7px;
 
     }
 
 
     .buy-btn{
 
-        min-height:39px;
+        min-height:37px;
 
-        font-size:8px;
+        font-size:7.5px;
 
         padding:
             6px 2px;
@@ -1455,9 +1496,9 @@ button{
 
     .cart-btn{
 
-        min-height:38px;
+        min-height:36px;
 
-        font-size:15px;
+        font-size:14px;
 
     }
 
@@ -1656,7 +1697,7 @@ button{
 
     .ebook-cover{
 
-        height:155px;
+        height:150px;
 
     }
 
@@ -1665,16 +1706,16 @@ button{
 
         font-size:10px;
 
-        min-height:48px;
+        min-height:46px;
 
     }
 
 
     .ebook-description{
 
-        font-size:8.5px;
+        font-size:8.3px;
 
-        min-height:70px;
+        min-height:68px;
 
         line-height:1.4;
 
@@ -1683,17 +1724,17 @@ button{
 
     .ebook-price{
 
-        font-size:17px;
+        font-size:16px;
 
         margin:
-            7px 0;
+            6px 0;
 
     }
 
 
     .buy-btn{
 
-        min-height:38px;
+        min-height:36px;
 
         font-size:7px;
 
@@ -1702,9 +1743,9 @@ button{
 
     .cart-btn{
 
-        min-height:36px;
+        min-height:35px;
 
-        font-size:14px;
+        font-size:13px;
 
     }
 
@@ -1795,6 +1836,28 @@ button{
 ========================================================= */
 
 @media(min-width:1100px){
+
+    .ebooks-grid{
+
+        grid-template-columns:
+            repeat(3,minmax(0,1fr));
+
+    }
+
+
+    .ebook-card{
+
+        max-width:275px;
+
+    }
+
+
+    .ebook-cover{
+
+        height:215px;
+
+    }
+
 
     .pack-card{
 
@@ -2000,86 +2063,14 @@ button{
     </div>
 
 
+    <!--
+        SAME CONCEPT AS ENGLISH EBOOK PAGE:
+        Products are generated by JavaScript.
+    -->
+
     <div
         class="ebooks-grid"
         id="ebooksGrid">
-
-
-        <!-- =================================================
-             FRENCH EBOOK #1
-        ================================================== -->
-
-        <article class="ebook-card">
-
-            <div class="ebook-cover">
-
-                <img
-                    src="images/Comment_paraître_20_ans_plus_jeune.png"
-                    alt="Comment paraître 20 ans plus jeune"
-                    onerror="this.style.display='none';">
-
-            </div>
-
-
-            <div class="ebook-title">
-
-                Comment paraître
-                20 ans plus jeune
-
-            </div>
-
-
-            <div class="ebook-description">
-
-                Découvrez les habitudes simples pour paraître plus jeune, améliorer votre bien-être et retrouver plus de vitalité au quotidien.
-
-            </div>
-
-
-            <div class="ebook-price">
-
-                $17
-
-            </div>
-
-
-            <a
-                href="https://buy.stripe.com/3cIfZj8cg0PS67d9KX8N200"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="buy-btn">
-
-                ACHETER
-                MAINTENANT
-
-            </a>
-
-
-            <!-- =================================================
-                 IMPORTANT:
-                 STRIPE PRICE ID ADDED HERE
-            ================================================== -->
-
-            <button
-                type="button"
-                class="cart-btn add-to-cart"
-
-                data-id="fr-book-1"
-
-                data-name="Comment paraître 20 ans plus jeune"
-
-                data-price="17"
-
-                data-price-id="price_1TqqVvRtp4gVtODyIdeAk7Ox"
-
-                data-image="images/Comment_paraître_20_ans_plus_jeune.png">
-
-                <i class="fa-solid fa-cart-shopping"></i>
-
-            </button>
-
-        </article>
-
 
     </div>
 
@@ -2676,21 +2667,53 @@ button{
 
 
 <!-- ======================================================
-     SHARED CART
+     SHARED CART + FRENCH EBOOK DATA
 ====================================================== -->
 
 <script>
+
+
+/* ======================================================
+   CART KEY
+====================================================== */
 
 const CART_KEY =
     "theBestBundleCart";
 
 
 /* ======================================================
-   STRIPE PRICE ID
+   FRENCH EBOOK DATA
+   SAME PRODUCT STRUCTURE AS ENGLISH PAGE
 ====================================================== */
 
-const FRENCH_EBOOK_PRICE_ID =
-    "price_1TqqVvRtp4gVtODyIdeAk7Ox";
+const ebooks = [
+
+    {
+
+        id:
+            "fr-book-1",
+
+        name:
+            "Comment paraître 20 ans plus jeune",
+
+        image:
+            "images/Comment_Paraître_20_Ans_Plus_Jeune.png",
+
+        description:
+            "Découvrez les habitudes simples pour paraître plus jeune, améliorer votre bien-être et retrouver plus de vitalité au quotidien.",
+
+        price:
+            17,
+
+        priceId:
+            "price_1TqqVvRtp4gVtODyIdeAk7Ox",
+
+        stripe:
+            "https://buy.stripe.com/3cIfZj8cg0PS67d9KX8N200"
+
+    }
+
+];
 
 
 /* ======================================================
@@ -2709,7 +2732,12 @@ let cart =
    REPAIR OLD FRENCH EBOOK CART ITEM
 ====================================================== */
 
-let cartWasUpdated = false;
+const FRENCH_EBOOK_PRICE_ID =
+    "price_1TqqVvRtp4gVtODyIdeAk7Ox";
+
+
+let cartWasUpdated =
+    false;
 
 
 cart.forEach(
@@ -2724,7 +2752,8 @@ cart.forEach(
             item.priceId =
                 FRENCH_EBOOK_PRICE_ID;
 
-            cartWasUpdated = true;
+            cartWasUpdated =
+                true;
 
         }
 
@@ -2737,6 +2766,123 @@ if(cartWasUpdated){
     localStorage.setItem(
         CART_KEY,
         JSON.stringify(cart)
+    );
+
+}
+
+
+/* ======================================================
+   CREATE EBOOK CARD
+   SAME ARCHITECTURE AS ENGLISH PAGE
+====================================================== */
+
+function createProductCard(product){
+
+    const card =
+        document.createElement(
+            "article"
+        );
+
+
+    card.className =
+        "ebook-card";
+
+
+    card.innerHTML = `
+
+        <div class="ebook-cover">
+
+            <img
+                src="${product.image}"
+                alt="${product.name}">
+
+        </div>
+
+
+        <div class="ebook-title">
+
+            ${product.name}
+
+        </div>
+
+
+        <div class="ebook-description">
+
+            ${product.description}
+
+        </div>
+
+
+        <div class="ebook-price">
+
+            $${product.price}
+
+        </div>
+
+
+        <a
+            href="${product.stripe}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="buy-btn">
+
+            ACHETER
+            MAINTENANT
+
+        </a>
+
+
+        <button
+            type="button"
+
+            class="cart-btn add-to-cart"
+
+            data-id="${product.id}"
+
+            data-name="${product.name}"
+
+            data-price="${product.price}"
+
+            data-price-id="${product.priceId}"
+
+            data-image="${product.image}"
+
+            data-stripe="${product.stripe}">
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+        </button>
+
+    `;
+
+
+    return card;
+
+}
+
+
+/* ======================================================
+   RENDER EBOOKS
+====================================================== */
+
+const ebooksGrid =
+    document.getElementById(
+        "ebooksGrid"
+    );
+
+
+if(ebooksGrid){
+
+    ebooks.forEach(
+        function(product){
+
+            ebooksGrid.appendChild(
+                createProductCard(
+                    product
+                )
+            );
+
+        }
     );
 
 }
@@ -2785,112 +2931,133 @@ function saveCart(){
 
 /* ======================================================
    ADD TO CART
+   EVENT DELEGATION
 ====================================================== */
 
-document
-    .querySelectorAll(
-        ".add-to-cart"
-    )
-    .forEach(
-        function(button){
+document.addEventListener(
+    "click",
+    function(event){
 
-            button.addEventListener(
-                "click",
-                function(){
-
-                    const product = {
-
-                        id:
-                            this.dataset.id,
-
-                        name:
-                            this.dataset.name,
-
-                        price:
-                            Number(
-                                this.dataset.price
-                            ),
-
-                        priceId:
-                            this.dataset.priceId || null,
-
-                        image:
-                            this.dataset.image
-
-                    };
+        const button =
+            event.target.closest(
+                ".add-to-cart"
+            );
 
 
-                    const exists =
-                        cart.some(
-                            function(item){
+        if(!button){
 
-                                return (
-                                    item.id ===
-                                    product.id
-                                );
+            return;
 
-                            }
-                        );
+        }
 
 
-                    if(!exists){
+        const product = {
 
-                        cart.push(
-                            product
-                        );
+            id:
+                button.dataset.id,
 
-                        saveCart();
+            name:
+                button.dataset.name,
 
+            price:
+                Number(
+                    button.dataset.price
+                ),
 
-                        if(
-                            this.classList.contains(
-                                "cart-btn"
-                            )
-                        ){
+            image:
+                button.dataset.image,
 
-                            this.innerHTML =
-                                "✓";
+            stripe:
+                button.dataset.stripe || "",
 
-                            setTimeout(
-                                () => {
+            priceId:
+                button.dataset.priceId || null
 
-                                    this.innerHTML =
-                                        '<i class="fa-solid fa-cart-shopping"></i>';
-
-                                },
-                                1000
-                            );
-
-                        }else{
-
-                            this.textContent =
-                                "✓ AJOUTÉ";
-
-                            setTimeout(
-                                () => {
-
-                                    this.textContent =
-                                        "AJOUTER AU PANIER";
-
-                                },
-                                1000
-                            );
-
-                        }
+        };
 
 
-                    }else{
+        const exists =
+            cart.some(
+                function(item){
 
-                        window.location.href =
-                            "cart.html";
-
-                    }
+                    return (
+                        item.id ===
+                        product.id
+                    );
 
                 }
             );
 
+
+        if(!exists){
+
+            cart.push(
+                product
+            );
+
+
+            saveCart();
+
+
+            /* ==========================================
+               EBOOK CART BUTTON
+            ========================================== */
+
+            if(
+                button.classList.contains(
+                    "cart-btn"
+                )
+            ){
+
+                button.innerHTML =
+                    "✓";
+
+
+                setTimeout(
+                    function(){
+
+                        button.innerHTML =
+                            '<i class="fa-solid fa-cart-shopping"></i>';
+
+                    },
+                    1000
+                );
+
+            }
+
+
+            /* ==========================================
+               PACK CART BUTTON
+            ========================================== */
+
+            else{
+
+                button.textContent =
+                    "✓ AJOUTÉ";
+
+
+                setTimeout(
+                    function(){
+
+                        button.textContent =
+                            "AJOUTER AU PANIER";
+
+                    },
+                    1000
+                );
+
+            }
+
+
+        }else{
+
+            window.location.href =
+                "cart.html";
+
         }
-    );
+
+    }
+);
 
 
 /* ======================================================
