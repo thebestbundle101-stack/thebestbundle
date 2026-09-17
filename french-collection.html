@@ -45,6 +45,7 @@
 
 }
 
+
 *{
 
     margin:0;
@@ -53,11 +54,13 @@
 
 }
 
+
 html{
 
     scroll-behavior:smooth;
 
 }
+
 
 body{
 
@@ -74,6 +77,7 @@ body{
 
 }
 
+
 a{
 
     color:inherit;
@@ -81,6 +85,7 @@ a{
     text-decoration:none;
 
 }
+
 
 button{
 
@@ -447,20 +452,8 @@ button{
 }
 
 
-.section-title i{
-
-    font-family:
-        Arial,
-        sans-serif;
-
-    font-style:normal;
-
-}
-
-
 /* =========================================================
    EBOOK GRID
-   SAME GENERAL STRUCTURE AS ENGLISH EBOOK PAGE
 ========================================================= */
 
 .ebooks-grid{
@@ -478,38 +471,33 @@ button{
 
 
 /* =========================================================
-   EBOOK CARD
-   SMALLER / COMPACT
+   COMPACT EBOOK CARD
 ========================================================= */
 
 .ebook-card{
 
     width:100%;
 
-    max-width:285px;
+    max-width:260px;
 
     margin:0 auto;
 
-    background:white;
+    background:
+        #FFFFFF;
 
     border:
-        1px solid #D7C995;
+        1px solid #DDE3EC;
 
-    border-radius:10px;
+    border-radius:14px;
 
-    padding:
-        9px;
+    overflow:hidden;
 
-    text-align:center;
+    box-shadow:
+        0 4px 14px rgba(7,26,51,.07);
 
     display:flex;
 
     flex-direction:column;
-
-    min-width:0;
-
-    box-shadow:
-        0 5px 18px rgba(7,26,51,.08);
 
     transition:
         transform .25s ease,
@@ -521,23 +509,26 @@ button{
 .ebook-card:hover{
 
     transform:
-        translateY(-4px);
+        translateY(-3px);
 
     box-shadow:
-        0 9px 25px rgba(7,26,51,.13);
+        0 8px 22px rgba(7,26,51,.10);
 
 }
 
 
 /* =========================================================
-   EBOOK COVER
+   EBOOK IMAGE
 ========================================================= */
 
 .ebook-cover{
 
     width:100%;
 
-    height:220px;
+    height:210px;
+
+    background:
+        #F7F8FA;
 
     display:flex;
 
@@ -545,9 +536,7 @@ button{
 
     justify-content:center;
 
-    margin-bottom:9px;
-
-    background:white;
+    padding:12px;
 
     overflow:hidden;
 
@@ -568,53 +557,70 @@ button{
 
 
 /* =========================================================
-   EBOOK INFO
+   EBOOK TITLE
 ========================================================= */
 
 .ebook-title{
 
-    min-height:42px;
+    padding:
+        0 16px;
 
-    display:flex;
-
-    align-items:flex-start;
-
-    justify-content:center;
-
-    font-size:14px;
-
-    line-height:1.25;
-
-    font-weight:800;
+    margin:
+        11px 0 6px;
 
     color:
         var(--navy);
 
-    padding:
-        0 5px;
+    font-size:17px;
 
-    margin-bottom:5px;
+    line-height:1.2;
+
+    font-weight:800;
+
+    text-align:left;
 
 }
 
 
+.ebook-label{
+
+    display:block;
+
+    color:
+        var(--gold-dark);
+
+    font-size:9px;
+
+    font-weight:900;
+
+    letter-spacing:1.4px;
+
+    margin-bottom:6px;
+
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
 .ebook-description{
 
-    min-height:58px;
-
     padding:
-        0 7px;
+        0 16px;
+
+    margin-bottom:3px;
+
+    min-height:51px;
 
     color:
         #64748B;
 
-    font-size:10px;
+    font-size:11px;
 
     line-height:1.4;
 
-    text-align:center;
-
-    margin-bottom:3px;
+    text-align:left;
 
     display:
         -webkit-box;
@@ -630,17 +636,41 @@ button{
 
 
 /* =========================================================
-   EBOOK PRICE
+   PRICE
 ========================================================= */
 
 .ebook-price{
 
-    font-size:20px;
+    padding:
+        0 16px;
+
+    margin:
+        8px 0 11px;
+
+    font-size:24px;
 
     font-weight:900;
 
-    margin:
-        7px 0 8px;
+    text-align:left;
+
+}
+
+
+/* =========================================================
+   EBOOK BUTTON ROW
+========================================================= */
+
+.ebook-buttons{
+
+    display:grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:8px;
+
+    padding:
+        0 10px 10px;
 
 }
 
@@ -649,32 +679,21 @@ button{
    BUY NOW
 ========================================================= */
 
-.buy-btn{
+.ebook-card .buy-btn{
 
     width:100%;
 
-    min-height:40px;
+    min-height:46px;
 
     border:none;
 
-    border-radius:7px;
+    border-radius:9px;
 
     background:
         var(--gold);
 
     color:
         var(--navy);
-
-    font-size:10px;
-
-    font-weight:900;
-
-    line-height:1.1;
-
-    padding:
-        6px 5px;
-
-    margin-bottom:6px;
 
     display:flex;
 
@@ -684,10 +703,18 @@ button{
 
     text-align:center;
 
+    font-size:10px;
+
+    font-weight:900;
+
+    padding:6px;
+
+    margin:0;
+
 }
 
 
-.buy-btn:hover{
+.ebook-card .buy-btn:hover{
 
     background:
         var(--gold-dark);
@@ -696,26 +723,23 @@ button{
 
 
 /* =========================================================
-   CART BUTTON
+   ADD TO CART
 ========================================================= */
 
-.cart-btn{
+.ebook-card .cart-btn{
 
     width:100%;
 
-    min-height:38px;
+    min-height:46px;
 
-    border:
-        1px solid var(--navy);
+    border:none;
 
-    border-radius:7px;
+    border-radius:9px;
 
     background:
         var(--navy);
 
     color:white;
-
-    font-size:15px;
 
     display:flex;
 
@@ -723,10 +747,20 @@ button{
 
     justify-content:center;
 
+    text-align:center;
+
+    font-size:10px;
+
+    font-weight:900;
+
+    padding:6px;
+
+    margin:0;
+
 }
 
 
-.cart-btn:hover{
+.ebook-card .cart-btn:hover{
 
     background:
         #102D52;
@@ -1158,14 +1192,14 @@ button{
 
     .ebook-card{
 
-        max-width:250px;
+        max-width:235px;
 
     }
 
 
     .ebook-cover{
 
-        height:195px;
+        height:190px;
 
     }
 
@@ -1174,41 +1208,55 @@ button{
 
         font-size:13px;
 
-        min-height:44px;
+        padding:
+            0 13px;
+
+    }
+
+
+    .ebook-label{
+
+        font-size:8px;
 
     }
 
 
     .ebook-description{
 
-        font-size:9.5px;
+        font-size:9px;
 
-        min-height:62px;
+        padding:
+            0 13px;
 
     }
 
 
     .ebook-price{
 
-        font-size:19px;
+        font-size:20px;
+
+        padding:
+            0 13px;
 
     }
 
 
-    .buy-btn{
+    .ebook-buttons{
 
-        min-height:39px;
+        gap:6px;
 
-        font-size:9px;
+        padding:
+            0 8px 8px;
 
     }
 
 
-    .cart-btn{
+    .ebook-card .buy-btn,
+    .ebook-card .cart-btn{
 
-        min-height:38px;
+        min-height:42px;
 
-        font-size:15px;
+        font-size:8px;
 
     }
 
@@ -1412,7 +1460,7 @@ button{
         grid-template-columns:
             repeat(2,minmax(0,1fr));
 
-        gap:12px;
+        gap:10px;
 
     }
 
@@ -1421,19 +1469,16 @@ button{
 
         max-width:none;
 
-        padding:
-            7px 6px 8px;
-
-        border-radius:8px;
+        border-radius:10px;
 
     }
 
 
     .ebook-cover{
 
-        height:170px;
+        height:155px;
 
-        margin-bottom:7px;
+        padding:8px;
 
     }
 
@@ -1442,12 +1487,22 @@ button{
 
         font-size:11px;
 
-        line-height:1.25;
-
-        min-height:46px;
+        line-height:1.2;
 
         padding:
-            0 3px;
+            0 9px;
+
+        margin:
+            8px 0 5px;
+
+    }
+
+
+    .ebook-label{
+
+        font-size:7px;
+
+        letter-spacing:1px;
 
         margin-bottom:4px;
 
@@ -1456,49 +1511,54 @@ button{
 
     .ebook-description{
 
-        font-size:8.8px;
+        font-size:8.5px;
 
         line-height:1.4;
 
-        min-height:66px;
+        min-height:43px;
 
         padding:
-            0 3px;
-
-        margin-bottom:3px;
-
-        -webkit-line-clamp:3;
+            0 9px;
 
     }
 
 
     .ebook-price{
 
-        font-size:17px;
-
-        margin:
-            6px 0 7px;
-
-    }
-
-
-    .buy-btn{
-
-        min-height:37px;
-
-        font-size:7.5px;
+        font-size:18px;
 
         padding:
-            6px 2px;
+            0 9px;
+
+        margin:
+            6px 0 8px;
 
     }
 
 
-    .cart-btn{
+    .ebook-buttons{
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap:5px;
+
+        padding:
+            0 6px 6px;
+
+    }
+
+
+    .ebook-card .buy-btn,
+    .ebook-card .cart-btn{
 
         min-height:36px;
 
-        font-size:14px;
+        font-size:7px;
+
+        border-radius:6px;
+
+        padding:4px;
 
     }
 
@@ -1682,42 +1742,52 @@ button{
         grid-template-columns:
             repeat(2,minmax(0,1fr));
 
-        gap:9px;
+        gap:8px;
 
     }
 
 
     .ebook-card{
 
-        padding:
-            6px 4px 7px;
+        border-radius:9px;
 
     }
 
 
     .ebook-cover{
 
-        height:150px;
+        height:140px;
+
+        padding:7px;
 
     }
 
 
     .ebook-title{
 
-        font-size:10px;
+        font-size:9.5px;
 
-        min-height:46px;
+        padding:
+            0 7px;
+
+    }
+
+
+    .ebook-label{
+
+        font-size:6px;
 
     }
 
 
     .ebook-description{
 
-        font-size:8.3px;
+        font-size:7.8px;
 
-        min-height:68px;
+        min-height:40px;
 
-        line-height:1.4;
+        padding:
+            0 7px;
 
     }
 
@@ -1726,26 +1796,30 @@ button{
 
         font-size:16px;
 
-        margin:
-            6px 0;
+        padding:
+            0 7px;
 
     }
 
 
-    .buy-btn{
+    .ebook-buttons{
 
-        min-height:36px;
+        gap:4px;
 
-        font-size:7px;
+        padding:
+            0 5px 5px;
 
     }
 
 
-    .cart-btn{
+    .ebook-card .buy-btn,
+    .ebook-card .cart-btn{
 
-        min-height:35px;
+        min-height:33px;
 
-        font-size:13px;
+        font-size:6px;
+
+        border-radius:5px;
 
     }
 
@@ -1847,14 +1921,14 @@ button{
 
     .ebook-card{
 
-        max-width:275px;
+        max-width:260px;
 
     }
 
 
     .ebook-cover{
 
-        height:215px;
+        height:210px;
 
     }
 
@@ -2062,11 +2136,6 @@ button{
 
     </div>
 
-
-    <!--
-        SAME CONCEPT AS ENGLISH EBOOK PAGE:
-        Products are generated by JavaScript.
-    -->
 
     <div
         class="ebooks-grid"
@@ -2674,7 +2743,7 @@ button{
 
 
 /* ======================================================
-   CART KEY
+   SHARED CART KEY
 ====================================================== */
 
 const CART_KEY =
@@ -2683,7 +2752,6 @@ const CART_KEY =
 
 /* ======================================================
    FRENCH EBOOK DATA
-   SAME PRODUCT STRUCTURE AS ENGLISH PAGE
 ====================================================== */
 
 const ebooks = [
@@ -2706,10 +2774,10 @@ const ebooks = [
             17,
 
         priceId:
-            "price_1TqqVvRtp4gVtODyIdeAk7Ox",
+            "price_1UGX5mRtp4gVtODy9cpvEUNo",
 
         stripe:
-            "https://buy.stripe.com/3cIfZj8cg0PS67d9KX8N200"
+            "https://buy.stripe.com/cNi4gB504aqsdzFbT58N20S"
 
     }
 
@@ -2729,11 +2797,11 @@ let cart =
 
 
 /* ======================================================
-   REPAIR OLD FRENCH EBOOK CART ITEM
+   REPAIR OLD FRENCH EBOOK CART
 ====================================================== */
 
-const FRENCH_EBOOK_PRICE_ID =
-    "price_1TqqVvRtp4gVtODyIdeAk7Ox";
+const NEW_FRENCH_EBOOK_PRICE_ID =
+    "price_1UGX5mRtp4gVtODy9cpvEUNo";
 
 
 let cartWasUpdated =
@@ -2746,11 +2814,18 @@ cart.forEach(
         if(
             item.id === "fr-book-1"
             &&
-            !item.priceId
+            item.priceId !==
+            NEW_FRENCH_EBOOK_PRICE_ID
         ){
 
             item.priceId =
-                FRENCH_EBOOK_PRICE_ID;
+                NEW_FRENCH_EBOOK_PRICE_ID;
+
+            item.stripe =
+                "https://buy.stripe.com/cNi4gB504aqsdzFbT58N20S";
+
+            item.image =
+                "images/Comment_Paraître_20_Ans_Plus_Jeune.png";
 
             cartWasUpdated =
                 true;
@@ -2773,7 +2848,6 @@ if(cartWasUpdated){
 
 /* ======================================================
    CREATE EBOOK CARD
-   SAME ARCHITECTURE AS ENGLISH PAGE
 ====================================================== */
 
 function createProductCard(product){
@@ -2790,21 +2864,34 @@ function createProductCard(product){
 
     card.innerHTML = `
 
+        <!-- IMAGE -->
+
         <div class="ebook-cover">
 
             <img
                 src="${product.image}"
-                alt="${product.name}">
+                alt="${product.name}"
+                loading="eager">
 
         </div>
 
 
+        <!-- TITLE -->
+
         <div class="ebook-title">
+
+            <span class="ebook-label">
+
+                PREMIUM EBOOK
+
+            </span>
 
             ${product.name}
 
         </div>
 
+
+        <!-- DESCRIPTION -->
 
         <div class="ebook-description">
 
@@ -2813,6 +2900,8 @@ function createProductCard(product){
         </div>
 
 
+        <!-- PRICE -->
+
         <div class="ebook-price">
 
             $${product.price}
@@ -2820,38 +2909,49 @@ function createProductCard(product){
         </div>
 
 
-        <a
-            href="${product.stripe}"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="buy-btn">
+        <!-- BUTTONS -->
 
-            ACHETER
-            MAINTENANT
-
-        </a>
+        <div class="ebook-buttons">
 
 
-        <button
-            type="button"
+            <!-- BUY NOW — LEFT -->
 
-            class="cart-btn add-to-cart"
+            <a
+                href="${product.stripe}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="buy-btn">
 
-            data-id="${product.id}"
+                BUY NOW
 
-            data-name="${product.name}"
+            </a>
 
-            data-price="${product.price}"
 
-            data-price-id="${product.priceId}"
+            <!-- ADD TO CART — RIGHT -->
 
-            data-image="${product.image}"
+            <button
+                type="button"
 
-            data-stripe="${product.stripe}">
+                class="cart-btn add-to-cart"
 
-            <i class="fa-solid fa-cart-shopping"></i>
+                data-id="${product.id}"
 
-        </button>
+                data-name="${product.name}"
+
+                data-price="${product.price}"
+
+                data-price-id="${product.priceId}"
+
+                data-image="${product.image}"
+
+                data-stripe="${product.stripe}">
+
+                ADD TO CART
+
+            </button>
+
+
+        </div>
 
     `;
 
@@ -2931,7 +3031,6 @@ function saveCart(){
 
 /* ======================================================
    ADD TO CART
-   EVENT DELEGATION
 ====================================================== */
 
 document.addEventListener(
@@ -3000,7 +3099,7 @@ document.addEventListener(
 
 
             /* ==========================================
-               EBOOK CART BUTTON
+               EBOOK BUTTON
             ========================================== */
 
             if(
@@ -3017,7 +3116,7 @@ document.addEventListener(
                     function(){
 
                         button.innerHTML =
-                            '<i class="fa-solid fa-cart-shopping"></i>';
+                            "ADD TO CART";
 
                     },
                     1000
@@ -3027,7 +3126,7 @@ document.addEventListener(
 
 
             /* ==========================================
-               PACK CART BUTTON
+               PACK BUTTON
             ========================================== */
 
             else{
