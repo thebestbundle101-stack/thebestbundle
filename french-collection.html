@@ -116,8 +116,6 @@ button{
 }
 
 
-/* UPDATED LOGO — DESKTOP 56px */
-
 .logo{
 
     height:56px;
@@ -477,7 +475,7 @@ button{
 
 
 /* =========================================================
-   EBOOK CARD — COMPACT
+   EBOOK CARD
 ========================================================= */
 
 .ebook-card{
@@ -548,7 +546,7 @@ button{
 
 
 /* =========================================================
-   EBOOK TITLE — COMPACT
+   EBOOK TITLE
 ========================================================= */
 
 .ebook-title{
@@ -579,7 +577,7 @@ button{
 
 
 /* =========================================================
-   EBOOK DESCRIPTION — SHORTER
+   EBOOK DESCRIPTION
 ========================================================= */
 
 .ebook-description{
@@ -1260,7 +1258,6 @@ button{
 
 /* =========================================================
    MOBILE
-   2 COLUMNS
 ========================================================= */
 
 @media(max-width:600px){
@@ -1371,10 +1368,6 @@ button{
     }
 
 
-    /* =====================================================
-       EBOOKS — COMPACT 2 COLUMNS
-    ===================================================== */
-
     .ebooks-grid{
 
         grid-template-columns:
@@ -1468,10 +1461,6 @@ button{
 
     }
 
-
-    /* =====================================================
-       PACKS — 2 COLUMNS × 2 ROWS
-    ===================================================== */
 
     .packs{
 
@@ -1609,8 +1598,6 @@ button{
     }
 
 
-    /* TRUST */
-
     .trust{
 
         gap:8px;
@@ -1636,7 +1623,6 @@ button{
 
 /* =========================================================
    VERY SMALL PHONES
-   STILL 2 COLUMNS
 ========================================================= */
 
 @media(max-width:360px){
@@ -1722,8 +1708,6 @@ button{
 
     }
 
-
-    /* PACKS */
 
     .packs{
 
@@ -2030,8 +2014,9 @@ button{
             <div class="ebook-cover">
 
                 <img
-                    src="images/Comment_Paraître_20_Ans_Plus_Jeune.png"
-                    alt="Comment paraître 20 ans plus jeune">
+                    src="images/Comment paraître 20 ans plus jeune.png"
+                    alt="Comment paraître 20 ans plus jeune"
+                    onerror="this.style.display='none';">
 
             </div>
 
@@ -2070,6 +2055,11 @@ button{
             </a>
 
 
+            <!-- =================================================
+                 IMPORTANT:
+                 STRIPE PRICE ID ADDED HERE
+            ================================================== -->
+
             <button
                 type="button"
                 class="cart-btn add-to-cart"
@@ -2079,10 +2069,10 @@ button{
                 data-name="Comment paraître 20 ans plus jeune"
 
                 data-price="17"
-                
+
                 data-price-id="price_1TqqVvRtp4gVtODyIdeAk7Ox"
 
-                data-image="images/Comment_Paraître_20_Ans_Plus_Jeune.png">
+                data-image="images/Comment paraître 20 ans plus jeune.png">
 
                 <i class="fa-solid fa-cart-shopping"></i>
 
@@ -2691,14 +2681,21 @@ button{
 
 <script>
 
-
-/* ======================================================
-   SHARED CART
-====================================================== */
-
 const CART_KEY =
     "theBestBundleCart";
 
+
+/* ======================================================
+   STRIPE PRICE ID
+====================================================== */
+
+const FRENCH_EBOOK_PRICE_ID =
+    "price_1TqqVvRtp4gVtODyIdeAk7Ox";
+
+
+/* ======================================================
+   LOAD CART
+====================================================== */
 
 let cart =
     JSON.parse(
@@ -2707,6 +2704,47 @@ let cart =
         )
     ) || [];
 
+
+/* ======================================================
+   REPAIR OLD FRENCH EBOOK CART ITEM
+====================================================== */
+
+let cartWasUpdated = false;
+
+
+cart.forEach(
+    function(item){
+
+        if(
+            item.id === "fr-book-1"
+            &&
+            !item.priceId
+        ){
+
+            item.priceId =
+                FRENCH_EBOOK_PRICE_ID;
+
+            cartWasUpdated = true;
+
+        }
+
+    }
+);
+
+
+if(cartWasUpdated){
+
+    localStorage.setItem(
+        CART_KEY,
+        JSON.stringify(cart)
+    );
+
+}
+
+
+/* ======================================================
+   UPDATE CART COUNT
+====================================================== */
 
 function updateCartCount(){
 
@@ -2725,6 +2763,10 @@ function updateCartCount(){
 
 }
 
+
+/* ======================================================
+   SAVE CART
+====================================================== */
 
 function saveCart(){
 
@@ -2768,6 +2810,9 @@ document
                             Number(
                                 this.dataset.price
                             ),
+
+                        priceId:
+                            this.dataset.priceId || null,
 
                         image:
                             this.dataset.image
