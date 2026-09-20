@@ -442,13 +442,14 @@ button{
 
     gap:20px;
 
-    align-items:start;
+    align-items:stretch;
 
 }
 
 
 /* =========================================================
    EBOOK CARD
+   SAME HEIGHT FOR EVERY EBOOK
 ========================================================= */
 
 .ebook-card{
@@ -456,6 +457,8 @@ button{
     width:100%;
 
     max-width:260px;
+
+    height:520px;
 
     margin:0 auto;
 
@@ -477,8 +480,8 @@ button{
     flex-direction:column;
 
     transition:
-        transform .7s ease,
-        opacity .7s ease,
+        transform .35s ease,
+        opacity .35s ease,
         box-shadow .25s ease;
 
 }
@@ -486,7 +489,9 @@ button{
 .ebook-card.position-changing{
 
     transform:
-        translateY(-5px);
+        translateY(-4px);
+
+    opacity:.82;
 
 }
 
@@ -510,6 +515,8 @@ button{
     width:100%;
 
     height:250px;
+
+    flex-shrink:0;
 
     background:
         #F7F8FA;
@@ -551,6 +558,8 @@ button{
     margin:
         11px 0 6px;
 
+    min-height:55px;
+
     color:
         var(--navy);
 
@@ -561,6 +570,8 @@ button{
     font-weight:800;
 
     text-align:left;
+
+    flex-shrink:0;
 
 }
 
@@ -593,7 +604,9 @@ button{
 
     margin-bottom:3px;
 
-    min-height:51px;
+    min-height:65px;
+
+    height:65px;
 
     color:
         #64748B;
@@ -614,6 +627,8 @@ button{
 
     overflow:hidden;
 
+    flex-shrink:0;
+
 }
 
 
@@ -629,11 +644,15 @@ button{
     margin:
         8px 0 11px;
 
+    min-height:29px;
+
     font-size:24px;
 
     font-weight:900;
 
     text-align:left;
+
+    flex-shrink:0;
 
 }
 
@@ -653,6 +672,8 @@ button{
 
     padding:
         0 10px 10px;
+
+    margin-top:auto;
 
 }
 
@@ -1154,6 +1175,8 @@ button{
 
         max-width:235px;
 
+        height:440px;
+
     }
 
     .ebook-cover{
@@ -1169,6 +1192,8 @@ button{
         padding:
             0 13px;
 
+        min-height:48px;
+
     }
 
     .ebook-label{
@@ -1183,6 +1208,10 @@ button{
 
         padding:
             0 13px;
+
+        min-height:55px;
+
+        height:55px;
 
     }
 
@@ -1385,10 +1414,12 @@ button{
 
     }
 
-    /* ================================================
-       2 EBOOKS PER ROW
+
+    /* =====================================================
+       MOBILE — 2 EBOOKS PER ROW
        ALL 4 ALWAYS VISIBLE
-    ================================================= */
+       SAME HEIGHT
+    ===================================================== */
 
     .ebooks-grid{
 
@@ -1397,11 +1428,15 @@ button{
 
         gap:10px;
 
+        align-items:stretch;
+
     }
 
     .ebook-card{
 
         max-width:none;
+
+        height:390px;
 
         border-radius:10px;
 
@@ -1427,6 +1462,10 @@ button{
         margin:
             8px 0 5px;
 
+        min-height:48px;
+
+        height:48px;
+
     }
 
     .ebook-label{
@@ -1447,6 +1486,8 @@ button{
 
         min-height:43px;
 
+        height:43px;
+
         padding:
             0 9px;
 
@@ -1461,6 +1502,8 @@ button{
 
         margin:
             6px 0 8px;
+
+        min-height:22px;
 
     }
 
@@ -1488,6 +1531,11 @@ button{
         padding:4px;
 
     }
+
+
+    /* =====================================================
+       PACKS
+    ===================================================== */
 
     .packs{
 
@@ -1659,6 +1707,8 @@ button{
 
     .ebook-card{
 
+        height:365px;
+
         border-radius:9px;
 
     }
@@ -1678,6 +1728,10 @@ button{
         padding:
             0 7px;
 
+        min-height:44px;
+
+        height:44px;
+
     }
 
     .ebook-label{
@@ -1691,6 +1745,8 @@ button{
         font-size:7.8px;
 
         min-height:40px;
+
+        height:40px;
 
         padding:
             0 7px;
@@ -1815,6 +1871,8 @@ button{
     .ebook-card{
 
         max-width:260px;
+
+        height:520px;
 
     }
 
@@ -2079,35 +2137,23 @@ button{
                 <div class="pack-icons">
 
                     <span>
-
                         <i class="fa-solid fa-book"></i>
-
                         eBooks
-
                     </span>
 
                     <span>
-
                         <i class="fa-solid fa-file-lines"></i>
-
                         Templates
-
                     </span>
 
                     <span>
-
                         <i class="fa-solid fa-download"></i>
-
                         Téléchargement
-
                     </span>
 
                     <span>
-
                         <i class="fa-solid fa-gift"></i>
-
                         Bonus
-
                     </span>
 
                 </div>
@@ -2117,9 +2163,7 @@ button{
             <div class="pack-right">
 
                 <div class="pack-price">
-
                     $27
-
                 </div>
 
                 <div class="pack-buttons">
@@ -2172,49 +2216,33 @@ button{
             <div class="pack-info">
 
                 <div class="pack-name">
-
                     Creator Bundle
-
                 </div>
 
                 <div class="pack-desc">
-
                     3 eBooks + 6 Templates
-
                 </div>
 
                 <div class="pack-icons">
 
                     <span>
-
                         <i class="fa-solid fa-book"></i>
-
                         eBooks
-
                     </span>
 
                     <span>
-
                         <i class="fa-solid fa-file-lines"></i>
-
                         Templates
-
                     </span>
 
                     <span>
-
                         <i class="fa-solid fa-download"></i>
-
                         Téléchargement
-
                     </span>
 
                     <span>
-
                         <i class="fa-solid fa-gift"></i>
-
                         Bonus
-
                     </span>
 
                 </div>
@@ -2224,9 +2252,7 @@ button{
             <div class="pack-right">
 
                 <div class="pack-price">
-
                     $37
-
                 </div>
 
                 <div class="pack-buttons">
@@ -2279,49 +2305,33 @@ button{
             <div class="pack-info">
 
                 <div class="pack-name">
-
                     Pro Bundle
-
                 </div>
 
                 <div class="pack-desc">
-
                     5 eBooks + 10 Templates
-
                 </div>
 
                 <div class="pack-icons">
 
                     <span>
-
                         <i class="fa-solid fa-book"></i>
-
                         eBooks
-
                     </span>
 
                     <span>
-
                         <i class="fa-solid fa-file-lines"></i>
-
                         Templates
-
                     </span>
 
                     <span>
-
                         <i class="fa-solid fa-download"></i>
-
                         Téléchargement
-
                     </span>
 
                     <span>
-
                         <i class="fa-solid fa-gift"></i>
-
                         Bonus
-
                     </span>
 
                 </div>
@@ -2331,9 +2341,7 @@ button{
             <div class="pack-right">
 
                 <div class="pack-price">
-
                     $57
-
                 </div>
 
                 <div class="pack-buttons">
@@ -2386,49 +2394,33 @@ button{
             <div class="pack-info">
 
                 <div class="pack-name">
-
                     Vault Bundle
-
                 </div>
 
                 <div class="pack-desc">
-
                     10 eBooks + 20 Templates
-
                 </div>
 
                 <div class="pack-icons">
 
                     <span>
-
                         <i class="fa-solid fa-book"></i>
-
                         eBooks
-
                     </span>
 
                     <span>
-
                         <i class="fa-solid fa-file-lines"></i>
-
                         Templates
-
                     </span>
 
                     <span>
-
                         <i class="fa-solid fa-download"></i>
-
                         Téléchargement
-
                     </span>
 
                     <span>
-
                         <i class="fa-solid fa-gift"></i>
-
                         Bonus
-
                     </span>
 
                 </div>
@@ -2438,9 +2430,7 @@ button{
             <div class="pack-right">
 
                 <div class="pack-price">
-
                     $97
-
                 </div>
 
                 <div class="pack-buttons">
@@ -2491,7 +2481,6 @@ button{
             <i class="fa-solid fa-shield-halved"></i>
 
             PAIEMENT<br>
-
             100% SÉCURISÉ
 
         </div>
@@ -2501,7 +2490,6 @@ button{
             <i class="fa-solid fa-bolt"></i>
 
             TÉLÉCHARGEMENT<br>
-
             IMMÉDIAT
 
         </div>
@@ -2511,7 +2499,6 @@ button{
             <i class="fa-solid fa-face-smile"></i>
 
             SATISFAIT OU<br>
-
             REMBOURSÉ
 
         </div>
@@ -2941,7 +2928,7 @@ if(ebooksGrid){
 /* ======================================================
    AUTOMATIC EBOOK POSITION ROTATION
    EVERY 20 SECONDS
-   ALL EBOOKS STAY VISIBLE
+   ALL EBOOKS REMAIN VISIBLE
 ====================================================== */
 
 let ebookRotationIndex =
@@ -2949,6 +2936,13 @@ let ebookRotationIndex =
 
 
 function rotateEbookPositions(){
+
+    if(!ebooksGrid){
+
+        return;
+
+    }
+
 
     const cards =
         Array.from(
@@ -2964,7 +2958,9 @@ function rotateEbookPositions(){
 
 
     ebookRotationIndex =
-        (ebookRotationIndex + 1)
+        (
+            ebookRotationIndex + 1
+        )
         %
         cards.length;
 
@@ -2984,9 +2980,11 @@ function rotateEbookPositions(){
         function(){
 
             const rotatedCards =
-                cards.slice(
+                cards
+                .slice(
                     ebookRotationIndex
-                ).concat(
+                )
+                .concat(
                     cards.slice(
                         0,
                         ebookRotationIndex
@@ -3019,7 +3017,7 @@ function rotateEbookPositions(){
                     );
 
                 },
-                100
+                150
             );
 
         },
@@ -3030,8 +3028,8 @@ function rotateEbookPositions(){
 
 
 /* ======================================================
-   START ROTATION
-   20 SECONDS
+   START EBOOK ROTATION
+   EXACTLY EVERY 20 SECONDS
 ====================================================== */
 
 setInterval(
@@ -3150,6 +3148,10 @@ document.addEventListener(
             saveCart();
 
 
+            /* ==========================================
+               EBOOK BUTTON
+            ========================================== */
+
             if(
                 button.classList.contains(
                     "cart-btn"
@@ -3172,6 +3174,10 @@ document.addEventListener(
 
             }
 
+
+            /* ==========================================
+               PACK BUTTON
+            ========================================== */
 
             else{
 
