@@ -434,14 +434,9 @@ button{
 
 .ebooks-carousel{
 
-    position:relative;
-
     width:100%;
 
     overflow:hidden;
-
-    padding:
-        5px 0 15px;
 
 }
 
@@ -455,8 +450,6 @@ button{
 
     transition:
         transform .8s ease;
-
-    will-change:transform;
 
 }
 
@@ -754,51 +747,6 @@ button{
 
     background:
         #102D52;
-
-}
-
-
-/* =========================================================
-   CAROUSEL DOTS
-========================================================= */
-
-.ebook-dots{
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    gap:7px;
-
-    margin-top:15px;
-
-}
-
-.ebook-dot{
-
-    width:7px;
-
-    height:7px;
-
-    border-radius:50%;
-
-    background:#CBD5E1;
-
-    transition:
-        all .25s ease;
-
-}
-
-.ebook-dot.active{
-
-    width:20px;
-
-    border-radius:10px;
-
-    background:
-        var(--gold-dark);
 
 }
 
@@ -1443,14 +1391,6 @@ button{
 
     }
 
-    .ebooks-carousel{
-
-        padding-left:0;
-
-        padding-right:0;
-
-    }
-
     .ebooks-grid{
 
         gap:10px;
@@ -2086,8 +2026,6 @@ button{
     </div>
 
 
-    <!-- EBOOK CAROUSEL -->
-
     <div class="ebooks-carousel">
 
         <div
@@ -2095,15 +2033,6 @@ button{
             id="ebooksGrid">
 
         </div>
-
-    </div>
-
-
-    <!-- CAROUSEL DOTS -->
-
-    <div
-        class="ebook-dots"
-        id="ebookDots">
 
     </div>
 
@@ -2683,6 +2612,7 @@ const ebooks = [
 
     /* ====================================================
        FRENCH EBOOK #2
+       LE GUIDE NATUREL ANTI-ÂGE
     ==================================================== */
 
     {
@@ -2713,6 +2643,7 @@ const ebooks = [
 
     /* ====================================================
        FRENCH EBOOK #3
+       LE PLAN DE LONGÉVITÉ
     ==================================================== */
 
     {
@@ -2892,6 +2823,8 @@ function createProductCard(product){
 
     card.innerHTML = `
 
+        <!-- IMAGE -->
+
         <div class="ebook-cover">
 
             <img
@@ -2901,6 +2834,8 @@ function createProductCard(product){
 
         </div>
 
+
+        <!-- TITLE -->
 
         <div class="ebook-title">
 
@@ -2915,12 +2850,16 @@ function createProductCard(product){
         </div>
 
 
+        <!-- DESCRIPTION -->
+
         <div class="ebook-description">
 
             ${product.description}
 
         </div>
 
+
+        <!-- PRICE -->
 
         <div class="ebook-price">
 
@@ -2929,8 +2868,12 @@ function createProductCard(product){
         </div>
 
 
+        <!-- BUTTONS -->
+
         <div class="ebook-buttons">
 
+
+            <!-- BUY NOW — LEFT -->
 
             <a
                 href="${product.stripe}"
@@ -2942,6 +2885,8 @@ function createProductCard(product){
 
             </a>
 
+
+            <!-- ADD TO CART — RIGHT -->
 
             <button
                 type="button"
@@ -2985,12 +2930,6 @@ const ebooksGrid =
     );
 
 
-const ebookDots =
-    document.getElementById(
-        "ebookDots"
-    );
-
-
 if(ebooksGrid){
 
     ebooks.forEach(
@@ -3009,19 +2948,20 @@ if(ebooksGrid){
 
 
 /* ======================================================
-   EBOOK CAROUSEL
-   ROTATION = 20 SECONDS
+   EBOOK ROTATION — EVERY 20 SECONDS
 ====================================================== */
 
-let ebookIndex =
-    0;
+let ebookPosition = 0;
 
-let ebookTimer =
-    null;
+let ebookRotation;
 
 
 /*
-   Number of ebooks visible at once.
+   Desktop / tablet:
+   3 ebooks visible.
+
+   Mobile:
+   2 ebooks visible.
 */
 
 function getVisibleEbooks(){
@@ -3038,122 +2978,14 @@ function getVisibleEbooks(){
 
 
 /*
-   Maximum carousel positions.
+   Move the ebook row.
 */
 
-function getMaxEbookIndex(){
-
-    const visible =
-        getVisibleEbooks();
-
-    return Math.max(
-        0,
-        ebooks.length - visible
-    );
-
-}
-
-
-/*
-   Create carousel dots.
-*/
-
-function createEbookDots(){
-
-    if(!ebookDots){
-
-        return;
-
-    }
-
-
-    ebookDots.innerHTML =
-        "";
-
-
-    const maxIndex =
-        getMaxEbookIndex();
-
-
-    for(
-        let i = 0;
-        i <= maxIndex;
-        i++
-    ){
-
-        const dot =
-            document.createElement(
-                "span"
-            );
-
-
-        dot.className =
-            "ebook-dot";
-
-
-        if(
-            i ===
-            ebookIndex
-        ){
-
-            dot.classList.add(
-                "active"
-            );
-
-        }
-
-
-        dot.addEventListener(
-            "click",
-            function(){
-
-                ebookIndex =
-                    i;
-
-                updateEbookCarousel();
-
-                restartEbookTimer();
-
-            }
-        );
-
-
-        ebookDots.appendChild(
-            dot
-        );
-
-    }
-
-}
-
-
-/*
-   Update carousel position.
-*/
-
-function updateEbookCarousel(){
+function rotateEbooks(){
 
     if(!ebooksGrid){
 
         return;
-
-    }
-
-
-    const visible =
-        getVisibleEbooks();
-
-    const maxIndex =
-        getMaxEbookIndex();
-
-
-    if(
-        ebookIndex >
-        maxIndex
-    ){
-
-        ebookIndex =
-            0;
 
     }
 
@@ -3164,162 +2996,106 @@ function updateEbookCarousel(){
         );
 
 
-    if(!cards.length){
+    const visible =
+        getVisibleEbooks();
+
+
+    const maximumPosition =
+        Math.max(
+            0,
+            cards.length - visible
+        );
+
+
+    if(maximumPosition === 0){
 
         return;
 
     }
 
 
-    const firstCard =
-        cards[0];
+    ebookPosition++;
+
+
+    if(
+        ebookPosition >
+        maximumPosition
+    ){
+
+        ebookPosition = 0;
+
+    }
 
 
     const cardWidth =
-        firstCard.offsetWidth;
+        cards[0].getBoundingClientRect().width;
 
 
     const gap =
         parseFloat(
-            getComputedStyle(
+            window.getComputedStyle(
                 ebooksGrid
             ).gap
         ) || 0;
 
 
-    const movement =
-        ebookIndex *
-        (cardWidth + gap);
-
-
     ebooksGrid.style.transform =
         "translateX(-" +
-        movement +
+        (
+            ebookPosition *
+            (cardWidth + gap)
+        ) +
         "px)";
-
-
-    const dots =
-        ebookDots
-            ? ebookDots.querySelectorAll(
-                ".ebook-dot"
-            )
-            : [];
-
-
-    dots.forEach(
-        function(dot,index){
-
-            dot.classList.toggle(
-                "active",
-                index === ebookIndex
-            );
-
-        }
-    );
 
 }
 
 
 /*
-   Start the 20-second rotation.
+   Start automatic rotation.
+
+   EXACTLY 20 SECONDS.
 */
 
-function startEbookTimer(){
+function startEbookRotation(){
 
     clearInterval(
-        ebookTimer
+        ebookRotation
     );
 
 
-    ebookTimer =
+    ebookRotation =
         setInterval(
-            function(){
-
-                const maxIndex =
-                    getMaxEbookIndex();
-
-
-                if(
-                    maxIndex === 0
-                ){
-
-                    return;
-
-                }
-
-
-                ebookIndex++;
-
-
-                if(
-                    ebookIndex >
-                    maxIndex
-                ){
-
-                    ebookIndex =
-                        0;
-
-                }
-
-
-                updateEbookCarousel();
-
-            },
-
+            rotateEbooks,
             20000
-
         );
 
 }
 
 
-/*
-   Restart timer after manual navigation.
-*/
-
-function restartEbookTimer(){
-
-    startEbookTimer();
-
-}
+startEbookRotation();
 
 
 /*
-   Initialize carousel.
-*/
-
-function initializeEbookCarousel(){
-
-    ebookIndex =
-        0;
-
-    createEbookDots();
-
-    updateEbookCarousel();
-
-    startEbookTimer();
-
-}
-
-
-/*
-   Recalculate after screen rotation
-   or window resize.
+   Reset position correctly
+   when screen size changes.
 */
 
 window.addEventListener(
     "resize",
     function(){
 
-        createEbookDots();
+        ebookPosition = 0;
 
-        updateEbookCarousel();
+
+        if(ebooksGrid){
+
+            ebooksGrid.style.transform =
+                "translateX(0)";
+
+        }
 
     }
 );
-
-
-initializeEbookCarousel();
 
 
 /* ======================================================
