@@ -429,19 +429,34 @@ button{
 
 
 /* =========================================================
-   EBOOK GRID
+   EBOOK CAROUSEL
 ========================================================= */
+
+.ebooks-carousel{
+
+    position:relative;
+
+    width:100%;
+
+    overflow:hidden;
+
+    padding:
+        5px 0 15px;
+
+}
 
 .ebooks-grid{
 
-    display:grid;
-
-    grid-template-columns:
-        repeat(3,minmax(0,1fr));
+    display:flex;
 
     gap:20px;
 
-    align-items:start;
+    align-items:stretch;
+
+    transition:
+        transform .8s ease;
+
+    will-change:transform;
 
 }
 
@@ -452,7 +467,11 @@ button{
 
 .ebook-card{
 
-    width:100%;
+    flex:
+        0 0 calc((100% - 40px) / 3);
+
+    width:
+        calc((100% - 40px) / 3);
 
     max-width:260px;
 
@@ -735,6 +754,51 @@ button{
 
     background:
         #102D52;
+
+}
+
+
+/* =========================================================
+   CAROUSEL DOTS
+========================================================= */
+
+.ebook-dots{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:7px;
+
+    margin-top:15px;
+
+}
+
+.ebook-dot{
+
+    width:7px;
+
+    height:7px;
+
+    border-radius:50%;
+
+    background:#CBD5E1;
+
+    transition:
+        all .25s ease;
+
+}
+
+.ebook-dot.active{
+
+    width:20px;
+
+    border-radius:10px;
+
+    background:
+        var(--gold-dark);
 
 }
 
@@ -1134,14 +1198,17 @@ button{
 
     .ebooks-grid{
 
-        grid-template-columns:
-            repeat(3,minmax(0,1fr));
-
         gap:14px;
 
     }
 
     .ebook-card{
+
+        flex:
+            0 0 calc((100% - 28px) / 3);
+
+        width:
+            calc((100% - 28px) / 3);
 
         max-width:235px;
 
@@ -1376,16 +1443,27 @@ button{
 
     }
 
-    .ebooks-grid{
+    .ebooks-carousel{
 
-        grid-template-columns:
-            repeat(2,minmax(0,1fr));
+        padding-left:0;
+
+        padding-right:0;
+
+    }
+
+    .ebooks-grid{
 
         gap:10px;
 
     }
 
     .ebook-card{
+
+        flex:
+            0 0 calc((100% - 10px) / 2);
+
+        width:
+            calc((100% - 10px) / 2);
 
         max-width:none;
 
@@ -1636,14 +1714,17 @@ button{
 
     .ebooks-grid{
 
-        grid-template-columns:
-            repeat(2,minmax(0,1fr));
-
         gap:8px;
 
     }
 
     .ebook-card{
+
+        flex:
+            0 0 calc((100% - 8px) / 2);
+
+        width:
+            calc((100% - 8px) / 2);
 
         border-radius:9px;
 
@@ -1793,12 +1874,17 @@ button{
 
     .ebooks-grid{
 
-        grid-template-columns:
-            repeat(3,minmax(0,1fr));
+        gap:20px;
 
     }
 
     .ebook-card{
+
+        flex:
+            0 0 calc((100% - 40px) / 3);
+
+        width:
+            calc((100% - 40px) / 3);
 
         max-width:260px;
 
@@ -1999,9 +2085,25 @@ button{
 
     </div>
 
+
+    <!-- EBOOK CAROUSEL -->
+
+    <div class="ebooks-carousel">
+
+        <div
+            class="ebooks-grid"
+            id="ebooksGrid">
+
+        </div>
+
+    </div>
+
+
+    <!-- CAROUSEL DOTS -->
+
     <div
-        class="ebooks-grid"
-        id="ebooksGrid">
+        class="ebook-dots"
+        id="ebookDots">
 
     </div>
 
@@ -2581,7 +2683,6 @@ const ebooks = [
 
     /* ====================================================
        FRENCH EBOOK #2
-       LE GUIDE NATUREL ANTI-ÂGE
     ==================================================== */
 
     {
@@ -2612,7 +2713,6 @@ const ebooks = [
 
     /* ====================================================
        FRENCH EBOOK #3
-       LE PLAN DE LONGÉVITÉ
     ==================================================== */
 
     {
@@ -2637,6 +2737,37 @@ const ebooks = [
 
         stripe:
             "https://buy.stripe.com/14A8wR5049mo0MTe1d8N20U"
+
+    },
+
+
+    /* ====================================================
+       FRENCH EBOOK #4
+       LE PLAN D'AFFAIRES DIGITAL
+    ==================================================== */
+
+    {
+
+        id:
+            "fr-book-4",
+
+        name:
+            "Le Plan d’Affaires Digital",
+
+        image:
+            "images/Le_Plan_Daffaires_Digital_Cover.png",
+
+        description:
+            "Le Plan d’Affaires Digital est un guide pratique étape par étape pour lancer, développer et faire grandir votre business en ligne. Découvrez comment choisir une niche rentable, construire votre offre, définir votre tarification, mettre en place un tunnel de vente, lancer votre activité avec un plan marketing de 14 jours et utiliser les métriques pour soutenir votre croissance.",
+
+        price:
+            17,
+
+        priceId:
+            "price_1UHoTPRtp4gVtODyBnUy9m5F",
+
+        stripe:
+            "https://buy.stripe.com/bJefZj1NS2Y03Z5aP18N20V"
 
     }
 
@@ -2761,8 +2892,6 @@ function createProductCard(product){
 
     card.innerHTML = `
 
-        <!-- IMAGE -->
-
         <div class="ebook-cover">
 
             <img
@@ -2772,8 +2901,6 @@ function createProductCard(product){
 
         </div>
 
-
-        <!-- TITLE -->
 
         <div class="ebook-title">
 
@@ -2788,16 +2915,12 @@ function createProductCard(product){
         </div>
 
 
-        <!-- DESCRIPTION -->
-
         <div class="ebook-description">
 
             ${product.description}
 
         </div>
 
-
-        <!-- PRICE -->
 
         <div class="ebook-price">
 
@@ -2806,12 +2929,8 @@ function createProductCard(product){
         </div>
 
 
-        <!-- BUTTONS -->
-
         <div class="ebook-buttons">
 
-
-            <!-- BUY NOW — LEFT -->
 
             <a
                 href="${product.stripe}"
@@ -2823,8 +2942,6 @@ function createProductCard(product){
 
             </a>
 
-
-            <!-- ADD TO CART — RIGHT -->
 
             <button
                 type="button"
@@ -2868,6 +2985,12 @@ const ebooksGrid =
     );
 
 
+const ebookDots =
+    document.getElementById(
+        "ebookDots"
+    );
+
+
 if(ebooksGrid){
 
     ebooks.forEach(
@@ -2883,6 +3006,320 @@ if(ebooksGrid){
     );
 
 }
+
+
+/* ======================================================
+   EBOOK CAROUSEL
+   ROTATION = 20 SECONDS
+====================================================== */
+
+let ebookIndex =
+    0;
+
+let ebookTimer =
+    null;
+
+
+/*
+   Number of ebooks visible at once.
+*/
+
+function getVisibleEbooks(){
+
+    if(window.innerWidth <= 600){
+
+        return 2;
+
+    }
+
+    return 3;
+
+}
+
+
+/*
+   Maximum carousel positions.
+*/
+
+function getMaxEbookIndex(){
+
+    const visible =
+        getVisibleEbooks();
+
+    return Math.max(
+        0,
+        ebooks.length - visible
+    );
+
+}
+
+
+/*
+   Create carousel dots.
+*/
+
+function createEbookDots(){
+
+    if(!ebookDots){
+
+        return;
+
+    }
+
+
+    ebookDots.innerHTML =
+        "";
+
+
+    const maxIndex =
+        getMaxEbookIndex();
+
+
+    for(
+        let i = 0;
+        i <= maxIndex;
+        i++
+    ){
+
+        const dot =
+            document.createElement(
+                "span"
+            );
+
+
+        dot.className =
+            "ebook-dot";
+
+
+        if(
+            i ===
+            ebookIndex
+        ){
+
+            dot.classList.add(
+                "active"
+            );
+
+        }
+
+
+        dot.addEventListener(
+            "click",
+            function(){
+
+                ebookIndex =
+                    i;
+
+                updateEbookCarousel();
+
+                restartEbookTimer();
+
+            }
+        );
+
+
+        ebookDots.appendChild(
+            dot
+        );
+
+    }
+
+}
+
+
+/*
+   Update carousel position.
+*/
+
+function updateEbookCarousel(){
+
+    if(!ebooksGrid){
+
+        return;
+
+    }
+
+
+    const visible =
+        getVisibleEbooks();
+
+    const maxIndex =
+        getMaxEbookIndex();
+
+
+    if(
+        ebookIndex >
+        maxIndex
+    ){
+
+        ebookIndex =
+            0;
+
+    }
+
+
+    const cards =
+        ebooksGrid.querySelectorAll(
+            ".ebook-card"
+        );
+
+
+    if(!cards.length){
+
+        return;
+
+    }
+
+
+    const firstCard =
+        cards[0];
+
+
+    const cardWidth =
+        firstCard.offsetWidth;
+
+
+    const gap =
+        parseFloat(
+            getComputedStyle(
+                ebooksGrid
+            ).gap
+        ) || 0;
+
+
+    const movement =
+        ebookIndex *
+        (cardWidth + gap);
+
+
+    ebooksGrid.style.transform =
+        "translateX(-" +
+        movement +
+        "px)";
+
+
+    const dots =
+        ebookDots
+            ? ebookDots.querySelectorAll(
+                ".ebook-dot"
+            )
+            : [];
+
+
+    dots.forEach(
+        function(dot,index){
+
+            dot.classList.toggle(
+                "active",
+                index === ebookIndex
+            );
+
+        }
+    );
+
+}
+
+
+/*
+   Start the 20-second rotation.
+*/
+
+function startEbookTimer(){
+
+    clearInterval(
+        ebookTimer
+    );
+
+
+    ebookTimer =
+        setInterval(
+            function(){
+
+                const maxIndex =
+                    getMaxEbookIndex();
+
+
+                if(
+                    maxIndex === 0
+                ){
+
+                    return;
+
+                }
+
+
+                ebookIndex++;
+
+
+                if(
+                    ebookIndex >
+                    maxIndex
+                ){
+
+                    ebookIndex =
+                        0;
+
+                }
+
+
+                updateEbookCarousel();
+
+            },
+
+            20000
+
+        );
+
+}
+
+
+/*
+   Restart timer after manual navigation.
+*/
+
+function restartEbookTimer(){
+
+    startEbookTimer();
+
+}
+
+
+/*
+   Initialize carousel.
+*/
+
+function initializeEbookCarousel(){
+
+    ebookIndex =
+        0;
+
+    createEbookDots();
+
+    updateEbookCarousel();
+
+    startEbookTimer();
+
+}
+
+
+/*
+   Recalculate after screen rotation
+   or window resize.
+*/
+
+window.addEventListener(
+    "resize",
+    function(){
+
+        createEbookDots();
+
+        updateEbookCarousel();
+
+    }
+);
+
+
+initializeEbookCarousel();
 
 
 /* ======================================================
