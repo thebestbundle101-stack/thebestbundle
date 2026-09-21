@@ -1417,7 +1417,7 @@ button{
 
     /* =====================================================
        MOBILE — 2 EBOOKS PER ROW
-       ALL 4 ALWAYS VISIBLE
+       ALL EBOOKS ALWAYS VISIBLE
        SAME HEIGHT
     ===================================================== */
 
@@ -2668,6 +2668,37 @@ const ebooks = [
         stripe:
             "https://buy.stripe.com/bJefZj1NS2Y03Z5aP18N20V"
 
+    },
+
+
+    /* ====================================================
+       FRENCH EBOOK #5
+       IA POUR LES ENTREPRENEURS
+    ==================================================== */
+
+    {
+
+        id:
+            "fr-book-5",
+
+        name:
+            "IA pour les entrepreneurs",
+
+        image:
+            "images/IA_Pour_Les_Entrepreneurs_Couverture.png",
+
+        description:
+            "IA pour les entrepreneurs est un guide pratique conçu pour aider les entrepreneurs à utiliser l’intelligence artificielle pour automatiser les tâches, optimiser leur entreprise, créer du contenu plus rapidement, améliorer leurs décisions commerciales et développer des systèmes d’IA répétables.",
+
+        price:
+            17,
+
+        priceId:
+            "price_1UHwKeRtp4gVtODyuVMpL02r",
+
+        stripe:
+            "https://buy.stripe.com/4gMbJ3fEIfKM67dcX98N20W"
+
     }
 
 ];
@@ -2697,6 +2728,9 @@ const NEW_FRENCH_EBOOK_3_PRICE_ID =
 
 const NEW_FRENCH_EBOOK_4_PRICE_ID =
     "price_1UHoTPRtp4gVtODyBnUy9m5F";
+
+const NEW_FRENCH_EBOOK_5_PRICE_ID =
+    "price_1UHwKeRtp4gVtODyuVMpL02r";
 
 
 let cartWasUpdated =
@@ -2777,6 +2811,33 @@ cart.forEach(
 
             item.image =
                 "images/Le_Plan_Daffaires_Digital_Cover.png";
+
+            cartWasUpdated =
+                true;
+
+        }
+
+
+        /* ==============================================
+           BOOK #5
+           IA POUR LES ENTREPRENEURS
+        ============================================== */
+
+        if(
+            item.id === "fr-book-5"
+            &&
+            item.priceId !==
+            NEW_FRENCH_EBOOK_5_PRICE_ID
+        ){
+
+            item.priceId =
+                NEW_FRENCH_EBOOK_5_PRICE_ID;
+
+            item.stripe =
+                "https://buy.stripe.com/4gMbJ3fEIfKM67dcX98N20W";
+
+            item.image =
+                "images/IA_Pour_Les_Entrepreneurs_Couverture.png";
 
             cartWasUpdated =
                 true;
