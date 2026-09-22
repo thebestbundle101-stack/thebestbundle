@@ -2699,6 +2699,37 @@ const ebooks = [
         stripe:
             "https://buy.stripe.com/4gMbJ3fEIfKM67dcX98N20W"
 
+    },
+
+
+    /* ====================================================
+       FRENCH EBOOK #6
+       PRODUITS NUMÉRIQUES QUI SE VENDENT
+    ==================================================== */
+
+    {
+
+        id:
+            "fr-book-6",
+
+        name:
+            "Produits Numériques Qui Se Vendent",
+
+        image:
+            "images/Produits_Numeriques_Qui_Se_Vendent_Couverture.png",
+
+        description:
+            "Découvrez comment créer, emballer et vendre des produits numériques en ligne. Ce guide pratique vous accompagne pour choisir une niche rentable, créer votre offre, définir votre prix, préparer votre lancement et utiliser un entonnoir de pré-vente pour valider votre idée et attirer vos premiers clients.",
+
+        price:
+            17,
+
+        priceId:
+            "price_1UIKQ0Rtp4gVtODylDX3mPAT",
+
+        stripe:
+            "https://buy.stripe.com/eVqdRbcsw568eDJ6yL8N20X"
+
     }
 
 ];
@@ -2731,6 +2762,9 @@ const NEW_FRENCH_EBOOK_4_PRICE_ID =
 
 const NEW_FRENCH_EBOOK_5_PRICE_ID =
     "price_1UHwKeRtp4gVtODyuVMpL02r";
+
+const NEW_FRENCH_EBOOK_6_PRICE_ID =
+    "price_1UIKQ0Rtp4gVtODylDX3mPAT";
 
 
 let cartWasUpdated =
@@ -2838,6 +2872,33 @@ cart.forEach(
 
             item.image =
                 "images/IA_Pour_Les_Entrepreneurs_Couverture.png";
+
+            cartWasUpdated =
+                true;
+
+        }
+
+
+        /* ==============================================
+           BOOK #6
+           PRODUITS NUMÉRIQUES QUI SE VENDENT
+        ============================================== */
+
+        if(
+            item.id === "fr-book-6"
+            &&
+            item.priceId !==
+            NEW_FRENCH_EBOOK_6_PRICE_ID
+        ){
+
+            item.priceId =
+                NEW_FRENCH_EBOOK_6_PRICE_ID;
+
+            item.stripe =
+                "https://buy.stripe.com/eVqdRbcsw568eDJ6yL8N20X";
+
+            item.image =
+                "images/Produits_Numeriques_Qui_Se_Vendent_Couverture.png";
 
             cartWasUpdated =
                 true;
