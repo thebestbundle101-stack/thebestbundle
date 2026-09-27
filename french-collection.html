@@ -15,7 +15,7 @@
 
 <meta
     name="description"
-    content="Découvrez la Collection Française TheBestBundle : eBooks premium et packs numériques.">
+    content="Découvrez la Collection Française TheBestBundle : eBooks premium, templates et packs numériques.">
 
 <link
     rel="stylesheet"
@@ -76,7 +76,6 @@ body{
 a{
 
     color:inherit;
-
     text-decoration:none;
 
 }
@@ -84,7 +83,6 @@ a{
 button{
 
     font:inherit;
-
     cursor:pointer;
 
 }
@@ -117,7 +115,6 @@ button{
 .logo{
 
     height:56px;
-
     width:auto;
 
 }
@@ -154,11 +151,9 @@ button{
     position:absolute;
 
     top:-11px;
-
     right:-11px;
 
     min-width:18px;
-
     height:18px;
 
     padding:
@@ -179,7 +174,6 @@ button{
     display:flex;
 
     align-items:center;
-
     justify-content:center;
 
 }
@@ -212,7 +206,6 @@ button{
 .back-link{
 
     font-weight:700;
-
     font-size:14px;
 
 }
@@ -228,7 +221,6 @@ button{
         8px 13px;
 
     font-weight:700;
-
     font-size:13px;
 
 }
@@ -291,7 +283,6 @@ button{
 .hero-line{
 
     width:45px;
-
     height:2px;
 
     background:
@@ -429,10 +420,11 @@ button{
 
 
 /* =========================================================
-   EBOOK GRID
+   EBOOK / TEMPLATE GRID
 ========================================================= */
 
-.ebooks-grid{
+.ebooks-grid,
+.templates-grid{
 
     display:grid;
 
@@ -447,7 +439,7 @@ button{
 
 
 /* =========================================================
-   EBOOK CARD
+   PRODUCT CARD
 ========================================================= */
 
 .ebook-card{
@@ -505,7 +497,7 @@ button{
 
 
 /* =========================================================
-   EBOOK IMAGE
+   PRODUCT IMAGE
 ========================================================= */
 
 .ebook-cover{
@@ -534,7 +526,6 @@ button{
 .ebook-cover img{
 
     width:100%;
-
     height:100%;
 
     object-fit:contain;
@@ -545,7 +536,7 @@ button{
 
 
 /* =========================================================
-   EBOOK TITLE
+   PRODUCT TITLE
 ========================================================= */
 
 .ebook-title{
@@ -656,7 +647,7 @@ button{
 
 
 /* =========================================================
-   EBOOK BUTTON ROW
+   PRODUCT BUTTON ROW
 ========================================================= */
 
 .ebook-buttons{
@@ -677,7 +668,7 @@ button{
 
 
 /* =========================================================
-   BUY NOW
+   BUY BUTTON
 ========================================================= */
 
 .ebook-card .buy-btn{
@@ -699,7 +690,6 @@ button{
     display:flex;
 
     align-items:center;
-
     justify-content:center;
 
     text-align:center;
@@ -723,7 +713,7 @@ button{
 
 
 /* =========================================================
-   ADD TO CART
+   CART BUTTON
 ========================================================= */
 
 .ebook-card .cart-btn{
@@ -744,7 +734,6 @@ button{
     display:flex;
 
     align-items:center;
-
     justify-content:center;
 
     text-align:center;
@@ -763,6 +752,135 @@ button{
 
     background:
         #102D52;
+
+}
+
+
+/* =========================================================
+   COLLECTION DIVIDER
+========================================================= */
+
+.collection-divider{
+
+    max-width:1100px;
+
+    margin:
+        5px auto 0;
+
+    padding:
+        30px 18px 10px;
+
+    text-align:center;
+
+}
+
+.divider-line{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-bottom:15px;
+
+}
+
+.divider-line::before,
+.divider-line::after{
+
+    content:"";
+
+    flex:1;
+
+    height:1px;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            #D9DEE7,
+            transparent
+        );
+
+}
+
+.divider-icon{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    background:
+        var(--navy);
+
+    color:
+        var(--gold);
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    font-size:17px;
+
+    box-shadow:
+        0 4px 12px rgba(7,26,51,.12);
+
+}
+
+.divider-title{
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:25px;
+
+    font-weight:700;
+
+    color:
+        var(--navy);
+
+    margin-bottom:6px;
+
+}
+
+.divider-text{
+
+    color:
+        #64748B;
+
+    font-size:12px;
+
+    line-height:1.5;
+
+}
+
+
+/* =========================================================
+   TEMPLATES SECTION
+========================================================= */
+
+.templates-section{
+
+    padding-top:25px;
+
+}
+
+.templates-section .section-kicker{
+
+    color:
+        var(--gold-dark);
+
+}
+
+.template-label{
+
+    color:
+        var(--gold-dark);
 
 }
 
@@ -834,7 +952,6 @@ button{
     display:flex;
 
     align-items:center;
-
     justify-content:center;
 
     background:#FFFFFF;
@@ -852,7 +969,6 @@ button{
 .pack-image img{
 
     width:100%;
-
     height:100%;
 
     object-fit:contain;
@@ -928,7 +1044,6 @@ button{
     display:flex;
 
     align-items:center;
-
     justify-content:center;
 
     gap:5px;
@@ -1003,7 +1118,7 @@ button{
     border-radius:6px;
 
     padding:
-        8px 8px;
+        8px;
 
     font-size:10px;
 
@@ -1014,7 +1129,6 @@ button{
     display:flex;
 
     align-items:center;
-
     justify-content:center;
 
     text-align:center;
@@ -1160,7 +1274,8 @@ button{
 
     }
 
-    .ebooks-grid{
+    .ebooks-grid,
+    .templates-grid{
 
         grid-template-columns:
             repeat(3,minmax(0,1fr));
@@ -1373,7 +1488,7 @@ button{
         min-height:345px;
 
         padding:
-            38px 18px 38px;
+            38px 18px;
 
     }
 
@@ -1414,10 +1529,11 @@ button{
 
 
     /* =====================================================
-       MOBILE — 2 EBOOKS PER ROW
+       MOBILE — 2 PRODUCTS PER ROW
     ===================================================== */
 
-    .ebooks-grid{
+    .ebooks-grid,
+    .templates-grid{
 
         grid-template-columns:
             repeat(2,minmax(0,1fr));
@@ -1525,6 +1641,49 @@ button{
         border-radius:6px;
 
         padding:4px;
+
+    }
+
+
+    /* =====================================================
+       DIVIDER MOBILE
+    ===================================================== */
+
+    .collection-divider{
+
+        padding:
+            25px 10px 5px;
+
+    }
+
+    .divider-line{
+
+        gap:9px;
+
+    }
+
+    .divider-icon{
+
+        width:36px;
+        height:36px;
+
+        font-size:15px;
+
+    }
+
+    .divider-title{
+
+        font-size:21px;
+
+    }
+
+    .divider-text{
+
+        font-size:10px;
+
+        max-width:300px;
+
+        margin:auto;
 
     }
 
@@ -1687,12 +1846,12 @@ button{
     .section{
 
         padding-left:7px;
-
         padding-right:7px;
 
     }
 
-    .ebooks-grid{
+    .ebooks-grid,
+    .templates-grid{
 
         grid-template-columns:
             repeat(2,minmax(0,1fr));
@@ -1857,7 +2016,8 @@ button{
 
 @media(min-width:1100px){
 
-    .ebooks-grid{
+    .ebooks-grid,
+    .templates-grid{
 
         grid-template-columns:
             repeat(3,minmax(0,1fr));
@@ -2026,7 +2186,8 @@ button{
 
         <p>
 
-            Découvrez nos eBooks numériques
+            Découvrez nos eBooks numériques,
+            nos templates pratiques
             et nos packs premium.
 
         </p>
@@ -2061,7 +2222,7 @@ button{
 
         <h2 class="section-title">
 
-            eBook Premium
+            eBooks Premium
 
         </h2>
 
@@ -2070,6 +2231,73 @@ button{
     <div
         class="ebooks-grid"
         id="ebooksGrid">
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     DIVIDER — EBOOKS / TEMPLATES
+====================================================== -->
+
+<div class="collection-divider">
+
+    <div class="divider-line">
+
+        <div class="divider-icon">
+
+            <i class="fa-solid fa-file-lines"></i>
+
+        </div>
+
+    </div>
+
+    <div class="divider-title">
+
+        Nos Templates
+
+    </div>
+
+    <div class="divider-text">
+
+        Des outils pratiques et prêts à utiliser
+        pour vous aider à organiser,
+        planifier et développer vos projets.
+
+    </div>
+
+</div>
+
+
+<!-- ======================================================
+     TEMPLATES
+========================================================= -->
+
+<section class="section templates-section">
+
+    <div class="section-heading">
+
+        <div class="section-kicker">
+
+            <i class="fa-solid fa-file-lines"></i>
+
+            NOS TEMPLATES
+
+        </div>
+
+        <h2 class="section-title">
+
+            Templates Premium
+
+        </h2>
+
+    </div>
+
+
+    <div
+        class="templates-grid"
+        id="templatesGrid">
 
     </div>
 
@@ -2523,7 +2751,7 @@ button{
 
 
 <!-- ======================================================
-     SHARED CART + FRENCH EBOOK DATA
+     SHARED CART + PRODUCT DATA
 ====================================================== -->
 
 <script>
@@ -2542,12 +2770,7 @@ const CART_KEY =
 
 const ebooks = [
 
-    /* ====================================================
-       FRENCH EBOOK #1
-    ==================================================== */
-
     {
-
         id:
             "fr-book-1",
 
@@ -2572,12 +2795,7 @@ const ebooks = [
     },
 
 
-    /* ====================================================
-       FRENCH EBOOK #2
-    ==================================================== */
-
     {
-
         id:
             "fr-book-2",
 
@@ -2602,12 +2820,7 @@ const ebooks = [
     },
 
 
-    /* ====================================================
-       FRENCH EBOOK #3
-    ==================================================== */
-
     {
-
         id:
             "fr-book-3",
 
@@ -2618,7 +2831,7 @@ const ebooks = [
             "images/Le_Plan_de_Longevite_3D.png",
 
         description:
-            "Découvrez les principes essentiels pour mieux vieillir, préserver votre énergie et construire des habitudes favorables à la longévité. Ce guide vous accompagne avec des conseils simples et pratiques sur l’alimentation, le mouvement, le sommeil, la récupération et le bien-être, afin de vous aider à prendre soin de votre santé au quotidien et à avancer vers une vie plus saine et plus équilibrée.",
+            "Découvrez les principes essentiels pour mieux vieillir, préserver votre énergie et construire des habitudes favorables à la longévité. Ce guide vous accompagne avec des conseils simples et pratiques sur l’alimentation, le mouvement, le sommeil, la récupération et le bien-être.",
 
         price:
             17,
@@ -2632,13 +2845,7 @@ const ebooks = [
     },
 
 
-    /* ====================================================
-       FRENCH EBOOK #4
-       LE PLAN D'AFFAIRES DIGITAL
-    ==================================================== */
-
     {
-
         id:
             "fr-book-4",
 
@@ -2649,7 +2856,7 @@ const ebooks = [
             "images/Le_Plan_Daffaires_Digital_Cover.png",
 
         description:
-            "Le guide étape par étape pour lancer, développer et faire grandir votre business en ligne. Découvrez comment choisir une niche rentable, construire votre offre, définir votre tarification, mettre en place un tunnel de vente, lancer votre activité avec un plan marketing de 14 jours et utiliser les métriques pour soutenir votre croissance.",
+            "Le guide étape par étape pour lancer, développer et faire grandir votre business en ligne. Découvrez comment choisir une niche rentable, construire votre offre, définir votre tarification, mettre en place un tunnel de vente et lancer votre activité.",
 
         price:
             17,
@@ -2663,13 +2870,7 @@ const ebooks = [
     },
 
 
-    /* ====================================================
-       FRENCH EBOOK #5
-       IA POUR LES ENTREPRENEURS
-    ==================================================== */
-
     {
-
         id:
             "fr-book-5",
 
@@ -2680,7 +2881,7 @@ const ebooks = [
             "images/IA_Pour_Les_Entrepreneurs_Couverture.png",
 
         description:
-            "IA pour les entrepreneurs est un guide pratique conçu pour aider les entrepreneurs à utiliser l’intelligence artificielle pour automatiser les tâches, optimiser leur entreprise, créer du contenu plus rapidement, améliorer leurs décisions commerciales et développer des systèmes d’IA répétables.",
+            "Un guide pratique conçu pour aider les entrepreneurs à utiliser l’intelligence artificielle pour automatiser les tâches, optimiser leur entreprise, créer du contenu plus rapidement et développer des systèmes d’IA répétables.",
 
         price:
             17,
@@ -2694,13 +2895,7 @@ const ebooks = [
     },
 
 
-    /* ====================================================
-       FRENCH EBOOK #6
-       PRODUITS NUMÉRIQUES QUI SE VENDENT
-    ==================================================== */
-
     {
-
         id:
             "fr-book-6",
 
@@ -2711,7 +2906,7 @@ const ebooks = [
             "images/Produits_Numeriques_Qui_Se_Vendent_Couverture.png",
 
         description:
-            "Découvrez comment créer, emballer et vendre des produits numériques en ligne. Ce guide pratique vous accompagne pour choisir une niche rentable, créer votre offre, définir votre prix, préparer votre lancement et utiliser un entonnoir de pré-vente pour valider votre idée et attirer vos premiers clients.",
+            "Découvrez comment créer, emballer et vendre des produits numériques en ligne. Ce guide vous accompagne pour choisir une niche rentable, créer votre offre, définir votre prix et préparer votre lancement.",
 
         price:
             17,
@@ -2725,13 +2920,7 @@ const ebooks = [
     },
 
 
-    /* ====================================================
-       FRENCH EBOOK #7
-       MARKETING DIGITAL SIMPLIFIÉ
-    ==================================================== */
-
     {
-
         id:
             "fr-book-7",
 
@@ -2742,7 +2931,7 @@ const ebooks = [
             "images/Digital_Marketing_Simplifie.png",
 
         description:
-            "Découvrez les fondamentaux du marketing digital et apprenez à développer votre audience, construire votre marque, créer du contenu efficace, utiliser le marketing par e-mail et mettre en place des stratégies simples pour augmenter vos ventes.",
+            "Découvrez les fondamentaux du marketing digital et apprenez à développer votre audience, construire votre marque, créer du contenu efficace, utiliser le marketing par e-mail et augmenter vos ventes.",
 
         price:
             17,
@@ -2754,6 +2943,54 @@ const ebooks = [
             "https://buy.stripe.com/4gMdRb0JOgOQ3Z54qD8N20Y"
 
     }
+
+];
+
+
+/* ======================================================
+   FRENCH TEMPLATE DATA
+======================================================
+
+   PRIX FIXE :
+   $9 PAR TEMPLATE
+
+   Ajoute ici chaque nouveau template avec :
+   - id
+   - name
+   - image
+   - description
+   - priceId
+   - stripe
+
+====================================================== */
+
+const templates = [
+
+    /*
+    {
+        id:
+            "fr-template-1",
+
+        name:
+            "NOM DU TEMPLATE",
+
+        image:
+            "images/NOM_DU_TEMPLATE.png",
+
+        description:
+            "Description courte du template.",
+
+        price:
+            9,
+
+        priceId:
+            "VOTRE_PRICE_ID_STRIPE",
+
+        stripe:
+            "VOTRE_LIEN_STRIPE"
+
+    }
+    */
 
 ];
 
@@ -2771,214 +3008,13 @@ let cart =
 
 
 /* ======================================================
-   CURRENT FRENCH EBOOK PRICE IDS
+   CREATE PRODUCT CARD
 ====================================================== */
 
-const NEW_FRENCH_EBOOK_1_PRICE_ID =
-    "price_1UGX5mRtp4gVtODy9cpvEUNo";
-
-const NEW_FRENCH_EBOOK_3_PRICE_ID =
-    "price_1UGrgVRtp4gVtODyyMSAY10e";
-
-const NEW_FRENCH_EBOOK_4_PRICE_ID =
-    "price_1UHoTPRtp4gVtODyBnUy9m5F";
-
-const NEW_FRENCH_EBOOK_5_PRICE_ID =
-    "price_1UHwKeRtp4gVtODyuVMpL02r";
-
-const NEW_FRENCH_EBOOK_6_PRICE_ID =
-    "price_1UIKQ0Rtp4gVtODylDX3mPAT";
-
-const NEW_FRENCH_EBOOK_7_PRICE_ID =
-    "price_1UKAJqRtp4gVtODy12XAaiLw";
-
-
-let cartWasUpdated =
-    false;
-
-
-/* ======================================================
-   REPAIR OLD FRENCH EBOOK CART
-====================================================== */
-
-cart.forEach(
-    function(item){
-
-        /* ==============================================
-           BOOK #1
-        ============================================== */
-
-        if(
-            item.id === "fr-book-1"
-            &&
-            item.priceId !==
-            NEW_FRENCH_EBOOK_1_PRICE_ID
-        ){
-
-            item.priceId =
-                NEW_FRENCH_EBOOK_1_PRICE_ID;
-
-            item.stripe =
-                "https://buy.stripe.com/cNi4gB504aqsdzFbT58N20S";
-
-            item.image =
-                "images/20_Ans_Plus_Jeune_cover.png";
-
-            cartWasUpdated =
-                true;
-
-        }
-
-
-        /* ==============================================
-           BOOK #3
-        ============================================== */
-
-        if(
-            item.id === "fr-book-3"
-            &&
-            item.priceId !==
-            NEW_FRENCH_EBOOK_3_PRICE_ID
-        ){
-
-            item.priceId =
-                NEW_FRENCH_EBOOK_3_PRICE_ID;
-
-            item.stripe =
-                "https://buy.stripe.com/14A8wR5049mo0MTe1d8N20U";
-
-            item.image =
-                "images/Le_Plan_de_Longevite_3D.png";
-
-            cartWasUpdated =
-                true;
-
-        }
-
-
-        /* ==============================================
-           BOOK #4
-        ============================================== */
-
-        if(
-            item.id === "fr-book-4"
-            &&
-            item.priceId !==
-            NEW_FRENCH_EBOOK_4_PRICE_ID
-        ){
-
-            item.priceId =
-                NEW_FRENCH_EBOOK_4_PRICE_ID;
-
-            item.stripe =
-                "https://buy.stripe.com/bJefZj1NS2Y03Z5aP18N20V";
-
-            item.image =
-                "images/Le_Plan_Daffaires_Digital_Cover.png";
-
-            cartWasUpdated =
-                true;
-
-        }
-
-
-        /* ==============================================
-           BOOK #5
-        ============================================== */
-
-        if(
-            item.id === "fr-book-5"
-            &&
-            item.priceId !==
-            NEW_FRENCH_EBOOK_5_PRICE_ID
-        ){
-
-            item.priceId =
-                NEW_FRENCH_EBOOK_5_PRICE_ID;
-
-            item.stripe =
-                "https://buy.stripe.com/4gMbJ3fEIfKM67dcX98N20W";
-
-            item.image =
-                "images/IA_Pour_Les_Entrepreneurs_Couverture.png";
-
-            cartWasUpdated =
-                true;
-
-        }
-
-
-        /* ==============================================
-           BOOK #6
-        ============================================== */
-
-        if(
-            item.id === "fr-book-6"
-            &&
-            item.priceId !==
-            NEW_FRENCH_EBOOK_6_PRICE_ID
-        ){
-
-            item.priceId =
-                NEW_FRENCH_EBOOK_6_PRICE_ID;
-
-            item.stripe =
-                "https://buy.stripe.com/eVqdRbcsw568eDJ6yL8N20X";
-
-            item.image =
-                "images/Produits_Numeriques_Qui_Se_Vendent_Couverture.png";
-
-            cartWasUpdated =
-                true;
-
-        }
-
-
-        /* ==============================================
-           BOOK #7
-           MARKETING DIGITAL SIMPLIFIÉ
-        ============================================== */
-
-        if(
-            item.id === "fr-book-7"
-            &&
-            item.priceId !==
-            NEW_FRENCH_EBOOK_7_PRICE_ID
-        ){
-
-            item.priceId =
-                NEW_FRENCH_EBOOK_7_PRICE_ID;
-
-            item.stripe =
-                "https://buy.stripe.com/4gMdRb0JOgOQ3Z54qD8N20Y";
-
-            item.image =
-                "images/Digital_Marketing_Simplifie.png";
-
-            cartWasUpdated =
-                true;
-
-        }
-
-    }
-);
-
-
-if(cartWasUpdated){
-
-    localStorage.setItem(
-        CART_KEY,
-        JSON.stringify(cart)
-    );
-
-}
-
-
-/* ======================================================
-   CREATE EBOOK CARD
-====================================================== */
-
-function createProductCard(product){
+function createProductCard(
+    product,
+    type = "ebook"
+){
 
     const card =
         document.createElement(
@@ -2988,6 +3024,12 @@ function createProductCard(product){
 
     card.className =
         "ebook-card";
+
+
+    const label =
+        type === "template"
+            ? "PREMIUM TEMPLATE"
+            : "PREMIUM EBOOK";
 
 
     card.innerHTML = `
@@ -3006,7 +3048,7 @@ function createProductCard(product){
 
             <span class="ebook-label">
 
-                PREMIUM EBOOK
+                ${label}
 
             </span>
 
@@ -3033,7 +3075,7 @@ function createProductCard(product){
 
 
             <a
-                href="${product.stripe}"
+                href="${product.stripe || '#'}"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="buy-btn">
@@ -3054,11 +3096,11 @@ function createProductCard(product){
 
                 data-price="${product.price}"
 
-                data-price-id="${product.priceId}"
+                data-price-id="${product.priceId || ''}"
 
                 data-image="${product.image}"
 
-                data-stripe="${product.stripe}">
+                data-stripe="${product.stripe || ''}">
 
                 AJOUTER AU PANIER
 
@@ -3076,7 +3118,7 @@ function createProductCard(product){
 
 
 /* ======================================================
-   RENDER ALL EBOOKS
+   RENDER EBOOKS
 ====================================================== */
 
 const ebooksGrid =
@@ -3092,7 +3134,36 @@ if(ebooksGrid){
 
             ebooksGrid.appendChild(
                 createProductCard(
-                    product
+                    product,
+                    "ebook"
+                )
+            );
+
+        }
+    );
+
+}
+
+
+/* ======================================================
+   RENDER TEMPLATES
+====================================================== */
+
+const templatesGrid =
+    document.getElementById(
+        "templatesGrid"
+    );
+
+
+if(templatesGrid){
+
+    templates.forEach(
+        function(product){
+
+            templatesGrid.appendChild(
+                createProductCard(
+                    product,
+                    "template"
                 )
             );
 
@@ -3104,7 +3175,6 @@ if(ebooksGrid){
 
 /* ======================================================
    AUTOMATIC EBOOK POSITION ROTATION
-   EVERY 20 SECONDS
 ====================================================== */
 
 let ebookRotationIndex =
@@ -3323,52 +3393,19 @@ document.addEventListener(
             saveCart();
 
 
-            /* ==========================================
-               EBOOK BUTTON
-            ========================================== */
-
-            if(
-                button.classList.contains(
-                    "cart-btn"
-                )
-            ){
-
-                button.innerHTML =
-                    "✓ AJOUTÉ";
-
-                setTimeout(
-                    function(){
-
-                        button.innerHTML =
-                            "AJOUTER AU PANIER";
-
-                    },
-                    1000
-                );
-
-            }
+            button.innerHTML =
+                "✓ AJOUTÉ";
 
 
-            /* ==========================================
-               PACK BUTTON
-            ========================================== */
+            setTimeout(
+                function(){
 
-            else{
+                    button.innerHTML =
+                        "AJOUTER AU PANIER";
 
-                button.textContent =
-                    "✓ AJOUTÉ";
-
-                setTimeout(
-                    function(){
-
-                        button.textContent =
-                            "AJOUTER AU PANIER";
-
-                    },
-                    1000
-                );
-
-            }
+                },
+                1000
+            );
 
 
         }else{
