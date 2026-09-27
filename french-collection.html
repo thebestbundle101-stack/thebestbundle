@@ -430,7 +430,6 @@ button{
 
 /* =========================================================
    EBOOK GRID
-   ALL EBOOKS ALWAYS VISIBLE
 ========================================================= */
 
 .ebooks-grid{
@@ -449,7 +448,6 @@ button{
 
 /* =========================================================
    EBOOK CARD
-   SAME HEIGHT FOR EVERY EBOOK
 ========================================================= */
 
 .ebook-card{
@@ -1417,8 +1415,6 @@ button{
 
     /* =====================================================
        MOBILE — 2 EBOOKS PER ROW
-       ALL EBOOKS ALWAYS VISIBLE
-       SAME HEIGHT
     ===================================================== */
 
     .ebooks-grid{
@@ -2049,7 +2045,7 @@ button{
 
 <!-- ======================================================
      EBOOKS
-====================================================== -->
+========================================================= -->
 
 <section class="section">
 
@@ -2123,15 +2119,11 @@ button{
             <div class="pack-info">
 
                 <div class="pack-name">
-
                     Starter Bundle
-
                 </div>
 
                 <div class="pack-desc">
-
                     2 eBooks + 4 Templates
-
                 </div>
 
                 <div class="pack-icons">
@@ -2730,6 +2722,37 @@ const ebooks = [
         stripe:
             "https://buy.stripe.com/eVqdRbcsw568eDJ6yL8N20X"
 
+    },
+
+
+    /* ====================================================
+       FRENCH EBOOK #7
+       MARKETING DIGITAL SIMPLIFIÉ
+    ==================================================== */
+
+    {
+
+        id:
+            "fr-book-7",
+
+        name:
+            "Marketing Digital Simplifié",
+
+        image:
+            "images/Digital_Marketing_Simplifie.png",
+
+        description:
+            "Découvrez les fondamentaux du marketing digital et apprenez à développer votre audience, construire votre marque, créer du contenu efficace, utiliser le marketing par e-mail et mettre en place des stratégies simples pour augmenter vos ventes.",
+
+        price:
+            17,
+
+        priceId:
+            "price_1UKAJqRtp4gVtODy12XAaiLw",
+
+        stripe:
+            "https://buy.stripe.com/4gMdRb0JOgOQ3Z54qD8N20Y"
+
     }
 
 ];
@@ -2748,7 +2771,7 @@ let cart =
 
 
 /* ======================================================
-   REPAIR OLD FRENCH EBOOK CART
+   CURRENT FRENCH EBOOK PRICE IDS
 ====================================================== */
 
 const NEW_FRENCH_EBOOK_1_PRICE_ID =
@@ -2766,10 +2789,17 @@ const NEW_FRENCH_EBOOK_5_PRICE_ID =
 const NEW_FRENCH_EBOOK_6_PRICE_ID =
     "price_1UIKQ0Rtp4gVtODylDX3mPAT";
 
+const NEW_FRENCH_EBOOK_7_PRICE_ID =
+    "price_1UKAJqRtp4gVtODy12XAaiLw";
+
 
 let cartWasUpdated =
     false;
 
+
+/* ======================================================
+   REPAIR OLD FRENCH EBOOK CART
+====================================================== */
 
 cart.forEach(
     function(item){
@@ -2854,7 +2884,6 @@ cart.forEach(
 
         /* ==============================================
            BOOK #5
-           IA POUR LES ENTREPRENEURS
         ============================================== */
 
         if(
@@ -2881,7 +2910,6 @@ cart.forEach(
 
         /* ==============================================
            BOOK #6
-           PRODUITS NUMÉRIQUES QUI SE VENDENT
         ============================================== */
 
         if(
@@ -2899,6 +2927,33 @@ cart.forEach(
 
             item.image =
                 "images/Produits_Numeriques_Qui_Se_Vendent_Couverture.png";
+
+            cartWasUpdated =
+                true;
+
+        }
+
+
+        /* ==============================================
+           BOOK #7
+           MARKETING DIGITAL SIMPLIFIÉ
+        ============================================== */
+
+        if(
+            item.id === "fr-book-7"
+            &&
+            item.priceId !==
+            NEW_FRENCH_EBOOK_7_PRICE_ID
+        ){
+
+            item.priceId =
+                NEW_FRENCH_EBOOK_7_PRICE_ID;
+
+            item.stripe =
+                "https://buy.stripe.com/4gMdRb0JOgOQ3Z54qD8N20Y";
+
+            item.image =
+                "images/Digital_Marketing_Simplifie.png";
 
             cartWasUpdated =
                 true;
@@ -2983,7 +3038,7 @@ function createProductCard(product){
                 rel="noopener noreferrer"
                 class="buy-btn">
 
-                BUY NOW
+                ACHETER MAINTENANT
 
             </a>
 
@@ -3005,7 +3060,7 @@ function createProductCard(product){
 
                 data-stripe="${product.stripe}">
 
-                ADD TO CART
+                AJOUTER AU PANIER
 
             </button>
 
@@ -3050,7 +3105,6 @@ if(ebooksGrid){
 /* ======================================================
    AUTOMATIC EBOOK POSITION ROTATION
    EVERY 20 SECONDS
-   ALL EBOOKS REMAIN VISIBLE
 ====================================================== */
 
 let ebookRotationIndex =
@@ -3151,7 +3205,6 @@ function rotateEbookPositions(){
 
 /* ======================================================
    START EBOOK ROTATION
-   EXACTLY EVERY 20 SECONDS
 ====================================================== */
 
 setInterval(
@@ -3281,14 +3334,13 @@ document.addEventListener(
             ){
 
                 button.innerHTML =
-                    "✓";
-
+                    "✓ AJOUTÉ";
 
                 setTimeout(
                     function(){
 
                         button.innerHTML =
-                            "ADD TO CART";
+                            "AJOUTER AU PANIER";
 
                     },
                     1000
@@ -3305,7 +3357,6 @@ document.addEventListener(
 
                 button.textContent =
                     "✓ AJOUTÉ";
-
 
                 setTimeout(
                     function(){
