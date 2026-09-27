@@ -15,7 +15,7 @@
 
 <meta
     name="description"
-    content="Découvrez la Collection Française TheBestBundle : eBooks premium, templates et packs numériques.">
+    content="Découvrez la Collection Française TheBestBundle : eBooks, templates et packs numériques premium.">
 
 <link
     rel="stylesheet"
@@ -76,6 +76,7 @@ body{
 a{
 
     color:inherit;
+
     text-decoration:none;
 
 }
@@ -83,6 +84,7 @@ a{
 button{
 
     font:inherit;
+
     cursor:pointer;
 
 }
@@ -115,6 +117,7 @@ button{
 .logo{
 
     height:56px;
+
     width:auto;
 
 }
@@ -151,9 +154,11 @@ button{
     position:absolute;
 
     top:-11px;
+
     right:-11px;
 
     min-width:18px;
+
     height:18px;
 
     padding:
@@ -174,6 +179,7 @@ button{
     display:flex;
 
     align-items:center;
+
     justify-content:center;
 
 }
@@ -206,6 +212,7 @@ button{
 .back-link{
 
     font-weight:700;
+
     font-size:14px;
 
 }
@@ -221,6 +228,7 @@ button{
         8px 13px;
 
     font-weight:700;
+
     font-size:13px;
 
 }
@@ -283,6 +291,7 @@ button{
 .hero-line{
 
     width:45px;
+
     height:2px;
 
     background:
@@ -371,7 +380,7 @@ button{
 
 
 /* =========================================================
-   SECTION
+   GENERAL SECTION
 ========================================================= */
 
 .section{
@@ -420,11 +429,76 @@ button{
 
 
 /* =========================================================
-   EBOOK / TEMPLATE GRID
+   SECTION DIVIDER
+   Petite ligne décorative
 ========================================================= */
 
-.ebooks-grid,
-.templates-grid{
+.section-divider{
+
+    width:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:14px;
+
+    margin:
+        8px auto 22px;
+
+}
+
+.section-divider::before,
+.section-divider::after{
+
+    content:"";
+
+    height:1px;
+
+    background:
+        #E3E7ED;
+
+    flex:1;
+
+    max-width:420px;
+
+}
+
+.section-divider-icon{
+
+    width:44px;
+
+    height:44px;
+
+    border-radius:50%;
+
+    background:
+        var(--navy);
+
+    color:
+        var(--gold);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:17px;
+
+    box-shadow:
+        0 7px 18px rgba(7,26,51,.12);
+
+}
+
+
+/* =========================================================
+   EBOOK GRID
+========================================================= */
+
+.ebooks-grid{
 
     display:grid;
 
@@ -439,7 +513,7 @@ button{
 
 
 /* =========================================================
-   PRODUCT CARD
+   EBOOK CARD
 ========================================================= */
 
 .ebook-card{
@@ -452,8 +526,7 @@ button{
 
     margin:0 auto;
 
-    background:
-        #FFFFFF;
+    background:#FFFFFF;
 
     border:
         1px solid #DDE3EC;
@@ -497,7 +570,7 @@ button{
 
 
 /* =========================================================
-   PRODUCT IMAGE
+   EBOOK IMAGE
 ========================================================= */
 
 .ebook-cover{
@@ -508,8 +581,7 @@ button{
 
     flex-shrink:0;
 
-    background:
-        #F7F8FA;
+    background:#F7F8FA;
 
     display:flex;
 
@@ -526,6 +598,7 @@ button{
 .ebook-cover img{
 
     width:100%;
+
     height:100%;
 
     object-fit:contain;
@@ -536,7 +609,7 @@ button{
 
 
 /* =========================================================
-   PRODUCT TITLE
+   EBOOK TITLE
 ========================================================= */
 
 .ebook-title{
@@ -647,7 +720,7 @@ button{
 
 
 /* =========================================================
-   PRODUCT BUTTON ROW
+   EBOOK BUTTON ROW
 ========================================================= */
 
 .ebook-buttons{
@@ -668,7 +741,7 @@ button{
 
 
 /* =========================================================
-   BUY BUTTON
+   BUY NOW
 ========================================================= */
 
 .ebook-card .buy-btn{
@@ -690,6 +763,7 @@ button{
     display:flex;
 
     align-items:center;
+
     justify-content:center;
 
     text-align:center;
@@ -713,7 +787,7 @@ button{
 
 
 /* =========================================================
-   CART BUTTON
+   ADD TO CART
 ========================================================= */
 
 .ebook-card .cart-btn{
@@ -734,6 +808,7 @@ button{
     display:flex;
 
     align-items:center;
+
     justify-content:center;
 
     text-align:center;
@@ -757,123 +832,128 @@ button{
 
 
 /* =========================================================
-   COLLECTION DIVIDER
-========================================================= */
-
-.collection-divider{
-
-    max-width:1100px;
-
-    margin:
-        5px auto 0;
-
-    padding:
-        30px 18px 10px;
-
-    text-align:center;
-
-}
-
-.divider-line{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:15px;
-
-    margin-bottom:15px;
-
-}
-
-.divider-line::before,
-.divider-line::after{
-
-    content:"";
-
-    flex:1;
-
-    height:1px;
-
-    background:
-        linear-gradient(
-            to right,
-            transparent,
-            #D9DEE7,
-            transparent
-        );
-
-}
-
-.divider-icon{
-
-    width:42px;
-
-    height:42px;
-
-    border-radius:50%;
-
-    background:
-        var(--navy);
-
-    color:
-        var(--gold);
-
-    display:flex;
-
-    align-items:center;
-    justify-content:center;
-
-    font-size:17px;
-
-    box-shadow:
-        0 4px 12px rgba(7,26,51,.12);
-
-}
-
-.divider-title{
-
-    font-family:
-        Georgia,
-        serif;
-
-    font-size:25px;
-
-    font-weight:700;
-
-    color:
-        var(--navy);
-
-    margin-bottom:6px;
-
-}
-
-.divider-text{
-
-    color:
-        #64748B;
-
-    font-size:12px;
-
-    line-height:1.5;
-
-}
-
-
-/* =========================================================
    TEMPLATES SECTION
 ========================================================= */
 
 .templates-section{
 
-    padding-top:25px;
+    padding-top:20px;
 
 }
 
-.templates-section .section-kicker{
 
-    color:
-        var(--gold-dark);
+/* =========================================================
+   TEMPLATES GRID
+========================================================= */
+
+.templates-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,minmax(0,1fr));
+
+    gap:20px;
+
+    align-items:stretch;
+
+}
+
+
+/* =========================================================
+   TEMPLATE CARD
+========================================================= */
+
+.template-card{
+
+    width:100%;
+
+    max-width:300px;
+
+    min-height:570px;
+
+    margin:0 auto;
+
+    background:#FFFFFF;
+
+    border:
+        1px solid #DDE3EC;
+
+    border-radius:14px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 5px 16px rgba(7,26,51,.08);
+
+    display:flex;
+
+    flex-direction:column;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+
+}
+
+.template-card:hover{
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 10px 25px rgba(7,26,51,.12);
+
+}
+
+
+/* =========================================================
+   TEMPLATE IMAGE
+========================================================= */
+
+.template-cover{
+
+    width:100%;
+
+    height:330px;
+
+    background:#F7F8FA;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:12px;
+
+    overflow:hidden;
+
+}
+
+.template-cover img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:contain;
+
+    display:block;
+
+}
+
+
+/* =========================================================
+   TEMPLATE INFO
+========================================================= */
+
+.template-info{
+
+    padding:
+        15px 17px 10px;
+
+    flex:1;
 
 }
 
@@ -881,6 +961,137 @@ button{
 
     color:
         var(--gold-dark);
+
+    font-size:9px;
+
+    font-weight:900;
+
+    letter-spacing:1.4px;
+
+    margin-bottom:7px;
+
+}
+
+.template-title{
+
+    color:
+        var(--navy);
+
+    font-size:19px;
+
+    line-height:1.2;
+
+    font-weight:900;
+
+    margin-bottom:9px;
+
+}
+
+.template-description{
+
+    color:
+        #64748B;
+
+    font-size:11px;
+
+    line-height:1.45;
+
+}
+
+
+/* =========================================================
+   TEMPLATE PRICE / BUTTONS
+========================================================= */
+
+.template-bottom{
+
+    padding:
+        0 12px 12px;
+
+    margin-top:auto;
+
+}
+
+.template-price{
+
+    font-size:25px;
+
+    font-weight:900;
+
+    color:
+        var(--navy);
+
+    margin:
+        7px 5px 11px;
+
+}
+
+.template-buttons{
+
+    display:grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:8px;
+
+}
+
+.template-buy,
+.template-cart{
+
+    min-height:46px;
+
+    border:none;
+
+    border-radius:9px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    font-size:9px;
+
+    font-weight:900;
+
+    padding:6px;
+
+}
+
+.template-buy{
+
+    background:
+        var(--gold);
+
+    color:
+        var(--navy);
+
+}
+
+.template-buy:hover{
+
+    background:
+        var(--gold-dark);
+
+}
+
+.template-cart{
+
+    background:
+        var(--navy);
+
+    color:white;
+
+}
+
+.template-cart:hover{
+
+    background:
+        #102D52;
 
 }
 
@@ -952,6 +1163,7 @@ button{
     display:flex;
 
     align-items:center;
+
     justify-content:center;
 
     background:#FFFFFF;
@@ -969,6 +1181,7 @@ button{
 .pack-image img{
 
     width:100%;
+
     height:100%;
 
     object-fit:contain;
@@ -1044,6 +1257,7 @@ button{
     display:flex;
 
     align-items:center;
+
     justify-content:center;
 
     gap:5px;
@@ -1118,7 +1332,7 @@ button{
     border-radius:6px;
 
     padding:
-        8px;
+        8px 8px;
 
     font-size:10px;
 
@@ -1129,6 +1343,7 @@ button{
     display:flex;
 
     align-items:center;
+
     justify-content:center;
 
     text-align:center;
@@ -1274,8 +1489,7 @@ button{
 
     }
 
-    .ebooks-grid,
-    .templates-grid{
+    .ebooks-grid{
 
         grid-template-columns:
             repeat(3,minmax(0,1fr));
@@ -1352,6 +1566,27 @@ button{
         min-height:42px;
 
         font-size:8px;
+
+    }
+
+    .templates-grid{
+
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+
+        gap:16px;
+
+    }
+
+    .template-card{
+
+        max-width:280px;
+
+    }
+
+    .template-cover{
+
+        height:280px;
 
     }
 
@@ -1488,7 +1723,7 @@ button{
         min-height:345px;
 
         padding:
-            38px 18px;
+            38px 18px 38px;
 
     }
 
@@ -1527,13 +1762,31 @@ button{
 
     }
 
+    .section-divider{
+
+        margin:
+            6px auto 18px;
+
+        gap:10px;
+
+    }
+
+    .section-divider-icon{
+
+        width:40px;
+
+        height:40px;
+
+        font-size:15px;
+
+    }
+
 
     /* =====================================================
-       MOBILE — 2 PRODUCTS PER ROW
+       MOBILE — 2 EBOOKS PER ROW
     ===================================================== */
 
-    .ebooks-grid,
-    .templates-grid{
+    .ebooks-grid{
 
         grid-template-columns:
             repeat(2,minmax(0,1fr));
@@ -1646,50 +1899,99 @@ button{
 
 
     /* =====================================================
-       DIVIDER MOBILE
+       MOBILE — TEMPLATES
     ===================================================== */
 
-    .collection-divider{
+    .templates-grid{
+
+        grid-template-columns:
+            1fr;
+
+        gap:14px;
+
+    }
+
+    .template-card{
+
+        max-width:none;
+
+        min-height:500px;
+
+        border-radius:10px;
+
+    }
+
+    .template-cover{
+
+        height:270px;
+
+        padding:9px;
+
+    }
+
+    .template-info{
 
         padding:
-            25px 10px 5px;
+            13px 13px 8px;
 
     }
 
-    .divider-line{
+    .template-label{
 
-        gap:9px;
-
-    }
-
-    .divider-icon{
-
-        width:36px;
-        height:36px;
-
-        font-size:15px;
+        font-size:7px;
 
     }
 
-    .divider-title{
+    .template-title{
 
-        font-size:21px;
+        font-size:16px;
 
     }
 
-    .divider-text{
+    .template-description{
 
-        font-size:10px;
+        font-size:9px;
 
-        max-width:300px;
+        line-height:1.45;
 
-        margin:auto;
+    }
+
+    .template-bottom{
+
+        padding:
+            0 9px 9px;
+
+    }
+
+    .template-price{
+
+        font-size:22px;
+
+        margin:
+            6px 4px 8px;
+
+    }
+
+    .template-buttons{
+
+        gap:5px;
+
+    }
+
+    .template-buy,
+    .template-cart{
+
+        min-height:38px;
+
+        font-size:7px;
+
+        border-radius:6px;
 
     }
 
 
     /* =====================================================
-       PACKS
+       MOBILE — PACKS
     ===================================================== */
 
     .packs{
@@ -1846,12 +2148,12 @@ button{
     .section{
 
         padding-left:7px;
+
         padding-right:7px;
 
     }
 
-    .ebooks-grid,
-    .templates-grid{
+    .ebooks-grid{
 
         grid-template-columns:
             repeat(2,minmax(0,1fr));
@@ -1937,6 +2239,51 @@ button{
 
     }
 
+
+    /* =====================================================
+       VERY SMALL — TEMPLATES
+    ===================================================== */
+
+    .template-card{
+
+        min-height:450px;
+
+    }
+
+    .template-cover{
+
+        height:235px;
+
+    }
+
+    .template-title{
+
+        font-size:14px;
+
+    }
+
+    .template-description{
+
+        font-size:8px;
+
+    }
+
+    .template-price{
+
+        font-size:20px;
+
+    }
+
+    .template-buy,
+    .template-cart{
+
+        min-height:34px;
+
+        font-size:6px;
+
+    }
+
+
     .packs{
 
         grid-template-columns:
@@ -2016,8 +2363,7 @@ button{
 
 @media(min-width:1100px){
 
-    .ebooks-grid,
-    .templates-grid{
+    .ebooks-grid{
 
         grid-template-columns:
             repeat(3,minmax(0,1fr));
@@ -2035,6 +2381,25 @@ button{
     .ebook-cover{
 
         height:210px;
+
+    }
+
+    .templates-grid{
+
+        grid-template-columns:
+            repeat(3,minmax(0,1fr));
+
+    }
+
+    .template-card{
+
+        max-width:300px;
+
+    }
+
+    .template-cover{
+
+        height:330px;
 
     }
 
@@ -2187,8 +2552,7 @@ button{
         <p>
 
             Découvrez nos eBooks numériques,
-            nos templates pratiques
-            et nos packs premium.
+            nos templates pratiques et nos packs premium.
 
         </p>
 
@@ -2238,14 +2602,14 @@ button{
 
 
 <!-- ======================================================
-     DIVIDER — EBOOKS / TEMPLATES
-====================================================== -->
+     TEMPLATES
+========================================================= -->
 
-<div class="collection-divider">
+<section class="section templates-section">
 
-    <div class="divider-line">
+    <div class="section-divider">
 
-        <div class="divider-icon">
+        <div class="section-divider-icon">
 
             <i class="fa-solid fa-file-lines"></i>
 
@@ -2253,28 +2617,6 @@ button{
 
     </div>
 
-    <div class="divider-title">
-
-        Nos Templates
-
-    </div>
-
-    <div class="divider-text">
-
-        Des outils pratiques et prêts à utiliser
-        pour vous aider à organiser,
-        planifier et développer vos projets.
-
-    </div>
-
-</div>
-
-
-<!-- ======================================================
-     TEMPLATES
-========================================================= -->
-
-<section class="section templates-section">
 
     <div class="section-heading">
 
@@ -2310,6 +2652,20 @@ button{
 
 <section class="section packs-section">
 
+
+    <!-- PETITE LIGNE AVANT NOS PACKS -->
+
+    <div class="section-divider">
+
+        <div class="section-divider-icon">
+
+            <i class="fa-solid fa-box-open"></i>
+
+        </div>
+
+    </div>
+
+
     <div class="section-heading">
 
         <div class="section-kicker">
@@ -2332,7 +2688,9 @@ button{
     <div class="packs">
 
 
-        <!-- STARTER -->
+        <!-- =================================================
+             STARTER
+        ================================================== -->
 
         <article class="pack-card">
 
@@ -2421,7 +2779,9 @@ button{
         </article>
 
 
-        <!-- CREATOR -->
+        <!-- =================================================
+             CREATOR
+        ================================================== -->
 
         <article class="pack-card">
 
@@ -2510,7 +2870,9 @@ button{
         </article>
 
 
-        <!-- PRO -->
+        <!-- =================================================
+             PRO
+        ================================================== -->
 
         <article class="pack-card">
 
@@ -2599,7 +2961,9 @@ button{
         </article>
 
 
-        <!-- VAULT -->
+        <!-- =================================================
+             VAULT
+        ================================================== -->
 
         <article class="pack-card">
 
@@ -2791,7 +3155,6 @@ const ebooks = [
 
         stripe:
             "https://buy.stripe.com/cNi4gB504aqsdzFbT58N20S"
-
     },
 
 
@@ -2806,7 +3169,7 @@ const ebooks = [
             "images/Guide_Naturel_Anti_Age_3D.png",
 
         description:
-            "Votre peau sèche, votre énergie baisse, votre récupération ralentit ? Ce sont des signaux à écouter. Le Guide naturel anti-âge vous présente cinq moteurs essentiels : récupération, alimentation, mouvement, protection et gestion de la charge. Grâce à des routines simples et flexibles, vous construisez des habitudes durables, sans perfection ni promesses irréalistes.",
+            "Votre peau sèche, votre énergie baisse, votre récupération ralentit ? Le Guide naturel anti-âge vous présente cinq moteurs essentiels : récupération, alimentation, mouvement, protection et gestion de la charge.",
 
         price:
             17,
@@ -2816,7 +3179,6 @@ const ebooks = [
 
         stripe:
             "https://buy.stripe.com/dRm5kF8cg2Y02V16yL8N20T"
-
     },
 
 
@@ -2831,7 +3193,7 @@ const ebooks = [
             "images/Le_Plan_de_Longevite_3D.png",
 
         description:
-            "Découvrez les principes essentiels pour mieux vieillir, préserver votre énergie et construire des habitudes favorables à la longévité. Ce guide vous accompagne avec des conseils simples et pratiques sur l’alimentation, le mouvement, le sommeil, la récupération et le bien-être.",
+            "Découvrez les principes essentiels pour mieux vieillir, préserver votre énergie et construire des habitudes favorables à la longévité.",
 
         price:
             17,
@@ -2841,7 +3203,6 @@ const ebooks = [
 
         stripe:
             "https://buy.stripe.com/14A8wR5049mo0MTe1d8N20U"
-
     },
 
 
@@ -2856,7 +3217,7 @@ const ebooks = [
             "images/Le_Plan_Daffaires_Digital_Cover.png",
 
         description:
-            "Le guide étape par étape pour lancer, développer et faire grandir votre business en ligne. Découvrez comment choisir une niche rentable, construire votre offre, définir votre tarification, mettre en place un tunnel de vente et lancer votre activité.",
+            "Le guide étape par étape pour lancer, développer et faire grandir votre business en ligne.",
 
         price:
             17,
@@ -2866,7 +3227,6 @@ const ebooks = [
 
         stripe:
             "https://buy.stripe.com/bJefZj1NS2Y03Z5aP18N20V"
-
     },
 
 
@@ -2881,7 +3241,7 @@ const ebooks = [
             "images/IA_Pour_Les_Entrepreneurs_Couverture.png",
 
         description:
-            "Un guide pratique conçu pour aider les entrepreneurs à utiliser l’intelligence artificielle pour automatiser les tâches, optimiser leur entreprise, créer du contenu plus rapidement et développer des systèmes d’IA répétables.",
+            "Un guide pratique pour utiliser l’intelligence artificielle afin d’automatiser les tâches, optimiser votre entreprise et créer du contenu plus rapidement.",
 
         price:
             17,
@@ -2891,7 +3251,6 @@ const ebooks = [
 
         stripe:
             "https://buy.stripe.com/4gMbJ3fEIfKM67dcX98N20W"
-
     },
 
 
@@ -2906,7 +3265,7 @@ const ebooks = [
             "images/Produits_Numeriques_Qui_Se_Vendent_Couverture.png",
 
         description:
-            "Découvrez comment créer, emballer et vendre des produits numériques en ligne. Ce guide vous accompagne pour choisir une niche rentable, créer votre offre, définir votre prix et préparer votre lancement.",
+            "Découvrez comment créer, emballer et vendre des produits numériques en ligne.",
 
         price:
             17,
@@ -2916,7 +3275,6 @@ const ebooks = [
 
         stripe:
             "https://buy.stripe.com/eVqdRbcsw568eDJ6yL8N20X"
-
     },
 
 
@@ -2931,7 +3289,7 @@ const ebooks = [
             "images/Digital_Marketing_Simplifie.png",
 
         description:
-            "Découvrez les fondamentaux du marketing digital et apprenez à développer votre audience, construire votre marque, créer du contenu efficace, utiliser le marketing par e-mail et augmenter vos ventes.",
+            "Découvrez les fondamentaux du marketing digital et apprenez à développer votre audience, construire votre marque et augmenter vos ventes.",
 
         price:
             17,
@@ -2941,7 +3299,6 @@ const ebooks = [
 
         stripe:
             "https://buy.stripe.com/4gMdRb0JOgOQ3Z54qD8N20Y"
-
     }
 
 ];
@@ -2949,48 +3306,32 @@ const ebooks = [
 
 /* ======================================================
    FRENCH TEMPLATE DATA
-======================================================
-
-   PRIX FIXE :
-   $9 PAR TEMPLATE
-
-   Ajoute ici chaque nouveau template avec :
-   - id
-   - name
-   - image
-   - description
-   - priceId
-   - stripe
-
 ====================================================== */
 
 const templates = [
 
-    /*
     {
         id:
             "fr-template-1",
 
         name:
-            "NOM DU TEMPLATE",
+            "Bibliothèque de Prompts IA pour Entrepreneurs",
 
         image:
-            "images/NOM_DU_TEMPLATE.png",
+            "images/Bibliotheque_de_Prompts_IA_Cover.png",
 
         description:
-            "Description courte du template.",
+            "Une bibliothèque pratique de prompts IA prêts à l’emploi pour développer vos idées, créer du contenu, améliorer votre marketing, gagner du temps et faire grandir votre activité.",
 
         price:
             9,
 
         priceId:
-            "VOTRE_PRICE_ID_STRIPE",
+            "price_1UKNaXRtp4gVtODyek68BxuT",
 
         stripe:
-            "VOTRE_LIEN_STRIPE"
-
+            "https://buy.stripe.com/8x23cxcswcyA7bhg9l8N20Z"
     }
-    */
 
 ];
 
@@ -3008,13 +3349,10 @@ let cart =
 
 
 /* ======================================================
-   CREATE PRODUCT CARD
+   CREATE EBOOK CARD
 ====================================================== */
 
-function createProductCard(
-    product,
-    type = "ebook"
-){
+function createProductCard(product){
 
     const card =
         document.createElement(
@@ -3024,12 +3362,6 @@ function createProductCard(
 
     card.className =
         "ebook-card";
-
-
-    const label =
-        type === "template"
-            ? "PREMIUM TEMPLATE"
-            : "PREMIUM EBOOK";
 
 
     card.innerHTML = `
@@ -3048,7 +3380,7 @@ function createProductCard(
 
             <span class="ebook-label">
 
-                ${label}
+                PREMIUM EBOOK
 
             </span>
 
@@ -3073,9 +3405,8 @@ function createProductCard(
 
         <div class="ebook-buttons">
 
-
             <a
-                href="${product.stripe || '#'}"
+                href="${product.stripe}"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="buy-btn">
@@ -3096,16 +3427,123 @@ function createProductCard(
 
                 data-price="${product.price}"
 
-                data-price-id="${product.priceId || ''}"
+                data-price-id="${product.priceId}"
 
                 data-image="${product.image}"
 
-                data-stripe="${product.stripe || ''}">
+                data-stripe="${product.stripe}">
 
                 AJOUTER AU PANIER
 
             </button>
 
+        </div>
+
+    `;
+
+
+    return card;
+
+}
+
+
+/* ======================================================
+   CREATE TEMPLATE CARD
+====================================================== */
+
+function createTemplateCard(template){
+
+    const card =
+        document.createElement(
+            "article"
+        );
+
+
+    card.className =
+        "template-card";
+
+
+    card.innerHTML = `
+
+        <div class="template-cover">
+
+            <img
+                src="${template.image}"
+                alt="${template.name}"
+                loading="eager">
+
+        </div>
+
+
+        <div class="template-info">
+
+            <div class="template-label">
+
+                TEMPLATE PREMIUM
+
+            </div>
+
+
+            <div class="template-title">
+
+                ${template.name}
+
+            </div>
+
+
+            <div class="template-description">
+
+                ${template.description}
+
+            </div>
+
+        </div>
+
+
+        <div class="template-bottom">
+
+            <div class="template-price">
+
+                $${template.price}
+
+            </div>
+
+
+            <div class="template-buttons">
+
+                <a
+                    href="${template.stripe}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="template-buy">
+
+                    ACHETER MAINTENANT
+
+                </a>
+
+
+                <button
+                    type="button"
+
+                    class="template-cart add-to-cart"
+
+                    data-id="${template.id}"
+
+                    data-name="${template.name}"
+
+                    data-price="${template.price}"
+
+                    data-price-id="${template.priceId}"
+
+                    data-image="${template.image}"
+
+                    data-stripe="${template.stripe}">
+
+                    AJOUTER AU PANIER
+
+                </button>
+
+            </div>
 
         </div>
 
@@ -3134,8 +3572,7 @@ if(ebooksGrid){
 
             ebooksGrid.appendChild(
                 createProductCard(
-                    product,
-                    "ebook"
+                    product
                 )
             );
 
@@ -3158,12 +3595,11 @@ const templatesGrid =
 if(templatesGrid){
 
     templates.forEach(
-        function(product){
+        function(template){
 
             templatesGrid.appendChild(
-                createProductCard(
-                    product,
-                    "template"
+                createTemplateCard(
+                    template
                 )
             );
 
@@ -3174,7 +3610,7 @@ if(templatesGrid){
 
 
 /* ======================================================
-   AUTOMATIC EBOOK POSITION ROTATION
+   EBOOK POSITION ROTATION
 ====================================================== */
 
 let ebookRotationIndex =
@@ -3272,10 +3708,6 @@ function rotateEbookPositions(){
 
 }
 
-
-/* ======================================================
-   START EBOOK ROTATION
-====================================================== */
 
 setInterval(
     rotateEbookPositions,
@@ -3393,6 +3825,10 @@ document.addEventListener(
             saveCart();
 
 
+            const originalText =
+                button.textContent;
+
+
             button.innerHTML =
                 "✓ AJOUTÉ";
 
@@ -3401,7 +3837,7 @@ document.addEventListener(
                 function(){
 
                     button.innerHTML =
-                        "AJOUTER AU PANIER";
+                        originalText;
 
                 },
                 1000
