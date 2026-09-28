@@ -430,7 +430,6 @@ button{
 
 /* =========================================================
    SECTION DIVIDER
-   Petite ligne décorative
 ========================================================= */
 
 .section-divider{
@@ -739,11 +738,6 @@ button{
 
 }
 
-
-/* =========================================================
-   BUY NOW
-========================================================= */
-
 .ebook-card .buy-btn{
 
     width:100%;
@@ -784,11 +778,6 @@ button{
         var(--gold-dark);
 
 }
-
-
-/* =========================================================
-   ADD TO CART
-========================================================= */
 
 .ebook-card .cart-btn{
 
@@ -862,15 +851,16 @@ button{
 
 /* =========================================================
    TEMPLATE CARD
+   SAME SIZE AS EBOOK CARD
 ========================================================= */
 
 .template-card{
 
     width:100%;
 
-    max-width:300px;
+    max-width:260px;
 
-    min-height:570px;
+    height:520px;
 
     margin:0 auto;
 
@@ -884,7 +874,7 @@ button{
     overflow:hidden;
 
     box-shadow:
-        0 5px 16px rgba(7,26,51,.08);
+        0 4px 14px rgba(7,26,51,.07);
 
     display:flex;
 
@@ -899,23 +889,26 @@ button{
 .template-card:hover{
 
     transform:
-        translateY(-4px);
+        translateY(-3px);
 
     box-shadow:
-        0 10px 25px rgba(7,26,51,.12);
+        0 8px 22px rgba(7,26,51,.10);
 
 }
 
 
 /* =========================================================
-   TEMPLATE IMAGE
+   TEMPLATE COVER
+   SAME SIZE AS EBOOK COVER
 ========================================================= */
 
 .template-cover{
 
     width:100%;
 
-    height:330px;
+    height:250px;
+
+    flex-shrink:0;
 
     background:#F7F8FA;
 
@@ -951,13 +944,20 @@ button{
 .template-info{
 
     padding:
-        15px 17px 10px;
+        0 16px;
 
-    flex:1;
+    margin:
+        11px 0 6px;
+
+    min-height:123px;
+
+    flex-shrink:0;
 
 }
 
 .template-label{
+
+    display:block;
 
     color:
         var(--gold-dark);
@@ -968,7 +968,7 @@ button{
 
     letter-spacing:1.4px;
 
-    margin-bottom:7px;
+    margin-bottom:6px;
 
 }
 
@@ -977,13 +977,13 @@ button{
     color:
         var(--navy);
 
-    font-size:19px;
+    font-size:17px;
 
     line-height:1.2;
 
-    font-weight:900;
+    font-weight:800;
 
-    margin-bottom:9px;
+    margin-bottom:8px;
 
 }
 
@@ -994,7 +994,17 @@ button{
 
     font-size:11px;
 
-    line-height:1.45;
+    line-height:1.4;
+
+    display:
+        -webkit-box;
+
+    -webkit-box-orient:
+        vertical;
+
+    -webkit-line-clamp:3;
+
+    overflow:hidden;
 
 }
 
@@ -1006,7 +1016,7 @@ button{
 .template-bottom{
 
     padding:
-        0 12px 12px;
+        0 10px 10px;
 
     margin-top:auto;
 
@@ -1014,15 +1024,20 @@ button{
 
 .template-price{
 
-    font-size:25px;
+    padding:
+        0 6px;
+
+    margin:
+        8px 0 11px;
+
+    min-height:29px;
+
+    font-size:24px;
 
     font-weight:900;
 
     color:
         var(--navy);
-
-    margin:
-        7px 5px 11px;
 
 }
 
@@ -1037,14 +1052,21 @@ button{
 
 }
 
-.template-buy,
-.template-cart{
+.template-buy{
+
+    width:100%;
 
     min-height:46px;
 
     border:none;
 
     border-radius:9px;
+
+    background:
+        var(--gold);
+
+    color:
+        var(--navy);
 
     display:flex;
 
@@ -1054,21 +1076,11 @@ button{
 
     text-align:center;
 
-    font-size:9px;
+    font-size:10px;
 
     font-weight:900;
 
     padding:6px;
-
-}
-
-.template-buy{
-
-    background:
-        var(--gold);
-
-    color:
-        var(--navy);
 
 }
 
@@ -1081,10 +1093,32 @@ button{
 
 .template-cart{
 
+    width:100%;
+
+    min-height:46px;
+
+    border:none;
+
+    border-radius:9px;
+
     background:
         var(--navy);
 
     color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    font-size:10px;
+
+    font-weight:900;
+
+    padding:6px;
 
 }
 
@@ -1569,26 +1603,97 @@ button{
 
     }
 
+
+    /* =====================================================
+       TABLET — TEMPLATES
+    ===================================================== */
+
     .templates-grid{
 
         grid-template-columns:
             repeat(2,minmax(0,1fr));
 
-        gap:16px;
+        gap:14px;
 
     }
 
     .template-card{
 
-        max-width:280px;
+        max-width:235px;
+
+        height:440px;
 
     }
 
     .template-cover{
 
-        height:280px;
+        height:190px;
 
     }
+
+    .template-info{
+
+        padding:
+            0 13px;
+
+        margin:
+            9px 0 5px;
+
+        min-height:108px;
+
+    }
+
+    .template-label{
+
+        font-size:8px;
+
+        margin-bottom:5px;
+
+    }
+
+    .template-title{
+
+        font-size:13px;
+
+        margin-bottom:6px;
+
+    }
+
+    .template-description{
+
+        font-size:9px;
+
+        line-height:1.4;
+
+    }
+
+    .template-price{
+
+        font-size:20px;
+
+        padding:
+            0 5px;
+
+        margin:
+            6px 0 8px;
+
+    }
+
+    .template-buttons{
+
+        gap:6px;
+
+    }
+
+    .template-buy,
+    .template-cart{
+
+        min-height:42px;
+
+        font-size:8px;
+
+    }
+
 
     .packs{
 
@@ -1899,15 +2004,18 @@ button{
 
 
     /* =====================================================
-       MOBILE — TEMPLATES
+       MOBILE — 2 TEMPLATES PER ROW
+       SAME SIZE AS EBOOKS
     ===================================================== */
 
     .templates-grid{
 
         grid-template-columns:
-            1fr;
+            repeat(2,minmax(0,1fr));
 
-        gap:14px;
+        gap:10px;
+
+        align-items:stretch;
 
     }
 
@@ -1915,7 +2023,7 @@ button{
 
         max-width:none;
 
-        min-height:500px;
+        height:390px;
 
         border-radius:10px;
 
@@ -1923,16 +2031,21 @@ button{
 
     .template-cover{
 
-        height:270px;
+        height:155px;
 
-        padding:9px;
+        padding:8px;
 
     }
 
     .template-info{
 
         padding:
-            13px 13px 8px;
+            0 9px;
+
+        margin:
+            8px 0 5px;
+
+        min-height:96px;
 
     }
 
@@ -1940,35 +2053,58 @@ button{
 
         font-size:7px;
 
+        letter-spacing:1px;
+
+        margin-bottom:4px;
+
     }
 
     .template-title{
 
-        font-size:16px;
+        font-size:11px;
+
+        line-height:1.2;
+
+        margin-bottom:5px;
 
     }
 
     .template-description{
 
-        font-size:9px;
+        font-size:8.5px;
 
-        line-height:1.45;
+        line-height:1.4;
+
+        display:
+            -webkit-box;
+
+        -webkit-box-orient:
+            vertical;
+
+        -webkit-line-clamp:3;
+
+        overflow:hidden;
 
     }
 
     .template-bottom{
 
         padding:
-            0 9px 9px;
+            0 6px 6px;
 
     }
 
     .template-price{
 
-        font-size:22px;
+        font-size:18px;
+
+        padding:
+            0 3px;
 
         margin:
-            6px 4px 8px;
+            6px 0 8px;
+
+        min-height:22px;
 
     }
 
@@ -1981,11 +2117,13 @@ button{
     .template-buy,
     .template-cart{
 
-        min-height:38px;
+        min-height:36px;
 
         font-size:7px;
 
         border-radius:6px;
+
+        padding:4px;
 
     }
 
@@ -2246,43 +2384,84 @@ button{
 
     .template-card{
 
-        min-height:450px;
+        height:365px;
+
+        border-radius:9px;
 
     }
 
     .template-cover{
 
-        height:235px;
+        height:140px;
+
+        padding:7px;
+
+    }
+
+    .template-info{
+
+        padding:
+            0 7px;
+
+        margin:
+            7px 0 4px;
+
+        min-height:90px;
+
+    }
+
+    .template-label{
+
+        font-size:6px;
 
     }
 
     .template-title{
 
-        font-size:14px;
+        font-size:9.5px;
+
+        line-height:1.2;
 
     }
 
     .template-description{
 
-        font-size:8px;
+        font-size:7.8px;
+
+        line-height:1.4;
 
     }
 
     .template-price{
 
-        font-size:20px;
+        font-size:16px;
+
+        padding:
+            0 5px;
+
+    }
+
+    .template-buttons{
+
+        gap:4px;
 
     }
 
     .template-buy,
     .template-cart{
 
-        min-height:34px;
+        min-height:33px;
 
         font-size:6px;
 
+        border-radius:5px;
+
     }
 
+
+    /* =====================================================
+       VERY SMALL — PACKS
+    ===================================================== */
 
     .packs{
 
@@ -2393,13 +2572,15 @@ button{
 
     .template-card{
 
-        max-width:300px;
+        max-width:260px;
+
+        height:520px;
 
     }
 
     .template-cover{
 
-        height:330px;
+        height:210px;
 
     }
 
@@ -2648,12 +2829,9 @@ button{
 
 <!-- ======================================================
      PACKS
-====================================================== -->
+========================================================= -->
 
 <section class="section packs-section">
-
-
-    <!-- PETITE LIGNE AVANT NOS PACKS -->
 
     <div class="section-divider">
 
@@ -3306,6 +3484,7 @@ const ebooks = [
 
 /* ======================================================
    FRENCH TEMPLATE DATA
+   2 TEMPLATES — BOTH KEPT
 ====================================================== */
 
 const templates = [
@@ -3331,6 +3510,30 @@ const templates = [
 
         stripe:
             "https://buy.stripe.com/8x23cxcswcyA7bhg9l8N20Z"
+    },
+
+
+    {
+        id:
+            "fr-template-2",
+
+        name:
+            "Planificateur de Productivité et Automatisation IA pour Entrepreneurs",
+
+        image:
+            "images/Planificateur_Productivite_Cover.png",
+
+        description:
+            "Un planificateur pratique pour identifier vos tâches, automatiser vos processus, gagner du temps, améliorer votre productivité et utiliser l’IA pour développer votre activité.",
+
+        price:
+            9,
+
+        priceId:
+            "price_1UKiS7Rtp4gVtODyPJLWjjUI",
+
+        stripe:
+            "https://buy.stripe.com/6oU28teAEaqs539g9l8N210"
     }
 
 ];
