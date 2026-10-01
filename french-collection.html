@@ -1143,7 +1143,9 @@ button{
     display:grid;
 
     grid-template-columns:
-        repeat(2,1fr);
+        minmax(0,700px);
+
+    justify-content:center;
 
     gap:24px;
 
@@ -1155,6 +1157,8 @@ button{
 ========================================================= */
 
 .pack-card{
+
+    width:100%;
 
     background:white;
 
@@ -1190,7 +1194,7 @@ button{
 
     width:100%;
 
-    height:290px;
+    height:360px;
 
     display:flex;
 
@@ -1240,7 +1244,7 @@ button{
     color:
         var(--navy);
 
-    font-size:23px;
+    font-size:26px;
 
     font-weight:900;
 
@@ -1254,7 +1258,7 @@ button{
 
 .pack-desc{
 
-    font-size:15px;
+    font-size:16px;
 
     line-height:1.45;
 
@@ -1692,7 +1696,9 @@ button{
     .packs{
 
         grid-template-columns:
-            repeat(2,1fr);
+            minmax(0,650px);
+
+        justify-content:center;
 
         gap:16px;
 
@@ -1708,7 +1714,7 @@ button{
 
     .pack-image{
 
-        height:250px;
+        height:300px;
 
     }
 
@@ -2116,7 +2122,7 @@ button{
     .packs{
 
         grid-template-columns:
-            repeat(2,minmax(0,1fr));
+            1fr;
 
         gap:12px;
 
@@ -2134,7 +2140,7 @@ button{
 
     .pack-image{
 
-        height:190px;
+        height:230px;
 
         padding:7px;
 
@@ -2439,7 +2445,7 @@ button{
     .packs{
 
         grid-template-columns:
-            repeat(2,minmax(0,1fr));
+            1fr;
 
         gap:8px;
 
@@ -2455,7 +2461,7 @@ button{
 
     .pack-image{
 
-        height:155px;
+        height:190px;
 
         padding:6px;
 
@@ -2559,7 +2565,7 @@ button{
 
     .pack-card{
 
-        min-height:590px;
+        min-height:620px;
 
         padding:20px;
 
@@ -2567,13 +2573,13 @@ button{
 
     .pack-image{
 
-        height:315px;
+        height:370px;
 
     }
 
     .pack-name{
 
-        font-size:25px;
+        font-size:28px;
 
     }
 
@@ -2801,7 +2807,7 @@ button{
 
 
 <!-- ======================================================
-     PACKS
+     PACK DE DÉMARRAGE
 ========================================================= -->
 
 <section class="section packs-section">
@@ -2829,7 +2835,7 @@ button{
 
         <h2 class="section-title">
 
-            Packs Premium
+            Pack de démarrage
 
         </h2>
 
@@ -2840,7 +2846,7 @@ button{
 
 
         <!-- =================================================
-             STARTER
+             PACK DE DÉMARRAGE
         ================================================== -->
 
         <article class="pack-card">
@@ -2848,57 +2854,84 @@ button{
             <div class="pack-image">
 
                 <img
-                    src="images/starterpack.jpg"
-                    alt="Starter Bundle">
+                    src="images/Packs_de_Demarrage__cover.png"
+                    alt="Pack de démarrage"
+                    loading="eager">
 
             </div>
+
 
             <div class="pack-info">
 
                 <div class="pack-name">
-                    Starter Bundle
+
+                    Pack de démarrage
+
                 </div>
 
+
                 <div class="pack-desc">
-                    2 eBooks + 4 Templates
+
+                    1 eBook + 2 Templates
+
                 </div>
+
 
                 <div class="pack-icons">
 
                     <span>
+
                         <i class="fa-solid fa-book"></i>
-                        eBooks
+
+                        1 eBook
+
                     </span>
 
+
                     <span>
+
                         <i class="fa-solid fa-file-lines"></i>
-                        Templates
+
+                        2 Templates
+
                     </span>
 
+
                     <span>
+
                         <i class="fa-solid fa-download"></i>
+
                         Téléchargement
+
                     </span>
 
+
                     <span>
-                        <i class="fa-solid fa-gift"></i>
-                        Bonus
+
+                        <i class="fa-solid fa-bolt"></i>
+
+                        Accès immédiat
+
                     </span>
 
                 </div>
 
             </div>
 
+
             <div class="pack-right">
 
                 <div class="pack-price">
+
                     $27
+
                 </div>
+
 
                 <div class="pack-buttons">
 
                     <a
-                        href="https://buy.stripe.com/5kQ8wRboscyAgLR0an8N20a"
+                        href="https://buy.stripe.com/6oUdRbgIMfKM3Z5f5h8N215"
                         target="_blank"
                         rel="noopener noreferrer"
                         class="pack-buy">
@@ -2907,290 +2940,22 @@ button{
 
                     </a>
 
+
                     <button
                         type="button"
                         class="pack-cart add-to-cart"
 
-                        data-id="fr-starter-bundle"
+                        data-id="fr-starter-pack"
 
-                        data-name="Starter Bundle"
+                        data-name="Pack de démarrage — IA pour Entrepreneurs"
 
                         data-price="27"
 
-                        data-image="images/starterpack.jpg">
+                        data-price-id="price_1ULYCYRtp4gVtODyR6qOHZ4W"
 
-                        AJOUTER AU PANIER
+                        data-image="images/Packs_de_Demarrage__cover.png"
 
-                    </button>
-
-                </div>
-
-            </div>
-
-        </article>
-
-
-        <!-- =================================================
-             CREATOR
-        ================================================== -->
-
-        <article class="pack-card">
-
-            <div class="pack-image">
-
-                <img
-                    src="images/creatorpack.jpg"
-                    alt="Creator Bundle">
-
-            </div>
-
-            <div class="pack-info">
-
-                <div class="pack-name">
-                    Creator Bundle
-                </div>
-
-                <div class="pack-desc">
-                    3 eBooks + 6 Templates
-                </div>
-
-                <div class="pack-icons">
-
-                    <span>
-                        <i class="fa-solid fa-book"></i>
-                        eBooks
-                    </span>
-
-                    <span>
-                        <i class="fa-solid fa-file-lines"></i>
-                        Templates
-                    </span>
-
-                    <span>
-                        <i class="fa-solid fa-download"></i>
-                        Téléchargement
-                    </span>
-
-                    <span>
-                        <i class="fa-solid fa-gift"></i>
-                        Bonus
-                    </span>
-
-                </div>
-
-            </div>
-
-            <div class="pack-right">
-
-                <div class="pack-price">
-                    $37
-                </div>
-
-                <div class="pack-buttons">
-
-                    <a
-                        href="https://buy.stripe.com/dRm8wR2RWeGIeDJf5h8N20b"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="pack-buy">
-
-                        ACHETER MAINTENANT
-
-                    </a>
-
-                    <button
-                        type="button"
-                        class="pack-cart add-to-cart"
-
-                        data-id="fr-creator-bundle"
-
-                        data-name="Creator Bundle"
-
-                        data-price="37"
-
-                        data-image="images/creatorpack.jpg">
-
-                        AJOUTER AU PANIER
-
-                    </button>
-
-                </div>
-
-            </div>
-
-        </article>
-
-
-        <!-- =================================================
-             PRO
-        ================================================== -->
-
-        <article class="pack-card">
-
-            <div class="pack-image">
-
-                <img
-                    src="images/propack.jpg"
-                    alt="Pro Bundle">
-
-            </div>
-
-            <div class="pack-info">
-
-                <div class="pack-name">
-                    Pro Bundle
-                </div>
-
-                <div class="pack-desc">
-                    5 eBooks + 10 Templates
-                </div>
-
-                <div class="pack-icons">
-
-                    <span>
-                        <i class="fa-solid fa-book"></i>
-                        eBooks
-                    </span>
-
-                    <span>
-                        <i class="fa-solid fa-file-lines"></i>
-                        Templates
-                    </span>
-
-                    <span>
-                        <i class="fa-solid fa-download"></i>
-                        Téléchargement
-                    </span>
-
-                    <span>
-                        <i class="fa-solid fa-gift"></i>
-                        Bonus
-                    </span>
-
-                </div>
-
-            </div>
-
-            <div class="pack-right">
-
-                <div class="pack-price">
-                    $57
-                </div>
-
-                <div class="pack-buttons">
-
-                    <a
-                        href="https://buy.stripe.com/00w9AVako5682V14qD8N20c"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="pack-buy">
-
-                        ACHETER MAINTENANT
-
-                    </a>
-
-                    <button
-                        type="button"
-                        class="pack-cart add-to-cart"
-
-                        data-id="fr-pro-bundle"
-
-                        data-name="Pro Bundle"
-
-                        data-price="57"
-
-                        data-image="images/propack.jpg">
-
-                        AJOUTER AU PANIER
-
-                    </button>
-
-                </div>
-
-            </div>
-
-        </article>
-
-
-        <!-- =================================================
-             VAULT
-        ================================================== -->
-
-        <article class="pack-card">
-
-            <div class="pack-image">
-
-                <img
-                    src="images/vaultpack.jpg"
-                    alt="Vault Bundle">
-
-            </div>
-
-            <div class="pack-info">
-
-                <div class="pack-name">
-                    Vault Bundle
-                </div>
-
-                <div class="pack-desc">
-                    10 eBooks + 20 Templates
-                </div>
-
-                <div class="pack-icons">
-
-                    <span>
-                        <i class="fa-solid fa-book"></i>
-                        eBooks
-                    </span>
-
-                    <span>
-                        <i class="fa-solid fa-file-lines"></i>
-                        Templates
-                    </span>
-
-                    <span>
-                        <i class="fa-solid fa-download"></i>
-                        Téléchargement
-                    </span>
-
-                    <span>
-                        <i class="fa-solid fa-gift"></i>
-                        Bonus
-                    </span>
-
-                </div>
-
-            </div>
-
-            <div class="pack-right">
-
-                <div class="pack-price">
-                    $97
-                </div>
-
-                <div class="pack-buttons">
-
-                    <a
-                        href="https://buy.stripe.com/9B65kF504buw5390an8N20d"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="pack-buy">
-
-                        ACHETER MAINTENANT
-
-                    </a>
-
-                    <button
-                        type="button"
-                        class="pack-cart add-to-cart"
-
-                        data-id="fr-vault-bundle"
-
-                        data-name="Vault Bundle"
-
-                        data-price="97"
-
-                        data-image="images/vaultpack.jpg">
+                        data-stripe="https://buy.stripe.com/6oUdRbgIMfKM3Z5f5h8N215">
 
                         AJOUTER AU PANIER
 
@@ -3220,6 +2985,7 @@ button{
 
         </div>
 
+
         <div class="trust-item">
 
             <i class="fa-solid fa-bolt"></i>
@@ -3228,6 +2994,7 @@ button{
             IMMÉDIAT
 
         </div>
+
 
         <div class="trust-item">
 
@@ -3245,7 +3012,7 @@ button{
 
 <!-- ======================================================
      FOOTER
-====================================================== -->
+========================================================= -->
 
 <footer class="footer">
 
@@ -3582,11 +3349,6 @@ const templates = [
     },
 
 
-    /* ==================================================
-       TEMPLATE 6
-       PLANIFICATEUR DE CAMPAGNES MARKETING
-    ================================================== */
-
     {
         id:
             "fr-template-6",
@@ -3607,7 +3369,7 @@ const templates = [
             "price_1ULGO0Rtp4gVtODyBxCWbUl2",
 
         stripe:
-            "https://buy.stripe.com/cNi4gBbos7egglRe1d8N214"
+            "https://buy.stripe.com/cNi4gBbos7eggLRe1d8N214"
     }
 
 ];
