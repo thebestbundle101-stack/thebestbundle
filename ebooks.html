@@ -9,9 +9,7 @@
     name="viewport"
     content="width=device-width, initial-scale=1.0">
 
-<title>
-    eBooks | TheBestBundle
-</title>
+<title>eBooks | TheBestBundle</title>
 
 <meta
     name="description"
@@ -25,7 +23,7 @@
 
 <link
     rel="preconnect"
-    href="https://fonts.gstatic.com"
+    href="https://fonts.googleapis.com"
     crossorigin
 >
 
@@ -41,6 +39,10 @@
 
 <style>
 
+/* =========================================================
+   ROOT
+========================================================= */
+
 :root {
     --navy: #071a33;
     --navy-light: #0d2748;
@@ -52,6 +54,11 @@
     --muted: #6f7782;
     --border: rgba(200,164,93,0.28);
 }
+
+
+/* =========================================================
+   RESET
+========================================================= */
 
 * {
     box-sizing: border-box;
@@ -70,19 +77,24 @@ body {
     min-height: 100vh;
 }
 
-/* =========================
+
+/* =========================================================
    HEADER
-========================= */
+========================================================= */
 
 header {
     background: var(--navy);
     color: var(--white);
     height: 76px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     padding: 0 6%;
+
     box-shadow: 0 4px 18px rgba(0,0,0,0.18);
+
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -91,9 +103,11 @@ header {
 .logo {
     color: var(--gold-light);
     text-decoration: none;
+
     font-family: "Cormorant Garamond", serif;
     font-size: 30px;
     font-weight: 700;
+
     letter-spacing: 1px;
 }
 
@@ -107,8 +121,11 @@ header {
 .cart-btn {
     color: var(--white);
     text-decoration: none;
+
     font-size: 20px;
+
     position: relative;
+
     transition: 0.25s ease;
 }
 
@@ -119,35 +136,44 @@ header {
 
 .cart-count {
     position: absolute;
+
     top: -11px;
     right: -12px;
+
     width: 19px;
     height: 19px;
+
     border-radius: 50%;
+
     background: var(--gold);
     color: var(--navy);
+
     font-size: 10px;
     font-weight: 700;
+
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* =========================
+
+/* =========================================================
    MAIN
-========================= */
+========================================================= */
 
 main {
     padding-bottom: 70px;
 }
 
-/* =========================
+
+/* =========================================================
    BACK BUTTON
-========================= */
+========================================================= */
 
 .back-container {
     max-width: 1200px;
     margin: 0 auto;
+
     padding: 24px 24px 0;
 }
 
@@ -155,10 +181,14 @@ main {
     display: inline-flex;
     align-items: center;
     gap: 9px;
+
     color: var(--navy);
+
     text-decoration: none;
+
     font-size: 14px;
     font-weight: 600;
+
     transition: 0.25s ease;
 }
 
@@ -166,71 +196,101 @@ main {
     color: var(--gold);
 }
 
-/* =========================
+
+/* =========================================================
    HERO
-========================= */
+========================================================= */
 
 .hero {
     max-width: 1200px;
     margin: 0 auto;
+
     padding: 55px 24px 35px;
+
     text-align: center;
 }
 
 .hero-small {
     color: var(--gold);
+
     font-size: 12px;
     font-weight: 700;
+
     letter-spacing: 3px;
+
     margin-bottom: 10px;
 }
 
 .hero h1 {
     font-family: "Cormorant Garamond", serif;
+
     font-size: clamp(42px, 7vw, 68px);
+
     line-height: 1;
+
     color: var(--navy);
+
     margin-bottom: 15px;
 }
 
 .hero p {
     max-width: 720px;
+
     margin: 0 auto;
+
     color: var(--muted);
+
     font-size: 15px;
+
     line-height: 1.8;
 }
 
-/* =========================
-   QUICK NAV
-========================= */
+
+/* =========================================================
+   QUICK NAVIGATION
+========================================================= */
 
 .quick-nav {
     max-width: 700px;
+
     margin: 8px auto 48px;
+
     padding: 0 20px;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     gap: 14px;
 }
 
 .quick-nav a {
     flex: 1;
+
     max-width: 260px;
     min-height: 48px;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     gap: 9px;
+
     text-decoration: none;
+
     color: var(--navy);
+
     background: var(--white);
+
     border: 1px solid var(--border);
+
     border-radius: 30px;
+
     font-size: 13px;
     font-weight: 700;
+
     transition: 0.3s ease;
+
     box-shadow: 0 5px 18px rgba(7,26,51,0.05);
 }
 
@@ -241,6 +301,7 @@ main {
 .quick-nav a:hover {
     background: var(--navy);
     color: var(--white);
+
     transform: translateY(-2px);
 }
 
@@ -248,51 +309,68 @@ main {
     color: var(--gold-light);
 }
 
-/* =========================
+
+/* =========================================================
    CATEGORY
-========================= */
+========================================================= */
 
 .category-section {
     max-width: 1200px;
+
     margin: 0 auto;
+
     padding: 0 24px;
+
     scroll-margin-top: 105px;
 }
 
 .category-heading {
     text-align: center;
+
     margin-bottom: 28px;
 }
 
 .category-heading .eyebrow {
     color: var(--gold);
+
     font-size: 11px;
     font-weight: 700;
+
     letter-spacing: 3px;
+
     margin-bottom: 6px;
 }
 
 .category-heading h2 {
     font-family: "Cormorant Garamond", serif;
+
     color: var(--navy);
+
     font-size: 38px;
+
     line-height: 1.1;
 }
 
 .category-heading p {
     margin-top: 8px;
+
     color: var(--muted);
+
     font-size: 13px;
 }
 
-/* =========================
+
+/* =========================================================
    PRODUCTS GRID
-========================= */
+========================================================= */
 
 .products-grid {
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 30px;
+
     transition: opacity 0.45s ease;
 }
 
@@ -300,109 +378,211 @@ main {
     opacity: 0;
 }
 
-/* =========================
+
+/* =========================================================
    PRODUCT CARD
-========================= */
+========================================================= */
 
 .product-card {
     background: var(--white);
+
     border: 1px solid rgba(7,26,51,0.08);
+
     border-radius: 18px;
+
     overflow: hidden;
+
     box-shadow: 0 12px 35px rgba(7,26,51,0.08);
+
     transition:
         transform 0.3s ease,
         box-shadow 0.3s ease;
+
     display: flex;
     flex-direction: column;
 }
 
 .product-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 18px 42px rgba(7,26,51,0.14);
+
+    box-shadow:
+        0 18px 42px rgba(7,26,51,0.14);
 }
+
+
+/* =========================================================
+   PRODUCT IMAGE
+========================================================= */
 
 .product-image-wrap {
     background: #f1eee6;
+
     padding: 20px;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     min-height: 390px;
 }
 
 .product-image {
     width: 100%;
+
     max-width: 275px;
     max-height: 350px;
+
     object-fit: contain;
+
     display: block;
-    filter: drop-shadow(0 12px 14px rgba(0,0,0,0.16));
-    transition: transform 0.35s ease;
+
+    filter:
+        drop-shadow(
+            0 12px 14px rgba(0,0,0,0.16)
+        );
+
+    transition:
+        transform 0.35s ease;
 }
 
 .product-card:hover .product-image {
     transform: scale(1.025);
 }
 
+
+/* =========================================================
+   PRODUCT INFO
+========================================================= */
+
 .product-info {
     padding: 23px 22px 24px;
+
     display: flex;
     flex-direction: column;
+
     flex: 1;
 }
 
 .product-title {
     font-family: "Cormorant Garamond", serif;
+
     color: var(--navy);
+
     font-size: 25px;
     font-weight: 700;
+
     line-height: 1.12;
+
     margin-bottom: 15px;
 }
 
 .product-bottom {
     margin-top: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 14px;
 }
+
+
+/* =========================================================
+   PRICE
+========================================================= */
 
 .product-price {
     color: var(--navy);
+
     font-size: 20px;
     font-weight: 700;
+
+    margin-bottom: 15px;
 }
 
-.add-cart-btn {
-    border: none;
-    background: var(--navy);
-    color: var(--white);
-    padding: 12px 17px;
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.product-buttons {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 9px;
+}
+
+.add-cart-btn,
+.buy-now-btn {
+    min-height: 43px;
+
     border-radius: 8px;
+
     cursor: pointer;
+
     font-family: "Montserrat", sans-serif;
-    font-size: 12px;
+
+    font-size: 11px;
     font-weight: 700;
+
     transition: 0.25s ease;
-    white-space: nowrap;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    text-decoration: none;
+}
+
+
+/* Add to Cart */
+
+.add-cart-btn {
+    border: 1px solid var(--navy);
+
+    background: var(--navy);
+
+    color: var(--white);
 }
 
 .add-cart-btn:hover {
     background: var(--gold);
+
+    border-color: var(--gold);
+
     color: var(--navy);
 }
 
-/* =========================
+
+/* Buy Now */
+
+.buy-now-btn {
+    border: 1px solid var(--gold);
+
+    background: var(--gold);
+
+    color: var(--navy);
+}
+
+.buy-now-btn:hover {
+    background: var(--gold-light);
+
+    border-color: var(--gold-light);
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
    CATEGORY DIVIDER
-========================= */
+========================================================= */
 
 .category-divider {
     max-width: 800px;
+
     height: 70px;
+
     margin: 58px auto 54px;
+
     position: relative;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -410,117 +590,159 @@ main {
 
 .category-divider::before {
     content: "";
+
     position: absolute;
+
     left: 0;
     right: 0;
+
     top: 50%;
+
     height: 1px;
-    background: linear-gradient(
-        90deg,
-        transparent,
-        var(--gold),
-        transparent
-    );
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--gold),
+            transparent
+        );
 }
 
 .category-divider-icon {
     position: relative;
+
     z-index: 2;
+
     width: 42px;
     height: 42px;
+
     border-radius: 50%;
+
     background: var(--cream);
+
     border: 1px solid var(--gold);
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     color: var(--gold);
+
     font-size: 13px;
 }
 
-/* =========================
+
+/* =========================================================
    TRUST
-========================= */
+========================================================= */
 
 .trust-section {
     max-width: 900px;
+
     margin: 75px auto 0;
+
     padding: 0 24px;
 }
 
 .trust-grid {
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 18px;
 }
 
 .trust-item {
     text-align: center;
+
     padding: 24px 15px;
+
     background: rgba(255,255,255,0.65);
-    border: 1px solid rgba(200,164,93,0.18);
+
+    border:
+        1px solid rgba(200,164,93,0.18);
+
     border-radius: 14px;
 }
 
 .trust-item i {
     color: var(--gold);
+
     font-size: 22px;
+
     margin-bottom: 10px;
 }
 
 .trust-item h3 {
     color: var(--navy);
+
     font-size: 12px;
+
     letter-spacing: 1px;
+
     margin-bottom: 5px;
 }
 
 .trust-item p {
     color: var(--muted);
+
     font-size: 11px;
 }
 
-/* =========================
+
+/* =========================================================
    FOOTER
-========================= */
+========================================================= */
 
 footer {
     background: var(--navy);
+
     color: rgba(255,255,255,0.7);
+
     text-align: center;
+
     padding: 35px 20px;
 }
 
 .footer-logo {
     color: var(--gold-light);
+
     font-family: "Cormorant Garamond", serif;
+
     font-size: 28px;
     font-weight: 700;
+
     margin-bottom: 8px;
 }
 
 footer p {
     font-size: 11px;
+
     line-height: 1.6;
 }
 
-/* =========================
+
+/* =========================================================
    RESPONSIVE
-========================= */
+========================================================= */
 
 @media (max-width: 950px) {
 
     .products-grid {
         grid-template-columns: repeat(2, 1fr);
+
         gap: 24px;
     }
 
 }
 
+
 @media (max-width: 650px) {
 
     header {
         height: 68px;
+
         padding: 0 20px;
     }
 
@@ -542,26 +764,31 @@ footer p {
 
     .quick-nav {
         flex-direction: column;
+
         margin-bottom: 42px;
     }
 
     .quick-nav a {
         width: 100%;
+
         max-width: 330px;
     }
 
     .products-grid {
         grid-template-columns: repeat(2, 1fr);
+
         gap: 14px;
     }
 
     .product-image-wrap {
         min-height: 245px;
+
         padding: 12px;
     }
 
     .product-image {
         max-width: 175px;
+
         max-height: 235px;
     }
 
@@ -571,22 +798,28 @@ footer p {
 
     .product-title {
         font-size: 21px;
-        margin-bottom: 13px;
-    }
 
-    .product-bottom {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 10px;
+        margin-bottom: 13px;
     }
 
     .product-price {
         font-size: 17px;
+
+        margin-bottom: 10px;
     }
 
-    .add-cart-btn {
+    .product-buttons {
+        grid-template-columns: 1fr;
+
+        gap: 7px;
+    }
+
+    .add-cart-btn,
+    .buy-now-btn {
         width: 100%;
-        padding: 11px 8px;
+
+        min-height: 39px;
+
         font-size: 10px;
     }
 
@@ -612,9 +845,9 @@ footer p {
 <body>
 
 
-<!-- =========================
+<!-- =========================================================
      HEADER
-========================= -->
+========================================================= -->
 
 <header>
 
@@ -625,6 +858,7 @@ footer p {
         TheBestBundle
     </a>
 
+
     <div class="header-right">
 
         <a
@@ -632,8 +866,11 @@ footer p {
             class="home-btn"
             aria-label="Home"
         >
+
             <i class="fa-solid fa-house"></i>
+
         </a>
+
 
         <a
             href="cart.html"
@@ -657,12 +894,13 @@ footer p {
 </header>
 
 
+
 <main>
 
 
-<!-- =========================
+<!-- =========================================================
      BACK
-========================= -->
+========================================================= -->
 
 <div class="back-container">
 
@@ -671,16 +909,20 @@ footer p {
         class="back-btn"
         id="backBtn"
     >
+
         <i class="fa-solid fa-arrow-left"></i>
+
         Back
+
     </a>
 
 </div>
 
 
-<!-- =========================
+
+<!-- =========================================================
      HERO
-========================= -->
+========================================================= -->
 
 <section class="hero">
 
@@ -688,9 +930,11 @@ footer p {
         THEBESTBUNDLE • COLLECTION
     </div>
 
+
     <h1>
         Premium eBooks
     </h1>
+
 
     <p>
         Explore our collection of premium digital eBooks
@@ -701,9 +945,10 @@ footer p {
 </section>
 
 
-<!-- =========================
+
+<!-- =========================================================
      QUICK NAVIGATION
-========================= -->
+========================================================= -->
 
 <nav
     class="quick-nav"
@@ -718,6 +963,7 @@ footer p {
 
     </a>
 
+
     <a href="#business">
 
         <i class="fa-solid fa-briefcase"></i>
@@ -729,9 +975,10 @@ footer p {
 </nav>
 
 
-<!-- =========================
+
+<!-- =========================================================
      HEALTH EBOOKS
-========================= -->
+========================================================= -->
 
 <section
     class="category-section"
@@ -744,9 +991,11 @@ footer p {
             WELLNESS • BEAUTY • LONGEVITY
         </div>
 
+
         <h2>
             Health eBooks
         </h2>
+
 
         <p>
             Practical digital guides for your health,
@@ -764,9 +1013,10 @@ footer p {
 </section>
 
 
-<!-- =========================
-     CATEGORY DIVIDER
-========================= -->
+
+<!-- =========================================================
+     DIVIDER
+========================================================= -->
 
 <div
     class="category-divider"
@@ -782,9 +1032,10 @@ footer p {
 </div>
 
 
-<!-- =========================
+
+<!-- =========================================================
      BUSINESS EBOOKS
-========================= -->
+========================================================= -->
 
 <section
     class="category-section"
@@ -797,9 +1048,11 @@ footer p {
             BUSINESS • DIGITAL • ENTREPRENEURSHIP
         </div>
 
+
         <h2>
             Business eBooks
         </h2>
+
 
         <p>
             Practical resources to help you build,
@@ -817,13 +1070,15 @@ footer p {
 </section>
 
 
-<!-- =========================
+
+<!-- =========================================================
      TRUST
-========================= -->
+========================================================= -->
 
 <section class="trust-section">
 
     <div class="trust-grid">
+
 
         <div class="trust-item">
 
@@ -877,9 +1132,10 @@ footer p {
 </main>
 
 
-<!-- =========================
+
+<!-- =========================================================
      FOOTER
-========================= -->
+========================================================= -->
 
 <footer>
 
@@ -887,10 +1143,12 @@ footer p {
         TheBestBundle
     </div>
 
+
     <p>
         Premium digital products designed to help you
         learn, grow and transform.
     </p>
+
 
     <p style="margin-top:10px;">
         © 2026 TheBestBundle. All rights reserved.
@@ -899,131 +1157,262 @@ footer p {
 </footer>
 
 
+
 <script>
 
-/* =========================================
+
+/* =========================================================
    PRODUCT DATA
-========================================= */
+========================================================= */
 
 const products = [
 
-    /* =========================
-       HEALTH
-    ========================= */
+
+    /* =====================================================
+       HEALTH EBOOKS
+    ===================================================== */
 
     {
         id: "look-20-years-younger",
+
         category: "health",
-        name: "How to Look 20 Years Younger Than Your Age",
-        image: "images/How_To_Look_20_Years_Younger_Cover.png",
+
+        name:
+            "How to Look 20 Years Younger Than Your Age",
+
+        image:
+            "images/How_To_Look_20_Years_Younger_Cover.png",
+
         price: 17,
-        priceId: "price_1TtXCXRtp4gVtODyNK9vhXIm",
-        stripe: "https://buy.stripe.com/8x228tcswgOQeDJe1d8N20i"
+
+        priceId:
+            "price_1TtXCXRtp4gVtODyNK9vhXIm",
+
+        stripe:
+            "https://buy.stripe.com/8x228tcswgOQeDJe1d8N20i"
     },
+
 
     {
         id: "natural-anti-aging",
+
         category: "health",
-        name: "The Natural Anti-Aging Guide",
-        image: "images/The_Natural_Anti-Aging_Guide_Cover.png",
+
+        name:
+            "The Natural Anti-Aging Guide",
+
+        image:
+            "images/The_Natural_Anti-Aging_Guide_Cover.png",
+
         price: 17,
-        priceId: "price_1TupuwRtp4gVtODyHnJCanv1",
-        stripe: "https://buy.stripe.com/eVqfZj1NS5681QX2iv8N20k"
+
+        priceId:
+            "price_1TupuwRtp4gVtODyHnJCanv1",
+
+        stripe:
+            "https://buy.stripe.com/eVqfZj1NS5681QX2iv8N20k"
     },
+
 
     {
         id: "longevity-blueprint",
+
         category: "health",
-        name: "The Longevity Blueprint",
-        image: "images/the-longevity-blueprint-cover.png",
+
+        name:
+            "The Longevity Blueprint",
+
+        image:
+            "images/the-longevity-blueprint-cover.png",
+
         price: 17,
-        priceId: "price_1TxiMYRtp4gVtODy5zcyFkVG",
-        stripe: "https://buy.stripe.com/00w7sN3W08ik8flaP18N20q"
+
+        priceId:
+            "price_1TxiMYRtp4gVtODy5zcyFkVG",
+
+        stripe:
+            "https://buy.stripe.com/00w7sN3W08ik8flaP18N20q"
     },
+
 
     {
         id: "healthy-hormones",
+
         category: "health",
-        name: "The Healthy Hormones & Vitality Guide",
-        image: "images/healthy-hormones-cover.png",
+
+        name:
+            "The Healthy Hormones & Vitality Guide",
+
+        image:
+            "images/healthy-hormones-cover.png",
+
         price: 17,
-        priceId: "price_1U6SAfRtp4gVtODyKSUTLk7I",
-        stripe: "https://buy.stripe.com/8x25kFfEIdCE8fle1d8N20r"
+
+        priceId:
+            "price_1U6SAfRtp4gVtODyKSUTLk7I",
+
+        stripe:
+            "https://buy.stripe.com/8x25kFfEIdCE8fle1d8N20r"
     },
 
+
     {
-        id: "ultimate-skincare-beauty-handbook",
-        category: "health",
-        name: "The Ultimate Skincare & Beauty Handbook",
-        image: "images/Ultimate_Skincare_Beauty_Handbook.png",
-        price: 17,
-        priceId: "price_1U6jnVRtp4gVtODybqY7MaYs",
-        stripe: "https://buy.stripe.com/eVq6oJ78cgOQeDJ8GT8N20s"
+        id:
+            "ultimate-skincare-beauty-handbook",
+
+        category:
+            "health",
+
+        name:
+            "The Ultimate Skincare & Beauty Handbook",
+
+        image:
+            "images/Ultimate_Skincare_Beauty_Handbook.png",
+
+        price:
+            17,
+
+        priceId:
+            "price_1U6jnVRtp4gVtODybqY7MaYs",
+
+        stripe:
+            "https://buy.stripe.com/eVq6oJ78cgOQeDJ8GT8N20s"
     },
 
 
-    /* =========================
-       BUSINESS
-    ========================= */
+    /* =====================================================
+       BUSINESS EBOOKS
+    ===================================================== */
 
     {
-        id: "digital-business-blueprint",
-        category: "business",
-        name: "The Digital Business Blueprint",
-        image: "images/The_Digital_Business_Blueprint_Cover.png",
-        price: 17,
-        priceId: "price_1UB9awRtp4gVtODyLFhByrWI",
-        stripe: "https://buy.stripe.com/5kQaEZgIMbuw0MT6yL8N20A"
+        id:
+            "digital-business-blueprint",
+
+        category:
+            "business",
+
+        name:
+            "The Digital Business Blueprint",
+
+        image:
+            "images/The_Digital_Business_Blueprint_Cover.png",
+
+        price:
+            17,
+
+        priceId:
+            "price_1UB9awRtp4gVtODyLFhByrWI",
+
+        stripe:
+            "https://buy.stripe.com/5kQaEZgIMbuw0MT6yL8N20A"
     },
 
-    {
-        id: "digital-products-that-sell",
-        category: "business",
-        name: "Digital Products That Sell",
-        image: "images/digital-products-that-sell-cover.png",
-        price: 17,
-        priceId: "price_1UBLgkRtp4gVtODyxYgYqRZ9",
-        stripe: "https://buy.stripe.com/4gMfZj9gk1TW67d3mz8N20B"
-    },
 
     {
-        id: "passive-income-playbook",
-        category: "business",
-        name: "The Passive Income Playbook",
-        image: "images/The_Passive_Income_Playbook_Cover.png",
-        price: 17,
-        priceId: "price_1UBUpURtp4gVtODyX00iNKEy",
-        stripe: "https://buy.stripe.com/aFa6oJ0JO7eg0MTe1d8N20C"
+        id:
+            "digital-products-that-sell",
+
+        category:
+            "business",
+
+        name:
+            "Digital Products That Sell",
+
+        image:
+            "images/digital-products-that-sell-cover.png",
+
+        price:
+            17,
+
+        priceId:
+            "price_1UBLgkRtp4gVtODyxYgYqRZ9",
+
+        stripe:
+            "https://buy.stripe.com/4gMfZj9gk1TW67d3mz8N20B"
     },
 
-    {
-        id: "digital-marketing-made-simple",
-        category: "business",
-        name: "Digital Marketing Made Simple",
-        image: "images/Digital_Marketing_Made_Simple_cover.png",
-        price: 17,
-        priceId: "price_1UBlBrRtp4gVtODyELpTmhGw",
-        stripe: "https://buy.stripe.com/28E9AVakocyA0MTf5h8N20D"
-    },
 
     {
-        id: "ai-for-entrepreneurs",
-        category: "business",
-        name: "AI For Entrepreneurs",
-        image: "images/AI_for_Entrepreneurs_Cover.png",
-        price: 17,
-        priceId: "price_1UBqxCRtp4gVtODyrHEtT9qn",
-        stripe: "https://buy.stripe.com/6oU8wR504424antcX98N20E"
+        id:
+            "passive-income-playbook",
+
+        category:
+            "business",
+
+        name:
+            "The Passive Income Playbook",
+
+        image:
+            "images/The_Passive_Income_Playbook_Cover.png",
+
+        price:
+            17,
+
+        priceId:
+            "price_1UBUpURtp4gVtODyX00iNKEy",
+
+        stripe:
+            "https://buy.stripe.com/aFa6oJ0JO7eg0MTe1d8N20C"
+    },
+
+
+    {
+        id:
+            "digital-marketing-made-simple",
+
+        category:
+            "business",
+
+        name:
+            "Digital Marketing Made Simple",
+
+        image:
+            "images/Digital_Marketing_Made_Simple_cover.png",
+
+        price:
+            17,
+
+        priceId:
+            "price_1UBlBrRtp4gVtODyELpTmhGw",
+
+        stripe:
+            "https://buy.stripe.com/28E9AVakocyA0MTf5h8N20D"
+    },
+
+
+    {
+        id:
+            "ai-for-entrepreneurs",
+
+        category:
+            "business",
+
+        name:
+            "AI For Entrepreneurs",
+
+        image:
+            "images/AI_for_Entrepreneurs_Cover.png",
+
+        price:
+            17,
+
+        priceId:
+            "price_1UBqxCRtp4gVtODyrHEtT9qn",
+
+        stripe:
+            "https://buy.stripe.com/6oU8wR504424antcX98N20E"
     }
 
 ];
 
 
-/* =========================================
-   CART
-========================================= */
 
-const CART_KEY = "theBestBundleCart";
+/* =========================================================
+   CART
+========================================================= */
+
+const CART_KEY =
+    "theBestBundleCart";
 
 
 function getCart() {
@@ -1032,20 +1421,25 @@ function getCart() {
 
         const cart =
             JSON.parse(
-                localStorage.getItem(CART_KEY)
+                localStorage.getItem(
+                    CART_KEY
+                )
             );
 
         return Array.isArray(cart)
             ? cart
             : [];
 
-    } catch (error) {
+    }
+
+    catch (error) {
 
         return [];
 
     }
 
 }
+
 
 
 function saveCart(cart) {
@@ -1058,68 +1452,95 @@ function saveCart(cart) {
 }
 
 
+
 function updateCartCount() {
 
-    const cart = getCart();
+    const cart =
+        getCart();
 
     const count =
-        document.getElementById("cartCount");
+        document.getElementById(
+            "cartCount"
+        );
 
     if (count) {
 
-        count.textContent = cart.length;
+        count.textContent =
+            cart.length;
 
     }
 
 }
 
 
+
+/* =========================================================
+   ADD TO CART
+========================================================= */
+
 function addToCart(product) {
 
-    const cart = getCart();
+    const cart =
+        getCart();
+
 
     const exists =
         cart.some(
-            item => item.id === product.id
+            item =>
+                item.id === product.id
         );
+
 
     if (!exists) {
 
         cart.push({
 
-            id: product.id,
+            id:
+                product.id,
 
-            name: product.name,
+            name:
+                product.name,
 
-            price: product.price,
+            price:
+                product.price,
 
-            image: product.image,
+            image:
+                product.image,
 
-            priceId: product.priceId,
+            priceId:
+                product.priceId,
 
-            stripe: product.stripe
+            stripe:
+                product.stripe
 
         });
+
 
         saveCart(cart);
 
     }
+
 
     updateCartCount();
 
 }
 
 
-/* =========================================
+
+/* =========================================================
    PRODUCT CARD
-========================================= */
+========================================================= */
 
 function createProductCard(product) {
 
     const card =
-        document.createElement("article");
+        document.createElement(
+            "article"
+        );
 
-    card.className = "product-card";
+
+    card.className =
+        "product-card";
 
 
     card.innerHTML = `
@@ -1150,12 +1571,32 @@ function createProductCard(product) {
                 </div>
 
 
-                <button
-                    class="add-cart-btn"
-                    type="button"
-                >
-                    Add to Cart
-                </button>
+                <div class="product-buttons">
+
+                    <button
+                        class="add-cart-btn"
+                        type="button"
+                    >
+
+                        <i class="fa-solid fa-cart-plus"></i>
+
+                        Add to Cart
+
+                    </button>
+
+
+                    <a
+                        class="buy-now-btn"
+                        href="${product.stripe}"
+                    >
+
+                        <i class="fa-solid fa-bolt"></i>
+
+                        Buy Now
+
+                    </a>
+
+                </div>
 
             </div>
 
@@ -1165,7 +1606,9 @@ function createProductCard(product) {
 
 
     const button =
-        card.querySelector(".add-cart-btn");
+        card.querySelector(
+            ".add-cart-btn"
+        );
 
 
     button.addEventListener(
@@ -1174,14 +1617,16 @@ function createProductCard(product) {
 
             addToCart(product);
 
-            button.textContent =
-                "Added ✓";
+
+            button.innerHTML =
+                '<i class="fa-solid fa-check"></i> Added';
+
 
             setTimeout(
                 function() {
 
-                    button.textContent =
-                        "Add to Cart";
+                    button.innerHTML =
+                        '<i class="fa-solid fa-cart-plus"></i> Add to Cart';
 
                 },
                 1200
@@ -1196,13 +1641,16 @@ function createProductCard(product) {
 }
 
 
-/* =========================================
+
+/* =========================================================
    SHUFFLE
-========================================= */
+========================================================= */
 
 function shuffle(array) {
 
-    const copy = [...array];
+    const copy =
+        [...array];
+
 
     for (
         let i = copy.length - 1;
@@ -1212,8 +1660,10 @@ function shuffle(array) {
 
         const j =
             Math.floor(
-                Math.random() * (i + 1)
+                Math.random() *
+                (i + 1)
             );
+
 
         [
             copy[i],
@@ -1226,20 +1676,23 @@ function shuffle(array) {
 
     }
 
+
     return copy;
 
 }
 
 
-/* =========================================
+
+/* =========================================================
    CATEGORY ORDERS
-========================================= */
+========================================================= */
 
 let healthOrder =
     shuffle(
         products.filter(
             product =>
-                product.category === "health"
+                product.category ===
+                "health"
         )
     );
 
@@ -1248,14 +1701,16 @@ let businessOrder =
     shuffle(
         products.filter(
             product =>
-                product.category === "business"
+                product.category ===
+                "business"
         )
     );
 
 
-/* =========================================
-   RENDER CATEGORY
-========================================= */
+
+/* =========================================================
+   RENDER GRID
+========================================================= */
 
 function renderGrid(
     gridId,
@@ -1263,17 +1718,25 @@ function renderGrid(
 ) {
 
     const grid =
-        document.getElementById(gridId);
+        document.getElementById(
+            gridId
+        );
+
 
     if (!grid) return;
 
-    grid.innerHTML = "";
+
+    grid.innerHTML =
+        "";
+
 
     order.forEach(
         product => {
 
             grid.appendChild(
-                createProductCard(product)
+                createProductCard(
+                    product
+                )
             );
 
         }
@@ -1282,9 +1745,10 @@ function renderGrid(
 }
 
 
-/* =========================================
+
+/* =========================================================
    REFRESH / ROTATION
-========================================= */
+========================================================= */
 
 function refreshProducts() {
 
@@ -1293,25 +1757,33 @@ function refreshProducts() {
             "healthGrid"
         );
 
+
     const businessGrid =
         document.getElementById(
             "businessGrid"
         );
 
 
-    healthGrid.classList.add("fade");
+    healthGrid.classList.add(
+        "fade"
+    );
 
-    businessGrid.classList.add("fade");
+
+    businessGrid.classList.add(
+        "fade"
+    );
 
 
     setTimeout(
         function() {
 
+
             healthOrder =
                 shuffle(
                     products.filter(
                         product =>
-                            product.category === "health"
+                            product.category ===
+                            "health"
                     )
                 );
 
@@ -1320,7 +1792,8 @@ function refreshProducts() {
                 shuffle(
                     products.filter(
                         product =>
-                            product.category === "business"
+                            product.category ===
+                            "business"
                     )
                 );
 
@@ -1337,9 +1810,15 @@ function refreshProducts() {
             );
 
 
-            healthGrid.classList.remove("fade");
+            healthGrid.classList.remove(
+                "fade"
+            );
 
-            businessGrid.classList.remove("fade");
+
+            businessGrid.classList.remove(
+                "fade"
+            );
+
 
         },
         450
@@ -1348,27 +1827,31 @@ function refreshProducts() {
 }
 
 
-/* =========================================
+
+/* =========================================================
    INITIAL RENDER
-========================================= */
+========================================================= */
 
 renderGrid(
     "healthGrid",
     healthOrder
 );
 
+
 renderGrid(
     "businessGrid",
     businessOrder
 );
 
+
 updateCartCount();
 
 
-/* =========================================
+
+/* =========================================================
    AUTOMATIC ROTATION
    EVERY 25 SECONDS
-========================================= */
+========================================================= */
 
 setInterval(
     refreshProducts,
@@ -1376,17 +1859,21 @@ setInterval(
 );
 
 
-/* =========================================
+
+/* =========================================================
    BACK BUTTON
-========================================= */
+========================================================= */
 
 document
-    .getElementById("backBtn")
+    .getElementById(
+        "backBtn"
+    )
     .addEventListener(
         "click",
         function(event) {
 
             event.preventDefault();
+
 
             if (
                 window.history.length > 1
@@ -1394,7 +1881,9 @@ document
 
                 window.history.back();
 
-            } else {
+            }
+
+            else {
 
                 window.location.href =
                     "index.html";
@@ -1405,16 +1894,18 @@ document
     );
 
 
-/* =========================================
+
+/* =========================================================
    CART UPDATE ACROSS TABS
-========================================= */
+========================================================= */
 
 window.addEventListener(
     "storage",
     function(event) {
 
         if (
-            event.key === CART_KEY
+            event.key ===
+            CART_KEY
         ) {
 
             updateCartCount();
@@ -1425,6 +1916,7 @@ window.addEventListener(
 );
 
 </script>
+
 
 </body>
 
