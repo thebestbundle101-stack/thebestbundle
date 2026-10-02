@@ -1,6 +1,6 @@
 <!-- =========================================
-     PART 32 — MERCHANDISE PAGE
-     CREATE A NEW FILE: merchandise.html
+     THEBESTBUNDLE — MERCHANDISE PAGE
+     FILE: merchandise.html
 ========================================= -->
 
 <!DOCTYPE html>
@@ -14,15 +14,22 @@
     name="viewport"
     content="width=device-width, initial-scale=1.0">
 
-<title>Merchandise | TheBestBundle</title>
+<title>
+    Merchandise | TheBestBundle
+</title>
 
 <meta
     name="description"
-    content="Discover upcoming TheBestBundle merchandise and products offered through selected third-party vendors.">
+    content="Explore TheBestBundle merchandise, apparel, accessories and selected physical products.">
 
 <meta
     name="theme-color"
     content="#071A33">
+
+
+<!-- =========================================
+     FAVICON
+========================================= -->
 
 <link
     rel="icon"
@@ -39,6 +46,29 @@
     rel="apple-touch-icon"
     href="/thebestbundle/images/favicon.png">
 
+
+<!-- =========================================
+     GOOGLE FONTS
+========================================= -->
+
+<link
+    rel="preconnect"
+    href="https://fonts.googleapis.com">
+
+<link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+
+<!-- =========================================
+     FONT AWESOME
+========================================= -->
+
 <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -46,54 +76,107 @@
 
 <style>
 
+/* =========================================
+   ROOT
+========================================= */
+
 :root{
+
     --navy:#071A33;
-    --gold:#F4C542;
-    --gold-dark:#D9A91A;
+
+    --gold:#C8A45D;
+
+    --gold-light:#E1C77E;
+
+    --cream:#F8F5ED;
+
     --white:#FFFFFF;
-    --off-white:#F8FAFC;
-    --gray:#64748B;
-    --text:#475569;
-    --border:#E2E8F0;
-    --max-width:1000px;
+
+    --gray:#6B7280;
+
+    --border:#E8E3D8;
+
+    --max-width:1180px;
+
+    --shadow:
+        0 14px 35px rgba(7,26,51,.08);
 }
 
+
+/* =========================================
+   RESET
+========================================= */
+
 *{
+
     margin:0;
+
     padding:0;
+
     box-sizing:border-box;
 }
 
-body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:var(--off-white);
-    color:var(--navy);
-    line-height:1.6;
+
+html{
+
+    scroll-behavior:smooth;
 }
 
+
+body{
+
+    font-family:
+        "Montserrat",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:var(--cream);
+
+    color:var(--navy);
+
+    line-height:1.6;
+
+    -webkit-font-smoothing:antialiased;
+}
+
+
+img{
+
+    max-width:100%;
+
+    display:block;
+}
+
+
 a{
+
     color:inherit;
+
     text-decoration:none;
 }
 
-button,
-input{
-    font:inherit;
-}
 
 button{
+
+    font:inherit;
+
     cursor:pointer;
 }
 
-img{
-    display:block;
-    max-width:100%;
-}
+
+/* =========================================
+   CONTAINER
+========================================= */
 
 .container{
-    width:90%;
-    max-width:var(--max-width);
-    margin:auto;
+
+    width:min(
+        calc(100% - 40px),
+        var(--max-width)
+    );
+
+    margin:0 auto;
 }
 
 
@@ -102,66 +185,177 @@ img{
 ========================================= */
 
 .page-header{
+
     background:var(--navy);
+
     color:var(--white);
+
+    position:relative;
+
+    z-index:20;
 }
 
+
 .header-inner{
-    min-height:90px;
+
+    min-height:86px;
+
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
 }
 
-.header-logo img{
-    height:56px;
-    width:auto;
-}
 
-.home-button{
-    width:46px;
-    height:46px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:8px;
-    color:var(--white);
-    font-size:23px;
-}
+.header-logo{
 
-.home-button:hover{
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size:34px;
+
+    font-weight:700;
+
     color:var(--gold);
+
+    letter-spacing:.3px;
+
+    white-space:nowrap;
+}
+
+
+.header-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+}
+
+
+.header-icon{
+
+    width:46px;
+
+    height:46px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:10px;
+
+    color:var(--white);
+
+    font-size:19px;
+
+    position:relative;
+
+    transition:
+        background .2s ease,
+        color .2s ease;
+}
+
+
+.header-icon:hover{
+
     background:rgba(255,255,255,.08);
+
+    color:var(--gold);
 }
 
 
 /* =========================================
-   BACK BUTTON
+   CART BADGE
+========================================= */
+
+.cart-badge{
+
+    position:absolute;
+
+    top:3px;
+
+    right:2px;
+
+    min-width:18px;
+
+    height:18px;
+
+    padding:0 5px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:20px;
+
+    background:var(--gold);
+
+    color:var(--navy);
+
+    font-size:10px;
+
+    font-weight:800;
+
+    line-height:1;
+}
+
+
+/* =========================================
+   BACK ROW
 ========================================= */
 
 .back-row{
-    background:var(--white);
+
+    background:var(--cream);
+
     border-bottom:1px solid var(--border);
 }
 
+
 .back-inner{
-    min-height:60px;
+
+    min-height:58px;
+
     display:flex;
+
     align-items:center;
 }
+
 
 .back-button{
+
     display:inline-flex;
+
     align-items:center;
+
     gap:9px;
+
     border:none;
+
     background:transparent;
+
     color:var(--navy);
-    font-weight:800;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    transition:color .2s ease;
 }
 
+
 .back-button:hover{
-    color:var(--gold-dark);
+
+    color:var(--gold);
 }
 
 
@@ -170,86 +364,293 @@ img{
 ========================================= */
 
 .merch-hero{
-    padding:75px 0;
-    background:var(--navy);
-    color:var(--white);
+
+    background:var(--cream);
+
     text-align:center;
+
+    padding:
+        72px
+        0
+        58px;
 }
 
-.hero-icon{
-    width:72px;
-    height:72px;
-    margin:0 auto 20px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:50%;
-    background:var(--gold);
-    color:var(--navy);
-    font-size:30px;
+
+.merch-content{
+
+    max-width:820px;
+
+    margin:0 auto;
 }
+
+
+.merch-eyebrow{
+
+    color:var(--gold);
+
+    font-size:13px;
+
+    font-weight:800;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    margin-bottom:15px;
+}
+
 
 .merch-hero h1{
-    font-size:clamp(42px,7vw,62px);
-    line-height:1.1;
-    margin-bottom:16px;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(46px,7vw,68px);
+
+    line-height:1.05;
+
+    font-weight:600;
+
+    color:var(--navy);
+
+    margin-bottom:20px;
 }
 
-.merch-hero h1 span{
-    color:var(--gold);
-}
 
 .merch-hero p{
-    max-width:680px;
-    margin:auto;
-    color:rgba(255,255,255,.8);
-    font-size:18px;
+
+    max-width:700px;
+
+    margin:0 auto;
+
+    color:var(--gray);
+
+    font-size:16px;
+
+    line-height:1.8;
 }
 
 
 /* =========================================
-   COMING SOON
+   QUICK NAV
 ========================================= */
 
-.coming-section{
-    padding:80px 0;
+.quick-nav{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-top:30px;
 }
 
-.coming-card{
-    max-width:760px;
-    margin:auto;
-    padding:55px 40px;
-    background:var(--white);
-    border:1px solid var(--border);
-    border-radius:16px;
-    text-align:center;
-    box-shadow:0 12px 35px rgba(7,26,51,.07);
-}
 
-.coming-badge{
+.quick-nav a{
+
     display:inline-flex;
+
     align-items:center;
-    gap:8px;
-    margin-bottom:23px;
-    padding:9px 17px;
+
+    justify-content:center;
+
+    min-height:42px;
+
+    padding:
+        0
+        20px;
+
+    border:1px solid var(--border);
+
     border-radius:30px;
-    background:var(--gold);
+
+    background:var(--white);
+
     color:var(--navy);
-    font-size:13px;
-    font-weight:900;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    transition:
+        background .2s ease,
+        color .2s ease,
+        border-color .2s ease;
+}
+
+
+.quick-nav a:hover{
+
+    background:var(--navy);
+
+    color:var(--white);
+
+    border-color:var(--navy);
+}
+
+
+/* =========================================
+   MERCHANDISE COLLECTION
+========================================= */
+
+.merch-section{
+
+    background:var(--white);
+
+    padding:
+        76px
+        0
+        90px;
+}
+
+
+.section-heading{
+
+    max-width:760px;
+
+    margin:
+        0 auto
+        48px;
+
+    text-align:center;
+}
+
+
+.section-kicker{
+
+    color:var(--gold);
+
+    font-size:12px;
+
+    font-weight:800;
+
+    letter-spacing:2.5px;
+
     text-transform:uppercase;
-    letter-spacing:.7px;
+
+    margin-bottom:10px;
 }
 
-.coming-card h2{
+
+.section-heading h2{
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    color:var(--navy);
+
+    font-size:
+        clamp(34px,5vw,48px);
+
+    line-height:1.1;
+
+    font-weight:600;
+
+    margin-bottom:12px;
+}
+
+
+.section-heading p{
+
+    color:var(--gray);
+
+    font-size:14px;
+
+    line-height:1.8;
+}
+
+
+/* =========================================
+   MERCHANDISE INTRO CARD
+========================================= */
+
+.merch-intro-card{
+
+    max-width:900px;
+
+    margin:0 auto;
+
+    background:var(--white);
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    padding:
+        48px
+        40px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+}
+
+
+.merch-intro-icon{
+
+    width:70px;
+
+    height:70px;
+
+    margin:
+        0 auto
+        22px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:var(--navy);
+
+    color:var(--gold);
+
+    font-size:28px;
+}
+
+
+.merch-intro-card h3{
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    color:var(--navy);
+
+    font-size:
+        clamp(32px,5vw,44px);
+
+    line-height:1.1;
+
+    font-weight:600;
+
     margin-bottom:15px;
-    font-size:clamp(30px,5vw,42px);
 }
 
-.coming-card > p{
-    max-width:600px;
-    margin:0 auto 35px;
-    color:var(--text);
+
+.merch-intro-card > p{
+
+    max-width:680px;
+
+    margin:0 auto;
+
+    color:var(--gray);
+
+    font-size:14px;
+
+    line-height:1.8;
 }
 
 
@@ -258,201 +659,378 @@ img{
 ========================================= */
 
 .merch-grid{
+
+    margin-top:38px;
+
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:16px;
-    margin-top:35px;
+
+    grid-template-columns:
+        repeat(3,minmax(0,1fr));
+
+    gap:18px;
 }
+
 
 .merch-item{
-    padding:27px 15px;
+
+    background:var(--cream);
+
     border:1px solid var(--border);
-    border-radius:10px;
-    background:var(--off-white);
+
+    border-radius:15px;
+
+    padding:
+        28px
+        18px;
+
+    text-align:center;
 }
+
 
 .merch-item i{
+
+    color:var(--gold);
+
+    font-size:24px;
+
     margin-bottom:13px;
-    color:var(--gold-dark);
-    font-size:29px;
 }
 
-.merch-item h3{
-    margin-bottom:6px;
-    font-size:16px;
+
+.merch-item h4{
+
+    color:var(--navy);
+
+    font-size:13px;
+
+    font-weight:800;
+
+    margin-bottom:7px;
 }
+
 
 .merch-item p{
+
     color:var(--gray);
-    font-size:13px;
+
+    font-size:11px;
+
+    line-height:1.65;
 }
 
 
 /* =========================================
-   THIRD PARTY SECTION
+   VENDOR SECTION
 ========================================= */
 
 .vendor-section{
-    padding:75px 0;
-    background:var(--white);
+
+    background:var(--cream);
+
+    padding:
+        70px
+        0
+        80px;
 }
+
 
 .vendor-card{
-    max-width:760px;
-    margin:auto;
-    padding:40px;
+
+    max-width:850px;
+
+    margin:0 auto;
+
+    background:var(--white);
+
     border:1px solid var(--border);
-    border-radius:14px;
+
+    border-radius:18px;
+
+    padding:
+        45px
+        40px;
+
+    box-shadow:
+        0 8px 24px rgba(7,26,51,.05);
 }
 
+
 .vendor-heading{
+
     text-align:center;
+
     margin-bottom:30px;
 }
 
-.vendor-heading i{
+
+.vendor-icon{
+
     width:60px;
+
     height:60px;
-    margin:0 auto 17px;
+
+    margin:
+        0 auto
+        17px;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     border-radius:50%;
+
     background:var(--navy);
+
     color:var(--gold);
+
     font-size:24px;
 }
 
+
 .vendor-heading h2{
-    margin-bottom:9px;
-    font-size:clamp(28px,5vw,38px);
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    color:var(--navy);
+
+    font-size:
+        clamp(32px,5vw,42px);
+
+    line-height:1.1;
+
+    font-weight:600;
+
+    margin-bottom:10px;
 }
+
 
 .vendor-heading p{
+
     color:var(--gray);
+
+    font-size:13px;
+
+    line-height:1.8;
 }
+
 
 .vendor-notice{
+
     padding:22px;
-    background:#FFFBEB;
-    border:1px solid #FDE68A;
-    border-radius:10px;
+
+    background:#FBF8EF;
+
+    border:1px solid #E8D9AD;
+
+    border-radius:12px;
 }
+
 
 .vendor-notice p{
-    color:var(--text);
-    font-size:14px;
+
+    color:var(--gray);
+
+    font-size:12px;
+
+    line-height:1.75;
 }
 
+
 .vendor-notice strong{
+
     color:var(--navy);
 }
 
 
 /* =========================================
-   FUTURE EXPERIENCE
+   SHOPPING EXPERIENCE
 ========================================= */
 
 .experience-section{
-    padding:75px 0;
+
+    background:var(--white);
+
+    padding:
+        70px
+        0
+        80px;
 }
 
-.section-heading{
-    text-align:center;
-    margin-bottom:40px;
-}
-
-.section-heading h2{
-    margin-bottom:10px;
-    font-size:clamp(30px,5vw,42px);
-}
-
-.section-heading p{
-    max-width:620px;
-    margin:auto;
-    color:var(--gray);
-}
 
 .experience-grid{
+
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+
+    grid-template-columns:
+        repeat(3,minmax(0,1fr));
+
     gap:20px;
 }
 
+
 .experience-card{
-    padding:30px 22px;
+
     background:var(--white);
+
     border:1px solid var(--border);
-    border-radius:12px;
+
+    border-radius:16px;
+
+    padding:
+        30px
+        22px;
+
     text-align:center;
+
+    box-shadow:
+        0 8px 24px rgba(7,26,51,.05);
 }
+
 
 .experience-card i{
-    margin-bottom:15px;
-    color:var(--gold-dark);
-    font-size:28px;
+
+    width:56px;
+
+    height:56px;
+
+    margin:
+        0 auto
+        17px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:var(--navy);
+
+    color:var(--gold);
+
+    font-size:21px;
 }
+
 
 .experience-card h3{
-    margin-bottom:8px;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    color:var(--navy);
+
+    font-size:26px;
+
+    font-weight:600;
+
+    margin-bottom:7px;
 }
 
+
 .experience-card p{
-    color:var(--text);
-    font-size:14px;
+
+    color:var(--gray);
+
+    font-size:12px;
+
+    line-height:1.7;
 }
 
 
 /* =========================================
-   NOTIFICATION
+   TRUST SECTION
 ========================================= */
 
-.notify-section{
-    padding:80px 0;
-    background:var(--navy);
-    color:var(--white);
+.trust-section{
+
+    background:var(--cream);
+
+    padding:
+        65px
+        0
+        70px;
+
     text-align:center;
 }
 
-.notify-section h2{
-    margin-bottom:12px;
-    font-size:clamp(30px,5vw,42px);
-}
 
-.notify-section h2 span{
-    color:var(--gold);
-}
+.trust-heading{
 
-.notify-section > .container > p{
-    max-width:620px;
-    margin:0 auto 28px;
-    color:rgba(255,255,255,.75);
-}
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
 
-.notify-form{
-    max-width:520px;
-    margin:auto;
-    display:flex;
-    gap:10px;
-}
-
-.notify-form input{
-    flex:1;
-    min-width:0;
-    min-height:52px;
-    padding:13px 15px;
-    border:none;
-    border-radius:8px;
-}
-
-.notify-form button{
-    min-height:52px;
-    padding:12px 23px;
-    border:none;
-    border-radius:8px;
-    background:var(--gold);
     color:var(--navy);
-    font-weight:900;
+
+    font-size:34px;
+
+    font-weight:600;
+
+    margin-bottom:32px;
+}
+
+
+.trust-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,minmax(0,1fr));
+
+    gap:18px;
+}
+
+
+.trust-item{
+
+    background:var(--white);
+
+    border:1px solid var(--border);
+
+    border-radius:15px;
+
+    padding:25px 18px;
+}
+
+
+.trust-item i{
+
+    color:var(--gold);
+
+    font-size:21px;
+
+    margin-bottom:12px;
+}
+
+
+.trust-item h4{
+
+    color:var(--navy);
+
+    font-size:13px;
+
+    font-weight:800;
+
+    margin-bottom:5px;
+}
+
+
+.trust-item p{
+
+    color:var(--gray);
+
+    font-size:11px;
+
+    line-height:1.6;
 }
 
 
@@ -461,53 +1039,309 @@ img{
 ========================================= */
 
 .footer{
-    padding:35px 0;
+
     background:var(--navy);
+
     color:var(--white);
-    border-top:1px solid rgba(255,255,255,.12);
+
     text-align:center;
+
+    padding:
+        36px
+        0;
 }
+
 
 .footer-tagline{
-    margin-bottom:7px;
+
     color:var(--gold);
+
+    font-size:12px;
+
     font-weight:800;
-    letter-spacing:1px;
+
+    letter-spacing:2px;
+
+    margin-bottom:8px;
 }
 
+
 .footer p{
-    color:rgba(255,255,255,.7);
-    font-size:13px;
+
+    color:rgba(255,255,255,.65);
+
+    font-size:11px;
 }
 
 
 /* =========================================
-   MOBILE
+   RESPONSIVE — TABLET
 ========================================= */
 
-@media(max-width:700px){
+@media(max-width:900px){
+
+    .merch-grid{
+
+        grid-template-columns:
+            repeat(3,minmax(0,1fr));
+    }
+
+
+    .experience-grid{
+
+        grid-template-columns:
+            repeat(3,minmax(0,1fr));
+    }
+
+
+    .trust-grid{
+
+        grid-template-columns:
+            repeat(3,minmax(0,1fr));
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE — MOBILE
+========================================= */
+
+@media(max-width:650px){
+
+    .container{
+
+        width:min(
+            calc(100% - 30px),
+            var(--max-width)
+        );
+    }
+
+
+    .header-inner{
+
+        min-height:76px;
+    }
+
+
+    .header-logo{
+
+        font-size:29px;
+    }
+
+
+    .header-icon{
+
+        width:42px;
+
+        height:42px;
+    }
+
 
     .merch-hero{
-        padding:60px 0;
+
+        padding:
+            58px
+            0
+            45px;
     }
 
-    .header-logo img{
-        height:42px;
-        width:auto;
+
+    .merch-hero h1{
+
+        font-size:48px;
     }
 
-    .coming-card,
-    .vendor-card{
-        padding:40px 22px;
+
+    .merch-hero p{
+
+        font-size:14px;
     }
 
-    .merch-grid,
-    .experience-grid{
+
+    .quick-nav{
+
+        gap:8px;
+    }
+
+
+    .quick-nav a{
+
+        padding:
+            0
+            16px;
+
+        font-size:11px;
+    }
+
+
+    .merch-section{
+
+        padding:
+            58px
+            0
+            65px;
+    }
+
+
+    .section-heading{
+
+        margin-bottom:34px;
+    }
+
+
+    .section-heading h2{
+
+        font-size:38px;
+    }
+
+
+    .section-heading p{
+
+        font-size:13px;
+    }
+
+
+    .merch-intro-card{
+
+        padding:
+            38px
+            18px;
+    }
+
+
+    .merch-intro-card h3{
+
+        font-size:36px;
+    }
+
+
+    .merch-intro-card > p{
+
+        font-size:13px;
+    }
+
+
+    .merch-grid{
+
         grid-template-columns:1fr;
+
+        gap:10px;
+
+        margin-top:30px;
     }
 
-    .notify-form{
-        flex-direction:column;
+
+    .merch-item{
+
+        padding:
+            22px
+            16px;
+    }
+
+
+    .vendor-section{
+
+        padding:
+            50px
+            0
+            60px;
+    }
+
+
+    .vendor-card{
+
+        padding:
+            36px
+            18px;
+    }
+
+
+    .vendor-heading h2{
+
+        font-size:36px;
+    }
+
+
+    .experience-section{
+
+        padding:
+            50px
+            0
+            60px;
+    }
+
+
+    .experience-grid{
+
+        grid-template-columns:1fr;
+
+        gap:12px;
+    }
+
+
+    .experience-card{
+
+        padding:
+            25px
+            20px;
+    }
+
+
+    .trust-section{
+
+        padding:
+            48px
+            0
+            55px;
+    }
+
+
+    .trust-heading{
+
+        font-size:30px;
+
+        margin-bottom:24px;
+    }
+
+
+    .trust-grid{
+
+        grid-template-columns:1fr;
+
+        gap:10px;
+    }
+
+
+    .trust-item{
+
+        padding:20px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media(max-width:380px){
+
+    .header-logo{
+
+        font-size:26px;
+    }
+
+
+    .merch-hero h1{
+
+        font-size:44px;
+    }
+
+
+    .merch-intro-card h3{
+
+        font-size:32px;
     }
 
 }
@@ -526,31 +1360,59 @@ img{
 
 <header class="page-header">
 
-<div class="container header-inner">
-
-    <a
-        href="index.html"
-        class="header-logo">
-
-        <img
-            src="images/Thebestbundle-transparent-logo.png"
-            alt="TheBestBundle">
-
-    </a>
+    <div class="container header-inner">
 
 
-    <a
-        href="index.html"
-        class="home-button"
-        aria-label="Return home">
+        <a
+            href="index.html"
+            class="header-logo">
 
-        <i class="fa-solid fa-house"></i>
+            TheBestBundle
 
-    </a>
+        </a>
 
-</div>
+
+        <div class="header-actions">
+
+
+            <!-- HOME -->
+
+            <a
+                href="index.html"
+                class="header-icon"
+                aria-label="Home">
+
+                <i class="fa-solid fa-house"></i>
+
+            </a>
+
+
+            <!-- CART -->
+
+            <a
+                href="cart.html"
+                class="header-icon"
+                aria-label="Shopping Cart">
+
+                <i class="fa-solid fa-bag-shopping"></i>
+
+                <span
+                    class="cart-badge"
+                    id="cartCount">
+
+                    0
+
+                </span>
+
+            </a>
+
+
+        </div>
+
+    </div>
 
 </header>
+
 
 
 <!-- =========================================
@@ -559,22 +1421,26 @@ img{
 
 <div class="back-row">
 
-<div class="container back-inner">
+    <div class="container back-inner">
 
-    <button
-        type="button"
-        class="back-button"
-        onclick="returnToPreviousPage()">
+        <button
+            type="button"
+            class="back-button"
+            onclick="returnToPreviousPage()">
 
-        <i class="fa-solid fa-arrow-left"></i>
+            <i class="fa-solid fa-arrow-left"></i>
 
-        Back
+            Back
 
-    </button>
+        </button>
+
+    </div>
 
 </div>
 
-</div>
+
+
+<main>
 
 
 <!-- =========================================
@@ -583,312 +1449,512 @@ img{
 
 <section class="merch-hero">
 
-<div class="container">
+    <div class="container">
 
-    <div class="hero-icon">
+        <div class="merch-content">
 
-        <i class="fa-solid fa-bag-shopping"></i>
+
+            <div class="merch-eyebrow">
+
+                THEBESTBUNDLE • MERCHANDISE
+
+            </div>
+
+
+            <h1>
+
+                Premium Merchandise
+
+            </h1>
+
+
+            <p>
+
+                Discover merchandise created to extend
+                the TheBestBundle experience beyond
+                digital products.
+
+            </p>
+
+
+            <!-- QUICK NAV -->
+
+            <nav
+                class="quick-nav"
+                aria-label="Merchandise navigation">
+
+                <a href="#collection">
+
+                    Collection
+
+                </a>
+
+
+                <a href="#vendors">
+
+                    Vendors
+
+                </a>
+
+
+                <a href="#experience">
+
+                    Shopping Experience
+
+                </a>
+
+            </nav>
+
+
+        </div>
 
     </div>
-
-    <h1>
-        TheBestBundle
-        <span>Merchandise</span>
-    </h1>
-
-    <p>
-        Our digital library is only the beginning.
-        TheBestBundle plans to expand with selected
-        merchandise and physical products in the future.
-    </p>
-
-</div>
 
 </section>
 
 
+
 <!-- =========================================
-     COMING SOON
+     COLLECTION
 ========================================= -->
 
-<main class="coming-section">
+<section
+    class="merch-section"
+    id="collection">
 
-<div class="container">
-
-    <div class="coming-card">
+    <div class="container">
 
 
-        <div class="coming-badge">
+        <div class="section-heading">
 
-            <i class="fa-solid fa-clock"></i>
 
-            Coming Soon
+            <div class="section-kicker">
+
+                LIFESTYLE • BRAND • COLLECTION
+
+            </div>
+
+
+            <h2>
+
+                Explore Our Merchandise
+
+            </h2>
+
+
+            <p>
+
+                Selected physical products designed
+                to complement the TheBestBundle brand
+                and its Learn • Create • Grow philosophy.
+
+            </p>
 
         </div>
 
 
-        <h2>
-            TheBestBundle Beyond Digital
-        </h2>
+
+        <div class="merch-intro-card">
 
 
-        <p>
-            We're preparing this section for future
-            merchandise that complements the
-            TheBestBundle brand and our
-            Learn • Create • Grow mission.
-        </p>
+            <div class="merch-intro-icon">
 
-
-        <div class="merch-grid">
-
-
-            <div class="merch-item">
-
-                <i class="fa-solid fa-shirt"></i>
-
-                <h3>
-                    Apparel
-                </h3>
-
-                <p>
-                    Future branded clothing
-                    and lifestyle merchandise.
-                </p>
+                <i class="fa-solid fa-bag-shopping"></i>
 
             </div>
 
 
-            <div class="merch-item">
+            <h3>
 
-                <i class="fa-solid fa-mug-hot"></i>
+                TheBestBundle Lifestyle
 
-                <h3>
-                    Accessories
-                </h3>
-
-                <p>
-                    Selected everyday products
-                    and branded accessories.
-                </p>
-
-            </div>
+            </h3>
 
 
-            <div class="merch-item">
+            <p>
 
-                <i class="fa-solid fa-box-open"></i>
+                Our merchandise collection brings the
+                TheBestBundle identity into everyday life,
+                with products selected around simplicity,
+                usefulness and the spirit of
+                Learn • Create • Grow.
 
-                <h3>
-                    More Products
-                </h3>
+            </p>
 
-                <p>
-                    Additional physical product
-                    categories may be added over time.
-                </p>
+
+
+            <!-- CATEGORIES -->
+
+            <div class="merch-grid">
+
+
+                <!-- APPAREL -->
+
+                <div class="merch-item">
+
+                    <i class="fa-solid fa-shirt"></i>
+
+                    <h4>
+
+                        Apparel
+
+                    </h4>
+
+                    <p>
+
+                        Branded clothing and lifestyle
+                        pieces designed for everyday wear.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- ACCESSORIES -->
+
+                <div class="merch-item">
+
+                    <i class="fa-solid fa-mug-hot"></i>
+
+                    <h4>
+
+                        Accessories
+
+                    </h4>
+
+                    <p>
+
+                        Selected everyday accessories
+                        and branded products.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- MORE -->
+
+                <div class="merch-item">
+
+                    <i class="fa-solid fa-box-open"></i>
+
+                    <h4>
+
+                        More Products
+
+                    </h4>
+
+                    <p>
+
+                        Additional physical products
+                        can be added to the collection.
+
+                    </p>
+
+                </div>
+
 
             </div>
 
 
         </div>
-
 
     </div>
 
-</div>
+</section>
 
-</main>
 
 
 <!-- =========================================
      THIRD-PARTY VENDORS
 ========================================= -->
 
-<section class="vendor-section">
+<section
+    class="vendor-section"
+    id="vendors">
 
-<div class="container">
-
-    <div class="vendor-card">
+    <div class="container">
 
 
-        <div class="vendor-heading">
+        <div class="vendor-card">
 
-            <i class="fa-solid fa-store"></i>
 
-            <h2>
-                Selected Third-Party Vendors
-            </h2>
+            <div class="vendor-heading">
 
-            <p>
-                Future merchandise may be provided
-                through independent vendors and
-                fulfillment partners.
-            </p>
+
+                <div class="vendor-icon">
+
+                    <i class="fa-solid fa-store"></i>
+
+                </div>
+
+
+                <h2>
+
+                    Selected Third-Party Vendors
+
+                </h2>
+
+
+                <p>
+
+                    Some merchandise may be offered
+                    through independent vendors and
+                    fulfillment partners.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="vendor-notice">
+
+                <p>
+
+                    <strong>Important:</strong>
+
+                    When merchandise is offered through
+                    an independent third-party vendor,
+                    the applicable vendor may handle
+                    payment, production, shipping,
+                    delivery, returns and customer
+                    information associated with that
+                    merchandise order.
+
+                </p>
+
+            </div>
+
 
         </div>
-
-
-        <div class="vendor-notice">
-
-            <p>
-                <strong>Important:</strong>
-                When merchandise is offered through
-                an independent third-party vendor,
-                the applicable vendor may handle
-                payment, production, shipping,
-                delivery, returns and customer
-                information associated with that
-                merchandise order.
-            </p>
-
-        </div>
-
 
     </div>
 
-</div>
-
 </section>
+
 
 
 <!-- =========================================
      SHOPPING EXPERIENCE
 ========================================= -->
 
-<section class="experience-section">
+<section
+    class="experience-section"
+    id="experience">
 
-<div class="container">
+    <div class="container">
 
 
-    <div class="section-heading">
+        <div class="section-heading">
 
-        <h2>
-            What We're Building
-        </h2>
 
-        <p>
-            Our goal is to make future merchandise
-            simple to discover while clearly showing
-            when a purchase is handled by an
-            independent vendor.
-        </p>
+            <div class="section-kicker">
+
+                SIMPLE • CLEAR • CONVENIENT
+
+            </div>
+
+
+            <h2>
+
+                The Shopping Experience
+
+            </h2>
+
+
+            <p>
+
+                Our merchandise experience is designed
+                to make it easy to discover products
+                while clearly showing when a purchase
+                is handled by an independent vendor.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="experience-grid">
+
+
+            <!-- DISCOVER -->
+
+            <div class="experience-card">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <h3>
+
+                    Discover
+
+                </h3>
+
+                <p>
+
+                    Explore selected merchandise
+                    available through TheBestBundle.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- VISIT VENDOR -->
+
+            <div class="experience-card">
+
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                <h3>
+
+                    Visit Vendor
+
+                </h3>
+
+                <p>
+
+                    When applicable, continue to the
+                    independent vendor responsible
+                    for the product.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- FULFILLMENT -->
+
+            <div class="experience-card">
+
+                <i class="fa-solid fa-truck"></i>
+
+                <h3>
+
+                    Vendor Fulfillment
+
+                </h3>
+
+                <p>
+
+                    Applicable physical orders may
+                    be produced and shipped directly
+                    by the selected vendor.
+
+                </p>
+
+            </div>
+
+
+        </div>
 
     </div>
-
-
-    <div class="experience-grid">
-
-
-        <div class="experience-card">
-
-            <i class="fa-solid fa-magnifying-glass"></i>
-
-            <h3>
-                Discover
-            </h3>
-
-            <p>
-                Browse selected merchandise
-                from TheBestBundle.
-            </p>
-
-        </div>
-
-
-        <div class="experience-card">
-
-            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-            <h3>
-                Visit Vendor
-            </h3>
-
-            <p>
-                When applicable, continue to the
-                independent vendor responsible
-                for the product.
-            </p>
-
-        </div>
-
-
-        <div class="experience-card">
-
-            <i class="fa-solid fa-truck"></i>
-
-            <h3>
-                Vendor Fulfillment
-            </h3>
-
-            <p>
-                Applicable physical orders may
-                be produced and shipped directly
-                by the selected vendor.
-            </p>
-
-        </div>
-
-
-    </div>
-
-
-</div>
 
 </section>
+
 
 
 <!-- =========================================
-     NOTIFICATION
+     TRUST
 ========================================= -->
 
-<section class="notify-section">
+<section class="trust-section">
 
-<div class="container">
-
-    <h2>
-        Merchandise <span>Updates</span>
-    </h2>
-
-    <p>
-        Subscribe for TheBestBundle updates
-        and be among the first to know when
-        future merchandise becomes available.
-    </p>
+    <div class="container">
 
 
-    <form
-        class="notify-form"
-        action="https://formspree.io/f/xkodngya"
-        method="POST">
+        <h2 class="trust-heading">
+
+            Shop With Confidence
+
+        </h2>
 
 
-        <input
-            type="hidden"
-            name="form_type"
-            value="TheBestBundle Merchandise Updates">
+        <div class="trust-grid">
 
 
-        <input
-            type="email"
-            name="email"
-            autocomplete="email"
-            placeholder="Enter your email"
-            required>
+            <!-- TRUST 1 -->
+
+            <div class="trust-item">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                <h4>
+
+                    Selected Products
+
+                </h4>
+
+                <p>
+
+                    Merchandise selected to complement
+                    the TheBestBundle brand.
+
+                </p>
+
+            </div>
 
 
-        <button type="submit">
 
-            Notify Me
+            <!-- TRUST 2 -->
 
-        </button>
+            <div class="trust-item">
+
+                <i class="fa-solid fa-store"></i>
+
+                <h4>
+
+                    Clear Vendor Information
+
+                </h4>
+
+                <p>
+
+                    Applicable third-party fulfillment
+                    is clearly identified.
+
+                </p>
+
+            </div>
 
 
-    </form>
 
-</div>
+            <!-- TRUST 3 -->
+
+            <div class="trust-item">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                <h4>
+
+                    Clear Experience
+
+                </h4>
+
+                <p>
+
+                    Important purchasing information
+                    is provided before you continue.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
 
 </section>
+
+
+</main>
+
 
 
 <!-- =========================================
@@ -897,22 +1963,38 @@ img{
 
 <footer class="footer">
 
-<div class="container">
+    <div class="container">
 
-    <div class="footer-tagline">
-        LEARN • CREATE • GROW
+
+        <div class="footer-tagline">
+
+            LEARN • CREATE • GROW
+
+        </div>
+
+
+        <p>
+
+            © 2026 TheBestBundle. All Rights Reserved.
+
+        </p>
+
+
     </div>
-
-    <p>
-        © 2026 TheBestBundle. All Rights Reserved.
-    </p>
-
-</div>
 
 </footer>
 
 
+
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
+
 <script>
+
+/* =========================================
+   BACK BUTTON
+========================================= */
 
 function returnToPreviousPage(){
 
@@ -923,11 +2005,85 @@ function returnToPreviousPage(){
     }else{
 
         window.location.href =
-            'index.html';
+            "index.html";
 
     }
 
 }
+
+
+/* =========================================
+   CART
+========================================= */
+
+const CART_KEY =
+    "theBestBundleCart";
+
+
+function updateCartCount(){
+
+    try{
+
+        const cart =
+            JSON.parse(
+                localStorage.getItem(CART_KEY)
+            ) || [];
+
+
+        const count =
+            cart.reduce(
+                (total,item) =>
+                    total + (item.quantity || 1),
+                0
+            );
+
+
+        const cartCount =
+            document.getElementById(
+                "cartCount"
+            );
+
+
+        if(cartCount){
+
+            cartCount.textContent =
+                count;
+
+
+            cartCount.style.display =
+                count > 0
+                    ? "flex"
+                    : "none";
+
+        }
+
+    }catch(error){
+
+        console.error(
+            "Unable to read cart:",
+            error
+        );
+
+    }
+
+}
+
+
+/* =========================================
+   INITIALIZE
+========================================= */
+
+updateCartCount();
+
+
+/* =========================================
+   LISTEN FOR CART CHANGES
+========================================= */
+
+window.addEventListener(
+    "storage",
+    updateCartCount
+);
 
 </script>
 
