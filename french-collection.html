@@ -15,90 +15,137 @@
 
 <meta
     name="description"
-    content="Découvrez la Collection Française TheBestBundle : eBooks, templates et packs numériques premium.">
+    content="Découvrez la Collection Française TheBestBundle : eBooks, templates et packs numériques premium."
+>
+
+
+<!-- =========================================================
+     FONTS
+========================================================= -->
+
+<link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+>
+
+<link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+>
+
+
+<!-- =========================================================
+     FONT AWESOME
+========================================================= -->
 
 <link
     rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+>
+
 
 <style>
 
 /* =========================================================
-   THEBESTBUNDLE — FRENCH COLLECTION
+   THEBESTBUNDLE
+   FRENCH COLLECTION — PREMIUM STRUCTURE
 ========================================================= */
 
-:root{
+:root {
 
-    --navy:#071A33;
-    --navy2:#0D2342;
+    --navy: #071A33;
 
-    --gold:#F4C542;
-    --gold-dark:#D9A91A;
+    --navy-light: #0D2748;
 
-    --white:#FFFFFF;
-    --cream:#FBFAF6;
+    --gold: #C8A45D;
 
-    --gray:#64748B;
+    --gold-light: #E1C77E;
 
-    --border:#D9DEE7;
+    --cream: #F8F5ED;
 
-}
+    --white: #FFFFFF;
 
-*{
+    --text: #182333;
 
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+    --muted: #6F7782;
+
+    --border: rgba(200,164,93,0.28);
 
 }
 
-html{
 
-    scroll-behavior:smooth;
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
 
 }
 
-body{
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
 
     font-family:
-        Arial,
-        Helvetica,
+        "Montserrat",
         sans-serif;
 
     background:
         var(--cream);
 
     color:
-        var(--navy);
+        var(--text);
+
+    min-height: 100vh;
 
 }
 
-a{
 
-    color:inherit;
+a {
 
-    text-decoration:none;
+    color: inherit;
+
+    text-decoration: none;
 
 }
 
-button{
 
-    font:inherit;
+button {
 
-    cursor:pointer;
+    font: inherit;
+
+    cursor: pointer;
 
 }
 
 
 /* =========================================================
-   SECTION SCROLL POSITION
+   SCROLL POSITIONS
 ========================================================= */
 
 #ebooks,
 #templates,
-#packs{
+#packs {
 
-    scroll-margin-top:20px;
+    scroll-margin-top: 95px;
 
 }
 
@@ -107,77 +154,105 @@ button{
    HEADER
 ========================================================= */
 
-.header{
+.header {
 
-    height:68px;
+    height: 76px;
 
     background:
         var(--navy);
 
-    display:flex;
+    color:
+        var(--white);
 
-    align-items:center;
+    display: flex;
 
-    justify-content:space-between;
+    align-items: center;
+
+    justify-content: space-between;
 
     padding:
-        0 18px;
+        0 6%;
 
-    color:white;
+    position: sticky;
 
-}
+    top: 0;
 
-.logo{
+    z-index: 1000;
 
-    height:56px;
-
-    width:auto;
-
-}
-
-.header-actions{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:16px;
+    box-shadow:
+        0 4px 18px rgba(0,0,0,0.18);
 
 }
 
-.header-icon{
 
-    position:relative;
+.logo {
 
-    color:white;
-
-    font-size:21px;
-
-}
-
-.header-icon:hover{
+    font-family:
+        "Cormorant Garamond",
+        serif;
 
     color:
-        var(--gold);
+        var(--gold-light);
+
+    font-size: 31px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
 
 }
 
-.cart-count{
 
-    position:absolute;
+.header-actions {
 
-    top:-11px;
+    display: flex;
 
-    right:-11px;
+    align-items: center;
 
-    min-width:18px;
+    gap: 22px;
 
-    height:18px;
+}
+
+
+.header-icon {
+
+    position: relative;
+
+    color:
+        var(--white);
+
+    font-size: 20px;
+
+    transition:
+        .25s ease;
+
+}
+
+
+.header-icon:hover {
+
+    color:
+        var(--gold-light);
+
+}
+
+
+.cart-count {
+
+    position: absolute;
+
+    top: -11px;
+
+    right: -12px;
+
+    min-width: 19px;
+
+    height: 19px;
 
     padding:
         0 4px;
 
-    border-radius:20px;
+    border-radius: 50%;
 
     background:
         var(--gold);
@@ -185,15 +260,15 @@ button{
     color:
         var(--navy);
 
-    font-size:10px;
+    font-size: 10px;
 
-    font-weight:900;
+    font-weight: 800;
 
-    display:flex;
+    display: flex;
 
-    align-items:center;
+    align-items: center;
 
-    justify-content:center;
+    justify-content: center;
 
 }
 
@@ -202,56 +277,97 @@ button{
    NAVIGATION
 ========================================================= */
 
-.nav-row{
+.nav-row {
 
-    background:white;
+    max-width: 1200px;
 
-    min-height:58px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
+    margin:
+        0 auto;
 
     padding:
-        8px 18px;
+        24px 24px 0;
 
-    border-bottom:
-        1px solid var(--border);
+    display: flex;
 
-}
+    align-items: center;
 
-.back-link{
-
-    font-weight:700;
-
-    font-size:14px;
+    justify-content: space-between;
 
 }
 
-.english-link{
+
+.back-link {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    color:
+        var(--navy);
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition:
+        .25s ease;
+
+}
+
+
+.back-link:hover {
+
+    color:
+        var(--gold);
+
+}
+
+
+.english-link {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    min-height: 42px;
+
+    padding:
+        0 17px;
 
     border:
-        1px solid var(--navy);
+        1px solid var(--border);
 
-    border-radius:7px;
+    border-radius: 24px;
 
-    padding:
-        8px 13px;
+    background:
+        var(--white);
 
-    font-weight:700;
+    color:
+        var(--navy);
 
-    font-size:13px;
+    font-size: 12px;
+
+    font-weight: 700;
+
+    transition:
+        .25s ease;
 
 }
 
-.english-link:hover{
+
+.english-link:hover {
 
     background:
         var(--navy);
 
-    color:white;
+    color:
+        var(--white);
 
 }
 
@@ -260,134 +376,104 @@ button{
    HERO
 ========================================================= */
 
-.hero{
+.hero {
 
-    position:relative;
+    max-width: 1000px;
 
-    min-height:360px;
-
-    overflow:hidden;
-
-    background:
-
-        linear-gradient(
-            90deg,
-            rgba(7,26,51,.98) 0%,
-            rgba(7,26,51,.94) 52%,
-            rgba(7,26,51,.55) 100%
-        ),
-
-        url("images/eiffel-tower.png")
-        center right/
-        cover
-        no-repeat;
-
-    color:white;
+    margin:
+        0 auto;
 
     padding:
-        48px 25px 45px;
+        72px 24px 45px;
+
+    text-align: center;
 
 }
 
-.hero-inner{
 
-    max-width:1000px;
-
-    margin:auto;
-
-    position:relative;
-
-    z-index:2;
-
-}
-
-.hero-line{
-
-    width:45px;
-
-    height:2px;
-
-    background:
-        var(--gold);
-
-    margin-bottom:14px;
-
-}
-
-.hero-kicker{
+.hero-small {
 
     color:
         var(--gold);
 
-    font-size:13px;
+    font-size: 12px;
 
-    font-weight:900;
+    font-weight: 800;
 
-    letter-spacing:2px;
+    letter-spacing: 3px;
 
-    text-transform:uppercase;
-
-    margin-bottom:18px;
+    margin-bottom: 14px;
 
 }
 
-.hero h1{
+
+.hero h1 {
 
     font-family:
-        Georgia,
+        "Cormorant Garamond",
         serif;
 
+    color:
+        var(--navy);
+
     font-size:
-        clamp(40px,7vw,70px);
+        clamp(46px, 7vw, 72px);
 
-    line-height:.95;
+    line-height: .98;
 
-    max-width:520px;
-
-    margin-bottom:20px;
+    margin-bottom: 20px;
 
 }
 
-.hero h1 span{
+
+.hero p {
+
+    max-width: 720px;
+
+    margin:
+        0 auto;
 
     color:
-        var(--gold);
+        var(--muted);
+
+    font-size: 15px;
+
+    line-height: 1.8;
 
 }
 
-.hero p{
 
-    max-width:420px;
+.hero-tag {
 
-    color:
-        rgba(255,255,255,.88);
+    display: inline-flex;
 
-    font-size:16px;
+    align-items: center;
 
-    line-height:1.55;
+    justify-content: center;
 
-    margin-bottom:22px;
+    margin-top: 27px;
 
-}
-
-.hero-tag{
-
-    display:inline-block;
-
-    border:
-        1px solid var(--gold);
-
-    color:
-        var(--gold);
+    min-height: 43px;
 
     padding:
-        7px 12px;
+        0 18px;
 
-    font-size:10px;
+    border:
+        1px solid var(--border);
 
-    font-weight:900;
+    border-radius: 24px;
 
-    letter-spacing:.6px;
+    background:
+        var(--white);
+
+    color:
+        var(--gold);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.4px;
 
 }
 
@@ -396,90 +482,66 @@ button{
    QUICK NAVIGATION
 ========================================================= */
 
-.quick-nav{
+.quick-nav {
 
-    width:100%;
+    max-width: 900px;
 
-    background:white;
-
-    border-bottom:
-        1px solid var(--border);
+    margin:
+        5px auto 65px;
 
     padding:
-        14px 18px;
+        0 24px;
 
-    display:flex;
+    display: flex;
 
-    align-items:center;
+    justify-content: center;
 
-    justify-content:center;
+    align-items: center;
 
-    gap:10px;
-
-    flex-wrap:wrap;
+    gap: 14px;
 
 }
 
-.quick-nav a{
 
-    display:flex;
+.quick-nav a {
 
-    align-items:center;
+    flex: 1;
 
-    justify-content:center;
+    min-height: 52px;
 
-    gap:7px;
+    display: flex;
 
-    min-width:120px;
+    align-items: center;
 
-    padding:
-        9px 15px;
+    justify-content: center;
 
-    border:
-        1px solid #D7DDE6;
-
-    border-radius:8px;
-
-    background:#FFFFFF;
-
-    color:
-        var(--navy);
-
-    font-size:12px;
-
-    font-weight:900;
-
-    transition:
-        background .2s ease,
-        color .2s ease,
-        transform .2s ease,
-        border-color .2s ease;
-
-}
-
-.quick-nav a i{
-
-    color:
-        var(--gold-dark);
-
-}
-
-.quick-nav a:hover{
+    gap: 9px;
 
     background:
+        var(--white);
+
+    color:
         var(--navy);
 
-    color:white;
+    border:
+        1px solid var(--border);
 
-    border-color:
-        var(--navy);
+    border-radius: 30px;
 
-    transform:
-        translateY(-2px);
+    font-size: 13px;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 5px 18px rgba(7,26,51,.05);
+
+    transition:
+        .3s ease;
 
 }
 
-.quick-nav a:hover i{
+
+.quick-nav a i {
 
     color:
         var(--gold);
@@ -487,51 +549,99 @@ button{
 }
 
 
-/* =========================================================
-   GENERAL SECTION
-========================================================= */
+.quick-nav a:hover {
 
-.section{
-
-    max-width:1200px;
-
-    margin:auto;
-
-    padding:
-        48px 18px;
-
-}
-
-.section-heading{
-
-    text-align:center;
-
-    margin-bottom:30px;
-
-}
-
-.section-kicker{
+    background:
+        var(--navy);
 
     color:
-        var(--gold-dark);
+        var(--white);
 
-    font-size:13px;
-
-    font-weight:900;
-
-    letter-spacing:1.8px;
-
-    margin-bottom:8px;
+    transform:
+        translateY(-2px);
 
 }
 
-.section-title{
+
+.quick-nav a:hover i {
+
+    color:
+        var(--gold-light);
+
+}
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.section {
+
+    max-width: 1200px;
+
+    margin:
+        0 auto;
+
+    padding:
+        0 24px 70px;
+
+}
+
+
+.section-heading {
+
+    text-align: center;
+
+    margin-bottom: 30px;
+
+}
+
+
+.section-kicker {
+
+    color:
+        var(--gold);
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.section-title {
 
     font-family:
-        Georgia,
+        "Cormorant Garamond",
         serif;
 
-    font-size:32px;
+    color:
+        var(--navy);
+
+    font-size: 42px;
+
+    line-height: 1.1;
+
+}
+
+
+.section-description {
+
+    max-width: 650px;
+
+    margin:
+        10px auto 0;
+
+    color:
+        var(--muted);
+
+    font-size: 13px;
+
+    line-height: 1.7;
 
 }
 
@@ -540,63 +650,79 @@ button{
    SECTION DIVIDER
 ========================================================= */
 
-.section-divider{
+.section-divider {
 
-    width:100%;
+    max-width: 800px;
 
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    gap:14px;
+    height: 70px;
 
     margin:
-        8px auto 22px;
+        0 auto 55px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
 
 }
 
-.section-divider::before,
-.section-divider::after{
 
-    content:"";
+.section-divider::before {
 
-    height:1px;
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    top: 50%;
+
+    height: 1px;
 
     background:
-        #E3E7ED;
-
-    flex:1;
-
-    max-width:420px;
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--gold),
+            transparent
+        );
 
 }
 
-.section-divider-icon{
 
-    width:44px;
+.section-divider-icon {
 
-    height:44px;
+    position: relative;
 
-    border-radius:50%;
+    z-index: 2;
+
+    width: 44px;
+
+    height: 44px;
+
+    border-radius: 50%;
 
     background:
-        var(--navy);
+        var(--cream);
+
+    border:
+        1px solid var(--gold);
 
     color:
         var(--gold);
 
-    display:flex;
+    display: flex;
 
-    align-items:center;
+    align-items: center;
 
-    justify-content:center;
+    justify-content: center;
 
-    font-size:17px;
-
-    box-shadow:
-        0 7px 18px rgba(7,26,51,.12);
+    font-size: 14px;
 
 }
 
@@ -605,16 +731,24 @@ button{
    EBOOK GRID
 ========================================================= */
 
-.ebooks-grid{
+.ebooks-grid {
 
-    display:grid;
+    display: grid;
 
     grid-template-columns:
-        repeat(3,minmax(0,1fr));
+        repeat(3, minmax(0, 1fr));
 
-    gap:20px;
+    gap: 28px;
 
-    align-items:stretch;
+    transition:
+        opacity .45s ease;
+
+}
+
+
+.ebooks-grid.fade {
+
+    opacity: .15;
 
 }
 
@@ -623,168 +757,170 @@ button{
    EBOOK CARD
 ========================================================= */
 
-.ebook-card{
+.ebook-card {
 
-    width:100%;
+    width: 100%;
 
-    max-width:260px;
+    max-width: 310px;
 
-    height:520px;
-
-    margin:0 auto;
-
-    background:#FFFFFF;
-
-    border:
-        1px solid #DDE3EC;
-
-    border-radius:14px;
-
-    overflow:hidden;
-
-    box-shadow:
-        0 4px 14px rgba(7,26,51,.07);
-
-    display:flex;
-
-    flex-direction:column;
-
-    transition:
-        transform .35s ease,
-        opacity .35s ease,
-        box-shadow .25s ease;
-
-}
-
-.ebook-card.position-changing{
-
-    transform:
-        translateY(-4px);
-
-    opacity:.82;
-
-}
-
-.ebook-card:hover{
-
-    transform:
-        translateY(-3px);
-
-    box-shadow:
-        0 8px 22px rgba(7,26,51,.10);
-
-}
-
-
-/* =========================================================
-   EBOOK IMAGE
-========================================================= */
-
-.ebook-cover{
-
-    width:100%;
-
-    height:250px;
-
-    flex-shrink:0;
-
-    background:#F7F8FA;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    padding:12px;
-
-    overflow:hidden;
-
-}
-
-.ebook-cover img{
-
-    width:100%;
-
-    height:100%;
-
-    object-fit:contain;
-
-    display:block;
-
-}
-
-
-/* =========================================================
-   EBOOK TITLE
-========================================================= */
-
-.ebook-title{
-
-    padding:
-        0 16px;
+    min-height: 535px;
 
     margin:
-        11px 0 6px;
+        0 auto;
 
-    min-height:55px;
+    background:
+        var(--white);
+
+    border:
+        1px solid rgba(7,26,51,.08);
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 12px 35px rgba(7,26,51,.08);
+
+    display: flex;
+
+    flex-direction: column;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+}
+
+
+.ebook-card:hover {
+
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        0 18px 42px rgba(7,26,51,.14);
+
+}
+
+
+/* =========================================================
+   EBOOK COVER
+========================================================= */
+
+.ebook-cover {
+
+    width: 100%;
+
+    height: 285px;
+
+    background:
+        #F1EEE6;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    overflow: hidden;
+
+}
+
+
+.ebook-cover img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+
+    filter:
+        drop-shadow(
+            0 12px 14px rgba(0,0,0,.14)
+        );
+
+    transition:
+        transform .35s ease;
+
+}
+
+
+.ebook-card:hover
+.ebook-cover img {
+
+    transform:
+        scale(1.025);
+
+}
+
+
+/* =========================================================
+   EBOOK INFO
+========================================================= */
+
+.ebook-info {
+
+    padding:
+        20px 20px 18px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    flex: 1;
+
+}
+
+
+.ebook-label {
+
+    color:
+        var(--gold);
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.7px;
+
+    margin-bottom: 7px;
+
+}
+
+
+.ebook-title {
 
     color:
         var(--navy);
 
-    font-size:17px;
+    font-family:
+        "Cormorant Garamond",
+        serif;
 
-    line-height:1.2;
+    font-size: 25px;
 
-    font-weight:800;
+    font-weight: 700;
 
-    text-align:left;
+    line-height: 1.12;
 
-    flex-shrink:0;
-
-}
-
-.ebook-label{
-
-    display:block;
-
-    color:
-        var(--gold-dark);
-
-    font-size:9px;
-
-    font-weight:900;
-
-    letter-spacing:1.4px;
-
-    margin-bottom:6px;
+    margin-bottom: 10px;
 
 }
 
 
-/* =========================================================
-   DESCRIPTION
-========================================================= */
-
-.ebook-description{
-
-    padding:
-        0 16px;
-
-    margin-bottom:3px;
-
-    min-height:65px;
-
-    height:65px;
+.ebook-description {
 
     color:
-        #64748B;
+        var(--muted);
 
-    font-size:11px;
+    font-size: 11px;
 
-    line-height:1.4;
-
-    text-align:left;
+    line-height: 1.5;
 
     display:
         -webkit-box;
@@ -792,69 +928,82 @@ button{
     -webkit-box-orient:
         vertical;
 
-    -webkit-line-clamp:3;
+    -webkit-line-clamp: 4;
 
-    overflow:hidden;
+    overflow: hidden;
 
-    flex-shrink:0;
+    min-height: 66px;
 
 }
 
 
-/* =========================================================
-   PRICE
-========================================================= */
+.ebook-bottom {
 
-.ebook-price{
+    margin-top: auto;
 
-    padding:
-        0 16px;
+}
+
+
+.ebook-price {
+
+    color:
+        var(--navy);
+
+    font-size: 21px;
+
+    font-weight: 800;
 
     margin:
-        8px 0 11px;
-
-    min-height:29px;
-
-    font-size:24px;
-
-    font-weight:900;
-
-    text-align:left;
-
-    flex-shrink:0;
+        14px 0 12px;
 
 }
 
 
 /* =========================================================
-   EBOOK BUTTON ROW
+   EBOOK BUTTONS
 ========================================================= */
 
-.ebook-buttons{
+.ebook-buttons {
 
-    display:grid;
+    display: grid;
 
     grid-template-columns:
         1fr 1fr;
 
-    gap:8px;
-
-    padding:
-        0 10px 10px;
-
-    margin-top:auto;
+    gap: 8px;
 
 }
 
-.ebook-card .buy-btn{
 
-    width:100%;
+.buy-btn,
+.cart-btn {
 
-    min-height:46px;
+    min-height: 44px;
 
-    border:none;
+    border-radius: 8px;
 
-    border-radius:9px;
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding:
+        7px;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    transition:
+        .25s ease;
+
+}
+
+
+.buy-btn {
 
     background:
         var(--gold);
@@ -862,97 +1011,51 @@ button{
     color:
         var(--navy);
 
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    text-align:center;
-
-    font-size:10px;
-
-    font-weight:900;
-
-    padding:6px;
-
-    margin:0;
-
 }
 
-.ebook-card .buy-btn:hover{
+
+.buy-btn:hover {
 
     background:
-        var(--gold-dark);
+        var(--gold-light);
 
 }
 
-.ebook-card .cart-btn{
 
-    width:100%;
+.cart-btn {
 
-    min-height:46px;
-
-    border:none;
-
-    border-radius:9px;
+    border:
+        1px solid var(--navy);
 
     background:
         var(--navy);
 
-    color:white;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    text-align:center;
-
-    font-size:10px;
-
-    font-weight:900;
-
-    padding:6px;
-
-    margin:0;
+    color:
+        var(--white);
 
 }
 
-.ebook-card .cart-btn:hover{
+
+.cart-btn:hover {
 
     background:
-        #102D52;
+        var(--navy-light);
 
 }
 
 
 /* =========================================================
-   TEMPLATES SECTION
+   TEMPLATE GRID
 ========================================================= */
 
-.templates-section{
+.templates-grid {
 
-    padding-top:20px;
-
-}
-
-
-/* =========================================================
-   TEMPLATES GRID
-========================================================= */
-
-.templates-grid{
-
-    display:grid;
+    display: grid;
 
     grid-template-columns:
-        repeat(3,minmax(0,1fr));
+        repeat(3, minmax(0, 1fr));
 
-    gap:20px;
-
-    align-items:stretch;
+    gap: 28px;
 
 }
 
@@ -961,45 +1064,48 @@ button{
    TEMPLATE CARD
 ========================================================= */
 
-.template-card{
+.template-card {
 
-    width:100%;
+    width: 100%;
 
-    max-width:260px;
+    max-width: 310px;
 
-    height:520px;
+    min-height: 535px;
 
-    margin:0 auto;
+    margin:
+        0 auto;
 
-    background:#FFFFFF;
+    background:
+        var(--white);
 
     border:
-        1px solid #DDE3EC;
+        1px solid rgba(7,26,51,.08);
 
-    border-radius:14px;
+    border-radius: 18px;
 
-    overflow:hidden;
+    overflow: hidden;
 
     box-shadow:
-        0 4px 14px rgba(7,26,51,.07);
+        0 12px 35px rgba(7,26,51,.08);
 
-    display:flex;
+    display: flex;
 
-    flex-direction:column;
+    flex-direction: column;
 
     transition:
-        transform .25s ease,
-        box-shadow .25s ease;
+        transform .3s ease,
+        box-shadow .3s ease;
 
 }
 
-.template-card:hover{
+
+.template-card:hover {
 
     transform:
-        translateY(-3px);
+        translateY(-6px);
 
     box-shadow:
-        0 8px 22px rgba(7,26,51,.10);
+        0 18px 42px rgba(7,26,51,.14);
 
 }
 
@@ -1008,37 +1114,54 @@ button{
    TEMPLATE COVER
 ========================================================= */
 
-.template-cover{
+.template-cover {
 
-    width:100%;
+    width: 100%;
 
-    height:250px;
+    height: 285px;
 
-    flex-shrink:0;
+    background:
+        #F1EEE6;
 
-    background:#F7F8FA;
+    display: flex;
 
-    display:flex;
+    align-items: center;
 
-    align-items:center;
+    justify-content: center;
 
-    justify-content:center;
+    padding: 20px;
 
-    padding:12px;
-
-    overflow:hidden;
+    overflow: hidden;
 
 }
 
-.template-cover img{
 
-    width:100%;
+.template-cover img {
 
-    height:100%;
+    width: 100%;
 
-    object-fit:contain;
+    height: 100%;
 
-    display:block;
+    object-fit: contain;
+
+    display: block;
+
+    filter:
+        drop-shadow(
+            0 12px 14px rgba(0,0,0,.14)
+        );
+
+    transition:
+        transform .35s ease;
+
+}
+
+
+.template-card:hover
+.template-cover img {
+
+    transform:
+        scale(1.025);
 
 }
 
@@ -1047,60 +1170,60 @@ button{
    TEMPLATE INFO
 ========================================================= */
 
-.template-info{
+.template-info {
 
     padding:
-        0 16px;
+        20px 20px 0;
 
-    margin:
-        11px 0 6px;
-
-    min-height:123px;
-
-    flex-shrink:0;
+    flex: 1;
 
 }
 
-.template-label{
 
-    display:block;
+.template-label {
 
     color:
-        var(--gold-dark);
+        var(--gold);
 
-    font-size:9px;
+    font-size: 9px;
 
-    font-weight:900;
+    font-weight: 800;
 
-    letter-spacing:1.4px;
+    letter-spacing: 1.7px;
 
-    margin-bottom:6px;
+    margin-bottom: 7px;
 
 }
 
-.template-title{
+
+.template-title {
 
     color:
         var(--navy);
 
-    font-size:17px;
+    font-family:
+        "Cormorant Garamond",
+        serif;
 
-    line-height:1.2;
+    font-size: 25px;
 
-    font-weight:800;
+    font-weight: 700;
 
-    margin-bottom:8px;
+    line-height: 1.12;
+
+    margin-bottom: 10px;
 
 }
 
-.template-description{
+
+.template-description {
 
     color:
-        #64748B;
+        var(--muted);
 
-    font-size:11px;
+    font-size: 11px;
 
-    line-height:1.4;
+    line-height: 1.5;
 
     display:
         -webkit-box;
@@ -1108,65 +1231,83 @@ button{
     -webkit-box-orient:
         vertical;
 
-    -webkit-line-clamp:3;
+    -webkit-line-clamp: 4;
 
-    overflow:hidden;
+    overflow: hidden;
 
 }
 
 
 /* =========================================================
-   TEMPLATE PRICE / BUTTONS
+   TEMPLATE BOTTOM
 ========================================================= */
 
-.template-bottom{
+.template-bottom {
 
     padding:
-        0 10px 10px;
+        0 20px 20px;
 
-    margin-top:auto;
+    margin-top: auto;
 
 }
 
-.template-price{
 
-    padding:
-        0 6px;
-
-    margin:
-        8px 0 11px;
-
-    min-height:29px;
-
-    font-size:24px;
-
-    font-weight:900;
+.template-price {
 
     color:
         var(--navy);
 
+    font-size: 21px;
+
+    font-weight: 800;
+
+    margin:
+        14px 0 12px;
+
 }
 
-.template-buttons{
 
-    display:grid;
+.template-buttons {
+
+    display: grid;
 
     grid-template-columns:
         1fr 1fr;
 
-    gap:8px;
+    gap: 8px;
 
 }
 
-.template-buy{
 
-    width:100%;
+.template-buy,
+.template-cart {
 
-    min-height:46px;
+    min-height: 44px;
 
-    border:none;
+    border-radius: 8px;
 
-    border-radius:9px;
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding:
+        7px;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    transition:
+        .25s ease;
+
+}
+
+
+.template-buy {
 
     background:
         var(--gold);
@@ -1174,88 +1315,32 @@ button{
     color:
         var(--navy);
 
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    text-align:center;
-
-    font-size:10px;
-
-    font-weight:900;
-
-    padding:6px;
-
 }
 
-.template-buy:hover{
+
+.template-buy:hover {
 
     background:
-        var(--gold-dark);
+        var(--gold-light);
 
 }
 
-.template-cart{
 
-    width:100%;
-
-    min-height:46px;
-
-    border:none;
-
-    border-radius:9px;
+.template-cart {
 
     background:
         var(--navy);
 
-    color:white;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    text-align:center;
-
-    font-size:10px;
-
-    font-weight:900;
-
-    padding:6px;
+    color:
+        var(--white);
 
 }
 
-.template-cart:hover{
+
+.template-cart:hover {
 
     background:
-        #102D52;
-
-}
-
-
-/* =========================================================
-   PACKS
-========================================================= */
-
-.packs-section{
-
-    padding-top:20px;
-
-}
-
-.packs{
-
-    display:grid;
-
-    grid-template-columns:
-        minmax(0,700px);
-
-    justify-content:center;
-
-    gap:24px;
+        var(--navy-light);
 
 }
 
@@ -1264,57 +1349,84 @@ button{
    PACK INTRO
 ========================================================= */
 
-.packs-intro{
+.packs-intro {
 
-    max-width:680px;
+    max-width: 700px;
 
     margin:
-        -8px auto 28px;
+        -5px auto 35px;
 
-    text-align:center;
+    text-align: center;
 
     color:
-        #64748B;
+        var(--muted);
 
-    font-size:14px;
+    font-size: 13px;
 
-    line-height:1.5;
-
-    font-weight:600;
+    line-height: 1.7;
 
 }
 
 
 /* =========================================================
-   LARGE PACK CARD
+   PACKS
 ========================================================= */
 
-.pack-card{
+.packs {
 
-    width:100%;
+    display: grid;
 
-    background:white;
+    grid-template-columns:
+        minmax(0, 760px);
 
-    color:
-        var(--navy);
+    justify-content: center;
+
+    gap: 25px;
+
+}
+
+
+/* =========================================================
+   PACK CARD
+========================================================= */
+
+.pack-card {
+
+    width: 100%;
+
+    background:
+        var(--white);
 
     border:
-        1px solid #D7C995;
+        1px solid rgba(200,164,93,.55);
 
-    border-radius:14px;
+    border-radius: 18px;
 
-    min-height:560px;
-
-    padding:18px;
-
-    display:flex;
-
-    flex-direction:column;
+    padding: 20px;
 
     box-shadow:
-        0 6px 20px rgba(7,26,51,.09);
+        0 12px 35px rgba(7,26,51,.08);
 
-    overflow:hidden;
+    display: flex;
+
+    flex-direction: column;
+
+    overflow: hidden;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+}
+
+
+.pack-card:hover {
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        0 18px 42px rgba(7,26,51,.13);
 
 }
 
@@ -1323,37 +1435,44 @@ button{
    PACK IMAGE
 ========================================================= */
 
-.pack-image{
+.pack-image {
 
-    width:100%;
+    width: 100%;
 
-    height:360px;
+    height: 380px;
 
-    display:flex;
+    background:
+        #F1EEE6;
 
-    align-items:center;
+    border-radius: 12px;
 
-    justify-content:center;
+    display: flex;
 
-    background:#FFFFFF;
+    align-items: center;
 
-    border-radius:10px;
+    justify-content: center;
 
-    overflow:hidden;
+    padding: 12px;
 
-    margin-bottom:18px;
-
-    padding:8px;
+    overflow: hidden;
 
 }
 
-.pack-image img{
 
-    width:100%;
+.pack-image img {
 
-    height:100%;
+    width: 100%;
 
-    object-fit:contain;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+
+    filter:
+        drop-shadow(
+            0 12px 14px rgba(0,0,0,.13)
+        );
 
 }
 
@@ -1362,110 +1481,33 @@ button{
    PACK INFO
 ========================================================= */
 
-.pack-info{
+.pack-info {
 
-    min-width:0;
+    text-align: center;
 
-    text-align:center;
-
-    flex:1;
-
-    position:relative;
-
-}
-
-.pack-name{
-
-    color:
-        var(--navy);
-
-    font-size:26px;
-
-    font-weight:900;
-
-    text-transform:uppercase;
-
-    line-height:1.15;
-
-    margin-bottom:9px;
-
-}
-
-.pack-desc{
-
-    font-size:16px;
-
-    line-height:1.45;
-
-    color:#334155;
-
-    font-weight:600;
-
-    margin-bottom:13px;
-
-}
-
-.pack-icons{
-
-    display:grid;
-
-    grid-template-columns:
-        repeat(2,1fr);
-
-    gap:9px;
-
-    color:
-        var(--navy);
-
-    font-size:11px;
-
-    font-weight:800;
-
-}
-
-.pack-icons span{
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    gap:5px;
-
-}
-
-.pack-icons i{
-
-    color:
-        var(--gold-dark);
-
-    font-size:17px;
+    padding:
+        22px 10px 5px;
 
 }
 
 
-/* =========================================================
-   ELITE BADGE
-========================================================= */
+.pack-badge {
 
-.pack-badge{
+    display: inline-flex;
 
-    display:inline-flex;
+    align-items: center;
 
-    align-items:center;
+    justify-content: center;
 
-    justify-content:center;
-
-    gap:6px;
+    gap: 6px;
 
     margin:
         0 auto 10px;
 
     padding:
-        6px 12px;
+        7px 13px;
 
-    border-radius:20px;
+    border-radius: 20px;
 
     background:
         var(--navy);
@@ -1476,97 +1518,169 @@ button{
     border:
         1px solid var(--gold);
 
-    font-size:10px;
+    font-size: 9px;
 
-    font-weight:900;
+    font-weight: 800;
 
-    letter-spacing:1px;
+    letter-spacing: 1px;
 
-    text-transform:uppercase;
+}
 
-    box-shadow:
-        0 4px 12px rgba(7,26,51,.12);
+
+.pack-name {
+
+    color:
+        var(--navy);
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 32px;
+
+    font-weight: 700;
+
+    line-height: 1.1;
+
+    margin-bottom: 8px;
+
+}
+
+
+.pack-desc {
+
+    color:
+        var(--muted);
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-bottom: 16px;
+
+}
+
+
+.pack-icons {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 10px;
+
+}
+
+
+.pack-icons span {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 6px;
+
+    color:
+        var(--navy);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+}
+
+
+.pack-icons i {
+
+    color:
+        var(--gold);
+
+    font-size: 15px;
 
 }
 
 
 /* =========================================================
-   PACK PRICE / BUTTONS
+   PACK BOTTOM
 ========================================================= */
 
-.pack-right{
+.pack-right {
 
-    width:100%;
-
-    display:grid;
+    display: grid;
 
     grid-template-columns:
         auto 1fr;
 
-    gap:15px;
+    align-items: center;
 
-    align-items:center;
+    gap: 18px;
 
     border-top:
-        1px solid #E4D9A8;
+        1px solid rgba(200,164,93,.35);
 
-    padding-top:15px;
+    padding-top: 18px;
 
-    margin-top:16px;
+    margin-top: 18px;
 
 }
 
-.pack-price{
+
+.pack-price {
 
     color:
         var(--navy);
 
-    font-size:30px;
+    font-size: 31px;
 
-    font-weight:900;
-
-    white-space:nowrap;
+    font-weight: 800;
 
 }
 
-.pack-buttons{
 
-    display:grid;
+.pack-buttons {
+
+    display: grid;
 
     grid-template-columns:
         1fr 1fr;
 
-    gap:9px;
+    gap: 9px;
 
 }
+
 
 .pack-buy,
-.pack-cart{
+.pack-cart {
 
-    min-height:46px;
+    min-height: 46px;
 
-    border-radius:6px;
+    border-radius: 8px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
 
     padding:
-        8px 8px;
+        7px;
 
-    font-size:10px;
+    font-size: 9px;
 
-    font-weight:900;
+    font-weight: 800;
 
-    white-space:nowrap;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    text-align:center;
+    transition:
+        .25s ease;
 
 }
 
-.pack-buy{
+
+.pack-buy {
 
     background:
         var(--gold);
@@ -1576,28 +1690,33 @@ button{
 
 }
 
-.pack-buy:hover{
+
+.pack-buy:hover {
 
     background:
-        var(--gold-dark);
+        var(--gold-light);
 
 }
 
-.pack-cart{
 
-    background:white;
+.pack-cart {
+
+    background:
+        var(--navy);
 
     color:
-        var(--navy);
+        var(--white);
 
     border:
         1px solid var(--navy);
 
 }
 
-.pack-cart:hover{
 
-    background:#F4F6F8;
+.pack-cart:hover {
+
+    background:
+        var(--navy-light);
 
 }
 
@@ -1606,43 +1725,60 @@ button{
    TRUST
 ========================================================= */
 
-.trust{
+.trust {
 
-    display:grid;
+    max-width: 850px;
+
+    margin:
+        55px auto 0;
+
+    display: grid;
 
     grid-template-columns:
-        repeat(3,1fr);
+        repeat(3, 1fr);
 
-    gap:12px;
+    gap: 18px;
+
+}
+
+
+.trust-item {
+
+    text-align: center;
 
     padding:
-        18px 0 10px;
+        22px 14px;
 
-    text-align:center;
+    background:
+        rgba(255,255,255,.65);
 
-}
+    border:
+        1px solid rgba(200,164,93,.18);
 
-.trust-item{
-
-    font-size:8px;
-
-    font-weight:800;
+    border-radius: 14px;
 
     color:
         var(--navy);
 
+    font-size: 9px;
+
+    font-weight: 800;
+
+    line-height: 1.5;
+
 }
 
-.trust-item i{
 
-    display:block;
+.trust-item i {
+
+    display: block;
 
     color:
-        var(--navy);
+        var(--gold);
 
-    font-size:18px;
+    font-size: 21px;
 
-    margin-bottom:4px;
+    margin-bottom: 9px;
 
 }
 
@@ -1651,43 +1787,50 @@ button{
    FOOTER
 ========================================================= */
 
-.footer{
+.footer {
 
     background:
         var(--navy);
 
-    color:white;
+    color:
+        var(--white);
 
-    text-align:center;
+    text-align: center;
 
     padding:
-        20px 10px;
-
-    margin-top:20px;
+        38px 20px;
 
 }
 
-.footer-brand{
+
+.footer-brand {
 
     color:
-        var(--gold);
+        var(--gold-light);
 
-    font-weight:900;
+    font-family:
+        "Cormorant Garamond",
+        serif;
 
-    letter-spacing:2px;
+    font-size: 27px;
 
-    font-size:12px;
+    font-weight: 700;
 
-    margin-bottom:6px;
+    letter-spacing: 1px;
+
+    margin-bottom: 8px;
 
 }
 
-.footer p{
+
+.footer p {
 
     color:
-        rgba(255,255,255,.72);
+        rgba(255,255,255,.68);
 
-    font-size:8px;
+    font-size: 10px;
+
+    line-height: 1.6;
 
 }
 
@@ -1696,252 +1839,40 @@ button{
    TABLET
 ========================================================= */
 
-@media(max-width:900px){
+@media(max-width:950px) {
 
-    .section{
-
-        padding:
-            42px 14px;
-
-    }
-
-    .ebooks-grid{
+    .ebooks-grid {
 
         grid-template-columns:
-            repeat(3,minmax(0,1fr));
+            repeat(2, minmax(0, 1fr));
 
-        gap:14px;
-
-    }
-
-    .ebook-card{
-
-        max-width:235px;
-
-        height:440px;
-
-    }
-
-    .ebook-cover{
-
-        height:190px;
-
-    }
-
-    .ebook-title{
-
-        font-size:13px;
-
-        padding:
-            0 13px;
-
-        min-height:48px;
-
-    }
-
-    .ebook-label{
-
-        font-size:8px;
-
-    }
-
-    .ebook-description{
-
-        font-size:9px;
-
-        padding:
-            0 13px;
-
-        min-height:55px;
-
-        height:55px;
-
-    }
-
-    .ebook-price{
-
-        font-size:20px;
-
-        padding:
-            0 13px;
-
-    }
-
-    .ebook-buttons{
-
-        gap:6px;
-
-        padding:
-            0 8px 8px;
-
-    }
-
-    .ebook-card .buy-btn,
-    .ebook-card .cart-btn{
-
-        min-height:42px;
-
-        font-size:8px;
+        gap: 20px;
 
     }
 
 
-    .templates-grid{
+    .templates-grid {
 
         grid-template-columns:
-            repeat(2,minmax(0,1fr));
+            repeat(2, minmax(0, 1fr));
 
-        gap:14px;
-
-    }
-
-    .template-card{
-
-        max-width:235px;
-
-        height:440px;
-
-    }
-
-    .template-cover{
-
-        height:190px;
-
-    }
-
-    .template-info{
-
-        padding:
-            0 13px;
-
-        margin:
-            9px 0 5px;
-
-        min-height:108px;
-
-    }
-
-    .template-label{
-
-        font-size:8px;
-
-        margin-bottom:5px;
-
-    }
-
-    .template-title{
-
-        font-size:13px;
-
-        margin-bottom:6px;
-
-    }
-
-    .template-description{
-
-        font-size:9px;
-
-        line-height:1.4;
-
-    }
-
-    .template-price{
-
-        font-size:20px;
-
-        padding:
-            0 5px;
-
-        margin:
-            6px 0 8px;
-
-    }
-
-    .template-buttons{
-
-        gap:6px;
-
-    }
-
-    .template-buy,
-    .template-cart{
-
-        min-height:42px;
-
-        font-size:8px;
+        gap: 20px;
 
     }
 
 
-    .packs{
+    .ebook-card,
+    .template-card {
+
+        max-width: 330px;
+
+    }
+
+
+    .pack-icons {
 
         grid-template-columns:
-            minmax(0,650px);
-
-        justify-content:center;
-
-        gap:16px;
-
-    }
-
-    .pack-card{
-
-        min-height:500px;
-
-        padding:14px;
-
-    }
-
-    .pack-image{
-
-        height:300px;
-
-    }
-
-    .pack-name{
-
-        font-size:19px;
-
-    }
-
-    .pack-desc{
-
-        font-size:13px;
-
-    }
-
-    .pack-icons{
-
-        font-size:10px;
-
-    }
-
-    .pack-icons i{
-
-        font-size:16px;
-
-    }
-
-    .pack-price{
-
-        font-size:25px;
-
-    }
-
-    .pack-buttons{
-
-        grid-template-columns:1fr;
-
-        gap:6px;
-
-    }
-
-    .pack-buy,
-    .pack-cart{
-
-        min-height:40px;
-
-        font-size:9px;
+            repeat(2, 1fr);
 
     }
 
@@ -1952,553 +1883,595 @@ button{
    MOBILE
 ========================================================= */
 
-@media(max-width:600px){
+@media(max-width:650px) {
 
-    .header{
+    .header {
 
-        height:62px;
+        height: 76px;
+
+        padding:
+            0 18px;
+
+    }
+
+
+    .logo {
+
+        font-size: 29px;
+
+    }
+
+
+    .header-actions {
+
+        gap: 18px;
+
+    }
+
+
+    .header-icon {
+
+        font-size: 20px;
+
+    }
+
+
+    /* NAV */
+
+    .nav-row {
+
+        padding:
+            24px 24px 0;
+
+    }
+
+
+    .back-link {
+
+        font-size: 14px;
+
+    }
+
+
+    .english-link {
+
+        min-height: 38px;
 
         padding:
             0 12px;
 
-    }
-
-    .logo{
-
-        height:42px;
+        font-size: 10px;
 
     }
 
-    .header-actions{
 
-        gap:14px;
+    /* HERO */
 
-    }
-
-    .header-icon{
-
-        font-size:19px;
-
-    }
-
-    .nav-row{
+    .hero {
 
         padding:
-            8px 12px;
+            70px 24px 40px;
 
     }
 
-    .back-link{
 
-        font-size:13px;
+    .hero-small {
+
+        font-size: 10px;
+
+        letter-spacing: 2.5px;
 
     }
 
-    .english-link{
 
-        font-size:11px;
+    .hero h1 {
+
+        font-size: 48px;
+
+    }
+
+
+    .hero p {
+
+        max-width: 330px;
+
+        font-size: 14px;
+
+        line-height: 1.8;
+
+    }
+
+
+    .hero-tag {
+
+        font-size: 8px;
 
         padding:
-            7px 9px;
+            0 13px;
 
     }
 
 
-    /* QUICK NAV MOBILE */
+    /* QUICK NAV */
 
-    .quick-nav{
+    .quick-nav {
+
+        flex-direction: column;
+
+        margin-bottom: 60px;
 
         padding:
-            10px 8px;
+            0 24px;
 
-        gap:6px;
+        gap: 12px;
 
     }
 
-    .quick-nav a{
 
-        min-width:
-            calc(33.333% - 5px);
+    .quick-nav a {
+
+        width: 100%;
+
+        min-height: 64px;
+
+        flex: none;
+
+        border-radius: 34px;
+
+        font-size: 14px;
+
+    }
+
+
+    /* SECTIONS */
+
+    .section {
 
         padding:
-            8px 5px;
-
-        font-size:9px;
-
-        gap:4px;
-
-        border-radius:7px;
+            0 18px 65px;
 
     }
 
 
-    .hero{
+    .section-heading {
 
-        min-height:345px;
-
-        padding:
-            38px 18px 38px;
+        margin-bottom: 28px;
 
     }
 
-    .hero h1{
 
-        font-size:43px;
+    .section-kicker {
 
-        max-width:310px;
+        font-size: 9px;
 
-    }
-
-    .hero p{
-
-        max-width:270px;
-
-        font-size:13px;
+        letter-spacing: 2.5px;
 
     }
 
-    .section{
 
-        padding:
-            36px 10px;
+    .section-title {
 
-    }
-
-    .section-heading{
-
-        margin-bottom:24px;
+        font-size: 40px;
 
     }
 
-    .section-title{
 
-        font-size:27px;
+    .section-description {
+
+        font-size: 12px;
 
     }
 
-    .section-divider{
+
+    /* DIVIDER */
+
+    .section-divider {
+
+        height: 60px;
 
         margin:
-            6px auto 18px;
-
-        gap:10px;
-
-    }
-
-    .section-divider-icon{
-
-        width:40px;
-
-        height:40px;
-
-        font-size:15px;
+            0 auto 48px;
 
     }
 
 
-    .ebooks-grid{
+    .section-divider-icon {
+
+        width: 40px;
+
+        height: 40px;
+
+    }
+
+
+    /* EBOOKS */
+
+    .ebooks-grid {
 
         grid-template-columns:
-            repeat(2,minmax(0,1fr));
+            repeat(2, minmax(0, 1fr));
 
-        gap:10px;
-
-        align-items:stretch;
+        gap: 12px;
 
     }
 
-    .ebook-card{
 
-        max-width:none;
+    .ebook-card {
 
-        height:390px;
+        max-width: none;
 
-        border-radius:10px;
+        min-height: 445px;
 
-    }
-
-    .ebook-cover{
-
-        height:155px;
-
-        padding:8px;
+        border-radius: 13px;
 
     }
 
-    .ebook-title{
 
-        font-size:11px;
+    .ebook-cover {
 
-        line-height:1.2;
+        height: 190px;
+
+        padding: 10px;
+
+    }
+
+
+    .ebook-info {
 
         padding:
-            0 9px;
+            14px 11px 11px;
+
+    }
+
+
+    .ebook-label {
+
+        font-size: 6px;
+
+        letter-spacing: 1px;
+
+        margin-bottom: 5px;
+
+    }
+
+
+    .ebook-title {
+
+        font-size: 17px;
+
+        line-height: 1.1;
+
+        min-height: 48px;
+
+        margin-bottom: 7px;
+
+    }
+
+
+    .ebook-description {
+
+        font-size: 8.5px;
+
+        line-height: 1.4;
+
+        min-height: 48px;
+
+    }
+
+
+    .ebook-price {
+
+        font-size: 18px;
 
         margin:
-            8px 0 5px;
-
-        min-height:48px;
-
-        height:48px;
+            10px 0 8px;
 
     }
 
-    .ebook-label{
 
-        font-size:7px;
+    .ebook-buttons {
 
-        letter-spacing:1px;
-
-        margin-bottom:4px;
+        gap: 5px;
 
     }
 
-    .ebook-description{
 
-        font-size:8.5px;
+    .buy-btn,
+    .cart-btn {
 
-        line-height:1.4;
+        min-height: 38px;
 
-        min-height:43px;
+        font-size: 7px;
 
-        height:43px;
-
-        padding:
-            0 9px;
+        border-radius: 6px;
 
     }
 
-    .ebook-price{
 
-        font-size:18px;
+    /* TEMPLATES */
 
-        padding:
-            0 9px;
-
-        margin:
-            6px 0 8px;
-
-        min-height:22px;
-
-    }
-
-    .ebook-buttons{
+    .templates-grid {
 
         grid-template-columns:
-            1fr 1fr;
+            repeat(2, minmax(0, 1fr));
 
-        gap:5px;
+        gap: 12px;
+
+    }
+
+
+    .template-card {
+
+        max-width: none;
+
+        min-height: 445px;
+
+        border-radius: 13px;
+
+    }
+
+
+    .template-cover {
+
+        height: 190px;
+
+        padding: 10px;
+
+    }
+
+
+    .template-info {
 
         padding:
-            0 6px 6px;
-
-    }
-
-    .ebook-card .buy-btn,
-    .ebook-card .cart-btn{
-
-        min-height:36px;
-
-        font-size:7px;
-
-        border-radius:6px;
-
-        padding:4px;
+            14px 11px 0;
 
     }
 
 
-    .templates-grid{
+    .template-label {
 
-        grid-template-columns:
-            repeat(2,minmax(0,1fr));
+        font-size: 6px;
 
-        gap:10px;
-
-        align-items:stretch;
+        letter-spacing: 1px;
 
     }
 
-    .template-card{
 
-        max-width:none;
+    .template-title {
 
-        height:390px;
+        font-size: 17px;
 
-        border-radius:10px;
+        line-height: 1.1;
 
-    }
-
-    .template-cover{
-
-        height:155px;
-
-        padding:8px;
+        margin-bottom: 7px;
 
     }
 
-    .template-info{
+
+    .template-description {
+
+        font-size: 8.5px;
+
+        line-height: 1.4;
+
+    }
+
+
+    .template-bottom {
 
         padding:
-            0 9px;
+            0 11px 11px;
+
+    }
+
+
+    .template-price {
+
+        font-size: 18px;
 
         margin:
-            8px 0 5px;
-
-        min-height:96px;
+            10px 0 8px;
 
     }
 
-    .template-label{
 
-        font-size:7px;
+    .template-buttons {
 
-        letter-spacing:1px;
-
-        margin-bottom:4px;
+        gap: 5px;
 
     }
 
-    .template-title{
-
-        font-size:11px;
-
-        line-height:1.2;
-
-        margin-bottom:5px;
-
-    }
-
-    .template-description{
-
-        font-size:8.5px;
-
-        line-height:1.4;
-
-        display:
-            -webkit-box;
-
-        -webkit-box-orient:
-            vertical;
-
-        -webkit-line-clamp:3;
-
-        overflow:hidden;
-
-    }
-
-    .template-bottom{
-
-        padding:
-            0 6px 6px;
-
-    }
-
-    .template-price{
-
-        font-size:18px;
-
-        padding:
-            0 3px;
-
-        margin:
-            6px 0 8px;
-
-        min-height:22px;
-
-    }
-
-    .template-buttons{
-
-        gap:5px;
-
-    }
 
     .template-buy,
-    .template-cart{
+    .template-cart {
 
-        min-height:36px;
+        min-height: 38px;
 
-        font-size:7px;
+        font-size: 7px;
 
-        border-radius:6px;
-
-        padding:4px;
+        border-radius: 6px;
 
     }
 
 
-    /* PACK INTRO */
+    /* PACKS */
 
-    .packs-intro{
+    .packs-intro {
 
-        margin:
-            -5px auto 20px;
+        font-size: 11px;
 
         padding:
             0 8px;
 
-        font-size:11px;
+        line-height: 1.55;
 
-        line-height:1.45;
+        margin-bottom: 25px;
 
     }
 
 
-    .packs{
+    .packs {
+
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+
+    }
+
+
+    .pack-card {
+
+        padding: 10px;
+
+        border-radius: 13px;
+
+    }
+
+
+    .pack-image {
+
+        height: 250px;
+
+        padding: 8px;
+
+        border-radius: 9px;
+
+    }
+
+
+    .pack-info {
+
+        padding:
+            17px 5px 5px;
+
+    }
+
+
+    .pack-badge {
+
+        font-size: 7px;
+
+        padding:
+            6px 10px;
+
+    }
+
+
+    .pack-name {
+
+        font-size: 24px;
+
+    }
+
+
+    .pack-desc {
+
+        font-size: 11px;
+
+    }
+
+
+    .pack-icons {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 8px;
+
+    }
+
+
+    .pack-icons span {
+
+        font-size: 8px;
+
+    }
+
+
+    .pack-icons i {
+
+        font-size: 13px;
+
+    }
+
+
+    .pack-right {
+
+        grid-template-columns: 1fr;
+
+        gap: 9px;
+
+        margin-top: 12px;
+
+        padding-top: 12px;
+
+    }
+
+
+    .pack-price {
+
+        text-align: center;
+
+        font-size: 24px;
+
+    }
+
+
+    .pack-buttons {
 
         grid-template-columns:
             1fr;
 
-        gap:12px;
+        gap: 6px;
 
     }
 
-    .pack-card{
-
-        min-height:470px;
-
-        padding:9px;
-
-        border-radius:10px;
-
-    }
-
-    .pack-image{
-
-        height:230px;
-
-        padding:7px;
-
-        margin-bottom:12px;
-
-        border-radius:7px;
-
-    }
-
-    .pack-name{
-
-        font-size:14px;
-
-        line-height:1.2;
-
-        margin-bottom:7px;
-
-    }
-
-    .pack-desc{
-
-        font-size:10px;
-
-        line-height:1.4;
-
-        margin-bottom:10px;
-
-    }
-
-    .pack-icons{
-
-        grid-template-columns:
-            repeat(2,1fr);
-
-        gap:
-            7px 4px;
-
-        font-size:8px;
-
-    }
-
-    .pack-icons span{
-
-        gap:3px;
-
-    }
-
-    .pack-icons i{
-
-        font-size:14px;
-
-    }
-
-
-    .pack-badge{
-
-        font-size:7px;
-
-        padding:
-            5px 9px;
-
-        margin-bottom:7px;
-
-        letter-spacing:.8px;
-
-    }
-
-
-    .pack-right{
-
-        display:flex;
-
-        flex-direction:column;
-
-        gap:7px;
-
-        align-items:stretch;
-
-        border-top:
-            1px solid #E4D9A8;
-
-        padding-top:9px;
-
-        margin-top:10px;
-
-    }
-
-    .pack-price{
-
-        font-size:23px;
-
-        text-align:center;
-
-    }
-
-    .pack-buttons{
-
-        display:grid;
-
-        grid-template-columns:1fr;
-
-        gap:5px;
-
-    }
 
     .pack-buy,
-    .pack-cart{
+    .pack-cart {
 
-        min-height:36px;
+        min-height: 39px;
+
+        font-size: 7px;
+
+    }
+
+
+    /* TRUST */
+
+    .trust {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 10px;
+
+        margin-top: 40px;
+
+    }
+
+
+    .trust-item {
 
         padding:
-            6px 3px;
-
-        font-size:7px;
+            18px 12px;
 
     }
 
-    .trust{
 
-        gap:8px;
+    /* FOOTER */
 
-    }
+    .footer {
 
-    .trust-item{
-
-        font-size:7px;
+        padding:
+            32px 18px;
 
     }
 
-    .trust-item i{
 
-        font-size:17px;
+    .footer-brand {
+
+        font-size: 25px;
 
     }
 
@@ -2509,277 +2482,94 @@ button{
    VERY SMALL PHONES
 ========================================================= */
 
-@media(max-width:360px){
+@media(max-width:380px) {
 
-    .section{
+    .logo {
 
-        padding-left:7px;
-
-        padding-right:7px;
+        font-size: 25px;
 
     }
 
-    .quick-nav{
+
+    .header-actions {
+
+        gap: 14px;
+
+    }
+
+
+    .english-link {
 
         padding:
-            8px 5px;
+            0 9px;
 
-        gap:4px;
-
-    }
-
-    .quick-nav a{
-
-        min-width:
-            calc(33.333% - 3px);
-
-        padding:
-            7px 3px;
-
-        font-size:8px;
-
-    }
-
-    .ebooks-grid{
-
-        grid-template-columns:
-            repeat(2,minmax(0,1fr));
-
-        gap:8px;
-
-    }
-
-    .ebook-card{
-
-        height:365px;
-
-        border-radius:9px;
-
-    }
-
-    .ebook-cover{
-
-        height:140px;
-
-        padding:7px;
-
-    }
-
-    .ebook-title{
-
-        font-size:9.5px;
-
-        padding:
-            0 7px;
-
-        min-height:44px;
-
-        height:44px;
-
-    }
-
-    .ebook-label{
-
-        font-size:6px;
-
-    }
-
-    .ebook-description{
-
-        font-size:7.8px;
-
-        min-height:40px;
-
-        height:40px;
-
-        padding:
-            0 7px;
-
-    }
-
-    .ebook-price{
-
-        font-size:16px;
-
-        padding:
-            0 7px;
-
-    }
-
-    .ebook-buttons{
-
-        gap:4px;
-
-        padding:
-            0 5px 5px;
-
-    }
-
-    .ebook-card .buy-btn,
-    .ebook-card .cart-btn{
-
-        min-height:33px;
-
-        font-size:6px;
-
-        border-radius:5px;
+        font-size: 9px;
 
     }
 
 
-    .template-card{
+    .hero h1 {
 
-        height:365px;
-
-        border-radius:9px;
+        font-size: 43px;
 
     }
 
-    .template-cover{
 
-        height:140px;
+    .section-title {
 
-        padding:7px;
-
-    }
-
-    .template-info{
-
-        padding:
-            0 7px;
-
-        margin:
-            7px 0 4px;
-
-        min-height:90px;
+        font-size: 35px;
 
     }
 
-    .template-label{
 
-        font-size:6px;
+    .ebooks-grid,
+    .templates-grid {
 
-    }
-
-    .template-title{
-
-        font-size:9.5px;
-
-        line-height:1.2;
+        gap: 8px;
 
     }
 
-    .template-description{
 
-        font-size:7.8px;
+    .ebook-card,
+    .template-card {
 
-        line-height:1.4;
-
-    }
-
-    .template-price{
-
-        font-size:16px;
-
-        padding:
-            0 5px;
+        min-height: 420px;
 
     }
 
-    .template-buttons{
 
-        gap:4px;
+    .ebook-cover,
+    .template-cover {
+
+        height: 170px;
 
     }
 
+
+    .ebook-title,
+    .template-title {
+
+        font-size: 14px;
+
+    }
+
+
+    .ebook-description,
+    .template-description {
+
+        font-size: 7.8px;
+
+    }
+
+
+    .buy-btn,
+    .cart-btn,
     .template-buy,
-    .template-cart{
+    .template-cart {
 
-        min-height:33px;
+        min-height: 35px;
 
-        font-size:6px;
-
-        border-radius:5px;
-
-    }
-
-
-    .packs{
-
-        grid-template-columns:
-            1fr;
-
-        gap:8px;
-
-    }
-
-    .pack-card{
-
-        min-height:440px;
-
-        padding:7px;
-
-    }
-
-    .pack-image{
-
-        height:190px;
-
-        padding:6px;
-
-    }
-
-    .pack-name{
-
-        font-size:11px;
-
-    }
-
-    .pack-desc{
-
-        font-size:8.5px;
-
-    }
-
-    .pack-icons{
-
-        font-size:7px;
-
-        gap:
-            5px 3px;
-
-    }
-
-    .pack-icons i{
-
-        font-size:12px;
-
-    }
-
-    .pack-badge{
-
-        font-size:6px;
-
-        padding:
-            4px 7px;
-
-    }
-
-    .pack-price{
-
-        font-size:20px;
-
-    }
-
-    .pack-buy,
-    .pack-cart{
-
-        min-height:32px;
-
-        font-size:6px;
-
-        padding:
-            5px 2px;
+        font-size: 6px;
 
     }
 
@@ -2790,88 +2580,21 @@ button{
    LARGE SCREENS
 ========================================================= */
 
-@media(min-width:1100px){
+@media(min-width:1100px) {
 
-    .ebooks-grid{
-
-        grid-template-columns:
-            repeat(3,minmax(0,1fr));
-
-    }
-
-    .ebook-card{
-
-        max-width:260px;
-
-        height:520px;
-
-    }
-
-    .ebook-cover{
-
-        height:210px;
-
-    }
-
-    .templates-grid{
+    .ebooks-grid,
+    .templates-grid {
 
         grid-template-columns:
-            repeat(3,minmax(0,1fr));
+            repeat(3, minmax(0, 1fr));
 
     }
 
-    .template-card{
 
-        max-width:260px;
+    .ebook-card,
+    .template-card {
 
-        height:520px;
-
-    }
-
-    .template-cover{
-
-        height:210px;
-
-    }
-
-    .pack-card{
-
-        min-height:620px;
-
-        padding:20px;
-
-    }
-
-    .pack-image{
-
-        height:370px;
-
-    }
-
-    .pack-name{
-
-        font-size:28px;
-
-    }
-
-    .pack-desc{
-
-        font-size:17px;
-
-    }
-
-    .pack-price{
-
-        font-size:34px;
-
-    }
-
-    .pack-buy,
-    .pack-cart{
-
-        min-height:48px;
-
-        font-size:12px;
+        max-width: 320px;
 
     }
 
@@ -2880,6 +2603,7 @@ button{
 </style>
 
 </head>
+
 
 <body>
 
@@ -2890,12 +2614,27 @@ button{
 
 <header class="header">
 
-    <img
-        src="images/Thebestbundle-transparent-logo.png"
-        class="logo"
-        alt="TheBestBundle">
+    <a
+        href="index.html"
+        class="logo">
+
+        TheBestBundle
+
+    </a>
+
 
     <div class="header-actions">
+
+
+        <a
+            href="index.html"
+            class="header-icon"
+            aria-label="Accueil">
+
+            <i class="fa-solid fa-house"></i>
+
+        </a>
+
 
         <a
             href="cart.html"
@@ -2914,18 +2653,11 @@ button{
 
         </a>
 
-        <a
-            href="index.html"
-            class="header-icon"
-            aria-label="Accueil">
-
-            <i class="fa-solid fa-house"></i>
-
-        </a>
 
     </div>
 
 </header>
+
 
 
 <!-- ======================================================
@@ -2935,12 +2667,16 @@ button{
 <div class="nav-row">
 
     <a
-        href="javascript:history.back()"
-        class="back-link">
+        href="#"
+        class="back-link"
+        id="backBtn">
 
-        ← Retour
+        <i class="fa-solid fa-arrow-left"></i>
+
+        Retour
 
     </a>
+
 
     <a
         href="index.html"
@@ -2953,50 +2689,45 @@ button{
 </div>
 
 
+
 <!-- ======================================================
      HERO
 ====================================================== -->
 
 <section class="hero">
 
-    <div class="hero-inner">
+    <div class="hero-small">
 
-        <div class="hero-line"></div>
+        THEBESTBUNDLE • COLLECTION FRANÇAISE
 
-        <div class="hero-kicker">
+    </div>
 
-            THEBESTBUNDLE • COLLECTION
-            FRANÇAISE
 
-        </div>
+    <h1>
 
-        <h1>
+        Collection Française
 
-            COLLECTION
+    </h1>
 
-            <span>
-                FRANÇAISE
-            </span>
 
-        </h1>
+    <p>
 
-        <p>
+        Découvrez nos eBooks numériques,
+        nos templates pratiques et nos packs premium
+        conçus pour vous aider à apprendre,
+        créer et progresser.
 
-            Découvrez nos eBooks numériques,
-            nos templates pratiques et nos packs premium.
+    </p>
 
-        </p>
 
-        <div class="hero-tag">
+    <div class="hero-tag">
 
-            INVESTISSEZ EN VOUS,
-            CHANGEZ VOTRE VIE
-
-        </div>
+        INVESTISSEZ EN VOUS • CHANGEZ VOTRE VIE
 
     </div>
 
 </section>
+
 
 
 <!-- ======================================================
@@ -3007,6 +2738,7 @@ button{
     class="quick-nav"
     aria-label="Navigation de la collection">
 
+
     <a href="#ebooks">
 
         <i class="fa-solid fa-book-open"></i>
@@ -3014,6 +2746,7 @@ button{
         eBooks
 
     </a>
+
 
     <a href="#templates">
 
@@ -3023,6 +2756,7 @@ button{
 
     </a>
 
+
     <a href="#packs">
 
         <i class="fa-solid fa-box-open"></i>
@@ -3031,7 +2765,9 @@ button{
 
     </a>
 
+
 </nav>
+
 
 
 <!-- ======================================================
@@ -3041,6 +2777,7 @@ button{
 <section
     class="section"
     id="ebooks">
+
 
     <div class="section-heading">
 
@@ -3052,13 +2789,23 @@ button{
 
         </div>
 
+
         <h2 class="section-title">
 
             eBooks Premium
 
         </h2>
 
+
+        <p class="section-description">
+
+            Des guides numériques pratiques pour
+            apprendre, évoluer et développer vos connaissances.
+
+        </p>
+
     </div>
+
 
     <div
         class="ebooks-grid"
@@ -3066,7 +2813,9 @@ button{
 
     </div>
 
+
 </section>
+
 
 
 <!-- ======================================================
@@ -3074,8 +2823,9 @@ button{
 ====================================================== -->
 
 <section
-    class="section templates-section"
+    class="section"
     id="templates">
+
 
     <div class="section-divider">
 
@@ -3098,11 +2848,20 @@ button{
 
         </div>
 
+
         <h2 class="section-title">
 
             Templates Premium
 
         </h2>
+
+
+        <p class="section-description">
+
+            Des outils numériques prêts à utiliser
+            pour organiser, planifier et développer vos projets.
+
+        </p>
 
     </div>
 
@@ -3113,7 +2872,9 @@ button{
 
     </div>
 
+
 </section>
+
 
 
 <!-- ======================================================
@@ -3121,8 +2882,9 @@ button{
 ====================================================== -->
 
 <section
-    class="section packs-section"
+    class="section"
     id="packs">
+
 
     <div class="section-divider">
 
@@ -3145,6 +2907,7 @@ button{
 
         </div>
 
+
         <h2 class="section-title">
 
             Packs Premium
@@ -3153,10 +2916,6 @@ button{
 
     </div>
 
-
-    <!-- ==================================================
-         PACK INTRODUCTION
-    ================================================== -->
 
     <p class="packs-intro">
 
@@ -3171,10 +2930,11 @@ button{
 
 
         <!-- =================================================
-             PACK DE DÉMARRAGE
+             STARTER PACK
         ================================================== -->
 
         <article class="pack-card">
+
 
             <div class="pack-image">
 
@@ -3187,6 +2947,7 @@ button{
 
 
             <div class="pack-info">
+
 
                 <div class="pack-name">
 
@@ -3203,6 +2964,7 @@ button{
 
 
                 <div class="pack-icons">
+
 
                     <span>
 
@@ -3239,12 +3001,14 @@ button{
 
                     </span>
 
+
                 </div>
 
             </div>
 
 
             <div class="pack-right">
+
 
                 <div class="pack-price">
 
@@ -3254,6 +3018,7 @@ button{
 
 
                 <div class="pack-buttons">
+
 
                     <a
                         href="https://buy.stripe.com/6oUdRbgIMfKM3Z5f5h8N215"
@@ -3286,18 +3051,22 @@ button{
 
                     </button>
 
+
                 </div>
 
             </div>
 
+
         </article>
 
 
+
         <!-- =================================================
-             PACK EXPERT — $37
+             EXPERT PACK
         ================================================== -->
 
         <article class="pack-card">
+
 
             <div class="pack-image">
 
@@ -3310,6 +3079,7 @@ button{
 
 
             <div class="pack-info">
+
 
                 <div class="pack-name">
 
@@ -3326,6 +3096,7 @@ button{
 
 
                 <div class="pack-icons">
+
 
                     <span>
 
@@ -3362,12 +3133,14 @@ button{
 
                     </span>
 
+
                 </div>
 
             </div>
 
 
             <div class="pack-right">
+
 
                 <div class="pack-price">
 
@@ -3377,6 +3150,7 @@ button{
 
 
                 <div class="pack-buttons">
+
 
                     <a
                         href="https://buy.stripe.com/8x2dRbfEI9mo9jp7CP8N216"
@@ -3409,18 +3183,22 @@ button{
 
                     </button>
 
+
                 </div>
 
             </div>
 
+
         </article>
 
 
+
         <!-- =================================================
-             PACK ÉLITE — $57
+             ELITE PACK
         ================================================== -->
 
         <article class="pack-card">
+
 
             <div class="pack-image">
 
@@ -3433,6 +3211,7 @@ button{
 
 
             <div class="pack-info">
+
 
                 <div class="pack-badge">
 
@@ -3458,6 +3237,7 @@ button{
 
 
                 <div class="pack-icons">
+
 
                     <span>
 
@@ -3494,12 +3274,14 @@ button{
 
                     </span>
 
+
                 </div>
 
             </div>
 
 
             <div class="pack-right">
+
 
                 <div class="pack-price">
 
@@ -3509,6 +3291,7 @@ button{
 
 
                 <div class="pack-buttons">
+
 
                     <a
                         href="https://buy.stripe.com/cNifZj3W0fKM9jp5uH8N218"
@@ -3541,14 +3324,17 @@ button{
 
                     </button>
 
+
                 </div>
 
             </div>
+
 
         </article>
 
 
     </div>
+
 
 
     <!-- ==================================================
@@ -3557,11 +3343,13 @@ button{
 
     <div class="trust">
 
+
         <div class="trust-item">
 
             <i class="fa-solid fa-shield-halved"></i>
 
             PAIEMENT<br>
+
             100% SÉCURISÉ
 
         </div>
@@ -3572,6 +3360,7 @@ button{
             <i class="fa-solid fa-bolt"></i>
 
             TÉLÉCHARGEMENT<br>
+
             IMMÉDIAT
 
         </div>
@@ -3582,13 +3371,17 @@ button{
             <i class="fa-solid fa-face-smile"></i>
 
             SATISFAIT OU<br>
+
             REMBOURSÉ
 
         </div>
 
+
     </div>
 
+
 </section>
+
 
 
 <!-- ======================================================
@@ -3597,11 +3390,13 @@ button{
 
 <footer class="footer">
 
+
     <div class="footer-brand">
 
         LEARN • CREATE • GROW
 
     </div>
+
 
     <p>
 
@@ -3610,26 +3405,38 @@ button{
 
     </p>
 
+
 </footer>
 
 
+
 <!-- ======================================================
-     SHARED CART + PRODUCT DATA
+     JAVASCRIPT
 ====================================================== -->
 
 <script>
 
-/* ======================================================
-   SHARED CART KEY
-====================================================== */
+
+/* =========================================================
+   SHARED CART
+========================================================= */
 
 const CART_KEY =
     "theBestBundleCart";
 
 
-/* ======================================================
+let cart =
+    JSON.parse(
+        localStorage.getItem(
+            CART_KEY
+        )
+    ) || [];
+
+
+
+/* =========================================================
    FRENCH EBOOK DATA
-====================================================== */
+========================================================= */
 
 const ebooks = [
 
@@ -3654,6 +3461,7 @@ const ebooks = [
 
         stripe:
             "https://buy.stripe.com/cNi4gB504aqsdzFbT58N20S"
+
     },
 
 
@@ -3678,6 +3486,7 @@ const ebooks = [
 
         stripe:
             "https://buy.stripe.com/dRm5kF8cg2Y02V16yL8N20T"
+
     },
 
 
@@ -3702,6 +3511,7 @@ const ebooks = [
 
         stripe:
             "https://buy.stripe.com/14A8wR5049mo0MTe1d8N20U"
+
     },
 
 
@@ -3726,6 +3536,7 @@ const ebooks = [
 
         stripe:
             "https://buy.stripe.com/bJefZj1NS2Y03Z5aP18N20V"
+
     },
 
 
@@ -3750,6 +3561,7 @@ const ebooks = [
 
         stripe:
             "https://buy.stripe.com/4gMbJ3fEIfKM67dcX98N20W"
+
     },
 
 
@@ -3770,10 +3582,11 @@ const ebooks = [
             17,
 
         priceId:
-            "price_1UIKQ0Rtp4gVtODy12XAaiLw",
+            "price_1UIKQ0Rtp4gVtODylDX3mPAT",
 
         stripe:
             "https://buy.stripe.com/eVqdRbcsw568eDJ6yL8N20X"
+
     },
 
 
@@ -3798,15 +3611,16 @@ const ebooks = [
 
         stripe:
             "https://buy.stripe.com/4gMdRb0JOgOQ3Z54qD8N20Y"
+
     }
 
 ];
 
 
-/* ======================================================
-   FRENCH TEMPLATE DATA
-   7 TEMPLATES
-====================================================== */
+
+/* =========================================================
+   TEMPLATE DATA
+========================================================= */
 
 const templates = [
 
@@ -3831,6 +3645,7 @@ const templates = [
 
         stripe:
             "https://buy.stripe.com/8x23cxcswcyA7bhg9l8N20Z"
+
     },
 
 
@@ -3855,6 +3670,7 @@ const templates = [
 
         stripe:
             "https://buy.stripe.com/6oU28teAEaqs539g9l8N210"
+
     },
 
 
@@ -3879,6 +3695,7 @@ const templates = [
 
         stripe:
             "https://buy.stripe.com/4gM14pcswfKM8fl5uH8N211"
+
     },
 
 
@@ -3903,6 +3720,7 @@ const templates = [
 
         stripe:
             "https://buy.stripe.com/00w14p8cg0PSfHNe1d8N212"
+
     },
 
 
@@ -3927,6 +3745,7 @@ const templates = [
 
         stripe:
             "https://buy.stripe.com/00w00l8cg0PS3Z55uH8N213"
+
     },
 
 
@@ -3951,6 +3770,7 @@ const templates = [
 
         stripe:
             "https://buy.stripe.com/cNi4gBbos7eggLRe1d8N214"
+
     },
 
 
@@ -3975,28 +3795,63 @@ const templates = [
 
         stripe:
             "https://buy.stripe.com/dRm00lako1TWfHN5uH8N217"
+
     }
 
 ];
 
 
-/* ======================================================
-   LOAD CART
-====================================================== */
 
-let cart =
-    JSON.parse(
-        localStorage.getItem(
-            CART_KEY
-        )
-    ) || [];
+/* =========================================================
+   CART COUNT
+========================================================= */
+
+function updateCartCount() {
+
+    const count =
+        document.getElementById(
+            "cartCount"
+        );
 
 
-/* ======================================================
+    if (count) {
+
+        count.textContent =
+            cart.length;
+
+    }
+
+}
+
+
+
+updateCartCount();
+
+
+
+/* =========================================================
+   SAVE CART
+========================================================= */
+
+function saveCart() {
+
+    localStorage.setItem(
+        CART_KEY,
+        JSON.stringify(cart)
+    );
+
+
+    updateCartCount();
+
+}
+
+
+
+/* =========================================================
    CREATE EBOOK CARD
-====================================================== */
+========================================================= */
 
-function createProductCard(product){
+function createEbookCard(product) {
 
     const card =
         document.createElement(
@@ -4020,66 +3875,74 @@ function createProductCard(product){
         </div>
 
 
-        <div class="ebook-title">
+        <div class="ebook-info">
 
-            <span class="ebook-label">
+            <div class="ebook-label">
 
-                PREMIUM EBOOK
+                EBOOK PREMIUM
 
-            </span>
-
-            ${product.name}
-
-        </div>
+            </div>
 
 
-        <div class="ebook-description">
+            <h3 class="ebook-title">
 
-            ${product.description}
+                ${product.name}
 
-        </div>
-
-
-        <div class="ebook-price">
-
-            $${product.price}
-
-        </div>
+            </h3>
 
 
-        <div class="ebook-buttons">
+            <div class="ebook-description">
 
-            <a
-                href="${product.stripe}"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="buy-btn">
+                ${product.description}
 
-                ACHETER MAINTENANT
-
-            </a>
+            </div>
 
 
-            <button
-                type="button"
+            <div class="ebook-bottom">
 
-                class="cart-btn add-to-cart"
+                <div class="ebook-price">
 
-                data-id="${product.id}"
+                    $${product.price}
 
-                data-name="${product.name}"
+                </div>
 
-                data-price="${product.price}"
 
-                data-price-id="${product.priceId}"
+                <div class="ebook-buttons">
 
-                data-image="${product.image}"
+                    <a
+                        href="${product.stripe}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="buy-btn">
 
-                data-stripe="${product.stripe}">
+                        ACHETER MAINTENANT
 
-                AJOUTER AU PANIER
+                    </a>
 
-            </button>
+
+                    <button
+                        type="button"
+                        class="cart-btn add-to-cart"
+
+                        data-id="${product.id}"
+
+                        data-name="${product.name}"
+
+                        data-price="${product.price}"
+
+                        data-price-id="${product.priceId}"
+
+                        data-image="${product.image}"
+
+                        data-stripe="${product.stripe}">
+
+                        AJOUTER AU PANIER
+
+                    </button>
+
+                </div>
+
+            </div>
 
         </div>
 
@@ -4091,11 +3954,12 @@ function createProductCard(product){
 }
 
 
-/* ======================================================
-   CREATE TEMPLATE CARD
-====================================================== */
 
-function createTemplateCard(template){
+/* =========================================================
+   CREATE TEMPLATE CARD
+========================================================= */
+
+function createTemplateCard(template) {
 
     const card =
         document.createElement(
@@ -4128,11 +3992,11 @@ function createTemplateCard(template){
             </div>
 
 
-            <div class="template-title">
+            <h3 class="template-title">
 
                 ${template.name}
 
-            </div>
+            </h3>
 
 
             <div class="template-description">
@@ -4168,7 +4032,6 @@ function createTemplateCard(template){
 
                 <button
                     type="button"
-
                     class="template-cart add-to-cart"
 
                     data-id="${template.id}"
@@ -4199,9 +4062,10 @@ function createTemplateCard(template){
 }
 
 
-/* ======================================================
+
+/* =========================================================
    RENDER EBOOKS
-====================================================== */
+========================================================= */
 
 const ebooksGrid =
     document.getElementById(
@@ -4209,13 +4073,24 @@ const ebooksGrid =
     );
 
 
-if(ebooksGrid){
+function renderEbooks(list) {
 
-    ebooks.forEach(
-        function(product){
+    if (!ebooksGrid) {
+
+        return;
+
+    }
+
+
+    ebooksGrid.innerHTML =
+        "";
+
+
+    list.forEach(
+        function(product) {
 
             ebooksGrid.appendChild(
-                createProductCard(
+                createEbookCard(
                     product
                 )
             );
@@ -4226,9 +4101,15 @@ if(ebooksGrid){
 }
 
 
-/* ======================================================
+renderEbooks(
+    ebooks
+);
+
+
+
+/* =========================================================
    RENDER TEMPLATES
-====================================================== */
+========================================================= */
 
 const templatesGrid =
     document.getElementById(
@@ -4236,10 +4117,10 @@ const templatesGrid =
     );
 
 
-if(templatesGrid){
+if (templatesGrid) {
 
     templates.forEach(
-        function(template){
+        function(template) {
 
             templatesGrid.appendChild(
                 createTemplateCard(
@@ -4253,160 +4134,106 @@ if(templatesGrid){
 }
 
 
-/* ======================================================
-   EBOOK POSITION ROTATION
-====================================================== */
 
-let ebookRotationIndex =
-    0;
+/* =========================================================
+   SHUFFLE
+========================================================= */
 
+function shuffle(array) {
 
-function rotateEbookPositions(){
-
-    if(!ebooksGrid){
-
-        return;
-
-    }
+    const copy =
+        [...array];
 
 
-    const cards =
-        Array.from(
-            ebooksGrid.children
-        );
+    for (
+        let i = copy.length - 1;
+        i > 0;
+        i--
+    ) {
 
-
-    if(cards.length <= 1){
-
-        return;
-
-    }
-
-
-    ebookRotationIndex =
-        (
-            ebookRotationIndex + 1
-        )
-        %
-        cards.length;
-
-
-    cards.forEach(
-        function(card){
-
-            card.classList.add(
-                "position-changing"
+        const j =
+            Math.floor(
+                Math.random() *
+                (i + 1)
             );
 
-        }
+
+        [
+            copy[i],
+            copy[j]
+        ] =
+        [
+            copy[j],
+            copy[i]
+        ];
+
+    }
+
+
+    return copy;
+
+}
+
+
+
+/* =========================================================
+   EBOOK ROTATION
+   EVERY 25 SECONDS
+========================================================= */
+
+function rotateEbooks() {
+
+    if (!ebooksGrid) {
+
+        return;
+
+    }
+
+
+    ebooksGrid.classList.add(
+        "fade"
     );
 
 
     setTimeout(
-        function(){
+        function() {
 
-            const rotatedCards =
-                cards
-                .slice(
-                    ebookRotationIndex
-                )
-                .concat(
-                    cards.slice(
-                        0,
-                        ebookRotationIndex
-                    )
+            const newOrder =
+                shuffle(
+                    ebooks
                 );
 
 
-            rotatedCards.forEach(
-                function(card){
-
-                    ebooksGrid.appendChild(
-                        card
-                    );
-
-                }
+            renderEbooks(
+                newOrder
             );
 
 
-            setTimeout(
-                function(){
-
-                    cards.forEach(
-                        function(card){
-
-                            card.classList.remove(
-                                "position-changing"
-                            );
-
-                        }
-                    );
-
-                },
-                150
+            ebooksGrid.classList.remove(
+                "fade"
             );
 
         },
-        350
+        450
     );
 
 }
 
 
 setInterval(
-    rotateEbookPositions,
-    20000
+    rotateEbooks,
+    25000
 );
 
 
-/* ======================================================
-   UPDATE CART COUNT
-====================================================== */
 
-function updateCartCount(){
-
-    const count =
-        document.getElementById(
-            "cartCount"
-        );
-
-
-    if(count){
-
-        count.textContent =
-            cart.length;
-
-    }
-
-}
-
-
-/* ======================================================
-   SAVE CART
-====================================================== */
-
-function saveCart(){
-
-    localStorage.setItem(
-        CART_KEY,
-        JSON.stringify(
-            cart
-        )
-    );
-
-
-    updateCartCount();
-
-}
-
-
-/* ======================================================
+/* =========================================================
    ADD TO CART
-====================================================== */
+========================================================= */
 
 document.addEventListener(
     "click",
-    function(event){
+    function(event) {
 
         const button =
             event.target.closest(
@@ -4414,7 +4241,7 @@ document.addEventListener(
             );
 
 
-        if(!button){
+        if (!button) {
 
             return;
 
@@ -4448,7 +4275,7 @@ document.addEventListener(
 
         const exists =
             cart.some(
-                function(item){
+                function(item) {
 
                     return (
                         item.id ===
@@ -4459,7 +4286,7 @@ document.addEventListener(
             );
 
 
-        if(!exists){
+        if (!exists) {
 
             cart.push(
                 product
@@ -4478,17 +4305,17 @@ document.addEventListener(
 
 
             setTimeout(
-                function(){
+                function() {
 
                     button.innerHTML =
                         originalText;
 
                 },
-                1000
+                1200
             );
 
 
-        }else{
+        } else {
 
             window.location.href =
                 "cart.html";
@@ -4499,11 +4326,67 @@ document.addEventListener(
 );
 
 
-/* ======================================================
-   INITIAL CART COUNT
-====================================================== */
 
-updateCartCount();
+/* =========================================================
+   BACK BUTTON
+========================================================= */
+
+document
+    .getElementById(
+        "backBtn"
+    )
+    .addEventListener(
+        "click",
+        function(event) {
+
+            event.preventDefault();
+
+
+            if (
+                window.history.length > 1
+            ) {
+
+                window.history.back();
+
+            } else {
+
+                window.location.href =
+                    "index.html";
+
+            }
+
+        }
+    );
+
+
+
+/* =========================================================
+   CART UPDATE ACROSS TABS
+========================================================= */
+
+window.addEventListener(
+    "storage",
+    function(event) {
+
+        if (
+            event.key ===
+            CART_KEY
+        ) {
+
+            cart =
+                JSON.parse(
+                    localStorage.getItem(
+                        CART_KEY
+                    )
+                ) || [];
+
+
+            updateCartCount();
+
+        }
+
+    }
+);
 
 </script>
 
