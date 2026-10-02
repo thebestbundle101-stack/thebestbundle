@@ -46,6 +46,22 @@
 
 
 <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com">
+
+
+<link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+
+<link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -62,21 +78,26 @@
 
     --navy-light:#0D2B50;
 
-    --gold:#F4C542;
+    --gold:#C8A45D;
 
-    --gold-dark:#D9A91A;
+    --gold-light:#E1C77E;
+
+    --cream:#F8F5ED;
 
     --white:#FFFFFF;
 
-    --off-white:#F8FAFC;
+    --text:#071A33;
 
-    --text-gray:#64748B;
+    --text-gray:#667085;
 
-    --border:#E2E8F0;
+    --border:#E8E1D4;
+
+    --shadow:
+        0 14px 35px rgba(7,26,51,.08);
 
     --max-width:1200px;
 
-    --radius:14px;
+    --radius:24px;
 
 }
 
@@ -88,6 +109,7 @@
 *{
 
     margin:0;
+
     padding:0;
 
     box-sizing:border-box;
@@ -105,15 +127,16 @@ html{
 body{
 
     font-family:
+        "Montserrat",
         Arial,
         Helvetica,
         sans-serif;
 
     background:
-        var(--off-white);
+        var(--cream);
 
     color:
-        var(--navy);
+        var(--text);
 
     line-height:
         1.5;
@@ -150,10 +173,8 @@ button{
 
 .container{
 
-    width:90%;
-
-    max-width:
-        var(--max-width);
+    width:
+        min(92%,var(--max-width));
 
     margin:
         0 auto;
@@ -179,7 +200,7 @@ button{
 .header-inner{
 
     min-height:
-        90px;
+        96px;
 
     display:flex;
 
@@ -194,12 +215,36 @@ button{
 }
 
 
-.header-logo img{
+.header-logo{
 
-    height:
-        56px;
+    display:flex;
 
-    width:auto;
+    align-items:center;
+
+}
+
+
+.header-logo-text{
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size:
+        34px;
+
+    font-weight:
+        700;
+
+    color:
+        var(--gold-light);
+
+    letter-spacing:
+        .5px;
+
+    white-space:
+        nowrap;
 
 }
 
@@ -211,7 +256,7 @@ button{
     align-items:center;
 
     gap:
-        12px;
+        8px;
 
 }
 
@@ -235,7 +280,7 @@ button{
     border:none;
 
     border-radius:
-        8px;
+        50%;
 
     background:
         transparent;
@@ -244,18 +289,21 @@ button{
         var(--white);
 
     font-size:
-        24px;
+        20px;
+
+    transition:
+        .25s ease;
 
 }
 
 
 .header-icon:hover{
 
-    background:
-        rgba(255,255,255,.08);
-
     color:
-        var(--gold);
+        var(--gold-light);
+
+    background:
+        rgba(255,255,255,.07);
 
 }
 
@@ -268,7 +316,7 @@ button{
         0;
 
     right:
-        0;
+        -1px;
 
     min-width:
         19px;
@@ -278,6 +326,12 @@ button{
 
     padding:
         0 5px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
 
     border-radius:
         30px;
@@ -289,28 +343,22 @@ button{
         var(--navy);
 
     font-size:
-        11px;
+        10px;
 
     font-weight:
         800;
-
-    line-height:
-        19px;
 
 }
 
 
 /* =========================================
-   BACK BUTTON
+   BACK ROW
 ========================================= */
 
 .back-row{
 
     background:
-        var(--white);
-
-    border-bottom:
-        1px solid var(--border);
+        var(--cream);
 
 }
 
@@ -318,7 +366,7 @@ button{
 .back-inner{
 
     min-height:
-        60px;
+        62px;
 
     display:flex;
 
@@ -336,16 +384,22 @@ button{
     gap:
         9px;
 
-    color:
-        var(--navy);
-
-    font-weight:
-        700;
-
     border:none;
 
     background:
         transparent;
+
+    color:
+        var(--navy);
+
+    font-size:
+        13px;
+
+    font-weight:
+        700;
+
+    transition:
+        .25s ease;
 
 }
 
@@ -353,7 +407,7 @@ button{
 .back-button:hover{
 
     color:
-        var(--gold-dark);
+        var(--gold);
 
 }
 
@@ -364,30 +418,205 @@ button{
 
 .page-hero{
 
+    padding:
+        38px 0 34px;
+
+    text-align:
+        center;
+
+    background:
+        var(--cream);
+
+}
+
+
+.hero-kicker{
+
+    display:block;
+
+    margin-bottom:
+        12px;
+
+    color:
+        var(--gold);
+
+    font-size:
+        12px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        2.2px;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+.page-hero h1{
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    color:
+        var(--navy);
+
+    font-size:
+        clamp(48px,7vw,72px);
+
+    font-weight:
+        600;
+
+    line-height:
+        .98;
+
+    margin-bottom:
+        18px;
+
+}
+
+
+.page-hero p{
+
+    max-width:
+        720px;
+
+    margin:
+        0 auto;
+
+    color:
+        var(--text-gray);
+
+    font-size:
+        15px;
+
+    line-height:
+        1.75;
+
+}
+
+
+/* =========================================
+   QUICK NAV
+========================================= */
+
+.quick-nav{
+
+    padding:
+        8px 0 48px;
+
+    background:
+        var(--cream);
+
+}
+
+
+.quick-nav-inner{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:
+        12px;
+
+}
+
+
+.quick-nav a{
+
+    min-height:
+        48px;
+
+    padding:
+        0 28px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        999px;
+
+    background:
+        var(--white);
+
+    color:
+        var(--navy);
+
+    font-size:
+        12px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .4px;
+
+    box-shadow:
+        0 6px 20px rgba(7,26,51,.04);
+
+    transition:
+        .25s ease;
+
+}
+
+
+.quick-nav a:hover{
+
     background:
         var(--navy);
 
     color:
         var(--white);
 
-    padding:
-        65px 0 70px;
-
-    text-align:
-        center;
+    border-color:
+        var(--navy);
 
 }
 
 
-.page-hero span{
+/* =========================================
+   BUNDLE SECTION
+========================================= */
 
-    display:block;
+.bundles-section{
+
+    padding:
+        8px 0 82px;
+
+}
+
+
+.bundle-heading{
+
+    text-align:
+        center;
+
+    margin-bottom:
+        36px;
+
+}
+
+
+.bundle-kicker{
 
     color:
         var(--gold);
 
     font-size:
-        14px;
+        11px;
 
     font-weight:
         800;
@@ -399,53 +628,113 @@ button{
         uppercase;
 
     margin-bottom:
-        14px;
+        9px;
 
 }
 
 
-.page-hero h1{
+.bundle-heading h2{
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    color:
+        var(--navy);
 
     font-size:
-        clamp(38px,7vw,64px);
+        clamp(42px,6vw,58px);
+
+    font-weight:
+        600;
 
     line-height:
-        1.1;
+        1;
 
     margin-bottom:
-        18px;
+        12px;
 
 }
 
 
-.page-hero p{
+.bundle-heading p{
 
     max-width:
-        700px;
+        650px;
 
     margin:
         0 auto;
 
     color:
-        rgba(255,255,255,.82);
+        var(--text-gray);
 
     font-size:
-        18px;
+        14px;
+
+    line-height:
+        1.7;
 
 }
 
 
 /* =========================================
-   BUNDLES SECTION
+   GOLD DIVIDER
 ========================================= */
 
-.bundles-section{
+.category-divider{
 
-    padding:
-        55px 0 80px;
+    width:
+        62px;
+
+    height:
+        1px;
+
+    margin:
+        0 auto 42px;
+
+    background:
+        var(--gold);
+
+    position:
+        relative;
 
 }
 
+
+.category-divider::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:
+        7px;
+
+    height:
+        7px;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--gold);
+
+    top:
+        50%;
+
+    left:
+        50%;
+
+    transform:
+        translate(-50%,-50%);
+
+}
+
+
+/* =========================================
+   BUNDLE GRID
+========================================= */
 
 .bundle-grid{
 
@@ -456,44 +745,6 @@ button{
 
     gap:
         24px;
-
-}
-
-
-/* =========================================
-   BUNDLE CARD
-========================================= */
-
-.bundle-card{
-
-    display:flex;
-
-    flex-direction:
-        column;
-
-    overflow:hidden;
-
-    background:
-        var(--white);
-
-    border:
-        1px solid var(--border);
-
-    border-radius:
-        var(--radius);
-
-    box-shadow:
-        0 8px 24px rgba(7,26,51,.07);
-
-    opacity:
-        1;
-
-    transform:
-        translateY(0);
-
-    transition:
-        opacity .35s ease,
-        transform .35s ease;
 
 }
 
@@ -515,16 +766,63 @@ button{
 
 
 /* =========================================
+   BUNDLE CARD
+========================================= */
+
+.bundle-card{
+
+    display:flex;
+
+    flex-direction:
+        column;
+
+    overflow:hidden;
+
+    background:
+        var(--white);
+
+    border:
+        1px solid rgba(7,26,51,.05);
+
+    border-radius:
+        var(--radius);
+
+    box-shadow:
+        var(--shadow);
+
+    opacity:
+        1;
+
+    transform:
+        translateY(0);
+
+    transition:
+        opacity .35s ease,
+        transform .35s ease,
+        box-shadow .25s ease;
+
+}
+
+
+.bundle-card:hover{
+
+    box-shadow:
+        0 18px 42px rgba(7,26,51,.12);
+
+}
+
+
+/* =========================================
    BUNDLE IMAGE
 ========================================= */
 
 .bundle-image{
 
     height:
-        260px;
+        300px;
 
     padding:
-        18px;
+        22px;
 
     display:flex;
 
@@ -533,7 +831,7 @@ button{
     justify-content:center;
 
     background:
-        var(--off-white);
+        #F4F0E7;
 
 }
 
@@ -544,10 +842,10 @@ button{
         auto;
 
     max-width:
-        82%;
+        90%;
 
     height:
-        220px;
+        255px;
 
     object-fit:
         contain;
@@ -556,7 +854,7 @@ button{
 
 
 /* =========================================
-   BUNDLE INFORMATION
+   BUNDLE INFO
 ========================================= */
 
 .bundle-info{
@@ -567,7 +865,7 @@ button{
         column;
 
     padding:
-        18px;
+        22px;
 
     flex:
         1;
@@ -578,33 +876,19 @@ button{
 .bundle-label{
 
     color:
-        var(--gold-dark);
+        var(--gold);
 
     font-size:
-        11px;
+        10px;
 
     font-weight:
         800;
 
     letter-spacing:
-        1.5px;
+        1.7px;
 
     text-transform:
         uppercase;
-
-    margin-bottom:
-        6px;
-
-}
-
-
-.bundle-info h2{
-
-    font-size:
-        19px;
-
-    line-height:
-        1.25;
 
     margin-bottom:
         8px;
@@ -612,33 +896,40 @@ button{
 }
 
 
-.bundle-info p{
+.bundle-info h2{
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
 
     color:
-        var(--text-gray);
+        var(--navy);
 
     font-size:
-        13px;
+        28px;
+
+    font-weight:
+        600;
 
     line-height:
-        1.45;
+        1.08;
 
     margin-bottom:
-        12px;
-
-    display:
-        -webkit-box;
-
-    -webkit-box-orient:
-        vertical;
-
-    -webkit-line-clamp:
-        3;
-
-    overflow:
-        hidden;
+        15px;
 
 }
+
+
+/* =========================================
+   NO LONG DESCRIPTION ON CARD
+========================================= */
+
+/*
+    Long bundle descriptions remain inside
+    the JavaScript data but are intentionally
+    not displayed on the product card.
+*/
 
 
 /* =========================================
@@ -647,17 +938,23 @@ button{
 
 .bundle-includes{
 
-    padding:
-        10px 12px;
+    margin-top:
+        auto;
 
     margin-bottom:
-        12px;
+        17px;
+
+    padding:
+        13px 15px;
 
     background:
-        var(--off-white);
+        var(--cream);
+
+    border:
+        1px solid var(--border);
 
     border-radius:
-        8px;
+        13px;
 
     color:
         var(--navy);
@@ -669,7 +966,55 @@ button{
         700;
 
     line-height:
-        1.4;
+        1.45;
+
+}
+
+
+/* =========================================
+   BADGE
+========================================= */
+
+.bundle-badge{
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    width:
+        fit-content;
+
+    padding:
+        6px 11px;
+
+    margin-bottom:
+        9px;
+
+    border-radius:
+        999px;
+
+    background:
+        var(--gold);
+
+    color:
+        var(--navy);
+
+    font-size:
+        9px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .8px;
+
+    text-transform:
+        uppercase;
 
 }
 
@@ -680,17 +1025,17 @@ button{
 
 .bundle-price{
 
-    margin-top:
-        auto;
-
-    margin-bottom:
-        12px;
+    color:
+        var(--navy);
 
     font-size:
-        23px;
+        20px;
 
     font-weight:
         800;
+
+    margin-bottom:
+        16px;
 
 }
 
@@ -707,7 +1052,7 @@ button{
         repeat(2,minmax(0,1fr));
 
     gap:
-        8px;
+        9px;
 
 }
 
@@ -715,10 +1060,10 @@ button{
 .btn{
 
     min-height:
-        44px;
+        46px;
 
     padding:
-        9px 6px;
+        10px 8px;
 
     display:flex;
 
@@ -726,22 +1071,45 @@ button{
 
     justify-content:center;
 
-    border-radius:
-        8px;
+    border:
+        none;
 
-    border:none;
+    border-radius:
+        999px;
 
     font-size:
-        12px;
+        11px;
 
     font-weight:
         800;
 
+    letter-spacing:
+        .15px;
+
     text-align:
         center;
 
-    white-space:
-        nowrap;
+    transition:
+        .25s ease;
+
+}
+
+
+.cart-button{
+
+    background:
+        var(--navy);
+
+    color:
+        var(--white);
+
+}
+
+
+.cart-button:hover{
+
+    background:
+        var(--navy-light);
 
 }
 
@@ -757,27 +1125,10 @@ button{
 }
 
 
-.cart-button{
+.buy-button:hover{
 
     background:
-        var(--navy);
-
-    color:
-        var(--white);
-
-    border:
-        2px solid var(--navy);
-
-}
-
-
-.cart-button:hover{
-
-    background:
-        var(--navy);
-
-    color:
-        var(--white);
+        var(--gold-light);
 
 }
 
@@ -803,39 +1154,108 @@ button{
 
 
 /* =========================================
-   BADGE
+   TRUST
 ========================================= */
 
-.coming-badge{
-
-    display:inline-block;
-
-    width:
-        fit-content;
+.trust-section{
 
     padding:
-        6px 10px;
-
-    margin-bottom:
-        8px;
+        70px 0 76px;
 
     background:
+        var(--white);
+
+    border-top:
+        1px solid var(--border);
+
+}
+
+
+.trust-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,minmax(0,1fr));
+
+    gap:
+        22px;
+
+}
+
+
+.trust-card{
+
+    text-align:
+        center;
+
+    padding:
+        24px 18px;
+
+}
+
+
+.trust-icon{
+
+    width:
+        46px;
+
+    height:
+        46px;
+
+    margin:
+        0 auto 15px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--cream);
+
+    color:
         var(--gold);
+
+    font-size:
+        17px;
+
+}
+
+
+.trust-card h3{
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
 
     color:
         var(--navy);
 
-    border-radius:
-        30px;
+    font-size:
+        22px;
+
+    margin-bottom:
+        7px;
+
+}
+
+
+.trust-card p{
+
+    color:
+        var(--text-gray);
 
     font-size:
-        10px;
+        12px;
 
-    font-weight:
-        800;
-
-    text-transform:
-        uppercase;
+    line-height:
+        1.6;
 
 }
 
@@ -853,7 +1273,7 @@ button{
         var(--white);
 
     padding:
-        35px 0;
+        42px 0;
 
     text-align:
         center;
@@ -864,16 +1284,19 @@ button{
 .footer-tagline{
 
     color:
-        var(--gold);
+        var(--gold-light);
+
+    font-size:
+        12px;
 
     font-weight:
         800;
 
     letter-spacing:
-        1px;
+        1.8px;
 
     margin-bottom:
-        7px;
+        9px;
 
 }
 
@@ -881,17 +1304,16 @@ button{
 .footer p{
 
     color:
-        rgba(255,255,255,.7);
+        rgba(255,255,255,.68);
 
     font-size:
-        13px;
+        12px;
 
 }
 
 
 /* =========================================
-   TABLET / LANDSCAPE PHONE
-   3 COLUMNS
+   TABLET
 ========================================= */
 
 @media(max-width:950px){
@@ -910,10 +1332,10 @@ button{
     .bundle-image{
 
         height:
-            230px;
+            245px;
 
         padding:
-            14px;
+            16px;
 
     }
 
@@ -921,7 +1343,7 @@ button{
     .bundle-image img{
 
         height:
-            195px;
+            210px;
 
     }
 
@@ -929,7 +1351,7 @@ button{
     .bundle-info{
 
         padding:
-            15px;
+            17px;
 
     }
 
@@ -937,15 +1359,7 @@ button{
     .bundle-info h2{
 
         font-size:
-            17px;
-
-    }
-
-
-    .bundle-info p{
-
-        font-size:
-            12px;
+            24px;
 
     }
 
@@ -958,21 +1372,13 @@ button{
     }
 
 
-    .bundle-price{
-
-        font-size:
-            21px;
-
-    }
-
-
     .btn{
 
         font-size:
-            11px;
+            10px;
 
         min-height:
-            42px;
+            44px;
 
     }
 
@@ -980,11 +1386,230 @@ button{
 
 
 /* =========================================
-   PHONE PORTRAIT
-   2 COLUMNS
+   MOBILE
 ========================================= */
 
 @media(max-width:650px){
+
+    .container{
+
+        width:
+            91%;
+
+    }
+
+
+    /* HEADER */
+
+    .header-inner{
+
+        min-height:
+            82px;
+
+    }
+
+
+    .header-logo-text{
+
+        font-size:
+            28px;
+
+    }
+
+
+    .header-actions{
+
+        gap:
+            3px;
+
+    }
+
+
+    .header-icon{
+
+        width:
+            42px;
+
+        height:
+            42px;
+
+        font-size:
+            18px;
+
+    }
+
+
+    /* BACK */
+
+    .back-inner{
+
+        min-height:
+            56px;
+
+    }
+
+
+    .back-button{
+
+        font-size:
+            12px;
+
+    }
+
+
+    /* HERO */
+
+    .page-hero{
+
+        padding:
+            27px 0 24px;
+
+    }
+
+
+    .hero-kicker{
+
+        font-size:
+            10px;
+
+        letter-spacing:
+            1.7px;
+
+        margin-bottom:
+            10px;
+
+    }
+
+
+    .page-hero h1{
+
+        font-size:
+            48px;
+
+        line-height:
+            .95;
+
+        margin-bottom:
+            15px;
+
+    }
+
+
+    .page-hero p{
+
+        font-size:
+            13px;
+
+        line-height:
+            1.65;
+
+        padding:
+            0 8px;
+
+    }
+
+
+    /* QUICK NAV */
+
+    .quick-nav{
+
+        padding:
+            8px 0 38px;
+
+    }
+
+
+    .quick-nav-inner{
+
+        flex-direction:
+            column;
+
+        gap:
+            10px;
+
+    }
+
+
+    .quick-nav a{
+
+        width:
+            100%;
+
+        min-height:
+            50px;
+
+        font-size:
+            11px;
+
+    }
+
+
+    /* BUNDLES */
+
+    .bundles-section{
+
+        padding:
+            8px 0 62px;
+
+    }
+
+
+    .bundle-heading{
+
+        margin-bottom:
+            27px;
+
+    }
+
+
+    .bundle-kicker{
+
+        font-size:
+            9px;
+
+        letter-spacing:
+            1.7px;
+
+        margin-bottom:
+            8px;
+
+    }
+
+
+    .bundle-heading h2{
+
+        font-size:
+            43px;
+
+        line-height:
+            .98;
+
+        margin-bottom:
+            10px;
+
+    }
+
+
+    .bundle-heading p{
+
+        font-size:
+            12px;
+
+        line-height:
+            1.6;
+
+    }
+
+
+    .category-divider{
+
+        margin-bottom:
+            28px;
+
+    }
+
+
+    /* GRID */
 
     .bundle-grid{
 
@@ -992,15 +1617,15 @@ button{
             repeat(2,minmax(0,1fr));
 
         gap:
-            14px;
+            13px;
 
     }
 
 
     .bundle-card{
 
-        width:
-            100%;
+        border-radius:
+            19px;
 
     }
 
@@ -1011,7 +1636,7 @@ button{
             190px;
 
         padding:
-            10px;
+            9px;
 
     }
 
@@ -1022,7 +1647,7 @@ button{
             165px;
 
         max-width:
-            88%;
+            91%;
 
     }
 
@@ -1038,24 +1663,24 @@ button{
     .bundle-label{
 
         font-size:
-            9px;
+            8px;
 
         letter-spacing:
             1px;
 
         margin-bottom:
-            5px;
+            6px;
 
     }
 
 
-    .bundle-info h2{
+    .bundle-badge{
 
         font-size:
-            15px;
+            7px;
 
-        line-height:
-            1.25;
+        padding:
+            5px 7px;
 
         margin-bottom:
             7px;
@@ -1063,19 +1688,16 @@ button{
     }
 
 
-    .bundle-info p{
+    .bundle-info h2{
 
         font-size:
-            11px;
+            19px;
 
         line-height:
-            1.4;
+            1.05;
 
         margin-bottom:
-            9px;
-
-        -webkit-line-clamp:
-            2;
+            13px;
 
     }
 
@@ -1083,13 +1705,16 @@ button{
     .bundle-includes{
 
         padding:
-            8px;
-
-        font-size:
-            10px;
+            9px;
 
         margin-bottom:
+            10px;
+
+        font-size:
             9px;
+
+        line-height:
+            1.35;
 
     }
 
@@ -1097,67 +1722,101 @@ button{
     .bundle-price{
 
         font-size:
-            20px;
+            17px;
 
         margin-bottom:
-            9px;
+            10px;
 
     }
 
 
+    /*
+       MOBILE BUTTON ORDER
+       Add to Cart first
+       Buy Now second
+    */
+
     .bundle-actions{
 
+        display:flex;
+
+        flex-direction:
+            column;
+
         gap:
-            6px;
+            7px;
 
     }
 
 
     .btn{
 
+        width:
+            100%;
+
         min-height:
-            40px;
+            39px;
 
         padding:
-            7px 3px;
+            7px 4px;
 
         font-size:
-            10px;
+            9px;
 
     }
 
 
-    .page-hero{
+    /* TRUST */
+
+    .trust-section{
 
         padding:
-            55px 0 60px;
+            50px 0 56px;
 
     }
 
 
-    .page-hero h1{
+    .trust-grid{
 
-        font-size:
-            34px;
+        grid-template-columns:
+            1fr;
+
+        gap:
+            5px;
 
     }
 
 
-    .page-hero p{
-
-        font-size:
-            15px;
+    .trust-card{
 
         padding:
-            0 10px;
+            18px;
 
     }
 
 
-    .header-logo img{
+    .trust-card h3{
 
-        height:
-            42px;
+        font-size:
+            21px;
+
+    }
+
+
+    .trust-card p{
+
+        font-size:
+            11px;
+
+    }
+
+
+    /* FOOTER */
+
+    .footer{
+
+        padding:
+            35px 0;
 
     }
 
@@ -1170,10 +1829,31 @@ button{
 
 @media(max-width:380px){
 
-    .bundle-grid{
+    .header-logo-text{
 
-        grid-template-columns:
-            repeat(2,minmax(0,1fr));
+        font-size:
+            25px;
+
+    }
+
+
+    .page-hero h1{
+
+        font-size:
+            43px;
+
+    }
+
+
+    .bundle-heading h2{
+
+        font-size:
+            39px;
+
+    }
+
+
+    .bundle-grid{
 
         gap:
             10px;
@@ -1208,15 +1888,7 @@ button{
     .bundle-info h2{
 
         font-size:
-            14px;
-
-    }
-
-
-    .bundle-info p{
-
-        font-size:
-            10px;
+            16px;
 
     }
 
@@ -1224,7 +1896,7 @@ button{
     .bundle-includes{
 
         font-size:
-            9px;
+            8.5px;
 
     }
 
@@ -1232,18 +1904,18 @@ button{
     .bundle-price{
 
         font-size:
-            18px;
+            16px;
 
     }
 
 
     .btn{
 
-        font-size:
-            9px;
-
         min-height:
-            38px;
+            37px;
+
+        font-size:
+            8.5px;
 
     }
 
@@ -1265,18 +1937,23 @@ button{
 
     <div class="container header-inner">
 
+
         <a
             href="index.html"
-            class="header-logo">
+            class="header-logo"
+            aria-label="TheBestBundle Home">
 
-            <img
-                src="images/Thebestbundle-transparent-logo.png"
-                alt="TheBestBundle">
+            <span class="header-logo-text">
+
+                TheBestBundle
+
+            </span>
 
         </a>
 
 
         <div class="header-actions">
+
 
             <button
                 type="button"
@@ -1289,7 +1966,9 @@ button{
                 <span
                     class="cart-count"
                     id="pageCartCount">
+
                     0
+
                 </span>
 
             </button>
@@ -1303,6 +1982,7 @@ button{
                 <i class="fa-solid fa-house"></i>
 
             </a>
+
 
         </div>
 
@@ -1319,6 +1999,7 @@ button{
 
     <div class="container back-inner">
 
+
         <button
             type="button"
             class="back-button"
@@ -1329,6 +2010,7 @@ button{
             Back
 
         </button>
+
 
     </div>
 
@@ -1343,19 +2025,29 @@ button{
 
     <div class="container">
 
-        <span>
-            More Value • More Resources
+
+        <span class="hero-kicker">
+
+            THEBESTBUNDLE • COLLECTION
+
         </span>
 
+
         <h1>
-            Digital Bundles
+
+            Premium Bundles
+
         </h1>
 
+
         <p>
-            Build your digital library with value-packed
-            collections combining premium eBooks and
-            professionally designed templates.
+
+            Discover curated digital collections combining
+            premium eBooks and professionally designed templates
+            to give you more value in one complete package.
+
         </p>
+
 
     </div>
 
@@ -1363,12 +2055,75 @@ button{
 
 
 <!-- =========================================
+     QUICK NAV
+========================================= -->
+
+<nav class="quick-nav">
+
+    <div class="container quick-nav-inner">
+
+
+        <a href="#bundles">
+
+            Explore Bundles
+
+        </a>
+
+
+        <a href="#trust">
+
+            Why TheBestBundle
+
+        </a>
+
+
+    </div>
+
+</nav>
+
+
+<!-- =========================================
      BUNDLES
 ========================================= -->
 
-<main class="bundles-section">
+<main
+    class="bundles-section"
+    id="bundles">
+
 
     <div class="container">
+
+
+        <div class="bundle-heading">
+
+
+            <div class="bundle-kicker">
+
+                DIGITAL • VALUE • COLLECTIONS
+
+            </div>
+
+
+            <h2>
+
+                Choose Your Bundle
+
+            </h2>
+
+
+            <p>
+
+                Premium collections created to give you
+                more digital resources in one purchase.
+
+            </p>
+
+
+        </div>
+
+
+        <div class="category-divider"></div>
+
 
         <div
             class="bundle-grid"
@@ -1376,9 +2131,115 @@ button{
 
         </div>
 
+
     </div>
 
 </main>
+
+
+<!-- =========================================
+     TRUST
+========================================= -->
+
+<section
+    class="trust-section"
+    id="trust">
+
+
+    <div class="container">
+
+
+        <div class="trust-grid">
+
+
+            <div class="trust-card">
+
+
+                <div class="trust-icon">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                </div>
+
+
+                <h3>
+
+                    SECURE PAYMENT
+
+                </h3>
+
+
+                <p>
+
+                    Secure checkout powered by Stripe.
+
+                </p>
+
+
+            </div>
+
+
+            <div class="trust-card">
+
+
+                <div class="trust-icon">
+
+                    <i class="fa-solid fa-layer-group"></i>
+
+                </div>
+
+
+                <h3>
+
+                    MORE VALUE
+
+                </h3>
+
+
+                <p>
+
+                    Curated collections combining
+                    multiple premium digital resources.
+
+                </p>
+
+
+            </div>
+
+
+            <div class="trust-card">
+
+
+                <div class="trust-icon">
+
+                    <i class="fa-solid fa-download"></i>
+
+                </div>
+
+
+                <h3>
+
+                    DIGITAL ACCESS
+
+                </h3>
+
+
+                <p>
+
+                    Access your digital products after purchase.
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
 
 
 <!-- =========================================
@@ -1389,13 +2250,20 @@ button{
 
     <div class="container">
 
+
         <div class="footer-tagline">
+
             LEARN • CREATE • GROW
+
         </div>
 
+
         <p>
-            © 2026 TheBestBundle. All Rights Reserved.
+
+            © 2026 TheBestBundle. All rights reserved.
+
         </p>
+
 
     </div>
 
@@ -1403,7 +2271,7 @@ button{
 
 
 <!-- =========================================
-     BUNDLE DATA + ROTATION + CART
+     BUNDLE DATA + CART
 ========================================= -->
 
 <script>
@@ -1414,6 +2282,11 @@ button{
 ========================================= */
 
 const bundles = [
+
+
+    /* =========================================
+       STARTER BUNDLE
+    ========================================= */
 
     {
         id:
@@ -1449,6 +2322,10 @@ const bundles = [
     },
 
 
+    /* =========================================
+       CREATOR BUNDLE
+    ========================================= */
+
     {
         id:
             "creator-bundle",
@@ -1483,6 +2360,10 @@ const bundles = [
     },
 
 
+    /* =========================================
+       BUSINESS BUNDLE
+    ========================================= */
+
     {
         id:
             "business-bundle",
@@ -1516,6 +2397,10 @@ const bundles = [
 
     },
 
+
+    /* =========================================
+       HEALTH & WELLNESS COLLECTION
+    ========================================= */
 
     {
         id:
@@ -1553,6 +2438,10 @@ const bundles = [
 
     },
 
+
+    /* =========================================
+       ULTIMATE COLLECTION
+    ========================================= */
 
     {
         id:
@@ -1707,17 +2596,19 @@ function createActiveBundleCard(
 
             <img
                 src="${bundle.image}"
-                alt="${bundle.name}">
+                alt="${bundle.name}"
+                loading="lazy">
 
         </div>
 
 
         <div class="bundle-info">
 
+
             ${
                 bundle.badge
                     ? `
-            <span class="coming-badge">
+            <span class="bundle-badge">
 
                 ${bundle.badge}
 
@@ -1741,13 +2632,6 @@ function createActiveBundleCard(
             </h2>
 
 
-            <p>
-
-                ${bundle.description}
-
-            </p>
-
-
             <div class="bundle-includes">
 
                 ${bundle.includes}
@@ -1763,14 +2647,6 @@ function createActiveBundleCard(
 
 
             <div class="bundle-actions">
-
-                <a
-                    href="${bundle.stripe}"
-                    class="btn buy-button">
-
-                    Buy Now
-
-                </a>
 
 
                 <button
@@ -1793,7 +2669,18 @@ function createActiveBundleCard(
 
                 </button>
 
+
+                <a
+                    href="${bundle.stripe}"
+                    class="btn buy-button">
+
+                    Buy Now
+
+                </a>
+
+
             </div>
+
 
         </div>
 
@@ -1829,14 +2716,16 @@ function createComingSoonCard(
 
             <img
                 src="${bundle.image}"
-                alt="${bundle.name}">
+                alt="${bundle.name}"
+                loading="lazy">
 
         </div>
 
 
         <div class="bundle-info">
 
-            <span class="coming-badge">
+
+            <span class="bundle-badge">
 
                 ${bundle.badge}
 
@@ -1855,13 +2744,6 @@ function createComingSoonCard(
                 ${bundle.name}
 
             </h2>
-
-
-            <p>
-
-                ${bundle.description}
-
-            </p>
 
 
             <div class="bundle-includes">
@@ -1886,6 +2768,7 @@ function createComingSoonCard(
                 Coming Soon
 
             </button>
+
 
         </div>
 
@@ -2005,7 +2888,7 @@ renderBundles();
 
 /* =========================================
    AUTOMATIC ROTATION
-   EVERY 45 SECONDS
+   EVERY 25 SECONDS
 ========================================= */
 
 function rotateBundles(){
@@ -2026,7 +2909,7 @@ function rotateBundles(){
 let bundleRotationTimer =
     setInterval(
         rotateBundles,
-        10000
+        25000
     );
 
 
@@ -2037,6 +2920,7 @@ let bundleRotationTimer =
 bundleGrid.addEventListener(
     "click",
     function(event){
+
 
         const button =
             event.target.closest(
@@ -2122,6 +3006,7 @@ bundleGrid.addEventListener(
             1200
         );
 
+
     }
 );
 
@@ -2167,6 +3052,33 @@ function returnToPreviousPage(){
     }
 
 }
+
+
+/* =========================================
+   CART SYNC
+========================================= */
+
+window.addEventListener(
+    "storage",
+    function(event){
+
+        if(
+            event.key ===
+            "theBestBundleCart"
+        ){
+
+            bundleCart =
+                JSON.parse(
+                    event.newValue || "[]"
+                );
+
+
+            updatePageCartCount();
+
+        }
+
+    }
+);
 
 
 /* =========================================
