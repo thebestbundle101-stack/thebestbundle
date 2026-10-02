@@ -1,6 +1,6 @@
 <!-- =========================================
-     PART 31 — COURSES PAGE
-     CREATE A NEW FILE: courses.html
+     THEBESTBUNDLE — COURSES PAGE
+     FILE: courses.html
 ========================================= -->
 
 <!DOCTYPE html>
@@ -14,7 +14,9 @@
     name="viewport"
     content="width=device-width, initial-scale=1.0">
 
-<title>Courses | TheBestBundle</title>
+<title>
+    Courses | TheBestBundle
+</title>
 
 <meta
     name="description"
@@ -39,6 +41,25 @@
     rel="apple-touch-icon"
     href="/thebestbundle/images/favicon.png">
 
+
+<!-- GOOGLE FONTS -->
+
+<link
+    rel="preconnect"
+    href="https://fonts.googleapis.com">
+
+<link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+
+<!-- FONT AWESOME -->
+
 <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -46,54 +67,112 @@
 
 <style>
 
+/* =========================================
+   ROOT
+========================================= */
+
 :root{
+
     --navy:#071A33;
-    --gold:#F4C542;
-    --gold-dark:#D9A91A;
+
+    --gold:#C8A45D;
+
+    --gold-light:#E1C77E;
+
+    --cream:#F8F5ED;
+
     --white:#FFFFFF;
-    --off-white:#F8FAFC;
-    --gray:#64748B;
-    --text:#475569;
-    --border:#E2E8F0;
-    --max-width:1000px;
+
+    --gray:#6B7280;
+
+    --border:#E8E3D8;
+
+    --max-width:1180px;
+
+    --shadow:
+        0 14px 35px rgba(7,26,51,.08);
 }
 
+
+/* =========================================
+   RESET
+========================================= */
+
 *{
+
     margin:0;
+
     padding:0;
+
     box-sizing:border-box;
 }
 
-body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:var(--off-white);
-    color:var(--navy);
-    line-height:1.6;
+
+html{
+
+    scroll-behavior:smooth;
 }
 
+
+body{
+
+    font-family:
+        "Montserrat",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:var(--cream);
+
+    color:var(--navy);
+
+    line-height:1.6;
+
+    -webkit-font-smoothing:antialiased;
+}
+
+
+img{
+
+    max-width:100%;
+
+    display:block;
+}
+
+
 a{
+
     color:inherit;
+
     text-decoration:none;
 }
 
+
 button,
 input{
+
     font:inherit;
 }
 
+
 button{
+
     cursor:pointer;
 }
 
-img{
-    display:block;
-    max-width:100%;
-}
+
+/* =========================================
+   CONTAINER
+========================================= */
 
 .container{
-    width:90%;
-    max-width:var(--max-width);
-    margin:auto;
+
+    width:min(
+        calc(100% - 40px),
+        var(--max-width)
+    );
+
+    margin:0 auto;
 }
 
 
@@ -102,66 +181,177 @@ img{
 ========================================= */
 
 .page-header{
+
     background:var(--navy);
+
     color:var(--white);
+
+    position:relative;
+
+    z-index:20;
 }
 
+
 .header-inner{
-    min-height:90px;
+
+    min-height:86px;
+
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
 }
 
-.header-logo img{
-    height:56px;
-    width:auto;
-}
 
-.home-button{
-    width:46px;
-    height:46px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:8px;
-    color:var(--white);
-    font-size:23px;
-}
+.header-logo{
 
-.home-button:hover{
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size:34px;
+
+    font-weight:700;
+
     color:var(--gold);
+
+    letter-spacing:.3px;
+
+    white-space:nowrap;
+}
+
+
+.header-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+}
+
+
+.header-icon{
+
+    width:46px;
+
+    height:46px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:10px;
+
+    color:var(--white);
+
+    font-size:19px;
+
+    position:relative;
+
+    transition:
+        background .2s ease,
+        color .2s ease;
+}
+
+
+.header-icon:hover{
+
     background:rgba(255,255,255,.08);
+
+    color:var(--gold);
 }
 
 
 /* =========================================
-   BACK
+   CART BADGE
+========================================= */
+
+.cart-badge{
+
+    position:absolute;
+
+    top:3px;
+
+    right:2px;
+
+    min-width:18px;
+
+    height:18px;
+
+    padding:0 5px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:20px;
+
+    background:var(--gold);
+
+    color:var(--navy);
+
+    font-size:10px;
+
+    font-weight:800;
+
+    line-height:1;
+}
+
+
+/* =========================================
+   BACK ROW
 ========================================= */
 
 .back-row{
-    background:var(--white);
+
+    background:var(--cream);
+
     border-bottom:1px solid var(--border);
 }
 
+
 .back-inner{
-    min-height:60px;
+
+    min-height:58px;
+
     display:flex;
+
     align-items:center;
 }
+
 
 .back-button{
+
     display:inline-flex;
+
     align-items:center;
+
     gap:9px;
+
     border:none;
+
     background:transparent;
+
     color:var(--navy);
-    font-weight:800;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    transition:color .2s ease;
 }
 
+
 .back-button:hover{
-    color:var(--gold-dark);
+
+    color:var(--gold);
 }
 
 
@@ -170,121 +360,366 @@ img{
 ========================================= */
 
 .courses-hero{
-    padding:75px 0;
-    background:var(--navy);
-    color:var(--white);
+
+    background:var(--cream);
+
     text-align:center;
+
+    padding:
+        72px
+        0
+        58px;
 }
 
-.hero-icon{
-    width:72px;
-    height:72px;
-    margin:0 auto 20px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:50%;
-    background:var(--gold);
-    color:var(--navy);
-    font-size:30px;
+
+.courses-content{
+
+    max-width:820px;
+
+    margin:0 auto;
 }
+
+
+.courses-eyebrow{
+
+    color:var(--gold);
+
+    font-size:13px;
+
+    font-weight:800;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    margin-bottom:15px;
+}
+
 
 .courses-hero h1{
-    font-size:clamp(42px,7vw,62px);
-    line-height:1.1;
-    margin-bottom:16px;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(46px,7vw,68px);
+
+    line-height:1.05;
+
+    font-weight:600;
+
+    color:var(--navy);
+
+    margin-bottom:20px;
 }
 
-.courses-hero h1 span{
-    color:var(--gold);
-}
 
 .courses-hero p{
-    max-width:670px;
-    margin:auto;
-    color:rgba(255,255,255,.8);
-    font-size:18px;
+
+    max-width:700px;
+
+    margin:0 auto;
+
+    color:var(--gray);
+
+    font-size:16px;
+
+    line-height:1.8;
 }
 
 
 /* =========================================
-   COMING SOON
+   QUICK NAV
+========================================= */
+
+.quick-nav{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-top:30px;
+}
+
+
+.quick-nav a{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-height:42px;
+
+    padding:
+        0
+        20px;
+
+    border:1px solid var(--border);
+
+    border-radius:30px;
+
+    background:var(--white);
+
+    color:var(--navy);
+
+    font-size:12px;
+
+    font-weight:700;
+
+    transition:
+        background .2s ease,
+        color .2s ease,
+        border-color .2s ease;
+}
+
+
+.quick-nav a:hover{
+
+    background:var(--navy);
+
+    color:var(--white);
+
+    border-color:var(--navy);
+}
+
+
+/* =========================================
+   COMING SOON SECTION
 ========================================= */
 
 .coming-section{
-    padding:80px 0;
-}
 
-.coming-card{
-    max-width:760px;
-    margin:auto;
-    padding:55px 40px;
     background:var(--white);
-    border:1px solid var(--border);
-    border-radius:16px;
+
+    padding:
+        76px
+        0
+        90px;
+}
+
+
+.section-heading{
+
     text-align:center;
-    box-shadow:0 12px 35px rgba(7,26,51,.07);
+
+    max-width:760px;
+
+    margin:
+        0 auto
+        45px;
 }
 
-.coming-badge{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    margin-bottom:23px;
-    padding:9px 17px;
-    border-radius:30px;
-    background:var(--gold);
-    color:var(--navy);
-    font-size:13px;
-    font-weight:900;
+
+.section-kicker{
+
+    color:var(--gold);
+
+    font-size:12px;
+
+    font-weight:800;
+
+    letter-spacing:2.5px;
+
     text-transform:uppercase;
-    letter-spacing:.7px;
+
+    margin-bottom:10px;
 }
 
-.coming-card h2{
-    margin-bottom:15px;
-    font-size:clamp(30px,5vw,42px);
+
+.section-heading h2{
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    color:var(--navy);
+
+    font-size:
+        clamp(34px,5vw,48px);
+
+    line-height:1.1;
+
+    font-weight:600;
+
+    margin-bottom:12px;
 }
 
-.coming-card > p{
-    max-width:590px;
-    margin:0 auto 35px;
-    color:var(--text);
+
+.section-heading p{
+
+    color:var(--gray);
+
+    font-size:14px;
+
+    line-height:1.8;
 }
 
 
 /* =========================================
-   FEATURES
+   COMING SOON CARD
+========================================= */
+
+.coming-card{
+
+    max-width:850px;
+
+    margin:0 auto;
+
+    background:var(--white);
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    padding:
+        50px
+        40px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+}
+
+
+.coming-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    min-height:40px;
+
+    padding:
+        0
+        18px;
+
+    margin-bottom:23px;
+
+    border-radius:30px;
+
+    background:var(--gold);
+
+    color:var(--navy);
+
+    font-size:11px;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+}
+
+
+.coming-card h3{
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    color:var(--navy);
+
+    font-size:
+        clamp(32px,5vw,45px);
+
+    line-height:1.1;
+
+    font-weight:600;
+
+    margin-bottom:15px;
+}
+
+
+.coming-card > p{
+
+    max-width:650px;
+
+    margin:
+        0 auto
+        38px;
+
+    color:var(--gray);
+
+    font-size:14px;
+
+    line-height:1.8;
+}
+
+
+/* =========================================
+   COURSE FEATURES
 ========================================= */
 
 .course-features{
+
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:16px;
-    margin-top:35px;
+
+    grid-template-columns:
+        repeat(3,minmax(0,1fr));
+
+    gap:18px;
 }
+
 
 .feature{
-    padding:25px 15px;
+
+    background:var(--cream);
+
     border:1px solid var(--border);
-    border-radius:10px;
-    background:var(--off-white);
+
+    border-radius:15px;
+
+    padding:
+        27px
+        17px;
+
+    text-align:center;
 }
+
 
 .feature i{
-    margin-bottom:12px;
-    color:var(--gold-dark);
-    font-size:27px;
+
+    color:var(--gold);
+
+    font-size:23px;
+
+    margin-bottom:13px;
 }
 
-.feature h3{
-    margin-bottom:5px;
-    font-size:16px;
+
+.feature h4{
+
+    color:var(--navy);
+
+    font-size:13px;
+
+    font-weight:800;
+
+    margin-bottom:7px;
 }
+
 
 .feature p{
+
     color:var(--gray);
-    font-size:13px;
+
+    font-size:11px;
+
+    line-height:1.65;
 }
 
 
@@ -293,59 +728,148 @@ img{
 ========================================= */
 
 .course-mission{
-    padding:75px 0;
-    background:var(--white);
+
+    background:var(--cream);
+
+    padding:
+        70px
+        0
+        80px;
 }
 
+
 .mission-heading{
-    margin-bottom:40px;
+
+    max-width:760px;
+
+    margin:
+        0 auto
+        42px;
+
     text-align:center;
 }
 
-.mission-heading h2{
+
+.mission-heading .section-kicker{
+
     margin-bottom:10px;
-    font-size:clamp(30px,5vw,42px);
 }
+
+
+.mission-heading h2{
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    color:var(--navy);
+
+    font-size:
+        clamp(34px,5vw,48px);
+
+    line-height:1.1;
+
+    font-weight:600;
+
+    margin-bottom:12px;
+}
+
 
 .mission-heading p{
+
     max-width:650px;
-    margin:auto;
+
+    margin:0 auto;
+
     color:var(--gray);
+
+    font-size:14px;
+
+    line-height:1.8;
 }
 
+
 .mission-grid{
+
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+
+    grid-template-columns:
+        repeat(3,minmax(0,1fr));
+
     gap:20px;
 }
 
+
 .mission-card{
-    padding:32px 24px;
+
+    background:var(--white);
+
     border:1px solid var(--border);
-    border-radius:12px;
+
+    border-radius:16px;
+
+    padding:
+        30px
+        22px;
+
     text-align:center;
+
+    box-shadow:
+        0 8px 24px rgba(7,26,51,.05);
 }
 
-.mission-card i{
-    width:55px;
-    height:55px;
-    margin:0 auto 17px;
+
+.mission-icon{
+
+    width:56px;
+
+    height:56px;
+
+    margin:
+        0 auto
+        17px;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     border-radius:50%;
+
     background:var(--navy);
+
     color:var(--gold);
-    font-size:22px;
+
+    font-size:21px;
 }
+
 
 .mission-card h3{
-    margin-bottom:8px;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    color:var(--navy);
+
+    font-size:26px;
+
+    font-weight:600;
+
+    margin-bottom:7px;
 }
 
+
 .mission-card p{
-    color:var(--text);
-    font-size:14px;
+
+    color:var(--gray);
+
+    font-size:12px;
+
+    line-height:1.7;
 }
 
 
@@ -354,51 +878,228 @@ img{
 ========================================= */
 
 .notify-section{
-    padding:80px 0;
+
     background:var(--navy);
+
     color:var(--white);
+
+    padding:
+        70px
+        0
+        75px;
+
     text-align:center;
 }
 
-.notify-section h2{
-    margin-bottom:12px;
-    font-size:clamp(30px,5vw,42px);
+
+.notify-section .section-kicker{
+
+    color:var(--gold-light);
 }
+
+
+.notify-section h2{
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(36px,5vw,48px);
+
+    line-height:1.1;
+
+    font-weight:600;
+
+    margin-bottom:12px;
+}
+
 
 .notify-section h2 span{
-    color:var(--gold);
+
+    color:var(--gold-light);
 }
+
 
 .notify-section > .container > p{
-    max-width:620px;
-    margin:0 auto 28px;
-    color:rgba(255,255,255,.75);
+
+    max-width:650px;
+
+    margin:
+        0 auto
+        28px;
+
+    color:rgba(255,255,255,.72);
+
+    font-size:13px;
+
+    line-height:1.8;
 }
 
+
 .notify-form{
-    max-width:520px;
-    margin:auto;
+
+    max-width:540px;
+
+    margin:0 auto;
+
     display:flex;
+
     gap:10px;
 }
 
+
 .notify-form input{
+
     flex:1;
+
     min-width:0;
-    min-height:52px;
-    padding:13px 15px;
+
+    min-height:50px;
+
+    padding:
+        0
+        16px;
+
     border:none;
-    border-radius:8px;
+
+    border-radius:10px;
+
+    background:var(--white);
+
+    color:var(--navy);
+
+    outline:none;
 }
 
+
+.notify-form input::placeholder{
+
+    color:#8A94A3;
+}
+
+
 .notify-form button{
-    min-height:52px;
-    padding:12px 23px;
+
+    min-height:50px;
+
+    padding:
+        0
+        22px;
+
     border:none;
-    border-radius:8px;
+
+    border-radius:10px;
+
     background:var(--gold);
+
     color:var(--navy);
-    font-weight:900;
+
+    font-size:12px;
+
+    font-weight:800;
+
+    transition:
+        background .2s ease,
+        transform .2s ease;
+}
+
+
+.notify-form button:hover{
+
+    background:var(--gold-light);
+
+    transform:translateY(-1px);
+}
+
+
+/* =========================================
+   TRUST SECTION
+========================================= */
+
+.trust-section{
+
+    background:var(--cream);
+
+    padding:
+        65px
+        0
+        70px;
+
+    text-align:center;
+}
+
+
+.trust-heading{
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    color:var(--navy);
+
+    font-size:34px;
+
+    font-weight:600;
+
+    margin-bottom:32px;
+}
+
+
+.trust-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,minmax(0,1fr));
+
+    gap:18px;
+}
+
+
+.trust-item{
+
+    background:var(--white);
+
+    border:1px solid var(--border);
+
+    border-radius:15px;
+
+    padding:25px 18px;
+}
+
+
+.trust-item i{
+
+    color:var(--gold);
+
+    font-size:21px;
+
+    margin-bottom:12px;
+}
+
+
+.trust-item h4{
+
+    color:var(--navy);
+
+    font-size:13px;
+
+    font-weight:800;
+
+    margin-bottom:5px;
+}
+
+
+.trust-item p{
+
+    color:var(--gray);
+
+    font-size:11px;
+
+    line-height:1.6;
 }
 
 
@@ -407,51 +1108,322 @@ img{
 ========================================= */
 
 .footer{
-    padding:35px 0;
+
     background:var(--navy);
+
     color:var(--white);
-    border-top:1px solid rgba(255,255,255,.12);
+
     text-align:center;
+
+    padding:
+        36px
+        0;
 }
+
 
 .footer-tagline{
-    margin-bottom:7px;
+
     color:var(--gold);
+
+    font-size:12px;
+
     font-weight:800;
-    letter-spacing:1px;
+
+    letter-spacing:2px;
+
+    margin-bottom:8px;
 }
 
+
 .footer p{
-    color:rgba(255,255,255,.7);
-    font-size:13px;
+
+    color:rgba(255,255,255,.65);
+
+    font-size:11px;
 }
 
 
 /* =========================================
-   MOBILE
+   RESPONSIVE — TABLET
 ========================================= */
 
-@media(max-width:700px){
+@media(max-width:900px){
 
-    .header-logo img{
+    .course-features{
+
+        grid-template-columns:
+            repeat(3,minmax(0,1fr));
+    }
+
+
+    .mission-grid{
+
+        grid-template-columns:
+            repeat(3,minmax(0,1fr));
+    }
+
+
+    .trust-grid{
+
+        grid-template-columns:
+            repeat(3,minmax(0,1fr));
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE — MOBILE
+========================================= */
+
+@media(max-width:650px){
+
+    .container{
+
+        width:min(
+            calc(100% - 30px),
+            var(--max-width)
+        );
+    }
+
+
+    .header-inner{
+
+        min-height:76px;
+    }
+
+
+    .header-logo{
+
+        font-size:29px;
+    }
+
+
+    .header-icon{
+
+        width:42px;
+
         height:42px;
     }
 
+
     .courses-hero{
-        padding:60px 0;
+
+        padding:
+            58px
+            0
+            45px;
     }
+
+
+    .courses-hero h1{
+
+        font-size:48px;
+    }
+
+
+    .courses-hero p{
+
+        font-size:14px;
+    }
+
+
+    .quick-nav{
+
+        gap:8px;
+    }
+
+
+    .quick-nav a{
+
+        padding:
+            0
+            16px;
+
+        font-size:11px;
+    }
+
+
+    .coming-section{
+
+        padding:
+            58px
+            0
+            65px;
+    }
+
+
+    .section-heading{
+
+        margin-bottom:34px;
+    }
+
+
+    .section-heading h2{
+
+        font-size:38px;
+    }
+
+
+    .section-heading p{
+
+        font-size:13px;
+    }
+
 
     .coming-card{
-        padding:40px 22px;
+
+        padding:
+            38px
+            18px;
     }
 
-    .course-features,
-    .mission-grid{
-        grid-template-columns:1fr;
+
+    .coming-card h3{
+
+        font-size:36px;
     }
+
+
+    .coming-card > p{
+
+        font-size:13px;
+
+        margin-bottom:30px;
+    }
+
+
+    .course-features{
+
+        grid-template-columns:1fr;
+
+        gap:10px;
+    }
+
+
+    .feature{
+
+        padding:
+            21px
+            16px;
+    }
+
+
+    .course-mission{
+
+        padding:
+            50px
+            0
+            60px;
+    }
+
+
+    .mission-heading h2{
+
+        font-size:38px;
+    }
+
+
+    .mission-grid{
+
+        grid-template-columns:1fr;
+
+        gap:12px;
+    }
+
+
+    .mission-card{
+
+        padding:
+            25px
+            20px;
+    }
+
+
+    .notify-section{
+
+        padding:
+            55px
+            0
+            60px;
+    }
+
+
+    .notify-section h2{
+
+        font-size:40px;
+    }
+
 
     .notify-form{
+
         flex-direction:column;
+
+        gap:10px;
+    }
+
+
+    .notify-form input,
+    .notify-form button{
+
+        width:100%;
+    }
+
+
+    .trust-section{
+
+        padding:
+            48px
+            0
+            55px;
+    }
+
+
+    .trust-heading{
+
+        font-size:30px;
+
+        margin-bottom:24px;
+    }
+
+
+    .trust-grid{
+
+        grid-template-columns:1fr;
+
+        gap:10px;
+    }
+
+
+    .trust-item{
+
+        padding:20px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media(max-width:380px){
+
+    .header-logo{
+
+        font-size:26px;
+    }
+
+
+    .courses-hero h1{
+
+        font-size:44px;
+    }
+
+
+    .coming-card h3{
+
+        font-size:32px;
     }
 
 }
@@ -470,31 +1442,59 @@ img{
 
 <header class="page-header">
 
-<div class="container header-inner">
-
-    <a
-        href="index.html"
-        class="header-logo">
-
-        <img
-            src="images/Thebestbundle-transparent-logo.png"
-            alt="TheBestBundle">
-
-    </a>
+    <div class="container header-inner">
 
 
-    <a
-        href="index.html"
-        class="home-button"
-        aria-label="Return home">
+        <a
+            href="index.html"
+            class="header-logo">
 
-        <i class="fa-solid fa-house"></i>
+            TheBestBundle
 
-    </a>
+        </a>
 
-</div>
+
+        <div class="header-actions">
+
+
+            <!-- HOME -->
+
+            <a
+                href="index.html"
+                class="header-icon"
+                aria-label="Home">
+
+                <i class="fa-solid fa-house"></i>
+
+            </a>
+
+
+            <!-- CART -->
+
+            <a
+                href="cart.html"
+                class="header-icon"
+                aria-label="Shopping Cart">
+
+                <i class="fa-solid fa-bag-shopping"></i>
+
+                <span
+                    class="cart-badge"
+                    id="cartCount">
+
+                    0
+
+                </span>
+
+            </a>
+
+
+        </div>
+
+    </div>
 
 </header>
+
 
 
 <!-- =========================================
@@ -503,22 +1503,26 @@ img{
 
 <div class="back-row">
 
-<div class="container back-inner">
+    <div class="container back-inner">
 
-    <button
-        type="button"
-        class="back-button"
-        onclick="returnToPreviousPage()">
+        <button
+            type="button"
+            class="back-button"
+            onclick="returnToPreviousPage()">
 
-        <i class="fa-solid fa-arrow-left"></i>
+            <i class="fa-solid fa-arrow-left"></i>
 
-        Back
+            Back
 
-    </button>
+        </button>
+
+    </div>
 
 </div>
 
-</div>
+
+
+<main>
 
 
 <!-- =========================================
@@ -527,262 +1531,508 @@ img{
 
 <section class="courses-hero">
 
-<div class="container">
+    <div class="container">
 
-    <div class="hero-icon">
+        <div class="courses-content">
 
-        <i class="fa-solid fa-graduation-cap"></i>
+
+            <div class="courses-eyebrow">
+
+                THEBESTBUNDLE • COURSES
+
+            </div>
+
+
+            <h1>
+
+                Premium Courses
+
+            </h1>
+
+
+            <p>
+
+                Practical digital learning experiences
+                designed to help you learn new skills,
+                create with confidence and continue growing.
+
+            </p>
+
+
+            <!-- QUICK NAV -->
+
+            <nav
+                class="quick-nav"
+                aria-label="Courses navigation">
+
+                <a href="#coming-soon">
+
+                    Courses
+
+                </a>
+
+                <a href="#mission">
+
+                    Our Mission
+
+                </a>
+
+            </nav>
+
+
+        </div>
 
     </div>
 
-    <h1>
-        TheBestBundle
-        <span>Courses</span>
-    </h1>
-
-    <p>
-        Practical digital learning experiences
-        designed to help you learn new skills,
-        create with confidence and continue growing.
-    </p>
-
-</div>
-
 </section>
+
 
 
 <!-- =========================================
      COMING SOON
 ========================================= -->
 
-<main class="coming-section">
+<section
+    class="coming-section"
+    id="coming-soon">
 
-<div class="container">
-
-    <div class="coming-card">
-
-
-        <div class="coming-badge">
-
-            <i class="fa-solid fa-clock"></i>
-
-            Coming Soon
-
-        </div>
+    <div class="container">
 
 
-        <h2>
-            Something New Is Being Built
-        </h2>
+        <div class="section-heading">
 
 
-        <p>
-            TheBestBundle Courses are part of our
-            future expansion. We're building this
-            section to bring structured educational
-            resources together with our growing
-            collection of digital products.
-        </p>
+            <div class="section-kicker">
 
-
-        <div class="course-features">
-
-
-            <div class="feature">
-
-                <i class="fa-solid fa-laptop"></i>
-
-                <h3>
-                    Digital Learning
-                </h3>
-
-                <p>
-                    Convenient educational resources
-                    designed for online access.
-                </p>
+                LEARN • CREATE • GROW
 
             </div>
 
 
-            <div class="feature">
+            <h2>
 
-                <i class="fa-solid fa-list-check"></i>
+                Courses Coming Soon
 
-                <h3>
-                    Practical Lessons
-                </h3>
+            </h2>
 
-                <p>
-                    Structured learning focused on
-                    useful and actionable knowledge.
-                </p>
-
-            </div>
-
-
-            <div class="feature">
-
-                <i class="fa-solid fa-chart-line"></i>
-
-                <h3>
-                    Keep Growing
-                </h3>
-
-                <p>
-                    New learning opportunities designed
-                    around our Learn • Create • Grow mission.
-                </p>
-
-            </div>
-
-
-        </div>
-
-
-    </div>
-
-</div>
-
-</main>
-
-
-<!-- =========================================
-     COURSE MISSION
-========================================= -->
-
-<section class="course-mission">
-
-<div class="container">
-
-
-    <div class="mission-heading">
-
-        <h2>
-            Built Around Our Mission
-        </h2>
-
-        <p>
-            Future courses will expand the
-            TheBestBundle experience beyond
-            downloadable resources.
-        </p>
-
-    </div>
-
-
-    <div class="mission-grid">
-
-
-        <div class="mission-card">
-
-            <i class="fa-solid fa-book-open"></i>
-
-            <h3>
-                Learn
-            </h3>
 
             <p>
-                Discover useful information and
-                practical knowledge through
-                structured educational content.
+
+                A new learning experience is being
+                developed for the TheBestBundle collection.
+
             </p>
 
         </div>
 
 
-        <div class="mission-card">
 
-            <i class="fa-solid fa-lightbulb"></i>
+        <div class="coming-card">
+
+
+            <div class="coming-badge">
+
+                <i class="fa-solid fa-clock"></i>
+
+                Coming Soon
+
+            </div>
+
 
             <h3>
-                Create
+
+                Something New Is Being Built
+
             </h3>
 
-            <p>
-                Turn knowledge into ideas,
-                projects and useful resources
-                you can apply in real life.
-            </p>
-
-        </div>
-
-
-        <div class="mission-card">
-
-            <i class="fa-solid fa-arrow-trend-up"></i>
-
-            <h3>
-                Grow
-            </h3>
 
             <p>
-                Continue developing your skills,
-                knowledge and personal or
-                professional goals.
+
+                TheBestBundle Courses are part of our
+                future expansion. We're building this
+                section to bring structured educational
+                resources together with our growing
+                collection of digital products.
+
             </p>
 
-        </div>
 
+            <div class="course-features">
+
+
+                <!-- FEATURE 1 -->
+
+                <div class="feature">
+
+                    <i class="fa-solid fa-laptop"></i>
+
+                    <h4>
+
+                        Digital Learning
+
+                    </h4>
+
+                    <p>
+
+                        Convenient educational resources
+                        designed for online access.
+
+                    </p>
+
+                </div>
+
+
+                <!-- FEATURE 2 -->
+
+                <div class="feature">
+
+                    <i class="fa-solid fa-list-check"></i>
+
+                    <h4>
+
+                        Practical Lessons
+
+                    </h4>
+
+                    <p>
+
+                        Structured learning focused on
+                        useful and actionable knowledge.
+
+                    </p>
+
+                </div>
+
+
+                <!-- FEATURE 3 -->
+
+                <div class="feature">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                    <h4>
+
+                        Keep Growing
+
+                    </h4>
+
+                    <p>
+
+                        New learning opportunities designed
+                        around our Learn • Create • Grow mission.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
 
     </div>
-
-
-</div>
 
 </section>
 
 
+
 <!-- =========================================
-     COURSE NOTIFICATION
+     MISSION
+========================================= -->
+
+<section
+    class="course-mission"
+    id="mission">
+
+    <div class="container">
+
+
+        <div class="mission-heading">
+
+
+            <div class="section-kicker">
+
+                OUR MISSION
+
+            </div>
+
+
+            <h2>
+
+                Built Around Our Mission
+
+            </h2>
+
+
+            <p>
+
+                Future courses will expand the
+                TheBestBundle experience beyond
+                downloadable resources.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="mission-grid">
+
+
+            <!-- LEARN -->
+
+            <div class="mission-card">
+
+                <div class="mission-icon">
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                </div>
+
+
+                <h3>
+
+                    Learn
+
+                </h3>
+
+
+                <p>
+
+                    Discover useful information and
+                    practical knowledge through
+                    structured educational content.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- CREATE -->
+
+            <div class="mission-card">
+
+                <div class="mission-icon">
+
+                    <i class="fa-solid fa-lightbulb"></i>
+
+                </div>
+
+
+                <h3>
+
+                    Create
+
+                </h3>
+
+
+                <p>
+
+                    Turn knowledge into ideas,
+                    projects and useful resources
+                    you can apply in real life.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- GROW -->
+
+            <div class="mission-card">
+
+                <div class="mission-icon">
+
+                    <i class="fa-solid fa-arrow-trend-up"></i>
+
+                </div>
+
+
+                <h3>
+
+                    Grow
+
+                </h3>
+
+
+                <p>
+
+                    Continue developing your skills,
+                    knowledge and personal or
+                    professional goals.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     NOTIFY
 ========================================= -->
 
 <section class="notify-section">
 
-<div class="container">
-
-    <h2>
-        Be the First to <span>Know</span>
-    </h2>
-
-    <p>
-        Subscribe for TheBestBundle updates
-        and announcements as new products,
-        resources and future courses are released.
-    </p>
+    <div class="container">
 
 
-    <form
-        class="notify-form"
-        action="https://formspree.io/f/xkodngya"
-        method="POST">
+        <div class="section-kicker">
+
+            STAY CONNECTED
+
+        </div>
 
 
-        <input
-            type="hidden"
-            name="form_type"
-            value="TheBestBundle Course Updates">
+        <h2>
+
+            Be the First to <span>Know</span>
+
+        </h2>
 
 
-        <input
-            type="email"
-            name="email"
-            autocomplete="email"
-            placeholder="Enter your email"
-            required>
+        <p>
+
+            Subscribe for TheBestBundle updates
+            and announcements as new products,
+            resources and future courses are released.
+
+        </p>
 
 
-        <button type="submit">
+        <form
+            class="notify-form"
+            action="https://formspree.io/f/xkodngya"
+            method="POST">
 
-            Notify Me
 
-        </button>
+            <input
+                type="hidden"
+                name="form_type"
+                value="TheBestBundle Course Updates">
 
 
-    </form>
+            <input
+                type="email"
+                name="email"
+                autocomplete="email"
+                placeholder="Enter your email"
+                aria-label="Email address"
+                required>
 
-</div>
+
+            <button type="submit">
+
+                Notify Me
+
+            </button>
+
+
+        </form>
+
+    </div>
 
 </section>
+
+
+
+<!-- =========================================
+     TRUST
+========================================= -->
+
+<section class="trust-section">
+
+    <div class="container">
+
+
+        <h2 class="trust-heading">
+
+            Why Learn With TheBestBundle?
+
+        </h2>
+
+
+        <div class="trust-grid">
+
+
+            <div class="trust-item">
+
+                <i class="fa-solid fa-graduation-cap"></i>
+
+                <h4>
+
+                    Practical Learning
+
+                </h4>
+
+                <p>
+
+                    Educational content focused
+                    on useful knowledge.
+
+                </p>
+
+            </div>
+
+
+            <div class="trust-item">
+
+                <i class="fa-solid fa-laptop"></i>
+
+                <h4>
+
+                    Digital Access
+
+                </h4>
+
+                <p>
+
+                    Learning designed for convenient
+                    digital access.
+
+                </p>
+
+            </div>
+
+
+            <div class="trust-item">
+
+                <i class="fa-solid fa-arrow-trend-up"></i>
+
+                <h4>
+
+                    Learn • Create • Grow
+
+                </h4>
+
+                <p>
+
+                    Resources built around continuous
+                    learning and growth.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
 
 
 <!-- =========================================
@@ -791,22 +2041,38 @@ img{
 
 <footer class="footer">
 
-<div class="container">
+    <div class="container">
 
-    <div class="footer-tagline">
-        LEARN • CREATE • GROW
+
+        <div class="footer-tagline">
+
+            LEARN • CREATE • GROW
+
+        </div>
+
+
+        <p>
+
+            © 2026 TheBestBundle. All Rights Reserved.
+
+        </p>
+
+
     </div>
-
-    <p>
-        © 2026 TheBestBundle. All Rights Reserved.
-    </p>
-
-</div>
 
 </footer>
 
 
+
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
+
 <script>
+
+/* =========================================
+   BACK BUTTON
+========================================= */
 
 function returnToPreviousPage(){
 
@@ -817,11 +2083,85 @@ function returnToPreviousPage(){
     }else{
 
         window.location.href =
-            'index.html';
+            "index.html";
 
     }
 
 }
+
+
+/* =========================================
+   CART
+========================================= */
+
+const CART_KEY =
+    "theBestBundleCart";
+
+
+function updateCartCount(){
+
+    try{
+
+        const cart =
+            JSON.parse(
+                localStorage.getItem(CART_KEY)
+            ) || [];
+
+
+        const count =
+            cart.reduce(
+                (total,item) =>
+                    total + (item.quantity || 1),
+                0
+            );
+
+
+        const cartCount =
+            document.getElementById(
+                "cartCount"
+            );
+
+
+        if(cartCount){
+
+            cartCount.textContent =
+                count;
+
+
+            cartCount.style.display =
+                count > 0
+                    ? "flex"
+                    : "none";
+
+        }
+
+    }catch(error){
+
+        console.error(
+            "Unable to read cart:",
+            error
+        );
+
+    }
+
+}
+
+
+/* =========================================
+   INITIALIZE
+========================================= */
+
+updateCartCount();
+
+
+/* =========================================
+   LISTEN FOR CART CHANGES
+========================================= */
+
+window.addEventListener(
+    "storage",
+    updateCartCount
+);
 
 </script>
 
