@@ -91,6 +91,19 @@ button{
 
 
 /* =========================================================
+   SECTION SCROLL POSITION
+========================================================= */
+
+#ebooks,
+#templates,
+#packs{
+
+    scroll-margin-top:20px;
+
+}
+
+
+/* =========================================================
    HEADER
 ========================================================= */
 
@@ -375,6 +388,101 @@ button{
     font-weight:900;
 
     letter-spacing:.6px;
+
+}
+
+
+/* =========================================================
+   QUICK NAVIGATION
+========================================================= */
+
+.quick-nav{
+
+    width:100%;
+
+    background:white;
+
+    border-bottom:
+        1px solid var(--border);
+
+    padding:
+        14px 18px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+}
+
+.quick-nav a{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:7px;
+
+    min-width:120px;
+
+    padding:
+        9px 15px;
+
+    border:
+        1px solid #D7DDE6;
+
+    border-radius:8px;
+
+    background:#FFFFFF;
+
+    color:
+        var(--navy);
+
+    font-size:12px;
+
+    font-weight:900;
+
+    transition:
+        background .2s ease,
+        color .2s ease,
+        transform .2s ease,
+        border-color .2s ease;
+
+}
+
+.quick-nav a i{
+
+    color:
+        var(--gold-dark);
+
+}
+
+.quick-nav a:hover{
+
+    background:
+        var(--navy);
+
+    color:white;
+
+    border-color:
+        var(--navy);
+
+    transform:
+        translateY(-2px);
+
+}
+
+.quick-nav a:hover i{
+
+    color:
+        var(--gold);
 
 }
 
@@ -1153,6 +1261,31 @@ button{
 
 
 /* =========================================================
+   PACK INTRO
+========================================================= */
+
+.packs-intro{
+
+    max-width:680px;
+
+    margin:
+        -8px auto 28px;
+
+    text-align:center;
+
+    color:
+        #64748B;
+
+    font-size:14px;
+
+    line-height:1.5;
+
+    font-weight:600;
+
+}
+
+
+/* =========================================================
    LARGE PACK CARD
 ========================================================= */
 
@@ -1237,6 +1370,8 @@ button{
 
     flex:1;
 
+    position:relative;
+
 }
 
 .pack-name{
@@ -1306,6 +1441,51 @@ button{
         var(--gold-dark);
 
     font-size:17px;
+
+}
+
+
+/* =========================================================
+   ELITE BADGE
+========================================================= */
+
+.pack-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:6px;
+
+    margin:
+        0 auto 10px;
+
+    padding:
+        6px 12px;
+
+    border-radius:20px;
+
+    background:
+        var(--navy);
+
+    color:
+        var(--gold);
+
+    border:
+        1px solid var(--gold);
+
+    font-size:10px;
+
+    font-weight:900;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+    box-shadow:
+        0 4px 12px rgba(7,26,51,.12);
 
 }
 
@@ -1823,6 +2003,35 @@ button{
 
     }
 
+
+    /* QUICK NAV MOBILE */
+
+    .quick-nav{
+
+        padding:
+            10px 8px;
+
+        gap:6px;
+
+    }
+
+    .quick-nav a{
+
+        min-width:
+            calc(33.333% - 5px);
+
+        padding:
+            8px 5px;
+
+        font-size:9px;
+
+        gap:4px;
+
+        border-radius:7px;
+
+    }
+
+
     .hero{
 
         min-height:345px;
@@ -2119,6 +2328,23 @@ button{
     }
 
 
+    /* PACK INTRO */
+
+    .packs-intro{
+
+        margin:
+            -5px auto 20px;
+
+        padding:
+            0 8px;
+
+        font-size:11px;
+
+        line-height:1.45;
+
+    }
+
+
     .packs{
 
         grid-template-columns:
@@ -2193,6 +2419,21 @@ button{
         font-size:14px;
 
     }
+
+
+    .pack-badge{
+
+        font-size:7px;
+
+        padding:
+            5px 9px;
+
+        margin-bottom:7px;
+
+        letter-spacing:.8px;
+
+    }
+
 
     .pack-right{
 
@@ -2275,6 +2516,27 @@ button{
         padding-left:7px;
 
         padding-right:7px;
+
+    }
+
+    .quick-nav{
+
+        padding:
+            8px 5px;
+
+        gap:4px;
+
+    }
+
+    .quick-nav a{
+
+        min-width:
+            calc(33.333% - 3px);
+
+        padding:
+            7px 3px;
+
+        font-size:8px;
 
     }
 
@@ -2491,6 +2753,15 @@ button{
     .pack-icons i{
 
         font-size:12px;
+
+    }
+
+    .pack-badge{
+
+        font-size:6px;
+
+        padding:
+            4px 7px;
 
     }
 
@@ -2729,10 +3000,47 @@ button{
 
 
 <!-- ======================================================
-     EBOOKS
-========================================================= -->
+     QUICK NAVIGATION
+====================================================== -->
 
-<section class="section">
+<nav
+    class="quick-nav"
+    aria-label="Navigation de la collection">
+
+    <a href="#ebooks">
+
+        <i class="fa-solid fa-book-open"></i>
+
+        eBooks
+
+    </a>
+
+    <a href="#templates">
+
+        <i class="fa-solid fa-file-lines"></i>
+
+        Templates
+
+    </a>
+
+    <a href="#packs">
+
+        <i class="fa-solid fa-box-open"></i>
+
+        Packs
+
+    </a>
+
+</nav>
+
+
+<!-- ======================================================
+     EBOOKS
+====================================================== -->
+
+<section
+    class="section"
+    id="ebooks">
 
     <div class="section-heading">
 
@@ -2763,9 +3071,11 @@ button{
 
 <!-- ======================================================
      TEMPLATES
-========================================================= -->
+====================================================== -->
 
-<section class="section templates-section">
+<section
+    class="section templates-section"
+    id="templates">
 
     <div class="section-divider">
 
@@ -2808,9 +3118,11 @@ button{
 
 <!-- ======================================================
      PACKS
-========================================================= -->
+====================================================== -->
 
-<section class="section packs-section">
+<section
+    class="section packs-section"
+    id="packs">
 
     <div class="section-divider">
 
@@ -2840,6 +3152,19 @@ button{
         </h2>
 
     </div>
+
+
+    <!-- ==================================================
+         PACK INTRODUCTION
+    ================================================== -->
+
+    <p class="packs-intro">
+
+        Choisissez le pack qui correspond le mieux
+        à vos objectifs et accédez à une sélection
+        de ressources numériques réunies en un seul achat.
+
+    </p>
 
 
     <div class="packs">
@@ -3108,6 +3433,15 @@ button{
 
 
             <div class="pack-info">
+
+                <div class="pack-badge">
+
+                    <i class="fa-solid fa-star"></i>
+
+                    OFFRE ÉLITE
+
+                </div>
+
 
                 <div class="pack-name">
 
