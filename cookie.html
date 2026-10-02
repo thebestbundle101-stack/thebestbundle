@@ -24,6 +24,11 @@
     name="theme-color"
     content="#071A33">
 
+
+<!-- =========================================
+     FAVICON
+========================================= -->
+
 <link
     rel="icon"
     href="/thebestbundle/images/favicon.ico"
@@ -39,6 +44,11 @@
     rel="apple-touch-icon"
     href="/thebestbundle/images/favicon.png">
 
+
+<!-- =========================================
+     GOOGLE FONTS
+========================================= -->
+
 <link
     rel="preconnect"
     href="https://fonts.googleapis.com">
@@ -51,6 +61,11 @@
 <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap"
     rel="stylesheet">
+
+
+<!-- =========================================
+     FONT AWESOME
+========================================= -->
 
 <link
     rel="stylesheet"
@@ -91,14 +106,20 @@
 ========================================= */
 
 *{
+
     margin:0;
+
     padding:0;
+
     box-sizing:border-box;
+
 }
 
 
 html{
+
     scroll-behavior:smooth;
+
 }
 
 
@@ -178,7 +199,7 @@ img{
 
 .header-inner{
 
-    min-height:86px;
+    min-height:88px;
 
     display:flex;
 
@@ -189,23 +210,49 @@ img{
 }
 
 
+/* =========================================
+   NEW OFFICIAL THEBESTBUNDLE LOGO
+========================================= */
+
 .header-logo{
 
     display:inline-flex;
 
     align-items:center;
 
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size:42px;
+
+    font-weight:600;
+
+    line-height:1;
+
+    color:var(--gold);
+
+    letter-spacing:-1px;
+
+    white-space:nowrap;
+
+    transition:
+        color .25s ease;
+
 }
 
 
-.header-logo img{
+.header-logo:hover{
 
-    height:48px;
-
-    width:auto;
+    color:var(--light-gold);
 
 }
 
+
+/* =========================================
+   HOME BUTTON
+========================================= */
 
 .home-button{
 
@@ -917,14 +964,20 @@ img{
 
     .header-inner{
 
-        min-height:76px;
+        min-height:88px;
 
     }
 
 
-    .header-logo img{
+    /* =====================================
+       NEW OFFICIAL LOGO — MOBILE
+    ====================================== */
 
-        height:41px;
+    .header-logo{
+
+        font-size:32px;
+
+        letter-spacing:-.7px;
 
     }
 
@@ -1128,16 +1181,24 @@ img{
 
 <div class="container header-inner">
 
+
+    <!-- =====================================
+         OFFICIAL TEXT LOGO
+    ====================================== -->
+
     <a
         href="index.html"
-        class="header-logo">
+        class="header-logo"
+        aria-label="TheBestBundle Home">
 
-        <img
-            src="images/Thebestbundle-transparent-logo.png"
-            alt="TheBestBundle">
+        TheBestBundle
 
     </a>
 
+
+    <!-- =====================================
+         HOME
+    ====================================== -->
 
     <a
         href="index.html"
@@ -1184,6 +1245,7 @@ img{
 <section class="policy-hero">
 
 <div class="container">
+
 
     <div class="hero-kicker">
         THEBESTBUNDLE • PRIVACY & COOKIES
@@ -1270,7 +1332,7 @@ img{
 
 
         <!-- =====================================
-             1
+             1. WHAT ARE COOKIES
         ====================================== -->
 
         <h2 id="cookies">
@@ -1314,7 +1376,7 @@ img{
 
 
         <!-- =====================================
-             2
+             2. HOW COOKIES MAY BE USED
         ====================================== -->
 
         <h2>
@@ -1358,7 +1420,7 @@ img{
 
 
         <!-- =====================================
-             3
+             3. TYPES OF COOKIES
         ====================================== -->
 
         <h2 id="types">
@@ -1413,7 +1475,7 @@ img{
 
 
         <!-- =====================================
-             4
+             4. GOOGLE ANALYTICS
         ====================================== -->
 
         <h2 id="analytics">
@@ -1435,7 +1497,7 @@ img{
 
 
         <!-- =====================================
-             5
+             5. PAYMENT SERVICES
         ====================================== -->
 
         <h2>
@@ -1457,7 +1519,7 @@ img{
 
 
         <!-- =====================================
-             6
+             6. OTHER THIRD-PARTY SERVICES
         ====================================== -->
 
         <h2 id="third-party">
@@ -1479,7 +1541,7 @@ img{
 
 
         <!-- =====================================
-             7
+             7. MANAGING COOKIES
         ====================================== -->
 
         <h2>
@@ -1505,7 +1567,7 @@ img{
 
 
         <!-- =====================================
-             8
+             8. BROWSER SETTINGS
         ====================================== -->
 
         <h2>
@@ -1521,7 +1583,7 @@ img{
 
 
         <!-- =====================================
-             9
+             9. COOKIE PREFERENCES
         ====================================== -->
 
         <h2>
@@ -1537,7 +1599,7 @@ img{
 
 
         <!-- =====================================
-             10
+             10. PRIVACY
         ====================================== -->
 
         <h2>
@@ -1555,7 +1617,7 @@ img{
 
 
         <!-- =====================================
-             11
+             11. CHANGES TO THIS POLICY
         ====================================== -->
 
         <h2>
@@ -1575,7 +1637,7 @@ img{
 
 
         <!-- =====================================
-             12
+             12. CONTACT US
         ====================================== -->
 
         <h2 id="contact">
