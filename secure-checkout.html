@@ -1,6 +1,6 @@
 <!-- =========================================
      PART 33 — SECURE CHECKOUT POLICY
-     CREATE A NEW FILE: secure-checkout.html
+     FILE: secure-checkout.html
 ========================================= -->
 
 <!DOCTYPE html>
@@ -39,6 +39,25 @@
     rel="apple-touch-icon"
     href="/thebestbundle/images/favicon.png">
 
+
+<!-- GOOGLE FONTS -->
+
+<link
+    rel="preconnect"
+    href="https://fonts.googleapis.com">
+
+<link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+
+<!-- FONT AWESOME -->
+
 <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -46,51 +65,117 @@
 
 <style>
 
+/* =========================================
+   ROOT
+========================================= */
+
 :root{
+
     --navy:#071A33;
-    --gold:#F4C542;
-    --gold-dark:#D9A91A;
+
+    --gold:#C8A45D;
+
+    --light-gold:#E1C77E;
+
+    --cream:#F8F5ED;
+
     --white:#FFFFFF;
-    --off-white:#F8FAFC;
-    --gray:#64748B;
+
     --text:#475569;
-    --border:#E2E8F0;
-    --green:#15803D;
-    --max-width:900px;
+
+    --border:#E7E2D8;
+
+    --soft-gold:#FBF7EC;
+
+    --soft-green:#F3F9F5;
+
+    --green:#2F7D4A;
+
+    --max-width:920px;
+
 }
+
+
+/* =========================================
+   RESET
+========================================= */
 
 *{
+
     margin:0;
+
     padding:0;
+
     box-sizing:border-box;
+
 }
+
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
 
 body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:var(--off-white);
+
+    font-family:
+        "Montserrat",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:var(--cream);
+
     color:var(--navy);
-    line-height:1.7;
+
+    line-height:1.75;
+
+    -webkit-font-smoothing:antialiased;
+
 }
+
 
 a{
+
     color:inherit;
+
     text-decoration:none;
+
 }
+
 
 button{
+
     font:inherit;
+
     cursor:pointer;
+
 }
+
 
 img{
-    display:block;
+
     max-width:100%;
+
+    display:block;
+
 }
 
+
+/* =========================================
+   CONTAINER
+========================================= */
+
 .container{
+
     width:90%;
+
     max-width:var(--max-width);
+
     margin:auto;
+
 }
 
 
@@ -99,36 +184,76 @@ img{
 ========================================= */
 
 .page-header{
+
     background:var(--navy);
+
     color:var(--white);
+
 }
+
 
 .header-inner{
-    min-height:90px;
+
+    min-height:86px;
+
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
+
 }
+
+
+.header-logo{
+
+    display:inline-flex;
+
+    align-items:center;
+
+}
+
 
 .header-logo img{
-    height:56px;
+
+    height:48px;
+
     width:auto;
+
 }
+
 
 .home-button{
+
     width:46px;
+
     height:46px;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
-    border-radius:8px;
+
+    border-radius:50%;
+
     color:var(--white);
-    font-size:23px;
+
+    font-size:20px;
+
+    transition:
+        background .25s ease,
+        color .25s ease;
+
 }
 
+
 .home-button:hover{
+
     color:var(--gold);
+
     background:rgba(255,255,255,.08);
+
 }
 
 
@@ -137,28 +262,51 @@ img{
 ========================================= */
 
 .back-row{
-    background:var(--white);
-    border-bottom:1px solid var(--border);
+
+    background:var(--cream);
+
 }
+
 
 .back-inner{
-    min-height:60px;
+
+    min-height:62px;
+
     display:flex;
+
     align-items:center;
+
 }
+
 
 .back-button{
+
     display:inline-flex;
+
     align-items:center;
+
     gap:9px;
+
     border:none;
+
     background:transparent;
+
     color:var(--navy);
-    font-weight:800;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    transition:
+        color .25s ease;
+
 }
 
+
 .back-button:hover{
-    color:var(--gold-dark);
+
+    color:var(--gold);
+
 }
 
 
@@ -167,97 +315,347 @@ img{
 ========================================= */
 
 .checkout-hero{
-    padding:70px 0;
-    background:var(--navy);
-    color:var(--white);
+
+    padding:72px 0 78px;
+
+    background:var(--cream);
+
     text-align:center;
+
 }
 
-.hero-icon{
-    width:72px;
-    height:72px;
-    margin:0 auto 20px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:50%;
-    background:var(--gold);
-    color:var(--navy);
-    font-size:30px;
+
+.hero-kicker{
+
+    margin-bottom:12px;
+
+    color:var(--gold);
+
+    font-size:12px;
+
+    font-weight:800;
+
+    letter-spacing:2.4px;
+
+    text-transform:uppercase;
+
 }
+
 
 .checkout-hero h1{
-    font-size:clamp(38px,7vw,60px);
-    line-height:1.1;
-    margin-bottom:15px;
+
+    margin-bottom:18px;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(46px, 8vw, 70px);
+
+    font-weight:600;
+
+    line-height:.95;
+
+    letter-spacing:-1.5px;
+
 }
+
 
 .checkout-hero h1 span{
+
     color:var(--gold);
+
 }
 
+
 .checkout-hero p{
-    max-width:650px;
+
+    max-width:690px;
+
     margin:auto;
-    color:rgba(255,255,255,.8);
-    font-size:17px;
+
+    color:var(--text);
+
+    font-size:15px;
+
+    line-height:1.8;
+
 }
 
 
 /* =========================================
-   POLICY
+   QUICK NAV
+========================================= */
+
+.quick-nav{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:10px;
+
+    margin-top:30px;
+
+}
+
+
+.quick-nav a{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-height:40px;
+
+    padding:9px 17px;
+
+    border:1px solid rgba(200,164,93,.45);
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.65);
+
+    color:var(--navy);
+
+    font-size:11px;
+
+    font-weight:800;
+
+    letter-spacing:.3px;
+
+    transition:
+        background .25s ease,
+        border-color .25s ease,
+        color .25s ease,
+        transform .25s ease;
+
+}
+
+
+.quick-nav a:hover{
+
+    background:var(--navy);
+
+    border-color:var(--navy);
+
+    color:var(--white);
+
+    transform:translateY(-1px);
+
+}
+
+
+/* =========================================
+   POLICY SECTION
 ========================================= */
 
 .policy-section{
-    padding:70px 0 90px;
+
+    padding:20px 0 90px;
+
 }
+
+
+.section-intro{
+
+    margin-bottom:34px;
+
+    text-align:center;
+
+}
+
+
+.section-kicker{
+
+    margin-bottom:8px;
+
+    color:var(--gold);
+
+    font-size:11px;
+
+    font-weight:800;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+
+.section-intro h2{
+
+    margin-bottom:10px;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    color:var(--navy);
+
+    font-size:
+        clamp(36px, 6vw, 48px);
+
+    font-weight:600;
+
+    line-height:1;
+
+}
+
+
+.section-intro p{
+
+    max-width:650px;
+
+    margin:auto;
+
+    color:var(--text);
+
+    font-size:14px;
+
+    line-height:1.8;
+
+}
+
+
+/* =========================================
+   POLICY CARD
+========================================= */
 
 .policy-card{
-    padding:45px;
+
+    padding:46px;
+
     background:var(--white);
+
     border:1px solid var(--border);
-    border-radius:15px;
-    box-shadow:0 10px 30px rgba(7,26,51,.06);
+
+    border-radius:24px;
+
+    box-shadow:
+        0 18px 45px rgba(7,26,51,.07);
+
 }
+
+
+/* =========================================
+   UPDATED
+========================================= */
 
 .updated{
-    display:inline-block;
-    margin-bottom:30px;
-    padding:8px 14px;
-    background:#FFFBEB;
-    border:1px solid #FDE68A;
-    border-radius:30px;
-    font-size:13px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    margin-bottom:32px;
+
+    padding:8px 15px;
+
+    background:var(--soft-gold);
+
+    border:1px solid rgba(200,164,93,.45);
+
+    border-radius:999px;
+
+    color:var(--navy);
+
+    font-size:11px;
+
     font-weight:800;
+
+    letter-spacing:.3px;
+
 }
+
+
+/* =========================================
+   POLICY TYPOGRAPHY
+========================================= */
 
 .policy-card h2{
-    margin-top:35px;
+
+    margin-top:38px;
+
     margin-bottom:12px;
-    font-size:23px;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    color:var(--navy);
+
+    font-size:28px;
+
+    font-weight:600;
+
+    line-height:1.15;
+
 }
+
 
 .policy-card h2:first-of-type{
+
     margin-top:0;
+
 }
+
 
 .policy-card p{
+
     margin-bottom:15px;
+
     color:var(--text);
+
+    font-size:14px;
+
+    line-height:1.85;
+
 }
+
 
 .policy-card ul{
-    margin:10px 0 20px 23px;
+
+    margin:10px 0 22px 22px;
+
     color:var(--text);
+
 }
+
 
 .policy-card li{
-    margin-bottom:8px;
+
+    margin-bottom:9px;
+
+    padding-left:3px;
+
+    font-size:14px;
+
+    line-height:1.75;
+
 }
 
+
 .policy-card a{
-    color:#1D4ED8;
+
+    color:#80652C;
+
+    font-weight:700;
+
     text-decoration:underline;
+
+    text-decoration-thickness:1px;
+
+    text-underline-offset:3px;
+
 }
 
 
@@ -266,30 +664,63 @@ img{
 ========================================= */
 
 .security-box{
+
     display:flex;
-    gap:18px;
+
+    gap:17px;
+
     align-items:flex-start;
+
     margin:30px 0;
-    padding:24px;
-    background:#F0FDF4;
-    border:1px solid #BBF7D0;
-    border-radius:10px;
+
+    padding:23px;
+
+    background:var(--soft-gold);
+
+    border:1px solid rgba(200,164,93,.45);
+
+    border-radius:16px;
+
 }
+
 
 .security-box i{
-    color:var(--green);
-    font-size:28px;
-    margin-top:2px;
+
+    flex-shrink:0;
+
+    color:var(--gold);
+
+    font-size:24px;
+
+    margin-top:3px;
+
 }
+
 
 .security-box h3{
+
     margin-bottom:6px;
+
     color:var(--navy);
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size:21px;
+
+    font-weight:600;
+
 }
 
+
 .security-box p{
+
     margin:0;
-    font-size:14px;
+
+    font-size:13px;
+
 }
 
 
@@ -298,42 +729,86 @@ img{
 ========================================= */
 
 .checkout-steps{
+
     display:grid;
+
     gap:15px;
-    margin:25px 0;
+
+    margin:25px 0 30px;
+
 }
+
 
 .checkout-step{
+
     display:flex;
+
     gap:17px;
+
     align-items:flex-start;
-    padding:20px;
-    background:var(--off-white);
+
+    padding:21px;
+
+    background:#FCFBF7;
+
     border:1px solid var(--border);
-    border-radius:10px;
+
+    border-radius:16px;
+
 }
+
 
 .step-number{
+
     flex:0 0 40px;
+
     width:40px;
+
     height:40px;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     border-radius:50%;
+
     background:var(--gold);
+
     color:var(--navy);
+
+    font-size:13px;
+
     font-weight:900;
+
 }
+
 
 .checkout-step h3{
+
     margin-bottom:4px;
-    font-size:17px;
+
+    color:var(--navy);
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size:21px;
+
+    font-weight:600;
+
 }
 
+
 .checkout-step p{
+
     margin:0;
-    font-size:14px;
+
+    font-size:13px;
+
 }
 
 
@@ -342,27 +817,61 @@ img{
 ========================================= */
 
 .stripe-area{
+
     margin:35px 0;
+
     padding:30px;
-    border:2px solid var(--navy);
-    border-radius:12px;
+
+    background:var(--navy);
+
+    border:1px solid var(--navy);
+
+    border-radius:18px;
+
+    color:var(--white);
+
     text-align:center;
+
 }
+
 
 .stripe-area i{
+
     margin-bottom:12px;
-    color:var(--navy);
-    font-size:35px;
+
+    color:var(--gold);
+
+    font-size:34px;
+
 }
+
 
 .stripe-area h3{
+
     margin-bottom:8px;
-    font-size:22px;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size:27px;
+
+    font-weight:600;
+
 }
 
+
 .stripe-area p{
+
     max-width:600px;
+
     margin:0 auto;
+
+    color:rgba(255,255,255,.75);
+
+    font-size:13px;
+
 }
 
 
@@ -371,19 +880,49 @@ img{
 ========================================= */
 
 .contact-box{
+
     margin-top:35px;
+
     padding:25px;
-    background:var(--off-white);
+
+    background:#FCFBF7;
+
     border:1px solid var(--border);
-    border-radius:10px;
+
+    border-radius:16px;
+
 }
+
 
 .contact-box h3{
+
     margin-bottom:8px;
+
+    color:var(--navy);
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size:23px;
+
+    font-weight:600;
+
 }
 
+
 .contact-box p{
+
     margin-bottom:5px;
+
+}
+
+
+.contact-box p:last-child{
+
+    margin-bottom:0;
+
 }
 
 
@@ -392,26 +931,59 @@ img{
 ========================================= */
 
 .return-area{
-    margin-top:35px;
+
+    margin-top:38px;
+
     text-align:center;
+
 }
+
 
 .return-button{
+
     display:inline-flex;
+
     align-items:center;
+
     justify-content:center;
+
     gap:9px;
+
     min-height:50px;
-    padding:12px 28px;
-    border:none;
-    border-radius:8px;
+
+    padding:13px 27px;
+
+    border:1px solid var(--navy);
+
+    border-radius:999px;
+
     background:var(--navy);
+
     color:var(--white);
+
+    font-size:12px;
+
     font-weight:800;
+
+    letter-spacing:.2px;
+
+    transition:
+        background .25s ease,
+        transform .25s ease,
+        box-shadow .25s ease;
+
 }
 
+
 .return-button:hover{
+
     background:#0D2B50;
+
+    transform:translateY(-1px);
+
+    box-shadow:
+        0 8px 20px rgba(7,26,51,.14);
+
 }
 
 
@@ -420,22 +992,39 @@ img{
 ========================================= */
 
 .footer{
-    padding:35px 0;
+
+    padding:38px 0;
+
     background:var(--navy);
+
     color:var(--white);
+
     text-align:center;
+
 }
+
 
 .footer-tagline{
-    margin-bottom:7px;
+
+    margin-bottom:8px;
+
     color:var(--gold);
+
+    font-size:12px;
+
     font-weight:800;
-    letter-spacing:1px;
+
+    letter-spacing:2px;
+
 }
 
+
 .footer p{
-    color:rgba(255,255,255,.7);
-    font-size:13px;
+
+    color:rgba(255,255,255,.68);
+
+    font-size:11px;
+
 }
 
 
@@ -445,24 +1034,210 @@ img{
 
 @media(max-width:600px){
 
-    .header-logo img{
-        height:42px;
+    .header-inner{
+
+        min-height:76px;
+
     }
 
-    .policy-card{
-        padding:30px 20px;
+
+    .header-logo img{
+
+        height:41px;
+
     }
+
+
+    .home-button{
+
+        width:42px;
+
+        height:42px;
+
+        font-size:18px;
+
+    }
+
+
+    .back-inner{
+
+        min-height:55px;
+
+    }
+
 
     .checkout-hero{
-        padding:55px 0;
+
+        padding:58px 0 62px;
+
     }
+
+
+    .hero-kicker{
+
+        font-size:10px;
+
+        letter-spacing:2px;
+
+    }
+
+
+    .checkout-hero h1{
+
+        font-size:49px;
+
+        letter-spacing:-1px;
+
+    }
+
+
+    .checkout-hero p{
+
+        font-size:13px;
+
+        padding:0 8px;
+
+    }
+
+
+    .quick-nav{
+
+        gap:8px;
+
+        margin-top:25px;
+
+    }
+
+
+    .quick-nav a{
+
+        min-height:37px;
+
+        padding:8px 13px;
+
+        font-size:10px;
+
+    }
+
+
+    .policy-section{
+
+        padding:10px 0 65px;
+
+    }
+
+
+    .section-intro{
+
+        margin-bottom:25px;
+
+    }
+
+
+    .section-intro h2{
+
+        font-size:38px;
+
+    }
+
+
+    .section-intro p{
+
+        font-size:13px;
+
+    }
+
+
+    .policy-card{
+
+        padding:29px 20px;
+
+        border-radius:20px;
+
+    }
+
+
+    .updated{
+
+        margin-bottom:25px;
+
+        font-size:10px;
+
+    }
+
+
+    .policy-card h2{
+
+        margin-top:34px;
+
+        font-size:25px;
+
+    }
+
+
+    .policy-card p{
+
+        font-size:13px;
+
+        line-height:1.8;
+
+    }
+
+
+    .policy-card li{
+
+        font-size:13px;
+
+    }
+
 
     .security-box{
+
         flex-direction:column;
+
+        gap:10px;
+
+        padding:20px;
+
     }
 
+
     .checkout-step{
+
         flex-direction:column;
+
+        gap:12px;
+
+        padding:19px;
+
+    }
+
+
+    .stripe-area{
+
+        padding:25px 19px;
+
+    }
+
+
+    .stripe-area h3{
+
+        font-size:24px;
+
+    }
+
+
+    .contact-box{
+
+        padding:21px;
+
+    }
+
+
+    .return-button{
+
+        width:100%;
+
     }
 
 }
@@ -540,21 +1315,48 @@ img{
 
 <div class="container">
 
-    <div class="hero-icon">
-
-        <i class="fa-solid fa-shield-halved"></i>
-
+    <div class="hero-kicker">
+        THEBESTBUNDLE • PAYMENTS & SECURITY
     </div>
+
 
     <h1>
         Secure <span>Checkout</span>
     </h1>
+
 
     <p>
         Learn how payments and checkout
         are handled when purchasing eligible
         products from TheBestBundle.
     </p>
+
+
+    <nav
+        class="quick-nav"
+        aria-label="Secure Checkout navigation">
+
+        <a href="#process">
+            Checkout Process
+        </a>
+
+        <a href="#payment">
+            Payment Security
+        </a>
+
+        <a href="#steps">
+            How It Works
+        </a>
+
+        <a href="#stripe">
+            Stripe
+        </a>
+
+        <a href="#support">
+            Support
+        </a>
+
+    </nav>
 
 </div>
 
@@ -569,398 +1371,484 @@ img{
 
 <div class="container">
 
-<div class="policy-card">
 
+    <div class="section-intro">
 
-    <div class="updated">
-        Last Updated: August 2026
+        <div class="section-kicker">
+            SECURITY • PAYMENTS • CHECKOUT
+        </div>
+
+        <h2>
+            A Secure Purchasing Experience
+        </h2>
+
+        <p>
+            TheBestBundle uses Stripe for eligible
+            payment processing and provides customers
+            with a clear checkout process.
+        </p>
+
     </div>
 
 
-    <h2>
-        1. Our Checkout Process
-    </h2>
-
-    <p>
-        TheBestBundle is committed to providing
-        customers with a clear and secure purchasing
-        experience for eligible digital products.
-    </p>
-
-    <p>
-        Depending on the purchase method,
-        customers may review their selected products
-        before continuing to the payment processor
-        to complete the transaction.
-    </p>
+    <div class="policy-card">
 
 
-    <h2>
-        2. Payment Processing
-    </h2>
-
-    <p>
-        Eligible TheBestBundle payments are
-        processed through Stripe.
-    </p>
-
-    <p>
-        When you continue to Stripe Checkout,
-        payment information is submitted directly
-        through Stripe's payment environment.
-    </p>
+        <div class="updated">
+            Last Updated: August 2026
+        </div>
 
 
-    <div class="security-box">
+        <!-- =====================================
+             1
+        ====================================== -->
 
-        <i class="fa-solid fa-lock"></i>
+        <h2 id="process">
+            1. Our Checkout Process
+        </h2>
 
-        <div>
+        <p>
+            TheBestBundle is committed to providing
+            customers with a clear and secure purchasing
+            experience for eligible digital products.
+        </p>
+
+        <p>
+            Depending on the purchase method,
+            customers may review their selected products
+            before continuing to the payment processor
+            to complete the transaction.
+        </p>
+
+
+        <!-- =====================================
+             2
+        ====================================== -->
+
+        <h2 id="payment">
+            2. Payment Processing
+        </h2>
+
+        <p>
+            Eligible TheBestBundle payments are
+            processed through Stripe.
+        </p>
+
+        <p>
+            When you continue to Stripe Checkout,
+            payment information is submitted through
+            Stripe's payment environment.
+        </p>
+
+
+        <div class="security-box">
+
+            <i class="fa-solid fa-lock"></i>
+
+            <div>
+
+                <h3>
+                    Payment Information
+                </h3>
+
+                <p>
+                    TheBestBundle does not directly store
+                    complete credit or debit card numbers
+                    entered through Stripe Checkout.
+                    Payment information is processed by
+                    Stripe according to its applicable
+                    security practices and policies.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================
+             3
+        ====================================== -->
+
+        <h2 id="steps">
+            3. How Checkout Works
+        </h2>
+
+
+        <div class="checkout-steps">
+
+
+            <div class="checkout-step">
+
+                <div class="step-number">
+                    1
+                </div>
+
+                <div>
+
+                    <h3>
+                        Choose Your Product
+                    </h3>
+
+                    <p>
+                        Select the digital product,
+                        template, eBook or bundle
+                        you would like to purchase.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="checkout-step">
+
+                <div class="step-number">
+                    2
+                </div>
+
+                <div>
+
+                    <h3>
+                        Review Your Selection
+                    </h3>
+
+                    <p>
+                        When available, review your
+                        selected product or cart before
+                        continuing to payment.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="checkout-step">
+
+                <div class="step-number">
+                    3
+                </div>
+
+                <div>
+
+                    <h3>
+                        Continue to Secure Payment
+                    </h3>
+
+                    <p>
+                        Continue to Stripe to enter
+                        the payment information required
+                        to complete your purchase.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="checkout-step">
+
+                <div class="step-number">
+                    4
+                </div>
+
+                <div>
+
+                    <h3>
+                        Receive Your Product
+                    </h3>
+
+                    <p>
+                        After successful payment,
+                        follow the applicable delivery
+                        instructions to access your
+                        digital purchase.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- =====================================
+             STRIPE
+        ====================================== -->
+
+        <div
+            class="stripe-area"
+            id="stripe">
+
+            <i class="fa-solid fa-credit-card"></i>
 
             <h3>
-                Payment Information
+                Payments Powered by Stripe
             </h3>
 
             <p>
-                TheBestBundle does not directly store
-                complete credit or debit card numbers
-                entered through Stripe Checkout.
-                Payment information is processed by
-                Stripe according to its applicable
-                security practices and policies.
+                Stripe is the independent payment
+                processor used for eligible
+                TheBestBundle transactions.
             </p>
 
         </div>
 
-    </div>
 
+        <!-- =====================================
+             4
+        ====================================== -->
 
-    <h2>
-        3. How Checkout Works
-    </h2>
-
-
-    <div class="checkout-steps">
-
-
-        <div class="checkout-step">
-
-            <div class="step-number">
-                1
-            </div>
-
-            <div>
-
-                <h3>
-                    Choose Your Product
-                </h3>
-
-                <p>
-                    Select the digital product,
-                    template, eBook or bundle
-                    you would like to purchase.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="checkout-step">
-
-            <div class="step-number">
-                2
-            </div>
-
-            <div>
-
-                <h3>
-                    Review Your Selection
-                </h3>
-
-                <p>
-                    When available, review your
-                    selected product or cart before
-                    continuing to payment.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="checkout-step">
-
-            <div class="step-number">
-                3
-            </div>
-
-            <div>
-
-                <h3>
-                    Continue to Secure Payment
-                </h3>
-
-                <p>
-                    Continue to Stripe to enter
-                    the payment information required
-                    to complete your purchase.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="checkout-step">
-
-            <div class="step-number">
-                4
-            </div>
-
-            <div>
-
-                <h3>
-                    Receive Your Product
-                </h3>
-
-                <p>
-                    After successful payment,
-                    follow the applicable delivery
-                    instructions to access your
-                    digital purchase.
-                </p>
-
-            </div>
-
-        </div>
-
-
-    </div>
-
-
-    <div class="stripe-area">
-
-        <i class="fa-solid fa-credit-card"></i>
-
-        <h3>
-            Payments Powered by Stripe
-        </h3>
+        <h2>
+            4. TheBestBundle Cart
+        </h2>
 
         <p>
-            Stripe is the independent payment
-            processor used for eligible
-            TheBestBundle transactions.
+            When our shopping cart is available,
+            customers may add eligible products,
+            review their selections and remove
+            products before proceeding to checkout.
         </p>
 
-    </div>
+        <p>
+            Adding an item to the cart does not
+            complete a purchase. Payment must still
+            be successfully completed through the
+            applicable checkout process.
+        </p>
 
 
-    <h2>
-        4. TheBestBundle Cart
-    </h2>
+        <!-- =====================================
+             5
+        ====================================== -->
 
-    <p>
-        When our shopping cart is available,
-        customers may add eligible products,
-        review their selections and remove
-        products before proceeding to checkout.
-    </p>
-
-    <p>
-        Adding an item to the cart does not
-        complete a purchase. Payment must still
-        be successfully completed through the
-        applicable checkout process.
-    </p>
-
-
-    <h2>
-        5. Buy Now
-    </h2>
-
-    <p>
-        Certain products may also provide a
-        Buy Now option for customers who want
-        to purchase a single product without
-        continuing to shop.
-    </p>
-
-
-    <h2>
-        6. Prices
-    </h2>
-
-    <p>
-        Customers should review the displayed
-        product price and checkout information
-        before completing payment.
-    </p>
-
-    <p>
-        The final amount presented during
-        checkout should be reviewed before
-        payment authorization.
-    </p>
-
-
-    <h2>
-        7. Successful Payments
-    </h2>
-
-    <p>
-        A purchase is considered complete after
-        the applicable payment processor confirms
-        successful payment.
-    </p>
-
-    <p>
-        If payment is declined or incomplete,
-        access to the applicable paid product
-        may not be provided.
-    </p>
-
-
-    <h2>
-        8. Digital Delivery
-    </h2>
-
-    <p>
-        Digital products may be delivered through
-        a download page, confirmation page,
-        secure link, email or another method
-        identified for the applicable product.
-    </p>
-
-    <p>
-        Customers should retain relevant purchase
-        confirmation information in case support
-        is required.
-    </p>
-
-
-    <h2>
-        9. Suspicious Transactions
-    </h2>
-
-    <p>
-        Transactions may be reviewed, declined
-        or restricted when necessary to address
-        suspected fraud, unauthorized activity,
-        payment disputes or security concerns.
-    </p>
-
-
-    <h2>
-        10. Unauthorized Payments
-    </h2>
-
-    <p>
-        If you believe your payment method was
-        used without authorization, contact your
-        bank or payment provider promptly.
-    </p>
-
-    <p>
-        You may also contact TheBestBundle so
-        available transaction information can
-        be reviewed where appropriate.
-    </p>
-
-
-    <h2>
-        11. Refunds
-    </h2>
-
-    <p>
-        Refund requests are subject to our
-        <a href="refund.html">
-            Refund Policy
-        </a>
-        and applicable consumer rights.
-    </p>
-
-
-    <h2>
-        12. Privacy
-    </h2>
-
-    <p>
-        Information associated with website use
-        and purchases is also subject to our
-        <a href="privacy.html">
-            Privacy Policy
-        </a>
-        and the applicable policies of independent
-        service providers.
-    </p>
-
-
-    <h2>
-        13. Third-Party Checkout Services
-    </h2>
-
-    <p>
-        When you leave TheBestBundle and interact
-        with an independent payment processor or
-        future merchandise vendor, that provider's
-        own terms, privacy policies and security
-        practices may apply.
-    </p>
-
-
-    <h2>
-        14. Checkout Support
-    </h2>
-
-    <p>
-        If you experience a problem with a
-        TheBestBundle purchase or checkout,
-        please contact us with relevant transaction
-        information so we can review the issue.
-    </p>
-
-
-    <div class="contact-box">
-
-        <h3>
-            Checkout Support
-        </h3>
+        <h2>
+            5. Buy Now
+        </h2>
 
         <p>
-            Email:
-            <a href="mailto:Thebestbundle101@gmail.com">
-                Thebestbundle101@gmail.com
+            Certain products may also provide a
+            Buy Now option for customers who want
+            to purchase a single product without
+            continuing to shop.
+        </p>
+
+
+        <!-- =====================================
+             6
+        ====================================== -->
+
+        <h2>
+            6. Prices
+        </h2>
+
+        <p>
+            Customers should review the displayed
+            product price and checkout information
+            before completing payment.
+        </p>
+
+        <p>
+            The final amount presented during
+            checkout should be reviewed before
+            payment authorization.
+        </p>
+
+
+        <!-- =====================================
+             7
+        ====================================== -->
+
+        <h2>
+            7. Successful Payments
+        </h2>
+
+        <p>
+            A purchase is considered complete after
+            the applicable payment processor confirms
+            successful payment.
+        </p>
+
+        <p>
+            If payment is declined or incomplete,
+            access to the applicable paid product
+            may not be provided.
+        </p>
+
+
+        <!-- =====================================
+             8
+        ====================================== -->
+
+        <h2>
+            8. Digital Delivery
+        </h2>
+
+        <p>
+            Digital products may be delivered through
+            a download page, confirmation page,
+            secure link, email or another method
+            identified for the applicable product.
+        </p>
+
+        <p>
+            Customers should retain relevant purchase
+            confirmation information in case support
+            is required.
+        </p>
+
+
+        <!-- =====================================
+             9
+        ====================================== -->
+
+        <h2>
+            9. Suspicious Transactions
+        </h2>
+
+        <p>
+            Transactions may be reviewed, declined
+            or restricted when necessary to address
+            suspected fraud, unauthorized activity,
+            payment disputes or security concerns.
+        </p>
+
+
+        <!-- =====================================
+             10
+        ====================================== -->
+
+        <h2>
+            10. Unauthorized Payments
+        </h2>
+
+        <p>
+            If you believe your payment method was
+            used without authorization, contact your
+            bank or payment provider promptly.
+        </p>
+
+        <p>
+            You may also contact TheBestBundle so
+            available transaction information can
+            be reviewed where appropriate.
+        </p>
+
+
+        <!-- =====================================
+             11
+        ====================================== -->
+
+        <h2>
+            11. Refunds
+        </h2>
+
+        <p>
+            Refund requests are subject to our
+            <a href="refund.html">
+                Refund Policy
             </a>
+            and applicable consumer rights.
         </p>
+
+
+        <!-- =====================================
+             12
+        ====================================== -->
+
+        <h2>
+            12. Privacy
+        </h2>
 
         <p>
-            Support:
-            <a href="contact.html">
-                Contact TheBestBundle
+            Information associated with website use
+            and purchases is also subject to our
+            <a href="privacy.html">
+                Privacy Policy
             </a>
+            and the applicable policies of independent
+            service providers.
         </p>
 
+
+        <!-- =====================================
+             13
+        ====================================== -->
+
+        <h2>
+            13. Third-Party Checkout Services
+        </h2>
+
+        <p>
+            When you leave TheBestBundle and interact
+            with an independent payment processor or
+            future merchandise vendor, that provider's
+            own terms, privacy policies and security
+            practices may apply.
+        </p>
+
+
+        <!-- =====================================
+             14
+        ====================================== -->
+
+        <h2 id="support">
+            14. Checkout Support
+        </h2>
+
+        <p>
+            If you experience a problem with a
+            TheBestBundle purchase or checkout,
+            please contact us with relevant transaction
+            information so we can review the issue.
+        </p>
+
+
+        <div class="contact-box">
+
+            <h3>
+                Checkout Support
+            </h3>
+
+            <p>
+                Email:
+                <a href="mailto:Thebestbundle101@gmail.com">
+                    Thebestbundle101@gmail.com
+                </a>
+            </p>
+
+            <p>
+                Support:
+                <a href="contact.html">
+                    Contact TheBestBundle
+                </a>
+            </p>
+
+        </div>
+
+
+        <!-- =====================================
+             RETURN
+        ====================================== -->
+
+        <div class="return-area">
+
+            <button
+                type="button"
+                class="return-button"
+                onclick="returnToPreviousPage()">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Return to Previous Page
+
+            </button>
+
+        </div>
+
+
     </div>
-
-
-    <div class="return-area">
-
-        <button
-            type="button"
-            class="return-button"
-            onclick="returnToPreviousPage()">
-
-            <i class="fa-solid fa-arrow-left"></i>
-
-            Return to Previous Page
-
-        </button>
-
-    </div>
-
-
-</div>
 
 </div>
 
@@ -987,6 +1875,10 @@ img{
 
 </footer>
 
+
+<!-- =========================================
+     SCRIPT
+========================================= -->
 
 <script>
 
