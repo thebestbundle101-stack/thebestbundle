@@ -87,7 +87,9 @@
 
 
 html{
+
     scroll-behavior:smooth;
+
 }
 
 
@@ -146,6 +148,19 @@ button{
 
     margin:
         0 auto;
+
+}
+
+
+/* =========================================
+   SECTION SCROLL POSITION
+========================================= */
+
+#health,
+#business{
+
+    scroll-margin-top:
+        20px;
 
 }
 
@@ -425,6 +440,112 @@ button{
 
 
 /* =========================================
+   QUICK NAVIGATION
+========================================= */
+
+.quick-nav{
+
+    background:
+        var(--white);
+
+    border-bottom:
+        1px solid var(--border);
+
+    padding:
+        14px 18px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:
+        10px;
+
+    flex-wrap:wrap;
+
+}
+
+
+.quick-nav a{
+
+    min-width:
+        145px;
+
+    padding:
+        10px 18px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:
+        8px;
+
+    border:
+        1px solid #D7DDE6;
+
+    border-radius:
+        8px;
+
+    background:
+        var(--white);
+
+    color:
+        var(--navy);
+
+    font-size:
+        12px;
+
+    font-weight:
+        900;
+
+    transition:
+        background .2s ease,
+        color .2s ease,
+        transform .2s ease,
+        border-color .2s ease;
+
+}
+
+
+.quick-nav a i{
+
+    color:
+        var(--gold-dark);
+
+}
+
+
+.quick-nav a:hover{
+
+    background:
+        var(--navy);
+
+    color:
+        var(--white);
+
+    border-color:
+        var(--navy);
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+.quick-nav a:hover i{
+
+    color:
+        var(--gold);
+
+}
+
+
+/* =========================================
    PRODUCTS SECTION
 ========================================= */
 
@@ -435,6 +556,145 @@ button{
 
 }
 
+
+/* =========================================
+   CATEGORY SECTION
+========================================= */
+
+.category-section{
+
+    margin-bottom:
+        50px;
+
+}
+
+
+.category-heading{
+
+    text-align:
+        center;
+
+    margin-bottom:
+        30px;
+
+}
+
+
+.category-kicker{
+
+    color:
+        var(--gold-dark);
+
+    font-size:
+        13px;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        1.8px;
+
+    margin-bottom:
+        8px;
+
+}
+
+
+.category-title{
+
+    font-family:
+        Georgia,
+        serif;
+
+    color:
+        var(--navy);
+
+    font-size:
+        32px;
+
+    line-height:
+        1.2;
+
+}
+
+
+/* =========================================
+   CATEGORY DIVIDER
+========================================= */
+
+.category-divider{
+
+    width:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:
+        14px;
+
+    margin:
+        15px auto 45px;
+
+}
+
+
+.category-divider::before,
+.category-divider::after{
+
+    content:"";
+
+    height:
+        1px;
+
+    background:
+        #DDE3EA;
+
+    flex:1;
+
+    max-width:
+        430px;
+
+}
+
+
+.category-divider-icon{
+
+    width:
+        44px;
+
+    height:
+        44px;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--navy);
+
+    color:
+        var(--gold);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:
+        17px;
+
+    box-shadow:
+        0 7px 18px rgba(7,26,51,.12);
+
+}
+
+
+/* =========================================
+   PRODUCTS GRID
+========================================= */
 
 .products-grid{
 
@@ -722,6 +982,14 @@ button{
 }
 
 
+.buy-button:hover{
+
+    background:
+        var(--gold-dark);
+
+}
+
+
 .cart-button{
 
     background:
@@ -739,7 +1007,7 @@ button{
 .cart-button:hover{
 
     background:
-        var(--navy);
+        var(--navy-light);
 
     color:
         var(--white);
@@ -797,8 +1065,7 @@ button{
 
 
 /* =========================================
-   TABLET / LANDSCAPE PHONE / DESKTOP
-   3 COLUMNS
+   TABLET
 ========================================= */
 
 @media(max-width:950px){
@@ -880,7 +1147,6 @@ button{
 
 /* =========================================
    PHONE PORTRAIT
-   2 COLUMNS
 ========================================= */
 
 @media(max-width:650px){
@@ -891,6 +1157,96 @@ button{
             42px;
 
         width:auto;
+
+    }
+
+
+    .quick-nav{
+
+        padding:
+            10px 8px;
+
+        gap:
+            6px;
+
+    }
+
+
+    .quick-nav a{
+
+        min-width:
+            calc(50% - 3px);
+
+        padding:
+            9px 8px;
+
+        font-size:
+            10px;
+
+    }
+
+
+    .products-section{
+
+        padding:
+            40px 0 60px;
+
+    }
+
+
+    .category-heading{
+
+        margin-bottom:
+            24px;
+
+    }
+
+
+    .category-title{
+
+        font-size:
+            27px;
+
+    }
+
+
+    .category-kicker{
+
+        font-size:
+            11px;
+
+    }
+
+
+    .category-divider{
+
+        gap:
+            10px;
+
+        margin:
+            10px auto 32px;
+
+    }
+
+
+    .category-divider-icon{
+
+        width:
+            40px;
+
+        height:
+            40px;
+
+        font-size:
+            15px;
+
+    }
+
+
+    .category-section{
+
+        margin-bottom:
+            38px;
 
     }
 
@@ -1062,7 +1418,6 @@ button{
 
 /* =========================================
    VERY SMALL PHONES
-   STILL 2 PRODUCT COLUMNS
 ========================================= */
 
 @media(max-width:380px){
@@ -1074,6 +1429,25 @@ button{
 
         gap:
             10px;
+
+    }
+
+
+    .quick-nav a{
+
+        font-size:
+            9px;
+
+        padding:
+            8px 4px;
+
+    }
+
+
+    .category-title{
+
+        font-size:
+            25px;
 
     }
 
@@ -1252,6 +1626,34 @@ button{
 
 
 <!-- =========================================
+     QUICK NAVIGATION
+========================================= -->
+
+<nav
+    class="quick-nav"
+    aria-label="eBook categories">
+
+    <a href="#health">
+
+        <i class="fa-solid fa-heart-pulse"></i>
+
+        Health eBooks
+
+    </a>
+
+
+    <a href="#business">
+
+        <i class="fa-solid fa-briefcase"></i>
+
+        Business eBooks
+
+    </a>
+
+</nav>
+
+
+<!-- =========================================
      PRODUCTS
 ========================================= -->
 
@@ -1259,11 +1661,101 @@ button{
 
     <div class="container">
 
+
+        <!-- =====================================
+             HEALTH EBOOKS
+        ====================================== -->
+
+        <section
+            class="category-section"
+            id="health">
+
+
+            <div class="category-heading">
+
+                <div class="category-kicker">
+
+                    <i class="fa-solid fa-heart-pulse"></i>
+
+                    HEALTH
+
+                </div>
+
+
+                <h2 class="category-title">
+
+                    Health eBooks
+
+                </h2>
+
+            </div>
+
+
+            <div
+                class="products-grid"
+                id="healthGrid">
+
+            </div>
+
+
+        </section>
+
+
+        <!-- =====================================
+             SEPARATOR
+        ====================================== -->
+
         <div
-            class="products-grid"
-            id="productsGrid">
+            class="category-divider"
+            aria-hidden="true">
+
+            <div class="category-divider-icon">
+
+                <i class="fa-solid fa-star"></i>
+
+            </div>
 
         </div>
+
+
+        <!-- =====================================
+             BUSINESS EBOOKS
+        ====================================== -->
+
+        <section
+            class="category-section"
+            id="business">
+
+
+            <div class="category-heading">
+
+                <div class="category-kicker">
+
+                    <i class="fa-solid fa-briefcase"></i>
+
+                    BUSINESS
+
+                </div>
+
+
+                <h2 class="category-title">
+
+                    Business eBooks
+
+                </h2>
+
+            </div>
+
+
+            <div
+                class="products-grid"
+                id="businessGrid">
+
+            </div>
+
+
+        </section>
+
 
     </div>
 
@@ -1279,11 +1771,16 @@ button{
     <div class="container">
 
         <div class="footer-tagline">
+
             LEARN • CREATE • GROW
+
         </div>
 
         <p>
-            © 2026 TheBestBundle. All Rights Reserved.
+
+            © 2026 TheBestBundle.
+            All Rights Reserved.
+
         </p>
 
     </div>
@@ -1303,9 +1800,16 @@ button{
 
 const ebooks = [
 
+    /* =========================================
+       HEALTH EBOOKS
+    ========================================= */
+
     {
         id:
             "look-20-years-younger",
+
+        category:
+            "health",
 
         name:
             "How to Look 20 Years Younger Than Your Age",
@@ -1332,6 +1836,9 @@ const ebooks = [
         id:
             "natural-anti-aging",
 
+        category:
+            "health",
+
         name:
             "The Natural Anti-Aging Guide",
 
@@ -1356,6 +1863,9 @@ const ebooks = [
     {
         id:
             "longevity-blueprint",
+
+        category:
+            "health",
 
         name:
             "The Longevity Blueprint",
@@ -1382,6 +1892,9 @@ const ebooks = [
         id:
             "healthy-hormones",
 
+        category:
+            "health",
+
         name:
             "The Healthy Hormones & Vitality Guide",
 
@@ -1407,6 +1920,9 @@ const ebooks = [
         id:
             "ultimate-skincare-beauty-handbook",
 
+        category:
+            "health",
+
         name:
             "The Ultimate Skincare & Beauty Handbook",
 
@@ -1428,9 +1944,16 @@ const ebooks = [
     },
 
 
+    /* =========================================
+       BUSINESS EBOOKS
+    ========================================= */
+
     {
         id:
             "digital-business-blueprint",
+
+        category:
+            "business",
 
         name:
             "The Digital Business Blueprint",
@@ -1457,6 +1980,9 @@ const ebooks = [
         id:
             "digital-products-that-sell",
 
+        category:
+            "business",
+
         name:
             "Digital Products That Sell",
 
@@ -1478,13 +2004,12 @@ const ebooks = [
     },
 
 
-    /* =========================================
-       THE PASSIVE INCOME PLAYBOOK
-    ========================================= */
-
     {
         id:
             "passive-income-playbook",
+
+        category:
+            "business",
 
         name:
             "The Passive Income Playbook",
@@ -1507,13 +2032,12 @@ const ebooks = [
     },
 
 
-    /* =========================================
-       DIGITAL MARKETING MADE SIMPLE
-    ========================================= */
-
     {
         id:
             "digital-marketing-made-simple",
+
+        category:
+            "business",
 
         name:
             "Digital Marketing Made Simple",
@@ -1536,13 +2060,12 @@ const ebooks = [
     },
 
 
-    /* =========================================
-       AI FOR ENTREPRENEURS
-    ========================================= */
-
     {
         id:
             "ai-for-entrepreneurs",
+
+        category:
+            "business",
 
         name:
             "AI For Entrepreneurs",
@@ -1608,31 +2131,63 @@ function saveEbookCart(){
 
 
 /* =========================================
-   PRODUCT GRID
+   PRODUCT GRIDS
 ========================================= */
 
-const productsGrid =
+const healthGrid =
     document.getElementById(
-        "productsGrid"
+        "healthGrid"
+    );
+
+
+const businessGrid =
+    document.getElementById(
+        "businessGrid"
     );
 
 
 /* =========================================
-   CURRENT EBOOK ORDER
+   CATEGORY ORDERS
 ========================================= */
 
-let ebookOrder =
-    [...ebooks];
+let healthOrder =
+    ebooks.filter(
+        function(product){
+
+            return (
+                product.category ===
+                "health"
+            );
+
+        }
+    );
+
+
+let businessOrder =
+    ebooks.filter(
+        function(product){
+
+            return (
+                product.category ===
+                "business"
+            );
+
+        }
+    );
 
 
 /* =========================================
-   SHUFFLE EBOOK POSITIONS
+   SHUFFLE ARRAY
 ========================================= */
 
-function shuffleEbooks(){
+function shuffleArray(array){
+
+    const shuffled =
+        [...array];
+
 
     for(
-        let i = ebookOrder.length - 1;
+        let i = shuffled.length - 1;
         i > 0;
         i--
     ){
@@ -1644,15 +2199,17 @@ function shuffleEbooks(){
 
 
         [
-            ebookOrder[i],
-            ebookOrder[j]
+            shuffled[i],
+            shuffled[j]
         ] = [
-            ebookOrder[j],
-            ebookOrder[i]
+            shuffled[j],
+            shuffled[i]
         ];
 
     }
 
+
+    return shuffled;
 
 }
 
@@ -1681,7 +2238,8 @@ function createProductCard(
 
             <img
                 src="${product.image}"
-                alt="${product.name}">
+                alt="${product.name}"
+                loading="eager">
 
         </div>
 
@@ -1689,22 +2247,30 @@ function createProductCard(
         <div class="product-info">
 
             <div class="product-label">
+
                 Premium eBook
+
             </div>
 
 
             <h2>
+
                 ${product.name}
+
             </h2>
 
 
             <p>
+
                 ${product.description}
+
             </p>
 
 
             <div class="product-price">
+
                 $${product.price}
+
             </div>
 
 
@@ -1721,6 +2287,7 @@ function createProductCard(
 
                 <button
                     type="button"
+
                     class="btn cart-button add-to-cart"
 
                     data-id="${product.id}"
@@ -1752,19 +2319,22 @@ function createProductCard(
 
 
 /* =========================================
-   RENDER ALL EBOOKS
+   RENDER CATEGORY
 ========================================= */
 
-function renderProductCards(){
+function renderCategory(
+    grid,
+    products
+){
 
-    productsGrid.innerHTML =
+    grid.innerHTML =
         "";
 
 
-    ebookOrder.forEach(
+    products.forEach(
         function(product){
 
-            productsGrid.appendChild(
+            grid.appendChild(
                 createProductCard(
                     product
                 )
@@ -1777,45 +2347,20 @@ function renderProductCards(){
 
 
 /* =========================================
-   RENDER PRODUCTS
+   RENDER BOTH CATEGORIES
 ========================================= */
 
-function renderProducts(
-    animate = false
-){
+function renderProducts(){
 
-    if(!animate){
-
-        renderProductCards();
-
-        return;
-
-    }
-
-
-    productsGrid.classList.add(
-        "is-changing"
+    renderCategory(
+        healthGrid,
+        healthOrder
     );
 
 
-    setTimeout(
-        function(){
-
-            renderProductCards();
-
-
-            requestAnimationFrame(
-                function(){
-
-                    productsGrid.classList.remove(
-                        "is-changing"
-                    );
-
-                }
-            );
-
-        },
-        400
+    renderCategory(
+        businessGrid,
+        businessOrder
     );
 
 }
@@ -1832,24 +2377,66 @@ renderProducts();
    AUTOMATIC POSITION ROTATION
 ========================================= */
 
-const rotationTimer =
-    setInterval(
-        function(){
+setInterval(
+    function(){
 
-            shuffleEbooks();
+        healthOrder =
+            shuffleArray(
+                healthOrder
+            );
 
-            renderProducts(true);
 
-        },
-        10000
-    );
+        businessOrder =
+            shuffleArray(
+                businessOrder
+            );
+
+
+        healthGrid.classList.add(
+            "is-changing"
+        );
+
+
+        businessGrid.classList.add(
+            "is-changing"
+        );
+
+
+        setTimeout(
+            function(){
+
+                renderProducts();
+
+
+                requestAnimationFrame(
+                    function(){
+
+                        healthGrid.classList.remove(
+                            "is-changing"
+                        );
+
+
+                        businessGrid.classList.remove(
+                            "is-changing"
+                        );
+
+                    }
+                );
+
+            },
+            400
+        );
+
+    },
+    10000
+);
 
 
 /* =========================================
    ADD TO CART
 ========================================= */
 
-productsGrid.addEventListener(
+document.addEventListener(
     "click",
     function(event){
 
