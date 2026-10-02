@@ -1,5 +1,6 @@
 <!-- =========================================
-     PART 1 — FREEBIE.HTML
+     THEBESTBUNDLE — FREE RESOURCES
+     FILE: freebie.html
 ========================================= -->
 
 <!DOCTYPE html>
@@ -19,7 +20,7 @@
 
 <meta
     name="description"
-    content="Explore free digital resources from TheBestBundle including free eBooks, templates, courses and downloadable content.">
+    content="Explore free digital resources from TheBestBundle including free eBooks, guides, templates and downloadable content.">
 
 <meta
     name="theme-color"
@@ -41,21 +42,53 @@
     href="/thebestbundle/images/favicon.png">
 
 <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com">
+
+<link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+<link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+
 <style>
 
+/* =========================================
+   ROOT
+========================================= */
+
 :root{
+
     --navy:#071A33;
-    --gold:#F4C542;
-    --gold-dark:#D9A91A;
+    --gold:#C8A45D;
+    --gold-light:#E1C77E;
+
+    --cream:#F8F5ED;
     --white:#FFFFFF;
-    --off-white:#F8FAFC;
-    --text-gray:#64748B;
-    --border:#E2E8F0;
-    --max-width:1100px;
+
+    --text:#071A33;
+    --gray:#6B7280;
+
+    --border:#E8E3D8;
+
+    --shadow:
+        0 14px 35px rgba(7,26,51,.08);
+
+    --max-width:1180px;
 }
+
+
+/* =========================================
+   RESET
+========================================= */
 
 *{
     margin:0;
@@ -63,255 +96,1059 @@
     box-sizing:border-box;
 }
 
-body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:var(--white);
-    color:var(--navy);
-    line-height:1.6;
+
+html{
+    scroll-behavior:smooth;
 }
+
+
+body{
+
+    font-family:
+        "Montserrat",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:var(--cream);
+
+    color:var(--text);
+
+    line-height:1.6;
+
+    -webkit-font-smoothing:antialiased;
+}
+
 
 img{
     max-width:100%;
     display:block;
 }
 
+
 a{
     color:inherit;
     text-decoration:none;
 }
+
 
 button{
     font:inherit;
     cursor:pointer;
 }
 
+
+/* =========================================
+   CONTAINER
+========================================= */
+
 .container{
-    width:90%;
-    max-width:var(--max-width);
+
+    width:min(
+        calc(100% - 40px),
+        var(--max-width)
+    );
+
     margin:0 auto;
 }
 
-.freebie-eyebrow{
-  color:var(--gold);
-  font-size:16px;
-  font-weight:800;
-  letter-spacing:3px;
-  text-transform:uppercase;
-  margin-bottom:18px;
-}
-     
-/* HEADER */
+
+/* =========================================
+   HEADER
+========================================= */
 
 .page-header{
+
     background:var(--navy);
+
     color:var(--white);
+
+    position:relative;
+
+    z-index:20;
 }
 
+
 .header-inner{
-    min-height:90px;
+
+    min-height:86px;
+
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
 }
 
-.header-logo img{
-    height:56px;
-    width:auto;
+
+.header-logo{
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size:34px;
+
+    font-weight:700;
+
+    color:var(--gold);
+
+    letter-spacing:.3px;
+
+    white-space:nowrap;
 }
 
-.home-button{
+
+.header-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+}
+
+
+.header-icon{
+
     width:46px;
     height:46px;
+
     display:flex;
+
     align-items:center;
     justify-content:center;
-    border-radius:8px;
+
+    border-radius:10px;
+
     color:var(--white);
-    font-size:23px;
+
+    font-size:19px;
+
+    position:relative;
+
+    transition:
+        background .2s ease,
+        color .2s ease;
 }
 
-.home-button:hover{
+
+.header-icon:hover{
+
     background:rgba(255,255,255,.08);
+
     color:var(--gold);
 }
 
-/* BACK */
+
+/* =========================================
+   CART BADGE
+========================================= */
+
+.cart-badge{
+
+    position:absolute;
+
+    top:3px;
+    right:2px;
+
+    min-width:18px;
+    height:18px;
+
+    padding:0 5px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:20px;
+
+    background:var(--gold);
+
+    color:var(--navy);
+
+    font-size:10px;
+
+    font-weight:800;
+
+    line-height:1;
+}
+
+
+/* =========================================
+   BACK ROW
+========================================= */
 
 .back-row{
-    background:var(--white);
+
+    background:var(--cream);
+
     border-bottom:1px solid var(--border);
 }
 
+
 .back-inner{
-    min-height:60px;
+
+    min-height:58px;
+
     display:flex;
+
     align-items:center;
 }
+
 
 .back-button{
+
     display:inline-flex;
+
     align-items:center;
+
     gap:9px;
+
     border:none;
+
     background:transparent;
+
     color:var(--navy);
+
+    font-size:13px;
+
     font-weight:700;
+
+    transition:color .2s ease;
 }
+
 
 .back-button:hover{
-    color:var(--gold-dark);
+
+    color:var(--gold);
 }
 
-/* HERO */
+
+/* =========================================
+   HERO
+========================================= */
 
 .freebie-hero{
-    background:var(--navy);
-    color:var(--white);
-    padding:80px 0;
+
+    background:var(--cream);
+
     text-align:center;
+
+    padding:
+        72px
+        0
+        58px;
 }
 
+
 .freebie-content{
-    max-width:760px;
+
+    max-width:820px;
+
     margin:0 auto;
 }
 
-.freebie-content h1{
-    font-size:clamp(42px,6vw,60px);
-    margin-bottom:22px;
+
+.freebie-eyebrow{
+
+    color:var(--gold);
+
+    font-size:13px;
+
+    font-weight:800;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    margin-bottom:15px;
 }
 
+
+.freebie-content h1{
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(46px,7vw,68px);
+
+    line-height:1.05;
+
+    font-weight:600;
+
+    color:var(--navy);
+
+    margin-bottom:20px;
+}
+
+
 .freebie-content p{
-    color:rgba(255,255,255,.85);
-    font-size:18px;
+
+    max-width:700px;
+
+    margin:0 auto;
+
+    color:var(--gray);
+
+    font-size:16px;
+
     line-height:1.8;
 }
 
-/* PRODUCTS */
+
+/* =========================================
+   QUICK NAV
+========================================= */
+
+.quick-nav{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-top:30px;
+}
+
+
+.quick-nav a{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-height:42px;
+
+    padding:
+        0
+        20px;
+
+    border:1px solid var(--border);
+
+    border-radius:30px;
+
+    background:var(--white);
+
+    color:var(--navy);
+
+    font-size:12px;
+
+    font-weight:700;
+
+    transition:
+        background .2s ease,
+        color .2s ease,
+        border-color .2s ease;
+}
+
+
+.quick-nav a:hover{
+
+    background:var(--navy);
+
+    color:var(--white);
+
+    border-color:var(--navy);
+}
+
+
+/* =========================================
+   PRODUCTS SECTION
+========================================= */
 
 .products{
-    background:var(--off-white);
-    padding:80px 0;
+
+    background:var(--white);
+
+    padding:
+        76px
+        0
+        90px;
 }
 
-.products-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:28px;
-}
 
-.product-card{
-    background:#fff;
-    border:1px solid var(--border);
-    border-radius:14px;
-    padding:30px;
+.section-heading{
+
     text-align:center;
+
+    max-width:760px;
+
+    margin:
+        0 auto
+        48px;
 }
 
-.product-card img{
-    max-width:250px;
-    margin:0 auto 25px;
+
+.section-kicker{
+
+    color:var(--gold);
+
+    font-size:12px;
+
+    font-weight:800;
+
+    letter-spacing:2.5px;
+
+    text-transform:uppercase;
+
+    margin-bottom:10px;
 }
 
-.product-card h3{
+
+.section-heading h2{
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    color:var(--navy);
+
+    font-size:
+        clamp(34px,5vw,48px);
+
+    line-height:1.1;
+
+    font-weight:600;
+
     margin-bottom:12px;
 }
 
-.product-card p{
-    color:var(--text-gray);
-    margin-bottom:22px;
+
+.section-heading p{
+
+    color:var(--gray);
+
+    font-size:14px;
+
+    line-height:1.8;
 }
 
-.read-button{
-    display:inline-flex;
+
+/* =========================================
+   PRODUCT GRID
+========================================= */
+
+.products-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,minmax(0,1fr));
+
+    gap:24px;
+}
+
+
+/* =========================================
+   PRODUCT CARD
+========================================= */
+
+.product-card{
+
+    background:var(--white);
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+
+.product-card:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 20px 42px rgba(7,26,51,.12);
+}
+
+
+/* =========================================
+   PRODUCT IMAGE
+========================================= */
+
+.product-image{
+
+    background:#F4EFE5;
+
+    padding:28px;
+
+    min-height:300px;
+
+    display:flex;
+
     align-items:center;
+
     justify-content:center;
-    min-height:52px;
-    padding:0 30px;
-    border-radius:8px;
-    background:var(--gold);
-    color:var(--navy);
-    font-weight:900;
 }
 
-.read-button:hover{
-    background:var(--gold-dark);
+
+.product-image img{
+
+    width:100%;
+
+    max-width:240px;
+
+    max-height:280px;
+
+    object-fit:contain;
+
+    border-radius:5px;
 }
 
-/* FOOTER */
 
-.footer{
-    padding:35px 0;
-    background:var(--navy);
-    color:#fff;
+/* =========================================
+   PRODUCT CONTENT
+========================================= */
+
+.product-content{
+
+    padding:
+        25px
+        24px
+        26px;
+
     text-align:center;
 }
 
-.footer-tagline{
+
+.product-label{
+
     color:var(--gold);
+
+    font-size:10px;
+
     font-weight:800;
-    letter-spacing:1px;
-    margin-bottom:7px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    margin-bottom:9px;
 }
 
-.footer p{
-    color:rgba(255,255,255,.7);
-    font-size:13px;
+
+.product-card h3{
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    color:var(--navy);
+
+    font-size:26px;
+
+    line-height:1.15;
+
+    font-weight:600;
+
+    margin-bottom:20px;
 }
+
+
+/* =========================================
+   READ BUTTON
+========================================= */
+
+.read-button{
+
+    width:100%;
+
+    min-height:50px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:9px;
+
+    border-radius:10px;
+
+    background:var(--gold);
+
+    color:var(--navy);
+
+    font-size:12px;
+
+    font-weight:800;
+
+    letter-spacing:.2px;
+
+    transition:
+        background .2s ease,
+        transform .2s ease;
+}
+
+
+.read-button:hover{
+
+    background:var(--gold-light);
+
+    transform:translateY(-1px);
+}
+
+
+/* =========================================
+   TRUST SECTION
+========================================= */
+
+.trust-section{
+
+    background:var(--cream);
+
+    padding:
+        65px
+        0
+        70px;
+
+    text-align:center;
+}
+
+
+.trust-heading{
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    color:var(--navy);
+
+    font-size:34px;
+
+    font-weight:600;
+
+    margin-bottom:32px;
+}
+
+
+.trust-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:18px;
+}
+
+
+.trust-item{
+
+    background:var(--white);
+
+    border:1px solid var(--border);
+
+    border-radius:15px;
+
+    padding:25px 18px;
+}
+
+
+.trust-item i{
+
+    color:var(--gold);
+
+    font-size:21px;
+
+    margin-bottom:12px;
+}
+
+
+.trust-item h4{
+
+    color:var(--navy);
+
+    font-size:13px;
+
+    font-weight:800;
+
+    margin-bottom:5px;
+}
+
+
+.trust-item p{
+
+    color:var(--gray);
+
+    font-size:11px;
+
+    line-height:1.6;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer{
+
+    background:var(--navy);
+
+    color:var(--white);
+
+    text-align:center;
+
+    padding:
+        36px
+        0;
+}
+
+
+.footer-tagline{
+
+    color:var(--gold);
+
+    font-size:12px;
+
+    font-weight:800;
+
+    letter-spacing:2px;
+
+    margin-bottom:8px;
+}
+
+
+.footer p{
+
+    color:rgba(255,255,255,.65);
+
+    font-size:11px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
 
 @media(max-width:900px){
 
-.products-grid{
-grid-template-columns:repeat(2,1fr);
-}
+    .products-grid{
+
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+    }
+
+    .trust-grid{
+
+        grid-template-columns:
+            repeat(3,1fr);
+    }
 
 }
 
-@media(max-width:700px){
 
-.header-logo img{
-    height:42px;
+@media(max-width:650px){
+
+    .container{
+
+        width:min(
+            calc(100% - 30px),
+            var(--max-width)
+        );
+    }
+
+
+    .header-inner{
+
+        min-height:76px;
+    }
+
+
+    .header-logo{
+
+        font-size:29px;
+    }
+
+
+    .header-icon{
+
+        width:42px;
+        height:42px;
+    }
+
+
+    .freebie-hero{
+
+        padding:
+            58px
+            0
+            45px;
+    }
+
+
+    .freebie-content h1{
+
+        font-size:48px;
+    }
+
+
+    .freebie-content p{
+
+        font-size:14px;
+    }
+
+
+    .quick-nav{
+
+        gap:8px;
+    }
+
+
+    .quick-nav a{
+
+        padding:
+            0
+            16px;
+
+        font-size:11px;
+    }
+
+
+    .products{
+
+        padding:
+            58px
+            0
+            65px;
+    }
+
+
+    .section-heading{
+
+        margin-bottom:34px;
+    }
+
+
+    .section-heading h2{
+
+        font-size:38px;
+    }
+
+
+    .section-heading p{
+
+        font-size:13px;
+    }
+
+
+    .products-grid{
+
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+
+        gap:12px;
+    }
+
+
+    .product-image{
+
+        min-height:205px;
+
+        padding:15px;
+    }
+
+
+    .product-image img{
+
+        max-width:150px;
+
+        max-height:190px;
+    }
+
+
+    .product-content{
+
+        padding:
+            17px
+            12px
+            15px;
+    }
+
+
+    .product-label{
+
+        font-size:8px;
+
+        letter-spacing:1.5px;
+
+        margin-bottom:7px;
+    }
+
+
+    .product-card h3{
+
+        font-size:21px;
+
+        margin-bottom:15px;
+    }
+
+
+    .read-button{
+
+        min-height:45px;
+
+        font-size:10px;
+
+        border-radius:8px;
+    }
+
+
+    .trust-section{
+
+        padding:
+            48px
+            0
+            55px;
+    }
+
+
+    .trust-heading{
+
+        font-size:30px;
+
+        margin-bottom:24px;
+    }
+
+
+    .trust-grid{
+
+        grid-template-columns:1fr;
+
+        gap:10px;
+    }
+
+
+    .trust-item{
+
+        padding:20px;
+    }
+
 }
 
-.products-grid{
-grid-template-columns:1fr;
-}
+
+@media(max-width:380px){
+
+    .header-logo{
+
+        font-size:26px;
+    }
+
+
+    .products-grid{
+
+        gap:10px;
+    }
+
+
+    .product-content{
+
+        padding-left:9px;
+        padding-right:9px;
+    }
+
+
+    .product-card h3{
+
+        font-size:19px;
+    }
 
 }
 
 </style>
 
-     <body>
+</head>
 
+
+<body>
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
 
 <header class="page-header">
 
     <div class="container header-inner">
 
+
         <a
             href="index.html"
             class="header-logo">
 
-            <img
-                src="images/Thebestbundle-transparent-logo.png"
-                alt="TheBestBundle">
+            TheBestBundle
 
         </a>
 
 
-        <a
-            href="index.html"
-            class="home-button"
-            aria-label="Return Home">
+        <div class="header-actions">
 
-            <i class="fa-solid fa-house"></i>
 
-        </a>
+            <!-- HOME -->
+
+            <a
+                href="index.html"
+                class="header-icon"
+                aria-label="Home">
+
+                <i class="fa-solid fa-house"></i>
+
+            </a>
+
+
+            <!-- CART -->
+
+            <a
+                href="cart.html"
+                class="header-icon"
+                aria-label="Shopping Cart">
+
+                <i class="fa-solid fa-bag-shopping"></i>
+
+                <span
+                    class="cart-badge"
+                    id="cartCount">
+
+                    0
+
+                </span>
+
+            </a>
+
+
+        </div>
 
     </div>
 
 </header>
 
+
+
+<!-- =========================================
+     BACK
+========================================= -->
 
 <div class="back-row">
 
@@ -333,85 +1170,173 @@ grid-template-columns:1fr;
 </div>
 
 
+
 <main>
 
-     <section class="freebie-hero">
+
+<!-- =========================================
+     HERO
+========================================= -->
+
+<section class="freebie-hero">
 
     <div class="container">
 
         <div class="freebie-content">
 
-            <div class="freebie-eyebrow">THEBESTBUNDLE</div>
-               <h1>Free Resources</h1>
+
+            <div class="freebie-eyebrow">
+
+                THEBESTBUNDLE • FREE RESOURCES
+
+            </div>
+
+
+            <h1>
+
+                Free Resources
+
+            </h1>
+
 
             <p>
 
-                Discover free digital resources from
-                TheBestBundle.
+                Discover valuable digital resources
+                created to help you learn, grow,
+                and take the next step on your journey —
+                completely free.
 
-                Explore premium eBooks,
-                templates,
-                courses,
-                and other downloadable content—
-                all completely free.
+            </p>
+
+
+            <!-- QUICK NAV -->
+
+            <nav
+                class="quick-nav"
+                aria-label="Free Resources navigation">
+
+                <a href="#free-ebooks">
+
+                    Free eBooks
+
+                </a>
+
+            </nav>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     FREE EBOOKS
+========================================= -->
+
+<section
+    class="products"
+    id="free-ebooks">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+
+            <div class="section-kicker">
+
+                FREE • LEARN • GROW
+
+            </div>
+
+
+            <h2>
+
+                Free eBooks
+
+            </h2>
+
+
+            <p>
+
+                Start exploring with our collection
+                of free digital resources designed
+                to provide practical value.
 
             </p>
 
         </div>
 
-    </div>
 
-</section>
-
-     <section class="products">
-
-    <div class="container">
 
         <div class="products-grid">
 
 
-            <!-- FREE RESOURCE #1 -->
+            <!-- =================================
+                 FREE RESOURCE #1
+            ================================== -->
 
-            <div class="product-card">
-
-                <img
-                    src="images/welcome-freebie-ebook.png"
-                    alt="Welcome to TheBestBundle">
-
-                <h3>
-
-                    Welcome to
-                    TheBestBundle
-
-                </h3>
-
-                <p>
-
-                   Start your journey with our
-                    official 20-Page Welcome Guide.
- 
-                </p>
-
-                <a
-                    href="https://drive.google.com/file/d/1i9IPWp2FhUVRloUUCy4Vr-bKgRBOehad"
-                    class="read-button"
-                    target="_blank"
-                    rel="noopener noreferrer">
-
-                    Read Now
-
-                </a>
-
-            </div>
+            <article class="product-card">
 
 
-            <!--
-            FUTURE FREE RESOURCES
+                <div class="product-image">
+
+                    <img
+                        src="images/welcome-freebie-ebook.png"
+                        alt="Welcome to TheBestBundle Free eBook"
+                        loading="lazy">
+
+                </div>
+
+
+                <div class="product-content">
+
+
+                    <div class="product-label">
+
+                        FREE EBOOK
+
+                    </div>
+
+
+                    <h3>
+
+                        Welcome to
+                        TheBestBundle
+
+                    </h3>
+
+
+                    <a
+                        href="https://drive.google.com/file/d/1i9IPWp2FhUVRloUUCy4Vr-bKgRBOehad"
+                        class="read-button"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        <i class="fa-solid fa-book-open"></i>
+
+                        Read Now
+
+                    </a>
+
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================
+                 FUTURE FREE RESOURCES
+            ==================================
 
             Copy the product-card above
-            for every new free resource.
+            for future free resources.
 
-            -->
+            ================================== -->
+
 
         </div>
 
@@ -419,12 +1344,107 @@ grid-template-columns:1fr;
 
 </section>
 
-     </main>
 
+
+<!-- =========================================
+     TRUST
+========================================= -->
+
+<section class="trust-section">
+
+    <div class="container">
+
+
+        <h2 class="trust-heading">
+
+            Why Explore TheBestBundle?
+
+        </h2>
+
+
+        <div class="trust-grid">
+
+
+            <div class="trust-item">
+
+                <i class="fa-solid fa-gift"></i>
+
+                <h4>
+
+                    Free Resources
+
+                </h4>
+
+                <p>
+
+                    Valuable digital content
+                    available at no cost.
+
+                </p>
+
+            </div>
+
+
+            <div class="trust-item">
+
+                <i class="fa-solid fa-bolt"></i>
+
+                <h4>
+
+                    Instant Access
+
+                </h4>
+
+                <p>
+
+                    Access your free resource
+                    directly online.
+
+                </p>
+
+            </div>
+
+
+            <div class="trust-item">
+
+                <i class="fa-solid fa-book-open"></i>
+
+                <h4>
+
+                    Learn & Grow
+
+                </h4>
+
+                <p>
+
+                    Practical resources created
+                    to support your journey.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+</main>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
 
 <footer class="footer">
 
     <div class="container">
+
 
         <div class="footer-tagline">
 
@@ -432,18 +1452,29 @@ grid-template-columns:1fr;
 
         </div>
 
+
         <p>
 
             © 2026 TheBestBundle. All Rights Reserved.
 
         </p>
 
+
     </div>
 
 </footer>
 
 
+
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
+
 <script>
+
+/* =========================================
+   BACK BUTTON
+========================================= */
 
 function returnToPreviousPage(){
 
@@ -458,6 +1489,72 @@ function returnToPreviousPage(){
     }
 
 }
+
+
+/* =========================================
+   CART COUNT
+========================================= */
+
+const CART_KEY = "theBestBundleCart";
+
+
+function updateCartCount(){
+
+    try{
+
+        const cart =
+            JSON.parse(
+                localStorage.getItem(CART_KEY)
+            ) || [];
+
+        const count =
+            cart.reduce(
+                (total,item) =>
+                    total + (item.quantity || 1),
+                0
+            );
+
+        const cartCount =
+            document.getElementById("cartCount");
+
+        if(cartCount){
+
+            cartCount.textContent = count;
+
+            cartCount.style.display =
+                count > 0
+                    ? "flex"
+                    : "none";
+
+        }
+
+    }catch(error){
+
+        console.error(
+            "Unable to read cart:",
+            error
+        );
+
+    }
+
+}
+
+
+/* =========================================
+   INITIALIZE
+========================================= */
+
+updateCartCount();
+
+
+/* =========================================
+   UPDATE IF CART CHANGES
+========================================= */
+
+window.addEventListener(
+    "storage",
+    updateCartCount
+);
 
 </script>
 
