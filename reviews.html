@@ -222,8 +222,6 @@ img{
 
     font-size:18px;
 
-    position:relative;
-
     transition:.2s ease;
 }
 
@@ -233,37 +231,6 @@ img{
     color:var(--gold);
 
     background:rgba(255,255,255,.08);
-}
-
-
-.cart-badge{
-
-    position:absolute;
-
-    top:-2px;
-    right:-2px;
-
-    min-width:18px;
-    height:18px;
-
-    padding:0 5px;
-
-    display:flex;
-
-    align-items:center;
-    justify-content:center;
-
-    border-radius:50%;
-
-    background:var(--gold);
-
-    color:var(--navy);
-
-    font-size:10px;
-
-    font-weight:800;
-
-    line-height:1;
 }
 
 
@@ -1227,8 +1194,12 @@ img{
     </a>
 
 
-    <div class="header-actions">
+    <!-- =====================================
+         HOME ONLY
+         NO CART ON REVIEWS PAGE
+    ====================================== -->
 
+    <div class="header-actions">
 
         <a
             href="index.html"
@@ -1239,26 +1210,8 @@ img{
 
         </a>
 
-
-        <a
-            href="cart.html"
-            class="header-icon"
-            aria-label="Shopping Cart">
-
-            <i class="fa-solid fa-cart-shopping"></i>
-
-            <span
-                class="cart-badge"
-                id="cartCount">
-
-                0
-
-            </span>
-
-        </a>
-
-
     </div>
+
 
 </div>
 
@@ -1879,59 +1832,11 @@ img{
 
 
 <!-- =========================================
-     CART SCRIPT
+     BACK SCRIPT ONLY
+     NO CART SCRIPT
 ========================================= -->
 
 <script>
-
-const CART_KEY = "theBestBundleCart";
-
-
-function updateCartCount(){
-
-    const cartCount =
-        document.getElementById("cartCount");
-
-    if(!cartCount){
-        return;
-    }
-
-
-    let cart = [];
-
-
-    try{
-
-        cart =
-            JSON.parse(
-                localStorage.getItem(CART_KEY)
-            ) || [];
-
-    }catch(error){
-
-        cart = [];
-
-    }
-
-
-    cartCount.textContent =
-        cart.length;
-
-
-    if(cart.length > 0){
-
-        cartCount.style.display =
-            "flex";
-
-    }else{
-
-        cartCount.style.display =
-            "none";
-
-    }
-
-}
-
 
 function returnToPreviousPage(){
 
@@ -1947,19 +1852,6 @@ function returnToPreviousPage(){
     }
 
 }
-
-
-document.addEventListener(
-    "DOMContentLoaded",
-    updateCartCount
-);
-
-
-window.addEventListener(
-    "storage",
-    updateCartCount
-);
-
 
 </script>
 
