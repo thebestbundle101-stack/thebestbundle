@@ -20,11 +20,16 @@
 
 <meta
     name="description"
-    content="Explore upcoming educational courses from TheBestBundle designed to help you learn, create and grow.">
+    content="Explore educational courses from TheBestBundle designed to help you learn, create and grow.">
 
 <meta
     name="theme-color"
     content="#071A33">
+
+
+<!-- =========================================
+     FAVICON
+========================================= -->
 
 <link
     rel="icon"
@@ -42,7 +47,9 @@
     href="/thebestbundle/images/favicon.png">
 
 
-<!-- GOOGLE FONTS -->
+<!-- =========================================
+     GOOGLE FONTS
+========================================= -->
 
 <link
     rel="preconnect"
@@ -58,7 +65,9 @@
     rel="stylesheet">
 
 
-<!-- FONT AWESOME -->
+<!-- =========================================
+     FONT AWESOME
+========================================= -->
 
 <link
     rel="stylesheet"
@@ -148,14 +157,9 @@ a{
 }
 
 
-button,
-input{
+button{
 
     font:inherit;
-}
-
-
-button{
 
     cursor:pointer;
 }
@@ -492,10 +496,10 @@ button{
 
 
 /* =========================================
-   COMING SOON SECTION
+   COURSES INTRO
 ========================================= */
 
-.coming-section{
+.courses-section{
 
     background:var(--white);
 
@@ -514,7 +518,7 @@ button{
 
     margin:
         0 auto
-        45px;
+        48px;
 }
 
 
@@ -565,10 +569,10 @@ button{
 
 
 /* =========================================
-   COMING SOON CARD
+   COURSE INTRO CARD
 ========================================= */
 
-.coming-card{
+.course-intro-card{
 
     max-width:850px;
 
@@ -581,7 +585,7 @@ button{
     border-radius:18px;
 
     padding:
-        50px
+        48px
         40px;
 
     text-align:center;
@@ -590,41 +594,33 @@ button{
 }
 
 
-.coming-badge{
+.course-intro-icon{
 
-    display:inline-flex;
+    width:70px;
+
+    height:70px;
+
+    margin:
+        0 auto
+        22px;
+
+    display:flex;
 
     align-items:center;
 
     justify-content:center;
 
-    gap:8px;
+    border-radius:50%;
 
-    min-height:40px;
+    background:var(--navy);
 
-    padding:
-        0
-        18px;
+    color:var(--gold);
 
-    margin-bottom:23px;
-
-    border-radius:30px;
-
-    background:var(--gold);
-
-    color:var(--navy);
-
-    font-size:11px;
-
-    font-weight:800;
-
-    letter-spacing:1px;
-
-    text-transform:uppercase;
+    font-size:28px;
 }
 
 
-.coming-card h3{
+.course-intro-card h3{
 
     font-family:
         "Cormorant Garamond",
@@ -634,7 +630,7 @@ button{
     color:var(--navy);
 
     font-size:
-        clamp(32px,5vw,45px);
+        clamp(32px,5vw,44px);
 
     line-height:1.1;
 
@@ -644,13 +640,12 @@ button{
 }
 
 
-.coming-card > p{
+.course-intro-card > p{
 
     max-width:650px;
 
     margin:
-        0 auto
-        38px;
+        0 auto;
 
     color:var(--gray);
 
@@ -661,10 +656,12 @@ button{
 
 
 /* =========================================
-   COURSE FEATURES
+   COURSE VALUES
 ========================================= */
 
-.course-features{
+.course-values{
+
+    margin-top:38px;
 
     display:grid;
 
@@ -675,7 +672,7 @@ button{
 }
 
 
-.feature{
+.value-card{
 
     background:var(--cream);
 
@@ -684,36 +681,41 @@ button{
     border-radius:15px;
 
     padding:
-        27px
-        17px;
+        28px
+        18px;
 
     text-align:center;
 }
 
 
-.feature i{
+.value-icon{
 
     color:var(--gold);
 
-    font-size:23px;
+    font-size:24px;
 
     margin-bottom:13px;
 }
 
 
-.feature h4{
+.value-card h3{
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
 
     color:var(--navy);
 
-    font-size:13px;
+    font-size:26px;
 
-    font-weight:800;
+    font-weight:600;
 
     margin-bottom:7px;
 }
 
 
-.feature p{
+.value-card p{
 
     color:var(--gray);
 
@@ -747,12 +749,6 @@ button{
         42px;
 
     text-align:center;
-}
-
-
-.mission-heading .section-kicker{
-
-    margin-bottom:10px;
 }
 
 
@@ -874,147 +870,6 @@ button{
 
 
 /* =========================================
-   NOTIFY SECTION
-========================================= */
-
-.notify-section{
-
-    background:var(--navy);
-
-    color:var(--white);
-
-    padding:
-        70px
-        0
-        75px;
-
-    text-align:center;
-}
-
-
-.notify-section .section-kicker{
-
-    color:var(--gold-light);
-}
-
-
-.notify-section h2{
-
-    font-family:
-        "Cormorant Garamond",
-        Georgia,
-        serif;
-
-    font-size:
-        clamp(36px,5vw,48px);
-
-    line-height:1.1;
-
-    font-weight:600;
-
-    margin-bottom:12px;
-}
-
-
-.notify-section h2 span{
-
-    color:var(--gold-light);
-}
-
-
-.notify-section > .container > p{
-
-    max-width:650px;
-
-    margin:
-        0 auto
-        28px;
-
-    color:rgba(255,255,255,.72);
-
-    font-size:13px;
-
-    line-height:1.8;
-}
-
-
-.notify-form{
-
-    max-width:540px;
-
-    margin:0 auto;
-
-    display:flex;
-
-    gap:10px;
-}
-
-
-.notify-form input{
-
-    flex:1;
-
-    min-width:0;
-
-    min-height:50px;
-
-    padding:
-        0
-        16px;
-
-    border:none;
-
-    border-radius:10px;
-
-    background:var(--white);
-
-    color:var(--navy);
-
-    outline:none;
-}
-
-
-.notify-form input::placeholder{
-
-    color:#8A94A3;
-}
-
-
-.notify-form button{
-
-    min-height:50px;
-
-    padding:
-        0
-        22px;
-
-    border:none;
-
-    border-radius:10px;
-
-    background:var(--gold);
-
-    color:var(--navy);
-
-    font-size:12px;
-
-    font-weight:800;
-
-    transition:
-        background .2s ease,
-        transform .2s ease;
-}
-
-
-.notify-form button:hover{
-
-    background:var(--gold-light);
-
-    transform:translateY(-1px);
-}
-
-
-/* =========================================
    TRUST SECTION
 ========================================= */
 
@@ -1023,7 +878,7 @@ button{
     background:var(--cream);
 
     padding:
-        65px
+        5px
         0
         70px;
 
@@ -1149,7 +1004,7 @@ button{
 
 @media(max-width:900px){
 
-    .course-features{
+    .course-values{
 
         grid-template-columns:
             repeat(3,minmax(0,1fr));
@@ -1244,7 +1099,7 @@ button{
     }
 
 
-    .coming-section{
+    .courses-section{
 
         padding:
             58px
@@ -1271,7 +1126,7 @@ button{
     }
 
 
-    .coming-card{
+    .course-intro-card{
 
         padding:
             38px
@@ -1279,32 +1134,32 @@ button{
     }
 
 
-    .coming-card h3{
+    .course-intro-card h3{
 
         font-size:36px;
     }
 
 
-    .coming-card > p{
+    .course-intro-card > p{
 
         font-size:13px;
-
-        margin-bottom:30px;
     }
 
 
-    .course-features{
+    .course-values{
 
         grid-template-columns:1fr;
 
         gap:10px;
+
+        margin-top:30px;
     }
 
 
-    .feature{
+    .value-card{
 
         padding:
-            21px
+            22px
             16px;
     }
 
@@ -1340,40 +1195,10 @@ button{
     }
 
 
-    .notify-section{
-
-        padding:
-            55px
-            0
-            60px;
-    }
-
-
-    .notify-section h2{
-
-        font-size:40px;
-    }
-
-
-    .notify-form{
-
-        flex-direction:column;
-
-        gap:10px;
-    }
-
-
-    .notify-form input,
-    .notify-form button{
-
-        width:100%;
-    }
-
-
     .trust-section{
 
         padding:
-            48px
+            0
             0
             55px;
     }
@@ -1421,7 +1246,7 @@ button{
     }
 
 
-    .coming-card h3{
+    .course-intro-card h3{
 
         font-size:32px;
     }
@@ -1565,11 +1390,12 @@ button{
                 class="quick-nav"
                 aria-label="Courses navigation">
 
-                <a href="#coming-soon">
+                <a href="#courses">
 
                     Courses
 
                 </a>
+
 
                 <a href="#mission">
 
@@ -1589,12 +1415,12 @@ button{
 
 
 <!-- =========================================
-     COMING SOON
+     COURSES
 ========================================= -->
 
 <section
-    class="coming-section"
-    id="coming-soon">
+    class="courses-section"
+    id="courses">
 
     <div class="container">
 
@@ -1611,15 +1437,17 @@ button{
 
             <h2>
 
-                Courses Coming Soon
+                Explore Our Courses
 
             </h2>
 
 
             <p>
 
-                A new learning experience is being
-                developed for the TheBestBundle collection.
+                Educational experiences created to
+                help you build knowledge, develop
+                practical skills and move forward
+                with confidence.
 
             </p>
 
@@ -1627,99 +1455,122 @@ button{
 
 
 
-        <div class="coming-card">
+        <!-- COURSE INTRO -->
+
+        <div class="course-intro-card">
 
 
-            <div class="coming-badge">
+            <div class="course-intro-icon">
 
-                <i class="fa-solid fa-clock"></i>
-
-                Coming Soon
+                <i class="fa-solid fa-graduation-cap"></i>
 
             </div>
 
 
             <h3>
 
-                Something New Is Being Built
+                Learn With TheBestBundle
 
             </h3>
 
 
             <p>
 
-                TheBestBundle Courses are part of our
-                future expansion. We're building this
-                section to bring structured educational
-                resources together with our growing
-                collection of digital products.
+                Our courses are designed to bring
+                practical digital learning together
+                with the same simple, useful and
+                professional experience found
+                throughout TheBestBundle collection.
 
             </p>
 
 
-            <div class="course-features">
+
+            <!-- COURSE VALUES -->
+
+            <div class="course-values">
 
 
-                <!-- FEATURE 1 -->
+                <!-- LEARNING -->
 
-                <div class="feature">
+                <div class="value-card">
 
-                    <i class="fa-solid fa-laptop"></i>
+                    <div class="value-icon">
 
-                    <h4>
+                        <i class="fa-solid fa-book-open"></i>
 
-                        Digital Learning
+                    </div>
 
-                    </h4>
+
+                    <h3>
+
+                        Learn
+
+                    </h3>
+
 
                     <p>
 
-                        Convenient educational resources
-                        designed for online access.
+                        Discover useful information
+                        and develop practical knowledge.
 
                     </p>
 
                 </div>
 
 
-                <!-- FEATURE 2 -->
 
-                <div class="feature">
+                <!-- CREATE -->
 
-                    <i class="fa-solid fa-list-check"></i>
+                <div class="value-card">
 
-                    <h4>
+                    <div class="value-icon">
 
-                        Practical Lessons
+                        <i class="fa-solid fa-lightbulb"></i>
 
-                    </h4>
+                    </div>
+
+
+                    <h3>
+
+                        Create
+
+                    </h3>
+
 
                     <p>
 
-                        Structured learning focused on
-                        useful and actionable knowledge.
+                        Turn ideas and knowledge
+                        into practical projects.
 
                     </p>
 
                 </div>
 
 
-                <!-- FEATURE 3 -->
 
-                <div class="feature">
+                <!-- GROW -->
 
-                    <i class="fa-solid fa-chart-line"></i>
+                <div class="value-card">
 
-                    <h4>
+                    <div class="value-icon">
 
-                        Keep Growing
+                        <i class="fa-solid fa-arrow-trend-up"></i>
 
-                    </h4>
+                    </div>
+
+
+                    <h3>
+
+                        Grow
+
+                    </h3>
+
 
                     <p>
 
-                        New learning opportunities designed
-                        around our Learn • Create • Grow mission.
+                        Continue developing your
+                        skills and reaching your goals.
 
                     </p>
 
@@ -1767,9 +1618,11 @@ button{
 
             <p>
 
-                Future courses will expand the
-                TheBestBundle experience beyond
-                downloadable resources.
+                TheBestBundle brings together digital
+                products and educational resources
+                around one simple idea:
+
+                Learn • Create • Grow.
 
             </p>
 
@@ -1783,6 +1636,7 @@ button{
             <!-- LEARN -->
 
             <div class="mission-card">
+
 
                 <div class="mission-icon">
 
@@ -1814,6 +1668,7 @@ button{
 
             <div class="mission-card">
 
+
                 <div class="mission-icon">
 
                     <i class="fa-solid fa-lightbulb"></i>
@@ -1843,6 +1698,7 @@ button{
             <!-- GROW -->
 
             <div class="mission-card">
+
 
                 <div class="mission-icon">
 
@@ -1878,74 +1734,6 @@ button{
 
 
 <!-- =========================================
-     NOTIFY
-========================================= -->
-
-<section class="notify-section">
-
-    <div class="container">
-
-
-        <div class="section-kicker">
-
-            STAY CONNECTED
-
-        </div>
-
-
-        <h2>
-
-            Be the First to <span>Know</span>
-
-        </h2>
-
-
-        <p>
-
-            Subscribe for TheBestBundle updates
-            and announcements as new products,
-            resources and future courses are released.
-
-        </p>
-
-
-        <form
-            class="notify-form"
-            action="https://formspree.io/f/xkodngya"
-            method="POST">
-
-
-            <input
-                type="hidden"
-                name="form_type"
-                value="TheBestBundle Course Updates">
-
-
-            <input
-                type="email"
-                name="email"
-                autocomplete="email"
-                placeholder="Enter your email"
-                aria-label="Email address"
-                required>
-
-
-            <button type="submit">
-
-                Notify Me
-
-            </button>
-
-
-        </form>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================
      TRUST
 ========================================= -->
 
@@ -1963,6 +1751,8 @@ button{
 
         <div class="trust-grid">
 
+
+            <!-- TRUST 1 -->
 
             <div class="trust-item">
 
@@ -1984,6 +1774,8 @@ button{
             </div>
 
 
+            <!-- TRUST 2 -->
+
             <div class="trust-item">
 
                 <i class="fa-solid fa-laptop"></i>
@@ -2003,6 +1795,8 @@ button{
 
             </div>
 
+
+            <!-- TRUST 3 -->
 
             <div class="trust-item">
 
