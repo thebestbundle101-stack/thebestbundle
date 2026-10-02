@@ -20,7 +20,7 @@
 
 <meta
     name="description"
-    content="Explore printable planners, trackers and professional digital templates from TheBestBundle.">
+    content="Explore premium health, wellness, beauty and business templates from TheBestBundle.">
 
 <meta
     name="theme-color"
@@ -42,6 +42,19 @@
     href="/thebestbundle/images/favicon.png">
 
 <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com">
+
+<link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+<link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -55,21 +68,29 @@
 :root{
 
     --navy:#071A33;
+
     --navy-light:#0D2B50;
 
-    --gold:#F4C542;
-    --gold-dark:#D9A91A;
+    --gold:#C8A45D;
+
+    --gold-light:#E1C77E;
+
+    --cream:#F8F5ED;
 
     --white:#FFFFFF;
-    --off-white:#F8FAFC;
 
-    --text-gray:#64748B;
+    --text:#071A33;
 
-    --border:#E2E8F0;
+    --text-gray:#667085;
+
+    --border:#E8E1D4;
+
+    --shadow:
+        0 14px 35px rgba(7,26,51,.08);
 
     --max-width:1200px;
 
-    --radius:14px;
+    --radius:22px;
 
 }
 
@@ -81,6 +102,7 @@
 *{
 
     margin:0;
+
     padding:0;
 
     box-sizing:border-box;
@@ -98,15 +120,16 @@ html{
 body{
 
     font-family:
+        "Montserrat",
         Arial,
         Helvetica,
         sans-serif;
 
     background:
-        var(--off-white);
+        var(--cream);
 
     color:
-        var(--navy);
+        var(--text);
 
     line-height:
         1.5;
@@ -143,10 +166,8 @@ button{
 
 .container{
 
-    width:90%;
-
-    max-width:
-        var(--max-width);
+    width:
+        min(92%, var(--max-width));
 
     margin:
         0 auto;
@@ -172,7 +193,7 @@ button{
 .header-inner{
 
     min-height:
-        90px;
+        96px;
 
     display:flex;
 
@@ -187,12 +208,36 @@ button{
 }
 
 
-.header-logo img{
+.header-logo{
 
-    height:
-        56px;
+    display:flex;
 
-    width:auto;
+    align-items:center;
+
+}
+
+
+.header-logo-text{
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size:
+        34px;
+
+    font-weight:
+        700;
+
+    color:
+        var(--gold-light);
+
+    letter-spacing:
+        .5px;
+
+    white-space:
+        nowrap;
 
 }
 
@@ -204,7 +249,7 @@ button{
     align-items:center;
 
     gap:
-        12px;
+        8px;
 
 }
 
@@ -228,7 +273,7 @@ button{
     border:none;
 
     border-radius:
-        8px;
+        50%;
 
     background:
         transparent;
@@ -237,18 +282,21 @@ button{
         var(--white);
 
     font-size:
-        24px;
+        20px;
+
+    transition:
+        .25s ease;
 
 }
 
 
 .header-icon:hover{
 
-    background:
-        rgba(255,255,255,.08);
-
     color:
-        var(--gold);
+        var(--gold-light);
+
+    background:
+        rgba(255,255,255,.07);
 
 }
 
@@ -261,7 +309,7 @@ button{
         0;
 
     right:
-        0;
+        -1px;
 
     min-width:
         19px;
@@ -271,6 +319,12 @@ button{
 
     padding:
         0 5px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
 
     border-radius:
         30px;
@@ -282,28 +336,22 @@ button{
         var(--navy);
 
     font-size:
-        11px;
+        10px;
 
     font-weight:
         800;
-
-    line-height:
-        19px;
 
 }
 
 
 /* =========================================
-   BACK BUTTON
+   BACK ROW
 ========================================= */
 
 .back-row{
 
     background:
-        var(--white);
-
-    border-bottom:
-        1px solid var(--border);
+        var(--cream);
 
 }
 
@@ -311,7 +359,7 @@ button{
 .back-inner{
 
     min-height:
-        60px;
+        62px;
 
     display:flex;
 
@@ -329,16 +377,22 @@ button{
     gap:
         9px;
 
-    color:
-        var(--navy);
-
-    font-weight:
-        700;
-
     border:none;
 
     background:
         transparent;
+
+    color:
+        var(--navy);
+
+    font-size:
+        13px;
+
+    font-weight:
+        700;
+
+    transition:
+        .25s ease;
 
 }
 
@@ -346,7 +400,7 @@ button{
 .back-button:hover{
 
     color:
-        var(--gold-dark);
+        var(--gold);
 
 }
 
@@ -357,30 +411,205 @@ button{
 
 .page-hero{
 
+    padding:
+        38px 0 34px;
+
+    text-align:
+        center;
+
+    background:
+        var(--cream);
+
+}
+
+
+.hero-kicker{
+
+    display:block;
+
+    margin-bottom:
+        12px;
+
+    color:
+        var(--gold);
+
+    font-size:
+        12px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        2.2px;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+.page-hero h1{
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    color:
+        var(--navy);
+
+    font-size:
+        clamp(48px,7vw,72px);
+
+    font-weight:
+        600;
+
+    line-height:
+        .98;
+
+    margin-bottom:
+        18px;
+
+}
+
+
+.page-hero p{
+
+    max-width:
+        720px;
+
+    margin:
+        0 auto;
+
+    color:
+        var(--text-gray);
+
+    font-size:
+        15px;
+
+    line-height:
+        1.75;
+
+}
+
+
+/* =========================================
+   QUICK NAV
+========================================= */
+
+.quick-nav{
+
+    padding:
+        8px 0 48px;
+
+    background:
+        var(--cream);
+
+}
+
+
+.quick-nav-inner{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:
+        12px;
+
+}
+
+
+.quick-nav a{
+
+    min-height:
+        48px;
+
+    padding:
+        0 28px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        999px;
+
+    background:
+        var(--white);
+
+    color:
+        var(--navy);
+
+    font-size:
+        12px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .4px;
+
+    box-shadow:
+        0 6px 20px rgba(7,26,51,.04);
+
+    transition:
+        .25s ease;
+
+}
+
+
+.quick-nav a:hover{
+
     background:
         var(--navy);
 
     color:
         var(--white);
 
-    padding:
-        65px 0 70px;
-
-    text-align:
-        center;
+    border-color:
+        var(--navy);
 
 }
 
 
-.page-hero span{
+/* =========================================
+   TEMPLATE CATEGORY
+========================================= */
 
-    display:block;
+.template-category{
+
+    padding:
+        10px 0 78px;
+
+}
+
+
+.category-heading{
+
+    text-align:
+        center;
+
+    margin-bottom:
+        36px;
+
+}
+
+
+.category-kicker{
 
     color:
         var(--gold);
 
     font-size:
-        14px;
+        11px;
 
     font-weight:
         800;
@@ -392,53 +621,113 @@ button{
         uppercase;
 
     margin-bottom:
-        14px;
+        9px;
 
 }
 
 
-.page-hero h1{
+.category-heading h2{
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    color:
+        var(--navy);
 
     font-size:
-        clamp(38px,7vw,64px);
+        clamp(42px,6vw,58px);
+
+    font-weight:
+        600;
 
     line-height:
-        1.1;
+        1;
 
     margin-bottom:
-        18px;
+        12px;
 
 }
 
 
-.page-hero p{
+.category-heading p{
 
     max-width:
-        700px;
+        650px;
 
     margin:
         0 auto;
 
     color:
-        rgba(255,255,255,.82);
+        var(--text-gray);
 
     font-size:
-        18px;
+        14px;
+
+    line-height:
+        1.7;
 
 }
 
 
 /* =========================================
-   PRODUCTS SECTION
+   GOLD DIVIDER
 ========================================= */
 
-.products-section{
+.category-divider{
 
-    padding:
-        55px 0 80px;
+    width:
+        62px;
+
+    height:
+        1px;
+
+    margin:
+        0 auto 42px;
+
+    background:
+        var(--gold);
+
+    position:
+        relative;
 
 }
 
+
+.category-divider::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:
+        7px;
+
+    height:
+        7px;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--gold);
+
+    top:
+        50%;
+
+    left:
+        50%;
+
+    transform:
+        translate(-50%,-50%);
+
+}
+
+
+/* =========================================
+   PRODUCTS GRID
+========================================= */
 
 .products-grid{
 
@@ -449,6 +738,22 @@ button{
 
     gap:
         24px;
+
+}
+
+
+/* =========================================
+   ROTATION
+========================================= */
+
+.products-grid.is-changing
+.product-card{
+
+    opacity:
+        0;
+
+    transform:
+        translateY(8px);
 
 }
 
@@ -470,13 +775,13 @@ button{
         var(--white);
 
     border:
-        1px solid var(--border);
+        1px solid rgba(7,26,51,.05);
 
     border-radius:
         var(--radius);
 
     box-shadow:
-        0 8px 24px rgba(7,26,51,.07);
+        var(--shadow);
 
     opacity:
         1;
@@ -486,23 +791,16 @@ button{
 
     transition:
         opacity .35s ease,
-        transform .35s ease;
+        transform .35s ease,
+        box-shadow .25s ease;
 
 }
 
 
-/* =========================================
-   ROTATION ANIMATION
-========================================= */
+.product-card:hover{
 
-.products-grid.is-changing
-.product-card{
-
-    opacity:
-        0;
-
-    transform:
-        translateY(8px);
+    box-shadow:
+        0 18px 42px rgba(7,26,51,.12);
 
 }
 
@@ -514,10 +812,10 @@ button{
 .product-image{
 
     height:
-        260px;
+        300px;
 
     padding:
-        18px;
+        22px;
 
     display:flex;
 
@@ -526,7 +824,7 @@ button{
     justify-content:center;
 
     background:
-        var(--off-white);
+        #F4F0E7;
 
 }
 
@@ -537,10 +835,10 @@ button{
         auto;
 
     max-width:
-        82%;
+        88%;
 
     height:
-        220px;
+        255px;
 
     object-fit:
         contain;
@@ -549,7 +847,7 @@ button{
 
 
 /* =========================================
-   PRODUCT INFORMATION
+   PRODUCT INFO
 ========================================= */
 
 .product-info{
@@ -560,7 +858,7 @@ button{
         column;
 
     padding:
-        18px;
+        22px;
 
     flex:1;
 
@@ -570,33 +868,19 @@ button{
 .product-label{
 
     color:
-        var(--gold-dark);
+        var(--gold);
 
     font-size:
-        11px;
+        10px;
 
     font-weight:
         800;
 
     letter-spacing:
-        1.5px;
+        1.7px;
 
     text-transform:
         uppercase;
-
-    margin-bottom:
-        6px;
-
-}
-
-
-.product-info h2{
-
-    font-size:
-        19px;
-
-    line-height:
-        1.25;
 
     margin-bottom:
         8px;
@@ -604,37 +888,41 @@ button{
 }
 
 
-/* =========================================
-   SHORT DESCRIPTION
-========================================= */
+.product-info h2{
 
-.product-info p{
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
 
     color:
-        var(--text-gray);
+        var(--navy);
 
     font-size:
-        13px;
+        25px;
+
+    font-weight:
+        600;
 
     line-height:
-        1.45;
+        1.08;
 
     margin-bottom:
-        12px;
-
-    display:
-        -webkit-box;
-
-    -webkit-box-orient:
-        vertical;
-
-    -webkit-line-clamp:
-        3;
-
-    overflow:
-        hidden;
+        16px;
 
 }
+
+
+/* =========================================
+   NO PRODUCT DESCRIPTION
+========================================= */
+
+/*
+    Descriptions remain in the JavaScript
+    product data for cart / future use,
+    but they are intentionally NOT displayed
+    on the product cards.
+*/
 
 
 /* =========================================
@@ -647,10 +935,13 @@ button{
         auto;
 
     margin-bottom:
-        12px;
+        16px;
+
+    color:
+        var(--navy);
 
     font-size:
-        23px;
+        19px;
 
     font-weight:
         800;
@@ -659,7 +950,7 @@ button{
 
 
 /* =========================================
-   PRODUCT BUTTONS
+   PRODUCT ACTIONS
 ========================================= */
 
 .product-actions{
@@ -670,7 +961,7 @@ button{
         repeat(2,minmax(0,1fr));
 
     gap:
-        8px;
+        9px;
 
 }
 
@@ -678,10 +969,10 @@ button{
 .btn{
 
     min-height:
-        44px;
+        46px;
 
     padding:
-        9px 6px;
+        10px 8px;
 
     display:flex;
 
@@ -690,21 +981,44 @@ button{
     justify-content:center;
 
     border-radius:
-        8px;
+        999px;
 
-    border:none;
+    border:
+        none;
 
     font-size:
-        12px;
+        11px;
 
     font-weight:
         800;
 
+    letter-spacing:
+        .15px;
+
     text-align:
         center;
 
-    white-space:
-        nowrap;
+    transition:
+        .25s ease;
+
+}
+
+
+.cart-button{
+
+    background:
+        var(--navy);
+
+    color:
+        var(--white);
+
+}
+
+
+.cart-button:hover{
+
+    background:
+        var(--navy-light);
 
 }
 
@@ -720,27 +1034,129 @@ button{
 }
 
 
-.cart-button{
+.buy-button:hover{
 
     background:
-        var(--navy);
-
-    color:
-        var(--white);
-
-    border:
-        2px solid var(--navy);
+        var(--gold-light);
 
 }
 
 
-.cart-button:hover{
+/* =========================================
+   CATEGORY SPACING
+========================================= */
+
+#business{
+
+    padding-top:
+        12px;
+
+}
+
+
+/* =========================================
+   TRUST SECTION
+========================================= */
+
+.trust-section{
+
+    padding:
+        70px 0 76px;
 
     background:
-        var(--navy);
+        var(--white);
+
+    border-top:
+        1px solid var(--border);
+
+}
+
+
+.trust-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,minmax(0,1fr));
+
+    gap:
+        22px;
+
+}
+
+
+.trust-card{
+
+    text-align:
+        center;
+
+    padding:
+        24px 18px;
+
+}
+
+
+.trust-icon{
+
+    width:
+        46px;
+
+    height:
+        46px;
+
+    margin:
+        0 auto 15px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--cream);
 
     color:
-        var(--white);
+        var(--gold);
+
+    font-size:
+        17px;
+
+}
+
+
+.trust-card h3{
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    color:
+        var(--navy);
+
+    font-size:
+        22px;
+
+    margin-bottom:
+        7px;
+
+}
+
+
+.trust-card p{
+
+    color:
+        var(--text-gray);
+
+    font-size:
+        12px;
+
+    line-height:
+        1.6;
 
 }
 
@@ -758,7 +1174,7 @@ button{
         var(--white);
 
     padding:
-        35px 0;
+        42px 0;
 
     text-align:
         center;
@@ -769,16 +1185,19 @@ button{
 .footer-tagline{
 
     color:
-        var(--gold);
+        var(--gold-light);
+
+    font-size:
+        12px;
 
     font-weight:
         800;
 
     letter-spacing:
-        1px;
+        1.8px;
 
     margin-bottom:
-        7px;
+        9px;
 
 }
 
@@ -786,16 +1205,16 @@ button{
 .footer p{
 
     color:
-        rgba(255,255,255,.7);
+        rgba(255,255,255,.68);
 
     font-size:
-        13px;
+        12px;
 
 }
 
 
 /* =========================================
-   TABLET / LANDSCAPE PHONE / DESKTOP
+   TABLET
 ========================================= */
 
 @media(max-width:950px){
@@ -814,10 +1233,10 @@ button{
     .product-image{
 
         height:
-            230px;
+            245px;
 
         padding:
-            14px;
+            16px;
 
     }
 
@@ -825,7 +1244,7 @@ button{
     .product-image img{
 
         height:
-            195px;
+            210px;
 
     }
 
@@ -833,7 +1252,7 @@ button{
     .product-info{
 
         padding:
-            15px;
+            17px;
 
     }
 
@@ -841,23 +1260,7 @@ button{
     .product-info h2{
 
         font-size:
-            17px;
-
-    }
-
-
-    .product-info p{
-
-        font-size:
-            12px;
-
-    }
-
-
-    .product-price{
-
-        font-size:
-            21px;
+            22px;
 
     }
 
@@ -865,10 +1268,10 @@ button{
     .btn{
 
         font-size:
-            11px;
+            10px;
 
         min-height:
-            42px;
+            44px;
 
     }
 
@@ -876,10 +1279,230 @@ button{
 
 
 /* =========================================
-   PHONE PORTRAIT
+   MOBILE
 ========================================= */
 
 @media(max-width:650px){
+
+    .container{
+
+        width:
+            91%;
+
+    }
+
+
+    /* HEADER */
+
+    .header-inner{
+
+        min-height:
+            82px;
+
+    }
+
+
+    .header-logo-text{
+
+        font-size:
+            28px;
+
+    }
+
+
+    .header-actions{
+
+        gap:
+            3px;
+
+    }
+
+
+    .header-icon{
+
+        width:
+            42px;
+
+        height:
+            42px;
+
+        font-size:
+            18px;
+
+    }
+
+
+    /* BACK */
+
+    .back-inner{
+
+        min-height:
+            56px;
+
+    }
+
+
+    .back-button{
+
+        font-size:
+            12px;
+
+    }
+
+
+    /* HERO */
+
+    .page-hero{
+
+        padding:
+            27px 0 24px;
+
+    }
+
+
+    .hero-kicker{
+
+        font-size:
+            10px;
+
+        letter-spacing:
+            1.7px;
+
+        margin-bottom:
+            10px;
+
+    }
+
+
+    .page-hero h1{
+
+        font-size:
+            48px;
+
+        line-height:
+            .95;
+
+        margin-bottom:
+            15px;
+
+    }
+
+
+    .page-hero p{
+
+        font-size:
+            13px;
+
+        line-height:
+            1.65;
+
+        padding:
+            0 8px;
+
+    }
+
+
+    /* QUICK NAV */
+
+    .quick-nav{
+
+        padding:
+            8px 0 38px;
+
+    }
+
+
+    .quick-nav-inner{
+
+        flex-direction:
+            column;
+
+        gap:
+            10px;
+
+    }
+
+
+    .quick-nav a{
+
+        width:
+            100%;
+
+        min-height:
+            50px;
+
+        font-size:
+            11px;
+
+    }
+
+
+    /* CATEGORY */
+
+    .template-category{
+
+        padding:
+            8px 0 62px;
+
+    }
+
+
+    .category-heading{
+
+        margin-bottom:
+            27px;
+
+    }
+
+
+    .category-kicker{
+
+        font-size:
+            9px;
+
+        letter-spacing:
+            1.7px;
+
+        margin-bottom:
+            8px;
+
+    }
+
+
+    .category-heading h2{
+
+        font-size:
+            43px;
+
+        line-height:
+            .98;
+
+        margin-bottom:
+            10px;
+
+    }
+
+
+    .category-heading p{
+
+        font-size:
+            12px;
+
+        line-height:
+            1.6;
+
+    }
+
+
+    .category-divider{
+
+        margin-bottom:
+            28px;
+
+    }
+
+
+    /* PRODUCTS */
 
     .products-grid{
 
@@ -887,21 +1510,15 @@ button{
             repeat(2,minmax(0,1fr));
 
         gap:
-            14px;
+            13px;
 
     }
 
 
     .product-card{
 
-        max-width:
-            none;
-
-        width:
-            100%;
-
-        margin:
-            0;
+        border-radius:
+            19px;
 
     }
 
@@ -912,7 +1529,7 @@ button{
             190px;
 
         padding:
-            10px;
+            9px;
 
     }
 
@@ -923,7 +1540,7 @@ button{
             165px;
 
         max-width:
-            88%;
+            91%;
 
     }
 
@@ -939,13 +1556,13 @@ button{
     .product-label{
 
         font-size:
-            9px;
+            8px;
 
         letter-spacing:
             1px;
 
         margin-bottom:
-            5px;
+            6px;
 
     }
 
@@ -953,30 +1570,13 @@ button{
     .product-info h2{
 
         font-size:
-            15px;
+            18px;
 
         line-height:
-            1.25;
+            1.05;
 
         margin-bottom:
-            7px;
-
-    }
-
-
-    .product-info p{
-
-        font-size:
-            11px;
-
-        line-height:
-            1.4;
-
-        margin-bottom:
-            9px;
-
-        -webkit-line-clamp:
-            2;
+            14px;
 
     }
 
@@ -984,67 +1584,95 @@ button{
     .product-price{
 
         font-size:
-            20px;
+            17px;
 
         margin-bottom:
-            9px;
+            10px;
 
     }
 
 
     .product-actions{
 
+        display:flex;
+
+        flex-direction:
+            column;
+
         gap:
-            6px;
+            7px;
 
     }
 
 
     .btn{
 
+        width:
+            100%;
+
         min-height:
-            40px;
+            39px;
 
         padding:
-            7px 3px;
+            7px 4px;
 
         font-size:
-            10px;
+            9px;
 
     }
 
 
-    .page-hero{
+    /* TRUST */
+
+    .trust-section{
 
         padding:
-            55px 0 60px;
+            50px 0 56px;
 
     }
 
 
-    .page-hero h1{
+    .trust-grid{
 
-        font-size:
-            34px;
+        grid-template-columns:
+            1fr;
+
+        gap:
+            5px;
 
     }
 
 
-    .page-hero p{
-
-        font-size:
-            15px;
+    .trust-card{
 
         padding:
-            0 10px;
+            18px;
 
     }
 
 
-    .header-logo img{
+    .trust-card h3{
 
-        height:
-            42px;
+        font-size:
+            21px;
+
+    }
+
+
+    .trust-card p{
+
+        font-size:
+            11px;
+
+    }
+
+
+    /* FOOTER */
+
+    .footer{
+
+        padding:
+            35px 0;
 
     }
 
@@ -1057,10 +1685,31 @@ button{
 
 @media(max-width:380px){
 
-    .products-grid{
+    .header-logo-text{
 
-        grid-template-columns:
-            repeat(2,minmax(0,1fr));
+        font-size:
+            25px;
+
+    }
+
+
+    .page-hero h1{
+
+        font-size:
+            43px;
+
+    }
+
+
+    .category-heading h2{
+
+        font-size:
+            39px;
+
+    }
+
+
+    .products-grid{
 
         gap:
             10px;
@@ -1095,15 +1744,7 @@ button{
     .product-info h2{
 
         font-size:
-            14px;
-
-    }
-
-
-    .product-info p{
-
-        font-size:
-            10px;
+            16px;
 
     }
 
@@ -1111,18 +1752,18 @@ button{
     .product-price{
 
         font-size:
-            18px;
+            16px;
 
     }
 
 
     .btn{
 
-        font-size:
-            9px;
-
         min-height:
-            38px;
+            37px;
+
+        font-size:
+            8.5px;
 
     }
 
@@ -1144,18 +1785,21 @@ button{
 
     <div class="container header-inner">
 
+
         <a
             href="index.html"
-            class="header-logo">
+            class="header-logo"
+            aria-label="TheBestBundle Home">
 
-            <img
-                src="images/Thebestbundle-transparent-logo.png"
-                alt="TheBestBundle">
+            <span class="header-logo-text">
+                TheBestBundle
+            </span>
 
         </a>
 
 
         <div class="header-actions">
+
 
             <button
                 type="button"
@@ -1182,6 +1826,7 @@ button{
                 <i class="fa-solid fa-house"></i>
 
             </a>
+
 
         </div>
 
@@ -1222,19 +1867,29 @@ button{
 
     <div class="container">
 
-        <span>
-            TheBestBundle Collection
+
+        <span class="hero-kicker">
+
+            THEBESTBUNDLE • COLLECTION
+
         </span>
 
+
         <h1>
-            Printable Templates
+
+            Premium Templates
+
         </h1>
 
+
         <p>
-            Explore professionally designed planners,
-            trackers and printable resources created
-            for practical everyday use.
+
+            Explore our collection of premium digital templates
+            designed to help you organize, plan, improve your
+            wellness, build your business and grow in the digital world.
+
         </p>
+
 
     </div>
 
@@ -1242,22 +1897,240 @@ button{
 
 
 <!-- =========================================
-     PRODUCTS
+     QUICK NAV
 ========================================= -->
 
-<main class="products-section">
+<nav class="quick-nav">
 
-    <div class="container">
+    <div class="container quick-nav-inner">
 
-        <div
-            class="products-grid"
-            id="productsGrid">
 
-        </div>
+        <a href="#health">
+
+            Health Templates
+
+        </a>
+
+
+        <a href="#business">
+
+            Business Templates
+
+        </a>
+
 
     </div>
 
-</main>
+</nav>
+
+
+<!-- =========================================
+     HEALTH TEMPLATES
+========================================= -->
+
+<section
+    class="template-category"
+    id="health">
+
+    <div class="container">
+
+
+        <div class="category-heading">
+
+
+            <div class="category-kicker">
+
+                WELLNESS • BEAUTY • LONGEVITY
+
+            </div>
+
+
+            <h2>
+
+                Health Templates
+
+            </h2>
+
+
+            <p>
+
+                Practical digital templates for your health,
+                wellness, beauty, self-care and personal transformation.
+
+            </p>
+
+
+        </div>
+
+
+        <div class="category-divider"></div>
+
+
+        <div
+            class="products-grid"
+            id="healthTemplatesGrid">
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     BUSINESS TEMPLATES
+========================================= -->
+
+<section
+    class="template-category"
+    id="business">
+
+    <div class="container">
+
+
+        <div class="category-heading">
+
+
+            <div class="category-kicker">
+
+                BUSINESS • DIGITAL • ENTREPRENEURSHIP
+
+            </div>
+
+
+            <h2>
+
+                Business Templates
+
+            </h2>
+
+
+            <p>
+
+                Practical resources to help you organize,
+                launch, market and grow your digital business.
+
+            </p>
+
+
+        </div>
+
+
+        <div class="category-divider"></div>
+
+
+        <div
+            class="products-grid"
+            id="businessTemplatesGrid">
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     TRUST
+========================================= -->
+
+<section class="trust-section">
+
+    <div class="container">
+
+
+        <div class="trust-grid">
+
+
+            <div class="trust-card">
+
+
+                <div class="trust-icon">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                </div>
+
+
+                <h3>
+
+                    SECURE PAYMENT
+
+                </h3>
+
+
+                <p>
+
+                    Secure checkout powered by Stripe.
+
+                </p>
+
+
+            </div>
+
+
+            <div class="trust-card">
+
+
+                <div class="trust-icon">
+
+                    <i class="fa-solid fa-download"></i>
+
+                </div>
+
+
+                <h3>
+
+                    DIGITAL ACCESS
+
+                </h3>
+
+
+                <p>
+
+                    Access your digital products after purchase.
+
+                </p>
+
+
+            </div>
+
+
+            <div class="trust-card">
+
+
+                <div class="trust-icon">
+
+                    <i class="fa-solid fa-star"></i>
+
+                </div>
+
+
+                <h3>
+
+                    PREMIUM CONTENT
+
+                </h3>
+
+
+                <p>
+
+                    Carefully created digital resources.
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
 
 
 <!-- =========================================
@@ -1268,13 +2141,20 @@ button{
 
     <div class="container">
 
+
         <div class="footer-tagline">
+
             LEARN • CREATE • GROW
+
         </div>
 
+
         <p>
-            © 2026 TheBestBundle. All Rights Reserved.
+
+            © 2026 TheBestBundle. All rights reserved.
+
         </p>
+
 
     </div>
 
@@ -1282,7 +2162,7 @@ button{
 
 
 <!-- =========================================
-     TEMPLATE ROTATION + CART SCRIPT
+     TEMPLATE SCRIPT
 ========================================= -->
 
 <script>
@@ -1294,9 +2174,16 @@ button{
 
 const templates = [
 
+    /* =========================================
+       HEALTH TEMPLATE #1
+    ========================================= */
+
     {
         id:
             "30-day-wellness-planner",
+
+        category:
+            "health",
 
         name:
             "30-Day Wellness Planner",
@@ -1319,9 +2206,16 @@ const templates = [
     },
 
 
+    /* =========================================
+       HEALTH TEMPLATE #2
+    ========================================= */
+
     {
         id:
             "healthy-meal-planner",
+
+        category:
+            "health",
 
         name:
             "The Healthy Meal Planner",
@@ -1344,9 +2238,16 @@ const templates = [
     },
 
 
+    /* =========================================
+       HEALTH TEMPLATE #3
+    ========================================= */
+
     {
         id:
             "fitness-activity-tracker",
+
+        category:
+            "health",
 
         name:
             "Fitness & Activity Tracker",
@@ -1369,9 +2270,16 @@ const templates = [
     },
 
 
+    /* =========================================
+       HEALTH TEMPLATE #4
+    ========================================= */
+
     {
         id:
             "self-care-habit-journal",
+
+        category:
+            "health",
 
         name:
             "Self-Care & Habit Journal",
@@ -1394,9 +2302,16 @@ const templates = [
     },
 
 
+    /* =========================================
+       HEALTH TEMPLATE #5
+    ========================================= */
+
     {
         id:
             "90-day-longevity-tracker",
+
+        category:
+            "health",
 
         name:
             "90-Day Longevity Tracker & Habit Builder",
@@ -1419,9 +2334,16 @@ const templates = [
     },
 
 
+    /* =========================================
+       HEALTH TEMPLATE #6
+    ========================================= */
+
     {
         id:
             "longevity-meal-planner",
+
+        category:
+            "health",
 
         name:
             "The Longevity Meal Planner",
@@ -1444,9 +2366,16 @@ const templates = [
     },
 
 
+    /* =========================================
+       HEALTH TEMPLATE #7
+    ========================================= */
+
     {
         id:
             "hormone-balance-symptom-cycle-tracker",
+
+        category:
+            "health",
 
         name:
             "Hormone Balance Symptom & Cycle Tracker",
@@ -1469,9 +2398,16 @@ const templates = [
     },
 
 
+    /* =========================================
+       HEALTH TEMPLATE #8
+    ========================================= */
+
     {
         id:
             "14-day-vitality-reset-planner",
+
+        category:
+            "health",
 
         name:
             "14-Day Vitality Reset Planner",
@@ -1494,9 +2430,16 @@ const templates = [
     },
 
 
+    /* =========================================
+       HEALTH TEMPLATE #9
+    ========================================= */
+
     {
         id:
             "personalized-skincare-routine-builder",
+
+        category:
+            "health",
 
         name:
             "Personalized Skincare Routine Builder",
@@ -1519,9 +2462,16 @@ const templates = [
     },
 
 
+    /* =========================================
+       HEALTH TEMPLATE #10
+    ========================================= */
+
     {
         id:
             "30-day-glow-up-transformation-journal",
+
+        category:
+            "health",
 
         name:
             "30-Day Glow-Up Transformation Journal",
@@ -1545,12 +2495,15 @@ const templates = [
 
 
     /* =========================================
-       TEMPLATE #11 — BUSINESS STARTUP PLANNER
+       BUSINESS TEMPLATE #11
     ========================================= */
 
     {
         id:
             "business-startup-planner",
+
+        category:
+            "business",
 
         name:
             "Business Startup Planner",
@@ -1574,12 +2527,15 @@ const templates = [
 
 
     /* =========================================
-       TEMPLATE #12 — BUSINESS GOALS & ACTION PLANNER
+       BUSINESS TEMPLATE #12
     ========================================= */
 
     {
         id:
             "business-goals-action-planner",
+
+        category:
+            "business",
 
         name:
             "Business Goals & Action Planner",
@@ -1603,12 +2559,15 @@ const templates = [
 
 
     /* =========================================
-       TEMPLATE #13 — DIGITAL PRODUCT IDEA & VALIDATION WORKBOOK
+       BUSINESS TEMPLATE #13
     ========================================= */
 
     {
         id:
             "digital-product-idea-validation-workbook",
+
+        category:
+            "business",
 
         name:
             "Digital Product Idea & Validation Workbook",
@@ -1632,12 +2591,15 @@ const templates = [
 
 
     /* =========================================
-       TEMPLATE #14 — DIGITAL PRODUCT LAUNCH PLANNER
+       BUSINESS TEMPLATE #14
     ========================================= */
 
     {
         id:
             "digital-product-launch-planner",
+
+        category:
+            "business",
 
         name:
             "Digital Product Launch Planner",
@@ -1661,12 +2623,15 @@ const templates = [
 
 
     /* =========================================
-       TEMPLATE #15 — MULTIPLE INCOME STREAMS PLANNER
+       BUSINESS TEMPLATE #15
     ========================================= */
 
     {
         id:
             "multiple-income-streams-planner",
+
+        category:
+            "business",
 
         name:
             "Multiple Income Streams Planner",
@@ -1690,12 +2655,15 @@ const templates = [
 
 
     /* =========================================
-       TEMPLATE #16 — PASSIVE INCOME & REVENUE TRACKER
+       BUSINESS TEMPLATE #16
     ========================================= */
 
     {
         id:
             "passive-income-revenue-tracker",
+
+        category:
+            "business",
 
         name:
             "Passive Income & Revenue Tracker",
@@ -1719,12 +2687,15 @@ const templates = [
 
 
     /* =========================================
-       TEMPLATE #17 — SOCIAL MEDIA CONTENT PLANNER
+       BUSINESS TEMPLATE #17
     ========================================= */
 
     {
         id:
             "social-media-content-planner",
+
+        category:
+            "business",
 
         name:
             "Social Media Content Planner",
@@ -1748,12 +2719,15 @@ const templates = [
 
 
     /* =========================================
-       TEMPLATE #18 — MARKETING CAMPAIGN PLANNER
+       BUSINESS TEMPLATE #18
     ========================================= */
 
     {
         id:
             "marketing-campaign-planner",
+
+        category:
+            "business",
 
         name:
             "Marketing Campaign Planner",
@@ -1777,12 +2751,15 @@ const templates = [
 
 
     /* =========================================
-       TEMPLATE #19 — AI BUSINESS PROMPT LIBRARY
+       BUSINESS TEMPLATE #19
     ========================================= */
 
     {
         id:
             "ai-business-prompt-library",
+
+        category:
+            "business",
 
         name:
             "AI Business Prompt Library",
@@ -1806,12 +2783,15 @@ const templates = [
 
 
     /* =========================================
-       TEMPLATE #20 — AI PRODUCTIVITY & AUTOMATION PLANNER
+       BUSINESS TEMPLATE #20
     ========================================= */
 
     {
         id:
             "ai-productivity-automation-planner",
+
+        category:
+            "business",
 
         name:
             "AI Productivity & Automation Planner",
@@ -1877,55 +2857,56 @@ function saveTemplateCart(){
 
 
 /* =========================================
-   PRODUCT GRID
+   GRIDS
 ========================================= */
 
-const productsGrid =
+const healthTemplatesGrid =
     document.getElementById(
-        "productsGrid"
+        "healthTemplatesGrid"
+    );
+
+
+const businessTemplatesGrid =
+    document.getElementById(
+        "businessTemplatesGrid"
     );
 
 
 /* =========================================
-   ROTATION POSITION
+   ROTATION
 ========================================= */
 
-/*
-    All templates are ALWAYS
-    displayed.
+let healthRotationIndex = 0;
 
-    Every 10 seconds the order
-    changes.
-
-    With 20 templates, the order
-    rotates one position at a time.
-*/
-
-let rotationIndex = 0;
+let businessRotationIndex = 0;
 
 
 /* =========================================
-   GET CURRENT TEMPLATE ORDER
+   GET ORDERED TEMPLATES
 ========================================= */
 
-function getOrderedTemplates(){
+function getOrderedTemplates(
+    templateList,
+    rotationIndex
+){
 
     const orderedTemplates = [];
 
+
     for(
         let i = 0;
-        i < templates.length;
+        i < templateList.length;
         i++
     ){
 
         const index =
             (
                 rotationIndex + i
-            ) % templates.length;
+            ) % templateList.length;
 
 
         orderedTemplates.push(
-            templates[index]
+            templateList[index]
         );
 
     }
@@ -1960,7 +2941,8 @@ function createTemplateCard(
 
             <img
                 src="${template.image}"
-                alt="${template.name}">
+                alt="${template.name}"
+                loading="lazy">
 
         </div>
 
@@ -1968,34 +2950,27 @@ function createTemplateCard(
         <div class="product-info">
 
             <div class="product-label">
+
                 Printable Template
+
             </div>
 
 
             <h2>
+
                 ${template.name}
+
             </h2>
 
 
-            <p>
-                ${template.description}
-            </p>
-
-
             <div class="product-price">
+
                 $${template.price}
+
             </div>
 
 
             <div class="product-actions">
-
-                <a
-                    href="${template.stripe}"
-                    class="btn buy-button">
-
-                    Buy Now
-
-                </a>
 
 
                 <button
@@ -2018,6 +2993,16 @@ function createTemplateCard(
 
                 </button>
 
+
+                <a
+                    href="${template.stripe}"
+                    class="btn buy-button">
+
+                    Buy Now
+
+                </a>
+
+
             </div>
 
         </div>
@@ -2031,22 +3016,29 @@ function createTemplateCard(
 
 
 /* =========================================
-   RENDER ALL TEMPLATES
+   RENDER CATEGORY
 ========================================= */
 
-function renderTemplateCards(){
+function renderCategory(
+    templateList,
+    grid,
+    rotationIndex
+){
 
-    productsGrid.innerHTML = "";
+    grid.innerHTML = "";
 
 
     const orderedTemplates =
-        getOrderedTemplates();
+        getOrderedTemplates(
+            templateList,
+            rotationIndex
+        );
 
 
     orderedTemplates.forEach(
         function(template){
 
-            productsGrid.appendChild(
+            grid.appendChild(
                 createTemplateCard(
                     template
                 )
@@ -2059,23 +3051,66 @@ function renderTemplateCards(){
 
 
 /* =========================================
-   RENDER WITH ANIMATION
+   RENDER ALL
 ========================================= */
 
 function renderTemplates(
     animate = false
 ){
 
+    const healthTemplates =
+        templates.filter(
+            function(template){
+
+                return (
+                    template.category ===
+                    "health"
+                );
+
+            }
+        );
+
+
+    const businessTemplates =
+        templates.filter(
+            function(template){
+
+                return (
+                    template.category ===
+                    "business"
+                );
+
+            }
+        );
+
+
     if(!animate){
 
-        renderTemplateCards();
+        renderCategory(
+            healthTemplates,
+            healthTemplatesGrid,
+            healthRotationIndex
+        );
+
+
+        renderCategory(
+            businessTemplates,
+            businessTemplatesGrid,
+            businessRotationIndex
+        );
+
 
         return;
 
     }
 
 
-    productsGrid.classList.add(
+    healthTemplatesGrid.classList.add(
+        "is-changing"
+    );
+
+
+    businessTemplatesGrid.classList.add(
         "is-changing"
     );
 
@@ -2083,18 +3118,38 @@ function renderTemplates(
     setTimeout(
         function(){
 
-            renderTemplateCards();
+
+            renderCategory(
+                healthTemplates,
+                healthTemplatesGrid,
+                healthRotationIndex
+            );
+
+
+            renderCategory(
+                businessTemplates,
+                businessTemplatesGrid,
+                businessRotationIndex
+            );
 
 
             requestAnimationFrame(
                 function(){
 
-                    productsGrid.classList.remove(
+
+                    healthTemplatesGrid.classList.remove(
                         "is-changing"
                     );
 
+
+                    businessTemplatesGrid.classList.remove(
+                        "is-changing"
+                    );
+
+
                 }
             );
+
 
         },
         350
@@ -2112,22 +3167,48 @@ renderTemplates();
 
 /* =========================================
    AUTOMATIC ROTATION
-   EVERY 10 SECONDS
+   EVERY 25 SECONDS
 ========================================= */
 
 function rotateTemplates(){
 
-    /*
-        Move every template
-        one position.
 
-        All templates remain visible.
-    */
+    const healthCount =
+        templates.filter(
+            function(template){
 
-    rotationIndex =
+                return (
+                    template.category ===
+                    "health"
+                );
+
+            }
+        ).length;
+
+
+    const businessCount =
+        templates.filter(
+            function(template){
+
+                return (
+                    template.category ===
+                    "business"
+                );
+
+            }
+        ).length;
+
+
+    healthRotationIndex =
         (
-            rotationIndex + 1
-        ) % templates.length;
+            healthRotationIndex + 1
+        ) % healthCount;
+
+
+    businessRotationIndex =
+        (
+            businessRotationIndex + 1
+        ) % businessCount;
 
 
     renderTemplates(true);
@@ -2135,16 +3216,10 @@ function rotateTemplates(){
 }
 
 
-/*
-    10,000 milliseconds
-    =
-    10 seconds
-*/
-
 let templateRotationTimer =
     setInterval(
         rotateTemplates,
-        10000
+        25000
     );
 
 
@@ -2152,9 +3227,10 @@ let templateRotationTimer =
    ADD TO CART
 ========================================= */
 
-productsGrid.addEventListener(
+document.addEventListener(
     "click",
     function(event){
+
 
         const button =
             event.target.closest(
@@ -2240,6 +3316,7 @@ productsGrid.addEventListener(
             1200
         );
 
+
     }
 );
 
@@ -2269,6 +3346,7 @@ document
 
 function returnToPreviousPage(){
 
+
     if(
         window.history.length > 1
     ){
@@ -2283,6 +3361,33 @@ function returnToPreviousPage(){
     }
 
 }
+
+
+/* =========================================
+   CART SYNC
+========================================= */
+
+window.addEventListener(
+    "storage",
+    function(event){
+
+        if(
+            event.key ===
+            "theBestBundleCart"
+        ){
+
+            templateCart =
+                JSON.parse(
+                    event.newValue || "[]"
+                );
+
+
+            updatePageCartCount();
+
+        }
+
+    }
+);
 
 
 /* =========================================
