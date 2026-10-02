@@ -24,6 +24,11 @@
     name="theme-color"
     content="#071A33">
 
+
+<!-- =========================================
+     FAVICON
+========================================= -->
+
 <link
     rel="icon"
     href="/thebestbundle/images/favicon.ico"
@@ -40,7 +45,9 @@
     href="/thebestbundle/images/favicon.png">
 
 
-<!-- GOOGLE FONTS -->
+<!-- =========================================
+     GOOGLE FONTS
+========================================= -->
 
 <link
     rel="preconnect"
@@ -56,7 +63,9 @@
     rel="stylesheet">
 
 
-<!-- FONT AWESOME -->
+<!-- =========================================
+     FONT AWESOME
+========================================= -->
 
 <link
     rel="stylesheet"
@@ -81,15 +90,11 @@
 
     --white:#FFFFFF;
 
-    --text:#475569;
+    --text:#5B6472;
 
-    --border:#E7E2D8;
+    --border:#E6E0D5;
 
     --soft-gold:#FBF7EC;
-
-    --soft-green:#F3F9F5;
-
-    --green:#2F7D4A;
 
     --max-width:920px;
 
@@ -194,7 +199,7 @@ img{
 
 .header-inner{
 
-    min-height:86px;
+    min-height:88px;
 
     display:flex;
 
@@ -205,23 +210,49 @@ img{
 }
 
 
+/* =========================================
+   NEW OFFICIAL LOGO
+========================================= */
+
 .header-logo{
 
     display:inline-flex;
 
     align-items:center;
 
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size:42px;
+
+    font-weight:600;
+
+    line-height:1;
+
+    color:var(--gold);
+
+    letter-spacing:-1px;
+
+    white-space:nowrap;
+
+    transition:
+        color .25s ease;
+
 }
 
 
-.header-logo img{
+.header-logo:hover{
 
-    height:48px;
-
-    width:auto;
+    color:var(--light-gold);
 
 }
 
+
+/* =========================================
+   HOME BUTTON
+========================================= */
 
 .home-button{
 
@@ -239,7 +270,7 @@ img{
 
     color:var(--white);
 
-    font-size:20px;
+    font-size:21px;
 
     transition:
         background .25s ease,
@@ -258,7 +289,7 @@ img{
 
 
 /* =========================================
-   BACK
+   BACK ROW
 ========================================= */
 
 .back-row{
@@ -285,7 +316,7 @@ img{
 
     align-items:center;
 
-    gap:9px;
+    gap:10px;
 
     border:none;
 
@@ -299,6 +330,13 @@ img{
 
     transition:
         color .25s ease;
+
+}
+
+
+.back-button i{
+
+    font-size:17px;
 
 }
 
@@ -327,7 +365,7 @@ img{
 
 .hero-kicker{
 
-    margin-bottom:12px;
+    margin-bottom:14px;
 
     color:var(--gold);
 
@@ -335,7 +373,7 @@ img{
 
     font-weight:800;
 
-    letter-spacing:2.4px;
+    letter-spacing:2.5px;
 
     text-transform:uppercase;
 
@@ -344,7 +382,7 @@ img{
 
 .checkout-hero h1{
 
-    margin-bottom:18px;
+    margin-bottom:20px;
 
     font-family:
         "Cormorant Garamond",
@@ -352,11 +390,11 @@ img{
         serif;
 
     font-size:
-        clamp(46px, 8vw, 70px);
+        clamp(48px, 8vw, 72px);
 
     font-weight:600;
 
-    line-height:.95;
+    line-height:.96;
 
     letter-spacing:-1.5px;
 
@@ -372,7 +410,7 @@ img{
 
 .checkout-hero p{
 
-    max-width:690px;
+    max-width:700px;
 
     margin:auto;
 
@@ -380,7 +418,7 @@ img{
 
     font-size:15px;
 
-    line-height:1.8;
+    line-height:1.85;
 
 }
 
@@ -399,7 +437,7 @@ img{
 
     gap:10px;
 
-    margin-top:30px;
+    margin-top:31px;
 
 }
 
@@ -414,13 +452,13 @@ img{
 
     min-height:40px;
 
-    padding:9px 17px;
+    padding:9px 18px;
 
-    border:1px solid rgba(200,164,93,.45);
+    border:1px solid rgba(200,164,93,.48);
 
     border-radius:999px;
 
-    background:rgba(255,255,255,.65);
+    background:rgba(255,255,255,.72);
 
     color:var(--navy);
 
@@ -428,7 +466,7 @@ img{
 
     font-weight:800;
 
-    letter-spacing:.3px;
+    letter-spacing:.2px;
 
     transition:
         background .25s ease,
@@ -463,9 +501,13 @@ img{
 }
 
 
+/* =========================================
+   SECTION INTRO
+========================================= */
+
 .section-intro{
 
-    margin-bottom:34px;
+    margin-bottom:36px;
 
     text-align:center;
 
@@ -474,7 +516,7 @@ img{
 
 .section-kicker{
 
-    margin-bottom:8px;
+    margin-bottom:9px;
 
     color:var(--gold);
 
@@ -482,7 +524,7 @@ img{
 
     font-weight:800;
 
-    letter-spacing:2px;
+    letter-spacing:2.2px;
 
     text-transform:uppercase;
 
@@ -491,7 +533,7 @@ img{
 
 .section-intro h2{
 
-    margin-bottom:10px;
+    margin-bottom:12px;
 
     font-family:
         "Cormorant Garamond",
@@ -501,18 +543,18 @@ img{
     color:var(--navy);
 
     font-size:
-        clamp(36px, 6vw, 48px);
+        clamp(38px, 6vw, 50px);
 
     font-weight:600;
 
-    line-height:1;
+    line-height:1.02;
 
 }
 
 
 .section-intro p{
 
-    max-width:650px;
+    max-width:680px;
 
     margin:auto;
 
@@ -520,7 +562,7 @@ img{
 
     font-size:14px;
 
-    line-height:1.8;
+    line-height:1.85;
 
 }
 
@@ -531,7 +573,7 @@ img{
 
 .policy-card{
 
-    padding:46px;
+    padding:47px;
 
     background:var(--white);
 
@@ -557,11 +599,11 @@ img{
 
     margin-bottom:32px;
 
-    padding:8px 15px;
+    padding:9px 17px;
 
     background:var(--soft-gold);
 
-    border:1px solid rgba(200,164,93,.45);
+    border:1px solid rgba(200,164,93,.50);
 
     border-radius:999px;
 
@@ -571,7 +613,7 @@ img{
 
     font-weight:800;
 
-    letter-spacing:.3px;
+    letter-spacing:.25px;
 
 }
 
@@ -582,9 +624,9 @@ img{
 
 .policy-card h2{
 
-    margin-top:38px;
+    margin-top:39px;
 
-    margin-bottom:12px;
+    margin-bottom:13px;
 
     font-family:
         "Cormorant Garamond",
@@ -593,7 +635,7 @@ img{
 
     color:var(--navy);
 
-    font-size:28px;
+    font-size:29px;
 
     font-weight:600;
 
@@ -611,20 +653,20 @@ img{
 
 .policy-card p{
 
-    margin-bottom:15px;
+    margin-bottom:16px;
 
     color:var(--text);
 
     font-size:14px;
 
-    line-height:1.85;
+    line-height:1.88;
 
 }
 
 
 .policy-card ul{
 
-    margin:10px 0 22px 22px;
+    margin:10px 0 23px 23px;
 
     color:var(--text);
 
@@ -671,9 +713,9 @@ img{
 
     align-items:flex-start;
 
-    margin:30px 0;
+    margin:31px 0;
 
-    padding:23px;
+    padding:24px;
 
     background:var(--soft-gold);
 
@@ -708,7 +750,7 @@ img{
         Georgia,
         serif;
 
-    font-size:21px;
+    font-size:22px;
 
     font-weight:600;
 
@@ -734,7 +776,7 @@ img{
 
     gap:15px;
 
-    margin:25px 0 30px;
+    margin:25px 0 31px;
 
 }
 
@@ -787,7 +829,7 @@ img{
 
 .checkout-step h3{
 
-    margin-bottom:4px;
+    margin-bottom:5px;
 
     color:var(--navy);
 
@@ -796,7 +838,7 @@ img{
         Georgia,
         serif;
 
-    font-size:21px;
+    font-size:22px;
 
     font-weight:600;
 
@@ -818,13 +860,11 @@ img{
 
 .stripe-area{
 
-    margin:35px 0;
+    margin:36px 0;
 
-    padding:30px;
+    padding:31px;
 
     background:var(--navy);
-
-    border:1px solid var(--navy);
 
     border-radius:18px;
 
@@ -837,7 +877,7 @@ img{
 
 .stripe-area i{
 
-    margin-bottom:12px;
+    margin-bottom:13px;
 
     color:var(--gold);
 
@@ -855,7 +895,7 @@ img{
         Georgia,
         serif;
 
-    font-size:27px;
+    font-size:28px;
 
     font-weight:600;
 
@@ -864,11 +904,11 @@ img{
 
 .stripe-area p{
 
-    max-width:600px;
+    max-width:610px;
 
     margin:0 auto;
 
-    color:rgba(255,255,255,.75);
+    color:rgba(255,255,255,.76);
 
     font-size:13px;
 
@@ -881,9 +921,9 @@ img{
 
 .contact-box{
 
-    margin-top:35px;
+    margin-top:36px;
 
-    padding:25px;
+    padding:26px;
 
     background:#FCFBF7;
 
@@ -905,7 +945,7 @@ img{
         Georgia,
         serif;
 
-    font-size:23px;
+    font-size:24px;
 
     font-weight:600;
 
@@ -927,12 +967,12 @@ img{
 
 
 /* =========================================
-   RETURN
+   RETURN BUTTON
 ========================================= */
 
 .return-area{
 
-    margin-top:38px;
+    margin-top:39px;
 
     text-align:center;
 
@@ -951,7 +991,7 @@ img{
 
     min-height:50px;
 
-    padding:13px 27px;
+    padding:13px 28px;
 
     border:1px solid var(--navy);
 
@@ -964,8 +1004,6 @@ img{
     font-size:12px;
 
     font-weight:800;
-
-    letter-spacing:.2px;
 
     transition:
         background .25s ease,
@@ -993,7 +1031,7 @@ img{
 
 .footer{
 
-    padding:38px 0;
+    padding:39px 0;
 
     background:var(--navy);
 
@@ -1036,14 +1074,20 @@ img{
 
     .header-inner{
 
-        min-height:76px;
+        min-height:88px;
 
     }
 
 
-    .header-logo img{
+    /* =====================================
+       NEW LOGO — MOBILE
+    ====================================== */
 
-        height:41px;
+    .header-logo{
+
+        font-size:32px;
+
+        letter-spacing:-.7px;
 
     }
 
@@ -1054,21 +1098,28 @@ img{
 
         height:42px;
 
-        font-size:18px;
+        font-size:19px;
 
     }
 
 
     .back-inner{
 
-        min-height:55px;
+        min-height:60px;
+
+    }
+
+
+    .back-button{
+
+        font-size:13px;
 
     }
 
 
     .checkout-hero{
 
-        padding:58px 0 62px;
+        padding:70px 0 66px;
 
     }
 
@@ -1077,14 +1128,16 @@ img{
 
         font-size:10px;
 
-        letter-spacing:2px;
+        letter-spacing:2.1px;
 
     }
 
 
     .checkout-hero h1{
 
-        font-size:49px;
+        margin-bottom:21px;
+
+        font-size:50px;
 
         letter-spacing:-1px;
 
@@ -1093,27 +1146,29 @@ img{
 
     .checkout-hero p{
 
+        padding:0 9px;
+
         font-size:13px;
 
-        padding:0 8px;
+        line-height:1.85;
 
     }
 
 
     .quick-nav{
 
-        gap:8px;
+        gap:9px;
 
-        margin-top:25px;
+        margin-top:29px;
 
     }
 
 
     .quick-nav a{
 
-        min-height:37px;
+        min-height:38px;
 
-        padding:8px 13px;
+        padding:8px 15px;
 
         font-size:10px;
 
@@ -1122,21 +1177,32 @@ img{
 
     .policy-section{
 
-        padding:10px 0 65px;
+        padding:12px 0 65px;
 
     }
 
 
     .section-intro{
 
-        margin-bottom:25px;
+        margin-bottom:27px;
+
+    }
+
+
+    .section-kicker{
+
+        font-size:10px;
+
+        letter-spacing:1.9px;
 
     }
 
 
     .section-intro h2{
 
-        font-size:38px;
+        font-size:40px;
+
+        line-height:1.03;
 
     }
 
@@ -1145,21 +1211,25 @@ img{
 
         font-size:13px;
 
+        line-height:1.85;
+
     }
 
 
     .policy-card{
 
-        padding:29px 20px;
+        padding:30px 20px;
 
-        border-radius:20px;
+        border-radius:21px;
 
     }
 
 
     .updated{
 
-        margin-bottom:25px;
+        margin-bottom:27px;
+
+        padding:8px 15px;
 
         font-size:10px;
 
@@ -1168,9 +1238,9 @@ img{
 
     .policy-card h2{
 
-        margin-top:34px;
+        margin-top:35px;
 
-        font-size:25px;
+        font-size:26px;
 
     }
 
@@ -1179,7 +1249,7 @@ img{
 
         font-size:13px;
 
-        line-height:1.8;
+        line-height:1.82;
 
     }
 
@@ -1213,16 +1283,23 @@ img{
     }
 
 
+    .checkout-step h3{
+
+        font-size:21px;
+
+    }
+
+
     .stripe-area{
 
-        padding:25px 19px;
+        padding:26px 19px;
 
     }
 
 
     .stripe-area h3{
 
-        font-size:24px;
+        font-size:25px;
 
     }
 
@@ -1258,16 +1335,20 @@ img{
 
 <div class="container header-inner">
 
+
+    <!-- OFFICIAL THEBESTBUNDLE TEXT LOGO -->
+
     <a
         href="index.html"
-        class="header-logo">
+        class="header-logo"
+        aria-label="TheBestBundle Home">
 
-        <img
-            src="images/Thebestbundle-transparent-logo.png"
-            alt="TheBestBundle">
+        TheBestBundle
 
     </a>
 
+
+    <!-- HOME -->
 
     <a
         href="index.html"
@@ -1315,6 +1396,7 @@ img{
 
 <div class="container">
 
+
     <div class="hero-kicker">
         THEBESTBUNDLE • PAYMENTS & SECURITY
     </div>
@@ -1326,9 +1408,9 @@ img{
 
 
     <p>
-        Learn how payments and checkout
-        are handled when purchasing eligible
-        products from TheBestBundle.
+        Learn how payments and checkout are handled
+        when purchasing eligible products from
+        TheBestBundle.
     </p>
 
 
@@ -1364,13 +1446,17 @@ img{
 
 
 <!-- =========================================
-     POLICY
+     MAIN POLICY
 ========================================= -->
 
 <main class="policy-section">
 
 <div class="container">
 
+
+    <!-- =====================================
+         SECTION INTRO
+    ====================================== -->
 
     <div class="section-intro">
 
@@ -1391,6 +1477,10 @@ img{
     </div>
 
 
+    <!-- =====================================
+         POLICY CARD
+    ====================================== -->
+
     <div class="policy-card">
 
 
@@ -1400,7 +1490,7 @@ img{
 
 
         <!-- =====================================
-             1
+             1. OUR CHECKOUT PROCESS
         ====================================== -->
 
         <h2 id="process">
@@ -1422,7 +1512,7 @@ img{
 
 
         <!-- =====================================
-             2
+             2. PAYMENT PROCESSING
         ====================================== -->
 
         <h2 id="payment">
@@ -1440,6 +1530,10 @@ img{
             Stripe's payment environment.
         </p>
 
+
+        <!-- =====================================
+             SECURITY BOX
+        ====================================== -->
 
         <div class="security-box">
 
@@ -1466,7 +1560,7 @@ img{
 
 
         <!-- =====================================
-             3
+             3. HOW CHECKOUT WORKS
         ====================================== -->
 
         <h2 id="steps">
@@ -1476,6 +1570,8 @@ img{
 
         <div class="checkout-steps">
 
+
+            <!-- STEP 1 -->
 
             <div class="checkout-step">
 
@@ -1500,6 +1596,8 @@ img{
             </div>
 
 
+            <!-- STEP 2 -->
+
             <div class="checkout-step">
 
                 <div class="step-number">
@@ -1523,6 +1621,8 @@ img{
             </div>
 
 
+            <!-- STEP 3 -->
+
             <div class="checkout-step">
 
                 <div class="step-number">
@@ -1545,6 +1645,8 @@ img{
 
             </div>
 
+
+            <!-- STEP 4 -->
 
             <div class="checkout-step">
 
@@ -1574,7 +1676,7 @@ img{
 
 
         <!-- =====================================
-             STRIPE
+             STRIPE AREA
         ====================================== -->
 
         <div
@@ -1597,7 +1699,7 @@ img{
 
 
         <!-- =====================================
-             4
+             4. CART
         ====================================== -->
 
         <h2>
@@ -1620,7 +1722,7 @@ img{
 
 
         <!-- =====================================
-             5
+             5. BUY NOW
         ====================================== -->
 
         <h2>
@@ -1636,7 +1738,7 @@ img{
 
 
         <!-- =====================================
-             6
+             6. PRICES
         ====================================== -->
 
         <h2>
@@ -1657,7 +1759,7 @@ img{
 
 
         <!-- =====================================
-             7
+             7. SUCCESSFUL PAYMENTS
         ====================================== -->
 
         <h2>
@@ -1678,7 +1780,7 @@ img{
 
 
         <!-- =====================================
-             8
+             8. DIGITAL DELIVERY
         ====================================== -->
 
         <h2>
@@ -1700,7 +1802,7 @@ img{
 
 
         <!-- =====================================
-             9
+             9. SUSPICIOUS TRANSACTIONS
         ====================================== -->
 
         <h2>
@@ -1716,7 +1818,7 @@ img{
 
 
         <!-- =====================================
-             10
+             10. UNAUTHORIZED PAYMENTS
         ====================================== -->
 
         <h2>
@@ -1737,7 +1839,7 @@ img{
 
 
         <!-- =====================================
-             11
+             11. REFUNDS
         ====================================== -->
 
         <h2>
@@ -1754,7 +1856,7 @@ img{
 
 
         <!-- =====================================
-             12
+             12. PRIVACY
         ====================================== -->
 
         <h2>
@@ -1773,7 +1875,7 @@ img{
 
 
         <!-- =====================================
-             13
+             13. THIRD-PARTY SERVICES
         ====================================== -->
 
         <h2>
@@ -1790,7 +1892,7 @@ img{
 
 
         <!-- =====================================
-             14
+             14. SUPPORT
         ====================================== -->
 
         <h2 id="support">
@@ -1804,6 +1906,10 @@ img{
             information so we can review the issue.
         </p>
 
+
+        <!-- =====================================
+             CONTACT BOX
+        ====================================== -->
 
         <div class="contact-box">
 
