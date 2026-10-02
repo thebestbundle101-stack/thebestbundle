@@ -1,99 +1,932 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
 <title>Thank You | TheBestBundle</title>
 
+<meta
+    name="description"
+    content="Thank you for subscribing to TheBestBundle newsletter. Stay connected for new digital products, exclusive bundles, special offers and updates.">
+
+<meta
+    name="theme-color"
+    content="#071A33">
+
+<link
+    rel="icon"
+    href="/thebestbundle/images/favicon.ico"
+    type="image/x-icon">
+
+<link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="/thebestbundle/images/favicon.png">
+
+<link
+    rel="apple-touch-icon"
+    href="/thebestbundle/images/favicon.png">
+
+
+<!-- PREMIUM FONTS -->
+
+<link
+    rel="preconnect"
+    href="https://fonts.googleapis.com">
+
+<link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+
+<!-- FONT AWESOME -->
+
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
 <style>
-body{
-    margin:0;
-    font-family:Arial,Helvetica,sans-serif;
-    background:#f7f9fc;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
+
+:root{
+
+    --navy:#071A33;
+    --gold:#C8A45D;
+    --gold-light:#E1C77E;
+
+    --cream:#F8F5ED;
+    --white:#FFFFFF;
+
+    --text:#5F6672;
+    --border:#E8E2D7;
+
+    --max-width:760px;
+
 }
 
-.container{
-    max-width:700px;
-    background:#fff;
-    padding:50px;
-    border-radius:15px;
-    text-align:center;
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
+
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+body{
+
+    min-height:100vh;
+
+    font-family:'Montserrat',Arial,Helvetica,sans-serif;
+
+    background:var(--cream);
+
+    color:var(--navy);
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+/* =================================================
+   HEADER
+================================================= */
+
+.page-header{
+
+    background:var(--navy);
+
+    color:var(--white);
+
+}
+
+
+.header-inner{
+
+    width:90%;
+
+    max-width:1100px;
+
+    min-height:82px;
+
+    margin:auto;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+
+.header-logo{
+
+    font-family:'Cormorant Garamond',Georgia,serif;
+
+    font-size:30px;
+
+    font-weight:700;
+
+    letter-spacing:.3px;
+
+    color:var(--gold);
+
+    text-decoration:none;
+
+}
+
+
+.header-logo:hover{
+
+    color:var(--gold-light);
+
+}
+
+
+.home-button{
+
+    width:44px;
+
+    height:44px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    color:var(--white);
+
+    font-size:18px;
+
+    text-decoration:none;
+
+    transition:.25s ease;
+
+}
+
+
+.home-button:hover{
+
+    color:var(--gold);
+
+    background:rgba(255,255,255,.08);
+
+}
+
+
+/* =================================================
+   BACK
+================================================= */
+
+.back-row{
+
+    background:var(--cream);
+
+}
+
+
+.back-inner{
+
+    width:90%;
+
+    max-width:1100px;
+
+    min-height:64px;
+
+    margin:auto;
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+
+.back-button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:9px;
+
+    border:none;
+
+    background:transparent;
+
+    color:var(--navy);
+
+    font-size:13px;
+
+    font-weight:700;
+
+    text-decoration:none;
+
+    padding:8px 0;
+
+    cursor:pointer;
+
+    transition:.25s ease;
+
+}
+
+
+.back-button:hover{
+
+    color:var(--gold);
+
+}
+
+
+/* =================================================
+   MAIN
+================================================= */
+
+main{
+
+    flex:1;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:45px 20px 80px;
+
+}
+
+
+.thank-you-wrapper{
+
+    width:100%;
+
+    max-width:var(--max-width);
+
+    margin:auto;
+
+}
+
+
+/* =================================================
+   HERO
+================================================= */
+
+.hero{
+
+    text-align:center;
+
+    margin-bottom:28px;
+
+}
+
+
+.kicker{
+
+    margin-bottom:12px;
+
+    color:var(--gold);
+
+    font-size:11px;
+
+    font-weight:800;
+
+    letter-spacing:2.2px;
+
+    text-transform:uppercase;
+
+}
+
+
+.hero h1{
+
+    margin-bottom:15px;
+
+    color:var(--navy);
+
+    font-family:'Cormorant Garamond',Georgia,serif;
+
+    font-size:clamp(45px,8vw,64px);
+
+    font-weight:600;
+
+    line-height:1.02;
+
+}
+
+
+.hero h1 span{
+
+    color:var(--gold);
+
+}
+
+
+.hero-subtitle{
+
+    max-width:620px;
+
+    margin:auto;
+
+    color:var(--text);
+
+    font-size:14px;
+
+    line-height:1.8;
+
+}
+
+
+/* =================================================
+   THANK YOU CARD
+================================================= */
+
+.thank-you-card{
+
+    padding:50px 45px;
+
+    background:var(--white);
+
+    border:1px solid var(--border);
+
+    border-radius:22px;
+
+    box-shadow:0 18px 45px rgba(7,26,51,.08);
+
+    text-align:center;
+
+}
+
+
+/* =================================================
+   CHECK ICON
+================================================= */
 
 .check{
-    width:90px;
-    height:90px;
-    margin:auto;
+
+    width:82px;
+
+    height:82px;
+
+    margin:0 auto 25px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
     border-radius:50%;
-    background:#2ecc71;
-    color:white;
-    font-size:50px;
-    line-height:90px;
-    margin-bottom:25px;
+
+    background:var(--navy);
+
+    color:var(--gold);
+
+    font-size:35px;
+
+    border:5px solid #EFE6D1;
+
+    box-shadow:0 8px 20px rgba(7,26,51,.10);
+
 }
 
-h1{
-    color:#2d4fc4;
-    margin-bottom:15px;
+
+.thank-you-card h2{
+
+    margin-bottom:18px;
+
+    color:var(--navy);
+
+    font-family:'Cormorant Garamond',Georgia,serif;
+
+    font-size:36px;
+
+    font-weight:600;
+
+    line-height:1.15;
+
 }
 
-p{
-    color:#555;
-    line-height:1.8;
-    font-size:18px;
+
+.thank-you-card p{
+
+    max-width:580px;
+
+    margin:0 auto 17px;
+
+    color:var(--text);
+
+    font-size:14px;
+
+    line-height:1.85;
+
 }
+
+
+.thank-you-card p strong{
+
+    color:var(--navy);
+
+    font-weight:800;
+
+}
+
+
+/* =================================================
+   WHAT TO EXPECT
+================================================= */
+
+.expect-box{
+
+    margin:30px auto 0;
+
+    padding:22px;
+
+    background:var(--cream);
+
+    border:1px solid var(--border);
+
+    border-radius:15px;
+
+    text-align:left;
+
+}
+
+
+.expect-label{
+
+    margin-bottom:8px;
+
+    color:var(--gold);
+
+    font-size:10px;
+
+    font-weight:800;
+
+    letter-spacing:1.8px;
+
+    text-transform:uppercase;
+
+}
+
+
+.expect-box p{
+
+    margin:0;
+
+    font-size:13px;
+
+    line-height:1.75;
+
+}
+
+
+/* =================================================
+   BUTTON
+================================================= */
+
+.button-area{
+
+    margin-top:32px;
+
+}
+
 
 .button{
-    display:inline-block;
-    margin-top:35px;
-    background:#2d4fc4;
-    color:white;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    min-height:50px;
+
+    padding:13px 28px;
+
+    border-radius:30px;
+
+    background:var(--navy);
+
+    color:var(--white);
+
     text-decoration:none;
-    padding:15px 35px;
-    border-radius:8px;
-    font-weight:bold;
-    transition:.3s;
+
+    font-size:12px;
+
+    font-weight:800;
+
+    transition:.25s ease;
+
 }
 
+
 .button:hover{
-    background:#1d3eb0;
+
+    background:#0D2B50;
+
+    transform:translateY(-1px);
+
 }
+
+
+/* =================================================
+   FOOTER
+================================================= */
+
+.footer{
+
+    padding:38px 20px;
+
+    background:var(--navy);
+
+    color:var(--white);
+
+    text-align:center;
+
+}
+
+
+.footer-tagline{
+
+    margin-bottom:8px;
+
+    color:var(--gold);
+
+    font-size:11px;
+
+    font-weight:800;
+
+    letter-spacing:2px;
+
+}
+
+
+.footer p{
+
+    color:rgba(255,255,255,.65);
+
+    font-size:11px;
+
+}
+
+
+/* =================================================
+   MOBILE
+================================================= */
+
+@media(max-width:700px){
+
+    .header-inner{
+
+        min-height:72px;
+
+    }
+
+
+    .header-logo{
+
+        font-size:27px;
+
+    }
+
+
+    .home-button{
+
+        width:40px;
+
+        height:40px;
+
+    }
+
+
+    main{
+
+        padding:30px 16px 60px;
+
+    }
+
+
+    .hero{
+
+        margin-bottom:22px;
+
+    }
+
+
+    .hero h1{
+
+        font-size:47px;
+
+    }
+
+
+    .hero-subtitle{
+
+        font-size:13px;
+
+    }
+
+
+    .thank-you-card{
+
+        padding:38px 22px;
+
+        border-radius:18px;
+
+    }
+
+
+    .check{
+
+        width:76px;
+
+        height:76px;
+
+        font-size:31px;
+
+    }
+
+
+    .thank-you-card h2{
+
+        font-size:32px;
+
+    }
+
+
+    .thank-you-card p{
+
+        font-size:13px;
+
+        line-height:1.8;
+
+    }
+
+
+    .expect-box{
+
+        padding:19px;
+
+    }
+
+
+    .button{
+
+        width:100%;
+
+    }
+
+}
+
+
+@media(max-width:420px){
+
+    .header-logo{
+
+        font-size:24px;
+
+    }
+
+
+    .hero h1{
+
+        font-size:42px;
+
+    }
+
+
+    .thank-you-card{
+
+        padding:32px 18px;
+
+    }
+
+
+    .thank-you-card h2{
+
+        font-size:29px;
+
+    }
+
+}
+
 </style>
 
 </head>
 
+
 <body>
 
-<div class="container">
 
-<div class="check">✓</div>
+<!-- =================================================
+     HEADER
+================================================= -->
 
-<h1>Thank You for Subscribing!</h1>
+<header class="page-header">
 
-<p>
-Welcome to <strong>TheBestBundle Newsletter</strong>.
-</p>
+<div class="header-inner">
 
-<p>
-You'll be the first to receive updates about new eBooks,
-templates, exclusive bundles, special discounts,
-product launches, and members-only offers.
-</p>
 
-<p>
-We're excited to have you as part of our community!
-</p>
+    <a
+        href="index.html"
+        class="header-logo">
 
-<a href="index.html" class="button">
-Return to Home
-</a>
+        TheBestBundle
+
+    </a>
+
+
+    <a
+        href="index.html"
+        class="home-button"
+        aria-label="Return home">
+
+        <i class="fa-solid fa-house"></i>
+
+    </a>
+
 
 </div>
 
+</header>
+
+
+<!-- =================================================
+     BACK
+================================================= -->
+
+<div class="back-row">
+
+<div class="back-inner">
+
+    <a
+        href="index.html"
+        class="back-button">
+
+        <i class="fa-solid fa-arrow-left"></i>
+
+        Back
+
+    </a>
+
+</div>
+
+</div>
+
+
+<!-- =================================================
+     MAIN
+================================================= -->
+
+<main>
+
+
+<div class="thank-you-wrapper">
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="kicker">
+            THEBESTBUNDLE • COMMUNITY
+        </div>
+
+
+        <h1>
+            Thank <span>You</span>
+        </h1>
+
+
+        <p class="hero-subtitle">
+            Your subscription has been received.
+            Welcome to TheBestBundle community.
+        </p>
+
+    </section>
+
+
+    <!-- THANK YOU CARD -->
+
+    <section class="thank-you-card">
+
+
+        <div class="check">
+            <i class="fa-solid fa-check"></i>
+        </div>
+
+
+        <h2>
+            Thank You for Subscribing!
+        </h2>
+
+
+        <p>
+            Welcome to
+            <strong>TheBestBundle Newsletter</strong>.
+        </p>
+
+
+        <p>
+            You'll be the first to receive updates
+            about new eBooks, templates, exclusive
+            bundles, special discounts, product
+            launches, and members-only offers.
+        </p>
+
+
+        <p>
+            We're excited to have you as part
+            of our community!
+        </p>
+
+
+        <!-- WHAT TO EXPECT -->
+
+        <div class="expect-box">
+
+            <div class="expect-label">
+                WHAT'S NEXT
+            </div>
+
+            <p>
+                Keep an eye on your inbox for
+                TheBestBundle updates and new
+                digital resources.
+            </p>
+
+        </div>
+
+
+        <!-- BUTTON -->
+
+        <div class="button-area">
+
+            <a
+                href="index.html"
+                class="button">
+
+                Return to Home
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+    </section>
+
+
+</div>
+
+</main>
+
+
+<!-- =================================================
+     FOOTER
+================================================= -->
+
+<footer class="footer">
+
+<div>
+
+    <div class="footer-tagline">
+        LEARN • CREATE • GROW
+    </div>
+
+    <p>
+        © 2026 TheBestBundle. All Rights Reserved.
+    </p>
+
+</div>
+
+</footer>
+
+
 </body>
+
 </html>
