@@ -1,6 +1,6 @@
 <!-- =========================================
      PART 20 — DONATION PAGE
-     CREATE A NEW FILE: donate.html
+     FILE: donate.html
 ========================================= -->
 
 <!DOCTYPE html>
@@ -45,407 +45,1224 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+
+<!-- =========================================
+     GOOGLE FONTS
+========================================= -->
+
+<link
+    rel="preconnect"
+    href="https://fonts.googleapis.com">
+
+<link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+
 <style>
 
 :root{
+
     --navy:#071A33;
-    --gold:#F4C542;
-    --gold-dark:#D9A91A;
+
+    --gold:#C8A45D;
+
+    --gold-light:#E1C77E;
+
+    --cream:#F8F5ED;
+
     --white:#FFFFFF;
-    --off-white:#F8FAFC;
-    --text-gray:#64748B;
-    --border:#E2E8F0;
-    --max-width:1000px;
-    --radius:14px;
+
+    --text:#071A33;
+
+    --muted:#6B7280;
+
+    --border:#E8E3D8;
+
+    --shadow:
+        0 12px 35px
+        rgba(7,26,51,.08);
+
+    --max-width:1180px;
+
 }
+
+
+/* =========================================
+   RESET
+========================================= */
 
 *{
+
     margin:0;
+
     padding:0;
+
     box-sizing:border-box;
+
 }
+
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
 
 body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:var(--off-white);
-    color:var(--navy);
+
+    font-family:
+        'Montserrat',
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:var(--cream);
+
+    color:var(--text);
+
     line-height:1.6;
+
 }
 
+
 a{
+
     color:inherit;
+
     text-decoration:none;
+
 }
+
 
 button,
 input{
+
     font:inherit;
+
 }
+
 
 button{
+
     cursor:pointer;
+
 }
+
 
 img{
-    max-width:100%;
+
     display:block;
+
+    max-width:100%;
+
 }
+
 
 .container{
-    width:90%;
+
+    width:92%;
+
     max-width:var(--max-width);
-    margin:0 auto;
+
+    margin:auto;
+
 }
 
-/* HEADER */
+
+/* =========================================
+   HEADER
+========================================= */
 
 .page-header{
+
     background:var(--navy);
+
     color:var(--white);
+
 }
+
 
 .header-inner{
-    min-height:90px;
+
+    min-height:82px;
+
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
+
 }
 
-.header-logo img{
-    height:56px;
-    width:auto;
-}
 
-.home-button{
-    width:46px;
-    height:46px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:8px;
-    color:var(--white);
-    font-size:23px;
-}
+.header-logo{
 
-.home-button:hover{
-    background:rgba(255,255,255,.08);
+    font-family:
+        'Cormorant Garamond',
+        Georgia,
+        serif;
+
+    font-size:32px;
+
+    font-weight:700;
+
+    letter-spacing:.3px;
+
     color:var(--gold);
+
+    line-height:1;
+
 }
 
-/* BACK */
+
+.header-actions{
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+
+.header-icon{
+
+    width:44px;
+
+    height:44px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    color:var(--white);
+
+    font-size:18px;
+
+    transition:.2s ease;
+
+}
+
+
+.header-icon:hover{
+
+    color:var(--gold);
+
+    background:
+        rgba(255,255,255,.08);
+
+}
+
+
+/* =========================================
+   BACK
+========================================= */
 
 .back-row{
-    background:var(--white);
-    border-bottom:1px solid var(--border);
+
+    padding:22px 0 0;
+
+    background:var(--cream);
+
 }
 
-.back-inner{
-    min-height:60px;
-    display:flex;
-    align-items:center;
-}
 
 .back-button{
+
     display:inline-flex;
+
     align-items:center;
+
     gap:9px;
+
+    padding:0;
+
     border:none;
+
     background:transparent;
+
     color:var(--navy);
+
+    font-size:14px;
+
     font-weight:700;
+
+    transition:.2s ease;
+
 }
+
 
 .back-button:hover{
-    color:var(--gold-dark);
+
+    color:var(--gold);
+
 }
 
-/* HERO */
+
+/* =========================================
+   HERO
+========================================= */
 
 .donate-hero{
-    padding:70px 0 110px;
-    background:var(--navy);
-    color:var(--white);
+
+    padding:55px 0 50px;
+
+    background:var(--cream);
+
     text-align:center;
+
 }
 
-.donate-icon{
-    width:72px;
-    height:72px;
-    margin:0 auto 22px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:50%;
-    background:var(--gold);
-    color:var(--navy);
-    font-size:29px;
+
+.hero-kicker{
+
+    margin-bottom:10px;
+
+    color:var(--gold);
+
+    font-size:12px;
+
+    font-weight:800;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
 }
+
 
 .donate-hero h1{
-    font-size:clamp(40px,7vw,62px);
-    line-height:1.1;
-    margin-bottom:18px;
+
+    margin-bottom:15px;
+
+    font-family:
+        'Cormorant Garamond',
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(44px,7vw,68px);
+
+    font-weight:600;
+
+    line-height:1;
+
+    color:var(--navy);
+
 }
 
-.donate-hero h1 span{
-    color:var(--gold);
-}
 
 .donate-hero p{
-    max-width:670px;
+
+    max-width:680px;
+
     margin:0 auto;
-    color:rgba(255,255,255,.82);
-    font-size:18px;
+
+    color:var(--muted);
+
+    font-size:15px;
+
+    line-height:1.8;
+
 }
 
-/* DONATION BOX */
 
-.donation-area{
-    padding:0 0 90px;
+/* =========================================
+   QUICK NAV
+========================================= */
+
+.quick-nav{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-top:28px;
+
 }
+
+
+.quick-nav a{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-height:40px;
+
+    padding:8px 18px;
+
+    border:1px solid var(--border);
+
+    border-radius:999px;
+
+    background:var(--white);
+
+    color:var(--navy);
+
+    font-size:12px;
+
+    font-weight:700;
+
+    transition:.2s ease;
+
+}
+
+
+.quick-nav a:hover{
+
+    border-color:var(--gold);
+
+    color:var(--gold);
+
+}
+
+
+/* =========================================
+   DONATION SECTION
+========================================= */
+
+.donation-section{
+
+    padding:25px 0 75px;
+
+}
+
+
+.section-kicker{
+
+    margin-bottom:8px;
+
+    color:var(--gold);
+
+    font-size:12px;
+
+    font-weight:800;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+
+.section-heading{
+
+    margin-bottom:30px;
+
+}
+
+
+.section-heading h2{
+
+    margin-bottom:10px;
+
+    font-family:
+        'Cormorant Garamond',
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(34px,5vw,48px);
+
+    font-weight:600;
+
+    line-height:1.05;
+
+    color:var(--navy);
+
+}
+
+
+.section-heading p{
+
+    max-width:680px;
+
+    color:var(--muted);
+
+    font-size:14px;
+
+    line-height:1.8;
+
+}
+
+
+/* =========================================
+   DONATION CARD
+========================================= */
 
 .donation-card{
-    width:90%;
-    max-width:650px;
-    margin:-55px auto 0;
-    padding:38px;
-    position:relative;
+
+    max-width:850px;
+
+    margin:auto;
+
+    padding:45px;
+
     background:var(--white);
+
     border:1px solid var(--border);
-    border-radius:var(--radius);
-    box-shadow:0 15px 40px rgba(7,26,51,.15);
+
+    border-radius:22px;
+
+    box-shadow:var(--shadow);
+
 }
 
-.donation-card h2{
-    text-align:center;
-    font-size:28px;
-    margin-bottom:8px;
-}
 
-.donation-intro{
-    text-align:center;
-    color:var(--text-gray);
+.donation-card-heading{
+
     margin-bottom:30px;
+
+    text-align:center;
+
 }
 
-/* ONE TIME / MONTHLY */
 
-.donation-frequency{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    padding:5px;
-    margin-bottom:28px;
-    border-radius:9px;
-    background:var(--off-white);
-}
+.donation-card-heading h3{
 
-.frequency-button{
-    min-height:48px;
-    border:none;
-    border-radius:7px;
-    background:transparent;
+    margin-bottom:8px;
+
+    font-family:
+        'Cormorant Garamond',
+        Georgia,
+        serif;
+
+    font-size:38px;
+
+    font-weight:600;
+
+    line-height:1.05;
+
     color:var(--navy);
-    font-weight:800;
+
 }
 
-.frequency-button.active{
-    background:var(--navy);
-    color:var(--white);
+
+.donation-card-heading p{
+
+    color:var(--muted);
+
+    font-size:13px;
+
 }
 
-/* AMOUNTS */
+
+/* =========================================
+   AMOUNT LABEL
+========================================= */
 
 .field-label{
+
     display:block;
-    margin-bottom:10px;
+
+    margin-bottom:11px;
+
+    color:var(--navy);
+
+    font-size:12px;
+
     font-weight:800;
+
 }
+
+
+/* =========================================
+   AMOUNT BUTTONS
+========================================= */
 
 .amount-grid{
+
     display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:10px;
-    margin-bottom:18px;
+
+    grid-template-columns:
+        repeat(3,minmax(0,1fr));
+
+    gap:12px;
+
+    margin-bottom:25px;
+
 }
+
 
 .amount-button{
-    min-height:52px;
-    border:2px solid var(--border);
-    border-radius:8px;
-    background:var(--white);
+
+    min-height:58px;
+
+    border:1px solid var(--border);
+
+    border-radius:13px;
+
+    background:var(--cream);
+
     color:var(--navy);
-    font-weight:900;
-    font-size:17px;
+
+    font-size:16px;
+
+    font-weight:800;
+
+    transition:.2s ease;
+
 }
 
-.amount-button:hover,
-.amount-button.active{
+
+.amount-button:hover{
+
     border-color:var(--gold);
-    background:var(--gold);
+
+    background:#FBF7EC;
+
 }
 
-/* CUSTOM AMOUNT */
+
+.amount-button.active{
+
+    border-color:var(--gold);
+
+    background:var(--gold);
+
+    color:var(--navy);
+
+}
+
+
+/* =========================================
+   CUSTOM AMOUNT
+========================================= */
 
 .custom-wrapper{
+
     position:relative;
-    margin-bottom:24px;
+
+    margin-bottom:25px;
+
 }
+
 
 .currency-symbol{
+
     position:absolute;
-    left:16px;
+
+    left:17px;
+
     top:50%;
-    transform:translateY(-50%);
+
+    transform:
+        translateY(-50%);
+
+    color:var(--navy);
+
     font-weight:800;
+
 }
+
 
 .custom-amount{
+
     width:100%;
-    min-height:52px;
-    padding:12px 65px 12px 36px;
-    border:2px solid var(--border);
-    border-radius:8px;
-    font-size:17px;
+
+    min-height:55px;
+
+    padding:
+        12px 65px
+        12px 38px;
+
+    border:1px solid var(--border);
+
+    border-radius:13px;
+
+    background:var(--cream);
+
+    color:var(--navy);
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:.2s ease;
+
 }
+
 
 .custom-amount:focus{
-    outline:none;
+
     border-color:var(--gold);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(200,164,93,.15);
+
 }
+
 
 .currency-code{
+
     position:absolute;
-    right:16px;
+
+    right:17px;
+
     top:50%;
-    transform:translateY(-50%);
-    color:var(--text-gray);
-    font-size:13px;
+
+    transform:
+        translateY(-50%);
+
+    color:var(--muted);
+
+    font-size:11px;
+
     font-weight:800;
+
 }
 
-/* OPTIONAL INFORMATION */
+
+/* =========================================
+   OPTIONAL INFORMATION
+========================================= */
 
 .donor-fields{
+
     display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:15px;
+
+    grid-template-columns:
+        repeat(2,minmax(0,1fr));
+
+    gap:18px;
+
     margin-bottom:25px;
+
 }
+
 
 .form-field label{
+
     display:block;
-    margin-bottom:7px;
-    font-weight:700;
-    font-size:14px;
+
+    margin-bottom:8px;
+
+    color:var(--navy);
+
+    font-size:12px;
+
+    font-weight:800;
+
 }
+
 
 .form-field input{
+
     width:100%;
-    min-height:50px;
-    padding:12px 14px;
+
+    min-height:52px;
+
+    padding:13px 15px;
+
     border:1px solid var(--border);
-    border-radius:8px;
+
+    border-radius:12px;
+
+    background:var(--cream);
+
+    color:var(--navy);
+
+    outline:none;
+
+    transition:.2s ease;
+
 }
+
 
 .form-field input:focus{
-    outline:2px solid var(--gold);
+
+    border-color:var(--gold);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(200,164,93,.15);
+
 }
 
-/* DONATE BUTTON */
+
+/* =========================================
+   DONATE BUTTON
+========================================= */
 
 .donate-button{
+
     width:100%;
+
     min-height:56px;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     gap:9px;
+
     border:none;
-    border-radius:8px;
-    background:var(--gold);
-    color:var(--navy);
-    font-size:17px;
-    font-weight:900;
+
+    border-radius:999px;
+
+    background:var(--navy);
+
+    color:var(--white);
+
+    font-size:13px;
+
+    font-weight:800;
+
+    transition:.2s ease;
+
 }
+
 
 .donate-button:hover{
-    background:var(--gold-dark);
+
+    background:#0D294D;
+
+    transform:translateY(-1px);
+
 }
+
+
+/* =========================================
+   SECURE NOTE
+========================================= */
 
 .secure-note{
+
     margin-top:14px;
+
     text-align:center;
-    color:var(--text-gray);
-    font-size:13px;
+
+    color:var(--muted);
+
+    font-size:11px;
+
 }
+
 
 .secure-note i{
+
     margin-right:5px;
+
+    color:var(--gold);
+
 }
 
-/* SUPPORT MESSAGE */
 
-.support-message{
+/* =========================================
+   CUSTOM AMOUNT NOTICE
+========================================= */
+
+.custom-note{
+
+    margin-top:10px;
+
+    margin-bottom:22px;
+
+    color:var(--muted);
+
+    font-size:11px;
+
+    line-height:1.6;
+
+}
+
+
+.custom-note strong{
+
+    color:var(--navy);
+
+}
+
+
+/* =========================================
+   THANK YOU SECTION
+========================================= */
+
+.thanks-section{
+
     padding:75px 0;
+
     background:var(--white);
+
     text-align:center;
+
 }
 
-.support-message h2{
-    font-size:clamp(30px,5vw,42px);
-    margin-bottom:16px;
+
+.thanks-icon{
+
+    width:58px;
+
+    height:58px;
+
+    margin:0 auto 17px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:var(--cream);
+
+    color:var(--gold);
+
+    font-size:21px;
+
 }
 
-.support-message p{
-    max-width:700px;
-    margin:0 auto;
-    color:var(--text-gray);
+
+.thanks-section h2{
+
+    margin-bottom:12px;
+
+    font-family:
+        'Cormorant Garamond',
+        Georgia,
+        serif;
+
+    font-size:42px;
+
+    font-weight:600;
+
+    line-height:1.05;
+
+    color:var(--navy);
+
+}
+
+
+.thanks-section p{
+
+    max-width:680px;
+
+    margin:auto;
+
+    color:var(--muted);
+
+    font-size:14px;
+
+    line-height:1.8;
+
+}
+
+
+/* =========================================
+   TRUST
+========================================= */
+
+.trust-section{
+
+    padding:55px 0;
+
+    background:var(--cream);
+
+    border-top:1px solid var(--border);
+
+}
+
+
+.trust-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,minmax(0,1fr));
+
+    gap:18px;
+
+}
+
+
+.trust-card{
+
+    padding:24px 18px;
+
+    text-align:center;
+
+}
+
+
+.trust-icon{
+
+    width:46px;
+
+    height:46px;
+
+    margin:0 auto 13px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:var(--white);
+
+    color:var(--gold);
+
     font-size:17px;
+
 }
 
-/* FOOTER */
+
+.trust-card h3{
+
+    margin-bottom:5px;
+
+    font-family:
+        'Cormorant Garamond',
+        Georgia,
+        serif;
+
+    font-size:23px;
+
+    font-weight:600;
+
+}
+
+
+.trust-card p{
+
+    color:var(--muted);
+
+    font-size:11px;
+
+    line-height:1.7;
+
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
 
 .footer{
+
+    padding:36px 0;
+
     background:var(--navy);
+
     color:var(--white);
-    padding:35px 0;
+
     text-align:center;
+
 }
+
 
 .footer-tagline{
+
+    margin-bottom:8px;
+
     color:var(--gold);
+
+    font-size:11px;
+
     font-weight:800;
-    letter-spacing:1px;
-    margin-bottom:7px;
+
+    letter-spacing:2px;
+
 }
+
 
 .footer p{
-    color:rgba(255,255,255,.7);
-    font-size:13px;
+
+    color:
+        rgba(255,255,255,.65);
+
+    font-size:11px;
+
 }
 
-/* MOBILE */
 
-@media(max-width:600px){
+/* =========================================
+   MOBILE
+========================================= */
 
-    .header-logo img{
-        height:42px;
+@media(max-width:700px){
+
+    .header-inner{
+
+        min-height:76px;
+
     }
 
-    .donation-card{
-        padding:28px 20px;
+
+    .header-logo{
+
+        font-size:28px;
+
     }
 
-    .amount-grid{
-        grid-template-columns:repeat(2,1fr);
+
+    .header-icon{
+
+        width:40px;
+
+        height:40px;
+
     }
 
-    .donor-fields{
-        grid-template-columns:1fr;
+
+    .back-row{
+
+        padding-top:19px;
+
     }
+
 
     .donate-hero{
-        padding:60px 0 100px;
+
+        padding:48px 0 42px;
+
+    }
+
+
+    .donate-hero h1{
+
+        font-size:48px;
+
+    }
+
+
+    .donate-hero p{
+
+        font-size:13px;
+
+        line-height:1.75;
+
+    }
+
+
+    .quick-nav{
+
+        gap:8px;
+
+        margin-top:23px;
+
+    }
+
+
+    .quick-nav a{
+
+        min-height:37px;
+
+        padding:7px 14px;
+
+        font-size:10px;
+
+    }
+
+
+    .donation-section{
+
+        padding:15px 0 60px;
+
+    }
+
+
+    .donation-card{
+
+        padding:30px 18px;
+
+        border-radius:18px;
+
+    }
+
+
+    .donation-card-heading h3{
+
+        font-size:35px;
+
+    }
+
+
+    .amount-grid{
+
+        grid-template-columns:
+            repeat(3,1fr);
+
+        gap:8px;
+
+    }
+
+
+    .amount-button{
+
+        min-height:52px;
+
+        font-size:14px;
+
+    }
+
+
+    .donor-fields{
+
+        grid-template-columns:1fr;
+
+        gap:15px;
+
+    }
+
+
+    .thanks-section{
+
+        padding:60px 0;
+
+    }
+
+
+    .thanks-section h2{
+
+        font-size:38px;
+
+    }
+
+
+    .trust-section{
+
+        padding:40px 0;
+
+    }
+
+
+    .trust-grid{
+
+        grid-template-columns:1fr;
+
+        gap:5px;
+
+    }
+
+
+    .trust-card{
+
+        padding:18px 12px;
+
     }
 
 }
@@ -454,26 +1271,34 @@ img{
 
 </head>
 
+
 <body>
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
 
 <header class="page-header">
 
-    <div class="container header-inner">
+<div class="container header-inner">
+
+
+    <a
+        href="index.html"
+        class="header-logo">
+
+        TheBestBundle
+
+    </a>
+
+
+    <div class="header-actions">
 
         <a
             href="index.html"
-            class="header-logo">
-
-            <img
-                src="images/Thebestbundle-transparent-logo.png"
-                alt="TheBestBundle">
-
-        </a>
-
-        <a
-            href="index.html"
-            class="home-button"
-            aria-label="Return home">
+            class="header-icon"
+            aria-label="Home">
 
             <i class="fa-solid fa-house"></i>
 
@@ -481,97 +1306,147 @@ img{
 
     </div>
 
-</header>
-
-<div class="back-row">
-
-    <div class="container back-inner">
-
-        <button
-            type="button"
-            class="back-button"
-            onclick="returnToPreviousPage()">
-
-            <i class="fa-solid fa-arrow-left"></i>
-
-            Back
-
-        </button>
-
-    </div>
 
 </div>
 
-<main>
+</header>
+
+
+<!-- =========================================
+     BACK
+========================================= -->
+
+<div class="back-row">
+
+<div class="container">
+
+    <button
+        type="button"
+        class="back-button"
+        onclick="returnToPreviousPage()">
+
+        <i class="fa-solid fa-arrow-left"></i>
+
+        Back
+
+    </button>
+
+</div>
+
+</div>
+
+
+<!-- =========================================
+     HERO
+========================================= -->
 
 <section class="donate-hero">
 
-    <div class="container">
+<div class="container">
 
-        <div class="donate-icon">
 
-            <i class="fa-solid fa-heart"></i>
+    <div class="hero-kicker">
 
-        </div>
-
-        <h1>
-            Support
-            <span>TheBestBundle</span>
-        </h1>
-
-        <p>
-            Your support helps us continue building
-            new digital resources, free content and
-            future services for our growing community.
-        </p>
+        THEBESTBUNDLE • SUPPORT
 
     </div>
 
+
+    <h1>
+        Support TheBestBundle
+    </h1>
+
+
+    <p>
+        Your support helps us continue creating
+        digital resources, free content and future
+        services for our growing community.
+    </p>
+
+
+    <nav class="quick-nav">
+
+        <a href="#donate">
+            Make a Donation
+        </a>
+
+        <a href="#thanks">
+            Your Support
+        </a>
+
+    </nav>
+
+
+</div>
+
 </section>
 
-<section class="donation-area">
 
-    <div class="donation-card">
+<!-- =========================================
+     DONATION
+========================================= -->
+
+<main
+    class="donation-section"
+    id="donate">
+
+<div class="container">
+
+
+    <div class="section-heading">
+
+        <div class="section-kicker">
+
+            SUPPORT • CREATE • GROW
+
+        </div>
+
 
         <h2>
             Make a Contribution
         </h2>
 
-        <p class="donation-intro">
-            Choose an amount or enter your own.
+
+        <p>
+            Every contribution helps support the
+            continued development of TheBestBundle
+            and its digital resources.
         </p>
 
-        <!-- ONE TIME / MONTHLY -->
+    </div>
 
-        <div class="donation-frequency">
 
-            <button
-                type="button"
-                class="frequency-button active"
-                data-frequency="one-time">
+    <div class="donation-card">
 
-                One Time
 
-            </button>
+        <div class="donation-card-heading">
 
-            <button
-                type="button"
-                class="frequency-button"
-                data-frequency="monthly">
+            <h3>
+                Choose Your Contribution
+            </h3>
 
-                Monthly
 
-            </button>
+            <p>
+                Select one of the available amounts
+                below to continue securely through Stripe.
+            </p>
 
         </div>
 
-        <!-- AMOUNTS -->
+
+        <!-- =====================================
+             PRESET AMOUNTS
+        ====================================== -->
 
         <label class="field-label">
+
             Select an amount
+
         </label>
 
+
         <div class="amount-grid">
+
 
             <button
                 type="button"
@@ -582,14 +1457,16 @@ img{
 
             </button>
 
+
             <button
                 type="button"
-                class="amount-button"
+                class="amount-button active"
                 data-amount="5">
 
                 $5
 
             </button>
+
 
             <button
                 type="button"
@@ -600,24 +1477,31 @@ img{
 
             </button>
 
+
         </div>
 
-        <!-- CUSTOM AMOUNT -->
+
+        <!-- =====================================
+             CUSTOM AMOUNT
+        ====================================== -->
 
         <label
             for="customAmount"
             class="field-label">
 
-            Add a little extra to help us
-            bring more services
+            Custom Amount
 
         </label>
+
 
         <div class="custom-wrapper">
 
             <span class="currency-symbol">
+
                 $
+
             </span>
+
 
             <input
                 type="number"
@@ -625,23 +1509,48 @@ img{
                 class="custom-amount"
                 min="1"
                 step="1"
-                placeholder="Custom amount">
+                inputmode="decimal"
+                placeholder="Enter an amount">
+
 
             <span class="currency-code">
+
                 USD
+
             </span>
 
         </div>
 
-        <!-- OPTIONAL INFORMATION -->
+
+        <p class="custom-note">
+
+            <strong>
+                Custom donations:
+            </strong>
+
+            A Stripe payment link for a
+            customer-selected amount must be
+            configured before custom donations
+            can be processed.
+
+        </p>
+
+
+        <!-- =====================================
+             OPTIONAL INFORMATION
+        ====================================== -->
 
         <div class="donor-fields">
+
 
             <div class="form-field">
 
                 <label for="donorName">
+
                     Name (Optional)
+
                 </label>
+
 
                 <input
                     type="text"
@@ -651,11 +1560,15 @@ img{
 
             </div>
 
+
             <div class="form-field">
 
                 <label for="donorEmail">
+
                     Email (Optional)
+
                 </label>
+
 
                 <input
                     type="email"
@@ -665,9 +1578,13 @@ img{
 
             </div>
 
+
         </div>
 
-        <!-- DONATE -->
+
+        <!-- =====================================
+             DONATE BUTTON
+        ====================================== -->
 
         <button
             type="button"
@@ -680,6 +1597,7 @@ img{
 
         </button>
 
+
         <p class="secure-note">
 
             <i class="fa-solid fa-lock"></i>
@@ -688,81 +1606,182 @@ img{
 
         </p>
 
-    </div>
-
-</section>
-
-<section class="support-message">
-
-    <div class="container">
-
-        <h2>
-            Thank You for Your Support
-        </h2>
-
-        <p>
-            Every contribution helps support the
-            continued development of TheBestBundle,
-            including new eBooks, templates, free
-            resources and future services.
-        </p>
 
     </div>
 
-</section>
+
+</div>
 
 </main>
 
-<footer class="footer">
 
-    <div class="container">
+<!-- =========================================
+     THANK YOU
+========================================= -->
 
-        <div class="footer-tagline">
-            LEARN • CREATE • GROW
-        </div>
+<section
+    class="thanks-section"
+    id="thanks">
 
-        <p>
-            © 2026 TheBestBundle. All Rights Reserved.
-        </p>
+<div class="container">
+
+
+    <div class="thanks-icon">
+
+        <i class="fa-solid fa-heart"></i>
 
     </div>
 
+
+    <h2>
+        Thank You for Your Support
+    </h2>
+
+
+    <p>
+        Every contribution helps support the
+        continued development of TheBestBundle,
+        including new eBooks, templates, free
+        resources and future services.
+    </p>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================================
+     TRUST
+========================================= -->
+
+<section class="trust-section">
+
+<div class="container">
+
+
+    <div class="trust-grid">
+
+
+        <div class="trust-card">
+
+            <div class="trust-icon">
+
+                <i class="fa-solid fa-heart"></i>
+
+            </div>
+
+
+            <h3>
+                Support The Project
+            </h3>
+
+
+            <p>
+                Your contribution helps support
+                the continued development of
+                TheBestBundle.
+            </p>
+
+        </div>
+
+
+        <div class="trust-card">
+
+            <div class="trust-icon">
+
+                <i class="fa-solid fa-lock"></i>
+
+            </div>
+
+
+            <h3>
+                Secure Payment
+            </h3>
+
+
+            <p>
+                Donations are processed through
+                Stripe's secure payment system.
+            </p>
+
+        </div>
+
+
+        <div class="trust-card">
+
+            <div class="trust-icon">
+
+                <i class="fa-solid fa-lightbulb"></i>
+
+            </div>
+
+
+            <h3>
+                More to Come
+            </h3>
+
+
+            <p>
+                Support helps us continue developing
+                new resources and services.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer class="footer">
+
+<div class="container">
+
+
+    <div class="footer-tagline">
+
+        LEARN • CREATE • GROW
+
+    </div>
+
+
+    <p>
+
+        © 2026 TheBestBundle.
+        All Rights Reserved.
+
+    </p>
+
+
+</div>
+
 </footer>
+
+
+<!-- =========================================
+     SCRIPT
+========================================= -->
 
 <script>
 
-/* DONATION SELECTION */
+/* =========================================
+   DONATION STATE
+========================================= */
 
-let donationFrequency = 'one-time';
 let donationAmount = 5;
 
-/* FREQUENCY */
 
-document
-    .querySelectorAll('.frequency-button')
-    .forEach(function(button){
-
-        button.addEventListener(
-            'click',
-            function(){
-
-                document
-                    .querySelectorAll('.frequency-button')
-                    .forEach(function(item){
-                        item.classList.remove('active');
-                    });
-
-                this.classList.add('active');
-
-                donationFrequency =
-                    this.dataset.frequency;
-
-            }
-        );
-
-    });
-
-/* PRESET AMOUNTS */
+/* =========================================
+   PRESET AMOUNTS
+========================================= */
 
 document
     .querySelectorAll('.amount-button')
@@ -775,16 +1794,27 @@ document
                 document
                     .querySelectorAll('.amount-button')
                     .forEach(function(item){
-                        item.classList.remove('active');
+
+                        item.classList.remove(
+                            'active'
+                        );
+
                     });
+
 
                 this.classList.add('active');
 
+
                 donationAmount =
-                    Number(this.dataset.amount);
+                    Number(
+                        this.dataset.amount
+                    );
+
 
                 document
-                    .getElementById('customAmount')
+                    .getElementById(
+                        'customAmount'
+                    )
                     .value = '';
 
             }
@@ -792,7 +1822,10 @@ document
 
     });
 
-/* CUSTOM AMOUNT */
+
+/* =========================================
+   CUSTOM AMOUNT
+========================================= */
 
 document
     .getElementById('customAmount')
@@ -805,10 +1838,17 @@ document
                 donationAmount =
                     Number(this.value);
 
+
                 document
-                    .querySelectorAll('.amount-button')
+                    .querySelectorAll(
+                        '.amount-button'
+                    )
                     .forEach(function(item){
-                        item.classList.remove('active');
+
+                        item.classList.remove(
+                            'active'
+                        );
+
                     });
 
             }
@@ -816,13 +1856,33 @@ document
         }
     );
 
-/* CONTINUE DONATION */
+
+/* =========================================
+   DONATION BUTTON
+========================================= */
 
 document
     .getElementById('donateButton')
     .addEventListener(
         'click',
         function(){
+
+
+            const customValue =
+                document
+                    .getElementById(
+                        'customAmount'
+                    )
+                    .value;
+
+
+            if(customValue){
+
+                donationAmount =
+                    Number(customValue);
+
+            }
+
 
             if(
                 !donationAmount ||
@@ -837,67 +1897,115 @@ document
 
             }
 
+
+            /* =================================
+               SAVE OPTIONAL INFORMATION
+            ================================= */
+
             const donationData = {
 
-                frequency: donationFrequency,
-
-                amount: donationAmount,
+                amount:
+                    donationAmount,
 
                 name:
                     document
-                        .getElementById('donorName')
+                        .getElementById(
+                            'donorName'
+                        )
                         .value,
 
                 email:
                     document
-                        .getElementById('donorEmail')
+                        .getElementById(
+                            'donorEmail'
+                        )
                         .value
 
             };
 
+
             sessionStorage.setItem(
+
                 'theBestBundleDonation',
-                JSON.stringify(donationData)
+
+                JSON.stringify(
+                    donationData
+                )
+
             );
+
+
+            /* =================================
+               STRIPE LINKS
+               EXISTING LINKS PRESERVED
+            ================================= */
 
             let stripeLink = '';
 
-            if (donationAmount === 1) {
 
-                stripeLink = 'https://buy.stripe.com/4gM9AV648gOQeDJ5uH8N20e';
+            if(
+                donationAmount === 1
+            ){
 
-            } else if (donationAmount === 5) {
+                stripeLink =
+                    'https://buy.stripe.com/4gM9AV648gOQeDJ5uH8N20e';
 
-                stripeLink = 'https://buy.stripe.com/5kQcN72RWbuw1QXcX98N20f';
+            }
 
-            } else if (donationAmount === 25) {
 
-                stripeLink = 'https://buy.stripe.com/3cI5kFbos0PS67d6yL8N20h';
+            else if(
+                donationAmount === 5
+            ){
 
-            } else {
+                stripeLink =
+                    'https://buy.stripe.com/5kQcN72RWbuw1QXcX98N20f';
+
+            }
+
+
+            else if(
+                donationAmount === 25
+            ){
+
+                stripeLink =
+                    'https://buy.stripe.com/3cI5kFbos0PS67d6yL8N20h';
+
+            }
+
+
+            else{
 
                 alert(
-                    'Custom donation amounts are coming soon. Please choose one of the available donation options.'
+                    'Custom donation amounts are not configured yet. Please choose $1, $5, or $25.'
                 );
 
                 return;
 
             }
 
-            window.location.href = stripeLink;
+
+            window.location.href =
+                stripeLink;
 
         }
     );
-  
-/* RETURN TO PREVIOUS PAGE */
+
+
+/* =========================================
+   BACK
+========================================= */
 
 function returnToPreviousPage(){
 
-    if(window.history.length > 1){
+    if(
+        window.history.length > 1
+    ){
 
         window.history.back();
 
-    }else{
+    }
+
+    else{
 
         window.location.href =
             'index.html';
@@ -907,6 +2015,7 @@ function returnToPreviousPage(){
 }
 
 </script>
+
 
 </body>
 
