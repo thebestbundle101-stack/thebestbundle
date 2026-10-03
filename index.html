@@ -32,28 +32,9 @@
     rel="apple-touch-icon"
     href="/thebestbundle/images/favicon.png">
 
-<!-- GOOGLE FONTS -->
-
-<link
-    rel="preconnect"
-    href="https://fonts.googleapis.com">
-
-<link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin>
-
-<link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet">
-
-<!-- FONT AWESOME -->
-
 <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-<!-- GOOGLE ANALYTICS -->
 
 <script
     async
@@ -62,13 +43,10 @@
 
 <script>
 
-window.dataLayer =
-    window.dataLayer || [];
+window.dataLayer = window.dataLayer || [];
 
 function gtag(){
-
     dataLayer.push(arguments);
-
 }
 
 gtag("js", new Date());
@@ -82,584 +60,363 @@ gtag(
 
 <style>
 
-/* =========================================================
-   THEBESTBUNDLE — HOME 2.0
-========================================================= */
-
 :root{
 
     --navy:#071A33;
     --navy2:#0D2B50;
     --navy3:#123761;
 
-    --gold:#C8A45D;
-    --gold-light:#E1C77E;
+    --gold:#F4C542;
+    --gold2:#D9A91A;
 
-    --cream:#F8F5ED;
+    --white:#fff;
+    --cream:#F8F7F2;
 
-    --white:#FFFFFF;
     --ink:#172033;
-    --gray:#687385;
-    --line:#E5E7EB;
+    --gray:#64748B;
+    --line:#E2E8F0;
 
     --max:1180px;
-
-    --radius:18px;
-
+    --radius:14px;
 }
 
 *{
-
     box-sizing:border-box;
     margin:0;
     padding:0;
-
 }
 
 html{
-
     scroll-behavior:smooth;
-
 }
 
 body{
-
-    font-family:"Montserrat",Arial,sans-serif;
-
-    background:var(--cream);
-
+    font-family:Arial,Helvetica,sans-serif;
+    background:#fff;
     color:var(--ink);
-
-    line-height:1.6;
-
+    line-height:1.55;
     overflow-x:hidden;
-
 }
 
 body.locked{
-
     overflow:hidden;
-
 }
 
 img{
-
     display:block;
-
     max-width:100%;
-
     height:auto;
-
 }
 
 a{
-
     text-decoration:none;
-
     color:inherit;
-
 }
 
 button,
 input{
-
     font:inherit;
-
 }
 
 button{
-
     cursor:pointer;
-
 }
 
 .container{
-
     width:90%;
-
     max-width:var(--max);
-
     margin:auto;
-
 }
 
-
-/* =========================================================
-   GLOBAL BUTTONS
-========================================================= */
+.gold{
+    color:var(--gold);
+}
 
 .btn{
-
     display:inline-flex;
-
     align-items:center;
-
     justify-content:center;
-
     gap:10px;
-
     min-height:48px;
-
-    padding:13px 23px;
-
-    border-radius:30px;
-
-    font-size:12px;
-
+    padding:12px 22px;
+    border-radius:8px;
     font-weight:800;
-
-    letter-spacing:.2px;
-
     border:1px solid transparent;
-
-    transition:.25s ease;
-
+    transition:.2s ease;
 }
 
 .btn:hover{
-
     transform:translateY(-2px);
-
 }
 
 .btn-gold{
-
     background:var(--gold);
-
     color:var(--navy);
-
 }
 
 .btn-gold:hover{
-
-    background:var(--gold-light);
-
+    background:#FFD95A;
 }
 
 .btn-outline{
-
     background:transparent;
-
     color:#fff;
-
-    border-color:rgba(255,255,255,.6);
-
+    border-color:rgba(255,255,255,.7);
 }
 
 .btn-outline:hover{
-
-    color:var(--gold-light);
-
-    border-color:var(--gold-light);
-
+    border-color:var(--gold);
+    color:var(--gold);
 }
 
 .btn-dark{
-
     background:var(--navy);
-
     color:#fff;
-
 }
-
-.btn-dark:hover{
-
-    background:var(--navy2);
-
-}
-
-
-/* =========================================================
-   SECTION HEADINGS
-========================================================= */
 
 .section{
-
-    padding:82px 0;
-
-}
-
-.section-kicker{
-
-    text-align:center;
-
-    color:var(--gold);
-
-    font-size:10px;
-
-    font-weight:800;
-
-    letter-spacing:2.2px;
-
-    margin-bottom:9px;
-
+    padding:78px 0;
 }
 
 .section-title{
-
     text-align:center;
-
-    font-family:"Cormorant Garamond",Georgia,serif;
-
-    color:var(--navy);
-
-    font-size:clamp(34px,5vw,50px);
-
-    line-height:1.05;
-
-    margin-bottom:13px;
-
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:clamp(28px,4vw,42px);
+    line-height:1.15;
+    margin-bottom:12px;
 }
 
 .section-intro{
-
-    max-width:690px;
-
-    margin:0 auto 38px;
-
     text-align:center;
-
+    max-width:700px;
+    margin:0 auto 34px;
     color:var(--gray);
-
-    font-size:13px;
-
-    line-height:1.75;
-
+    font-size:15px;
 }
-
 
 /* =========================================================
    HEADER
 ========================================================= */
 
 .site-header{
-
     background:var(--navy);
-
-    border-bottom:1px solid rgba(255,255,255,.12);
-
+    border-bottom:1px solid rgba(255,255,255,.13);
     position:relative;
-
     z-index:1000;
-
 }
 
 .header-inner{
-
-    min-height:88px;
-
+    min-height:70px;
     display:flex;
-
     align-items:center;
-
     gap:24px;
-
+    min-width:0;
+    overflow-x:auto;
+    overflow-y:hidden;
 }
 
 .logo{
-
     flex-shrink:0;
-
-    font-family:"Cormorant Garamond",Georgia,serif;
-
-    font-size:43px;
-
-    line-height:1;
-
-    font-weight:600;
-
-    color:var(--gold);
-
-    letter-spacing:-1.2px;
-
 }
 
-.logo:hover{
-
-    color:var(--gold-light);
-
+.logo img{
+    height:56px;
+    width:auto;
 }
 
 .desktop-nav{
-
     display:flex;
-
     align-items:center;
-
     gap:25px;
-
     margin-left:auto;
-
 }
 
 .desktop-nav a{
-
-    color:rgba(255,255,255,.88);
-
-    font-size:11px;
-
+    color:#fff;
+    font-size:13px;
     font-weight:700;
-
     white-space:nowrap;
-
-    transition:.2s ease;
-
-}
-
-.desktop-nav a:hover{
-
-    color:var(--gold-light);
-
+    position:relative;
 }
 
 .desktop-nav a:first-child{
-
     color:var(--gold);
+}
 
+.desktop-nav a:first-child:after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:-21px;
+    height:2px;
+    background:var(--gold);
 }
 
 .header-tools{
-
     display:flex;
-
     align-items:center;
-
-    gap:7px;
-
-    flex-shrink:0;
-
+    gap:8px;
 }
 
 .header-tool{
-
-    min-height:37px;
-
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
-    gap:7px;
-
-    border:1px solid rgba(255,255,255,.45);
-
-    border-radius:24px;
-
-    padding:0 12px;
-
-    background:transparent;
-
+    min-height:38px;
+    border-radius:22px;
     color:#fff;
-
-    font-size:10px;
-
+    border:1px solid rgba(255,255,255,.55);
+    background:transparent;
+    padding:0 13px;
+    font-size:12px;
     font-weight:800;
-
-    transition:.2s ease;
-
-}
-
-.header-tool:hover{
-
-    color:var(--gold-light);
-
-    border-color:var(--gold);
-
 }
 
 .header-tool.icon{
-
     width:38px;
-
     padding:0;
-
 }
 
 .header-tool.gold-border{
-
     border-color:var(--gold);
-
 }
 
 .header-tool.news{
-
     background:var(--gold);
-
-    border-color:var(--gold);
-
     color:var(--navy);
+    border-color:var(--gold);
+}
 
+.header-tool:hover{
+    color:var(--gold);
+    border-color:var(--gold);
 }
 
 .header-tool.news:hover{
-
-    background:var(--gold-light);
-
+    background:#FFD95A;
     color:var(--navy);
-
 }
 
 .cart-wrap{
-
     position:relative;
-
 }
 
 .cart-count{
-
     position:absolute;
-
     top:-5px;
-
     right:-5px;
-
     min-width:17px;
-
     height:17px;
-
-    padding:0 4px;
-
     border-radius:50%;
-
     background:var(--gold);
-
     color:var(--navy);
-
     font-size:9px;
-
     font-weight:900;
-
     display:none;
-
     align-items:center;
-
     justify-content:center;
-
 }
 
-@media(max-width:1100px){
+@media(max-width:1080px){
 
     .desktop-nav{
-
-        gap:14px;
-
+        gap:13px;
     }
 
     .desktop-nav a{
-
-        font-size:10px;
-
-    }
-
-    .logo{
-
-        font-size:37px;
-
-    }
-
-}
-
-@media(max-width:850px){
-
-    .header-inner{
-
-        min-height:82px;
-
-        gap:12px;
-
-    }
-
-    .desktop-nav{
-
-        display:none;
-
-    }
-
-    .header-tools{
-
-        margin-left:auto;
-
-    }
-
-}
-
-@media(max-width:520px){
-
-    .header-inner{
-
-        min-height:82px;
-
-    }
-
-    .logo{
-
-        font-size:36px;
-
-    }
-
-    .header-tool:not(.icon):not(.gold-border):not(.news){
-
-        display:none;
-
+        font-size:11px;
     }
 
     .header-tool{
+        padding:0 9px;
+    }
+}
 
-        min-height:36px;
+@media(max-width:760px){
 
+    .header-inner{
+        min-height:66px;
+        gap:8px;
+        overflow-x:auto;
+    }
+
+    .logo img{
+        height:30px;
+    }
+
+    .desktop-nav{
+        margin-left:0;
+        gap:13px;
+    }
+
+    .desktop-nav a{
+        font-size:10px;
+    }
+
+    .header-tools{
+        margin-left:auto;
+        flex-shrink:0;
+    }
+
+    .header-tool:not(.icon):not(.gold-border):not(.news){
+        display:none;
+    }
+
+    .header-tool.icon{
+        order:1;
     }
 
     .header-tool.gold-border{
-
         display:flex;
+        order:2;
+    }
 
+    .cart-wrap{
+        order:3;
     }
 
     .header-tool.news{
-
-        display:none;
-
+        display:flex;
+        order:4;
     }
 
+    .desktop-nav a:first-child:after{
+        bottom:-18px;
+    }
 }
 
-
 /* =========================================================
-   HERO
+   PREMIUM HERO
 ========================================================= */
 
 .hero{
 
-    position:relative;
-
-    overflow:hidden;
-
-    padding:64px 0 82px;
-
     background:
 
         radial-gradient(
-            circle at 82% 32%,
-            rgba(200,164,93,.16),
+            circle at 78% 38%,
+            rgba(244,197,66,.13),
             transparent 28%
         ),
 
         radial-gradient(
-            circle at 15% 80%,
-            rgba(255,255,255,.04),
+            circle at 15% 85%,
+            rgba(255,255,255,.035),
             transparent 30%
         ),
 
         linear-gradient(
             135deg,
-            #06172E,
-            #0B294B 55%,
-            #071A33
+            #06172E 0%,
+            #0A2545 48%,
+            #071A33 100%
         );
 
     color:#fff;
-
+    position:relative;
+    overflow:hidden;
+    padding:58px 0 72px;
 }
 
 .hero:before{
@@ -667,124 +424,130 @@ button{
     content:"";
 
     position:absolute;
-
     inset:0;
 
-    opacity:.13;
+    opacity:.12;
 
     background-image:
-
         radial-gradient(
             rgba(255,255,255,.22) 1px,
             transparent 1px
         );
 
-    background-size:32px 32px;
+    background-size:34px 34px;
+}
 
+.hero:after{
+
+    content:"";
+
+    position:absolute;
+
+    width:700px;
+    height:700px;
+
+    right:-220px;
+    top:-300px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(244,197,66,.14);
+
+    box-shadow:
+        0 0 100px rgba(244,197,66,.07);
+
+    pointer-events:none;
 }
 
 .hero-grid{
 
     position:relative;
-
     z-index:2;
 
     display:grid;
 
-    grid-template-columns:.8fr 1.2fr;
+    grid-template-columns:.78fr 1.22fr;
 
-    gap:35px;
+    gap:34px;
 
     align-items:center;
-
 }
 
 .hero-copy{
-
-    max-width:500px;
-
+    max-width:510px;
 }
 
 .hero-kicker{
 
-    color:var(--gold-light);
+    color:var(--gold);
 
-    font-size:10px;
+    font-size:11px;
 
-    font-weight:800;
+    font-weight:900;
 
     letter-spacing:2.4px;
 
-    margin-bottom:15px;
-
+    margin-bottom:16px;
 }
 
 .hero h1{
 
-    font-family:"Cormorant Garamond",Georgia,serif;
+    font-family:Georgia,"Times New Roman",serif;
 
-    font-size:clamp(43px,5vw,64px);
+    font-size:clamp(40px,5vw,61px);
 
-    font-weight:600;
+    line-height:1.03;
 
-    line-height:.98;
-
-    margin-bottom:20px;
-
+    margin-bottom:18px;
 }
 
 .hero h1 span{
-
-    color:var(--gold-light);
-
+    color:var(--gold);
 }
 
-.hero-line{
+.hero h1:after{
 
-    width:60px;
+    content:"";
 
+    display:block;
+
+    width:58px;
     height:2px;
 
     background:var(--gold);
 
-    margin-bottom:19px;
-
+    margin-top:16px;
 }
 
 .hero p{
 
-    max-width:445px;
+    font-size:15px;
 
-    color:rgba(255,255,255,.78);
+    color:rgba(255,255,255,.88);
 
-    font-size:13px;
+    max-width:440px;
 
-    line-height:1.8;
-
-    margin-bottom:26px;
-
+    margin-bottom:24px;
 }
 
 .hero-actions{
 
     display:flex;
 
+    gap:12px;
+
     flex-wrap:wrap;
-
-    gap:11px;
-
 }
 
-
 /* =========================================================
-   HERO BUNDLES
+   NEW PREMIUM SHOWROOM
 ========================================================= */
 
 .hero-art{
 
     position:relative;
 
-    min-height:520px;
+    min-height:510px;
 
     display:flex;
 
@@ -792,102 +555,358 @@ button{
 
     justify-content:center;
 
+    isolation:isolate;
 }
 
-.hero-art:before{
-
-    content:"";
+.showroom-glow{
 
     position:absolute;
 
-    width:78%;
+    width:86%;
+    height:78%;
 
-    height:82%;
+    left:7%;
+    top:11%;
 
-    left:11%;
-
-    top:9%;
+    border-radius:50%;
 
     background:
 
         radial-gradient(
             ellipse at center,
-            rgba(200,164,93,.34),
-            rgba(200,164,93,.13) 45%,
-            transparent 72%
+            rgba(244,197,66,.24) 0%,
+            rgba(244,197,66,.13) 30%,
+            rgba(244,197,66,.05) 55%,
+            transparent 74%
         );
 
-    filter:blur(22px);
+    filter:blur(15px);
 
+    z-index:0;
 }
 
-.hero-floor{
+.showroom-ring{
 
     position:absolute;
 
-    bottom:25px;
-
-    width:84%;
-
-    height:46px;
+    width:88%;
+    height:78%;
 
     border-radius:50%;
 
-    background:rgba(0,0,0,.48);
+    border:1px solid rgba(244,197,66,.18);
 
-    filter:blur(9px);
+    box-shadow:
+        0 0 35px rgba(244,197,66,.08);
 
+    transform:rotate(-7deg);
+
+    z-index:1;
+
+    pointer-events:none;
 }
 
-.hero-center-card{
+.showroom-backlight{
 
     position:absolute;
 
-    width:94%;
+    width:70%;
+    height:80%;
 
-    height:94%;
+    right:5%;
+    top:7%;
 
-    left:3%;
+    border-radius:50%;
 
-    top:3%;
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,215,90,.10),
+            transparent
+        );
 
-    border-radius:24px;
+    filter:blur(12px);
 
-    border:1px solid rgba(200,164,93,.72);
+    z-index:1;
+}
+
+.showroom-stage{
+
+    position:absolute;
+
+    width:92%;
+    height:76%;
+
+    bottom:20px;
+    left:4%;
+
+    border-radius:50%;
 
     background:
 
         linear-gradient(
-            145deg,
-            rgba(255,255,255,.055),
-            rgba(7,26,51,.16)
+            180deg,
+            rgba(255,255,255,.13),
+            rgba(255,255,255,.035)
         );
+
+    border:1px solid rgba(244,197,66,.55);
 
     box-shadow:
 
-        0 0 18px rgba(200,164,93,.30),
+        0 20px 45px rgba(0,0,0,.38),
 
-        0 0 45px rgba(200,164,93,.12),
+        0 0 30px rgba(244,197,66,.14),
 
-        inset 0 0 30px rgba(200,164,93,.06);
+        inset 0 1px 0 rgba(255,255,255,.18);
+
+    transform:perspective(700px) rotateX(62deg);
+
+    z-index:2;
+}
+
+.showroom-pedestal{
+
+    position:absolute;
+
+    width:80%;
+    height:34px;
+
+    left:10%;
+    bottom:34px;
+
+    border-radius:50%;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            #f7f3e8,
+            #d9d1be
+        );
+
+    border:2px solid rgba(244,197,66,.55);
+
+    box-shadow:
+
+        0 16px 35px rgba(0,0,0,.42),
+
+        0 0 22px rgba(244,197,66,.17);
+
+    z-index:3;
+}
+
+.showroom-pedestal:after{
+
+    content:"";
+
+    position:absolute;
+
+    left:7%;
+    right:7%;
+
+    bottom:-13px;
+
+    height:17px;
+
+    border-radius:50%;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #8b6b25,
+            #f4c542,
+            #fff0a7,
+            #d9a91a,
+            #80601e
+        );
+
+    box-shadow:
+        0 8px 16px rgba(0,0,0,.35);
 
 }
+
+/* GOLD DECORATIVE LIGHT */
+
+.showroom-light{
+
+    position:absolute;
+
+    width:150px;
+    height:150px;
+
+    right:2%;
+    top:4%;
+
+    border-radius:50%;
+
+    border:2px solid rgba(244,197,66,.55);
+
+    box-shadow:
+
+        0 0 15px rgba(244,197,66,.30),
+
+        0 0 50px rgba(244,197,66,.12);
+
+    z-index:3;
+}
+
+.showroom-light:before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:12px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(255,215,90,.25);
+}
+
+/* BUNDLE CARDS */
+
+.hero-product{
+
+    position:absolute;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    z-index:6;
+
+    transition:.3s ease;
+
+    filter:
+        drop-shadow(
+            0 18px 18px rgba(0,0,0,.42)
+        )
+        drop-shadow(
+            0 0 13px rgba(244,197,66,.12)
+        );
+}
+
+.hero-product img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+
+    position:relative;
+    z-index:2;
+}
+
+/* ULTIMATE */
+
+.hero-product.ultimate{
+
+    width:330px;
+    height:365px;
+
+    left:50%;
+    top:50%;
+
+    transform:translate(-50%,-52%);
+
+    z-index:10;
+
+    filter:
+        drop-shadow(
+            0 28px 28px rgba(0,0,0,.52)
+        )
+        drop-shadow(
+            0 0 22px rgba(244,197,66,.20)
+        );
+}
+
+/* STARTER */
+
+.hero-product.starter{
+
+    width:155px;
+    height:185px;
+
+    left:3%;
+    top:14%;
+
+    transform:rotate(-3deg);
+}
+
+/* CREATOR */
+
+.hero-product.creator{
+
+    width:155px;
+    height:185px;
+
+    right:5%;
+    top:12%;
+
+    transform:rotate(3deg);
+}
+
+/* BUSINESS */
+
+.hero-product.business{
+
+    width:165px;
+    height:185px;
+
+    left:5%;
+    bottom:13%;
+
+    transform:rotate(2deg);
+}
+
+/* HEALTH */
+
+.hero-product.health{
+
+    width:165px;
+    height:185px;
+
+    right:4%;
+    bottom:12%;
+
+    transform:rotate(-2deg);
+}
+
+.hero-product:hover{
+    transform:translateY(-6px) scale(1.025);
+}
+
+.hero-product.ultimate:hover{
+    transform:translate(-50%,-57%) scale(1.025);
+}
+
+/* PREMIUM QUALITY */
 
 .quality-badge{
 
     position:absolute;
 
     right:0;
+    top:2px;
 
-    top:8px;
-
-    width:78px;
-
-    height:78px;
+    width:82px;
+    height:82px;
 
     border-radius:50%;
 
-    background:var(--gold);
+    background:
+
+        radial-gradient(
+            circle,
+            #ffe79a,
+            #e5b63d 70%,
+            #c99727
+        );
 
     color:var(--navy);
 
@@ -899,7 +918,7 @@ button{
 
     text-align:center;
 
-    font-size:8px;
+    font-size:9px;
 
     font-weight:900;
 
@@ -907,415 +926,315 @@ button{
 
     box-shadow:
 
-        0 10px 25px rgba(0,0,0,.25),
+        0 12px 28px rgba(0,0,0,.26),
 
-        0 0 25px rgba(200,164,93,.28);
+        0 0 25px rgba(244,197,66,.28);
 
-    z-index:30;
+    z-index:20;
 
+    border:2px solid rgba(255,238,166,.55);
 }
 
-.hero-item{
+.quality-badge:before{
+
+    content:"✦";
 
     position:absolute;
 
-    display:flex;
+    top:10px;
 
-    align-items:center;
-
-    justify-content:center;
-
-    filter:
-
-        drop-shadow(
-            0 18px 22px rgba(0,0,0,.40)
-        )
-
-        drop-shadow(
-            0 0 15px rgba(200,164,93,.20)
-        );
-
-    z-index:5;
-
+    font-size:12px;
 }
 
-.hero-item img{
+/* MOBILE HERO */
 
-    width:100%;
-
-    height:100%;
-
-    object-fit:contain;
-
-}
-
-.hero-item.center{
-
-    width:310px;
-
-    height:350px;
-
-    left:50%;
-
-    top:50%;
-
-    transform:translate(-50%,-50%);
-
-    z-index:10;
-
-}
-
-.hero-item.left-side{
-
-    width:155px;
-
-    height:205px;
-
-    left:7%;
-
-    top:8%;
-
-}
-
-.hero-item.right-side{
-
-    width:155px;
-
-    height:205px;
-
-    right:7%;
-
-    top:8%;
-
-}
-
-.hero-item.left-small{
-
-    width:155px;
-
-    height:205px;
-
-    left:7%;
-
-    bottom:7%;
-
-}
-
-.hero-item.right-small{
-
-    width:155px;
-
-    height:205px;
-
-    right:7%;
-
-    bottom:7%;
-
-}
-
-@media(max-width:800px){
-
-    .hero{
-
-        padding:50px 0 65px;
-
-    }
+@media(max-width:900px){
 
     .hero-grid{
-
         grid-template-columns:1fr;
-
         text-align:center;
-
     }
 
     .hero-copy{
-
         margin:auto;
-
     }
 
     .hero p{
-
         margin-left:auto;
-
         margin-right:auto;
-
-    }
-
-    .hero-line{
-
-        margin-left:auto;
-
-        margin-right:auto;
-
     }
 
     .hero-actions{
-
         justify-content:center;
-
     }
 
     .hero-art{
-
-        min-height:430px;
-
+        min-height:470px;
+        margin-top:12px;
     }
-
-    .hero-item.center{
-
-        width:235px;
-
-        height:275px;
-
-    }
-
-    .hero-item.left-side,
-    .hero-item.right-side,
-    .hero-item.left-small,
-    .hero-item.right-small{
-
-        width:105px;
-
-        height:145px;
-
-    }
-
-    .hero-item.left-side{
-
-        left:2%;
-
-        top:7%;
-
-    }
-
-    .hero-item.right-side{
-
-        right:2%;
-
-        top:7%;
-
-    }
-
-    .hero-item.left-small{
-
-        left:2%;
-
-        bottom:6%;
-
-    }
-
-    .hero-item.right-small{
-
-        right:2%;
-
-        bottom:6%;
-
-    }
-
 }
 
-@media(max-width:500px){
+@media(max-width:600px){
+
+    .hero{
+        padding:40px 0 58px;
+    }
 
     .hero h1{
-
-        font-size:40px;
-
+        font-size:38px;
     }
 
     .hero-art{
-
-        min-height:355px;
-
+        min-height:385px;
     }
 
-    .hero-item.center{
-
-        width:190px;
-
-        height:225px;
-
+    .showroom-stage{
+        width:96%;
+        left:2%;
+        height:72%;
+        bottom:17px;
     }
 
-    .hero-item.left-side,
-    .hero-item.right-side,
-    .hero-item.left-small,
-    .hero-item.right-small{
+    .showroom-pedestal{
+        width:82%;
+        left:9%;
+        bottom:28px;
+    }
 
-        width:78px;
+    .showroom-ring{
+        width:94%;
+        height:76%;
+    }
 
-        height:108px;
+    .showroom-light{
+        width:90px;
+        height:90px;
+        right:0;
+    }
 
+    .hero-product.ultimate{
+        width:205px;
+        height:235px;
+    }
+
+    .hero-product.starter{
+        width:91px;
+        height:112px;
+        left:1%;
+        top:13%;
+    }
+
+    .hero-product.creator{
+        width:91px;
+        height:112px;
+        right:1%;
+        top:12%;
+    }
+
+    .hero-product.business{
+        width:95px;
+        height:112px;
+        left:2%;
+        bottom:11%;
+    }
+
+    .hero-product.health{
+        width:95px;
+        height:112px;
+        right:2%;
+        bottom:10%;
     }
 
     .quality-badge{
-
-        width:60px;
-
-        height:60px;
-
+        width:62px;
+        height:62px;
         font-size:7px;
-
+        right:-1px;
+        top:0;
     }
 
+    .quality-badge:before{
+        top:7px;
+        font-size:9px;
+    }
 }
 
+@media(max-width:420px){
+
+    .hero-art{
+        min-height:340px;
+    }
+
+    .hero-product.ultimate{
+        width:175px;
+        height:205px;
+    }
+
+    .hero-product.starter{
+        width:75px;
+        height:92px;
+    }
+
+    .hero-product.creator{
+        width:75px;
+        height:92px;
+    }
+
+    .hero-product.business{
+        width:78px;
+        height:92px;
+    }
+
+    .hero-product.health{
+        width:78px;
+        height:92px;
+    }
+}
 
 /* =========================================================
-   TRUST
+   TRUST BAR
 ========================================================= */
 
 .trust-bar{
 
-    position:relative;
-
-    z-index:20;
-
-    margin-top:-28px;
-
     background:#fff;
 
-    border-radius:18px;
+    margin-top:-30px;
 
-    box-shadow:0 10px 32px rgba(7,26,51,.12);
+    position:relative;
 
-    padding:18px;
+    z-index:10;
 
+    border-radius:16px;
+
+    box-shadow:
+        0 8px 28px rgba(7,26,51,.13);
+
+    padding:18px 20px;
 }
 
 .trust-grid{
-
     display:grid;
-
-    grid-template-columns:repeat(4,1fr);
-
+    grid-template-columns:repeat(5,1fr);
 }
 
 .trust-item{
 
     display:flex;
-
     align-items:center;
-
     justify-content:center;
 
-    gap:10px;
+    gap:11px;
 
-    padding:5px 15px;
+    padding:4px 15px;
 
     border-right:1px solid var(--line);
 
+    text-align:left;
 }
 
 .trust-item:last-child{
-
     border-right:0;
-
 }
 
 .trust-icon{
 
     width:38px;
-
     height:38px;
 
-    flex-shrink:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border:1px solid #D5D9E0;
 
     border-radius:50%;
 
-    border:1px solid #D9DDE4;
-
     color:var(--navy);
 
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
+    flex-shrink:0;
 }
 
 .trust-item strong{
-
     display:block;
-
-    font-size:10px;
-
+    font-size:11px;
 }
 
 .trust-item span{
-
     display:block;
-
     color:var(--gray);
+    font-size:10px;
+    line-height:1.25;
+}
 
-    font-size:9px;
-
-    line-height:1.3;
-
+.trust-stars{
+    color:var(--gold2);
+    font-size:17px;
+    letter-spacing:1px;
 }
 
 @media(max-width:800px){
 
     .trust-grid{
-
         grid-template-columns:repeat(2,1fr);
-
     }
 
     .trust-item{
-
         border-right:0;
-
         border-bottom:1px solid var(--line);
-
-        padding:13px;
-
-        justify-content:flex-start;
-
-    }
-
-    .trust-item:nth-child(3),
-    .trust-item:nth-child(4){
-
-        border-bottom:0;
-
-    }
-
-}
-
-@media(max-width:500px){
-
-    .trust-grid{
-
-        grid-template-columns:1fr;
-
-    }
-
-    .trust-item{
-
-        border-bottom:1px solid var(--line)!important;
-
+        padding:12px;
     }
 
     .trust-item:last-child{
-
-        border-bottom:0!important;
-
+        border-bottom:0;
     }
-
 }
 
+@media(max-width:480px){
+
+    .trust-grid{
+        grid-template-columns:1fr;
+    }
+
+    .trust-item{
+        justify-content:flex-start;
+    }
+}
 
 /* =========================================================
-   EXPLORE COLLECTION
+   COLLECTION
 ========================================================= */
 
 .collection{
+    background:#fff;
+    padding-top:28px;
+}
 
-    background:var(--cream);
+.rule-title{
 
+    display:flex;
+    align-items:center;
+    gap:15px;
+    justify-content:center;
+
+    font-family:Georgia,"Times New Roman",serif;
+
+    font-size:17px;
+
+    letter-spacing:1.2px;
+
+    margin:0 0 18px;
+}
+
+.rule-title:before,
+.rule-title:after{
+
+    content:"";
+
+    width:80px;
+    height:1px;
+
+    background:#D9B44B;
 }
 
 .collection-grid{
@@ -1324,29 +1243,18 @@ button{
 
     grid-template-columns:repeat(4,1fr);
 
-    gap:18px;
-
+    gap:20px;
 }
 
 .collection-card{
 
-    position:relative;
+    min-height:200px;
 
-    overflow:hidden;
+    border:1px solid var(--line);
 
-    min-height:220px;
+    border-radius:10px;
 
-    padding:28px 20px;
-
-    border-radius:18px;
-
-    background:#fff;
-
-    border:1px solid rgba(7,26,51,.08);
-
-    box-shadow:0 8px 25px rgba(7,26,51,.06);
-
-    text-align:center;
+    padding:25px 18px;
 
     display:flex;
 
@@ -1354,10 +1262,17 @@ button{
 
     align-items:center;
 
+    text-align:center;
+
     justify-content:center;
 
-    transition:.25s ease;
+    background:#fff;
 
+    transition:.2s ease;
+
+    position:relative;
+
+    overflow:visible;
 }
 
 .collection-card:before{
@@ -1366,20 +1281,60 @@ button{
 
     position:absolute;
 
-    top:0;
+    width:70px;
+    height:10px;
 
     left:50%;
+    top:-4px;
 
     transform:translateX(-50%);
 
-    width:75px;
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(255,215,90,.95) 0%,
+            rgba(244,197,66,.70) 18%,
+            rgba(244,197,66,.32) 38%,
+            rgba(244,197,66,.10) 58%,
+            transparent 78%
+        );
 
-    height:3px;
+    filter:blur(3px);
 
-    background:var(--gold);
+    z-index:5;
+}
 
-    box-shadow:0 0 15px rgba(200,164,93,.55);
+.collection-card:after{
 
+    content:"";
+
+    position:absolute;
+
+    width:34px;
+    height:2px;
+
+    left:50%;
+    top:-1px;
+
+    transform:translateX(-50%);
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,224,125,.95),
+            transparent
+        );
+
+    box-shadow:
+        0 0 6px rgba(244,197,66,.75);
+
+    z-index:6;
+}
+
+.collection-card > *{
+    position:relative;
+    z-index:7;
 }
 
 .collection-card.dark{
@@ -1388,123 +1343,104 @@ button{
 
     color:#fff;
 
+    border-color:var(--navy);
 }
 
 .collection-card:hover{
 
-    transform:translateY(-5px);
+    transform:translateY(-4px);
 
-    box-shadow:0 15px 32px rgba(7,26,51,.12);
-
+    box-shadow:
+        0 12px 28px rgba(7,26,51,.12);
 }
 
 .collection-icon{
 
-    width:58px;
-
-    height:58px;
+    width:56px;
+    height:56px;
 
     border-radius:50%;
 
-    border:1px solid var(--gold);
-
-    color:var(--gold);
+    border:1px solid var(--gold2);
 
     display:flex;
-
     align-items:center;
-
     justify-content:center;
 
-    font-size:21px;
+    color:var(--gold2);
 
-    margin-bottom:15px;
+    font-size:23px;
 
+    margin-bottom:14px;
 }
 
 .collection-card h3{
-
-    font-family:"Cormorant Garamond",Georgia,serif;
-
-    font-size:22px;
-
-    font-weight:700;
-
+    font-size:15px;
     margin-bottom:7px;
-
 }
 
 .collection-card p{
 
-    max-width:235px;
+    font-size:12px;
 
     color:var(--gray);
 
-    font-size:10px;
+    line-height:1.45;
 
-    line-height:1.6;
-
-    margin-bottom:16px;
-
+    margin-bottom:15px;
 }
 
 .collection-card.dark p{
-
-    color:rgba(255,255,255,.7);
-
+    color:rgba(255,255,255,.76);
 }
 
 .collection-link{
 
-    border:1px solid var(--gold);
+    border:1px solid var(--gold2);
 
-    border-radius:25px;
+    border-radius:5px;
 
-    padding:7px 13px;
+    padding:6px 12px;
 
-    font-size:9px;
+    font-size:11px;
 
     font-weight:800;
 
+    color:var(--gold2);
+}
+
+.collection-card:not(.dark) .collection-link{
+
     color:var(--navy);
 
+    border-color:var(--navy);
 }
 
-.collection-card.dark .collection-link{
-
-    color:var(--gold-light);
-
-}
-
-@media(max-width:850px){
+@media(max-width:800px){
 
     .collection-grid{
-
         grid-template-columns:repeat(2,1fr);
-
     }
-
 }
 
 @media(max-width:500px){
 
     .collection-grid{
-
         grid-template-columns:1fr;
-
     }
 
+    .collection-card{
+        min-height:175px;
+    }
 }
 
-
 /* =========================================================
-   FEATURED BUNDLES
+   BEST SELLERS
 ========================================================= */
 
-.featured{
-
+.best{
     background:#fff;
-
+    padding:15px 0 70px;
 }
 
 .product-grid{
@@ -1514,99 +1450,106 @@ button{
     grid-template-columns:repeat(5,1fr);
 
     gap:16px;
-
 }
 
 .product-card{
 
-    background:#fff;
-
     border:1px solid var(--line);
 
-    border-radius:15px;
+    border-radius:11px;
 
     overflow:hidden;
 
-    box-shadow:0 7px 22px rgba(7,26,51,.06);
+    background:#fff;
+
+    box-shadow:
+        0 7px 22px rgba(7,26,51,.07);
 
     display:flex;
 
     flex-direction:column;
 
-    transition:.25s ease;
-
+    transition:.2s ease;
 }
 
 .product-card:hover{
 
-    transform:translateY(-5px);
+    transform:translateY(-4px);
 
-    box-shadow:0 15px 30px rgba(7,26,51,.11);
-
+    box-shadow:
+        0 14px 28px rgba(7,26,51,.12);
 }
 
 .product-image{
 
     width:100%;
 
-    aspect-ratio:3/2;
+    aspect-ratio:3 / 2;
 
-    background:var(--navy);
+    background:#071A33;
+
+    overflow:hidden;
 
     display:flex;
 
     align-items:center;
 
     justify-content:center;
-
-    overflow:hidden;
-
 }
 
 .product-image img{
 
     width:100%;
-
     height:100%;
 
     object-fit:contain;
 
+    object-position:center;
 }
 
 .product-body{
 
-    padding:13px;
+    padding:12px;
 
     display:flex;
 
     flex-direction:column;
 
     flex:1;
-
 }
 
 .product-body h3{
 
-    font-family:"Cormorant Garamond",Georgia,serif;
+    font-size:13px;
 
-    font-size:20px;
+    line-height:1.25;
 
-    line-height:1.05;
-
-    color:var(--navy);
-
-    margin-bottom:6px;
-
+    margin-bottom:4px;
 }
 
 .product-meta{
 
+    font-size:11px;
+
     color:var(--gray);
 
-    font-size:9px;
+    line-height:1.35;
+}
 
-    line-height:1.4;
+.product-rating{
 
+    color:var(--gold2);
+
+    font-size:11px;
+
+    margin-top:7px;
+}
+
+.product-rating span{
+
+    color:var(--gray);
+
+    margin-left:3px;
 }
 
 .product-bottom{
@@ -1617,363 +1560,135 @@ button{
 
     justify-content:space-between;
 
-    gap:7px;
-
     margin-top:auto;
 
-    padding-top:13px;
+    padding-top:10px;
 
+    gap:8px;
 }
 
 .price{
 
-    color:var(--navy);
-
     font-size:17px;
 
-    font-weight:800;
-
+    font-weight:900;
 }
 
 .buy-now{
 
-    color:var(--navy);
-
-    font-size:9px;
+    font-size:11px;
 
     font-weight:800;
 
+    color:var(--navy);
 }
 
 .buy-now:hover{
-
-    color:var(--gold);
-
+    color:var(--gold2);
 }
 
 .mini-cart{
 
     width:32px;
-
     height:32px;
 
-    flex-shrink:0;
-
-    border:0;
-
-    border-radius:50%;
+    border-radius:6px;
 
     background:var(--gold);
 
     color:var(--navy);
 
+    border:0;
+
     display:flex;
 
     align-items:center;
-
     justify-content:center;
 
+    flex-shrink:0;
 }
 
 .mini-cart:hover{
-
-    background:var(--gold-light);
-
+    background:#FFD95A;
 }
 
 @media(max-width:1050px){
 
     .product-grid{
-
         grid-template-columns:repeat(3,1fr);
-
     }
-
 }
 
 @media(max-width:700px){
 
     .product-grid{
-
         grid-template-columns:repeat(2,1fr);
-
     }
-
 }
 
-@media(max-width:480px){
+@media(max-width:470px){
 
     .product-grid{
-
         grid-template-columns:1fr;
-
     }
-
 }
-
 
 /* =========================================================
-   WHY THEBESTBUNDLE
-========================================================= */
-
-.why-section{
-
-    background:var(--cream);
-
-}
-
-.feature-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(4,1fr);
-
-    gap:18px;
-
-}
-
-.feature-card{
-
-    background:#fff;
-
-    border:1px solid rgba(7,26,51,.07);
-
-    border-radius:17px;
-
-    padding:28px 20px;
-
-    text-align:center;
-
-    box-shadow:0 7px 22px rgba(7,26,51,.05);
-
-}
-
-.feature-icon{
-
-    width:52px;
-
-    height:52px;
-
-    margin:0 auto 14px;
-
-    border-radius:50%;
-
-    border:1px solid var(--gold);
-
-    color:var(--gold);
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-}
-
-.feature-card h3{
-
-    font-family:"Cormorant Garamond",Georgia,serif;
-
-    font-size:22px;
-
-    color:var(--navy);
-
-    margin-bottom:7px;
-
-}
-
-.feature-card p{
-
-    color:var(--gray);
-
-    font-size:10px;
-
-    line-height:1.65;
-
-}
-
-@media(max-width:850px){
-
-    .feature-grid{
-
-        grid-template-columns:repeat(2,1fr);
-
-    }
-
-}
-
-@media(max-width:500px){
-
-    .feature-grid{
-
-        grid-template-columns:1fr;
-
-    }
-
-}
-
-
-/* =========================================================
-   HOW IT WORKS
-========================================================= */
-
-.how-section{
-
-    background:#fff;
-
-}
-
-.steps-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(4,1fr);
-
-    gap:20px;
-
-}
-
-.step{
-
-    text-align:center;
-
-    position:relative;
-
-    padding:10px;
-
-}
-
-.step-number{
-
-    width:58px;
-
-    height:58px;
-
-    margin:0 auto 15px;
-
-    border-radius:50%;
-
-    background:var(--navy);
-
-    color:var(--gold-light);
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    font-family:"Cormorant Garamond",Georgia,serif;
-
-    font-size:20px;
-
-    font-weight:700;
-
-}
-
-.step h3{
-
-    font-family:"Cormorant Garamond",Georgia,serif;
-
-    color:var(--navy);
-
-    font-size:22px;
-
-    margin-bottom:5px;
-
-}
-
-.step p{
-
-    color:var(--gray);
-
-    font-size:10px;
-
-    line-height:1.6;
-
-}
-
-@media(max-width:800px){
-
-    .steps-grid{
-
-        grid-template-columns:repeat(2,1fr);
-
-    }
-
-}
-
-@media(max-width:500px){
-
-    .steps-grid{
-
-        grid-template-columns:1fr;
-
-    }
-
-}
-
-
-/* =========================================================
-   REVIEWS
+   REVIEWS / PRODUCT HIGHLIGHTS
 ========================================================= */
 
 .review-section{
 
-    background:var(--cream);
+    background:#F8F7F2;
 
+    padding:62px 0;
 }
 
 .review-layout{
 
     display:grid;
 
-    grid-template-columns:.7fr 1.3fr;
+    grid-template-columns:.75fr 1.25fr;
 
-    gap:40px;
+    gap:28px;
 
     align-items:center;
-
-}
-
-.review-intro{
-
-    text-align:left;
-
-}
-
-.review-intro .section-kicker{
-
-    text-align:left;
-
 }
 
 .review-intro h2{
 
-    font-family:"Cormorant Garamond",Georgia,serif;
+    font-family:Georgia,"Times New Roman",serif;
 
-    color:var(--navy);
+    font-size:32px;
 
-    font-size:clamp(36px,4vw,49px);
+    line-height:1.1;
 
-    line-height:.98;
+    margin-bottom:12px;
+}
 
-    margin-bottom:15px;
+.review-intro h2:after{
 
+    content:"";
+
+    display:block;
+
+    width:48px;
+    height:2px;
+
+    background:var(--gold);
+
+    margin-top:10px;
 }
 
 .review-intro p{
 
+    font-size:13px;
+
     color:var(--gray);
 
-    font-size:12px;
+    max-width:260px;
 
-    line-height:1.7;
-
-    max-width:310px;
-
-    margin-bottom:20px;
-
+    margin-bottom:18px;
 }
 
 .review-cards{
@@ -1983,191 +1698,174 @@ button{
     grid-template-columns:repeat(3,1fr);
 
     gap:14px;
-
 }
 
 .review-card{
-
-    position:relative;
 
     background:#fff;
 
     border:1px solid var(--line);
 
-    border-radius:17px;
+    border-radius:13px;
 
-    padding:19px;
+    padding:17px;
 
-    box-shadow:0 7px 22px rgba(7,26,51,.06);
+    box-shadow:
+        0 8px 22px rgba(7,26,51,.06);
 
-    cursor:pointer;
+    position:relative;
 
-    transition:.25s ease;
-
+    overflow:hidden;
 }
 
-.review-card:hover{
+.review-card:before{
 
-    transform:translateY(-5px);
+    content:"";
 
-    box-shadow:0 15px 30px rgba(7,26,51,.11);
+    position:absolute;
 
+    top:0;
+    left:18px;
+    right:18px;
+
+    height:2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--gold),
+            transparent
+        );
 }
 
-.review-avatar{
-
-    width:46px;
-
-    height:46px;
-
-    border-radius:50%;
-
-    background:var(--navy);
-
-    color:var(--gold-light);
+.review-profile{
 
     display:flex;
 
     align-items:center;
 
-    justify-content:center;
-
-    font-family:"Cormorant Garamond",Georgia,serif;
-
-    font-size:20px;
-
-    font-weight:700;
+    gap:10px;
 
     margin-bottom:12px;
-
 }
 
-.review-stars{
+.review-avatar{
 
-    color:var(--gold);
+    width:48px;
+    height:48px;
 
-    font-size:11px;
+    border-radius:50%;
 
-    letter-spacing:1px;
+    object-fit:cover;
 
-    margin-bottom:8px;
+    object-position:center;
 
+    border:2px solid rgba(200,164,93,.65);
+
+    box-shadow:
+        0 4px 12px rgba(7,26,51,.15);
+
+    flex-shrink:0;
 }
 
-.review-card h3{
+.review-profile strong{
 
-    font-family:"Cormorant Garamond",Georgia,serif;
+    display:block;
 
-    font-size:19px;
+    font-size:12px;
 
     color:var(--navy);
-
-    margin-bottom:2px;
-
 }
 
-.review-product{
+.review-profile span{
+
+    display:block;
+
+    font-size:9px;
 
     color:var(--gray);
 
-    font-size:8px;
-
-    font-weight:700;
-
-    margin-bottom:10px;
-
+    margin-top:2px;
 }
 
-.review-text{
-
-    font-size:10px;
-
-    color:var(--ink);
-
-    line-height:1.65;
-
-    margin-bottom:12px;
-
-}
-
-.review-status{
+.review-product{
 
     display:inline-flex;
 
     align-items:center;
 
-    gap:4px;
+    gap:5px;
 
-    color:#8A6D32;
+    color:var(--gold2);
 
-    font-size:7px;
+    font-size:9px;
 
-    font-weight:800;
+    font-weight:900;
 
-    border:1px solid #E8D7AE;
+    text-transform:uppercase;
 
-    background:#FCF8ED;
+    letter-spacing:.35px;
+
+    margin-bottom:8px;
+}
+
+.review-card p{
+
+    font-size:12px;
+
+    line-height:1.55;
+
+    color:var(--ink);
+
+    margin-bottom:12px;
+}
+
+.review-label{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    padding:5px 9px;
 
     border-radius:20px;
 
-    padding:4px 7px;
+    background:#F8F5ED;
 
+    color:var(--navy);
+
+    font-size:9px;
+
+    font-weight:800;
+
+    border:1px solid rgba(200,164,93,.35);
 }
 
-.demo-label{
-
-    display:block;
-
-    margin-top:8px;
-
-    color:#8A8F98;
-
-    font-size:7px;
-
-    font-style:italic;
-
-}
-
-@media(max-width:900px){
+@media(max-width:850px){
 
     .review-layout{
-
         grid-template-columns:1fr;
-
     }
 
     .review-intro{
-
         text-align:center;
-
-    }
-
-    .review-intro .section-kicker{
-
-        text-align:center;
-
     }
 
     .review-intro p{
-
         margin-left:auto;
-
         margin-right:auto;
-
     }
-
 }
 
 @media(max-width:650px){
 
     .review-cards{
-
         grid-template-columns:1fr;
-
     }
-
 }
-
 
 /* =========================================================
    NEWSLETTER
@@ -2179,20 +1877,18 @@ button{
 
     color:#fff;
 
-    padding:70px 0;
-
+    padding:38px 0;
 }
 
 .newsletter-inner{
 
     display:grid;
 
-    grid-template-columns:.9fr 1.1fr;
+    grid-template-columns:1fr 1.7fr;
 
-    gap:40px;
+    gap:30px;
 
     align-items:center;
-
 }
 
 .news-copy{
@@ -2201,148 +1897,106 @@ button{
 
     align-items:center;
 
-    gap:20px;
-
+    gap:18px;
 }
 
 .envelope{
 
-    width:72px;
+    width:100px;
+    height:80px;
 
-    height:72px;
+    border-radius:5px;
 
-    flex-shrink:0;
-
-    border-radius:50%;
-
-    border:1px solid var(--gold);
-
-    color:var(--gold);
+    background:#fff;
 
     display:flex;
 
     align-items:center;
-
     justify-content:center;
 
-    font-size:27px;
+    color:var(--navy);
 
+    font-size:38px;
+
+    flex-shrink:0;
 }
 
 .news-copy h2{
 
-    font-family:"Cormorant Garamond",Georgia,serif;
+    font-family:Georgia,"Times New Roman",serif;
 
-    font-size:35px;
+    font-size:27px;
 
-    line-height:1;
-
-    margin-bottom:6px;
-
+    margin-bottom:4px;
 }
 
 .news-copy p{
 
-    color:rgba(255,255,255,.7);
+    font-size:12px;
 
-    font-size:10px;
-
-    line-height:1.6;
-
+    color:rgba(255,255,255,.75);
 }
 
 .news-form-row{
 
     display:flex;
 
-    gap:9px;
-
+    gap:10px;
 }
 
 .news-form-row input{
 
     flex:1;
 
-    min-height:49px;
+    min-height:48px;
 
     border:0;
 
-    border-radius:25px;
+    border-radius:6px;
 
-    padding:12px 17px;
-
-    outline:none;
-
+    padding:12px 14px;
 }
 
 .news-form-row button{
-
-    min-width:155px;
-
+    min-width:150px;
 }
 
 .news-notes{
 
     display:flex;
 
-    flex-wrap:wrap;
+    gap:18px;
 
-    gap:14px;
+    margin-top:9px;
 
-    margin-top:10px;
+    color:rgba(255,255,255,.7);
 
-    color:rgba(255,255,255,.65);
-
-    font-size:8px;
-
+    font-size:10px;
 }
 
 @media(max-width:800px){
 
     .newsletter-inner{
-
         grid-template-columns:1fr;
-
-        text-align:center;
-
     }
 
     .news-copy{
-
         justify-content:center;
-
     }
 
     .news-form-row{
-
         flex-direction:column;
-
     }
 
     .news-form-row button{
-
         width:100%;
-
     }
 
     .news-notes{
-
         justify-content:center;
-
+        flex-wrap:wrap;
     }
-
 }
-
-@media(max-width:500px){
-
-    .news-copy{
-
-        flex-direction:column;
-
-    }
-
-}
-
 
 /* =========================================================
    FOOTER
@@ -2354,125 +2008,88 @@ button{
 
     color:#fff;
 
-    border-top:1px solid rgba(255,255,255,.1);
+    border-top:1px solid rgba(255,255,255,.12);
 
-    padding:58px 0 15px;
-
+    padding:38px 0 14px;
 }
 
 .footer-grid{
 
     display:grid;
 
-    grid-template-columns:1.4fr .9fr .9fr .9fr .9fr;
+    grid-template-columns:
+        1.4fr
+        .9fr
+        .9fr
+        .9fr
+        .9fr;
 
-    gap:30px;
-
+    gap:24px;
 }
 
-.footer-logo{
+.footer-logo img{
 
-    display:inline-block;
+    height:50px;
 
-    font-family:"Cormorant Garamond",Georgia,serif;
+    width:auto;
 
-    color:var(--gold);
-
-    font-size:38px;
-
-    font-weight:600;
-
-    line-height:1;
-
-    margin-bottom:15px;
-
-}
-
-.footer-logo:hover{
-
-    color:var(--gold-light);
-
+    margin-bottom:12px;
 }
 
 .footer p,
 .footer a{
 
-    color:rgba(255,255,255,.68);
+    font-size:11px;
 
-    font-size:9px;
-
-}
-
-.footer p{
-
-    max-width:220px;
-
-    line-height:1.7;
-
+    color:rgba(255,255,255,.72);
 }
 
 .footer h3{
 
-    color:var(--gold-light);
+    font-size:11px;
 
-    font-size:9px;
+    color:var(--gold);
 
-    letter-spacing:1.6px;
+    letter-spacing:1px;
 
-    margin-bottom:13px;
-
+    margin-bottom:11px;
 }
 
 .footer a{
 
     display:block;
 
-    margin-bottom:8px;
-
-    transition:.2s ease;
-
+    margin-bottom:7px;
 }
 
 .footer a:hover{
-
-    color:var(--gold-light);
-
+    color:var(--gold);
 }
 
 .social-row{
 
     display:flex;
 
-    gap:7px;
+    gap:8px;
 
-    margin-top:15px;
-
+    margin-top:12px;
 }
 
 .social-row a{
 
-    width:28px;
+    width:27px;
+    height:27px;
 
-    height:28px;
-
-    border:1px solid rgba(255,255,255,.23);
+    border:1px solid rgba(255,255,255,.25);
 
     border-radius:50%;
 
     display:flex;
 
     align-items:center;
-
     justify-content:center;
 
     margin:0;
-
-}
-
-.social-row a:hover{
-
-    border-color:var(--gold);
-
 }
 
 .payment-row{
@@ -2483,6 +2100,7 @@ button{
 
     flex-wrap:wrap;
 
+    margin-top:7px;
 }
 
 .payment{
@@ -2491,84 +2109,68 @@ button{
 
     color:var(--navy);
 
-    font-size:7px;
+    font-size:8px;
 
     font-weight:900;
 
-    padding:5px 6px;
+    padding:5px;
 
     border-radius:3px;
-
 }
 
 .secure{
 
-    margin-top:13px;
+    margin-top:10px;
 
-    color:#fff;
+    font-size:10px!important;
 
-    font-size:8px;
+    color:#fff!important;
 
     font-weight:800;
-
-    line-height:1.5;
-
 }
 
 .copyright{
 
-    border-top:1px solid rgba(255,255,255,.1);
+    border-top:1px solid rgba(255,255,255,.12);
 
-    margin-top:35px;
+    margin-top:25px;
 
-    padding-top:14px;
+    padding-top:12px;
 
     text-align:center;
 
-    color:rgba(255,255,255,.48);
+    color:rgba(255,255,255,.55);
 
-    font-size:8px;
-
+    font-size:10px;
 }
 
 @media(max-width:900px){
 
     .footer-grid{
-
         grid-template-columns:repeat(2,1fr);
-
     }
-
 }
 
 @media(max-width:520px){
 
     .footer-grid{
-
         grid-template-columns:1fr;
-
         text-align:center;
-
     }
 
-    .footer p{
-
-        margin:auto;
-
+    .footer-logo img{
+        margin-left:auto;
+        margin-right:auto;
     }
 
     .social-row,
     .payment-row{
-
         justify-content:center;
-
     }
-
 }
 
-
 /* =========================================================
-   PANELS / OVERLAYS
+   PANELS
 ========================================================= */
 
 .overlay{
@@ -2577,9 +2179,9 @@ button{
 
     inset:0;
 
-    background:rgba(7,26,51,.70);
+    background:rgba(7,26,51,.68);
 
-    backdrop-filter:blur(4px);
+    backdrop-filter:blur(3px);
 
     opacity:0;
 
@@ -2588,7 +2190,6 @@ button{
     transition:.25s ease;
 
     z-index:3000;
-
 }
 
 .overlay.active{
@@ -2596,7 +2197,6 @@ button{
     opacity:1;
 
     visibility:visible;
-
 }
 
 .panel{
@@ -2607,7 +2207,7 @@ button{
 
     right:-100%;
 
-    width:min(430px,90%);
+    width:min(420px,88%);
 
     height:100vh;
 
@@ -2619,21 +2219,17 @@ button{
 
     transition:.32s ease;
 
-    box-shadow:-20px 0 50px rgba(0,0,0,.22);
+    box-shadow:
+        -18px 0 45px rgba(0,0,0,.2);
 
     overflow:auto;
-
 }
 
 .panel.active{
-
     right:0;
-
 }
 
 .panel-head{
-
-    min-height:88px;
 
     display:flex;
 
@@ -2641,102 +2237,73 @@ button{
 
     justify-content:space-between;
 
-    padding:22px 25px;
+    padding:24px;
 
     border-bottom:1px solid var(--line);
-
 }
 
 .panel-head h2{
-
-    font-family:"Cormorant Garamond",Georgia,serif;
-
-    font-size:29px;
-
+    font-size:21px;
 }
 
 .close-btn{
 
     width:42px;
-
     height:42px;
+
+    border-radius:8px;
 
     border:0;
 
-    border-radius:50%;
-
-    background:#F5F6F8;
-
     color:var(--navy);
 
+    background:#F8FAFC;
 }
 
 .close-btn:hover{
-
-    background:#EDEFF3;
-
+    background:#EEF2F7;
 }
 
 .collection-links a{
 
     display:block;
 
-    padding:17px 25px;
+    padding:17px 24px;
 
     border-bottom:1px solid var(--line);
 
-    font-size:13px;
-
     font-weight:800;
 
-    transition:.2s ease;
-
+    font-size:16px;
 }
 
 .collection-links a:hover{
 
-    padding-left:31px;
+    color:var(--gold2);
 
-    color:var(--gold);
-
+    padding-left:30px;
 }
 
 .collection-links .donate-link{
 
-    margin:23px;
+    margin:24px;
 
     border:0;
 
     background:var(--gold);
 
-    color:var(--navy);
-
-    border-radius:25px;
+    border-radius:9px;
 
     text-align:center;
 
-    padding:14px;
-
+    padding:15px;
 }
-
-.collection-links .donate-link:hover{
-
-    padding-left:14px;
-
-    background:var(--gold-light);
-
-}
-
-
-/* =========================================================
-   SEARCH
-========================================================= */
 
 .search-box{
 
     position:fixed;
 
-    top:10%;
+    top:11%;
 
     left:50%;
 
@@ -2746,34 +2313,14 @@ button{
 
     background:#fff;
 
-    border-radius:18px;
+    border-radius:14px;
 
-    padding:23px;
+    padding:22px;
 
     z-index:3002;
 
-    box-shadow:0 25px 70px rgba(0,0,0,.3);
-
-}
-
-.search-title{
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-    margin-bottom:15px;
-
-}
-
-.search-title h2{
-
-    font-family:"Cormorant Garamond",Georgia,serif;
-
-    font-size:28px;
-
+    box-shadow:
+        0 25px 70px rgba(0,0,0,.3);
 }
 
 .search-row{
@@ -2781,7 +2328,6 @@ button{
     display:flex;
 
     gap:9px;
-
 }
 
 .search-row input{
@@ -2792,33 +2338,28 @@ button{
 
     border:1px solid var(--line);
 
-    border-radius:25px;
+    border-radius:7px;
 
-    padding:12px 16px;
-
-    outline:none;
-
+    padding:12px;
 }
 
-@media(max-width:500px){
+.search-title{
 
-    .search-row{
+    display:flex;
 
-        flex-direction:column;
+    align-items:center;
 
-    }
+    justify-content:space-between;
 
+    margin-bottom:14px;
 }
 
-
-/* =========================================================
-   CART
-========================================================= */
+.search-title h2{
+    font-size:20px;
+}
 
 .cart-items{
-
-    padding:15px 24px;
-
+    padding:15px 22px;
 }
 
 .empty-cart{
@@ -2828,26 +2369,27 @@ button{
     color:var(--gray);
 
     padding:60px 15px;
-
 }
 
 .empty-cart i{
 
-    font-size:40px;
+    font-size:42px;
 
     color:var(--navy);
 
     display:block;
 
     margin-bottom:12px;
-
 }
 
 .cart-item{
 
     display:grid;
 
-    grid-template-columns:60px 1fr 34px;
+    grid-template-columns:
+        60px
+        1fr
+        34px;
 
     gap:12px;
 
@@ -2856,65 +2398,50 @@ button{
     padding:13px 0;
 
     border-bottom:1px solid var(--line);
-
 }
 
 .cart-item img{
 
     width:60px;
-
     height:70px;
 
     object-fit:contain;
 
     background:#F8FAFC;
-
 }
 
 .cart-item h3{
-
-    font-family:"Cormorant Garamond",Georgia,serif;
-
-    font-size:18px;
-
-    line-height:1.1;
-
+    font-size:13px;
 }
 
 .cart-price{
 
-    color:var(--gold);
-
-    font-size:12px;
-
     font-weight:900;
 
-    margin-top:4px;
+    color:var(--gold2);
 
+    font-size:13px;
 }
 
 .remove-item{
 
     width:32px;
-
     height:32px;
 
-    border:0;
+    border-radius:6px;
 
-    border-radius:50%;
+    border:0;
 
     background:#FEE2E2;
 
     color:#B91C1C;
-
 }
 
 .cart-foot{
 
-    padding:20px 24px;
+    padding:20px 22px;
 
     border-top:1px solid var(--line);
-
 }
 
 .cart-total{
@@ -2923,217 +2450,16 @@ button{
 
     justify-content:space-between;
 
-    font-size:18px;
+    font-size:19px;
 
     font-weight:900;
 
     margin-bottom:14px;
-
 }
 
 .cart-total span:last-child{
-
-    color:var(--gold);
-
+    color:var(--gold2);
 }
-
-
-/* =========================================================
-   REVIEW MODAL
-========================================================= */
-
-.review-modal{
-
-    position:fixed;
-
-    inset:0;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    padding:20px;
-
-    background:rgba(7,26,51,.78);
-
-    backdrop-filter:blur(5px);
-
-    opacity:0;
-
-    visibility:hidden;
-
-    transition:.25s ease;
-
-    z-index:3500;
-
-}
-
-.review-modal.active{
-
-    opacity:1;
-
-    visibility:visible;
-
-}
-
-.review-modal-card{
-
-    width:min(560px,100%);
-
-    max-height:90vh;
-
-    overflow:auto;
-
-    background:#fff;
-
-    border-radius:22px;
-
-    padding:30px;
-
-    box-shadow:0 30px 80px rgba(0,0,0,.35);
-
-    position:relative;
-
-}
-
-.review-modal-close{
-
-    position:absolute;
-
-    top:18px;
-
-    right:18px;
-
-    width:38px;
-
-    height:38px;
-
-    border:0;
-
-    border-radius:50%;
-
-    background:#F5F6F8;
-
-    color:var(--navy);
-
-}
-
-.modal-avatar{
-
-    width:65px;
-
-    height:65px;
-
-    border-radius:50%;
-
-    background:var(--navy);
-
-    color:var(--gold-light);
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    font-family:"Cormorant Garamond",Georgia,serif;
-
-    font-size:28px;
-
-    font-weight:700;
-
-    margin-bottom:15px;
-
-}
-
-.review-modal-card h2{
-
-    font-family:"Cormorant Garamond",Georgia,serif;
-
-    color:var(--navy);
-
-    font-size:34px;
-
-    line-height:1;
-
-    margin-bottom:3px;
-
-}
-
-.modal-product{
-
-    color:var(--gray);
-
-    font-size:9px;
-
-    font-weight:700;
-
-    margin-bottom:12px;
-
-}
-
-.modal-stars{
-
-    color:var(--gold);
-
-    letter-spacing:2px;
-
-    margin-bottom:17px;
-
-}
-
-.modal-review{
-
-    font-family:"Cormorant Garamond",Georgia,serif;
-
-    font-size:23px;
-
-    line-height:1.4;
-
-    color:var(--ink);
-
-    margin-bottom:18px;
-
-}
-
-.modal-note{
-
-    padding:12px 14px;
-
-    border-radius:10px;
-
-    background:#FCF8ED;
-
-    color:#80672F;
-
-    font-size:8px;
-
-    line-height:1.5;
-
-}
-
-@media(max-width:500px){
-
-    .review-modal-card{
-
-        padding:25px 20px;
-
-    }
-
-    .modal-review{
-
-        font-size:20px;
-
-    }
-
-}
-
-
-/* =========================================================
-   TOAST
-========================================================= */
 
 .toast{
 
@@ -3149,33 +2475,26 @@ button{
 
     color:#fff;
 
-    border:1px solid var(--gold);
+    border:2px solid var(--gold);
 
     padding:12px 18px;
 
-    border-radius:25px;
+    border-radius:9px;
 
-    font-size:10px;
+    font-size:13px;
 
     font-weight:800;
 
     z-index:4000;
 
     display:none;
-
 }
 
 </style>
 
 </head>
 
-
 <body>
-
-
-<!-- =====================================================
-     HEADER
-====================================================== -->
 
 <header class="site-header">
 
@@ -3186,27 +2505,28 @@ button{
     href="index.html"
     aria-label="TheBestBundle Home">
 
-    TheBestBundle
+<img
+    src="images/Thebestbundle-transparent-logo.png"
+    alt="TheBestBundle"
+    loading="eager">
 
 </a>
-
 
 <nav
     class="desktop-nav"
     aria-label="Primary navigation">
 
-    <a href="index.html">Home</a>
+<a href="index.html">Home</a>
 
-    <a href="courses.html">Courses</a>
+<a href="courses.html">Courses</a>
 
-    <a href="merchandise.html">Merchandise</a>
+<a href="merchandise.html">Merchandise</a>
 
-    <a href="reviews.html">Customer Reviews</a>
+<a href="reviews.html">Customer Reviews</a>
 
-    <a href="contact.html">Contact</a>
+<a href="contact.html">Contact</a>
 
 </nav>
-
 
 <div class="header-tools">
 
@@ -3215,32 +2535,29 @@ button{
     id="searchButton"
     aria-label="Search">
 
-    <i class="fa-solid fa-magnifying-glass"></i>
+<i class="fa-solid fa-magnifying-glass"></i>
 
 </button>
-
 
 <a
     class="header-tool gold-border"
     href="donate.html">
 
-    <i class="fa-solid fa-heart"></i>
+<i class="fa-solid fa-heart"></i>
 
-    Donate
+&nbsp; Donate
 
 </a>
-
 
 <a
     class="header-tool news"
     href="subscribe.html">
 
-    <i class="fa-regular fa-envelope"></i>
+<i class="fa-regular fa-envelope"></i>
 
-    Newsletter
+&nbsp; Newsletter
 
 </a>
-
 
 <div class="cart-wrap">
 
@@ -3249,7 +2566,7 @@ button{
     id="cartButton"
     aria-label="Open shopping cart">
 
-    <i class="fa-solid fa-cart-shopping"></i>
+<i class="fa-solid fa-cart-shopping"></i>
 
 </button>
 
@@ -3257,7 +2574,7 @@ button{
     class="cart-count"
     id="cartCount">
 
-    0
+0
 
 </span>
 
@@ -3269,53 +2586,40 @@ button{
 
 </header>
 
-
 <main>
-
 
 <!-- =====================================================
      HERO
-====================================================== -->
+===================================================== -->
 
 <section class="hero">
 
 <div class="container hero-grid">
 
-
 <div class="hero-copy">
 
 <div class="hero-kicker">
-
 THEBESTBUNDLE • PREMIUM DIGITAL COLLECTION
-
 </div>
-
 
 <h1>
 
-Premium Digital Resources
+Premium Digital Resources for
 
 <span>
-
-for Learning, Creating &amp; Growing
-
+Learning, Creating &amp; Growing
 </span>
 
 </h1>
-
-
-<div class="hero-line"></div>
-
 
 <p>
 
 Discover professionally designed eBooks,
 printable planners, templates, courses,
-and digital resources created to help you
-learn, create and grow.
+and digital resources created to help you learn,
+create and grow.
 
 </p>
-
 
 <div class="hero-actions">
 
@@ -3323,20 +2627,19 @@ learn, create and grow.
     class="btn btn-gold"
     id="exploreCollection">
 
-    Explore Collection
+Explore Collection
 
-    <i class="fa-solid fa-arrow-right"></i>
+<i class="fa-solid fa-arrow-right"></i>
 
 </button>
-
 
 <a
     class="btn btn-outline"
     href="freebie.html">
 
-    Free Welcome Guide
+Free Welcome Guide
 
-    <i class="fa-solid fa-download"></i>
+<i class="fa-solid fa-download"></i>
 
 </a>
 
@@ -3344,33 +2647,32 @@ learn, create and grow.
 
 </div>
 
-
-<!-- HERO ART -->
-
 <div
     class="hero-art"
-    aria-label="TheBestBundle premium digital collections">
+    aria-label="TheBestBundle premium digital collection">
 
-<div class="hero-floor"></div>
+<div class="showroom-glow"></div>
 
-<div class="hero-center-card"></div>
+<div class="showroom-ring"></div>
 
+<div class="showroom-backlight"></div>
+
+<div class="showroom-stage"></div>
+
+<div class="showroom-pedestal"></div>
+
+<div class="showroom-light"></div>
 
 <div class="quality-badge">
 
-✦<br>
-
 PREMIUM<br>
-
 QUALITY
 
 </div>
 
-
 <!-- ULTIMATE -->
 
-<div
-    class="hero-item center">
+<div class="hero-product ultimate">
 
 <img
     src="images/Ultimate_Collection.png"
@@ -3378,11 +2680,9 @@ QUALITY
 
 </div>
 
-
 <!-- STARTER -->
 
-<div
-    class="hero-item left-side">
+<div class="hero-product starter">
 
 <img
     src="images/Starter_Bundle_Cover.png"
@@ -3390,11 +2690,9 @@ QUALITY
 
 </div>
 
-
 <!-- CREATOR -->
 
-<div
-    class="hero-item right-side">
+<div class="hero-product creator">
 
 <img
     src="images/Creator_Bundle_Highest_Resolution.png"
@@ -3402,11 +2700,9 @@ QUALITY
 
 </div>
 
-
 <!-- BUSINESS -->
 
-<div
-    class="hero-item left-small">
+<div class="hero-product business">
 
 <img
     src="images/high_resolution_polished.png"
@@ -3414,11 +2710,9 @@ QUALITY
 
 </div>
 
-
 <!-- HEALTH -->
 
-<div
-    class="hero-item right-small">
+<div class="hero-product health">
 
 <img
     src="images/Health_Wellness_Collection.png"
@@ -3432,17 +2726,35 @@ QUALITY
 
 </section>
 
-
 <!-- =====================================================
      TRUST
-====================================================== -->
+===================================================== -->
 
 <section
     class="container trust-bar"
-    aria-label="TheBestBundle features">
+    aria-label="Why customers choose TheBestBundle">
 
 <div class="trust-grid">
 
+<div class="trust-item">
+
+<div class="trust-stars">
+★★★★★
+</div>
+
+<div>
+
+<strong>
+Trusted by thousands
+</strong>
+
+<span>
+of digital learners
+</span>
+
+</div>
+
+</div>
 
 <div class="trust-item">
 
@@ -3454,16 +2766,17 @@ QUALITY
 
 <div>
 
-<strong>Instant Digital Access</strong>
+<strong>
+Instant Download
+</strong>
 
 <span>
-Access your files after purchase
+Access your files immediately
 </span>
 
 </div>
 
 </div>
-
 
 <div class="trust-item">
 
@@ -3475,16 +2788,17 @@ Access your files after purchase
 
 <div>
 
-<strong>Secure Checkout</strong>
+<strong>
+Secure Checkout
+</strong>
 
 <span>
-Payments processed securely
+Safe &amp; encrypted payments
 </span>
 
 </div>
 
 </div>
-
 
 <div class="trust-item">
 
@@ -3496,7 +2810,9 @@ Payments processed securely
 
 <div>
 
-<strong>Premium Content</strong>
+<strong>
+Premium Quality
+</strong>
 
 <span>
 Professionally designed resources
@@ -3505,7 +2821,6 @@ Professionally designed resources
 </div>
 
 </div>
-
 
 <div class="trust-item">
 
@@ -3517,55 +2832,35 @@ Professionally designed resources
 
 <div>
 
-<strong>Mobile Friendly</strong>
+<strong>
+Mobile Friendly
+</strong>
 
 <span>
-Use your resources on any device
+Use on any device, anytime
 </span>
 
 </div>
 
 </div>
 
-
 </div>
 
 </section>
 
-
 <!-- =====================================================
-     EXPLORE COLLECTION
-====================================================== -->
+     COLLECTION
+===================================================== -->
 
 <section class="collection section">
 
 <div class="container">
 
-<div class="section-kicker">
-
-EXPLORE • DISCOVER • GROW
-
+<div class="rule-title">
+EXPLORE OUR COLLECTION
 </div>
 
-
-<h2 class="section-title">
-
-Explore TheBestBundle
-
-</h2>
-
-
-<p class="section-intro">
-
-Explore premium digital resources created
-to support your learning, creativity,
-productivity and personal growth.
-
-</p>
-
-
 <div class="collection-grid">
-
 
 <a
     class="collection-card dark"
@@ -3578,26 +2873,21 @@ productivity and personal growth.
 </div>
 
 <h3>
-
-Premium eBooks
-
+PREMIUM EBOOKS
 </h3>
 
 <p>
 
-Practical eBooks covering health,
-beauty, longevity, business and digital growth.
+Inspiring eBooks on health, wealth, mindset,
+business and personal growth.
 
 </p>
 
 <span class="collection-link">
-
 Explore eBooks →
-
 </span>
 
 </a>
-
 
 <a
     class="collection-card"
@@ -3610,26 +2900,21 @@ Explore eBooks →
 </div>
 
 <h3>
-
-Premium Templates
-
+PRINTABLE TEMPLATES
 </h3>
 
 <p>
 
-Planners, trackers and practical templates
-for life, wellness and business.
+Beautiful planners, trackers and templates
+to organize your life and business.
 
 </p>
 
 <span class="collection-link">
-
 Explore Templates →
-
 </span>
 
 </a>
-
 
 <a
     class="collection-card dark"
@@ -3642,26 +2927,21 @@ Explore Templates →
 </div>
 
 <h3>
-
-Premium Bundles
-
+DIGITAL BUNDLES
 </h3>
 
 <p>
 
-Curated collections combining
-premium eBooks and professional templates.
+Curated bundles to help you save more
+and get maximum value.
 
 </p>
 
 <span class="collection-link">
-
 Explore Bundles →
-
 </span>
 
 </a>
-
 
 <a
     class="collection-card"
@@ -3669,31 +2949,26 @@ Explore Bundles →
 
 <div class="collection-icon">
 
-<i class="fa-solid fa-sparkles"></i>
+<i class="fa-solid fa-gift"></i>
 
 </div>
 
 <h3>
-
-Free Resources
-
+FREE RESOURCES
 </h3>
 
 <p>
 
-Start learning with free digital
-resources from TheBestBundle.
+Download free guides, checklists and
+resources to get started today.
 
 </p>
 
 <span class="collection-link">
-
 Explore Freebies →
-
 </span>
 
 </a>
-
 
 </div>
 
@@ -3701,39 +2976,19 @@ Explore Freebies →
 
 </section>
 
-
 <!-- =====================================================
-     FEATURED COLLECTIONS
-====================================================== -->
+     BEST SELLERS
+===================================================== -->
 
-<section class="featured section">
+<section class="best">
 
 <div class="container">
 
-<div class="section-kicker">
-
-DIGITAL • VALUE • COLLECTIONS
-
+<div class="rule-title">
+BEST SELLERS
 </div>
 
-
-<h2 class="section-title">
-
-Featured Collections
-
-</h2>
-
-
-<p class="section-intro">
-
-Discover some of the premium collections
-available from TheBestBundle.
-
-</p>
-
-
 <div class="product-grid">
-
 
 <!-- STARTER -->
 
@@ -3751,30 +3006,23 @@ available from TheBestBundle.
 
 </a>
 
-
 <div class="product-body">
 
 <h3>
-
 Starter Bundle
-
 </h3>
 
 <div class="product-meta">
-
-2 Premium eBooks + 4 Professional Templates
-
+2 eBooks + 4 Templates
 </div>
 
+<div class="product-rating">
+★★★★★ <span>(254)</span>
+</div>
 
 <div class="product-bottom">
 
-<span class="price">
-
-$27
-
-</span>
-
+<span class="price">$27</span>
 
 <a
     class="buy-now"
@@ -3785,7 +3033,6 @@ $27
 Buy Now
 
 </a>
-
 
 <button
     class="mini-cart add-cart"
@@ -3807,7 +3054,6 @@ Buy Now
 
 </article>
 
-
 <!-- CREATOR -->
 
 <article class="product-card">
@@ -3824,30 +3070,23 @@ Buy Now
 
 </a>
 
-
 <div class="product-body">
 
 <h3>
-
 Creator Bundle
-
 </h3>
 
 <div class="product-meta">
-
-3 Premium eBooks + 6 Professional Templates
-
+3 eBooks + 6 Templates
 </div>
 
+<div class="product-rating">
+★★★★★ <span>(198)</span>
+</div>
 
 <div class="product-bottom">
 
-<span class="price">
-
-$37
-
-</span>
-
+<span class="price">$37</span>
 
 <a
     class="buy-now"
@@ -3858,7 +3097,6 @@ $37
 Buy Now
 
 </a>
-
 
 <button
     class="mini-cart add-cart"
@@ -3880,7 +3118,6 @@ Buy Now
 
 </article>
 
-
 <!-- BUSINESS -->
 
 <article class="product-card">
@@ -3897,30 +3134,23 @@ Buy Now
 
 </a>
 
-
 <div class="product-body">
 
 <h3>
-
 Business Bundle
-
 </h3>
 
 <div class="product-meta">
-
-5 Premium eBooks + 10 Professional Templates
-
+5 eBooks + 10 Templates
 </div>
 
+<div class="product-rating">
+★★★★★ <span>(142)</span>
+</div>
 
 <div class="product-bottom">
 
-<span class="price">
-
-$57
-
-</span>
-
+<span class="price">$57</span>
 
 <a
     class="buy-now"
@@ -3931,7 +3161,6 @@ $57
 Buy Now
 
 </a>
-
 
 <button
     class="mini-cart add-cart"
@@ -3953,7 +3182,6 @@ Buy Now
 
 </article>
 
-
 <!-- HEALTH -->
 
 <article class="product-card">
@@ -3970,30 +3198,23 @@ Buy Now
 
 </a>
 
-
 <div class="product-body">
 
 <h3>
-
 Health &amp; Wellness Collection
-
 </h3>
 
 <div class="product-meta">
-
-5 Premium eBooks + 10 Professional Templates
-
+5 eBooks + 10 Templates
 </div>
 
+<div class="product-rating">
+★★★★★ <span>(186)</span>
+</div>
 
 <div class="product-bottom">
 
-<span class="price">
-
-$57
-
-</span>
-
+<span class="price">$57</span>
 
 <a
     class="buy-now"
@@ -4005,11 +3226,10 @@ Buy Now
 
 </a>
 
-
 <button
     class="mini-cart add-cart"
     data-id="health-wellness"
-    data-name="Health &amp; Wellness Collection"
+    data-name="Health & Wellness Collection"
     data-price="57"
     data-price-id="price_1UEiWMRtp4gVtODyTO9FPlIb"
     data-stripe="https://buy.stripe.com/28EdRbakoeGIdzF5uH8N20Q"
@@ -4025,7 +3245,6 @@ Buy Now
 </div>
 
 </article>
-
 
 <!-- ULTIMATE -->
 
@@ -4043,30 +3262,23 @@ Buy Now
 
 </a>
 
-
 <div class="product-body">
 
 <h3>
-
 Ultimate Collection
-
 </h3>
 
 <div class="product-meta">
-
-10 Premium eBooks + 10 Professional Templates
-
+10 eBooks + 10 Templates
 </div>
 
+<div class="product-rating">
+★★★★★ <span>(98)</span>
+</div>
 
 <div class="product-bottom">
 
-<span class="price">
-
-$97
-
-</span>
-
+<span class="price">$97</span>
 
 <a
     class="buy-now"
@@ -4077,7 +3289,6 @@ $97
 Buy Now
 
 </a>
-
 
 <button
     class="mini-cart add-cart"
@@ -4099,528 +3310,203 @@ Buy Now
 
 </article>
 
-
 </div>
 
 </div>
 
 </section>
 
-
 <!-- =====================================================
-     WHY THEBESTBUNDLE
-====================================================== -->
+     CUSTOMER SECTION
+===================================================== -->
 
-<section class="why-section section">
-
-<div class="container">
-
-<div class="section-kicker">
-
-QUALITY • VALUE • SIMPLICITY
-
-</div>
-
-
-<h2 class="section-title">
-
-Why TheBestBundle?
-
-</h2>
-
-
-<p class="section-intro">
-
-Our collections are designed to make digital
-resources simple, practical and accessible.
-
-</p>
-
-
-<div class="feature-grid">
-
-
-<div class="feature-card">
-
-<div class="feature-icon">
-
-<i class="fa-solid fa-gem"></i>
-
-</div>
-
-<h3>
-
-Premium Content
-
-</h3>
-
-<p>
-
-Professionally structured digital resources
-designed with quality and simplicity in mind.
-
-</p>
-
-</div>
-
-
-<div class="feature-card">
-
-<div class="feature-icon">
-
-<i class="fa-solid fa-lightbulb"></i>
-
-</div>
-
-<h3>
-
-Practical Tools
-
-</h3>
-
-<p>
-
-Resources created to help you organize,
-learn, plan and take action.
-
-</p>
-
-</div>
-
-
-<div class="feature-card">
-
-<div class="feature-icon">
-
-<i class="fa-solid fa-bolt"></i>
-
-</div>
-
-<h3>
-
-Instant Access
-
-</h3>
-
-<p>
-
-Digital products are designed for convenient
-access after purchase.
-
-</p>
-
-</div>
-
-
-<div class="feature-card">
-
-<div class="feature-icon">
-
-<i class="fa-solid fa-scale-balanced"></i>
-
-</div>
-
-<h3>
-
-Affordable Value
-
-</h3>
-
-<p>
-
-Choose individual resources or curated
-collections based on your needs.
-
-</p>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =====================================================
-     HOW IT WORKS
-====================================================== -->
-
-<section class="how-section section">
-
-<div class="container">
-
-<div class="section-kicker">
-
-SIMPLE • DIGITAL • CONVENIENT
-
-</div>
-
-
-<h2 class="section-title">
-
-How It Works
-
-</h2>
-
-
-<p class="section-intro">
-
-Getting started with TheBestBundle is simple.
-
-</p>
-
-
-<div class="steps-grid">
-
-
-<div class="step">
-
-<div class="step-number">
-
-01
-
-</div>
-
-<h3>
-
-Explore
-
-</h3>
-
-<p>
-
-Browse our eBooks,
-templates and collections.
-
-</p>
-
-</div>
-
-
-<div class="step">
-
-<div class="step-number">
-
-02
-
-</div>
-
-<h3>
-
-Choose
-
-</h3>
-
-<p>
-
-Select the digital resource
-that fits your needs.
-
-</p>
-
-</div>
-
-
-<div class="step">
-
-<div class="step-number">
-
-03
-
-</div>
-
-<h3>
-
-Purchase
-
-</h3>
-
-<p>
-
-Complete your purchase
-through secure checkout.
-
-</p>
-
-</div>
-
-
-<div class="step">
-
-<div class="step-number">
-
-04
-
-</div>
-
-<h3>
-
-Access
-
-</h3>
-
-<p>
-
-Access your digital product
-and start using it.
-
-</p>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =====================================================
-     CUSTOMER REVIEWS
-====================================================== -->
-
-<section class="review-section section">
+<section class="review-section">
 
 <div class="container review-layout">
 
-
 <div class="review-intro">
-
-<div class="section-kicker">
-
-REAL • GENUINE • CUSTOMER FEEDBACK
-
-</div>
-
 
 <h2>
 
-What Our<br>
-
-Customers Say
+WHAT OUR<br>
+CUSTOMERS SAY
 
 </h2>
 
-
 <p>
 
-We want this section to feature genuine
-customer experiences. As reviews are
-submitted, selected reviews can appear here.
+Explore three featured products and see the
+kind of value each resource is designed to provide.
 
 </p>
-
 
 <a
     class="btn btn-dark"
     href="reviews.html">
 
-Read All Customer Reviews
-
-<i class="fa-solid fa-arrow-right"></i>
+Read All Reviews →
 
 </a>
 
 </div>
 
-
 <div class="review-cards">
 
+<!-- DIGITAL MARKETING -->
 
-<!-- DEMO REVIEW 1 -->
+<article class="review-card">
 
-<article
-    class="review-card"
-    data-review="1"
-    tabindex="0"
-    role="button"
-    aria-label="Open sample testimonial">
+<div class="review-profile">
 
-<div class="review-avatar">
+<img
+    class="review-avatar"
+    src="images/review-sarah.png"
+    alt="Community profile"
+    loading="lazy">
 
-SM
+<div>
+
+<strong>
+Digital Marketing
+</strong>
+
+<span>
+Featured Product
+</span>
 
 </div>
 
-
-<div class="review-stars">
-
-★★★★★
-
 </div>
-
-
-<h3>
-
-Sarah M.
-
-</h3>
-
 
 <div class="review-product">
+
+<i class="fa-solid fa-book-open"></i>
 
 Digital Marketing Made Simple
 
 </div>
 
+<p>
 
-<p class="review-text">
-
-“Sample testimonial for design demonstration.
-This text will be replaced with an authentic
-customer review.”
+A practical resource for understanding digital
+marketing strategies, planning campaigns, and
+building a clearer online presence.
 
 </p>
 
+<span class="review-label">
 
-<span class="review-status">
+<i class="fa-solid fa-book"></i>
 
-<i class="fa-solid fa-circle-info"></i>
-
-Sample
-
-</span>
-
-
-<span class="demo-label">
-
-Sample Testimonial • Demo Only
+Product Highlight
 
 </span>
 
 </article>
 
+<!-- STARTER BUNDLE -->
 
-<!-- DEMO REVIEW 2 -->
+<article class="review-card">
 
-<article
-    class="review-card"
-    data-review="2"
-    tabindex="0"
-    role="button"
-    aria-label="Open sample testimonial">
+<div class="review-profile">
 
-<div class="review-avatar">
+<img
+    class="review-avatar"
+    src="images/review-james.png"
+    alt="Community profile"
+    loading="lazy">
 
-JM
+<div>
+
+<strong>
+Starter Bundle
+</strong>
+
+<span>
+Featured Product
+</span>
 
 </div>
 
-
-<div class="review-stars">
-
-★★★★★
-
 </div>
-
-
-<h3>
-
-James M.
-
-</h3>
-
 
 <div class="review-product">
+
+<i class="fa-solid fa-gift"></i>
 
 Starter Bundle
 
 </div>
 
+<p>
 
-<p class="review-text">
-
-“Sample testimonial for design demonstration.
-This text will be replaced with an authentic
-customer review.”
+A curated mix of eBooks and templates designed
+to provide a practical starting point for learning,
+planning, and taking action.
 
 </p>
 
+<span class="review-label">
 
-<span class="review-status">
+<i class="fa-solid fa-layer-group"></i>
 
-<i class="fa-solid fa-circle-info"></i>
-
-Sample
-
-</span>
-
-
-<span class="demo-label">
-
-Sample Testimonial • Demo Only
+Bundle Highlight
 
 </span>
 
 </article>
 
+<!-- WELLNESS -->
 
-<!-- DEMO REVIEW 3 -->
+<article class="review-card">
 
-<article
-    class="review-card"
-    data-review="3"
-    tabindex="0"
-    role="button"
-    aria-label="Open sample testimonial">
+<div class="review-profile">
 
-<div class="review-avatar">
+<img
+    class="review-avatar"
+    src="images/review-amanda.png"
+    alt="Community profile"
+    loading="lazy">
 
-AL
+<div>
+
+<strong>
+Wellness Planning
+</strong>
+
+<span>
+Featured Product
+</span>
 
 </div>
 
-
-<div class="review-stars">
-
-★★★★★
-
 </div>
-
-
-<h3>
-
-Amanda L.
-
-</h3>
-
 
 <div class="review-product">
+
+<i class="fa-solid fa-heart-pulse"></i>
 
 30-Day Wellness Planner
 
 </div>
 
+<p>
 
-<p class="review-text">
-
-“Sample testimonial for design demonstration.
-This text will be replaced with an authentic
-customer review.”
+A simple 30-day format for organizing wellness
+routines, tracking progress, and staying consistent
+with daily goals.
 
 </p>
 
+<span class="review-label">
 
-<span class="review-status">
+<i class="fa-solid fa-calendar-check"></i>
 
-<i class="fa-solid fa-circle-info"></i>
-
-Sample
-
-</span>
-
-
-<span class="demo-label">
-
-Sample Testimonial • Demo Only
+Product Highlight
 
 </span>
 
 </article>
-
 
 </div>
 
@@ -4628,15 +3514,13 @@ Sample Testimonial • Demo Only
 
 </section>
 
-
 <!-- =====================================================
      NEWSLETTER
-====================================================== -->
+===================================================== -->
 
 <section class="newsletter">
 
 <div class="container newsletter-inner">
-
 
 <div class="news-copy">
 
@@ -4646,26 +3530,22 @@ Sample Testimonial • Demo Only
 
 </div>
 
-
 <div>
 
 <h2>
-
-Stay Connected
-
+STAY UPDATED
 </h2>
 
 <p>
 
 Receive new releases, exclusive offers
-and free digital resources.
+and free digital resources straight to your inbox.
 
 </p>
 
 </div>
 
 </div>
-
 
 <div>
 
@@ -4674,12 +3554,10 @@ and free digital resources.
     action="https://formspree.io/f/xkodngya"
     method="POST">
 
-
 <input
     type="hidden"
     name="_next"
     value="https://thebestbundle101-stack.github.io/thebestbundle/newsletter-success.html">
-
 
 <input
     type="email"
@@ -4687,7 +3565,6 @@ and free digital resources.
     placeholder="Enter your email address"
     autocomplete="email"
     required>
-
 
 <button
     class="btn btn-gold"
@@ -4699,9 +3576,7 @@ Subscribe Now
 
 </button>
 
-
 </form>
-
 
 <div class="news-notes">
 
@@ -4721,92 +3596,11 @@ Subscribe Now
 
 </section>
 
-
-<!-- =====================================================
-     HELP & SUPPORT
-====================================================== -->
-
-<section class="section">
-
-<div class="container">
-
-<div class="section-kicker">
-
-HELP • ANSWERS • ASSISTANCE
-
-</div>
-
-
-<h2 class="section-title">
-
-Need Help?
-
-</h2>
-
-
-<p class="section-intro">
-
-Find answers to common questions or contact
-TheBestBundle support.
-
-</p>
-
-
-<div
-    style="
-        display:flex;
-        justify-content:center;
-        flex-wrap:wrap;
-        gap:10px;
-    ">
-
-
-<a
-    class="btn btn-dark"
-    href="faq.html">
-
-FAQ
-
-<i class="fa-solid fa-circle-question"></i>
-
-</a>
-
-
-<a
-    class="btn btn-dark"
-    href="help-support.html">
-
-Help &amp; Support
-
-<i class="fa-solid fa-headset"></i>
-
-</a>
-
-
-<a
-    class="btn btn-gold"
-    href="contact.html">
-
-Contact Us
-
-<i class="fa-regular fa-envelope"></i>
-
-</a>
-
-
-</div>
-
-</div>
-
-</section>
-
-
 </main>
-
 
 <!-- =====================================================
      FOOTER
-====================================================== -->
+===================================================== -->
 
 <footer class="footer">
 
@@ -4814,19 +3608,17 @@ Contact Us
 
 <div class="footer-grid">
 
-
-<!-- BRAND -->
-
 <div>
 
 <a
     class="footer-logo"
     href="index.html">
 
-TheBestBundle
+<img
+    src="images/Thebestbundle-transparent-logo.png"
+    alt="TheBestBundle">
 
 </a>
-
 
 <p>
 
@@ -4835,260 +3627,112 @@ creating and growing every day.
 
 </p>
 
-
 <div class="social-row">
 
-<a
-    href="#"
-    aria-label="Instagram">
-
+<a href="#" aria-label="Instagram">
 <i class="fa-brands fa-instagram"></i>
-
 </a>
 
-
-<a
-    href="#"
-    aria-label="TikTok">
-
+<a href="#" aria-label="TikTok">
 <i class="fa-brands fa-tiktok"></i>
-
 </a>
 
-
-<a
-    href="#"
-    aria-label="Facebook">
-
+<a href="#" aria-label="Facebook">
 <i class="fa-brands fa-facebook-f"></i>
-
 </a>
 
-
-<a
-    href="#"
-    aria-label="Pinterest">
-
+<a href="#" aria-label="Pinterest">
 <i class="fa-brands fa-pinterest-p"></i>
-
 </a>
 
-
-<a
-    href="#"
-    aria-label="YouTube">
-
+<a href="#" aria-label="YouTube">
 <i class="fa-brands fa-youtube"></i>
-
 </a>
 
 </div>
 
 </div>
-
-
-<!-- EXPLORE -->
 
 <div>
 
-<h3>
+<h3>QUICK LINKS</h3>
 
-EXPLORE
+<a href="index.html">Home</a>
+<a href="courses.html">Courses</a>
+<a href="templates.html">Explore Templates</a>
+<a href="ebooks.html">Explore eBooks</a>
+<a href="bundles.html">Explore Bundles</a>
+<a href="freebie.html">Explore Free Resources</a>
+<a href="merchandise.html">Merchandise</a>
+<a href="contact.html">Contact</a>
+<a href="reviews.html">Customer Reviews</a>
 
-</h3>
+</div>
 
-<a href="ebooks.html">
+<div>
 
-eBooks
+<h3>HELP &amp; SUPPORT</h3>
 
+<a href="faq.html">FAQ</a>
+<a href="refund.html">Refund Policy</a>
+<a href="terms.html">Terms &amp; Conditions</a>
+<a href="privacy.html">Privacy Policy</a>
+<a href="cookie.html">Cookie Policy</a>
+<a href="secure-checkout.html">Secure Checkout</a>
+
+</div>
+
+<div>
+
+<h3>TOP CATEGORIES</h3>
+
+<a href="merchandise.html">
+Health &amp; Wellness
 </a>
 
-<a href="templates.html">
-
-Templates
-
+<a href="ebooks.html">
+Personal Development
 </a>
 
 <a href="bundles.html">
+Business &amp; Finance
+</a>
 
-Bundles
-
+<a href="templates.html">
+Productivity
 </a>
 
 <a href="courses.html">
-
-Courses
-
-</a>
-
-<a href="freebie.html">
-
-Free Resources
-
-</a>
-
-<a href="french-collection.html">
-
-French Collection
-
+Mindset &amp; Motivation
 </a>
 
 </div>
 
-
-<!-- COMPANY -->
-
 <div>
 
-<h3>
-
-COMPANY
-
-</h3>
-
-<a href="index.html">
-
-Home
-
-</a>
-
-<a href="reviews.html">
-
-Customer Reviews
-
-</a>
-
-<a href="donate.html">
-
-Donation
-
-</a>
-
-<a href="merchandise.html">
-
-Merchandise
-
-</a>
-
-<a href="contact.html">
-
-Contact
-
-</a>
-
-</div>
-
-
-<!-- HELP -->
-
-<div>
-
-<h3>
-
-HELP &amp; SUPPORT
-
-</h3>
-
-<a href="faq.html">
-
-FAQ
-
-</a>
-
-<a href="help-support.html">
-
-Help &amp; Support
-
-</a>
-
-<a href="refund.html">
-
-Refund Policy
-
-</a>
-
-<a href="terms.html">
-
-Terms &amp; Conditions
-
-</a>
-
-<a href="privacy.html">
-
-Privacy Policy
-
-</a>
-
-<a href="cookie.html">
-
-Cookie Policy
-
-</a>
-
-<a href="secure-checkout.html">
-
-Secure Checkout
-
-</a>
-
-</div>
-
-
-<!-- PAYMENT -->
-
-<div>
-
-<h3>
-
-WE ACCEPT
-
-</h3>
-
+<h3>WE ACCEPT</h3>
 
 <div class="payment-row">
 
-<span class="payment">
-
-VISA
-
-</span>
-
-<span class="payment">
-
-MC
-
-</span>
-
-<span class="payment">
-
-AMEX
-
-</span>
-
-<span class="payment">
-
-DISCOVER
-
-</span>
+<span class="payment">VISA</span>
+<span class="payment">MC</span>
+<span class="payment">AMEX</span>
+<span class="payment">DISCOVER</span>
 
 </div>
-
 
 <div class="secure">
 
 <i class="fa-solid fa-shield-halved"></i>
 
 100% SECURE<br>
-
 CHECKOUT
 
 </div>
 
 </div>
 
-
 </div>
-
 
 <div class="copyright">
 
@@ -5100,31 +3744,25 @@ CHECKOUT
 
 </footer>
 
-
 <!-- =====================================================
-     SEARCH OVERLAY
-====================================================== -->
+     SEARCH
+===================================================== -->
 
 <div
     class="overlay"
     id="searchOverlay">
 </div>
 
-
 <div
     class="search-box"
     id="searchBox"
     hidden>
 
-
 <div class="search-title">
 
 <h2>
-
 Search TheBestBundle
-
 </h2>
-
 
 <button
     class="close-btn"
@@ -5137,18 +3775,15 @@ Search TheBestBundle
 
 </div>
 
-
 <form
     class="search-row"
     id="searchForm">
-
 
 <input
     id="siteSearch"
     type="search"
     placeholder="Search eBooks, templates, bundles..."
     autocomplete="off">
-
 
 <button
     class="btn btn-gold"
@@ -5162,31 +3797,25 @@ Search
 
 </div>
 
-
 <!-- =====================================================
-     EXPLORE COLLECTION SLIDE-OUT
-====================================================== -->
+     COLLECTION PANEL
+===================================================== -->
 
 <div
     class="overlay"
     id="menuOverlay">
 </div>
 
-
 <aside
     class="panel"
     id="collectionPanel"
     aria-label="Explore Collection">
 
-
 <div class="panel-head">
 
 <h2>
-
 Explore Collection
-
 </h2>
-
 
 <button
     class="close-btn"
@@ -5199,65 +3828,39 @@ Explore Collection
 
 </div>
 
-
 <nav class="collection-links">
 
-
 <a href="freebie.html">
-
 Free Resources
-
 </a>
-
 
 <a href="ebooks.html">
-
 eBooks
-
 </a>
-
 
 <a href="bundles.html">
-
 Bundles
-
 </a>
-
 
 <a href="templates.html">
-
 Templates
-
 </a>
-
 
 <a href="courses.html">
-
 Courses
-
 </a>
-
 
 <a href="french-collection.html">
-
 French Collection
-
 </a>
-
 
 <a href="merchandise.html">
-
 Merchandise
-
 </a>
-
 
 <a href="reviews.html">
-
 Customer Reviews
-
 </a>
-
 
 <a
     class="donate-link"
@@ -5267,41 +3870,34 @@ Donation
 
 </a>
 
-
 </nav>
 
 </aside>
 
-
 <!-- =====================================================
      CART
-====================================================== -->
+===================================================== -->
 
 <div
     class="overlay"
     id="cartOverlay">
 </div>
 
-
 <aside
     class="panel"
     id="cartPanel"
     aria-label="Shopping cart">
 
-
 <div class="panel-head">
 
 <h2>
-
 Your Cart
-
 </h2>
-
 
 <button
     class="close-btn"
     id="closeCart"
-    aria-label="Close shopping cart">
+    aria-label="Close cart">
 
 <i class="fa-solid fa-xmark"></i>
 
@@ -5309,32 +3905,24 @@ Your Cart
 
 </div>
 
-
 <div
     class="cart-items"
     id="cartItems">
 </div>
 
-
 <div class="cart-foot">
-
 
 <div class="cart-total">
 
 <span>
-
 Total
-
 </span>
 
 <span id="cartTotal">
-
 $0.00
-
 </span>
 
 </div>
-
 
 <button
     class="btn btn-gold"
@@ -5349,109 +3937,23 @@ Review Cart
 
 </aside>
 
-
-<!-- =====================================================
-     REVIEW MODAL
-====================================================== -->
-
-<div
-    class="review-modal"
-    id="reviewModal">
-
-
-<div class="review-modal-card">
-
-
-<button
-    class="review-modal-close"
-    id="closeReviewModal"
-    aria-label="Close review">
-
-<i class="fa-solid fa-xmark"></i>
-
-</button>
-
-
-<div
-    class="modal-avatar"
-    id="modalAvatar">
-
-SM
-
-</div>
-
-
-<h2 id="modalName">
-
-Sarah M.
-
-</h2>
-
-
-<div
-    class="modal-product"
-    id="modalProduct">
-
-Digital Marketing Made Simple
-
-</div>
-
-
-<div class="modal-stars">
-
-★★★★★
-
-</div>
-
-
-<p
-    class="modal-review"
-    id="modalReview">
-
-“Sample testimonial for design demonstration.
-This content will be replaced with an authentic
-customer review.”
-
-</p>
-
-
-<div class="modal-note">
-
-<strong>Sample Testimonial • Demo Only</strong><br>
-
-This placeholder is used only to demonstrate
-how authentic customer reviews will appear
-on the website.
-
-</div>
-
-
-</div>
-
-</div>
-
-
-<!-- TOAST -->
-
 <div
     class="toast"
     id="toast">
 </div>
 
-
 <script>
 
-/* =========================================================
-   BASIC HELPER
-========================================================= */
+/* =====================================================
+   HELPERS
+===================================================== */
 
 const $ = id =>
     document.getElementById(id);
 
-
-/* =========================================================
+/* =====================================================
    EXPLORE COLLECTION
-========================================================= */
+===================================================== */
 
 function openCollection(){
 
@@ -5466,7 +3968,6 @@ function openCollection(){
     document.body
         .classList
         .add("locked");
-
 }
 
 function closeCollection(){
@@ -5482,7 +3983,6 @@ function closeCollection(){
     document.body
         .classList
         .remove("locked");
-
 }
 
 $("exploreCollection")
@@ -5503,10 +4003,9 @@ $("menuOverlay")
         closeCollection
     );
 
-
-/* =========================================================
+/* =====================================================
    SEARCH
-========================================================= */
+===================================================== */
 
 function openSearch(){
 
@@ -5524,7 +4023,6 @@ function openSearch(){
         () => $("siteSearch").focus(),
         40
     );
-
 }
 
 function closeSearch(){
@@ -5538,7 +4036,6 @@ function closeSearch(){
     document.body
         .classList
         .remove("locked");
-
 }
 
 $("searchButton")
@@ -5559,7 +4056,6 @@ $("searchOverlay")
         closeSearch
     );
 
-
 $("searchForm")
     .addEventListener(
         "submit",
@@ -5577,16 +4073,13 @@ $("searchForm")
                 window.location.href =
                     "search.html?q=" +
                     encodeURIComponent(q);
-
             }
-
         }
     );
 
-
-/* =========================================================
+/* =====================================================
    CART STORAGE
-========================================================= */
+===================================================== */
 
 let cart = [];
 
@@ -5600,17 +4093,13 @@ try{
         );
 
     if(!Array.isArray(cart)){
-
         cart = [];
-
     }
 
 }catch(e){
 
     cart = [];
-
 }
-
 
 function saveCart(){
 
@@ -5620,13 +4109,12 @@ function saveCart(){
     );
 
     renderCart();
-
 }
-
 
 function renderCart(){
 
     const count =
+
         cart.reduce(
             (n,p) =>
                 n +
@@ -5636,23 +4124,19 @@ function renderCart(){
             0
         );
 
-
     $("cartCount")
         .textContent =
-            count;
-
+        count;
 
     $("cartCount")
         .style
         .display =
-            count
-                ? "flex"
-                : "none";
-
+        count
+            ? "flex"
+            : "none";
 
     const box =
         $("cartItems");
-
 
     if(!cart.length){
 
@@ -5668,17 +4152,14 @@ function renderCart(){
 
         $("cartTotal")
             .textContent =
-                "$0.00";
+            "$0.00";
 
         return;
-
     }
-
 
     let total = 0;
 
     box.innerHTML = "";
-
 
     cart.forEach(
         (p,i) => {
@@ -5692,36 +4173,22 @@ function renderCart(){
             total +=
                 price * qty;
 
-
             const row =
-                document.createElement(
-                    "div"
-                );
+                document.createElement("div");
 
             row.className =
                 "cart-item";
 
-
-            const image =
-                p.image ||
-                "images/Starter_Bundle_Cover.png";
-
-
-            const name =
-                p.name ||
-                "Product";
-
-
             row.innerHTML =
 
                 `<img
-                    src="${image}"
-                    alt="${name}">
+                    src="${p.image || "images/Starter_Bundle_Cover.png"}"
+                    alt="${p.name || "Product"}">
 
                 <div>
 
                     <h3>
-                        ${name}
+                        ${p.name || "Product"}
                     </h3>
 
                     <div class="cart-price">
@@ -5739,47 +4206,36 @@ function renderCart(){
 
                 </button>`;
 
-
             box.appendChild(row);
-
         }
     );
 
-
     $("cartTotal")
         .textContent =
-            "$" +
-            total.toFixed(2);
-
+        "$" +
+        total.toFixed(2);
 
     box
-        .querySelectorAll(
-            ".remove-item"
-        )
+        .querySelectorAll(".remove-item")
         .forEach(
-            button => {
+            b =>
 
-                button.addEventListener(
+                b.addEventListener(
                     "click",
                     () => {
 
                         cart.splice(
                             Number(
-                                button.dataset.index
+                                b.dataset.index
                             ),
                             1
                         );
 
                         saveCart();
-
                     }
-                );
-
-            }
+                )
         );
-
 }
-
 
 function openCart(){
 
@@ -5796,9 +4252,7 @@ function openCart(){
         .add("locked");
 
     renderCart();
-
 }
-
 
 function closeCart(){
 
@@ -5813,9 +4267,7 @@ function closeCart(){
     document.body
         .classList
         .remove("locked");
-
 }
-
 
 $("cartButton")
     .addEventListener(
@@ -5823,20 +4275,17 @@ $("cartButton")
         openCart
     );
 
-
 $("closeCart")
     .addEventListener(
         "click",
         closeCart
     );
 
-
 $("cartOverlay")
     .addEventListener(
         "click",
         closeCart
     );
-
 
 $("reviewCart")
     .addEventListener(
@@ -5847,58 +4296,49 @@ $("reviewCart")
 
                 window.location.href =
                     "cart.html";
-
             }
-
         }
     );
 
-
-/* =========================================================
+/* =====================================================
    ADD TO CART
-========================================================= */
+===================================================== */
 
 document
-    .querySelectorAll(
-        ".add-cart"
-    )
+    .querySelectorAll(".add-cart")
     .forEach(
-        button => {
+        btn => {
 
-            button.addEventListener(
+            btn.addEventListener(
                 "click",
                 e => {
 
                     e.preventDefault();
 
-
                     const id =
-                        button.dataset.id;
-
+                        btn.dataset.id;
 
                     const existing =
                         cart.find(
                             p => p.id === id
                         );
 
-
                     if(existing){
 
                         existing.quantity =
+
                             (
                                 Number(
                                     existing.quantity
                                 ) || 1
                             ) + 1;
 
-
                         existing.priceId =
-                            button.dataset.priceId ||
+                            btn.dataset.priceId ||
                             existing.priceId;
 
-
                         existing.stripe =
-                            button.dataset.stripe ||
+                            btn.dataset.stripe ||
                             existing.stripe;
 
                     }else{
@@ -5908,216 +4348,37 @@ document
                             id:id,
 
                             name:
-                                button.dataset.name,
+                                btn.dataset.name,
 
                             price:
                                 Number(
-                                    button.dataset.price
+                                    btn.dataset.price
                                 ),
 
                             image:
-                                button.dataset.image,
+                                btn.dataset.image,
 
                             quantity:1,
 
                             priceId:
-                                button.dataset.priceId,
+                                btn.dataset.priceId,
 
                             stripe:
-                                button.dataset.stripe
-
+                                btn.dataset.stripe
                         });
-
                     }
-
 
                     saveCart();
 
                     openCart();
-
                 }
             );
-
         }
     );
 
-
-/* =========================================================
-   REVIEW MODAL
-========================================================= */
-
-const demoReviews = {
-
-    1:{
-
-        initials:"SM",
-
-        name:"Sarah M.",
-
-        product:"Digital Marketing Made Simple",
-
-        review:
-            "“Sample testimonial for design demonstration. This content will be replaced with an authentic customer review.”"
-
-    },
-
-    2:{
-
-        initials:"JM",
-
-        name:"James M.",
-
-        product:"Starter Bundle",
-
-        review:
-            "“Sample testimonial for design demonstration. This content will be replaced with an authentic customer review.”"
-
-    },
-
-    3:{
-
-        initials:"AL",
-
-        name:"Amanda L.",
-
-        product:"30-Day Wellness Planner",
-
-        review:
-            "“Sample testimonial for design demonstration. This content will be replaced with an authentic customer review.”"
-
-    }
-
-};
-
-
-function openReview(id){
-
-    const review =
-        demoReviews[id];
-
-    if(!review){
-
-        return;
-
-    }
-
-
-    $("modalAvatar")
-        .textContent =
-            review.initials;
-
-
-    $("modalName")
-        .textContent =
-            review.name;
-
-
-    $("modalProduct")
-        .textContent =
-            review.product;
-
-
-    $("modalReview")
-        .textContent =
-            review.review;
-
-
-    $("reviewModal")
-        .classList
-        .add("active");
-
-
-    document.body
-        .classList
-        .add("locked");
-
-}
-
-
-function closeReview(){
-
-    $("reviewModal")
-        .classList
-        .remove("active");
-
-    document.body
-        .classList
-        .remove("locked");
-
-}
-
-
-document
-    .querySelectorAll(
-        ".review-card"
-    )
-    .forEach(
-        card => {
-
-            card.addEventListener(
-                "click",
-                () => {
-
-                    openReview(
-                        card.dataset.review
-                    );
-
-                }
-            );
-
-
-            card.addEventListener(
-                "keydown",
-                e => {
-
-                    if(
-                        e.key === "Enter" ||
-                        e.key === " "
-                    ){
-
-                        e.preventDefault();
-
-                        openReview(
-                            card.dataset.review
-                        );
-
-                    }
-
-                }
-            );
-
-        }
-    );
-
-
-$("closeReviewModal")
-    .addEventListener(
-        "click",
-        closeReview
-    );
-
-
-$("reviewModal")
-    .addEventListener(
-        "click",
-        e => {
-
-            if(
-                e.target ===
-                $("reviewModal")
-            ){
-
-                closeReview();
-
-            }
-
-        }
-    );
-
-
-/* =========================================================
+/* =====================================================
    ESCAPE
-========================================================= */
+===================================================== */
 
 document.addEventListener(
     "keydown",
@@ -6130,18 +4391,13 @@ document.addEventListener(
             closeSearch();
 
             closeCart();
-
-            closeReview();
-
         }
-
     }
 );
 
-
-/* =========================================================
+/* =====================================================
    STORAGE SYNCHRONIZATION
-========================================================= */
+===================================================== */
 
 window.addEventListener(
     "storage",
@@ -6159,32 +4415,40 @@ window.addEventListener(
                         e.newValue || "[]"
                     );
 
-                if(
-                    !Array.isArray(cart)
-                ){
-
+                if(!Array.isArray(cart)){
                     cart = [];
-
                 }
 
             }catch(x){
 
                 cart = [];
-
             }
 
-
             renderCart();
-
         }
-
     }
 );
 
+/* =====================================================
+   PREVENT PLACEHOLDER LINKS
+===================================================== */
 
-/* =========================================================
+document
+    .querySelectorAll(
+        'a[href="#"]'
+    )
+    .forEach(
+        a =>
+
+            a.addEventListener(
+                "click",
+                e => e.preventDefault()
+            )
+    );
+
+/* =====================================================
    EXTERNAL LINK SAFETY
-========================================================= */
+===================================================== */
 
 document
     .querySelectorAll(
@@ -6194,6 +4458,7 @@ document
         a => {
 
             const rel =
+
                 (
                     a.getAttribute("rel") ||
                     ""
@@ -6201,52 +4466,43 @@ document
                 .split(/\s+/)
                 .filter(Boolean);
 
-
             if(
                 !rel.includes("noopener")
             ){
 
                 rel.push("noopener");
-
             }
-
 
             if(
                 !rel.includes("noreferrer")
             ){
 
                 rel.push("noreferrer");
-
             }
-
 
             a.setAttribute(
                 "rel",
                 rel.join(" ")
             );
-
         }
     );
 
-
-/* =========================================================
+/* =====================================================
    LAST PAGE
-========================================================= */
+===================================================== */
 
 sessionStorage.setItem(
     "theBestBundleLastPage",
     window.location.href
 );
 
-
-/* =========================================================
-   INITIAL CART RENDER
-========================================================= */
+/* =====================================================
+   INITIAL CART
+===================================================== */
 
 renderCart();
 
 </script>
-
 
 </body>
 
