@@ -369,6 +369,8 @@ button{
 
     letter-spacing:-1.2px;
 
+    white-space:nowrap;
+
 }
 
 .logo:hover{
@@ -386,6 +388,8 @@ button{
     gap:25px;
 
     margin-left:auto;
+
+    flex-shrink:0;
 
 }
 
@@ -455,6 +459,10 @@ button{
 
     transition:.2s ease;
 
+    white-space:nowrap;
+
+    flex-shrink:0;
+
 }
 
 .header-tool:hover{
@@ -500,6 +508,8 @@ button{
 .cart-wrap{
 
     position:relative;
+
+    flex-shrink:0;
 
 }
 
@@ -559,23 +569,87 @@ button{
 
 @media(max-width:850px){
 
+    .site-header{
+
+        overflow:hidden;
+
+    }
+
     .header-inner{
 
         min-height:82px;
 
-        gap:12px;
+        width:100%;
+
+        max-width:none;
+
+        margin:0;
+
+        padding:0 20px;
+
+        gap:18px;
+
+        overflow-x:auto;
+
+        overflow-y:hidden;
+
+        white-space:nowrap;
+
+        flex-wrap:nowrap;
+
+        justify-content:flex-start;
+
+        scrollbar-width:none;
+
+        -webkit-overflow-scrolling:touch;
+
+        overscroll-behavior-x:contain;
 
     }
 
-    .desktop-nav{
+    .header-inner::-webkit-scrollbar{
 
         display:none;
 
     }
 
+    .desktop-nav{
+
+        display:flex;
+
+        align-items:center;
+
+        gap:18px;
+
+        margin-left:0;
+
+        flex-shrink:0;
+
+    }
+
+    .desktop-nav a{
+
+        font-size:10px;
+
+    }
+
     .header-tools{
 
-        margin-left:auto;
+        margin-left:0;
+
+        flex-shrink:0;
+
+    }
+
+    .header-tool:not(.icon):not(.gold-border):not(.news){
+
+        display:flex;
+
+    }
+
+    .header-tool.news{
+
+        display:flex;
 
     }
 
@@ -587,6 +661,10 @@ button{
 
         min-height:82px;
 
+        padding:0 18px;
+
+        gap:17px;
+
     }
 
     .logo{
@@ -595,15 +673,35 @@ button{
 
     }
 
-    .header-tool:not(.icon):not(.gold-border):not(.news){
+    .desktop-nav{
 
-        display:none;
+        gap:17px;
+
+    }
+
+    .desktop-nav a{
+
+        font-size:10px;
+
+    }
+
+    .header-tools{
+
+        gap:7px;
 
     }
 
     .header-tool{
 
         min-height:36px;
+
+        font-size:10px;
+
+    }
+
+    .header-tool.icon{
+
+        width:38px;
 
     }
 
@@ -615,7 +713,7 @@ button{
 
     .header-tool.news{
 
-        display:none;
+        display:flex;
 
     }
 
@@ -2092,13 +2190,17 @@ button{
 
     color:var(--gold);
 
-    font-size:38px;
+    font-size:43px;
 
     font-weight:600;
 
     line-height:1;
 
+    letter-spacing:-1.2px;
+
     margin-bottom:15px;
+
+    white-space:nowrap;
 
 }
 
@@ -2268,6 +2370,12 @@ button{
     .footer p{
 
         margin:auto;
+
+    }
+
+    .footer-logo{
+
+        font-size:43px;
 
     }
 
@@ -3038,7 +3146,7 @@ learn, create and grow.
 
 <img
     class="hero-3d-image"
-    src="images/thebestbundle-3d-product-showcase.png"
+    src="images/TheBestBundle_3D_Hero.png"
     alt="TheBestBundle Premium Digital Collection 3D Display">
 
 </div>
