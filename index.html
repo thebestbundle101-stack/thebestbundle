@@ -5,41 +5,62 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
 
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-<meta name="theme-color" content="#071A33">
-
-<title>TheBestBundle | Learn • Create • Grow</title>
+<title>
+    TheBestBundle | Learn • Create • Grow
+</title>
 
 <meta
     name="description"
-    content="Discover premium eBooks, printable templates, bundles, courses and digital resources from TheBestBundle.">
+    content="Discover premium eBooks, printable templates, bundles, courses and digital resources from TheBestBundle."
+>
+
+<meta
+    name="theme-color"
+    content="#071A33"
+>
+
+<!-- =========================================================
+     GOOGLE FONTS
+========================================================= -->
 
 <link
-    rel="icon"
-    href="/thebestbundle/images/favicon.ico"
-    type="image/x-icon">
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+>
 
 <link
-    rel="icon"
-    type="image/png"
-    sizes="32x32"
-    href="/thebestbundle/images/favicon.png">
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+>
 
 <link
-    rel="apple-touch-icon"
-    href="/thebestbundle/images/favicon.png">
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+>
+
+<!-- =========================================================
+     FONT AWESOME
+========================================================= -->
 
 <link
     rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+>
+
+<!-- =========================================================
+     GOOGLE ANALYTICS
+========================================================= -->
 
 <script
     async
-    src="https://www.googletagmanager.com/gtag/js?id=G-JPG5GRWX53">
-</script>
+    src="https://www.googletagmanager.com/gtag/js?id=G-JPG5GRWX53"
+></script>
 
 <script>
 
@@ -49,16 +70,24 @@ function gtag(){
     dataLayer.push(arguments);
 }
 
-gtag("js", new Date());
+gtag(
+    'js',
+    new Date()
+);
 
 gtag(
-    "config",
-    "G-JPG5GRWX53"
+    'config',
+    'G-JPG5GRWX53'
 );
 
 </script>
 
+
 <style>
+
+/* =========================================================
+   ROOT
+========================================================= */
 
 :root{
 
@@ -66,19 +95,32 @@ gtag(
     --navy2:#0D2B50;
     --navy3:#123761;
 
-    --gold:#F4C542;
-    --gold2:#D9A91A;
+    --gold:#C8A45D;
+    --gold2:#E1C77E;
 
-    --white:#fff;
-    --cream:#F8F7F2;
+    --cream:#F8F5ED;
+    --white:#FFFFFF;
 
     --ink:#172033;
     --gray:#64748B;
-    --line:#E2E8F0;
 
-    --max:1180px;
-    --radius:14px;
+    --line:#E6E0D3;
+
+    --shadow:
+        0 20px 55px rgba(7,26,51,.10);
+
+    --shadow-soft:
+        0 12px 35px rgba(7,26,51,.08);
+
+    --radius:24px;
+
+    --max:1240px;
 }
+
+
+/* =========================================================
+   RESET
+========================================================= */
 
 *{
     box-sizing:border-box;
@@ -91,353 +133,337 @@ html{
 }
 
 body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#fff;
+
+    font-family:
+        "Montserrat",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:var(--cream);
+
     color:var(--ink);
-    line-height:1.55;
+
+    line-height:1.7;
+
     overflow-x:hidden;
 }
 
-body.locked{
-    overflow:hidden;
-}
-
 img{
-    display:block;
     max-width:100%;
-    height:auto;
+    display:block;
 }
 
 a{
-    text-decoration:none;
     color:inherit;
+    text-decoration:none;
 }
 
 button,
-input{
+input,
+select,
+textarea{
     font:inherit;
 }
 
-button{
-    cursor:pointer;
-}
+
+/* =========================================================
+   GLOBAL
+========================================================= */
 
 .container{
-    width:90%;
-    max-width:var(--max);
+
+    width:min(
+        calc(100% - 40px),
+        var(--max)
+    );
+
     margin:auto;
 }
 
+.serif{
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+}
+
 .gold{
-    color:var(--gold);
-}
-
-.btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    gap:10px;
-    min-height:48px;
-    padding:12px 22px;
-    border-radius:8px;
-    font-weight:800;
-    border:1px solid transparent;
-    transition:.2s ease;
-}
-
-.btn:hover{
-    transform:translateY(-2px);
-}
-
-.btn-gold{
-    background:var(--gold);
-    color:var(--navy);
-}
-
-.btn-gold:hover{
-    background:#FFD95A;
-}
-
-.btn-outline{
-    background:transparent;
-    color:#fff;
-    border-color:rgba(255,255,255,.7);
-}
-
-.btn-outline:hover{
-    border-color:var(--gold);
-    color:var(--gold);
-}
-
-.btn-dark{
-    background:var(--navy);
-    color:#fff;
+    color:var(--gold2);
 }
 
 .section{
-    padding:78px 0;
+    padding:110px 0;
 }
 
-.section-title{
+.section-head{
+    max-width:760px;
+    margin:0 auto 55px;
     text-align:center;
-    font-family:Georgia,"Times New Roman",serif;
-    font-size:clamp(28px,4vw,42px);
-    line-height:1.15;
+}
+
+.section-kicker{
+
+    color:var(--gold);
+
+    font-size:12px;
+
+    font-weight:700;
+
+    letter-spacing:2.8px;
+
+    text-transform:uppercase;
+
     margin-bottom:12px;
 }
 
-.section-intro{
-    text-align:center;
-    max-width:700px;
-    margin:0 auto 34px;
-    color:var(--gray);
-    font-size:15px;
+.section-title{
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    color:var(--navy);
+
+    font-size:clamp(
+        42px,
+        5vw,
+        68px
+    );
+
+    line-height:1;
+
+    font-weight:600;
+
+    margin-bottom:18px;
 }
+
+.section-description{
+
+    color:var(--gray);
+
+    font-size:15px;
+
+    line-height:1.9;
+}
+
 
 /* =========================================================
    HEADER
 ========================================================= */
 
 .site-header{
-    background:var(--navy);
-    border-bottom:1px solid rgba(255,255,255,.13);
-    position:relative;
+
+    position:sticky;
+
+    top:0;
+
     z-index:1000;
+
+    background:
+        rgba(7,26,51,.97);
+
+    border-bottom:
+        1px solid
+        rgba(200,164,93,.16);
+
+    backdrop-filter:blur(18px);
 }
 
 .header-inner{
-    min-height:70px;
+
+    min-height:88px;
+
     display:flex;
+
     align-items:center;
-    gap:24px;
-    min-width:0;
-    overflow-x:auto;
-    overflow-y:hidden;
+
+    justify-content:space-between;
+
+    gap:28px;
 }
 
-.logo{
-    flex-shrink:0;
-}
+.header-logo{
 
-.logo img{
-    height:56px;
-    width:auto;
-}
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
 
-.desktop-nav{
-    display:flex;
-    align-items:center;
-    gap:25px;
-    margin-left:auto;
-}
+    color:var(--gold2);
 
-.desktop-nav a{
-    color:#fff;
-    font-size:13px;
-    font-weight:700;
+    font-size:40px;
+
+    line-height:1;
+
+    font-weight:600;
+
     white-space:nowrap;
-    position:relative;
 }
 
-.desktop-nav a:first-child{
-    color:var(--gold);
+.header-nav{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:25px;
+
+    flex:1;
 }
 
-.desktop-nav a:first-child:after{
-    content:"";
-    position:absolute;
-    left:0;
-    right:0;
-    bottom:-21px;
-    height:2px;
-    background:var(--gold);
+.header-nav a{
+
+    color:#fff;
+
+    font-size:12px;
+
+    font-weight:600;
+
+    letter-spacing:.5px;
+
+    transition:.25s;
+}
+
+.header-nav a:hover{
+    color:var(--gold2);
 }
 
 .header-tools{
+
     display:flex;
+
     align-items:center;
-    gap:8px;
+
+    gap:10px;
 }
 
-.header-tool{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    min-height:38px;
-    border-radius:22px;
+.tool-btn{
+
+    width:42px;
+    height:42px;
+
+    border:1px solid
+        rgba(255,255,255,.16);
+
+    border-radius:50%;
+
+    background:
+        rgba(255,255,255,.05);
+
     color:#fff;
-    border:1px solid rgba(255,255,255,.55);
-    background:transparent;
-    padding:0 13px;
-    font-size:12px;
-    font-weight:800;
-}
 
-.header-tool.icon{
-    width:38px;
-    padding:0;
-}
+    display:flex;
 
-.header-tool.gold-border{
-    border-color:var(--gold);
-}
+    align-items:center;
 
-.header-tool.news{
-    background:var(--gold);
-    color:var(--navy);
-    border-color:var(--gold);
-}
+    justify-content:center;
 
-.header-tool:hover{
-    color:var(--gold);
-    border-color:var(--gold);
-}
+    cursor:pointer;
 
-.header-tool.news:hover{
-    background:#FFD95A;
-    color:var(--navy);
-}
+    transition:.25s;
 
-.cart-wrap{
     position:relative;
 }
 
+.tool-btn:hover{
+
+    color:var(--gold2);
+
+    border-color:
+        rgba(200,164,93,.55);
+
+    transform:translateY(-2px);
+}
+
 .cart-count{
+
     position:absolute;
+
     top:-5px;
     right:-5px;
-    min-width:17px;
-    height:17px;
-    border-radius:50%;
+
+    width:19px;
+    height:19px;
+
     background:var(--gold);
+
     color:var(--navy);
-    font-size:9px;
-    font-weight:900;
-    display:none;
+
+    border-radius:50%;
+
+    font-size:10px;
+
+    font-weight:700;
+
+    display:flex;
+
     align-items:center;
+
     justify-content:center;
 }
 
-@media(max-width:1080px){
-
-    .desktop-nav{
-        gap:13px;
-    }
-
-    .desktop-nav a{
-        font-size:11px;
-    }
-
-    .header-tool{
-        padding:0 9px;
-    }
+.mobile-menu-btn{
+    display:none;
 }
 
-@media(max-width:760px){
-
-    .header-inner{
-        min-height:66px;
-        gap:8px;
-        overflow-x:auto;
-    }
-
-    .logo img{
-        height:30px;
-    }
-
-    .desktop-nav{
-        margin-left:0;
-        gap:13px;
-    }
-
-    .desktop-nav a{
-        font-size:10px;
-    }
-
-    .header-tools{
-        margin-left:auto;
-        flex-shrink:0;
-    }
-
-    .header-tool:not(.icon):not(.gold-border):not(.news){
-        display:none;
-    }
-
-    .header-tool.icon{
-        order:1;
-    }
-
-    .header-tool.gold-border{
-        display:flex;
-        order:2;
-    }
-
-    .cart-wrap{
-        order:3;
-    }
-
-    .header-tool.news{
-        display:flex;
-        order:4;
-    }
-
-    .desktop-nav a:first-child:after{
-        bottom:-18px;
-    }
-}
 
 /* =========================================================
-   PREMIUM HERO
+   HERO
 ========================================================= */
 
 .hero{
 
+    position:relative;
+
+    min-height:760px;
+
     background:
-
         radial-gradient(
-            circle at 78% 38%,
-            rgba(244,197,66,.13),
-            transparent 28%
+            circle at 76% 45%,
+            rgba(200,164,93,.16),
+            transparent 27%
         ),
-
         radial-gradient(
-            circle at 15% 85%,
-            rgba(255,255,255,.035),
-            transparent 30%
+            circle at 90% 10%,
+            rgba(225,199,126,.10),
+            transparent 22%
         ),
-
         linear-gradient(
             135deg,
-            #06172E 0%,
-            #0A2545 48%,
-            #071A33 100%
+            #06172D 0%,
+            #081B34 45%,
+            #0D2B50 100%
         );
 
-    color:#fff;
-    position:relative;
     overflow:hidden;
-    padding:58px 0 72px;
+
+    color:#fff;
 }
 
-.hero:before{
+.hero::before{
 
     content:"";
 
     position:absolute;
+
     inset:0;
 
-    opacity:.12;
-
-    background-image:
-        radial-gradient(
-            rgba(255,255,255,.22) 1px,
-            transparent 1px
+    background:
+        linear-gradient(
+            90deg,
+            rgba(7,26,51,.35),
+            transparent 55%
         );
 
-    background-size:34px 34px;
+    pointer-events:none;
 }
 
-.hero:after{
+.hero::after{
 
     content:"";
 
@@ -447,470 +473,308 @@ button{
     height:700px;
 
     right:-220px;
-    top:-300px;
+    bottom:-360px;
 
     border-radius:50%;
 
-    border:1px solid rgba(244,197,66,.14);
+    border:
+        1px solid
+        rgba(225,199,126,.18);
 
     box-shadow:
-        0 0 100px rgba(244,197,66,.07);
+        0 0 80px
+        rgba(200,164,93,.08);
 
     pointer-events:none;
 }
 
-.hero-grid{
+.hero-inner{
 
     position:relative;
+
     z-index:2;
+
+    min-height:760px;
 
     display:grid;
 
-    grid-template-columns:.78fr 1.22fr;
-
-    gap:34px;
+    grid-template-columns:
+        minmax(360px,.80fr)
+        minmax(620px,1.20fr);
 
     align-items:center;
+
+    gap:15px;
 }
 
 .hero-copy{
-    max-width:510px;
+
+    padding:60px 0;
+
+    position:relative;
+
+    z-index:10;
 }
 
 .hero-kicker{
 
-    color:var(--gold);
+    color:var(--gold2);
 
-    font-size:11px;
+    font-size:12px;
 
-    font-weight:900;
+    font-weight:700;
 
-    letter-spacing:2.4px;
+    letter-spacing:3px;
 
-    margin-bottom:16px;
+    text-transform:uppercase;
+
+    margin-bottom:25px;
 }
 
-.hero h1{
+.hero-title{
 
-    font-family:Georgia,"Times New Roman",serif;
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
 
-    font-size:clamp(40px,5vw,61px);
+    font-size:
+        clamp(
+            55px,
+            5.2vw,
+            82px
+        );
 
-    line-height:1.03;
+    line-height:.91;
 
-    margin-bottom:18px;
+    font-weight:600;
+
+    letter-spacing:-1.8px;
+
+    margin-bottom:28px;
+
+    color:#fff;
 }
 
-.hero h1 span{
-    color:var(--gold);
+.hero-title span{
+    color:var(--gold2);
 }
 
-.hero h1:after{
+.hero-line{
 
-    content:"";
+    width:86px;
 
-    display:block;
+    height:3px;
 
-    width:58px;
-    height:2px;
+    background:var(--gold2);
 
-    background:var(--gold);
-
-    margin-top:16px;
+    margin-bottom:27px;
 }
 
-.hero p{
+.hero-description{
 
-    font-size:15px;
+    max-width:560px;
 
-    color:rgba(255,255,255,.88);
+    color:
+        rgba(255,255,255,.82);
 
-    max-width:440px;
+    font-size:16px;
 
-    margin-bottom:24px;
+    line-height:1.9;
+
+    margin-bottom:35px;
 }
 
-.hero-actions{
+.hero-buttons{
 
     display:flex;
+
+    flex-wrap:wrap;
+
+    gap:14px;
+}
+
+.btn{
+
+    min-height:58px;
+
+    padding:
+        0 28px;
+
+    border-radius:999px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
 
     gap:12px;
 
-    flex-wrap:wrap;
+    font-size:13px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    border:none;
 }
 
-/* =========================================================
-   NEW PREMIUM SHOWROOM
-========================================================= */
-
-.hero-art{
-
-    position:relative;
-
-    min-height:510px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    isolation:isolate;
-}
-
-.showroom-glow{
-
-    position:absolute;
-
-    width:86%;
-    height:78%;
-
-    left:7%;
-    top:11%;
-
-    border-radius:50%;
-
-    background:
-
-        radial-gradient(
-            ellipse at center,
-            rgba(244,197,66,.24) 0%,
-            rgba(244,197,66,.13) 30%,
-            rgba(244,197,66,.05) 55%,
-            transparent 74%
-        );
-
-    filter:blur(15px);
-
-    z-index:0;
-}
-
-.showroom-ring{
-
-    position:absolute;
-
-    width:88%;
-    height:78%;
-
-    border-radius:50%;
-
-    border:1px solid rgba(244,197,66,.18);
-
-    box-shadow:
-        0 0 35px rgba(244,197,66,.08);
-
-    transform:rotate(-7deg);
-
-    z-index:1;
-
-    pointer-events:none;
-}
-
-.showroom-backlight{
-
-    position:absolute;
-
-    width:70%;
-    height:80%;
-
-    right:5%;
-    top:7%;
-
-    border-radius:50%;
+.btn-gold{
 
     background:
         linear-gradient(
-            90deg,
-            transparent,
-            rgba(255,215,90,.10),
-            transparent
-        );
-
-    filter:blur(12px);
-
-    z-index:1;
-}
-
-.showroom-stage{
-
-    position:absolute;
-
-    width:92%;
-    height:76%;
-
-    bottom:20px;
-    left:4%;
-
-    border-radius:50%;
-
-    background:
-
-        linear-gradient(
-            180deg,
-            rgba(255,255,255,.13),
-            rgba(255,255,255,.035)
-        );
-
-    border:1px solid rgba(244,197,66,.55);
-
-    box-shadow:
-
-        0 20px 45px rgba(0,0,0,.38),
-
-        0 0 30px rgba(244,197,66,.14),
-
-        inset 0 1px 0 rgba(255,255,255,.18);
-
-    transform:perspective(700px) rotateX(62deg);
-
-    z-index:2;
-}
-
-.showroom-pedestal{
-
-    position:absolute;
-
-    width:80%;
-    height:34px;
-
-    left:10%;
-    bottom:34px;
-
-    border-radius:50%;
-
-    background:
-
-        linear-gradient(
-            180deg,
-            #f7f3e8,
-            #d9d1be
-        );
-
-    border:2px solid rgba(244,197,66,.55);
-
-    box-shadow:
-
-        0 16px 35px rgba(0,0,0,.42),
-
-        0 0 22px rgba(244,197,66,.17);
-
-    z-index:3;
-}
-
-.showroom-pedestal:after{
-
-    content:"";
-
-    position:absolute;
-
-    left:7%;
-    right:7%;
-
-    bottom:-13px;
-
-    height:17px;
-
-    border-radius:50%;
-
-    background:
-
-        linear-gradient(
-            90deg,
-            #8b6b25,
-            #f4c542,
-            #fff0a7,
-            #d9a91a,
-            #80601e
-        );
-
-    box-shadow:
-        0 8px 16px rgba(0,0,0,.35);
-
-}
-
-/* GOLD DECORATIVE LIGHT */
-
-.showroom-light{
-
-    position:absolute;
-
-    width:150px;
-    height:150px;
-
-    right:2%;
-    top:4%;
-
-    border-radius:50%;
-
-    border:2px solid rgba(244,197,66,.55);
-
-    box-shadow:
-
-        0 0 15px rgba(244,197,66,.30),
-
-        0 0 50px rgba(244,197,66,.12);
-
-    z-index:3;
-}
-
-.showroom-light:before{
-
-    content:"";
-
-    position:absolute;
-
-    inset:12px;
-
-    border-radius:50%;
-
-    border:1px solid rgba(255,215,90,.25);
-}
-
-/* BUNDLE CARDS */
-
-.hero-product{
-
-    position:absolute;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    z-index:6;
-
-    transition:.3s ease;
-
-    filter:
-        drop-shadow(
-            0 18px 18px rgba(0,0,0,.42)
-        )
-        drop-shadow(
-            0 0 13px rgba(244,197,66,.12)
-        );
-}
-
-.hero-product img{
-
-    width:100%;
-    height:100%;
-
-    object-fit:contain;
-
-    position:relative;
-    z-index:2;
-}
-
-/* ULTIMATE */
-
-.hero-product.ultimate{
-
-    width:330px;
-    height:365px;
-
-    left:50%;
-    top:50%;
-
-    transform:translate(-50%,-52%);
-
-    z-index:10;
-
-    filter:
-        drop-shadow(
-            0 28px 28px rgba(0,0,0,.52)
-        )
-        drop-shadow(
-            0 0 22px rgba(244,197,66,.20)
-        );
-}
-
-/* STARTER */
-
-.hero-product.starter{
-
-    width:155px;
-    height:185px;
-
-    left:3%;
-    top:14%;
-
-    transform:rotate(-3deg);
-}
-
-/* CREATOR */
-
-.hero-product.creator{
-
-    width:155px;
-    height:185px;
-
-    right:5%;
-    top:12%;
-
-    transform:rotate(3deg);
-}
-
-/* BUSINESS */
-
-.hero-product.business{
-
-    width:165px;
-    height:185px;
-
-    left:5%;
-    bottom:13%;
-
-    transform:rotate(2deg);
-}
-
-/* HEALTH */
-
-.hero-product.health{
-
-    width:165px;
-    height:185px;
-
-    right:4%;
-    bottom:12%;
-
-    transform:rotate(-2deg);
-}
-
-.hero-product:hover{
-    transform:translateY(-6px) scale(1.025);
-}
-
-.hero-product.ultimate:hover{
-    transform:translate(-50%,-57%) scale(1.025);
-}
-
-/* PREMIUM QUALITY */
-
-.quality-badge{
-
-    position:absolute;
-
-    right:0;
-    top:2px;
-
-    width:82px;
-    height:82px;
-
-    border-radius:50%;
-
-    background:
-
-        radial-gradient(
-            circle,
-            #ffe79a,
-            #e5b63d 70%,
-            #c99727
+            135deg,
+            #F0CA72,
+            #C8A45D
         );
 
     color:var(--navy);
 
+    box-shadow:
+        0 14px 35px
+        rgba(200,164,93,.25);
+}
+
+.btn-gold:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 18px 42px
+        rgba(200,164,93,.35);
+}
+
+.btn-outline{
+
+    border:
+        1px solid
+        rgba(255,255,255,.55);
+
+    color:#fff;
+
+    background:
+        rgba(255,255,255,.03);
+}
+
+.btn-outline:hover{
+
+    border-color:var(--gold2);
+
+    color:var(--gold2);
+
+    transform:translateY(-3px);
+}
+
+
+/* =========================================================
+   HERO 3D DISPLAY
+========================================================= */
+
+.hero-visual{
+
+    position:relative;
+
+    min-height:650px;
+
     display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:25px 0 0;
+}
+
+.hero-visual::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:650px;
+    height:650px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(200,164,93,.20),
+            transparent 63%
+        );
+
+    filter:blur(8px);
+
+    pointer-events:none;
+}
+
+.hero-display{
+
+    position:relative;
+
+    width:100%;
+
+    max-width:760px;
+
+    z-index:3;
+
+    filter:
+        drop-shadow(
+            0 30px 40px
+            rgba(0,0,0,.35)
+        );
+
+    animation:
+        heroFloat 7s ease-in-out infinite;
+}
+
+.hero-display img{
+
+    width:100%;
+
+    height:auto;
+
+    object-fit:contain;
+
+    border-radius:0;
+}
+
+.hero-badge{
+
+    position:absolute;
+
+    right:3%;
+
+    top:13%;
+
+    width:115px;
+    height:115px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #F4D98D,
+            #C8A45D
+        );
+
+    color:var(--navy);
+
+    border:
+        2px solid
+        rgba(255,255,255,.4);
+
+    box-shadow:
+        0 15px 35px
+        rgba(0,0,0,.25);
+
+    display:flex;
+
+    flex-direction:column;
 
     align-items:center;
 
@@ -918,178 +782,39 @@ button{
 
     text-align:center;
 
-    font-size:9px;
+    transform:rotate(7deg);
 
-    font-weight:900;
-
-    line-height:1.2;
-
-    box-shadow:
-
-        0 12px 28px rgba(0,0,0,.26),
-
-        0 0 25px rgba(244,197,66,.28);
-
-    z-index:20;
-
-    border:2px solid rgba(255,238,166,.55);
+    z-index:5;
 }
 
-.quality-badge:before{
+.hero-badge i{
 
-    content:"✦";
+    font-size:19px;
 
-    position:absolute;
-
-    top:10px;
-
-    font-size:12px;
+    margin-bottom:5px;
 }
 
-/* MOBILE HERO */
+.hero-badge strong{
 
-@media(max-width:900px){
+    font-size:11px;
 
-    .hero-grid{
-        grid-template-columns:1fr;
-        text-align:center;
+    line-height:1.25;
+
+    letter-spacing:.8px;
+}
+
+@keyframes heroFloat{
+
+    0%,
+    100%{
+        transform:translateY(0);
     }
 
-    .hero-copy{
-        margin:auto;
-    }
-
-    .hero p{
-        margin-left:auto;
-        margin-right:auto;
-    }
-
-    .hero-actions{
-        justify-content:center;
-    }
-
-    .hero-art{
-        min-height:470px;
-        margin-top:12px;
+    50%{
+        transform:translateY(-8px);
     }
 }
 
-@media(max-width:600px){
-
-    .hero{
-        padding:40px 0 58px;
-    }
-
-    .hero h1{
-        font-size:38px;
-    }
-
-    .hero-art{
-        min-height:385px;
-    }
-
-    .showroom-stage{
-        width:96%;
-        left:2%;
-        height:72%;
-        bottom:17px;
-    }
-
-    .showroom-pedestal{
-        width:82%;
-        left:9%;
-        bottom:28px;
-    }
-
-    .showroom-ring{
-        width:94%;
-        height:76%;
-    }
-
-    .showroom-light{
-        width:90px;
-        height:90px;
-        right:0;
-    }
-
-    .hero-product.ultimate{
-        width:205px;
-        height:235px;
-    }
-
-    .hero-product.starter{
-        width:91px;
-        height:112px;
-        left:1%;
-        top:13%;
-    }
-
-    .hero-product.creator{
-        width:91px;
-        height:112px;
-        right:1%;
-        top:12%;
-    }
-
-    .hero-product.business{
-        width:95px;
-        height:112px;
-        left:2%;
-        bottom:11%;
-    }
-
-    .hero-product.health{
-        width:95px;
-        height:112px;
-        right:2%;
-        bottom:10%;
-    }
-
-    .quality-badge{
-        width:62px;
-        height:62px;
-        font-size:7px;
-        right:-1px;
-        top:0;
-    }
-
-    .quality-badge:before{
-        top:7px;
-        font-size:9px;
-    }
-}
-
-@media(max-width:420px){
-
-    .hero-art{
-        min-height:340px;
-    }
-
-    .hero-product.ultimate{
-        width:175px;
-        height:205px;
-    }
-
-    .hero-product.starter{
-        width:75px;
-        height:92px;
-    }
-
-    .hero-product.creator{
-        width:75px;
-        height:92px;
-    }
-
-    .hero-product.business{
-        width:78px;
-        height:92px;
-    }
-
-    .hero-product.health{
-        width:78px;
-        height:92px;
-    }
-}
 
 /* =========================================================
    TRUST BAR
@@ -1099,773 +824,721 @@ button{
 
     background:#fff;
 
-    margin-top:-30px;
+    border-bottom:
+        1px solid
+        var(--line);
+
+    box-shadow:
+        0 8px 25px
+        rgba(7,26,51,.04);
 
     position:relative;
 
     z-index:10;
-
-    border-radius:16px;
-
-    box-shadow:
-        0 8px 28px rgba(7,26,51,.13);
-
-    padding:18px 20px;
 }
 
 .trust-grid{
+
     display:grid;
-    grid-template-columns:repeat(5,1fr);
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    min-height:110px;
 }
 
 .trust-item{
 
     display:flex;
+
     align-items:center;
+
     justify-content:center;
 
-    gap:11px;
-
-    padding:4px 15px;
-
-    border-right:1px solid var(--line);
-
-    text-align:left;
-}
-
-.trust-item:last-child{
-    border-right:0;
-}
-
-.trust-icon{
-
-    width:38px;
-    height:38px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    border:1px solid #D5D9E0;
-
-    border-radius:50%;
+    gap:12px;
 
     color:var(--navy);
-
-    flex-shrink:0;
-}
-
-.trust-item strong{
-    display:block;
-    font-size:11px;
-}
-
-.trust-item span{
-    display:block;
-    color:var(--gray);
-    font-size:10px;
-    line-height:1.25;
-}
-
-.trust-stars{
-    color:var(--gold2);
-    font-size:17px;
-    letter-spacing:1px;
-}
-
-@media(max-width:800px){
-
-    .trust-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .trust-item{
-        border-right:0;
-        border-bottom:1px solid var(--line);
-        padding:12px;
-    }
-
-    .trust-item:last-child{
-        border-bottom:0;
-    }
-}
-
-@media(max-width:480px){
-
-    .trust-grid{
-        grid-template-columns:1fr;
-    }
-
-    .trust-item{
-        justify-content:flex-start;
-    }
-}
-
-/* =========================================================
-   COLLECTION
-========================================================= */
-
-.collection{
-    background:#fff;
-    padding-top:28px;
-}
-
-.rule-title{
-
-    display:flex;
-    align-items:center;
-    gap:15px;
-    justify-content:center;
-
-    font-family:Georgia,"Times New Roman",serif;
-
-    font-size:17px;
-
-    letter-spacing:1.2px;
-
-    margin:0 0 18px;
-}
-
-.rule-title:before,
-.rule-title:after{
-
-    content:"";
-
-    width:80px;
-    height:1px;
-
-    background:#D9B44B;
-}
-
-.collection-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(4,1fr);
-
-    gap:20px;
-}
-
-.collection-card{
-
-    min-height:200px;
-
-    border:1px solid var(--line);
-
-    border-radius:10px;
-
-    padding:25px 18px;
-
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:center;
-
-    text-align:center;
-
-    justify-content:center;
-
-    background:#fff;
-
-    transition:.2s ease;
-
-    position:relative;
-
-    overflow:visible;
-}
-
-.collection-card:before{
-
-    content:"";
-
-    position:absolute;
-
-    width:70px;
-    height:10px;
-
-    left:50%;
-    top:-4px;
-
-    transform:translateX(-50%);
-
-    background:
-        radial-gradient(
-            ellipse at center,
-            rgba(255,215,90,.95) 0%,
-            rgba(244,197,66,.70) 18%,
-            rgba(244,197,66,.32) 38%,
-            rgba(244,197,66,.10) 58%,
-            transparent 78%
-        );
-
-    filter:blur(3px);
-
-    z-index:5;
-}
-
-.collection-card:after{
-
-    content:"";
-
-    position:absolute;
-
-    width:34px;
-    height:2px;
-
-    left:50%;
-    top:-1px;
-
-    transform:translateX(-50%);
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            rgba(255,224,125,.95),
-            transparent
-        );
-
-    box-shadow:
-        0 0 6px rgba(244,197,66,.75);
-
-    z-index:6;
-}
-
-.collection-card > *{
-    position:relative;
-    z-index:7;
-}
-
-.collection-card.dark{
-
-    background:var(--navy);
-
-    color:#fff;
-
-    border-color:var(--navy);
-}
-
-.collection-card:hover{
-
-    transform:translateY(-4px);
-
-    box-shadow:
-        0 12px 28px rgba(7,26,51,.12);
-}
-
-.collection-icon{
-
-    width:56px;
-    height:56px;
-
-    border-radius:50%;
-
-    border:1px solid var(--gold2);
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    color:var(--gold2);
-
-    font-size:23px;
-
-    margin-bottom:14px;
-}
-
-.collection-card h3{
-    font-size:15px;
-    margin-bottom:7px;
-}
-
-.collection-card p{
 
     font-size:12px;
 
-    color:var(--gray);
+    font-weight:700;
 
-    line-height:1.45;
-
-    margin-bottom:15px;
+    border-right:
+        1px solid
+        var(--line);
 }
 
-.collection-card.dark p{
-    color:rgba(255,255,255,.76);
+.trust-item:last-child{
+    border-right:none;
 }
 
-.collection-link{
+.trust-item i{
 
-    border:1px solid var(--gold2);
+    color:var(--gold);
 
-    border-radius:5px;
-
-    padding:6px 12px;
-
-    font-size:11px;
-
-    font-weight:800;
-
-    color:var(--gold2);
+    font-size:19px;
 }
 
-.collection-card:not(.dark) .collection-link{
-
-    color:var(--navy);
-
-    border-color:var(--navy);
-}
-
-@media(max-width:800px){
-
-    .collection-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-}
-
-@media(max-width:500px){
-
-    .collection-grid{
-        grid-template-columns:1fr;
-    }
-
-    .collection-card{
-        min-height:175px;
-    }
-}
 
 /* =========================================================
-   BEST SELLERS
+   EXPLORE COLLECTION
 ========================================================= */
 
-.best{
-    background:#fff;
-    padding:15px 0 70px;
+.explore-section{
+
+    background:var(--cream);
 }
 
-.product-grid{
+.explore-grid{
 
     display:grid;
 
-    grid-template-columns:repeat(5,1fr);
+    grid-template-columns:
+        repeat(4,1fr);
 
-    gap:16px;
+    gap:22px;
 }
 
-.product-card{
-
-    border:1px solid var(--line);
-
-    border-radius:11px;
-
-    overflow:hidden;
+.explore-card{
 
     background:#fff;
 
-    box-shadow:
-        0 7px 22px rgba(7,26,51,.07);
+    border:
+        1px solid
+        rgba(7,26,51,.07);
 
-    display:flex;
+    border-radius:
+        var(--radius);
 
-    flex-direction:column;
-
-    transition:.2s ease;
-}
-
-.product-card:hover{
-
-    transform:translateY(-4px);
+    padding:34px 28px;
 
     box-shadow:
-        0 14px 28px rgba(7,26,51,.12);
-}
+        var(--shadow-soft);
 
-.product-image{
-
-    width:100%;
-
-    aspect-ratio:3 / 2;
-
-    background:#071A33;
-
-    overflow:hidden;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-}
-
-.product-image img{
-
-    width:100%;
-    height:100%;
-
-    object-fit:contain;
-
-    object-position:center;
-}
-
-.product-body{
-
-    padding:12px;
-
-    display:flex;
-
-    flex-direction:column;
-
-    flex:1;
-}
-
-.product-body h3{
-
-    font-size:13px;
-
-    line-height:1.25;
-
-    margin-bottom:4px;
-}
-
-.product-meta{
-
-    font-size:11px;
-
-    color:var(--gray);
-
-    line-height:1.35;
-}
-
-.product-rating{
-
-    color:var(--gold2);
-
-    font-size:11px;
-
-    margin-top:7px;
-}
-
-.product-rating span{
-
-    color:var(--gray);
-
-    margin-left:3px;
-}
-
-.product-bottom{
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-    margin-top:auto;
-
-    padding-top:10px;
-
-    gap:8px;
-}
-
-.price{
-
-    font-size:17px;
-
-    font-weight:900;
-}
-
-.buy-now{
-
-    font-size:11px;
-
-    font-weight:800;
-
-    color:var(--navy);
-}
-
-.buy-now:hover{
-    color:var(--gold2);
-}
-
-.mini-cart{
-
-    width:32px;
-    height:32px;
-
-    border-radius:6px;
-
-    background:var(--gold);
-
-    color:var(--navy);
-
-    border:0;
-
-    display:flex;
-
-    align-items:center;
-    justify-content:center;
-
-    flex-shrink:0;
-}
-
-.mini-cart:hover{
-    background:#FFD95A;
-}
-
-@media(max-width:1050px){
-
-    .product-grid{
-        grid-template-columns:repeat(3,1fr);
-    }
-}
-
-@media(max-width:700px){
-
-    .product-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-}
-
-@media(max-width:470px){
-
-    .product-grid{
-        grid-template-columns:1fr;
-    }
-}
-
-/* =========================================================
-   REVIEWS / PRODUCT HIGHLIGHTS
-========================================================= */
-
-.review-section{
-
-    background:#F8F7F2;
-
-    padding:62px 0;
-}
-
-.review-layout{
-
-    display:grid;
-
-    grid-template-columns:.75fr 1.25fr;
-
-    gap:28px;
-
-    align-items:center;
-}
-
-.review-intro h2{
-
-    font-family:Georgia,"Times New Roman",serif;
-
-    font-size:32px;
-
-    line-height:1.1;
-
-    margin-bottom:12px;
-}
-
-.review-intro h2:after{
-
-    content:"";
-
-    display:block;
-
-    width:48px;
-    height:2px;
-
-    background:var(--gold);
-
-    margin-top:10px;
-}
-
-.review-intro p{
-
-    font-size:13px;
-
-    color:var(--gray);
-
-    max-width:260px;
-
-    margin-bottom:18px;
-}
-
-.review-cards{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:14px;
-}
-
-.review-card{
-
-    background:#fff;
-
-    border:1px solid var(--line);
-
-    border-radius:13px;
-
-    padding:17px;
-
-    box-shadow:
-        0 8px 22px rgba(7,26,51,.06);
+    transition:.3s;
 
     position:relative;
 
     overflow:hidden;
 }
 
-.review-card:before{
+.explore-card::before{
 
     content:"";
 
     position:absolute;
 
     top:0;
-    left:18px;
-    right:18px;
+    left:0;
+    right:0;
 
-    height:2px;
+    height:3px;
 
     background:
         linear-gradient(
             90deg,
-            transparent,
             var(--gold),
-            transparent
+            var(--gold2)
         );
+
+    transform:
+        scaleX(0);
+
+    transform-origin:left;
+
+    transition:.3s;
 }
 
-.review-profile{
+.explore-card:hover{
+
+    transform:translateY(-7px);
+
+    box-shadow:
+        var(--shadow);
+}
+
+.explore-card:hover::before{
+    transform:scaleX(1);
+}
+
+.explore-icon{
+
+    width:54px;
+    height:54px;
+
+    border-radius:16px;
+
+    background:
+        rgba(200,164,93,.13);
+
+    color:var(--gold);
 
     display:flex;
 
     align-items:center;
 
-    gap:10px;
+    justify-content:center;
+
+    font-size:20px;
+
+    margin-bottom:24px;
+}
+
+.explore-card h3{
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    color:var(--navy);
+
+    font-size:29px;
+
+    line-height:1;
+
+    margin-bottom:13px;
+}
+
+.explore-card p{
+
+    color:var(--gray);
+
+    font-size:13px;
+
+    line-height:1.8;
+
+    margin-bottom:22px;
+}
+
+.text-link{
+
+    color:var(--navy);
+
+    font-size:11px;
+
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+}
+
+.text-link:hover{
+    color:var(--gold);
+}
+
+
+/* =========================================================
+   FEATURED COLLECTIONS
+========================================================= */
+
+.featured-section{
+
+    background:#fff;
+
+    border-top:
+        1px solid
+        var(--line);
+
+    border-bottom:
+        1px solid
+        var(--line);
+}
+
+.featured-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(5,1fr);
+
+    gap:18px;
+}
+
+.featured-card{
+
+    background:var(--cream);
+
+    border:
+        1px solid
+        var(--line);
+
+    border-radius:22px;
+
+    padding:18px;
+
+    transition:.3s;
+
+    position:relative;
+}
+
+.featured-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+        var(--shadow-soft);
+}
+
+.featured-image{
+
+    aspect-ratio:1 / 1.08;
+
+    border-radius:17px;
+
+    overflow:hidden;
+
+    background:#eee;
+
+    margin-bottom:18px;
+}
+
+.featured-image img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+}
+
+.featured-label{
+
+    color:var(--gold);
+
+    font-size:9px;
+
+    font-weight:700;
+
+    letter-spacing:1.4px;
+
+    text-transform:uppercase;
+
+    margin-bottom:6px;
+}
+
+.featured-card h3{
+
+    color:var(--navy);
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size:25px;
+
+    line-height:1;
+
+    margin-bottom:10px;
+}
+
+.featured-price{
+
+    font-weight:700;
+
+    color:var(--navy);
+
+    font-size:17px;
+
+    margin-bottom:15px;
+}
+
+.featured-actions{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+}
+
+.card-btn{
+
+    min-height:43px;
+
+    border-radius:999px;
+
+    border:none;
+
+    cursor:pointer;
+
+    font-size:10px;
+
+    font-weight:700;
+
+    transition:.25s;
+}
+
+.card-btn.cart{
+
+    background:var(--navy);
+
+    color:#fff;
+}
+
+.card-btn.buy{
+
+    background:var(--gold);
+
+    color:var(--navy);
+}
+
+.card-btn:hover{
+    transform:translateY(-2px);
+}
+
+
+/* =========================================================
+   WHY
+========================================================= */
+
+.why-section{
+
+    background:var(--cream);
+}
+
+.why-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:20px;
+}
+
+.why-card{
+
+    background:#fff;
+
+    border-radius:22px;
+
+    padding:32px 26px;
+
+    box-shadow:
+        var(--shadow-soft);
+
+    border:
+        1px solid
+        rgba(7,26,51,.05);
+
+    text-align:center;
+}
+
+.why-icon{
+
+    width:62px;
+    height:62px;
+
+    border-radius:50%;
+
+    background:var(--navy);
+
+    color:var(--gold2);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin:
+        0 auto 20px;
+
+    font-size:19px;
+}
+
+.why-card h3{
+
+    color:var(--navy);
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size:27px;
+
+    line-height:1;
 
     margin-bottom:12px;
 }
 
+.why-card p{
+
+    color:var(--gray);
+
+    font-size:12px;
+
+    line-height:1.8;
+}
+
+
+/* =========================================================
+   HOW IT WORKS
+========================================================= */
+
+.how-section{
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--navy),
+            var(--navy2)
+        );
+
+    color:#fff;
+}
+
+.how-section .section-title{
+    color:#fff;
+}
+
+.how-section .section-description{
+    color:rgba(255,255,255,.70);
+}
+
+.how-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:20px;
+}
+
+.how-card{
+
+    padding:35px 25px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.12);
+
+    background:
+        rgba(255,255,255,.045);
+
+    border-radius:22px;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.how-number{
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size:62px;
+
+    color:
+        rgba(225,199,126,.22);
+
+    line-height:1;
+
+    margin-bottom:22px;
+}
+
+.how-card h3{
+
+    color:#fff;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size:29px;
+
+    margin-bottom:10px;
+}
+
+.how-card p{
+
+    color:
+        rgba(255,255,255,.68);
+
+    font-size:12px;
+
+    line-height:1.8;
+}
+
+
+/* =========================================================
+   REVIEWS
+========================================================= */
+
+.reviews-section{
+
+    background:#fff;
+}
+
+.reviews-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:24px;
+}
+
+.review-card{
+
+    background:var(--cream);
+
+    border:
+        1px solid
+        var(--line);
+
+    border-radius:24px;
+
+    padding:26px;
+
+    box-shadow:
+        var(--shadow-soft);
+
+    transition:.3s;
+}
+
+.review-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+        var(--shadow);
+}
+
+.review-top{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-bottom:20px;
+}
+
 .review-avatar{
 
-    width:48px;
-    height:48px;
+    width:62px;
+    height:62px;
 
     border-radius:50%;
 
     object-fit:cover;
 
-    object-position:center;
-
-    border:2px solid rgba(200,164,93,.65);
+    border:
+        3px solid
+        #fff;
 
     box-shadow:
-        0 4px 12px rgba(7,26,51,.15);
+        0 6px 20px
+        rgba(7,26,51,.12);
 
     flex-shrink:0;
 }
 
-.review-profile strong{
-
-    display:block;
-
-    font-size:12px;
-
-    color:var(--navy);
+.review-person{
+    min-width:0;
 }
 
-.review-profile span{
+.review-name{
 
-    display:block;
+    color:var(--navy);
 
-    font-size:9px;
+    font-weight:700;
 
-    color:var(--gray);
+    font-size:13px;
 
-    margin-top:2px;
+    margin-bottom:2px;
 }
 
 .review-product{
 
-    display:inline-flex;
+    color:var(--gray);
 
-    align-items:center;
+    font-size:10px;
 
-    gap:5px;
+    line-height:1.5;
+}
 
-    color:var(--gold2);
+.review-featured{
+
+    color:var(--gold);
 
     font-size:9px;
 
-    font-weight:900;
+    font-weight:700;
+
+    letter-spacing:1.2px;
 
     text-transform:uppercase;
-
-    letter-spacing:.35px;
-
-    margin-bottom:8px;
-}
-
-.review-card p{
-
-    font-size:12px;
-
-    line-height:1.55;
-
-    color:var(--ink);
 
     margin-bottom:12px;
 }
 
-.review-label{
+.review-stars{
+
+    color:var(--gold);
+
+    font-size:12px;
+
+    letter-spacing:2px;
+
+    margin-bottom:14px;
+}
+
+.review-text{
+
+    color:var(--ink);
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size:21px;
+
+    line-height:1.35;
+
+    margin-bottom:22px;
+}
+
+.review-button{
 
     display:inline-flex;
 
     align-items:center;
 
-    gap:6px;
+    gap:8px;
 
-    padding:5px 9px;
+    padding:
+        10px 16px;
 
-    border-radius:20px;
+    border:
+        1px solid
+        rgba(7,26,51,.13);
 
-    background:#F8F5ED;
+    border-radius:999px;
 
     color:var(--navy);
 
-    font-size:9px;
+    font-size:10px;
 
-    font-weight:800;
-
-    border:1px solid rgba(200,164,93,.35);
+    font-weight:700;
 }
 
-@media(max-width:850px){
-
-    .review-layout{
-        grid-template-columns:1fr;
-    }
-
-    .review-intro{
-        text-align:center;
-    }
-
-    .review-intro p{
-        margin-left:auto;
-        margin-right:auto;
-    }
-}
-
-@media(max-width:650px){
-
-    .review-cards{
-        grid-template-columns:1fr;
-    }
-}
 
 /* =========================================================
    NEWSLETTER
@@ -1873,144 +1546,248 @@ button{
 
 .newsletter{
 
-    background:var(--navy);
+    background:
+        linear-gradient(
+            135deg,
+            #071A33,
+            #123761
+        );
 
     color:#fff;
 
-    padding:38px 0;
+    padding:80px 0;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.newsletter::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+    height:500px;
+
+    right:-230px;
+    top:-260px;
+
+    border-radius:50%;
+
+    border:
+        1px solid
+        rgba(225,199,126,.16);
 }
 
 .newsletter-inner{
 
     display:grid;
 
-    grid-template-columns:1fr 1.7fr;
+    grid-template-columns:
+        .8fr 1.2fr;
 
-    gap:30px;
-
-    align-items:center;
-}
-
-.news-copy{
-
-    display:flex;
+    gap:60px;
 
     align-items:center;
 
-    gap:18px;
+    position:relative;
+
+    z-index:2;
 }
 
-.envelope{
+.newsletter-kicker{
 
-    width:100px;
-    height:80px;
+    color:var(--gold2);
 
-    border-radius:5px;
+    font-size:11px;
 
-    background:#fff;
+    font-weight:700;
 
-    display:flex;
+    letter-spacing:2px;
 
-    align-items:center;
-    justify-content:center;
+    text-transform:uppercase;
 
-    color:var(--navy);
-
-    font-size:38px;
-
-    flex-shrink:0;
+    margin-bottom:10px;
 }
 
-.news-copy h2{
+.newsletter h2{
 
-    font-family:Georgia,"Times New Roman",serif;
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
 
-    font-size:27px;
+    font-size:48px;
 
-    margin-bottom:4px;
+    line-height:1;
+
+    margin-bottom:13px;
 }
 
-.news-copy p{
+.newsletter p{
 
-    font-size:12px;
+    color:
+        rgba(255,255,255,.68);
 
-    color:rgba(255,255,255,.75);
+    font-size:13px;
+
+    line-height:1.8;
 }
 
-.news-form-row{
+.newsletter-form{
 
     display:flex;
 
     gap:10px;
+
+    align-items:center;
 }
 
-.news-form-row input{
+.newsletter-form input{
 
     flex:1;
 
-    min-height:48px;
+    min-height:58px;
 
-    border:0;
+    border:none;
 
-    border-radius:6px;
+    outline:none;
 
-    padding:12px 14px;
+    border-radius:12px;
+
+    padding:
+        0 20px;
+
+    color:var(--ink);
+
+    background:#fff;
 }
 
-.news-form-row button{
-    min-width:150px;
+.newsletter-form button{
+
+    min-height:58px;
+
+    padding:
+        0 25px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:var(--gold);
+
+    color:var(--navy);
+
+    font-size:12px;
+
+    font-weight:700;
+
+    cursor:pointer;
 }
 
-.news-notes{
+.newsletter-benefits{
 
     display:flex;
 
+    flex-wrap:wrap;
+
     gap:18px;
 
-    margin-top:9px;
+    margin-top:14px;
 
-    color:rgba(255,255,255,.7);
+    color:
+        rgba(255,255,255,.60);
 
     font-size:10px;
 }
 
-@media(max-width:800px){
 
-    .newsletter-inner{
-        grid-template-columns:1fr;
-    }
+/* =========================================================
+   SUPPORT
+========================================================= */
 
-    .news-copy{
-        justify-content:center;
-    }
+.support-section{
 
-    .news-form-row{
-        flex-direction:column;
-    }
-
-    .news-form-row button{
-        width:100%;
-    }
-
-    .news-notes{
-        justify-content:center;
-        flex-wrap:wrap;
-    }
+    background:var(--cream);
 }
+
+.support-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:20px;
+}
+
+.support-card{
+
+    background:#fff;
+
+    border:
+        1px solid
+        var(--line);
+
+    border-radius:22px;
+
+    padding:30px;
+
+    box-shadow:
+        var(--shadow-soft);
+}
+
+.support-icon{
+
+    color:var(--gold);
+
+    font-size:22px;
+
+    margin-bottom:18px;
+}
+
+.support-card h3{
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    color:var(--navy);
+
+    font-size:28px;
+
+    line-height:1;
+
+    margin-bottom:10px;
+}
+
+.support-card p{
+
+    color:var(--gray);
+
+    font-size:12px;
+
+    line-height:1.8;
+
+    margin-bottom:20px;
+}
+
 
 /* =========================================================
    FOOTER
 ========================================================= */
 
-.footer{
+.site-footer{
 
     background:var(--navy);
 
     color:#fff;
 
-    border-top:1px solid rgba(255,255,255,.12);
-
-    padding:38px 0 14px;
+    padding:
+        75px 0 30px;
 }
 
 .footer-grid{
@@ -2018,159 +1795,130 @@ button{
     display:grid;
 
     grid-template-columns:
-        1.4fr
-        .9fr
-        .9fr
-        .9fr
-        .9fr;
+        1.35fr
+        1fr
+        1fr
+        1fr;
 
-    gap:24px;
+    gap:50px;
+
+    padding-bottom:50px;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.10);
 }
 
-.footer-logo img{
+.footer-logo{
 
-    height:50px;
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
 
-    width:auto;
+    color:var(--gold2);
 
-    margin-bottom:12px;
+    font-size:38px;
+
+    line-height:1;
+
+    margin-bottom:18px;
 }
 
-.footer p,
-.footer a{
+.footer-brand p{
+
+    color:
+        rgba(255,255,255,.62);
 
     font-size:11px;
 
-    color:rgba(255,255,255,.72);
+    line-height:1.8;
+
+    max-width:330px;
 }
 
-.footer h3{
+.footer-title{
+
+    color:#fff;
 
     font-size:11px;
 
-    color:var(--gold);
+    font-weight:700;
 
-    letter-spacing:1px;
+    letter-spacing:1.4px;
 
-    margin-bottom:11px;
+    text-transform:uppercase;
+
+    margin-bottom:18px;
 }
 
-.footer a{
+.footer-links{
 
-    display:block;
+    display:flex;
 
-    margin-bottom:7px;
+    flex-direction:column;
+
+    gap:10px;
 }
 
-.footer a:hover{
-    color:var(--gold);
+.footer-links a{
+
+    color:
+        rgba(255,255,255,.62);
+
+    font-size:11px;
+
+    transition:.2s;
 }
 
-.social-row{
+.footer-links a:hover{
+    color:var(--gold2);
+}
+
+.footer-bottom{
+
+    padding-top:25px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+    color:
+        rgba(255,255,255,.45);
+
+    font-size:10px;
+}
+
+.payment-icons{
 
     display:flex;
 
     gap:8px;
 
-    margin-top:12px;
-}
-
-.social-row a{
-
-    width:27px;
-    height:27px;
-
-    border:1px solid rgba(255,255,255,.25);
-
-    border-radius:50%;
-
-    display:flex;
-
-    align-items:center;
-    justify-content:center;
-
-    margin:0;
-}
-
-.payment-row{
-
-    display:flex;
-
-    gap:4px;
-
     flex-wrap:wrap;
-
-    margin-top:7px;
 }
 
-.payment{
+.payment-icons span{
 
-    background:#fff;
+    border:
+        1px solid
+        rgba(255,255,255,.14);
 
-    color:var(--navy);
+    padding:
+        5px 8px;
 
-    font-size:8px;
+    border-radius:5px;
 
-    font-weight:900;
-
-    padding:5px;
-
-    border-radius:3px;
+    font-size:9px;
 }
 
-.secure{
-
-    margin-top:10px;
-
-    font-size:10px!important;
-
-    color:#fff!important;
-
-    font-weight:800;
-}
-
-.copyright{
-
-    border-top:1px solid rgba(255,255,255,.12);
-
-    margin-top:25px;
-
-    padding-top:12px;
-
-    text-align:center;
-
-    color:rgba(255,255,255,.55);
-
-    font-size:10px;
-}
-
-@media(max-width:900px){
-
-    .footer-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-}
-
-@media(max-width:520px){
-
-    .footer-grid{
-        grid-template-columns:1fr;
-        text-align:center;
-    }
-
-    .footer-logo img{
-        margin-left:auto;
-        margin-right:auto;
-    }
-
-    .social-row,
-    .payment-row{
-        justify-content:center;
-    }
-}
 
 /* =========================================================
-   PANELS
+   SEARCH OVERLAY
 ========================================================= */
 
 .overlay{
@@ -2179,171 +1927,125 @@ button{
 
     inset:0;
 
-    background:rgba(7,26,51,.68);
+    background:
+        rgba(3,12,25,.78);
 
-    backdrop-filter:blur(3px);
+    backdrop-filter:blur(12px);
 
-    opacity:0;
+    z-index:2000;
 
-    visibility:hidden;
+    display:none;
 
-    transition:.25s ease;
+    align-items:flex-start;
 
-    z-index:3000;
+    justify-content:center;
+
+    padding-top:120px;
 }
 
 .overlay.active{
-
-    opacity:1;
-
-    visibility:visible;
-}
-
-.panel{
-
-    position:fixed;
-
-    top:0;
-
-    right:-100%;
-
-    width:min(420px,88%);
-
-    height:100vh;
-
-    background:#fff;
-
-    color:var(--navy);
-
-    z-index:3001;
-
-    transition:.32s ease;
-
-    box-shadow:
-        -18px 0 45px rgba(0,0,0,.2);
-
-    overflow:auto;
-}
-
-.panel.active{
-    right:0;
-}
-
-.panel-head{
-
     display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-    padding:24px;
-
-    border-bottom:1px solid var(--line);
-}
-
-.panel-head h2{
-    font-size:21px;
-}
-
-.close-btn{
-
-    width:42px;
-    height:42px;
-
-    border-radius:8px;
-
-    border:0;
-
-    color:var(--navy);
-
-    background:#F8FAFC;
-}
-
-.close-btn:hover{
-    background:#EEF2F7;
-}
-
-.collection-links a{
-
-    display:block;
-
-    padding:17px 24px;
-
-    border-bottom:1px solid var(--line);
-
-    font-weight:800;
-
-    font-size:16px;
-}
-
-.collection-links a:hover{
-
-    color:var(--gold2);
-
-    padding-left:30px;
-}
-
-.collection-links .donate-link{
-
-    margin:24px;
-
-    border:0;
-
-    background:var(--gold);
-
-    border-radius:9px;
-
-    text-align:center;
-
-    padding:15px;
 }
 
 .search-box{
 
-    position:fixed;
-
-    top:11%;
-
-    left:50%;
-
-    transform:translateX(-50%);
-
-    width:min(650px,90%);
+    width:min(
+        calc(100% - 40px),
+        700px
+    );
 
     background:#fff;
 
-    border-radius:14px;
+    border-radius:22px;
 
-    padding:22px;
-
-    z-index:3002;
+    padding:25px;
 
     box-shadow:
-        0 25px 70px rgba(0,0,0,.3);
+        0 30px 80px
+        rgba(0,0,0,.35);
 }
 
 .search-row{
 
     display:flex;
 
-    gap:9px;
+    gap:10px;
 }
 
 .search-row input{
 
     flex:1;
 
-    min-height:50px;
+    min-height:54px;
 
-    border:1px solid var(--line);
+    border:
+        1px solid
+        var(--line);
 
-    border-radius:7px;
+    border-radius:12px;
 
-    padding:12px;
+    outline:none;
+
+    padding:0 16px;
 }
 
-.search-title{
+.search-row button{
+
+    width:54px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:var(--navy);
+
+    color:#fff;
+
+    cursor:pointer;
+}
+
+
+/* =========================================================
+   COLLECTION PANEL
+========================================================= */
+
+.collection-panel{
+
+    position:fixed;
+
+    top:0;
+    right:-430px;
+
+    width:min(
+        430px,
+        100%
+    );
+
+    height:100vh;
+
+    background:#fff;
+
+    z-index:2100;
+
+    box-shadow:
+        -20px 0 70px
+        rgba(0,0,0,.22);
+
+    transition:.35s;
+
+    overflow-y:auto;
+}
+
+.collection-panel.active{
+    right:0;
+}
+
+.panel-head{
+
+    min-height:90px;
+
+    padding:
+        0 25px;
 
     display:flex;
 
@@ -2351,35 +2053,179 @@ button{
 
     justify-content:space-between;
 
-    margin-bottom:14px;
+    border-bottom:
+        1px solid
+        var(--line);
 }
 
-.search-title h2{
-    font-size:20px;
+.panel-logo{
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    color:var(--navy);
+
+    font-size:31px;
+}
+
+.panel-close{
+
+    width:40px;
+    height:40px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:
+        rgba(7,26,51,.06);
+
+    color:var(--navy);
+
+    cursor:pointer;
+}
+
+.panel-body{
+    padding:30px 25px;
+}
+
+.panel-section-title{
+
+    color:var(--gold);
+
+    font-size:10px;
+
+    letter-spacing:2px;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    margin:
+        20px 0 12px;
+}
+
+.panel-link{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:
+        15px 0;
+
+    border-bottom:
+        1px solid
+        var(--line);
+
+    color:var(--navy);
+
+    font-size:13px;
+
+    font-weight:600;
+}
+
+.panel-link:hover{
+    color:var(--gold);
+}
+
+
+/* =========================================================
+   CART PANEL
+========================================================= */
+
+.cart-panel{
+
+    position:fixed;
+
+    top:0;
+    right:-450px;
+
+    width:min(
+        450px,
+        100%
+    );
+
+    height:100vh;
+
+    background:#fff;
+
+    z-index:2200;
+
+    box-shadow:
+        -20px 0 70px
+        rgba(0,0,0,.22);
+
+    transition:.35s;
+
+    display:flex;
+
+    flex-direction:column;
+}
+
+.cart-panel.active{
+    right:0;
+}
+
+.cart-head{
+
+    min-height:90px;
+
+    padding:
+        0 25px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    border-bottom:
+        1px solid
+        var(--line);
+}
+
+.cart-head h2{
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size:34px;
+
+    color:var(--navy);
 }
 
 .cart-items{
-    padding:15px 22px;
+
+    flex:1;
+
+    overflow-y:auto;
+
+    padding:25px;
 }
 
 .empty-cart{
 
+    padding:70px 20px;
+
     text-align:center;
 
     color:var(--gray);
-
-    padding:60px 15px;
 }
 
 .empty-cart i{
 
-    font-size:42px;
+    font-size:40px;
 
-    color:var(--navy);
+    color:var(--gold);
 
-    display:block;
-
-    margin-bottom:12px;
+    margin-bottom:15px;
 }
 
 .cart-item{
@@ -2387,61 +2233,85 @@ button{
     display:grid;
 
     grid-template-columns:
-        60px
-        1fr
-        34px;
+        70px 1fr auto;
 
-    gap:12px;
+    gap:13px;
 
     align-items:center;
 
-    padding:13px 0;
+    padding-bottom:18px;
 
-    border-bottom:1px solid var(--line);
+    margin-bottom:18px;
+
+    border-bottom:
+        1px solid
+        var(--line);
 }
 
-.cart-item img{
+.cart-item-image{
 
-    width:60px;
-    height:70px;
+    width:70px;
+    height:75px;
 
-    object-fit:contain;
+    border-radius:10px;
 
-    background:#F8FAFC;
+    overflow:hidden;
+
+    background:#eee;
 }
 
-.cart-item h3{
-    font-size:13px;
+.cart-item-image img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
 }
 
-.cart-price{
+.cart-item h4{
 
-    font-weight:900;
+    font-size:12px;
 
-    color:var(--gold2);
+    color:var(--navy);
 
-    font-size:13px;
+    line-height:1.35;
+
+    margin-bottom:5px;
+}
+
+.cart-item-price{
+
+    color:var(--gold);
+
+    font-size:12px;
+
+    font-weight:700;
 }
 
 .remove-item{
 
-    width:32px;
-    height:32px;
+    width:28px;
+    height:28px;
 
-    border-radius:6px;
+    border:none;
 
-    border:0;
+    border-radius:50%;
 
-    background:#FEE2E2;
+    background:
+        rgba(7,26,51,.06);
 
-    color:#B91C1C;
+    color:var(--gray);
+
+    cursor:pointer;
 }
 
-.cart-foot{
+.cart-footer{
 
-    padding:20px 22px;
+    padding:25px;
 
-    border-top:1px solid var(--line);
+    border-top:
+        1px solid
+        var(--line);
 }
 
 .cart-total{
@@ -2450,2059 +2320,2871 @@ button{
 
     justify-content:space-between;
 
-    font-size:19px;
+    margin-bottom:18px;
 
-    font-weight:900;
+    color:var(--navy);
 
-    margin-bottom:14px;
+    font-weight:700;
 }
 
-.cart-total span:last-child{
-    color:var(--gold2);
+.checkout-btn{
+
+    width:100%;
+
+    min-height:54px;
+
+    border:none;
+
+    border-radius:999px;
+
+    background:var(--gold);
+
+    color:var(--navy);
+
+    font-weight:700;
+
+    cursor:pointer;
 }
 
-.toast{
 
-    position:fixed;
+/* =========================================================
+   RESPONSIVE
+========================================================= */
 
-    left:50%;
+@media(max-width:1180px){
 
-    bottom:25px;
+    .header-nav{
+        gap:15px;
+    }
 
-    transform:translateX(-50%);
+    .header-nav a{
+        font-size:10px;
+    }
 
-    background:var(--navy);
+    .hero-inner{
 
-    color:#fff;
+        grid-template-columns:
+            .82fr
+            1.18fr;
 
-    border:2px solid var(--gold);
+        gap:0;
+    }
 
-    padding:12px 18px;
+    .hero-title{
+        font-size:68px;
+    }
 
-    border-radius:9px;
+    .featured-grid{
+        grid-template-columns:
+            repeat(3,1fr);
+    }
 
-    font-size:13px;
+    .featured-card:nth-child(4),
+    .featured-card:nth-child(5){
+        display:none;
+    }
+}
 
-    font-weight:800;
 
-    z-index:4000;
+@media(max-width:980px){
 
-    display:none;
+    .header-nav{
+        display:none;
+    }
+
+    .mobile-menu-btn{
+        display:flex;
+    }
+
+    .hero{
+        min-height:auto;
+    }
+
+    .hero-inner{
+
+        min-height:auto;
+
+        grid-template-columns:1fr;
+
+        padding:
+            60px 0 30px;
+    }
+
+    .hero-copy{
+
+        padding:20px 0;
+
+        text-align:center;
+    }
+
+    .hero-line{
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .hero-description{
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+    }
+
+    .hero-visual{
+        min-height:auto;
+
+        padding:
+            20px 0 60px;
+    }
+
+    .hero-display{
+        max-width:720px;
+    }
+
+    .trust-grid{
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .trust-item{
+        min-height:80px;
+
+        border-bottom:
+            1px solid
+            var(--line);
+    }
+
+    .trust-item:nth-child(2){
+        border-right:none;
+    }
+
+    .explore-grid{
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .why-grid,
+    .how-grid{
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .newsletter-inner{
+        grid-template-columns:1fr;
+        gap:30px;
+    }
+
+    .footer-grid{
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+}
+
+
+@media(max-width:700px){
+
+    .container{
+        width:
+            calc(100% - 28px);
+    }
+
+    .section{
+        padding:75px 0;
+    }
+
+    .header-inner{
+        min-height:82px;
+    }
+
+    .header-logo{
+        font-size:34px;
+    }
+
+    .header-tools .newsletter-tool,
+    .header-tools .donate-tool{
+        display:none;
+    }
+
+    .hero-inner{
+        padding-top:45px;
+    }
+
+    .hero-kicker{
+        font-size:9px;
+        letter-spacing:2px;
+    }
+
+    .hero-title{
+
+        font-size:
+            clamp(
+                46px,
+                14vw,
+                67px
+            );
+
+        line-height:.93;
+    }
+
+    .hero-description{
+        font-size:13px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+
+        align-items:center;
+    }
+
+    .btn{
+        width:
+            min(
+                290px,
+                100%
+            );
+    }
+
+    .hero-visual{
+        padding-top:0;
+    }
+
+    .hero-badge{
+
+        width:80px;
+        height:80px;
+
+        right:3%;
+        top:10%;
+    }
+
+    .hero-badge i{
+        font-size:12px;
+    }
+
+    .hero-badge strong{
+        font-size:8px;
+    }
+
+    .trust-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .trust-item{
+        font-size:9px;
+
+        text-align:center;
+
+        padding:10px;
+    }
+
+    .section-title{
+        font-size:46px;
+    }
+
+    .explore-grid,
+    .why-grid,
+    .how-grid,
+    .support-grid{
+        grid-template-columns:1fr;
+    }
+
+    .featured-grid{
+        grid-template-columns:
+            repeat(2,1fr);
+
+        gap:12px;
+    }
+
+    .featured-card{
+        padding:12px;
+        border-radius:17px;
+    }
+
+    .featured-card h3{
+        font-size:22px;
+    }
+
+    .featured-card:nth-child(4),
+    .featured-card:nth-child(5){
+        display:block;
+    }
+
+    .featured-price{
+        font-size:14px;
+    }
+
+    .newsletter{
+        padding:65px 0;
+    }
+
+    .newsletter h2{
+        font-size:43px;
+    }
+
+    .newsletter-form{
+        flex-direction:column;
+    }
+
+    .newsletter-form input,
+    .newsletter-form button{
+        width:100%;
+    }
+
+    .footer-grid{
+        grid-template-columns:
+            1fr 1fr;
+
+        gap:35px 20px;
+    }
+
+    .footer-brand{
+        grid-column:
+            1 / -1;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+
+        align-items:flex-start;
+    }
+}
+
+
+@media(max-width:480px){
+
+    .header-logo{
+        font-size:31px;
+    }
+
+    .tool-btn{
+        width:38px;
+        height:38px;
+    }
+
+    .hero-title{
+        font-size:48px;
+    }
+
+    .hero-display{
+        width:108%;
+        margin-left:-4%;
+    }
+
+    .featured-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .review-card{
+        padding:22px;
+    }
+
+    .review-text{
+        font-size:19px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible{
+
+    outline:
+        3px solid
+        rgba(200,164,93,.65);
+
+    outline-offset:3px;
 }
 
 </style>
 
 </head>
 
+
 <body>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
 
 <header class="site-header">
 
-<div class="container header-inner">
+    <div class="container header-inner">
 
-<a
-    class="logo"
-    href="index.html"
-    aria-label="TheBestBundle Home">
+        <a
+            href="index.html"
+            class="header-logo"
+        >
+            TheBestBundle
+        </a>
 
-<img
-    src="images/Thebestbundle-transparent-logo.png"
-    alt="TheBestBundle"
-    loading="eager">
 
-</a>
+        <nav class="header-nav">
 
-<nav
-    class="desktop-nav"
-    aria-label="Primary navigation">
+            <a href="index.html">
+                Home
+            </a>
 
-<a href="index.html">Home</a>
+            <a href="courses.html">
+                Courses
+            </a>
 
-<a href="courses.html">Courses</a>
+            <a href="merchandise.html">
+                Merchandise
+            </a>
 
-<a href="merchandise.html">Merchandise</a>
+            <a href="reviews.html">
+                Customer Reviews
+            </a>
 
-<a href="reviews.html">Customer Reviews</a>
+            <a href="contact.html">
+                Contact
+            </a>
 
-<a href="contact.html">Contact</a>
+        </nav>
 
-</nav>
 
-<div class="header-tools">
+        <div class="header-tools">
 
-<button
-    class="header-tool icon"
-    id="searchButton"
-    aria-label="Search">
+            <button
+                class="tool-btn"
+                id="searchButton"
+                aria-label="Search"
+            >
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
 
-<i class="fa-solid fa-magnifying-glass"></i>
 
-</button>
+            <a
+                href="donation.html"
+                class="tool-btn donate-tool"
+                aria-label="Donation"
+            >
+                <i class="fa-solid fa-heart"></i>
+            </a>
 
-<a
-    class="header-tool gold-border"
-    href="donate.html">
 
-<i class="fa-solid fa-heart"></i>
+            <a
+                href="#newsletter"
+                class="tool-btn newsletter-tool"
+                aria-label="Newsletter"
+            >
+                <i class="fa-regular fa-envelope"></i>
+            </a>
 
-&nbsp; Donate
 
-</a>
+            <button
+                class="tool-btn"
+                id="cartButton"
+                aria-label="Shopping Cart"
+            >
 
-<a
-    class="header-tool news"
-    href="subscribe.html">
+                <i class="fa-solid fa-bag-shopping"></i>
 
-<i class="fa-regular fa-envelope"></i>
+                <span
+                    class="cart-count"
+                    id="cartCount"
+                >
+                    0
+                </span>
 
-&nbsp; Newsletter
+            </button>
 
-</a>
 
-<div class="cart-wrap">
+            <button
+                class="tool-btn mobile-menu-btn"
+                id="collectionButton"
+                aria-label="Menu"
+            >
+                <i class="fa-solid fa-bars"></i>
+            </button>
 
-<button
-    class="header-tool icon"
-    id="cartButton"
-    aria-label="Open shopping cart">
+        </div>
 
-<i class="fa-solid fa-cart-shopping"></i>
-
-</button>
-
-<span
-    class="cart-count"
-    id="cartCount">
-
-0
-
-</span>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </header>
 
-<main>
 
-<!-- =====================================================
+<!-- =========================================================
      HERO
-===================================================== -->
+========================================================= -->
 
 <section class="hero">
 
-<div class="container hero-grid">
+    <div class="container hero-inner">
 
-<div class="hero-copy">
 
-<div class="hero-kicker">
-THEBESTBUNDLE • PREMIUM DIGITAL COLLECTION
-</div>
+        <div class="hero-copy">
 
-<h1>
+            <div class="hero-kicker">
+                THEBESTBUNDLE • PREMIUM DIGITAL COLLECTION
+            </div>
 
-Premium Digital Resources for
 
-<span>
-Learning, Creating &amp; Growing
-</span>
+            <h1 class="hero-title">
 
-</h1>
+                Premium Digital
+                Resources <span>for</span>
+                Learning, Creating
+                <span>&amp; Growing</span>
 
-<p>
+            </h1>
 
-Discover professionally designed eBooks,
-printable planners, templates, courses,
-and digital resources created to help you learn,
-create and grow.
 
-</p>
+            <div class="hero-line"></div>
 
-<div class="hero-actions">
 
-<button
-    class="btn btn-gold"
-    id="exploreCollection">
+            <p class="hero-description">
 
-Explore Collection
+                Discover professionally designed eBooks,
+                printable planners, templates, courses,
+                and digital resources created to help you
+                learn, create and grow.
 
-<i class="fa-solid fa-arrow-right"></i>
+            </p>
 
-</button>
 
-<a
-    class="btn btn-outline"
-    href="freebie.html">
+            <div class="hero-buttons">
 
-Free Welcome Guide
+                <button
+                    class="btn btn-gold"
+                    id="heroExploreButton"
+                >
 
-<i class="fa-solid fa-download"></i>
+                    Explore Collection
 
-</a>
+                    <i class="fa-solid fa-arrow-right"></i>
 
-</div>
+                </button>
 
-</div>
 
-<div
-    class="hero-art"
-    aria-label="TheBestBundle premium digital collection">
+                <a
+                    href="freebie.html"
+                    class="btn btn-outline"
+                >
 
-<div class="showroom-glow"></div>
+                    Free Welcome Guide
 
-<div class="showroom-ring"></div>
+                    <i class="fa-solid fa-download"></i>
 
-<div class="showroom-backlight"></div>
+                </a>
 
-<div class="showroom-stage"></div>
+            </div>
 
-<div class="showroom-pedestal"></div>
+        </div>
 
-<div class="showroom-light"></div>
 
-<div class="quality-badge">
+        <div class="hero-visual">
 
-PREMIUM<br>
-QUALITY
+            <div class="hero-display">
 
-</div>
+                <img
+                    src="images/thebestbundle-home-3d-display.jpg"
+                    alt="TheBestBundle Premium Digital Collection 3D Display"
+                >
 
-<!-- ULTIMATE -->
 
-<div class="hero-product ultimate">
+                <div class="hero-badge">
 
-<img
-    src="images/Ultimate_Collection.png"
-    alt="Ultimate Collection">
+                    <i class="fa-solid fa-crown"></i>
 
-</div>
+                    <strong>
+                        PREMIUM<br>
+                        QUALITY
+                    </strong>
 
-<!-- STARTER -->
+                </div>
 
-<div class="hero-product starter">
+            </div>
 
-<img
-    src="images/Starter_Bundle_Cover.png"
-    alt="Starter Bundle">
+        </div>
 
-</div>
-
-<!-- CREATOR -->
-
-<div class="hero-product creator">
-
-<img
-    src="images/Creator_Bundle_Highest_Resolution.png"
-    alt="Creator Bundle">
-
-</div>
-
-<!-- BUSINESS -->
-
-<div class="hero-product business">
-
-<img
-    src="images/high_resolution_polished.png"
-    alt="Business Bundle">
-
-</div>
-
-<!-- HEALTH -->
-
-<div class="hero-product health">
-
-<img
-    src="images/Health_Wellness_Collection.png"
-    alt="Health and Wellness Collection">
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
-<!-- =====================================================
+
+<!-- =========================================================
      TRUST
-===================================================== -->
+========================================================= -->
+
+<section class="trust-bar">
+
+    <div class="container trust-grid">
+
+        <div class="trust-item">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+            Secure Checkout
+
+        </div>
+
+
+        <div class="trust-item">
+
+            <i class="fa-solid fa-bolt"></i>
+
+            Digital Access
+
+        </div>
+
+
+        <div class="trust-item">
+
+            <i class="fa-solid fa-gem"></i>
+
+            Premium Content
+
+        </div>
+
+
+        <div class="trust-item">
+
+            <i class="fa-solid fa-mobile-screen-button"></i>
+
+            Mobile Friendly
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     EXPLORE
+========================================================= -->
 
 <section
-    class="container trust-bar"
-    aria-label="Why customers choose TheBestBundle">
+    class="section explore-section"
+    id="collections"
+>
 
-<div class="trust-grid">
+    <div class="container">
 
-<div class="trust-item">
+        <div class="section-head">
 
-<div class="trust-stars">
-★★★★★
-</div>
+            <div class="section-kicker">
+                THEBESTBUNDLE • COLLECTION
+            </div>
 
-<div>
+            <h2 class="section-title">
+                Explore Our Collection
+            </h2>
 
-<strong>
-Trusted by thousands
-</strong>
+            <p class="section-description">
 
-<span>
-of digital learners
-</span>
+                Discover premium digital resources designed
+                to help you learn, create, organize and grow.
 
-</div>
+            </p>
 
-</div>
+        </div>
 
-<div class="trust-item">
 
-<div class="trust-icon">
+        <div class="explore-grid">
 
-<i class="fa-solid fa-download"></i>
 
-</div>
+            <article class="explore-card">
 
-<div>
+                <div class="explore-icon">
 
-<strong>
-Instant Download
-</strong>
+                    <i class="fa-solid fa-book-open"></i>
 
-<span>
-Access your files immediately
-</span>
+                </div>
 
-</div>
+                <h3>
+                    Premium eBooks
+                </h3>
 
-</div>
+                <p>
+                    Practical knowledge covering wellness,
+                    beauty, longevity, business, digital
+                    marketing and entrepreneurship.
+                </p>
 
-<div class="trust-item">
+                <a
+                    href="ebooks.html"
+                    class="text-link"
+                >
+                    Explore eBooks
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
 
-<div class="trust-icon">
+            </article>
 
-<i class="fa-solid fa-shield-halved"></i>
 
-</div>
+            <article class="explore-card">
 
-<div>
+                <div class="explore-icon">
 
-<strong>
-Secure Checkout
-</strong>
+                    <i class="fa-solid fa-file-lines"></i>
 
-<span>
-Safe &amp; encrypted payments
-</span>
+                </div>
 
-</div>
+                <h3>
+                    Printable Templates
+                </h3>
 
-</div>
+                <p>
+                    Beautiful planners, trackers,
+                    workbooks and practical templates
+                    designed for everyday use.
+                </p>
 
-<div class="trust-item">
+                <a
+                    href="templates.html"
+                    class="text-link"
+                >
+                    Explore Templates
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
 
-<div class="trust-icon">
+            </article>
 
-<i class="fa-regular fa-star"></i>
 
-</div>
+            <article class="explore-card">
 
-<div>
+                <div class="explore-icon">
 
-<strong>
-Premium Quality
-</strong>
+                    <i class="fa-solid fa-layer-group"></i>
 
-<span>
-Professionally designed resources
-</span>
+                </div>
 
-</div>
+                <h3>
+                    Digital Bundles
+                </h3>
 
-</div>
+                <p>
+                    Curated collections combining premium
+                    eBooks and professional templates
+                    at bundle value.
+                </p>
 
-<div class="trust-item">
+                <a
+                    href="bundles.html"
+                    class="text-link"
+                >
+                    Explore Bundles
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
 
-<div class="trust-icon">
+            </article>
 
-<i class="fa-solid fa-mobile-screen-button"></i>
 
-</div>
+            <article class="explore-card">
 
-<div>
+                <div class="explore-icon">
 
-<strong>
-Mobile Friendly
-</strong>
+                    <i class="fa-solid fa-gift"></i>
 
-<span>
-Use on any device, anytime
-</span>
+                </div>
 
-</div>
+                <h3>
+                    Free Resources
+                </h3>
 
-</div>
+                <p>
+                    Start with our free digital resources
+                    and discover the world of TheBestBundle.
+                </p>
 
-</div>
+                <a
+                    href="freebie.html"
+                    class="text-link"
+                >
+                    Explore Free Resources
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+        </div>
+
+    </div>
 
 </section>
 
-<!-- =====================================================
-     COLLECTION
-===================================================== -->
 
-<section class="collection section">
+<!-- =========================================================
+     FEATURED COLLECTIONS
+========================================================= -->
 
-<div class="container">
+<section
+    class="section featured-section"
+>
 
-<div class="rule-title">
-EXPLORE OUR COLLECTION
-</div>
+    <div class="container">
 
-<div class="collection-grid">
+        <div class="section-head">
 
-<a
-    class="collection-card dark"
-    href="ebooks.html">
+            <div class="section-kicker">
+                DIGITAL • VALUE • COLLECTIONS
+            </div>
 
-<div class="collection-icon">
+            <h2 class="section-title">
+                Featured Collections
+            </h2>
 
-<i class="fa-solid fa-book-open"></i>
+            <p class="section-description">
 
-</div>
+                Explore our curated collections and choose
+                the resources that fit your goals.
 
-<h3>
-PREMIUM EBOOKS
-</h3>
+            </p>
 
-<p>
+        </div>
 
-Inspiring eBooks on health, wealth, mindset,
-business and personal growth.
 
-</p>
+        <div class="featured-grid">
 
-<span class="collection-link">
-Explore eBooks →
-</span>
 
-</a>
+            <!-- STARTER -->
 
-<a
-    class="collection-card"
-    href="templates.html">
+            <article class="featured-card">
 
-<div class="collection-icon">
+                <div class="featured-image">
 
-<i class="fa-regular fa-file-lines"></i>
+                    <img
+                        src="images/Starter_Bundle_Cover.png"
+                        alt="Starter Bundle"
+                    >
 
-</div>
+                </div>
 
-<h3>
-PRINTABLE TEMPLATES
-</h3>
+                <div class="featured-label">
+                    Starter Collection
+                </div>
 
-<p>
+                <h3>
+                    Starter Bundle
+                </h3>
 
-Beautiful planners, trackers and templates
-to organize your life and business.
+                <div class="featured-price">
+                    $27
+                </div>
 
-</p>
+                <div class="featured-actions">
 
-<span class="collection-link">
-Explore Templates →
-</span>
+                    <button
+                        class="card-btn cart add-cart"
+                        data-id="starter-bundle"
+                        data-name="Starter Bundle"
+                        data-price="27"
+                        data-image="images/Starter_Bundle_Cover.png"
+                    >
+                        Add to Cart
+                    </button>
 
-</a>
+                    <a
+                        class="card-btn buy"
+                        href="https://buy.stripe.com/28E6oJ504fKMfHNf5h8N20p"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        Buy Now
+                    </a>
 
-<a
-    class="collection-card dark"
-    href="bundles.html">
+                </div>
 
-<div class="collection-icon">
+            </article>
 
-<i class="fa-solid fa-gift"></i>
 
-</div>
+            <!-- CREATOR -->
 
-<h3>
-DIGITAL BUNDLES
-</h3>
+            <article class="featured-card">
 
-<p>
+                <div class="featured-image">
 
-Curated bundles to help you save more
-and get maximum value.
+                    <img
+                        src="images/Creator_Bundle_Highest_Resolution.png"
+                        alt="Creator Bundle"
+                    >
 
-</p>
+                </div>
 
-<span class="collection-link">
-Explore Bundles →
-</span>
+                <div class="featured-label">
+                    Creator Collection
+                </div>
 
-</a>
+                <h3>
+                    Creator Bundle
+                </h3>
 
-<a
-    class="collection-card"
-    href="freebie.html">
+                <div class="featured-price">
+                    $37
+                </div>
 
-<div class="collection-icon">
+                <div class="featured-actions">
 
-<i class="fa-solid fa-gift"></i>
+                    <button
+                        class="card-btn cart add-cart"
+                        data-id="creator-bundle"
+                        data-name="Creator Bundle"
+                        data-price="37"
+                        data-image="images/Creator_Bundle_Highest_Resolution.png"
+                    >
+                        Add to Cart
+                    </button>
 
-</div>
+                    <a
+                        class="card-btn buy"
+                        href="https://buy.stripe.com/9B614p1NSeGI9jp9KX8N20z"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        Buy Now
+                    </a>
 
-<h3>
-FREE RESOURCES
-</h3>
+                </div>
 
-<p>
+            </article>
 
-Download free guides, checklists and
-resources to get started today.
 
-</p>
+            <!-- BUSINESS -->
 
-<span class="collection-link">
-Explore Freebies →
-</span>
+            <article class="featured-card">
 
-</a>
+                <div class="featured-image">
 
-</div>
+                    <img
+                        src="images/high_resolution_polished.png"
+                        alt="Business Bundle"
+                    >
 
-</div>
+                </div>
+
+                <div class="featured-label">
+                    Business Collection
+                </div>
+
+                <h3>
+                    Business Bundle
+                </h3>
+
+                <div class="featured-price">
+                    $57
+                </div>
+
+                <div class="featured-actions">
+
+                    <button
+                        class="card-btn cart add-cart"
+                        data-id="business-bundle"
+                        data-name="Business Bundle"
+                        data-price="57"
+                        data-image="images/high_resolution_polished.png"
+                    >
+                        Add to Cart
+                    </button>
+
+                    <a
+                        class="card-btn buy"
+                        href="https://buy.stripe.com/14AbJ3504cyA0MT7CP8N20P"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        Buy Now
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- HEALTH -->
+
+            <article class="featured-card">
+
+                <div class="featured-image">
+
+                    <img
+                        src="images/Health_Wellness_Collection.png"
+                        alt="Health Wellness Collection"
+                    >
+
+                </div>
+
+                <div class="featured-label">
+                    Wellness Collection
+                </div>
+
+                <h3>
+                    Health &amp; Wellness
+                </h3>
+
+                <div class="featured-price">
+                    $57
+                </div>
+
+                <div class="featured-actions">
+
+                    <button
+                        class="card-btn cart add-cart"
+                        data-id="Health_Wellness_Collection"
+                        data-name="Health Wellness Collection"
+                        data-price="57"
+                        data-image="images/Health_Wellness_Collection.png"
+                    >
+                        Add to Cart
+                    </button>
+
+                    <a
+                        class="card-btn buy"
+                        href="https://buy.stripe.com/28EdRbakoeGIdzF5uH8N20Q"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        Buy Now
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- ULTIMATE -->
+
+            <article class="featured-card">
+
+                <div class="featured-image">
+
+                    <img
+                        src="images/Ultimate_Collection.png"
+                        alt="Ultimate Collection"
+                    >
+
+                </div>
+
+                <div class="featured-label">
+                    Ultimate Collection
+                </div>
+
+                <h3>
+                    Ultimate Collection
+                </h3>
+
+                <div class="featured-price">
+                    $97
+                </div>
+
+                <div class="featured-actions">
+
+                    <button
+                        class="card-btn cart add-cart"
+                        data-id="ultimate-collection"
+                        data-name="Ultimate Collection"
+                        data-price="97"
+                        data-image="images/Ultimate_Collection.png"
+                    >
+                        Add to Cart
+                    </button>
+
+                    <a
+                        class="card-btn buy"
+                        href="https://buy.stripe.com/aFa4gB9gk1TWbrx4qD8N20R"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        Buy Now
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
 
 </section>
 
-<!-- =====================================================
-     BEST SELLERS
-===================================================== -->
 
-<section class="best">
+<!-- =========================================================
+     WHY THEBESTBUNDLE
+========================================================= -->
 
-<div class="container">
+<section
+    class="section why-section"
+>
 
-<div class="rule-title">
-BEST SELLERS
-</div>
+    <div class="container">
 
-<div class="product-grid">
+        <div class="section-head">
 
-<!-- STARTER -->
+            <div class="section-kicker">
+                QUALITY • SIMPLICITY • VALUE
+            </div>
 
-<article class="product-card">
+            <h2 class="section-title">
+                Why TheBestBundle?
+            </h2>
 
-<a href="bundles.html">
+            <p class="section-description">
 
-<div class="product-image">
+                Everything is designed to make digital
+                learning and productivity simpler.
 
-<img
-    src="images/Starter_Bundle_Cover.png"
-    alt="Starter Bundle">
+            </p>
 
-</div>
+        </div>
 
-</a>
 
-<div class="product-body">
+        <div class="why-grid">
 
-<h3>
-Starter Bundle
-</h3>
 
-<div class="product-meta">
-2 eBooks + 4 Templates
-</div>
+            <article class="why-card">
 
-<div class="product-rating">
-★★★★★ <span>(254)</span>
-</div>
+                <div class="why-icon">
 
-<div class="product-bottom">
+                    <i class="fa-solid fa-gem"></i>
 
-<span class="price">$27</span>
+                </div>
 
-<a
-    class="buy-now"
-    href="https://buy.stripe.com/28E6oJ504fKMfHNf5h8N20p"
-    target="_blank"
-    rel="noopener noreferrer">
+                <h3>
+                    Premium Content
+                </h3>
 
-Buy Now
+                <p>
+                    Carefully designed digital resources
+                    with a polished and professional
+                    presentation.
+                </p>
 
-</a>
+            </article>
 
-<button
-    class="mini-cart add-cart"
-    data-id="starter-bundle"
-    data-name="Starter Bundle"
-    data-price="27"
-    data-price-id="price_1TweJORtp4gVtODymXOzvXjB"
-    data-stripe="https://buy.stripe.com/28E6oJ504fKMfHNf5h8N20p"
-    data-image="images/Starter_Bundle_Cover.png"
-    aria-label="Add Starter Bundle to cart">
 
-<i class="fa-solid fa-cart-shopping"></i>
+            <article class="why-card">
 
-</button>
+                <div class="why-icon">
 
-</div>
+                    <i class="fa-solid fa-list-check"></i>
 
-</div>
+                </div>
 
-</article>
+                <h3>
+                    Practical Tools
+                </h3>
 
-<!-- CREATOR -->
+                <p>
+                    Resources created to help you organize,
+                    plan, learn and take action.
+                </p>
 
-<article class="product-card">
+            </article>
 
-<a href="bundles.html">
 
-<div class="product-image">
+            <article class="why-card">
 
-<img
-    src="images/Creator_Bundle_Highest_Resolution.png"
-    alt="Creator Bundle">
+                <div class="why-icon">
 
-</div>
+                    <i class="fa-solid fa-bolt"></i>
 
-</a>
+                </div>
 
-<div class="product-body">
+                <h3>
+                    Instant Access
+                </h3>
 
-<h3>
-Creator Bundle
-</h3>
+                <p>
+                    Digital products are designed for a
+                    simple purchasing and access experience.
+                </p>
 
-<div class="product-meta">
-3 eBooks + 6 Templates
-</div>
+            </article>
 
-<div class="product-rating">
-★★★★★ <span>(198)</span>
-</div>
 
-<div class="product-bottom">
+            <article class="why-card">
 
-<span class="price">$37</span>
+                <div class="why-icon">
 
-<a
-    class="buy-now"
-    href="https://buy.stripe.com/9B614p1NSeGI9jp9KX8N20z"
-    target="_blank"
-    rel="noopener noreferrer">
+                    <i class="fa-solid fa-wallet"></i>
 
-Buy Now
+                </div>
 
-</a>
+                <h3>
+                    Affordable Value
+                </h3>
 
-<button
-    class="mini-cart add-cart"
-    data-id="creator-bundle"
-    data-name="Creator Bundle"
-    data-price="37"
-    data-price-id="price_1UA3lXRtp4gVtODyq54xMbhJ"
-    data-stripe="https://buy.stripe.com/9B614p1NSeGI9jp9KX8N20z"
-    data-image="images/Creator_Bundle_Highest_Resolution.png"
-    aria-label="Add Creator Bundle to cart">
+                <p>
+                    Individual products and curated bundles
+                    give you flexible ways to build your collection.
+                </p>
 
-<i class="fa-solid fa-cart-shopping"></i>
+            </article>
 
-</button>
+        </div>
 
-</div>
-
-</div>
-
-</article>
-
-<!-- BUSINESS -->
-
-<article class="product-card">
-
-<a href="bundles.html">
-
-<div class="product-image">
-
-<img
-    src="images/high_resolution_polished.png"
-    alt="Business Bundle">
-
-</div>
-
-</a>
-
-<div class="product-body">
-
-<h3>
-Business Bundle
-</h3>
-
-<div class="product-meta">
-5 eBooks + 10 Templates
-</div>
-
-<div class="product-rating">
-★★★★★ <span>(142)</span>
-</div>
-
-<div class="product-bottom">
-
-<span class="price">$57</span>
-
-<a
-    class="buy-now"
-    href="https://buy.stripe.com/14AbJ3504cyA0MT7CP8N20P"
-    target="_blank"
-    rel="noopener noreferrer">
-
-Buy Now
-
-</a>
-
-<button
-    class="mini-cart add-cart"
-    data-id="business-bundle"
-    data-name="Business Bundle"
-    data-price="57"
-    data-price-id="price_1UDRuaRtp4gVtODy0x7llRl7"
-    data-stripe="https://buy.stripe.com/14AbJ3504cyA0MT7CP8N20P"
-    data-image="images/high_resolution_polished.png"
-    aria-label="Add Business Bundle to cart">
-
-<i class="fa-solid fa-cart-shopping"></i>
-
-</button>
-
-</div>
-
-</div>
-
-</article>
-
-<!-- HEALTH -->
-
-<article class="product-card">
-
-<a href="bundles.html">
-
-<div class="product-image">
-
-<img
-    src="images/Health_Wellness_Collection.png"
-    alt="Health and Wellness Collection">
-
-</div>
-
-</a>
-
-<div class="product-body">
-
-<h3>
-Health &amp; Wellness Collection
-</h3>
-
-<div class="product-meta">
-5 eBooks + 10 Templates
-</div>
-
-<div class="product-rating">
-★★★★★ <span>(186)</span>
-</div>
-
-<div class="product-bottom">
-
-<span class="price">$57</span>
-
-<a
-    class="buy-now"
-    href="https://buy.stripe.com/28EdRbakoeGIdzF5uH8N20Q"
-    target="_blank"
-    rel="noopener noreferrer">
-
-Buy Now
-
-</a>
-
-<button
-    class="mini-cart add-cart"
-    data-id="health-wellness"
-    data-name="Health & Wellness Collection"
-    data-price="57"
-    data-price-id="price_1UEiWMRtp4gVtODyTO9FPlIb"
-    data-stripe="https://buy.stripe.com/28EdRbakoeGIdzF5uH8N20Q"
-    data-image="images/Health_Wellness_Collection.png"
-    aria-label="Add Health and Wellness Collection to cart">
-
-<i class="fa-solid fa-cart-shopping"></i>
-
-</button>
-
-</div>
-
-</div>
-
-</article>
-
-<!-- ULTIMATE -->
-
-<article class="product-card">
-
-<a href="bundles.html">
-
-<div class="product-image">
-
-<img
-    src="images/Ultimate_Collection.png"
-    alt="Ultimate Collection">
-
-</div>
-
-</a>
-
-<div class="product-body">
-
-<h3>
-Ultimate Collection
-</h3>
-
-<div class="product-meta">
-10 eBooks + 10 Templates
-</div>
-
-<div class="product-rating">
-★★★★★ <span>(98)</span>
-</div>
-
-<div class="product-bottom">
-
-<span class="price">$97</span>
-
-<a
-    class="buy-now"
-    href="https://buy.stripe.com/aFa4gB9gk1TWbrx4qD8N20R"
-    target="_blank"
-    rel="noopener noreferrer">
-
-Buy Now
-
-</a>
-
-<button
-    class="mini-cart add-cart"
-    data-id="ultimate-collection"
-    data-name="Ultimate Collection"
-    data-price="97"
-    data-price-id="price_1UFEbjRtp4gVtODygoSjvZlg"
-    data-stripe="https://buy.stripe.com/aFa4gB9gk1TWbrx4qD8N20R"
-    data-image="images/Ultimate_Collection.png"
-    aria-label="Add Ultimate Collection to cart">
-
-<i class="fa-solid fa-cart-shopping"></i>
-
-</button>
-
-</div>
-
-</div>
-
-</article>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
-<!-- =====================================================
-     CUSTOMER SECTION
-===================================================== -->
 
-<section class="review-section">
+<!-- =========================================================
+     HOW IT WORKS
+========================================================= -->
 
-<div class="container review-layout">
+<section
+    class="section how-section"
+>
 
-<div class="review-intro">
+    <div class="container">
 
-<h2>
+        <div class="section-head">
 
-WHAT OUR<br>
-CUSTOMERS SAY
+            <div class="section-kicker">
+                SIMPLE • DIGITAL • ACCESSIBLE
+            </div>
 
-</h2>
+            <h2 class="section-title">
+                How It Works
+            </h2>
 
-<p>
+            <p class="section-description">
 
-Explore three featured products and see the
-kind of value each resource is designed to provide.
+                Discover, choose and access your digital
+                resources in a few simple steps.
 
-</p>
+            </p>
 
-<a
-    class="btn btn-dark"
-    href="reviews.html">
+        </div>
 
-Read All Reviews →
 
-</a>
+        <div class="how-grid">
 
-</div>
 
-<div class="review-cards">
+            <article class="how-card">
 
-<!-- DIGITAL MARKETING -->
+                <div class="how-number">
+                    01
+                </div>
 
-<article class="review-card">
+                <h3>
+                    Explore
+                </h3>
 
-<div class="review-profile">
+                <p>
+                    Browse eBooks, templates, bundles,
+                    free resources and more.
+                </p>
 
-<img
-    class="review-avatar"
-    src="images/review-sarah.png"
-    alt="Community profile"
-    loading="lazy">
+            </article>
 
-<div>
 
-<strong>
-Digital Marketing
-</strong>
+            <article class="how-card">
 
-<span>
-Featured Product
-</span>
+                <div class="how-number">
+                    02
+                </div>
 
-</div>
+                <h3>
+                    Choose
+                </h3>
 
-</div>
+                <p>
+                    Select the digital resources that
+                    match your interests and goals.
+                </p>
 
-<div class="review-product">
+            </article>
 
-<i class="fa-solid fa-book-open"></i>
 
-Digital Marketing Made Simple
+            <article class="how-card">
 
-</div>
+                <div class="how-number">
+                    03
+                </div>
 
-<p>
+                <h3>
+                    Purchase
+                </h3>
 
-A practical resource for understanding digital
-marketing strategies, planning campaigns, and
-building a clearer online presence.
+                <p>
+                    Complete your purchase through
+                    the secure checkout experience.
+                </p>
 
-</p>
+            </article>
 
-<span class="review-label">
 
-<i class="fa-solid fa-book"></i>
+            <article class="how-card">
 
-Product Highlight
+                <div class="how-number">
+                    04
+                </div>
 
-</span>
+                <h3>
+                    Access
+                </h3>
 
-</article>
+                <p>
+                    Receive your digital resources and
+                    start learning, creating and growing.
+                </p>
 
-<!-- STARTER BUNDLE -->
+            </article>
 
-<article class="review-card">
+        </div>
 
-<div class="review-profile">
-
-<img
-    class="review-avatar"
-    src="images/review-james.png"
-    alt="Community profile"
-    loading="lazy">
-
-<div>
-
-<strong>
-Starter Bundle
-</strong>
-
-<span>
-Featured Product
-</span>
-
-</div>
-
-</div>
-
-<div class="review-product">
-
-<i class="fa-solid fa-gift"></i>
-
-Starter Bundle
-
-</div>
-
-<p>
-
-A curated mix of eBooks and templates designed
-to provide a practical starting point for learning,
-planning, and taking action.
-
-</p>
-
-<span class="review-label">
-
-<i class="fa-solid fa-layer-group"></i>
-
-Bundle Highlight
-
-</span>
-
-</article>
-
-<!-- WELLNESS -->
-
-<article class="review-card">
-
-<div class="review-profile">
-
-<img
-    class="review-avatar"
-    src="images/review-amanda.png"
-    alt="Community profile"
-    loading="lazy">
-
-<div>
-
-<strong>
-Wellness Planning
-</strong>
-
-<span>
-Featured Product
-</span>
-
-</div>
-
-</div>
-
-<div class="review-product">
-
-<i class="fa-solid fa-heart-pulse"></i>
-
-30-Day Wellness Planner
-
-</div>
-
-<p>
-
-A simple 30-day format for organizing wellness
-routines, tracking progress, and staying consistent
-with daily goals.
-
-</p>
-
-<span class="review-label">
-
-<i class="fa-solid fa-calendar-check"></i>
-
-Product Highlight
-
-</span>
-
-</article>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
-<!-- =====================================================
-     NEWSLETTER
-===================================================== -->
 
-<section class="newsletter">
+<!-- =========================================================
+     CUSTOMER REVIEWS
+========================================================= -->
 
-<div class="container newsletter-inner">
+<section
+    class="section reviews-section"
+    id="reviews"
+>
 
-<div class="news-copy">
+    <div class="container">
 
-<div class="envelope">
+        <div class="section-head">
 
-<i class="fa-regular fa-envelope"></i>
+            <div class="section-kicker">
+                REAL • GENUINE • CUSTOMER FEEDBACK
+            </div>
 
-</div>
+            <h2 class="section-title">
+                What Our Customers Say
+            </h2>
 
-<div>
+            <p class="section-description">
 
-<h2>
-STAY UPDATED
-</h2>
+                We value every customer experience and
+                invite our community to share their feedback.
 
-<p>
+            </p>
 
-Receive new releases, exclusive offers
-and free digital resources straight to your inbox.
+        </div>
 
-</p>
 
-</div>
+        <div class="reviews-grid">
 
-</div>
 
-<div>
+            <!-- REVIEW 1 -->
 
-<form
-    class="news-form-row"
-    action="https://formspree.io/f/xkodngya"
-    method="POST">
+            <article class="review-card">
 
-<input
-    type="hidden"
-    name="_next"
-    value="https://thebestbundle101-stack.github.io/thebestbundle/newsletter-success.html">
+                <div class="review-top">
 
-<input
-    type="email"
-    name="email"
-    placeholder="Enter your email address"
-    autocomplete="email"
-    required>
+                    <img
+                        class="review-avatar"
+                        src="images/review-sarah.png"
+                        alt="Customer avatar"
+                    >
 
-<button
-    class="btn btn-gold"
-    type="submit">
+                    <div class="review-person">
 
-Subscribe Now
+                        <div class="review-name">
+                            Customer Review
+                        </div>
 
-<i class="fa-regular fa-paper-plane"></i>
+                        <div class="review-product">
+                            Digital Marketing Made Simple
+                        </div>
 
-</button>
-
-</form>
-
-<div class="news-notes">
-
-<span>✓ Exclusive Offers</span>
-
-<span>✓ New Releases</span>
-
-<span>✓ Free Resources</span>
-
-<span>✓ Unsubscribe Anytime</span>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-</main>
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
-<footer class="footer">
-
-<div class="container">
-
-<div class="footer-grid">
-
-<div>
-
-<a
-    class="footer-logo"
-    href="index.html">
-
-<img
-    src="images/Thebestbundle-transparent-logo.png"
-    alt="TheBestBundle">
-
-</a>
-
-<p>
-
-Premium digital resources for learning,
-creating and growing every day.
-
-</p>
-
-<div class="social-row">
-
-<a href="#" aria-label="Instagram">
-<i class="fa-brands fa-instagram"></i>
-</a>
-
-<a href="#" aria-label="TikTok">
-<i class="fa-brands fa-tiktok"></i>
-</a>
-
-<a href="#" aria-label="Facebook">
-<i class="fa-brands fa-facebook-f"></i>
-</a>
-
-<a href="#" aria-label="Pinterest">
-<i class="fa-brands fa-pinterest-p"></i>
-</a>
-
-<a href="#" aria-label="YouTube">
-<i class="fa-brands fa-youtube"></i>
-</a>
-
-</div>
-
-</div>
-
-<div>
-
-<h3>QUICK LINKS</h3>
-
-<a href="index.html">Home</a>
-<a href="courses.html">Courses</a>
-<a href="templates.html">Explore Templates</a>
-<a href="ebooks.html">Explore eBooks</a>
-<a href="bundles.html">Explore Bundles</a>
-<a href="freebie.html">Explore Free Resources</a>
-<a href="merchandise.html">Merchandise</a>
-<a href="contact.html">Contact</a>
-<a href="reviews.html">Customer Reviews</a>
-
-</div>
-
-<div>
-
-<h3>HELP &amp; SUPPORT</h3>
-
-<a href="faq.html">FAQ</a>
-<a href="refund.html">Refund Policy</a>
-<a href="terms.html">Terms &amp; Conditions</a>
-<a href="privacy.html">Privacy Policy</a>
-<a href="cookie.html">Cookie Policy</a>
-<a href="secure-checkout.html">Secure Checkout</a>
-
-</div>
-
-<div>
-
-<h3>TOP CATEGORIES</h3>
-
-<a href="merchandise.html">
-Health &amp; Wellness
-</a>
-
-<a href="ebooks.html">
-Personal Development
-</a>
-
-<a href="bundles.html">
-Business &amp; Finance
-</a>
-
-<a href="templates.html">
-Productivity
-</a>
-
-<a href="courses.html">
-Mindset &amp; Motivation
-</a>
-
-</div>
-
-<div>
-
-<h3>WE ACCEPT</h3>
-
-<div class="payment-row">
-
-<span class="payment">VISA</span>
-<span class="payment">MC</span>
-<span class="payment">AMEX</span>
-<span class="payment">DISCOVER</span>
-
-</div>
-
-<div class="secure">
-
-<i class="fa-solid fa-shield-halved"></i>
-
-100% SECURE<br>
-CHECKOUT
-
-</div>
-
-</div>
-
-</div>
-
-<div class="copyright">
-
-© 2026 TheBestBundle. All Rights Reserved.
-
-</div>
-
-</div>
-
-</footer>
-
-<!-- =====================================================
-     SEARCH
-===================================================== -->
-
-<div
-    class="overlay"
-    id="searchOverlay">
-</div>
-
-<div
-    class="search-box"
-    id="searchBox"
-    hidden>
-
-<div class="search-title">
-
-<h2>
-Search TheBestBundle
-</h2>
-
-<button
-    class="close-btn"
-    id="closeSearch"
-    aria-label="Close search">
-
-<i class="fa-solid fa-xmark"></i>
-
-</button>
-
-</div>
-
-<form
-    class="search-row"
-    id="searchForm">
-
-<input
-    id="siteSearch"
-    type="search"
-    placeholder="Search eBooks, templates, bundles..."
-    autocomplete="off">
-
-<button
-    class="btn btn-gold"
-    type="submit">
-
-Search
-
-</button>
-
-</form>
-
-</div>
-
-<!-- =====================================================
-     COLLECTION PANEL
-===================================================== -->
-
-<div
-    class="overlay"
-    id="menuOverlay">
-</div>
-
-<aside
-    class="panel"
-    id="collectionPanel"
-    aria-label="Explore Collection">
-
-<div class="panel-head">
-
-<h2>
-Explore Collection
-</h2>
-
-<button
-    class="close-btn"
-    id="closeMenu"
-    aria-label="Close collection menu">
-
-<i class="fa-solid fa-xmark"></i>
-
-</button>
-
-</div>
-
-<nav class="collection-links">
-
-<a href="freebie.html">
-Free Resources
-</a>
-
-<a href="ebooks.html">
-eBooks
-</a>
-
-<a href="bundles.html">
-Bundles
-</a>
-
-<a href="templates.html">
-Templates
-</a>
-
-<a href="courses.html">
-Courses
-</a>
-
-<a href="french-collection.html">
-French Collection
-</a>
-
-<a href="merchandise.html">
-Merchandise
-</a>
-
-<a href="reviews.html">
-Customer Reviews
-</a>
-
-<a
-    class="donate-link"
-    href="donate.html">
-
-Donation
-
-</a>
-
-</nav>
-
-</aside>
-
-<!-- =====================================================
-     CART
-===================================================== -->
-
-<div
-    class="overlay"
-    id="cartOverlay">
-</div>
-
-<aside
-    class="panel"
-    id="cartPanel"
-    aria-label="Shopping cart">
-
-<div class="panel-head">
-
-<h2>
-Your Cart
-</h2>
-
-<button
-    class="close-btn"
-    id="closeCart"
-    aria-label="Close cart">
-
-<i class="fa-solid fa-xmark"></i>
-
-</button>
-
-</div>
-
-<div
-    class="cart-items"
-    id="cartItems">
-</div>
-
-<div class="cart-foot">
-
-<div class="cart-total">
-
-<span>
-Total
-</span>
-
-<span id="cartTotal">
-$0.00
-</span>
-
-</div>
-
-<button
-    class="btn btn-gold"
-    id="reviewCart"
-    style="width:100%">
-
-Review Cart
-
-</button>
-
-</div>
-
-</aside>
-
-<div
-    class="toast"
-    id="toast">
-</div>
-
-<script>
-
-/* =====================================================
-   HELPERS
-===================================================== */
-
-const $ = id =>
-    document.getElementById(id);
-
-/* =====================================================
-   EXPLORE COLLECTION
-===================================================== */
-
-function openCollection(){
-
-    $("collectionPanel")
-        .classList
-        .add("active");
-
-    $("menuOverlay")
-        .classList
-        .add("active");
-
-    document.body
-        .classList
-        .add("locked");
-}
-
-function closeCollection(){
-
-    $("collectionPanel")
-        .classList
-        .remove("active");
-
-    $("menuOverlay")
-        .classList
-        .remove("active");
-
-    document.body
-        .classList
-        .remove("locked");
-}
-
-$("exploreCollection")
-    .addEventListener(
-        "click",
-        openCollection
-    );
-
-$("closeMenu")
-    .addEventListener(
-        "click",
-        closeCollection
-    );
-
-$("menuOverlay")
-    .addEventListener(
-        "click",
-        closeCollection
-    );
-
-/* =====================================================
-   SEARCH
-===================================================== */
-
-function openSearch(){
-
-    $("searchBox").hidden = false;
-
-    $("searchOverlay")
-        .classList
-        .add("active");
-
-    document.body
-        .classList
-        .add("locked");
-
-    setTimeout(
-        () => $("siteSearch").focus(),
-        40
-    );
-}
-
-function closeSearch(){
-
-    $("searchBox").hidden = true;
-
-    $("searchOverlay")
-        .classList
-        .remove("active");
-
-    document.body
-        .classList
-        .remove("locked");
-}
-
-$("searchButton")
-    .addEventListener(
-        "click",
-        openSearch
-    );
-
-$("closeSearch")
-    .addEventListener(
-        "click",
-        closeSearch
-    );
-
-$("searchOverlay")
-    .addEventListener(
-        "click",
-        closeSearch
-    );
-
-$("searchForm")
-    .addEventListener(
-        "submit",
-        e => {
-
-            e.preventDefault();
-
-            const q =
-                $("siteSearch")
-                    .value
-                    .trim();
-
-            if(q){
-
-                window.location.href =
-                    "search.html?q=" +
-                    encodeURIComponent(q);
-            }
-        }
-    );
-
-/* =====================================================
-   CART STORAGE
-===================================================== */
-
-let cart = [];
-
-try{
-
-    cart =
-        JSON.parse(
-            localStorage.getItem(
-                "theBestBundleCart"
-            ) || "[]"
-        );
-
-    if(!Array.isArray(cart)){
-        cart = [];
-    }
-
-}catch(e){
-
-    cart = [];
-}
-
-function saveCart(){
-
-    localStorage.setItem(
-        "theBestBundleCart",
-        JSON.stringify(cart)
-    );
-
-    renderCart();
-}
-
-function renderCart(){
-
-    const count =
-
-        cart.reduce(
-            (n,p) =>
-                n +
-                (
-                    Number(p.quantity) || 1
-                ),
-            0
-        );
-
-    $("cartCount")
-        .textContent =
-        count;
-
-    $("cartCount")
-        .style
-        .display =
-        count
-            ? "flex"
-            : "none";
-
-    const box =
-        $("cartItems");
-
-    if(!cart.length){
-
-        box.innerHTML =
-
-            '<div class="empty-cart">' +
-
-            '<i class="fa-solid fa-cart-shopping"></i>' +
-
-            '<p>Your cart is empty.</p>' +
-
-            '</div>';
-
-        $("cartTotal")
-            .textContent =
-            "$0.00";
-
-        return;
-    }
-
-    let total = 0;
-
-    box.innerHTML = "";
-
-    cart.forEach(
-        (p,i) => {
-
-            const qty =
-                Number(p.quantity) || 1;
-
-            const price =
-                Number(p.price) || 0;
-
-            total +=
-                price * qty;
-
-            const row =
-                document.createElement("div");
-
-            row.className =
-                "cart-item";
-
-            row.innerHTML =
-
-                `<img
-                    src="${p.image || "images/Starter_Bundle_Cover.png"}"
-                    alt="${p.name || "Product"}">
-
-                <div>
-
-                    <h3>
-                        ${p.name || "Product"}
-                    </h3>
-
-                    <div class="cart-price">
-                        $${(price * qty).toFixed(2)}
                     </div>
 
                 </div>
 
-                <button
-                    class="remove-item"
-                    data-index="${i}"
-                    aria-label="Remove item">
 
-                    <i class="fa-solid fa-trash"></i>
+                <div class="review-featured">
+                    Digital Marketing Made Simple
+                </div>
 
-                </button>`;
 
-            box.appendChild(row);
+                <div class="review-stars"
+                     aria-label="Customer rating">
+                    ★★★★★
+                </div>
+
+
+                <p class="review-text">
+
+                    Your real customer experience can be
+                    featured here once the review is submitted.
+
+                </p>
+
+
+                <a
+                    href="reviews.html"
+                    class="review-button"
+                >
+
+                    Product Highlight
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </article>
+
+
+            <!-- REVIEW 2 -->
+
+            <article class="review-card">
+
+                <div class="review-top">
+
+                    <img
+                        class="review-avatar"
+                        src="images/review-james.jpeg"
+                        alt="Customer avatar"
+                    >
+
+                    <div class="review-person">
+
+                        <div class="review-name">
+                            Customer Review
+                        </div>
+
+                        <div class="review-product">
+                            Starter Bundle
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="review-featured">
+                    Starter Bundle
+                </div>
+
+
+                <div class="review-stars"
+                     aria-label="Customer rating">
+                    ★★★★★
+                </div>
+
+
+                <p class="review-text">
+
+                    Your real customer experience can be
+                    featured here once the review is submitted.
+
+                </p>
+
+
+                <a
+                    href="reviews.html"
+                    class="review-button"
+                >
+
+                    Bundle Highlight
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </article>
+
+
+            <!-- REVIEW 3 -->
+
+            <article class="review-card">
+
+                <div class="review-top">
+
+                    <img
+                        class="review-avatar"
+                        src="images/review-amanda.png"
+                        alt="Customer avatar"
+                    >
+
+                    <div class="review-person">
+
+                        <div class="review-name">
+                            Customer Review
+                        </div>
+
+                        <div class="review-product">
+                            30-Day Wellness Planner
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="review-featured">
+                    30-Day Wellness Planner
+                </div>
+
+
+                <div class="review-stars"
+                     aria-label="Customer rating">
+                    ★★★★★
+                </div>
+
+
+                <p class="review-text">
+
+                    Your real customer experience can be
+                    featured here once the review is submitted.
+
+                </p>
+
+
+                <a
+                    href="reviews.html"
+                    class="review-button"
+                >
+
+                    Product Highlight
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     NEWSLETTER
+========================================================= -->
+
+<section
+    class="newsletter"
+    id="newsletter"
+>
+
+    <div class="container newsletter-inner">
+
+
+        <div>
+
+            <div class="newsletter-kicker">
+                THEBESTBUNDLE • COMMUNITY
+            </div>
+
+            <h2>
+                Stay Connected
+            </h2>
+
+            <p>
+
+                Get updates about new digital resources,
+                exclusive offers and free resources
+                delivered to your inbox.
+
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <form
+                class="newsletter-form"
+                action="https://formspree.io/f/xkodngya"
+                method="POST"
+            >
+
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Enter your email address"
+                    required
+                >
+
+
+                <input
+                    type="hidden"
+                    name="form_type"
+                    value="TheBestBundle Newsletter"
+                >
+
+
+                <input
+                    type="hidden"
+                    name="_next"
+                    value="https://thebestbundle101-stack.github.io/thebestbundle/newsletter-success.html"
+                >
+
+
+                <button type="submit">
+
+                    Subscribe Now
+
+                    <i class="fa-regular fa-paper-plane"></i>
+
+                </button>
+
+            </form>
+
+
+            <div class="newsletter-benefits">
+
+                <span>
+                    ✓ Exclusive Offers
+                </span>
+
+                <span>
+                    ✓ New Releases
+                </span>
+
+                <span>
+                    ✓ Free Resources
+                </span>
+
+                <span>
+                    ✓ Unsubscribe Anytime
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     HELP & SUPPORT
+========================================================= -->
+
+<section
+    class="section support-section"
+>
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <div class="section-kicker">
+                SUPPORT • QUESTIONS • ASSISTANCE
+            </div>
+
+            <h2 class="section-title">
+                Help &amp; Support
+            </h2>
+
+            <p class="section-description">
+
+                Need help with a purchase, digital download,
+                account question or policy?
+
+            </p>
+
+        </div>
+
+
+        <div class="support-grid">
+
+
+            <article class="support-card">
+
+                <div class="support-icon">
+                    <i class="fa-solid fa-circle-question"></i>
+                </div>
+
+                <h3>
+                    Frequently Asked Questions
+                </h3>
+
+                <p>
+                    Find answers about digital products,
+                    payments, downloads and more.
+                </p>
+
+                <a
+                    href="faq.html"
+                    class="text-link"
+                >
+                    Visit FAQ
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+
+            <article class="support-card">
+
+                <div class="support-icon">
+                    <i class="fa-solid fa-credit-card"></i>
+                </div>
+
+                <h3>
+                    Purchase Support
+                </h3>
+
+                <p>
+                    Learn more about checkout, payments,
+                    digital delivery and refunds.
+                </p>
+
+                <a
+                    href="secure-checkout.html"
+                    class="text-link"
+                >
+                    Secure Checkout
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+
+            <article class="support-card">
+
+                <div class="support-icon">
+                    <i class="fa-solid fa-headset"></i>
+                </div>
+
+                <h3>
+                    Contact Us
+                </h3>
+
+                <p>
+                    Need additional assistance?
+                    Our support page is here to help.
+                </p>
+
+                <a
+                    href="contact.html"
+                    class="text-link"
+                >
+                    Contact TheBestBundle
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="site-footer">
+
+    <div class="container">
+
+
+        <div class="footer-grid">
+
+
+            <div class="footer-brand">
+
+                <div class="footer-logo">
+                    TheBestBundle
+                </div>
+
+                <p>
+
+                    Premium digital resources designed
+                    to help you learn, create and grow.
+
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <div class="footer-title">
+                    Explore
+                </div>
+
+                <div class="footer-links">
+
+                    <a href="ebooks.html">
+                        eBooks
+                    </a>
+
+                    <a href="templates.html">
+                        Templates
+                    </a>
+
+                    <a href="bundles.html">
+                        Bundles
+                    </a>
+
+                    <a href="courses.html">
+                        Courses
+                    </a>
+
+                    <a href="freebie.html">
+                        Free Resources
+                    </a>
+
+                    <a href="french-collection.html">
+                        French Collection
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <div class="footer-title">
+                    Company
+                </div>
+
+                <div class="footer-links">
+
+                    <a href="about.html">
+                        About
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                    <a href="reviews.html">
+                        Customer Reviews
+                    </a>
+
+                    <a href="donation.html">
+                        Donation
+                    </a>
+
+                    <a href="merchandise.html">
+                        Merchandise
+                    </a>
+
+                    <a href="help-support.html">
+                        Help &amp; Support
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <div class="footer-title">
+                    Policies
+                </div>
+
+                <div class="footer-links">
+
+                    <a href="faq.html">
+                        FAQ
+                    </a>
+
+                    <a href="refund.html">
+                        Refund Policy
+                    </a>
+
+                    <a href="terms.html">
+                        Terms &amp; Conditions
+                    </a>
+
+                    <a href="privacy.html">
+                        Privacy Policy
+                    </a>
+
+                    <a href="cookie.html">
+                        Cookie Policy
+                    </a>
+
+                    <a href="secure-checkout.html">
+                        Secure Checkout
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+
+            <div>
+
+                © 2026 TheBestBundle.
+                All rights reserved.
+
+            </div>
+
+
+            <div class="payment-icons">
+
+                <span>
+                    VISA
+                </span>
+
+                <span>
+                    MASTERCARD
+                </span>
+
+                <span>
+                    AMEX
+                </span>
+
+                <span>
+                    DISCOVER
+                </span>
+
+                <span>
+                    <i class="fa-solid fa-lock"></i>
+                    SECURE
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     SEARCH OVERLAY
+========================================================= -->
+
+<div
+    class="overlay"
+    id="searchOverlay"
+>
+
+    <div class="search-box">
+
+        <div class="search-row">
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search TheBestBundle..."
+                autocomplete="off"
+            >
+
+            <button
+                id="searchSubmit"
+                aria-label="Search"
+            >
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     COLLECTION PANEL
+========================================================= -->
+
+<aside
+    class="collection-panel"
+    id="collectionPanel"
+>
+
+    <div class="panel-head">
+
+        <div class="panel-logo">
+            TheBestBundle
+        </div>
+
+        <button
+            class="panel-close"
+            id="collectionClose"
+            aria-label="Close"
+        >
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+    </div>
+
+
+    <div class="panel-body">
+
+
+        <div class="panel-section-title">
+            Shop
+        </div>
+
+
+        <a
+            href="ebooks.html"
+            class="panel-link"
+        >
+            eBooks
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+
+        <a
+            href="templates.html"
+            class="panel-link"
+        >
+            Templates
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+
+        <a
+            href="bundles.html"
+            class="panel-link"
+        >
+            Bundles
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+
+        <div class="panel-section-title">
+            Learn
+        </div>
+
+
+        <a
+            href="courses.html"
+            class="panel-link"
+        >
+            Courses
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+
+        <a
+            href="freebie.html"
+            class="panel-link"
+        >
+            Free Resources
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+
+        <div class="panel-section-title">
+            Discover
+        </div>
+
+
+        <a
+            href="french-collection.html"
+            class="panel-link"
+        >
+            French Collection
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+
+        <a
+            href="merchandise.html"
+            class="panel-link"
+        >
+            Merchandise
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+
+        <div class="panel-section-title">
+            Community
+        </div>
+
+
+        <a
+            href="reviews.html"
+            class="panel-link"
+        >
+            Customer Reviews
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+
+        <a
+            href="donation.html"
+            class="panel-link"
+        >
+            Donation
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </div>
+
+</aside>
+
+
+<!-- =========================================================
+     CART PANEL
+========================================================= -->
+
+<aside
+    class="cart-panel"
+    id="cartPanel"
+>
+
+    <div class="cart-head">
+
+        <h2>
+            Your Cart
+        </h2>
+
+        <button
+            class="panel-close"
+            id="cartClose"
+            aria-label="Close Cart"
+        >
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+    </div>
+
+
+    <div
+        class="cart-items"
+        id="cartItems"
+    >
+
+        <div class="empty-cart">
+
+            <i class="fa-solid fa-bag-shopping"></i>
+
+            <p>
+                Your cart is currently empty.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="cart-footer">
+
+        <div class="cart-total">
+
+            <span>
+                Total
+            </span>
+
+            <span id="cartTotal">
+                $0.00
+            </span>
+
+        </div>
+
+
+        <button
+            class="checkout-btn"
+            id="checkoutButton"
+        >
+            Proceed to Cart
+        </button>
+
+    </div>
+
+</aside>
+
+
+<script>
+
+/* =========================================================
+   THEBESTBUNDLE HOME JAVASCRIPT
+========================================================= */
+
+(function(){
+
+    "use strict";
+
+
+    /* =====================================================
+       SHARED CART
+    ===================================================== */
+
+    const CART_KEY = "theBestBundleCart";
+
+
+    let cart = [];
+
+
+    try{
+
+        cart =
+            JSON.parse(
+                localStorage.getItem(CART_KEY)
+            ) || [];
+
+        if(!Array.isArray(cart)){
+            cart = [];
         }
-    );
 
-    $("cartTotal")
-        .textContent =
-        "$" +
-        total.toFixed(2);
+    }catch(error){
 
-    box
-        .querySelectorAll(".remove-item")
-        .forEach(
-            b =>
+        cart = [];
 
-                b.addEventListener(
-                    "click",
-                    () => {
+    }
 
-                        cart.splice(
-                            Number(
-                                b.dataset.index
-                            ),
-                            1
-                        );
 
-                        saveCart();
-                    }
-                )
+    const cartCount =
+        document.getElementById("cartCount");
+
+    const cartItems =
+        document.getElementById("cartItems");
+
+    const cartTotal =
+        document.getElementById("cartTotal");
+
+    const cartPanel =
+        document.getElementById("cartPanel");
+
+
+    function saveCart(){
+
+        localStorage.setItem(
+            CART_KEY,
+            JSON.stringify(cart)
         );
-}
 
-function openCart(){
+    }
 
-    $("cartPanel")
-        .classList
-        .add("active");
 
-    $("cartOverlay")
-        .classList
-        .add("active");
+    function updateCartCount(){
 
-    document.body
-        .classList
-        .add("locked");
+        if(!cartCount) return;
 
-    renderCart();
-}
+        const total =
+            cart.reduce(
+                (sum,item) =>
+                    sum +
+                    Number(item.quantity || 1),
+                0
+            );
 
-function closeCart(){
+        cartCount.textContent = total;
 
-    $("cartPanel")
-        .classList
-        .remove("active");
+    }
 
-    $("cartOverlay")
-        .classList
-        .remove("active");
 
-    document.body
-        .classList
-        .remove("locked");
-}
+    function renderCart(){
 
-$("cartButton")
-    .addEventListener(
-        "click",
-        openCart
-    );
+        if(!cartItems) return;
 
-$("closeCart")
-    .addEventListener(
-        "click",
-        closeCart
-    );
 
-$("cartOverlay")
-    .addEventListener(
-        "click",
-        closeCart
-    );
+        if(!cart.length){
 
-$("reviewCart")
-    .addEventListener(
-        "click",
-        () => {
+            cartItems.innerHTML = `
 
-            if(cart.length){
+                <div class="empty-cart">
+
+                    <i class="fa-solid fa-bag-shopping"></i>
+
+                    <p>
+                        Your cart is currently empty.
+                    </p>
+
+                </div>
+
+            `;
+
+            if(cartTotal){
+                cartTotal.textContent = "$0.00";
+            }
+
+            updateCartCount();
+
+            return;
+        }
+
+
+        let total = 0;
+
+
+        cartItems.innerHTML =
+            cart.map(
+                (item,index) => {
+
+                    const price =
+                        Number(item.price || 0);
+
+                    const quantity =
+                        Number(item.quantity || 1);
+
+                    total +=
+                        price * quantity;
+
+
+                    return `
+
+                        <div class="cart-item">
+
+                            <div class="cart-item-image">
+
+                                <img
+                                    src="${escapeHtml(item.image || "")}"
+                                    alt=""
+                                >
+
+                            </div>
+
+
+                            <div>
+
+                                <h4>
+                                    ${escapeHtml(item.name || "Product")}
+                                </h4>
+
+                                <div class="cart-item-price">
+                                    $${price.toFixed(2)}
+                                </div>
+
+                            </div>
+
+
+                            <button
+                                class="remove-item"
+                                data-index="${index}"
+                                aria-label="Remove item"
+                            >
+
+                                <i class="fa-solid fa-xmark"></i>
+
+                            </button>
+
+                        </div>
+
+                    `;
+
+                }
+            ).join("");
+
+
+        if(cartTotal){
+
+            cartTotal.textContent =
+                "$" + total.toFixed(2);
+
+        }
+
+
+        document
+            .querySelectorAll(".remove-item")
+            .forEach(
+                button => {
+
+                    button.addEventListener(
+                        "click",
+                        function(){
+
+                            const index =
+                                Number(
+                                    this.dataset.index
+                                );
+
+                            cart.splice(index,1);
+
+                            saveCart();
+
+                            renderCart();
+
+                        }
+                    );
+
+                }
+            );
+
+
+        updateCartCount();
+
+    }
+
+
+    function addToCart(product){
+
+        const existing =
+            cart.find(
+                item =>
+                    item.id === product.id
+            );
+
+
+        if(existing){
+
+            existing.quantity =
+                Number(existing.quantity || 1) + 1;
+
+        }else{
+
+            cart.push({
+
+                id:product.id,
+
+                name:product.name,
+
+                price:Number(product.price),
+
+                image:product.image,
+
+                quantity:1
+
+            });
+
+        }
+
+
+        saveCart();
+
+        renderCart();
+
+        openCart();
+
+    }
+
+
+    document
+        .querySelectorAll(".add-cart")
+        .forEach(
+            button => {
+
+                button.addEventListener(
+                    "click",
+                    function(){
+
+                        addToCart({
+
+                            id:this.dataset.id,
+
+                            name:this.dataset.name,
+
+                            price:this.dataset.price,
+
+                            image:this.dataset.image
+
+                        });
+
+                    }
+                );
+
+            }
+        );
+
+
+    function openCart(){
+
+        if(cartPanel){
+
+            cartPanel.classList.add("active");
+
+        }
+
+    }
+
+
+    function closeCart(){
+
+        if(cartPanel){
+
+            cartPanel.classList.remove("active");
+
+        }
+
+    }
+
+
+    const cartButton =
+        document.getElementById("cartButton");
+
+    const cartClose =
+        document.getElementById("cartClose");
+
+
+    if(cartButton){
+
+        cartButton.addEventListener(
+            "click",
+            openCart
+        );
+
+    }
+
+
+    if(cartClose){
+
+        cartClose.addEventListener(
+            "click",
+            closeCart
+        );
+
+    }
+
+
+    const checkoutButton =
+        document.getElementById("checkoutButton");
+
+
+    if(checkoutButton){
+
+        checkoutButton.addEventListener(
+            "click",
+            function(){
 
                 window.location.href =
                     "cart.html";
+
             }
-        }
-    );
+        );
 
-/* =====================================================
-   ADD TO CART
-===================================================== */
+    }
 
-document
-    .querySelectorAll(".add-cart")
-    .forEach(
-        btn => {
 
-            btn.addEventListener(
-                "click",
-                e => {
+    /* =====================================================
+       SEARCH
+    ===================================================== */
 
-                    e.preventDefault();
+    const searchButton =
+        document.getElementById("searchButton");
 
-                    const id =
-                        btn.dataset.id;
+    const searchOverlay =
+        document.getElementById("searchOverlay");
 
-                    const existing =
-                        cart.find(
-                            p => p.id === id
-                        );
+    const searchInput =
+        document.getElementById("searchInput");
 
-                    if(existing){
+    const searchSubmit =
+        document.getElementById("searchSubmit");
 
-                        existing.quantity =
 
-                            (
-                                Number(
-                                    existing.quantity
-                                ) || 1
-                            ) + 1;
+    function openSearch(){
 
-                        existing.priceId =
-                            btn.dataset.priceId ||
-                            existing.priceId;
+        if(!searchOverlay) return;
 
-                        existing.stripe =
-                            btn.dataset.stripe ||
-                            existing.stripe;
+        searchOverlay.classList.add("active");
 
-                    }else{
+        setTimeout(
+            function(){
 
-                        cart.push({
-
-                            id:id,
-
-                            name:
-                                btn.dataset.name,
-
-                            price:
-                                Number(
-                                    btn.dataset.price
-                                ),
-
-                            image:
-                                btn.dataset.image,
-
-                            quantity:1,
-
-                            priceId:
-                                btn.dataset.priceId,
-
-                            stripe:
-                                btn.dataset.stripe
-                        });
-                    }
-
-                    saveCart();
-
-                    openCart();
+                if(searchInput){
+                    searchInput.focus();
                 }
+
+            },
+            100
+        );
+
+    }
+
+
+    function closeSearch(){
+
+        if(searchOverlay){
+
+            searchOverlay.classList.remove("active");
+
+        }
+
+    }
+
+
+    if(searchButton){
+
+        searchButton.addEventListener(
+            "click",
+            openSearch
+        );
+
+    }
+
+
+    if(searchOverlay){
+
+        searchOverlay.addEventListener(
+            "click",
+            function(event){
+
+                if(
+                    event.target ===
+                    searchOverlay
+                ){
+
+                    closeSearch();
+
+                }
+
+            }
+        );
+
+    }
+
+
+    function performSearch(){
+
+        const query =
+            searchInput
+                ? searchInput.value.trim()
+                : "";
+
+
+        if(!query){
+            return;
+        }
+
+
+        window.location.href =
+            "search.html?q=" +
+            encodeURIComponent(query);
+
+    }
+
+
+    if(searchSubmit){
+
+        searchSubmit.addEventListener(
+            "click",
+            performSearch
+        );
+
+    }
+
+
+    if(searchInput){
+
+        searchInput.addEventListener(
+            "keydown",
+            function(event){
+
+                if(
+                    event.key ===
+                    "Enter"
+                ){
+
+                    performSearch();
+
+                }
+
+                if(
+                    event.key ===
+                    "Escape"
+                ){
+
+                    closeSearch();
+
+                }
+
+            }
+        );
+
+    }
+
+
+    /* =====================================================
+       COLLECTION PANEL
+    ===================================================== */
+
+    const collectionPanel =
+        document.getElementById(
+            "collectionPanel"
+        );
+
+    const collectionButton =
+        document.getElementById(
+            "collectionButton"
+        );
+
+    const collectionClose =
+        document.getElementById(
+            "collectionClose"
+        );
+
+    const heroExploreButton =
+        document.getElementById(
+            "heroExploreButton"
+        );
+
+
+    function openCollection(){
+
+        if(collectionPanel){
+
+            collectionPanel.classList.add(
+                "active"
             );
+
+        }
+
+    }
+
+
+    function closeCollection(){
+
+        if(collectionPanel){
+
+            collectionPanel.classList.remove(
+                "active"
+            );
+
+        }
+
+    }
+
+
+    if(collectionButton){
+
+        collectionButton.addEventListener(
+            "click",
+            openCollection
+        );
+
+    }
+
+
+    if(collectionClose){
+
+        collectionClose.addEventListener(
+            "click",
+            closeCollection
+        );
+
+    }
+
+
+    if(heroExploreButton){
+
+        heroExploreButton.addEventListener(
+            "click",
+            openCollection
+        );
+
+    }
+
+
+    /* =====================================================
+       ESCAPE KEY
+    ===================================================== */
+
+    document.addEventListener(
+        "keydown",
+        function(event){
+
+            if(
+                event.key ===
+                "Escape"
+            ){
+
+                closeSearch();
+
+                closeCollection();
+
+                closeCart();
+
+            }
+
         }
     );
 
-/* =====================================================
-   ESCAPE
-===================================================== */
 
-document.addEventListener(
-    "keydown",
-    e => {
+    /* =====================================================
+       EXTERNAL LINK SAFETY
+    ===================================================== */
 
-        if(e.key === "Escape"){
+    document
+        .querySelectorAll(
+            'a[target="_blank"]'
+        )
+        .forEach(
+            link => {
 
-            closeCollection();
+                link.setAttribute(
+                    "rel",
+                    "noopener noreferrer"
+                );
 
-            closeSearch();
-
-            closeCart();
-        }
-    }
-);
-
-/* =====================================================
-   STORAGE SYNCHRONIZATION
-===================================================== */
-
-window.addEventListener(
-    "storage",
-    e => {
-
-        if(
-            e.key ===
-            "theBestBundleCart"
-        ){
-
-            try{
-
-                cart =
-                    JSON.parse(
-                        e.newValue || "[]"
-                    );
-
-                if(!Array.isArray(cart)){
-                    cart = [];
-                }
-
-            }catch(x){
-
-                cart = [];
             }
+        );
 
-            renderCart();
-        }
+
+    /* =====================================================
+       SESSION
+    ===================================================== */
+
+    try{
+
+        sessionStorage.setItem(
+            "theBestBundleLastPage",
+            "home"
+        );
+
+    }catch(error){
+
+        /* Ignore sessionStorage errors */
+
     }
-);
 
-/* =====================================================
-   PREVENT PLACEHOLDER LINKS
-===================================================== */
 
-document
-    .querySelectorAll(
-        'a[href="#"]'
-    )
-    .forEach(
-        a =>
+    /* =====================================================
+       HTML ESCAPE
+    ===================================================== */
 
-            a.addEventListener(
-                "click",
-                e => e.preventDefault()
+    function escapeHtml(value){
+
+        return String(value)
+            .replace(
+                /&/g,
+                "&amp;"
             )
-    );
-
-/* =====================================================
-   EXTERNAL LINK SAFETY
-===================================================== */
-
-document
-    .querySelectorAll(
-        'a[target="_blank"]'
-    )
-    .forEach(
-        a => {
-
-            const rel =
-
-                (
-                    a.getAttribute("rel") ||
-                    ""
-                )
-                .split(/\s+/)
-                .filter(Boolean);
-
-            if(
-                !rel.includes("noopener")
-            ){
-
-                rel.push("noopener");
-            }
-
-            if(
-                !rel.includes("noreferrer")
-            ){
-
-                rel.push("noreferrer");
-            }
-
-            a.setAttribute(
-                "rel",
-                rel.join(" ")
+            .replace(
+                /</g,
+                "&lt;"
+            )
+            .replace(
+                />/g,
+                "&gt;"
+            )
+            .replace(
+                /"/g,
+                "&quot;"
+            )
+            .replace(
+                /'/g,
+                "&#039;"
             );
-        }
-    );
 
-/* =====================================================
-   LAST PAGE
-===================================================== */
+    }
 
-sessionStorage.setItem(
-    "theBestBundleLastPage",
-    window.location.href
-);
 
-/* =====================================================
-   INITIAL CART
-===================================================== */
+    /* =====================================================
+       INITIAL RENDER
+    ===================================================== */
 
-renderCart();
+    renderCart();
+
+
+})();
 
 </script>
+
 
 </body>
 
