@@ -32,9 +32,28 @@
     rel="apple-touch-icon"
     href="/thebestbundle/images/favicon.png">
 
+<!-- GOOGLE FONTS -->
+
+<link
+    rel="preconnect"
+    href="https://fonts.googleapis.com">
+
+<link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+<!-- FONT AWESOME -->
+
 <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- GOOGLE ANALYTICS -->
 
 <script
     async
@@ -63,2810 +82,3086 @@ gtag(
 
 <style>
 
+/* =========================================================
+   THEBESTBUNDLE — HOME 2.0
+========================================================= */
+
 :root{
 
- --navy:#071A33;
+    --navy:#071A33;
+    --navy2:#0D2B50;
+    --navy3:#123761;
 
- --navy2:#0D2B50;
+    --gold:#C8A45D;
+    --gold-light:#E1C77E;
 
- --navy3:#123761;
+    --cream:#F8F5ED;
 
- --gold:#F4C542;
+    --white:#FFFFFF;
+    --ink:#172033;
+    --gray:#687385;
+    --line:#E5E7EB;
 
- --gold2:#D9A91A;
+    --max:1180px;
 
- --white:#fff;
-
- --cream:#F8F7F2;
-
- --ink:#172033;
-
- --gray:#64748B;
-
- --line:#E2E8F0;
-
- --max:1180px;
-
- --radius:14px;
+    --radius:18px;
 
 }
 
 *{
 
- box-sizing:border-box;
-
- margin:0;
-
- padding:0;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 
 }
 
 html{
 
- scroll-behavior:smooth;
+    scroll-behavior:smooth;
 
 }
 
 body{
 
- font-family:Arial,Helvetica,sans-serif;
+    font-family:"Montserrat",Arial,sans-serif;
 
- background:#fff;
+    background:var(--cream);
 
- color:var(--ink);
+    color:var(--ink);
 
- line-height:1.55;
+    line-height:1.6;
 
- overflow-x:hidden;
+    overflow-x:hidden;
 
 }
 
 body.locked{
 
- overflow:hidden;
+    overflow:hidden;
 
 }
 
 img{
 
- display:block;
+    display:block;
 
- max-width:100%;
+    max-width:100%;
 
- height:auto;
+    height:auto;
 
 }
 
 a{
 
- text-decoration:none;
+    text-decoration:none;
 
- color:inherit;
+    color:inherit;
 
 }
 
 button,
 input{
 
- font:inherit;
+    font:inherit;
 
 }
 
 button{
 
- cursor:pointer;
+    cursor:pointer;
 
 }
 
 .container{
 
- width:90%;
+    width:90%;
 
- max-width:var(--max);
+    max-width:var(--max);
 
- margin:auto;
-
-}
-
-.gold{
-
- color:var(--gold);
+    margin:auto;
 
 }
+
+
+/* =========================================================
+   GLOBAL BUTTONS
+========================================================= */
 
 .btn{
 
- display:inline-flex;
+    display:inline-flex;
 
- align-items:center;
+    align-items:center;
 
- justify-content:center;
+    justify-content:center;
 
- gap:10px;
+    gap:10px;
 
- min-height:48px;
+    min-height:48px;
 
- padding:12px 22px;
+    padding:13px 23px;
 
- border-radius:8px;
+    border-radius:30px;
 
- font-weight:800;
+    font-size:12px;
 
- border:1px solid transparent;
+    font-weight:800;
 
- transition:.2s ease;
+    letter-spacing:.2px;
+
+    border:1px solid transparent;
+
+    transition:.25s ease;
 
 }
 
 .btn:hover{
 
- transform:translateY(-2px);
+    transform:translateY(-2px);
 
 }
 
 .btn-gold{
 
- background:var(--gold);
+    background:var(--gold);
 
- color:var(--navy);
+    color:var(--navy);
 
 }
 
 .btn-gold:hover{
 
- background:#FFD95A;
+    background:var(--gold-light);
 
 }
 
 .btn-outline{
 
- background:transparent;
+    background:transparent;
 
- color:#fff;
+    color:#fff;
 
- border-color:rgba(255,255,255,.7);
+    border-color:rgba(255,255,255,.6);
 
 }
 
 .btn-outline:hover{
 
- border-color:var(--gold);
+    color:var(--gold-light);
 
- color:var(--gold);
+    border-color:var(--gold-light);
 
 }
 
 .btn-dark{
 
- background:var(--navy);
+    background:var(--navy);
 
- color:#fff;
+    color:#fff;
 
 }
 
+.btn-dark:hover{
+
+    background:var(--navy2);
+
+}
+
+
+/* =========================================================
+   SECTION HEADINGS
+========================================================= */
+
 .section{
 
- padding:78px 0;
+    padding:82px 0;
+
+}
+
+.section-kicker{
+
+    text-align:center;
+
+    color:var(--gold);
+
+    font-size:10px;
+
+    font-weight:800;
+
+    letter-spacing:2.2px;
+
+    margin-bottom:9px;
 
 }
 
 .section-title{
 
- text-align:center;
+    text-align:center;
 
- font-family:Georgia,"Times New Roman",serif;
+    font-family:"Cormorant Garamond",Georgia,serif;
 
- font-size:clamp(28px,4vw,42px);
+    color:var(--navy);
 
- line-height:1.15;
+    font-size:clamp(34px,5vw,50px);
 
- margin-bottom:12px;
+    line-height:1.05;
+
+    margin-bottom:13px;
 
 }
 
 .section-intro{
 
- text-align:center;
+    max-width:690px;
 
- max-width:700px;
+    margin:0 auto 38px;
 
- margin:0 auto 34px;
+    text-align:center;
 
- color:var(--gray);
+    color:var(--gray);
 
- font-size:15px;
+    font-size:13px;
+
+    line-height:1.75;
 
 }
 
-/* HEADER */
+
+/* =========================================================
+   HEADER
+========================================================= */
 
 .site-header{
 
- background:var(--navy);
+    background:var(--navy);
 
- border-bottom:1px solid rgba(255,255,255,.13);
+    border-bottom:1px solid rgba(255,255,255,.12);
 
- position:relative;
+    position:relative;
 
- z-index:1000;
+    z-index:1000;
 
 }
 
 .header-inner{
 
- min-height:70px;
+    min-height:88px;
 
- display:flex;
+    display:flex;
 
- align-items:center;
+    align-items:center;
 
- gap:24px;
-
- min-width:0;
-
- overflow-x:auto;
-
- overflow-y:hidden;
+    gap:24px;
 
 }
 
 .logo{
 
- flex-shrink:0;
+    flex-shrink:0;
+
+    font-family:"Cormorant Garamond",Georgia,serif;
+
+    font-size:43px;
+
+    line-height:1;
+
+    font-weight:600;
+
+    color:var(--gold);
+
+    letter-spacing:-1.2px;
 
 }
 
-.logo img{
+.logo:hover{
 
- height:56px;
-
- width:auto;
+    color:var(--gold-light);
 
 }
 
 .desktop-nav{
 
- display:flex;
+    display:flex;
 
- align-items:center;
+    align-items:center;
 
- gap:25px;
+    gap:25px;
 
- margin-left:auto;
+    margin-left:auto;
 
 }
 
 .desktop-nav a{
 
- color:#fff;
+    color:rgba(255,255,255,.88);
 
- font-size:13px;
+    font-size:11px;
 
- font-weight:700;
+    font-weight:700;
 
- white-space:nowrap;
+    white-space:nowrap;
 
- position:relative;
+    transition:.2s ease;
+
+}
+
+.desktop-nav a:hover{
+
+    color:var(--gold-light);
 
 }
 
 .desktop-nav a:first-child{
 
- color:var(--gold);
-
-}
-
-.desktop-nav a:first-child:after{
-
- content:"";
-
- position:absolute;
-
- left:0;
-
- right:0;
-
- bottom:-21px;
-
- height:2px;
-
- background:var(--gold);
+    color:var(--gold);
 
 }
 
 .header-tools{
 
- display:flex;
+    display:flex;
 
- align-items:center;
+    align-items:center;
 
- gap:8px;
+    gap:7px;
+
+    flex-shrink:0;
 
 }
 
 .header-tool{
 
- display:flex;
+    min-height:37px;
 
- align-items:center;
+    display:flex;
 
- justify-content:center;
+    align-items:center;
 
- min-height:38px;
+    justify-content:center;
 
- border-radius:22px;
+    gap:7px;
 
- color:#fff;
+    border:1px solid rgba(255,255,255,.45);
 
- border:1px solid rgba(255,255,255,.55);
+    border-radius:24px;
 
- background:transparent;
+    padding:0 12px;
 
- padding:0 13px;
+    background:transparent;
 
- font-size:12px;
+    color:#fff;
 
- font-weight:800;
+    font-size:10px;
 
-}
+    font-weight:800;
 
-.header-tool.icon{
-
- width:38px;
-
- padding:0;
-
-}
-
-.header-tool.gold-border{
-
- border-color:var(--gold);
-
-}
-
-.header-tool.news{
-
- background:var(--gold);
-
- color:var(--navy);
-
- border-color:var(--gold);
+    transition:.2s ease;
 
 }
 
 .header-tool:hover{
 
- color:var(--gold);
+    color:var(--gold-light);
 
- border-color:var(--gold);
+    border-color:var(--gold);
+
+}
+
+.header-tool.icon{
+
+    width:38px;
+
+    padding:0;
+
+}
+
+.header-tool.gold-border{
+
+    border-color:var(--gold);
+
+}
+
+.header-tool.news{
+
+    background:var(--gold);
+
+    border-color:var(--gold);
+
+    color:var(--navy);
 
 }
 
 .header-tool.news:hover{
 
- background:#FFD95A;
+    background:var(--gold-light);
 
- color:var(--navy);
+    color:var(--navy);
 
 }
 
 .cart-wrap{
 
- position:relative;
+    position:relative;
 
 }
 
 .cart-count{
 
- position:absolute;
+    position:absolute;
 
- top:-5px;
+    top:-5px;
 
- right:-5px;
+    right:-5px;
 
- min-width:17px;
+    min-width:17px;
 
- height:17px;
+    height:17px;
 
- border-radius:50%;
+    padding:0 4px;
 
- background:var(--gold);
+    border-radius:50%;
 
- color:var(--navy);
+    background:var(--gold);
 
- font-size:9px;
+    color:var(--navy);
 
- font-weight:900;
+    font-size:9px;
 
- display:none;
+    font-weight:900;
 
- align-items:center;
+    display:none;
 
- justify-content:center;
+    align-items:center;
 
-}
-
-@media(max-width:1080px){
-
- .desktop-nav{
-
-  gap:13px;
-
- }
-
- .desktop-nav a{
-
-  font-size:11px;
-
- }
-
- .header-tool{
-
-  padding:0 9px;
-
- }
-
-}
-
-@media(max-width:760px){
-
- .header-inner{
-
-  min-height:66px;
-
-  gap:8px;
-
-  overflow-x:auto;
-
- }
-
- .logo img{
-
-  height:30px;
-
- }
-
- .desktop-nav{
-
-  margin-left:0;
-
-  gap:13px;
-
- }
-
- .desktop-nav a{
-
-  font-size:10px;
-
- }
-
- .header-tools{
-
-  margin-left:auto;
-
-  flex-shrink:0;
-
- }
-
- .header-tool:not(.icon):not(.gold-border):not(.news){
-
-  display:none;
-
- }
-
- .header-tool.icon{
-
-  order:1;
-
- }
-
- .header-tool.gold-border{
-
-  display:flex;
-
-  order:2;
-
- }
-
- .cart-wrap{
-
-  order:3;
-
- }
-
- .header-tool.news{
-
-  display:flex;
-
-  order:4;
-
- }
-
- .desktop-nav a:first-child:after{
-
-  bottom:-18px;
-
- }
-
-}
-
-/* HERO */
-
-.hero{
-
- background:
-
- radial-gradient(
-  circle at 80% 35%,
-  rgba(244,197,66,.12),
-  transparent 28%
- ),
-
- radial-gradient(
-  circle at 15% 80%,
-  rgba(255,255,255,.04),
-  transparent 28%
- ),
-
- linear-gradient(
-  135deg,
-  #06172E,
-  #0B294B 55%,
-  #071A33
- );
-
- color:#fff;
-
- position:relative;
-
- overflow:hidden;
-
- padding:52px 0 78px;
-
-}
-
-.hero:before{
-
- content:"";
-
- position:absolute;
-
- inset:0;
-
- opacity:.18;
-
- background-image:
-
-  radial-gradient(
-   rgba(255,255,255,.22) 1px,
-   transparent 1px
-  );
-
- background-size:32px 32px;
-
-}
-
-.hero-grid{
-
- position:relative;
-
- z-index:2;
-
- display:grid;
-
- grid-template-columns:.82fr 1.18fr;
-
- gap:28px;
-
- align-items:center;
-
-}
-
-.hero-copy{
-
- max-width:500px;
-
-}
-
-.hero h1{
-
- font-family:Georgia,"Times New Roman",serif;
-
- font-size:clamp(40px,5vw,61px);
-
- line-height:1.03;
-
- margin-bottom:18px;
-
-}
-
-.hero h1 span{
-
- color:var(--gold);
-
-}
-
-.hero h1:after{
-
- content:"";
-
- display:block;
-
- width:58px;
-
- height:2px;
-
- background:var(--gold);
-
- margin-top:13px;
-
-}
-
-.hero p{
-
- font-size:15px;
-
- color:rgba(255,255,255,.88);
-
- max-width:440px;
-
- margin-bottom:22px;
-
-}
-
-.hero-actions{
-
- display:flex;
-
- gap:12px;
-
- flex-wrap:wrap;
-
-}
-
-/* HERO BUNDLE DISPLAY */
-
-.hero-art{
-
- position:relative;
-
- min-height:500px;
-
- display:flex;
-
- align-items:center;
-
- justify-content:center;
-
-}
-
-/* GOLDEN LIGHT BEHIND THE BUNDLES */
-
-.hero-art:before{
-
- content:"";
-
- position:absolute;
-
- width:78%;
-
- height:82%;
-
- left:11%;
-
- top:9%;
-
- background:
-
-  radial-gradient(
-   ellipse at center,
-   rgba(244,197,66,.34) 0%,
-   rgba(244,197,66,.20) 22%,
-   rgba(244,197,66,.08) 48%,
-   transparent 72%
-  );
-
- filter:blur(20px);
-
- z-index:0;
-
- pointer-events:none;
-
-}
-
-/* SECOND GOLDEN LIGHT */
-
-.hero-art:after{
-
- content:"";
-
- position:absolute;
-
- width:60%;
-
- height:55%;
-
- left:20%;
-
- top:23%;
-
- background:
-
-  radial-gradient(
-   ellipse at center,
-   rgba(255,215,90,.20),
-   transparent 68%
-  );
-
- filter:blur(16px);
-
- z-index:0;
-
- pointer-events:none;
-
-}
-
-.hero-floor{
-
- position:absolute;
-
- bottom:24px;
-
- width:84%;
-
- height:48px;
-
- border-radius:50%;
-
- background:rgba(0,0,0,.48);
-
- filter:blur(8px);
-
- z-index:1;
-
-}
-
-.hero-center-card{
-
- position:absolute;
-
- width:94%;
-
- height:94%;
-
- left:3%;
-
- top:3%;
-
- border-radius:22px;
-
- border:1px solid rgba(244,197,66,.88);
-
- background:
-
-  linear-gradient(
-   145deg,
-   rgba(255,255,255,.06),
-   rgba(7,26,51,.16)
-  );
-
- box-shadow:
-
- 0 0 18px rgba(244,197,66,.35),
-
- 0 0 42px rgba(244,197,66,.18),
-
- 0 0 75px rgba(244,197,66,.10),
-
- inset 0 0 30px rgba(244,197,66,.08);
-
- z-index:1;
-
-}
-
-/* GOLD LIGHT ON RECTANGLE */
-
-.hero-center-card:before{
-
- content:"";
-
- position:absolute;
-
- inset:-2px;
-
- border-radius:22px;
-
- border:1px solid rgba(255,215,90,.45);
-
- box-shadow:
-
- 0 0 12px rgba(244,197,66,.65),
-
- 0 0 28px rgba(244,197,66,.25);
-
- pointer-events:none;
-
-}
-
-/* PREMIUM BADGE */
-
-.quality-badge{
-
- position:absolute;
-
- right:-1%;
-
- top:8px;
-
- width:78px;
-
- height:78px;
-
- border-radius:50%;
-
- background:var(--gold);
-
- color:var(--navy);
-
- display:flex;
-
- align-items:center;
-
- justify-content:center;
-
- text-align:center;
-
- font-size:9px;
-
- font-weight:900;
-
- line-height:1.2;
-
- box-shadow:
-
- 0 10px 25px rgba(0,0,0,.22),
-
- 0 0 25px rgba(244,197,66,.35);
-
- z-index:20;
-
-}
-
-/* ALL HERO BUNDLE IMAGES */
-
-.hero-item{
-
- position:absolute;
-
- display:flex;
-
- align-items:center;
-
- justify-content:center;
-
- filter:
-
-  drop-shadow(
-   0 18px 22px rgba(0,0,0,.40)
-  )
-
-  drop-shadow(
-   0 0 15px rgba(244,197,66,.24)
-  );
-
- z-index:5;
-
-}
-
-/* GOLD LIGHT BEHIND EACH BUNDLE */
-
-.hero-item:before{
-
- content:"";
-
- position:absolute;
-
- width:82%;
-
- height:82%;
-
- left:9%;
-
- top:9%;
-
- border-radius:50%;
-
- background:
-
-  radial-gradient(
-   circle,
-   rgba(244,197,66,.38),
-   rgba(244,197,66,.14) 42%,
-   transparent 72%
-  );
-
- filter:blur(15px);
-
- z-index:-1;
-
- pointer-events:none;
-
-}
-
-.hero-item img{
-
- width:100%;
-
- height:100%;
-
- object-fit:contain;
-
- position:relative;
-
- z-index:2;
-
-}
-
-/* CENTER = ULTIMATE COLLECTION */
-
-.hero-item.center{
-
- width:310px;
-
- height:350px;
-
- left:50%;
-
- top:50%;
-
- transform:translate(-50%,-50%);
-
- z-index:10;
-
- filter:
-
-  drop-shadow(
-   0 24px 28px rgba(0,0,0,.48)
-  )
-
-  drop-shadow(
-   0 0 20px rgba(244,197,66,.30)
-  );
-
-}
-
-/* TOP LEFT = STARTER */
-
-.hero-item.left-side{
-
- width:155px;
-
- height:205px;
-
- left:7%;
-
- top:8%;
-
- transform:none;
-
- z-index:6;
-
-}
-
-/* TOP RIGHT = CREATOR */
-
-.hero-item.right-side{
-
- width:155px;
-
- height:205px;
-
- right:7%;
-
- top:8%;
-
- transform:none;
-
- z-index:6;
-
-}
-
-/* BOTTOM LEFT = BUSINESS */
-
-.hero-item.left-small{
-
- width:155px;
-
- height:205px;
-
- left:7%;
-
- bottom:7%;
-
- transform:none;
-
- z-index:6;
-
-}
-
-/* BOTTOM RIGHT = HEALTH & WELLNESS */
-
-.hero-item.right-small{
-
- width:155px;
-
- height:205px;
-
- right:7%;
-
- bottom:7%;
-
- transform:none;
-
- z-index:6;
-
-}
-
-/* MOBILE HERO */
-
-@media(max-width:800px){
-
- .hero-grid{
-
-  grid-template-columns:1fr;
-
-  text-align:center;
-
- }
-
- .hero-copy{
-
-  margin:auto;
-
- }
-
- .hero p{
-
-  margin-left:auto;
-
-  margin-right:auto;
-
- }
-
- .hero-actions{
-
-  justify-content:center;
-
- }
-
- .hero-art{
-
-  min-height:430px;
-
-  margin-top:10px;
-
- }
-
- .hero-center-card{
-
-  width:96%;
-
-  height:94%;
-
-  left:2%;
-
-  top:3%;
-
- }
-
- .hero-item.center{
-
-  width:235px;
-
-  height:275px;
-
- }
-
- .hero-item.left-side{
-
-  width:105px;
-
-  height:145px;
-
-  left:2%;
-
-  top:7%;
-
- }
-
- .hero-item.right-side{
-
-  width:105px;
-
-  height:145px;
-
-  right:2%;
-
-  top:7%;
-
- }
-
- .hero-item.left-small{
-
-  width:105px;
-
-  height:145px;
-
-  left:2%;
-
-  bottom:6%;
-
- }
-
- .hero-item.right-small{
-
-  width:105px;
-
-  height:145px;
-
-  right:2%;
-
-  bottom:6%;
-
- }
-
- .quality-badge{
-
-  right:0;
-
-  top:3px;
-
- }
-
-}
-
-@media(max-width:500px){
-
- .hero{
-
-  padding:38px 0 55px;
-
- }
-
- .hero h1{
-
-  font-size:38px;
-
- }
-
- .hero-art{
-
-  min-height:355px;
-
- }
-
- .hero-center-card{
-
-  width:96%;
-
-  height:94%;
-
-  left:2%;
-
-  top:3%;
-
-  border-radius:18px;
-
- }
-
- .hero-item.center{
-
-  width:190px;
-
-  height:225px;
-
- }
-
- .hero-item.left-side{
-
-  width:78px;
-
-  height:108px;
-
-  left:1%;
-
-  top:7%;
-
- }
-
- .hero-item.right-side{
-
-  width:78px;
-
-  height:108px;
-
-  right:1%;
-
-  top:7%;
-
- }
-
- .hero-item.left-small{
-
-  width:78px;
-
-  height:108px;
-
-  left:1%;
-
-  bottom:5%;
-
- }
-
- .hero-item.right-small{
-
-  width:78px;
-
-  height:108px;
-
-  right:1%;
-
-  bottom:5%;
-
- }
-
- .quality-badge{
-
-  width:60px;
-
-  height:60px;
-
-  font-size:7px;
-
-  right:-2px;
-
-  top:0;
-
- }
-
-}
-
-/* TRUST BAR */
-
-.trust-bar{
-
- background:#fff;
-
- margin-top:-30px;
-
- position:relative;
-
- z-index:10;
-
- border-radius:16px;
-
- box-shadow:
-
- 0 8px 28px rgba(7,26,51,.13);
-
- padding:18px 20px;
-
-}
-
-.trust-grid{
-
- display:grid;
-
- grid-template-columns:repeat(5,1fr);
-
-}
-
-.trust-item{
-
- display:flex;
-
- align-items:center;
-
- justify-content:center;
-
- gap:11px;
-
- padding:4px 15px;
-
- border-right:1px solid var(--line);
-
- text-align:left;
-
-}
-
-.trust-item:last-child{
-
- border-right:0;
-
-}
-
-.trust-icon{
-
- width:38px;
-
- height:38px;
-
- display:flex;
-
- align-items:center;
-
- justify-content:center;
-
- border:1px solid #D5D9E0;
-
- border-radius:50%;
-
- color:var(--navy);
-
- flex-shrink:0;
-
-}
-
-.trust-item strong{
-
- display:block;
-
- font-size:11px;
-
-}
-
-.trust-item span{
-
- display:block;
-
- color:var(--gray);
-
- font-size:10px;
-
- line-height:1.25;
-
-}
-
-.trust-stars{
-
- color:var(--gold2);
-
- font-size:17px;
-
- letter-spacing:1px;
-
-}
-
-@media(max-width:800px){
-
- .trust-grid{
-
-  grid-template-columns:repeat(2,1fr);
-
- }
-
- .trust-item{
-
-  border-right:0;
-
-  border-bottom:1px solid var(--line);
-
-  padding:12px;
-
- }
-
- .trust-item:last-child{
-
-  border-bottom:0;
-
- }
-
-}
-
-@media(max-width:480px){
-
- .trust-grid{
-
-  grid-template-columns:1fr;
-
- }
-
- .trust-item{
-
-  justify-content:flex-start;
-
- }
-
-}
-
-/* COLLECTION */
-
-.collection{
-
- background:#fff;
-
- padding-top:28px;
-
-}
-
-.rule-title{
-
- display:flex;
-
- align-items:center;
-
- gap:15px;
-
- justify-content:center;
-
- font-family:Georgia,"Times New Roman",serif;
-
- font-size:17px;
-
- letter-spacing:1.2px;
-
- margin:0 0 18px;
-
-}
-
-.rule-title:before,
-.rule-title:after{
-
- content:"";
-
- width:80px;
-
- height:1px;
-
- background:#D9B44B;
-
-}
-
-.collection-grid{
-
- display:grid;
-
- grid-template-columns:repeat(4,1fr);
-
- gap:20px;
-
-}
-
-.collection-card{
-
- min-height:200px;
-
- border:1px solid var(--line);
-
- border-radius:10px;
-
- padding:25px 18px;
-
- display:flex;
-
- flex-direction:column;
-
- align-items:center;
-
- text-align:center;
-
- justify-content:center;
-
- background:#fff;
-
- transition:.2s ease;
-
- position:relative;
-
- overflow:visible;
-
-}
-
-/* TINY GOLD LIGHT
-   MATCHING THE REFERENCE
-   ON ALL FOUR COLLECTION CARDS */
-
-.collection-card:before{
-
- content:"";
-
- position:absolute;
-
- width:70px;
-
- height:10px;
-
- left:50%;
-
- top:-4px;
-
- transform:translateX(-50%);
-
- background:
-
-  radial-gradient(
-   ellipse at center,
-   rgba(255,215,90,.95) 0%,
-   rgba(244,197,66,.70) 18%,
-   rgba(244,197,66,.32) 38%,
-   rgba(244,197,66,.10) 58%,
-   transparent 78%
-  );
-
- filter:blur(3px);
-
- z-index:5;
-
- pointer-events:none;
-
-}
-
-.collection-card:after{
-
- content:"";
-
- position:absolute;
-
- width:34px;
-
- height:2px;
-
- left:50%;
-
- top:-1px;
-
- transform:translateX(-50%);
-
- background:
-
-  linear-gradient(
-   90deg,
-   transparent,
-   rgba(255,224,125,.95),
-   transparent
-  );
-
- box-shadow:
-
- 0 0 6px rgba(244,197,66,.75);
-
- z-index:6;
-
- pointer-events:none;
-
-}
-
-.collection-card > *{
-
- position:relative;
-
- z-index:7;
-
-}
-
-.collection-card.dark{
-
- background:var(--navy);
-
- color:#fff;
-
- border-color:var(--navy);
-
-}
-
-.collection-card:hover{
-
- transform:translateY(-4px);
-
- box-shadow:
-
- 0 12px 28px rgba(7,26,51,.12);
+    justify-content:center;
 
 }
 
-.collection-icon{
+@media(max-width:1100px){
 
- width:56px;
+    .desktop-nav{
 
- height:56px;
+        gap:14px;
 
- border-radius:50%;
+    }
 
- border:1px solid var(--gold2);
+    .desktop-nav a{
 
- display:flex;
-
- align-items:center;
-
- justify-content:center;
-
- color:var(--gold2);
-
- font-size:23px;
-
- margin-bottom:14px;
-
-}
-
-.collection-card h3{
-
- font-size:15px;
-
- margin-bottom:7px;
-
-}
-
-.collection-card p{
-
- font-size:12px;
-
- color:var(--gray);
-
- line-height:1.45;
-
- margin-bottom:15px;
-
-}
-
-.collection-card.dark p{
-
- color:rgba(255,255,255,.76);
-
-}
-
-.collection-link{
-
- border:1px solid var(--gold2);
-
- border-radius:5px;
-
- padding:6px 12px;
-
- font-size:11px;
-
- font-weight:800;
-
- color:var(--gold2);
-
-}
-
-.collection-card:not(.dark) .collection-link{
-
- color:var(--navy);
-
- border-color:var(--navy);
-
-}
-
-@media(max-width:800px){
-
- .collection-grid{
-
-  grid-template-columns:repeat(2,1fr);
-
- }
-
-}
-
-@media(max-width:500px){
-
- .collection-grid{
-
-  grid-template-columns:1fr;
-
- }
-
- .collection-card{
-
-  min-height:175px;
-
- }
-
-}
-
-/* BEST SELLERS */
-
-.best{
-
- background:#fff;
-
- padding:15px 0 70px;
-
-}
-
-.product-grid{
-
- display:grid;
-
- grid-template-columns:repeat(5,1fr);
-
- gap:16px;
-
-}
-
-.product-card{
-
- border:1px solid var(--line);
-
- border-radius:11px;
-
- overflow:hidden;
-
- background:#fff;
-
- box-shadow:
-
- 0 7px 22px rgba(7,26,51,.07);
-
- display:flex;
-
- flex-direction:column;
-
- transition:.2s ease;
-
-}
-
-.product-card:hover{
-
- transform:translateY(-4px);
-
- box-shadow:
-
- 0 14px 28px rgba(7,26,51,.12);
-
-}
-
-.product-image{
-
- width:100%;
-
- aspect-ratio:3 / 2;
-
- background:#071A33;
-
- overflow:hidden;
-
- display:flex;
-
- align-items:center;
-
- justify-content:center;
-
-}
-
-.product-image img{
-
- width:100%;
-
- height:100%;
-
- object-fit:contain;
-
- object-position:center;
-
-}
-
-.product-body{
-
- padding:12px;
-
- display:flex;
-
- flex-direction:column;
-
- flex:1;
-
-}
-
-.product-body h3{
-
- font-size:13px;
-
- line-height:1.25;
-
- margin-bottom:4px;
-
-}
-
-.product-meta{
-
- font-size:11px;
-
- color:var(--gray);
-
- line-height:1.35;
-
-}
-
-.product-rating{
-
- color:var(--gold2);
-
- font-size:11px;
-
- margin-top:7px;
-
-}
-
-.product-rating span{
-
- color:var(--gray);
-
- margin-left:3px;
-
-}
-
-.product-bottom{
-
- display:flex;
-
- align-items:center;
-
- justify-content:space-between;
-
- margin-top:auto;
-
- padding-top:10px;
-
- gap:8px;
-
-}
-
-.price{
-
- font-size:17px;
-
- font-weight:900;
-
-}
-
-.buy-now{
-
- font-size:11px;
-
- font-weight:800;
-
- color:var(--navy);
-
-}
-
-.buy-now:hover{
-
- color:var(--gold2);
-
-}
-
-.mini-cart{
-
- width:32px;
-
- height:32px;
-
- border-radius:6px;
-
- background:var(--gold);
-
- color:var(--navy);
-
- border:0;
-
- display:flex;
-
- align-items:center;
-
- justify-content:center;
-
- flex-shrink:0;
-
-}
-
-.mini-cart:hover{
-
- background:#FFD95A;
-
-}
-
-@media(max-width:1050px){
-
- .product-grid{
-
-  grid-template-columns:repeat(3,1fr);
-
- }
-
-}
-
-@media(max-width:700px){
-
- .product-grid{
-
-  grid-template-columns:repeat(2,1fr);
-
- }
-
-}
-
-@media(max-width:470px){
-
- .product-grid{
-
-  grid-template-columns:1fr;
-
- }
-
-}
-
-/* REVIEWS */
-
-.review-section{
-
- background:#F8F7F2;
-
- padding:55px 0;
-
-}
-
-.review-layout{
-
- display:grid;
-
- grid-template-columns:.75fr 1.25fr;
-
- gap:28px;
-
- align-items:center;
-
-}
-
-.review-intro h2{
-
- font-family:Georgia,"Times New Roman",serif;
-
- font-size:32px;
-
- line-height:1.1;
-
- margin-bottom:12px;
-
-}
-
-.review-intro h2:after{
-
- content:"";
-
- display:block;
-
- width:48px;
-
- height:2px;
-
- background:var(--gold);
-
- margin-top:10px;
-
-}
-
-.review-intro p{
-
- font-size:13px;
-
- color:var(--gray);
-
- max-width:260px;
-
- margin-bottom:18px;
-
-}
-
-.review-cards{
-
- display:grid;
-
- grid-template-columns:repeat(3,1fr);
-
- gap:14px;
-
-}
-
-.review-card{
-
- background:#fff;
-
- border:1px solid var(--line);
-
- border-radius:9px;
-
- padding:16px;
-
- box-shadow:
-
- 0 5px 16px rgba(7,26,51,.05);
-
-}
-
-.review-card .stars{
-
- color:var(--gold2);
-
- font-size:12px;
-
- margin-bottom:8px;
-
-}
-
-.review-card p{
-
- font-size:12px;
-
- line-height:1.5;
-
- color:var(--ink);
-
- margin-bottom:13px;
-
-}
-
-.reviewer{
-
- font-weight:800;
-
- font-size:11px;
-
-}
+        font-size:10px;
 
-.verified{
+    }
 
- color:var(--gold2);
+    .logo{
 
- font-size:10px;
+        font-size:37px;
 
- margin-top:3px;
+    }
 
 }
 
 @media(max-width:850px){
 
- .review-layout{
+    .header-inner{
 
-  grid-template-columns:1fr;
+        min-height:82px;
 
- }
+        gap:12px;
 
- .review-intro{
+    }
 
-  text-align:center;
+    .desktop-nav{
 
- }
+        display:none;
 
- .review-intro p{
+    }
 
-  margin-left:auto;
+    .header-tools{
 
-  margin-right:auto;
+        margin-left:auto;
 
- }
-
-}
-
-@media(max-width:600px){
-
- .review-cards{
-
-  grid-template-columns:1fr;
-
- }
+    }
 
 }
 
-/* NEWSLETTER */
+@media(max-width:520px){
 
-.newsletter{
+    .header-inner{
 
- background:var(--navy);
+        min-height:82px;
 
- color:#fff;
+    }
 
- padding:38px 0;
+    .logo{
 
-}
+        font-size:36px;
 
-.newsletter-inner{
+    }
 
- display:grid;
+    .header-tool:not(.icon):not(.gold-border):not(.news){
 
- grid-template-columns:1fr 1.7fr;
+        display:none;
 
- gap:30px;
+    }
 
- align-items:center;
+    .header-tool{
 
-}
+        min-height:36px;
 
-.news-copy{
+    }
 
- display:flex;
+    .header-tool.gold-border{
 
- align-items:center;
+        display:flex;
 
- gap:18px;
+    }
 
-}
+    .header-tool.news{
 
-.envelope{
+        display:none;
 
- width:100px;
-
- height:80px;
-
- border-radius:5px;
-
- background:#fff;
-
- display:flex;
-
- align-items:center;
-
- justify-content:center;
-
- color:var(--navy);
-
- font-size:38px;
-
- flex-shrink:0;
+    }
 
 }
 
-.news-copy h2{
 
- font-family:Georgia,"Times New Roman",serif;
+/* =========================================================
+   HERO
+========================================================= */
 
- font-size:27px;
+.hero{
 
- margin-bottom:4px;
+    position:relative;
 
-}
+    overflow:hidden;
 
-.news-copy p{
+    padding:64px 0 82px;
 
- font-size:12px;
+    background:
 
- color:rgba(255,255,255,.75);
+        radial-gradient(
+            circle at 82% 32%,
+            rgba(200,164,93,.16),
+            transparent 28%
+        ),
 
-}
+        radial-gradient(
+            circle at 15% 80%,
+            rgba(255,255,255,.04),
+            transparent 30%
+        ),
 
-.news-form-row{
+        linear-gradient(
+            135deg,
+            #06172E,
+            #0B294B 55%,
+            #071A33
+        );
 
- display:flex;
-
- gap:10px;
-
-}
-
-.news-form-row input{
-
- flex:1;
-
- min-height:48px;
-
- border:0;
-
- border-radius:6px;
-
- padding:12px 14px;
+    color:#fff;
 
 }
 
-.news-form-row button{
+.hero:before{
 
- min-width:150px;
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    opacity:.13;
+
+    background-image:
+
+        radial-gradient(
+            rgba(255,255,255,.22) 1px,
+            transparent 1px
+        );
+
+    background-size:32px 32px;
 
 }
 
-.news-notes{
+.hero-grid{
 
- display:flex;
+    position:relative;
 
- gap:18px;
+    z-index:2;
 
- margin-top:9px;
+    display:grid;
 
- color:rgba(255,255,255,.7);
+    grid-template-columns:.8fr 1.2fr;
 
- font-size:10px;
+    gap:35px;
+
+    align-items:center;
+
+}
+
+.hero-copy{
+
+    max-width:500px;
+
+}
+
+.hero-kicker{
+
+    color:var(--gold-light);
+
+    font-size:10px;
+
+    font-weight:800;
+
+    letter-spacing:2.4px;
+
+    margin-bottom:15px;
+
+}
+
+.hero h1{
+
+    font-family:"Cormorant Garamond",Georgia,serif;
+
+    font-size:clamp(43px,5vw,64px);
+
+    font-weight:600;
+
+    line-height:.98;
+
+    margin-bottom:20px;
+
+}
+
+.hero h1 span{
+
+    color:var(--gold-light);
+
+}
+
+.hero-line{
+
+    width:60px;
+
+    height:2px;
+
+    background:var(--gold);
+
+    margin-bottom:19px;
+
+}
+
+.hero p{
+
+    max-width:445px;
+
+    color:rgba(255,255,255,.78);
+
+    font-size:13px;
+
+    line-height:1.8;
+
+    margin-bottom:26px;
+
+}
+
+.hero-actions{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:11px;
+
+}
+
+
+/* =========================================================
+   HERO BUNDLES
+========================================================= */
+
+.hero-art{
+
+    position:relative;
+
+    min-height:520px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.hero-art:before{
+
+    content:"";
+
+    position:absolute;
+
+    width:78%;
+
+    height:82%;
+
+    left:11%;
+
+    top:9%;
+
+    background:
+
+        radial-gradient(
+            ellipse at center,
+            rgba(200,164,93,.34),
+            rgba(200,164,93,.13) 45%,
+            transparent 72%
+        );
+
+    filter:blur(22px);
+
+}
+
+.hero-floor{
+
+    position:absolute;
+
+    bottom:25px;
+
+    width:84%;
+
+    height:46px;
+
+    border-radius:50%;
+
+    background:rgba(0,0,0,.48);
+
+    filter:blur(9px);
+
+}
+
+.hero-center-card{
+
+    position:absolute;
+
+    width:94%;
+
+    height:94%;
+
+    left:3%;
+
+    top:3%;
+
+    border-radius:24px;
+
+    border:1px solid rgba(200,164,93,.72);
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.055),
+            rgba(7,26,51,.16)
+        );
+
+    box-shadow:
+
+        0 0 18px rgba(200,164,93,.30),
+
+        0 0 45px rgba(200,164,93,.12),
+
+        inset 0 0 30px rgba(200,164,93,.06);
+
+}
+
+.quality-badge{
+
+    position:absolute;
+
+    right:0;
+
+    top:8px;
+
+    width:78px;
+
+    height:78px;
+
+    border-radius:50%;
+
+    background:var(--gold);
+
+    color:var(--navy);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    font-size:8px;
+
+    font-weight:900;
+
+    line-height:1.2;
+
+    box-shadow:
+
+        0 10px 25px rgba(0,0,0,.25),
+
+        0 0 25px rgba(200,164,93,.28);
+
+    z-index:30;
+
+}
+
+.hero-item{
+
+    position:absolute;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    filter:
+
+        drop-shadow(
+            0 18px 22px rgba(0,0,0,.40)
+        )
+
+        drop-shadow(
+            0 0 15px rgba(200,164,93,.20)
+        );
+
+    z-index:5;
+
+}
+
+.hero-item img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:contain;
+
+}
+
+.hero-item.center{
+
+    width:310px;
+
+    height:350px;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    z-index:10;
+
+}
+
+.hero-item.left-side{
+
+    width:155px;
+
+    height:205px;
+
+    left:7%;
+
+    top:8%;
+
+}
+
+.hero-item.right-side{
+
+    width:155px;
+
+    height:205px;
+
+    right:7%;
+
+    top:8%;
+
+}
+
+.hero-item.left-small{
+
+    width:155px;
+
+    height:205px;
+
+    left:7%;
+
+    bottom:7%;
+
+}
+
+.hero-item.right-small{
+
+    width:155px;
+
+    height:205px;
+
+    right:7%;
+
+    bottom:7%;
 
 }
 
 @media(max-width:800px){
 
- .newsletter-inner{
+    .hero{
 
-  grid-template-columns:1fr;
+        padding:50px 0 65px;
 
- }
+    }
 
- .news-copy{
+    .hero-grid{
 
-  justify-content:center;
+        grid-template-columns:1fr;
 
- }
+        text-align:center;
 
- .news-form-row{
+    }
 
-  flex-direction:column;
+    .hero-copy{
 
- }
+        margin:auto;
 
- .news-form-row button{
+    }
 
-  width:100%;
+    .hero p{
 
- }
+        margin-left:auto;
 
- .news-notes{
+        margin-right:auto;
 
-  justify-content:center;
+    }
 
-  flex-wrap:wrap;
+    .hero-line{
 
- }
+        margin-left:auto;
+
+        margin-right:auto;
+
+    }
+
+    .hero-actions{
+
+        justify-content:center;
+
+    }
+
+    .hero-art{
+
+        min-height:430px;
+
+    }
+
+    .hero-item.center{
+
+        width:235px;
+
+        height:275px;
+
+    }
+
+    .hero-item.left-side,
+    .hero-item.right-side,
+    .hero-item.left-small,
+    .hero-item.right-small{
+
+        width:105px;
+
+        height:145px;
+
+    }
+
+    .hero-item.left-side{
+
+        left:2%;
+
+        top:7%;
+
+    }
+
+    .hero-item.right-side{
+
+        right:2%;
+
+        top:7%;
+
+    }
+
+    .hero-item.left-small{
+
+        left:2%;
+
+        bottom:6%;
+
+    }
+
+    .hero-item.right-small{
+
+        right:2%;
+
+        bottom:6%;
+
+    }
 
 }
 
-/* FOOTER */
+@media(max-width:500px){
+
+    .hero h1{
+
+        font-size:40px;
+
+    }
+
+    .hero-art{
+
+        min-height:355px;
+
+    }
+
+    .hero-item.center{
+
+        width:190px;
+
+        height:225px;
+
+    }
+
+    .hero-item.left-side,
+    .hero-item.right-side,
+    .hero-item.left-small,
+    .hero-item.right-small{
+
+        width:78px;
+
+        height:108px;
+
+    }
+
+    .quality-badge{
+
+        width:60px;
+
+        height:60px;
+
+        font-size:7px;
+
+    }
+
+}
+
+
+/* =========================================================
+   TRUST
+========================================================= */
+
+.trust-bar{
+
+    position:relative;
+
+    z-index:20;
+
+    margin-top:-28px;
+
+    background:#fff;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 32px rgba(7,26,51,.12);
+
+    padding:18px;
+
+}
+
+.trust-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+}
+
+.trust-item{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    padding:5px 15px;
+
+    border-right:1px solid var(--line);
+
+}
+
+.trust-item:last-child{
+
+    border-right:0;
+
+}
+
+.trust-icon{
+
+    width:38px;
+
+    height:38px;
+
+    flex-shrink:0;
+
+    border-radius:50%;
+
+    border:1px solid #D9DDE4;
+
+    color:var(--navy);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.trust-item strong{
+
+    display:block;
+
+    font-size:10px;
+
+}
+
+.trust-item span{
+
+    display:block;
+
+    color:var(--gray);
+
+    font-size:9px;
+
+    line-height:1.3;
+
+}
+
+@media(max-width:800px){
+
+    .trust-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .trust-item{
+
+        border-right:0;
+
+        border-bottom:1px solid var(--line);
+
+        padding:13px;
+
+        justify-content:flex-start;
+
+    }
+
+    .trust-item:nth-child(3),
+    .trust-item:nth-child(4){
+
+        border-bottom:0;
+
+    }
+
+}
+
+@media(max-width:500px){
+
+    .trust-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .trust-item{
+
+        border-bottom:1px solid var(--line)!important;
+
+    }
+
+    .trust-item:last-child{
+
+        border-bottom:0!important;
+
+    }
+
+}
+
+
+/* =========================================================
+   EXPLORE COLLECTION
+========================================================= */
+
+.collection{
+
+    background:var(--cream);
+
+}
+
+.collection-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:18px;
+
+}
+
+.collection-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    min-height:220px;
+
+    padding:28px 20px;
+
+    border-radius:18px;
+
+    background:#fff;
+
+    border:1px solid rgba(7,26,51,.08);
+
+    box-shadow:0 8px 25px rgba(7,26,51,.06);
+
+    text-align:center;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    transition:.25s ease;
+
+}
+
+.collection-card:before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:75px;
+
+    height:3px;
+
+    background:var(--gold);
+
+    box-shadow:0 0 15px rgba(200,164,93,.55);
+
+}
+
+.collection-card.dark{
+
+    background:var(--navy);
+
+    color:#fff;
+
+}
+
+.collection-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 32px rgba(7,26,51,.12);
+
+}
+
+.collection-icon{
+
+    width:58px;
+
+    height:58px;
+
+    border-radius:50%;
+
+    border:1px solid var(--gold);
+
+    color:var(--gold);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:21px;
+
+    margin-bottom:15px;
+
+}
+
+.collection-card h3{
+
+    font-family:"Cormorant Garamond",Georgia,serif;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    margin-bottom:7px;
+
+}
+
+.collection-card p{
+
+    max-width:235px;
+
+    color:var(--gray);
+
+    font-size:10px;
+
+    line-height:1.6;
+
+    margin-bottom:16px;
+
+}
+
+.collection-card.dark p{
+
+    color:rgba(255,255,255,.7);
+
+}
+
+.collection-link{
+
+    border:1px solid var(--gold);
+
+    border-radius:25px;
+
+    padding:7px 13px;
+
+    font-size:9px;
+
+    font-weight:800;
+
+    color:var(--navy);
+
+}
+
+.collection-card.dark .collection-link{
+
+    color:var(--gold-light);
+
+}
+
+@media(max-width:850px){
+
+    .collection-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:500px){
+
+    .collection-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
+/* =========================================================
+   FEATURED BUNDLES
+========================================================= */
+
+.featured{
+
+    background:#fff;
+
+}
+
+.product-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(5,1fr);
+
+    gap:16px;
+
+}
+
+.product-card{
+
+    background:#fff;
+
+    border:1px solid var(--line);
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    box-shadow:0 7px 22px rgba(7,26,51,.06);
+
+    display:flex;
+
+    flex-direction:column;
+
+    transition:.25s ease;
+
+}
+
+.product-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 30px rgba(7,26,51,.11);
+
+}
+
+.product-image{
+
+    width:100%;
+
+    aspect-ratio:3/2;
+
+    background:var(--navy);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    overflow:hidden;
+
+}
+
+.product-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:contain;
+
+}
+
+.product-body{
+
+    padding:13px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    flex:1;
+
+}
+
+.product-body h3{
+
+    font-family:"Cormorant Garamond",Georgia,serif;
+
+    font-size:20px;
+
+    line-height:1.05;
+
+    color:var(--navy);
+
+    margin-bottom:6px;
+
+}
+
+.product-meta{
+
+    color:var(--gray);
+
+    font-size:9px;
+
+    line-height:1.4;
+
+}
+
+.product-bottom{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:7px;
+
+    margin-top:auto;
+
+    padding-top:13px;
+
+}
+
+.price{
+
+    color:var(--navy);
+
+    font-size:17px;
+
+    font-weight:800;
+
+}
+
+.buy-now{
+
+    color:var(--navy);
+
+    font-size:9px;
+
+    font-weight:800;
+
+}
+
+.buy-now:hover{
+
+    color:var(--gold);
+
+}
+
+.mini-cart{
+
+    width:32px;
+
+    height:32px;
+
+    flex-shrink:0;
+
+    border:0;
+
+    border-radius:50%;
+
+    background:var(--gold);
+
+    color:var(--navy);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.mini-cart:hover{
+
+    background:var(--gold-light);
+
+}
+
+@media(max-width:1050px){
+
+    .product-grid{
+
+        grid-template-columns:repeat(3,1fr);
+
+    }
+
+}
+
+@media(max-width:700px){
+
+    .product-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .product-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
+/* =========================================================
+   WHY THEBESTBUNDLE
+========================================================= */
+
+.why-section{
+
+    background:var(--cream);
+
+}
+
+.feature-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:18px;
+
+}
+
+.feature-card{
+
+    background:#fff;
+
+    border:1px solid rgba(7,26,51,.07);
+
+    border-radius:17px;
+
+    padding:28px 20px;
+
+    text-align:center;
+
+    box-shadow:0 7px 22px rgba(7,26,51,.05);
+
+}
+
+.feature-icon{
+
+    width:52px;
+
+    height:52px;
+
+    margin:0 auto 14px;
+
+    border-radius:50%;
+
+    border:1px solid var(--gold);
+
+    color:var(--gold);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.feature-card h3{
+
+    font-family:"Cormorant Garamond",Georgia,serif;
+
+    font-size:22px;
+
+    color:var(--navy);
+
+    margin-bottom:7px;
+
+}
+
+.feature-card p{
+
+    color:var(--gray);
+
+    font-size:10px;
+
+    line-height:1.65;
+
+}
+
+@media(max-width:850px){
+
+    .feature-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:500px){
+
+    .feature-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
+/* =========================================================
+   HOW IT WORKS
+========================================================= */
+
+.how-section{
+
+    background:#fff;
+
+}
+
+.steps-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+}
+
+.step{
+
+    text-align:center;
+
+    position:relative;
+
+    padding:10px;
+
+}
+
+.step-number{
+
+    width:58px;
+
+    height:58px;
+
+    margin:0 auto 15px;
+
+    border-radius:50%;
+
+    background:var(--navy);
+
+    color:var(--gold-light);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-family:"Cormorant Garamond",Georgia,serif;
+
+    font-size:20px;
+
+    font-weight:700;
+
+}
+
+.step h3{
+
+    font-family:"Cormorant Garamond",Georgia,serif;
+
+    color:var(--navy);
+
+    font-size:22px;
+
+    margin-bottom:5px;
+
+}
+
+.step p{
+
+    color:var(--gray);
+
+    font-size:10px;
+
+    line-height:1.6;
+
+}
+
+@media(max-width:800px){
+
+    .steps-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:500px){
+
+    .steps-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
+/* =========================================================
+   REVIEWS
+========================================================= */
+
+.review-section{
+
+    background:var(--cream);
+
+}
+
+.review-layout{
+
+    display:grid;
+
+    grid-template-columns:.7fr 1.3fr;
+
+    gap:40px;
+
+    align-items:center;
+
+}
+
+.review-intro{
+
+    text-align:left;
+
+}
+
+.review-intro .section-kicker{
+
+    text-align:left;
+
+}
+
+.review-intro h2{
+
+    font-family:"Cormorant Garamond",Georgia,serif;
+
+    color:var(--navy);
+
+    font-size:clamp(36px,4vw,49px);
+
+    line-height:.98;
+
+    margin-bottom:15px;
+
+}
+
+.review-intro p{
+
+    color:var(--gray);
+
+    font-size:12px;
+
+    line-height:1.7;
+
+    max-width:310px;
+
+    margin-bottom:20px;
+
+}
+
+.review-cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:14px;
+
+}
+
+.review-card{
+
+    position:relative;
+
+    background:#fff;
+
+    border:1px solid var(--line);
+
+    border-radius:17px;
+
+    padding:19px;
+
+    box-shadow:0 7px 22px rgba(7,26,51,.06);
+
+    cursor:pointer;
+
+    transition:.25s ease;
+
+}
+
+.review-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 30px rgba(7,26,51,.11);
+
+}
+
+.review-avatar{
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:50%;
+
+    background:var(--navy);
+
+    color:var(--gold-light);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-family:"Cormorant Garamond",Georgia,serif;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    margin-bottom:12px;
+
+}
+
+.review-stars{
+
+    color:var(--gold);
+
+    font-size:11px;
+
+    letter-spacing:1px;
+
+    margin-bottom:8px;
+
+}
+
+.review-card h3{
+
+    font-family:"Cormorant Garamond",Georgia,serif;
+
+    font-size:19px;
+
+    color:var(--navy);
+
+    margin-bottom:2px;
+
+}
+
+.review-product{
+
+    color:var(--gray);
+
+    font-size:8px;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+
+}
+
+.review-text{
+
+    font-size:10px;
+
+    color:var(--ink);
+
+    line-height:1.65;
+
+    margin-bottom:12px;
+
+}
+
+.review-status{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:4px;
+
+    color:#8A6D32;
+
+    font-size:7px;
+
+    font-weight:800;
+
+    border:1px solid #E8D7AE;
+
+    background:#FCF8ED;
+
+    border-radius:20px;
+
+    padding:4px 7px;
+
+}
+
+.demo-label{
+
+    display:block;
+
+    margin-top:8px;
+
+    color:#8A8F98;
+
+    font-size:7px;
+
+    font-style:italic;
+
+}
+
+@media(max-width:900px){
+
+    .review-layout{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .review-intro{
+
+        text-align:center;
+
+    }
+
+    .review-intro .section-kicker{
+
+        text-align:center;
+
+    }
+
+    .review-intro p{
+
+        margin-left:auto;
+
+        margin-right:auto;
+
+    }
+
+}
+
+@media(max-width:650px){
+
+    .review-cards{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
+/* =========================================================
+   NEWSLETTER
+========================================================= */
+
+.newsletter{
+
+    background:var(--navy);
+
+    color:#fff;
+
+    padding:70px 0;
+
+}
+
+.newsletter-inner{
+
+    display:grid;
+
+    grid-template-columns:.9fr 1.1fr;
+
+    gap:40px;
+
+    align-items:center;
+
+}
+
+.news-copy{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+.envelope{
+
+    width:72px;
+
+    height:72px;
+
+    flex-shrink:0;
+
+    border-radius:50%;
+
+    border:1px solid var(--gold);
+
+    color:var(--gold);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:27px;
+
+}
+
+.news-copy h2{
+
+    font-family:"Cormorant Garamond",Georgia,serif;
+
+    font-size:35px;
+
+    line-height:1;
+
+    margin-bottom:6px;
+
+}
+
+.news-copy p{
+
+    color:rgba(255,255,255,.7);
+
+    font-size:10px;
+
+    line-height:1.6;
+
+}
+
+.news-form-row{
+
+    display:flex;
+
+    gap:9px;
+
+}
+
+.news-form-row input{
+
+    flex:1;
+
+    min-height:49px;
+
+    border:0;
+
+    border-radius:25px;
+
+    padding:12px 17px;
+
+    outline:none;
+
+}
+
+.news-form-row button{
+
+    min-width:155px;
+
+}
+
+.news-notes{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:14px;
+
+    margin-top:10px;
+
+    color:rgba(255,255,255,.65);
+
+    font-size:8px;
+
+}
+
+@media(max-width:800px){
+
+    .newsletter-inner{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+    }
+
+    .news-copy{
+
+        justify-content:center;
+
+    }
+
+    .news-form-row{
+
+        flex-direction:column;
+
+    }
+
+    .news-form-row button{
+
+        width:100%;
+
+    }
+
+    .news-notes{
+
+        justify-content:center;
+
+    }
+
+}
+
+@media(max-width:500px){
+
+    .news-copy{
+
+        flex-direction:column;
+
+    }
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
 
 .footer{
 
- background:var(--navy);
+    background:var(--navy);
 
- color:#fff;
+    color:#fff;
 
- border-top:1px solid rgba(255,255,255,.12);
+    border-top:1px solid rgba(255,255,255,.1);
 
- padding:38px 0 14px;
+    padding:58px 0 15px;
 
 }
 
 .footer-grid{
 
- display:grid;
+    display:grid;
 
- grid-template-columns:
+    grid-template-columns:1.4fr .9fr .9fr .9fr .9fr;
 
- 1.4fr
- .9fr
- .9fr
- .9fr
- .9fr;
-
- gap:24px;
+    gap:30px;
 
 }
 
-.footer-logo img{
+.footer-logo{
 
- height:50px;
+    display:inline-block;
 
- width:auto;
+    font-family:"Cormorant Garamond",Georgia,serif;
 
- margin-bottom:12px;
+    color:var(--gold);
+
+    font-size:38px;
+
+    font-weight:600;
+
+    line-height:1;
+
+    margin-bottom:15px;
+
+}
+
+.footer-logo:hover{
+
+    color:var(--gold-light);
 
 }
 
 .footer p,
 .footer a{
 
- font-size:11px;
+    color:rgba(255,255,255,.68);
 
- color:rgba(255,255,255,.72);
+    font-size:9px;
+
+}
+
+.footer p{
+
+    max-width:220px;
+
+    line-height:1.7;
 
 }
 
 .footer h3{
 
- font-size:11px;
+    color:var(--gold-light);
 
- color:var(--gold);
+    font-size:9px;
 
- letter-spacing:1px;
+    letter-spacing:1.6px;
 
- margin-bottom:11px;
+    margin-bottom:13px;
 
 }
 
 .footer a{
 
- display:block;
+    display:block;
 
- margin-bottom:7px;
+    margin-bottom:8px;
+
+    transition:.2s ease;
 
 }
 
 .footer a:hover{
 
- color:var(--gold);
+    color:var(--gold-light);
 
 }
 
 .social-row{
 
- display:flex;
+    display:flex;
 
- gap:8px;
+    gap:7px;
 
- margin-top:12px;
+    margin-top:15px;
 
 }
 
 .social-row a{
 
- width:27px;
+    width:28px;
 
- height:27px;
+    height:28px;
 
- border:1px solid rgba(255,255,255,.25);
+    border:1px solid rgba(255,255,255,.23);
 
- border-radius:50%;
+    border-radius:50%;
 
- display:flex;
+    display:flex;
 
- align-items:center;
+    align-items:center;
 
- justify-content:center;
+    justify-content:center;
 
- margin:0;
+    margin:0;
+
+}
+
+.social-row a:hover{
+
+    border-color:var(--gold);
 
 }
 
 .payment-row{
 
- display:flex;
+    display:flex;
 
- gap:4px;
+    gap:4px;
 
- flex-wrap:wrap;
-
- margin-top:7px;
+    flex-wrap:wrap;
 
 }
 
 .payment{
 
- background:#fff;
+    background:#fff;
 
- color:var(--navy);
+    color:var(--navy);
 
- font-size:8px;
+    font-size:7px;
 
- font-weight:900;
+    font-weight:900;
 
- padding:5px;
+    padding:5px 6px;
 
- border-radius:3px;
+    border-radius:3px;
 
 }
 
 .secure{
 
- margin-top:10px;
+    margin-top:13px;
 
- font-size:10px!important;
+    color:#fff;
 
- color:#fff!important;
+    font-size:8px;
 
- font-weight:800;
+    font-weight:800;
+
+    line-height:1.5;
 
 }
 
 .copyright{
 
- border-top:1px solid rgba(255,255,255,.12);
+    border-top:1px solid rgba(255,255,255,.1);
 
- margin-top:25px;
+    margin-top:35px;
 
- padding-top:12px;
+    padding-top:14px;
 
- text-align:center;
+    text-align:center;
 
- color:rgba(255,255,255,.55);
+    color:rgba(255,255,255,.48);
 
- font-size:10px;
+    font-size:8px;
 
 }
 
 @media(max-width:900px){
 
- .footer-grid{
+    .footer-grid{
 
-  grid-template-columns:repeat(2,1fr);
+        grid-template-columns:repeat(2,1fr);
 
- }
+    }
 
 }
 
 @media(max-width:520px){
 
- .footer-grid{
+    .footer-grid{
 
-  grid-template-columns:1fr;
+        grid-template-columns:1fr;
 
-  text-align:center;
+        text-align:center;
 
- }
+    }
 
- .footer-logo img{
+    .footer p{
 
-  margin-left:auto;
+        margin:auto;
 
-  margin-right:auto;
+    }
 
- }
+    .social-row,
+    .payment-row{
 
- .social-row,
- .payment-row{
+        justify-content:center;
 
-  justify-content:center;
-
- }
+    }
 
 }
 
-/* PANELS */
+
+/* =========================================================
+   PANELS / OVERLAYS
+========================================================= */
 
 .overlay{
 
- position:fixed;
+    position:fixed;
 
- inset:0;
+    inset:0;
 
- background:rgba(7,26,51,.68);
+    background:rgba(7,26,51,.70);
 
- backdrop-filter:blur(3px);
+    backdrop-filter:blur(4px);
 
- opacity:0;
+    opacity:0;
 
- visibility:hidden;
+    visibility:hidden;
 
- transition:.25s ease;
+    transition:.25s ease;
 
- z-index:3000;
+    z-index:3000;
 
 }
 
 .overlay.active{
 
- opacity:1;
+    opacity:1;
 
- visibility:visible;
+    visibility:visible;
 
 }
 
 .panel{
 
- position:fixed;
+    position:fixed;
 
- top:0;
+    top:0;
 
- right:-100%;
+    right:-100%;
 
- width:min(420px,88%);
+    width:min(430px,90%);
 
- height:100vh;
+    height:100vh;
 
- background:#fff;
+    background:#fff;
 
- color:var(--navy);
+    color:var(--navy);
 
- z-index:3001;
+    z-index:3001;
 
- transition:.32s ease;
+    transition:.32s ease;
 
- box-shadow:
+    box-shadow:-20px 0 50px rgba(0,0,0,.22);
 
- -18px 0 45px rgba(0,0,0,.2);
-
- overflow:auto;
+    overflow:auto;
 
 }
 
 .panel.active{
 
- right:0;
+    right:0;
 
 }
 
 .panel-head{
 
- display:flex;
+    min-height:88px;
 
- align-items:center;
+    display:flex;
 
- justify-content:space-between;
+    align-items:center;
 
- padding:24px;
+    justify-content:space-between;
 
- border-bottom:1px solid var(--line);
+    padding:22px 25px;
+
+    border-bottom:1px solid var(--line);
 
 }
 
 .panel-head h2{
 
- font-size:21px;
+    font-family:"Cormorant Garamond",Georgia,serif;
+
+    font-size:29px;
 
 }
 
 .close-btn{
 
- width:42px;
+    width:42px;
 
- height:42px;
+    height:42px;
 
- border-radius:8px;
+    border:0;
 
- border:0;
+    border-radius:50%;
 
- color:var(--navy);
+    background:#F5F6F8;
 
- background:#F8FAFC;
+    color:var(--navy);
 
 }
 
 .close-btn:hover{
 
- background:#EEF2F7;
+    background:#EDEFF3;
 
 }
 
 .collection-links a{
 
- display:block;
+    display:block;
 
- padding:17px 24px;
+    padding:17px 25px;
 
- border-bottom:1px solid var(--line);
+    border-bottom:1px solid var(--line);
 
- font-weight:800;
+    font-size:13px;
 
- font-size:16px;
+    font-weight:800;
+
+    transition:.2s ease;
 
 }
 
 .collection-links a:hover{
 
- color:var(--gold2);
+    padding-left:31px;
 
- padding-left:30px;
+    color:var(--gold);
 
 }
 
 .collection-links .donate-link{
 
- margin:24px;
+    margin:23px;
 
- border:0;
+    border:0;
 
- background:var(--gold);
+    background:var(--gold);
 
- border-radius:9px;
+    color:var(--navy);
 
- text-align:center;
+    border-radius:25px;
 
- padding:15px;
+    text-align:center;
+
+    padding:14px;
 
 }
+
+.collection-links .donate-link:hover{
+
+    padding-left:14px;
+
+    background:var(--gold-light);
+
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
 
 .search-box{
 
- position:fixed;
+    position:fixed;
 
- top:11%;
+    top:10%;
 
- left:50%;
+    left:50%;
 
- transform:translateX(-50%);
+    transform:translateX(-50%);
 
- width:min(650px,90%);
+    width:min(650px,90%);
 
- background:#fff;
+    background:#fff;
 
- border-radius:14px;
+    border-radius:18px;
 
- padding:22px;
+    padding:23px;
 
- z-index:3002;
+    z-index:3002;
 
- box-shadow:
-
- 0 25px 70px rgba(0,0,0,.3);
-
-}
-
-.search-row{
-
- display:flex;
-
- gap:9px;
-
-}
-
-.search-row input{
-
- flex:1;
-
- min-height:50px;
-
- border:1px solid var(--line);
-
- border-radius:7px;
-
- padding:12px;
+    box-shadow:0 25px 70px rgba(0,0,0,.3);
 
 }
 
 .search-title{
 
- display:flex;
+    display:flex;
 
- align-items:center;
+    align-items:center;
 
- justify-content:space-between;
+    justify-content:space-between;
 
- margin-bottom:14px;
+    margin-bottom:15px;
 
 }
 
 .search-title h2{
 
- font-size:20px;
+    font-family:"Cormorant Garamond",Georgia,serif;
+
+    font-size:28px;
 
 }
 
+.search-row{
+
+    display:flex;
+
+    gap:9px;
+
+}
+
+.search-row input{
+
+    flex:1;
+
+    min-height:50px;
+
+    border:1px solid var(--line);
+
+    border-radius:25px;
+
+    padding:12px 16px;
+
+    outline:none;
+
+}
+
+@media(max-width:500px){
+
+    .search-row{
+
+        flex-direction:column;
+
+    }
+
+}
+
+
+/* =========================================================
+   CART
+========================================================= */
+
 .cart-items{
 
- padding:15px 22px;
+    padding:15px 24px;
 
 }
 
 .empty-cart{
 
- text-align:center;
+    text-align:center;
 
- color:var(--gray);
+    color:var(--gray);
 
- padding:60px 15px;
+    padding:60px 15px;
 
 }
 
 .empty-cart i{
 
- font-size:42px;
+    font-size:40px;
 
- color:var(--navy);
+    color:var(--navy);
 
- display:block;
+    display:block;
 
- margin-bottom:12px;
+    margin-bottom:12px;
 
 }
 
 .cart-item{
 
- display:grid;
+    display:grid;
 
- grid-template-columns:
+    grid-template-columns:60px 1fr 34px;
 
- 60px
- 1fr
- 34px;
+    gap:12px;
 
- gap:12px;
+    align-items:center;
 
- align-items:center;
+    padding:13px 0;
 
- padding:13px 0;
-
- border-bottom:1px solid var(--line);
+    border-bottom:1px solid var(--line);
 
 }
 
 .cart-item img{
 
- width:60px;
+    width:60px;
 
- height:70px;
+    height:70px;
 
- object-fit:contain;
+    object-fit:contain;
 
- background:#F8FAFC;
+    background:#F8FAFC;
 
 }
 
 .cart-item h3{
 
- font-size:13px;
+    font-family:"Cormorant Garamond",Georgia,serif;
+
+    font-size:18px;
+
+    line-height:1.1;
 
 }
 
 .cart-price{
 
- font-weight:900;
+    color:var(--gold);
 
- color:var(--gold2);
+    font-size:12px;
 
- font-size:13px;
+    font-weight:900;
+
+    margin-top:4px;
 
 }
 
 .remove-item{
 
- width:32px;
+    width:32px;
 
- height:32px;
+    height:32px;
 
- border-radius:6px;
+    border:0;
 
- border:0;
+    border-radius:50%;
 
- background:#FEE2E2;
+    background:#FEE2E2;
 
- color:#B91C1C;
+    color:#B91C1C;
 
 }
 
 .cart-foot{
 
- padding:20px 22px;
+    padding:20px 24px;
 
- border-top:1px solid var(--line);
+    border-top:1px solid var(--line);
 
 }
 
 .cart-total{
 
- display:flex;
+    display:flex;
 
- justify-content:space-between;
+    justify-content:space-between;
 
- font-size:19px;
+    font-size:18px;
 
- font-weight:900;
+    font-weight:900;
 
- margin-bottom:14px;
+    margin-bottom:14px;
 
 }
 
 .cart-total span:last-child{
 
- color:var(--gold2);
+    color:var(--gold);
 
 }
 
+
+/* =========================================================
+   REVIEW MODAL
+========================================================= */
+
+.review-modal{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:20px;
+
+    background:rgba(7,26,51,.78);
+
+    backdrop-filter:blur(5px);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.25s ease;
+
+    z-index:3500;
+
+}
+
+.review-modal.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+.review-modal-card{
+
+    width:min(560px,100%);
+
+    max-height:90vh;
+
+    overflow:auto;
+
+    background:#fff;
+
+    border-radius:22px;
+
+    padding:30px;
+
+    box-shadow:0 30px 80px rgba(0,0,0,.35);
+
+    position:relative;
+
+}
+
+.review-modal-close{
+
+    position:absolute;
+
+    top:18px;
+
+    right:18px;
+
+    width:38px;
+
+    height:38px;
+
+    border:0;
+
+    border-radius:50%;
+
+    background:#F5F6F8;
+
+    color:var(--navy);
+
+}
+
+.modal-avatar{
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:50%;
+
+    background:var(--navy);
+
+    color:var(--gold-light);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-family:"Cormorant Garamond",Georgia,serif;
+
+    font-size:28px;
+
+    font-weight:700;
+
+    margin-bottom:15px;
+
+}
+
+.review-modal-card h2{
+
+    font-family:"Cormorant Garamond",Georgia,serif;
+
+    color:var(--navy);
+
+    font-size:34px;
+
+    line-height:1;
+
+    margin-bottom:3px;
+
+}
+
+.modal-product{
+
+    color:var(--gray);
+
+    font-size:9px;
+
+    font-weight:700;
+
+    margin-bottom:12px;
+
+}
+
+.modal-stars{
+
+    color:var(--gold);
+
+    letter-spacing:2px;
+
+    margin-bottom:17px;
+
+}
+
+.modal-review{
+
+    font-family:"Cormorant Garamond",Georgia,serif;
+
+    font-size:23px;
+
+    line-height:1.4;
+
+    color:var(--ink);
+
+    margin-bottom:18px;
+
+}
+
+.modal-note{
+
+    padding:12px 14px;
+
+    border-radius:10px;
+
+    background:#FCF8ED;
+
+    color:#80672F;
+
+    font-size:8px;
+
+    line-height:1.5;
+
+}
+
+@media(max-width:500px){
+
+    .review-modal-card{
+
+        padding:25px 20px;
+
+    }
+
+    .modal-review{
+
+        font-size:20px;
+
+    }
+
+}
+
+
+/* =========================================================
+   TOAST
+========================================================= */
+
 .toast{
 
- position:fixed;
+    position:fixed;
 
- left:50%;
+    left:50%;
 
- bottom:25px;
+    bottom:25px;
 
- transform:translateX(-50%);
+    transform:translateX(-50%);
 
- background:var(--navy);
+    background:var(--navy);
 
- color:#fff;
+    color:#fff;
 
- border:2px solid var(--gold);
+    border:1px solid var(--gold);
 
- padding:12px 18px;
+    padding:12px 18px;
 
- border-radius:9px;
+    border-radius:25px;
 
- font-size:13px;
+    font-size:10px;
 
- font-weight:800;
+    font-weight:800;
 
- z-index:4000;
+    z-index:4000;
 
- display:none;
+    display:none;
 
 }
 
@@ -2874,87 +3169,95 @@ button{
 
 </head>
 
+
 <body>
+
+
+<!-- =====================================================
+     HEADER
+====================================================== -->
 
 <header class="site-header">
 
 <div class="container header-inner">
 
 <a
- class="logo"
- href="index.html"
- aria-label="TheBestBundle Home">
+    class="logo"
+    href="index.html"
+    aria-label="TheBestBundle Home">
 
-<img
- src="images/Thebestbundle-transparent-logo.png"
- alt="TheBestBundle"
- loading="eager">
+    TheBestBundle
 
 </a>
 
+
 <nav
- class="desktop-nav"
- aria-label="Primary navigation">
+    class="desktop-nav"
+    aria-label="Primary navigation">
 
-<a href="index.html">Home</a>
+    <a href="index.html">Home</a>
 
-<a href="courses.html">Courses</a>
+    <a href="courses.html">Courses</a>
 
-<a href="merchandise.html">Merchandise</a>
+    <a href="merchandise.html">Merchandise</a>
 
-<a href="reviews.html">Customer Reviews</a>
+    <a href="reviews.html">Customer Reviews</a>
 
-<a href="contact.html">Contact</a>
+    <a href="contact.html">Contact</a>
 
 </nav>
+
 
 <div class="header-tools">
 
 <button
- class="header-tool icon"
- id="searchButton"
- aria-label="Search">
+    class="header-tool icon"
+    id="searchButton"
+    aria-label="Search">
 
-<i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass"></i>
 
 </button>
 
+
 <a
- class="header-tool gold-border"
- href="donate.html">
+    class="header-tool gold-border"
+    href="donate.html">
 
-<i class="fa-solid fa-heart"></i>
+    <i class="fa-solid fa-heart"></i>
 
-&nbsp; Donate
+    Donate
 
 </a>
 
+
 <a
- class="header-tool news"
- href="subscribe.html">
+    class="header-tool news"
+    href="subscribe.html">
 
-<i class="fa-regular fa-envelope"></i>
+    <i class="fa-regular fa-envelope"></i>
 
-&nbsp; Newsletter
+    Newsletter
 
 </a>
+
 
 <div class="cart-wrap">
 
 <button
- class="header-tool icon"
- id="cartButton"
- aria-label="Open shopping cart">
+    class="header-tool icon"
+    id="cartButton"
+    aria-label="Open shopping cart">
 
-<i class="fa-solid fa-cart-shopping"></i>
+    <i class="fa-solid fa-cart-shopping"></i>
 
 </button>
 
 <span
- class="cart-count"
- id="cartCount">
+    class="cart-count"
+    id="cartCount">
 
-0
+    0
 
 </span>
 
@@ -2966,53 +3269,74 @@ button{
 
 </header>
 
+
 <main>
+
+
+<!-- =====================================================
+     HERO
+====================================================== -->
 
 <section class="hero">
 
 <div class="container hero-grid">
 
+
 <div class="hero-copy">
+
+<div class="hero-kicker">
+
+THEBESTBUNDLE • PREMIUM DIGITAL COLLECTION
+
+</div>
+
 
 <h1>
 
-Premium Digital Resources for
+Premium Digital Resources
 
 <span>
 
-Learning, Creating &amp; Growing
+for Learning, Creating &amp; Growing
 
 </span>
 
 </h1>
 
+
+<div class="hero-line"></div>
+
+
 <p>
 
 Discover professionally designed eBooks,
 printable planners, templates, courses,
-and digital resources created to help you achieve more.
+and digital resources created to help you
+learn, create and grow.
 
 </p>
+
 
 <div class="hero-actions">
 
 <button
- class="btn btn-gold"
- id="exploreCollection">
+    class="btn btn-gold"
+    id="exploreCollection">
 
-Explore Collection
+    Explore Collection
 
-<i class="fa-solid fa-arrow-right"></i>
+    <i class="fa-solid fa-arrow-right"></i>
 
 </button>
 
+
 <a
- class="btn btn-outline"
- href="freebie.html">
+    class="btn btn-outline"
+    href="freebie.html">
 
-Free Welcome Guide
+    Free Welcome Guide
 
-<i class="fa-solid fa-download"></i>
+    <i class="fa-solid fa-download"></i>
 
 </a>
 
@@ -3020,13 +3344,17 @@ Free Welcome Guide
 
 </div>
 
+
+<!-- HERO ART -->
+
 <div
- class="hero-art"
- aria-label="TheBestBundle premium bundle collection">
+    class="hero-art"
+    aria-label="TheBestBundle premium digital collections">
 
 <div class="hero-floor"></div>
 
 <div class="hero-center-card"></div>
+
 
 <div class="quality-badge">
 
@@ -3038,63 +3366,63 @@ QUALITY
 
 </div>
 
-<!-- CENTER: ULTIMATE COLLECTION -->
+
+<!-- ULTIMATE -->
 
 <div
- class="hero-item center"
- data-slot="center">
+    class="hero-item center">
 
 <img
- src="images/Ultimate_Collection.png"
- alt="Ultimate Collection">
+    src="images/Ultimate_Collection.png"
+    alt="Ultimate Collection">
 
 </div>
 
-<!-- TOP LEFT: STARTER BUNDLE -->
+
+<!-- STARTER -->
 
 <div
- class="hero-item left-side"
- data-slot="left-side">
+    class="hero-item left-side">
 
 <img
- src="images/Starter_Bundle_Cover.png"
- alt="Starter Bundle">
+    src="images/Starter_Bundle_Cover.png"
+    alt="Starter Bundle">
 
 </div>
 
-<!-- TOP RIGHT: CREATOR BUNDLE -->
+
+<!-- CREATOR -->
 
 <div
- class="hero-item right-side"
- data-slot="right-side">
+    class="hero-item right-side">
 
 <img
- src="images/Creator_Bundle_Highest_Resolution.png"
- alt="Creator Bundle">
+    src="images/Creator_Bundle_Highest_Resolution.png"
+    alt="Creator Bundle">
 
 </div>
 
-<!-- BOTTOM LEFT: BUSINESS BUNDLE -->
+
+<!-- BUSINESS -->
 
 <div
- class="hero-item left-small"
- data-slot="left-small">
+    class="hero-item left-small">
 
 <img
- src="images/high_resolution_polished.png"
- alt="Business Bundle">
+    src="images/high_resolution_polished.png"
+    alt="Business Bundle">
 
 </div>
 
-<!-- BOTTOM RIGHT: HEALTH & WELLNESS -->
+
+<!-- HEALTH -->
 
 <div
- class="hero-item right-small"
- data-slot="right-small">
+    class="hero-item right-small">
 
 <img
- src="images/Health_Wellness_Collection.png"
- alt="Health and Wellness Collection">
+    src="images/Health_Wellness_Collection.png"
+    alt="Health and Wellness Collection">
 
 </div>
 
@@ -3104,33 +3432,17 @@ QUALITY
 
 </section>
 
+
+<!-- =====================================================
+     TRUST
+====================================================== -->
+
 <section
- class="container trust-bar"
- aria-label="Why customers choose TheBestBundle">
+    class="container trust-bar"
+    aria-label="TheBestBundle features">
 
 <div class="trust-grid">
 
-<div class="trust-item">
-
-<div class="trust-stars">
-
-★★★★★
-
-</div>
-
-<div>
-
-<strong>
-Trusted by thousands
-</strong>
-
-<span>
-of digital learners
-</span>
-
-</div>
-
-</div>
 
 <div class="trust-item">
 
@@ -3142,17 +3454,16 @@ of digital learners
 
 <div>
 
-<strong>
-Instant Download
-</strong>
+<strong>Instant Digital Access</strong>
 
 <span>
-Access your files immediately
+Access your files after purchase
 </span>
 
 </div>
 
 </div>
+
 
 <div class="trust-item">
 
@@ -3164,17 +3475,16 @@ Access your files immediately
 
 <div>
 
-<strong>
-Secure Checkout
-</strong>
+<strong>Secure Checkout</strong>
 
 <span>
-Safe &amp; encrypted payments
+Payments processed securely
 </span>
 
 </div>
 
 </div>
+
 
 <div class="trust-item">
 
@@ -3186,9 +3496,7 @@ Safe &amp; encrypted payments
 
 <div>
 
-<strong>
-Premium Quality
-</strong>
+<strong>Premium Content</strong>
 
 <span>
 Professionally designed resources
@@ -3197,6 +3505,7 @@ Professionally designed resources
 </div>
 
 </div>
+
 
 <div class="trust-item">
 
@@ -3208,37 +3517,59 @@ Professionally designed resources
 
 <div>
 
-<strong>
-Mobile Friendly
-</strong>
+<strong>Mobile Friendly</strong>
 
 <span>
-Use on any device, anytime
+Use your resources on any device
 </span>
 
 </div>
 
 </div>
 
+
 </div>
 
 </section>
+
+
+<!-- =====================================================
+     EXPLORE COLLECTION
+====================================================== -->
 
 <section class="collection section">
 
 <div class="container">
 
-<div class="rule-title">
+<div class="section-kicker">
 
-EXPLORE OUR COLLECTION
+EXPLORE • DISCOVER • GROW
 
 </div>
 
+
+<h2 class="section-title">
+
+Explore TheBestBundle
+
+</h2>
+
+
+<p class="section-intro">
+
+Explore premium digital resources created
+to support your learning, creativity,
+productivity and personal growth.
+
+</p>
+
+
 <div class="collection-grid">
 
+
 <a
- class="collection-card dark"
- href="ebooks.html">
+    class="collection-card dark"
+    href="ebooks.html">
 
 <div class="collection-icon">
 
@@ -3247,13 +3578,15 @@ EXPLORE OUR COLLECTION
 </div>
 
 <h3>
-PREMIUM EBOOKS
+
+Premium eBooks
+
 </h3>
 
 <p>
 
-Inspiring eBooks on health, wealth, mindset,
-business and personal growth.
+Practical eBooks covering health,
+beauty, longevity, business and digital growth.
 
 </p>
 
@@ -3265,9 +3598,10 @@ Explore eBooks →
 
 </a>
 
+
 <a
- class="collection-card"
- href="templates.html">
+    class="collection-card"
+    href="templates.html">
 
 <div class="collection-icon">
 
@@ -3276,13 +3610,15 @@ Explore eBooks →
 </div>
 
 <h3>
-PRINTABLE TEMPLATES
+
+Premium Templates
+
 </h3>
 
 <p>
 
-Beautiful planners, trackers and templates
-to organize your life and business.
+Planners, trackers and practical templates
+for life, wellness and business.
 
 </p>
 
@@ -3294,9 +3630,10 @@ Explore Templates →
 
 </a>
 
+
 <a
- class="collection-card dark"
- href="bundles.html">
+    class="collection-card dark"
+    href="bundles.html">
 
 <div class="collection-icon">
 
@@ -3305,13 +3642,15 @@ Explore Templates →
 </div>
 
 <h3>
-DIGITAL BUNDLES
+
+Premium Bundles
+
 </h3>
 
 <p>
 
-Curated bundles to help you save more
-and get maximum value.
+Curated collections combining
+premium eBooks and professional templates.
 
 </p>
 
@@ -3323,24 +3662,27 @@ Explore Bundles →
 
 </a>
 
+
 <a
- class="collection-card"
- href="freebie.html">
+    class="collection-card"
+    href="freebie.html">
 
 <div class="collection-icon">
 
-<i class="fa-solid fa-gift"></i>
+<i class="fa-solid fa-sparkles"></i>
 
 </div>
 
 <h3>
-FREE RESOURCES
+
+Free Resources
+
 </h3>
 
 <p>
 
-Download free guides, checklists and
-resources to get started today.
+Start learning with free digital
+resources from TheBestBundle.
 
 </p>
 
@@ -3352,497 +3694,949 @@ Explore Freebies →
 
 </a>
 
+
 </div>
 
 </div>
 
 </section>
 
-<section class="best">
+
+<!-- =====================================================
+     FEATURED COLLECTIONS
+====================================================== -->
+
+<section class="featured section">
 
 <div class="container">
 
-<div class="rule-title">
+<div class="section-kicker">
 
-BEST SELLERS
-
-</div>
-
-<div class="product-grid">
-
-<!-- STARTER BUNDLE -->
-
-<article class="product-card">
-
-<a href="bundles.html">
-
-<div class="product-image">
-
-<img
- src="images/Starter_Bundle_Cover.png"
- alt="Starter Bundle">
+DIGITAL • VALUE • COLLECTIONS
 
 </div>
 
-</a>
 
-<div class="product-body">
+<h2 class="section-title">
 
-<h3>
-Starter Bundle
-</h3>
-
-<div class="product-meta">
-
-2 eBooks + 4 Templates
-
-</div>
-
-<div class="product-rating">
-
-★★★★★ <span>(254)</span>
-
-</div>
-
-<div class="product-bottom">
-
-<span class="price">$27</span>
-
-<a
- class="buy-now"
- href="https://buy.stripe.com/28E6oJ504fKMfHNf5h8N20p"
- target="_blank"
- rel="noopener noreferrer">
-
-Buy Now
-
-</a>
-
-<button
- class="mini-cart add-cart"
- data-id="starter-bundle"
- data-name="Starter Bundle"
- data-price="27"
- data-price-id="price_1TweJORtp4gVtODymXOzvXjB"
- data-stripe="https://buy.stripe.com/28E6oJ504fKMfHNf5h8N20p"
- data-image="images/Starter_Bundle_Cover.png"
- aria-label="Add Starter Bundle to cart">
-
-<i class="fa-solid fa-cart-shopping"></i>
-
-</button>
-
-</div>
-
-</div>
-
-</article>
-
-<!-- CREATOR BUNDLE -->
-
-<article class="product-card">
-
-<a href="bundles.html">
-
-<div class="product-image">
-
-<img
- src="images/Creator_Bundle_Highest_Resolution.png"
- alt="Creator Bundle">
-
-</div>
-
-</a>
-
-<div class="product-body">
-
-<h3>
-Creator Bundle
-</h3>
-
-<div class="product-meta">
-
-3 eBooks + 6 Templates
-
-</div>
-
-<div class="product-rating">
-
-★★★★★ <span>(198)</span>
-
-</div>
-
-<div class="product-bottom">
-
-<span class="price">$37</span>
-
-<a
- class="buy-now"
- href="#">
-
-Buy Now
-
-</a>
-
-<button
- class="mini-cart add-cart"
- data-id="creator-bundle"
- data-name="Creator Bundle"
- data-price="37"
- data-price-id="price_1UA3lXRtp4gVtODyq54xMbhJ"
- data-stripe="https://buy.stripe.com/9B614p1NSeGI9jp9KX8N20z"
- data-image="images/Creator_Bundle_Highest_Resolution.png"
- aria-label="Add Creator Bundle to cart">
-
-<i class="fa-solid fa-cart-shopping"></i>
-
-</button>
-
-</div>
-
-</div>
-
-</article>
-
-<!-- BUSINESS BUNDLE -->
-
-<article class="product-card">
-
-<a href="bundles.html">
-
-<div class="product-image">
-
-<img
- src="images/high_resolution_polished.png"
- alt="Business Bundle">
-
-</div>
-
-</a>
-
-<div class="product-body">
-
-<h3>
-Business Bundle
-</h3>
-
-<div class="product-meta">
-
-5 eBooks + 10 Templates
-
-</div>
-
-<div class="product-rating">
-
-★★★★★ <span>(142)</span>
-
-</div>
-
-<div class="product-bottom">
-
-<span class="price">$57</span>
-
-<a
- class="buy-now"
- href="https://buy.stripe.com/14AbJ3504cyA0MT7CP8N20P"
- target="_blank"
- rel="noopener noreferrer">
-
-Buy Now
-
-</a>
-
-<button
- class="mini-cart add-cart"
- data-id="business-bundle"
- data-name="Business Bundle"
- data-price="57"
- data-price-id="price_1UDRuaRtp4gVtODy0x7llRl7"
- data-stripe="https://buy.stripe.com/14AbJ3504cyA0MT7CP8N20P"
- data-image="images/high_resolution_polished.png"
- aria-label="Add Business Bundle to cart">
-
-<i class="fa-solid fa-cart-shopping"></i>
-
-</button>
-
-</div>
-
-</div>
-
-</article>
-
-<!-- HEALTH & WELLNESS -->
-
-<article class="product-card">
-
-<a href="bundles.html">
-
-<div class="product-image">
-
-<img
- src="images/Health_Wellness_Collection.png"
- alt="Health and Wellness Collection">
-
-</div>
-
-</a>
-
-<div class="product-body">
-
-<h3>
-Health &amp; Wellness Collection
-</h3>
-
-<div class="product-meta">
-
-5 eBooks + 10 Templates
-
-</div>
-
-<div class="product-rating">
-
-★★★★★ <span>(186)</span>
-
-</div>
-
-<div class="product-bottom">
-
-<span class="price">$57</span>
-
-<a
- class="buy-now"
- href="https://buy.stripe.com/28EdRbakoeGIdzF5uH8N20Q"
- target="_blank"
- rel="noopener noreferrer">
-
-Buy Now
-
-</a>
-
-<button
- class="mini-cart add-cart"
- data-id="health-wellness"
- data-name="Health & Wellness Collection"
- data-price="57"
- data-price-id="price_1UEiWMRtp4gVtODyTO9FPlIb"
- data-stripe="https://buy.stripe.com/28EdRbakoeGIdzF5uH8N20Q"
- data-image="images/Health_Wellness_Collection.png"
- aria-label="Add Health and Wellness Collection to cart">
-
-<i class="fa-solid fa-cart-shopping"></i>
-
-</button>
-
-</div>
-
-</div>
-
-</article>
-
-<!-- ULTIMATE COLLECTION -->
-
-<article class="product-card">
-
-<a href="bundles.html">
-
-<div class="product-image">
-
-<img
- src="images/Ultimate_Collection.png"
- alt="Ultimate Collection">
-
-</div>
-
-</a>
-
-<div class="product-body">
-
-<h3>
-Ultimate Collection
-</h3>
-
-<div class="product-meta">
-
-10 eBooks + 10 Templates
-
-</div>
-
-<div class="product-rating">
-
-★★★★★ <span>(98)</span>
-
-</div>
-
-<div class="product-bottom">
-
-<span class="price">$97</span>
-
-<a
- class="buy-now"
- href="https://buy.stripe.com/aFa4gB9gk1TWbrx4qD8N20R"
- target="_blank"
- rel="noopener noreferrer">
-
-Buy Now
-
-</a>
-
-<button
- class="mini-cart add-cart"
- data-id="ultimate-collection"
- data-name="Ultimate Collection"
- data-price="97"
- data-price-id="price_1UFEbjRtp4gVtODygoSjvZlg"
- data-stripe="https://buy.stripe.com/aFa4gB9gk1TWbrx4qD8N20R"
- data-image="images/Ultimate_Collection.png"
- aria-label="Add Ultimate Collection to cart">
-
-<i class="fa-solid fa-cart-shopping"></i>
-
-</button>
-
-</div>
-
-</div>
-
-</article>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="review-section">
-
-<div class="container review-layout">
-
-<div class="review-intro">
-
-<h2>
-
-WHAT OUR<br>
-
-CUSTOMERS SAY
+Featured Collections
 
 </h2>
 
-<p>
 
-Join thousands of happy customers who are
-achieving their goals with our resources.
+<p class="section-intro">
+
+Discover some of the premium collections
+available from TheBestBundle.
 
 </p>
 
-<a
- class="btn btn-dark"
- href="reviews.html">
 
-Read All Reviews →
+<div class="product-grid">
+
+
+<!-- STARTER -->
+
+<article class="product-card">
+
+<a href="bundles.html">
+
+<div class="product-image">
+
+<img
+    src="images/Starter_Bundle_Cover.png"
+    alt="Starter Bundle">
+
+</div>
 
 </a>
 
-</div>
 
-<div class="review-cards">
+<div class="product-body">
 
-<article class="review-card">
+<h3>
 
-<div class="stars">
+Starter Bundle
 
-★★★★★
+</h3>
 
-</div>
+<div class="product-meta">
 
-<p>
-
-Customer reviews submitted through
-TheBestBundle will appear here.
-
-</p>
-
-<div class="reviewer">
-
-Verified Customer
+2 Premium eBooks + 4 Professional Templates
 
 </div>
 
-<div class="verified">
 
-✓ Verified Purchase
+<div class="product-bottom">
+
+<span class="price">
+
+$27
+
+</span>
+
+
+<a
+    class="buy-now"
+    href="https://buy.stripe.com/28E6oJ504fKMfHNf5h8N20p"
+    target="_blank"
+    rel="noopener noreferrer">
+
+Buy Now
+
+</a>
+
+
+<button
+    class="mini-cart add-cart"
+    data-id="starter-bundle"
+    data-name="Starter Bundle"
+    data-price="27"
+    data-price-id="price_1TweJORtp4gVtODymXOzvXjB"
+    data-stripe="https://buy.stripe.com/28E6oJ504fKMfHNf5h8N20p"
+    data-image="images/Starter_Bundle_Cover.png"
+    aria-label="Add Starter Bundle to cart">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+</button>
 
 </div>
-
-</article>
-
-<article class="review-card">
-
-<div class="stars">
-
-★★★★★
-
-</div>
-
-<p>
-
-This space is reserved for authentic
-buyer feedback and experiences.
-
-</p>
-
-<div class="reviewer">
-
-Verified Customer
-
-</div>
-
-<div class="verified">
-
-✓ Verified Purchase
 
 </div>
 
 </article>
 
-<article class="review-card">
 
-<div class="stars">
+<!-- CREATOR -->
 
-★★★★★
+<article class="product-card">
 
-</div>
+<a href="bundles.html">
 
-<p>
+<div class="product-image">
 
-Read the full Customer Reviews page
-to see reviews buyers have actually left.
-
-</p>
-
-<div class="reviewer">
-
-Verified Customer
+<img
+    src="images/Creator_Bundle_Highest_Resolution.png"
+    alt="Creator Bundle">
 
 </div>
 
-<div class="verified">
+</a>
 
-✓ Verified Purchase
+
+<div class="product-body">
+
+<h3>
+
+Creator Bundle
+
+</h3>
+
+<div class="product-meta">
+
+3 Premium eBooks + 6 Professional Templates
+
+</div>
+
+
+<div class="product-bottom">
+
+<span class="price">
+
+$37
+
+</span>
+
+
+<a
+    class="buy-now"
+    href="https://buy.stripe.com/9B614p1NSeGI9jp9KX8N20z"
+    target="_blank"
+    rel="noopener noreferrer">
+
+Buy Now
+
+</a>
+
+
+<button
+    class="mini-cart add-cart"
+    data-id="creator-bundle"
+    data-name="Creator Bundle"
+    data-price="37"
+    data-price-id="price_1UA3lXRtp4gVtODyq54xMbhJ"
+    data-stripe="https://buy.stripe.com/9B614p1NSeGI9jp9KX8N20z"
+    data-image="images/Creator_Bundle_Highest_Resolution.png"
+    aria-label="Add Creator Bundle to cart">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+</button>
+
+</div>
 
 </div>
 
 </article>
+
+
+<!-- BUSINESS -->
+
+<article class="product-card">
+
+<a href="bundles.html">
+
+<div class="product-image">
+
+<img
+    src="images/high_resolution_polished.png"
+    alt="Business Bundle">
+
+</div>
+
+</a>
+
+
+<div class="product-body">
+
+<h3>
+
+Business Bundle
+
+</h3>
+
+<div class="product-meta">
+
+5 Premium eBooks + 10 Professional Templates
+
+</div>
+
+
+<div class="product-bottom">
+
+<span class="price">
+
+$57
+
+</span>
+
+
+<a
+    class="buy-now"
+    href="https://buy.stripe.com/14AbJ3504cyA0MT7CP8N20P"
+    target="_blank"
+    rel="noopener noreferrer">
+
+Buy Now
+
+</a>
+
+
+<button
+    class="mini-cart add-cart"
+    data-id="business-bundle"
+    data-name="Business Bundle"
+    data-price="57"
+    data-price-id="price_1UDRuaRtp4gVtODy0x7llRl7"
+    data-stripe="https://buy.stripe.com/14AbJ3504cyA0MT7CP8N20P"
+    data-image="images/high_resolution_polished.png"
+    aria-label="Add Business Bundle to cart">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+</button>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- HEALTH -->
+
+<article class="product-card">
+
+<a href="bundles.html">
+
+<div class="product-image">
+
+<img
+    src="images/Health_Wellness_Collection.png"
+    alt="Health and Wellness Collection">
+
+</div>
+
+</a>
+
+
+<div class="product-body">
+
+<h3>
+
+Health &amp; Wellness Collection
+
+</h3>
+
+<div class="product-meta">
+
+5 Premium eBooks + 10 Professional Templates
+
+</div>
+
+
+<div class="product-bottom">
+
+<span class="price">
+
+$57
+
+</span>
+
+
+<a
+    class="buy-now"
+    href="https://buy.stripe.com/28EdRbakoeGIdzF5uH8N20Q"
+    target="_blank"
+    rel="noopener noreferrer">
+
+Buy Now
+
+</a>
+
+
+<button
+    class="mini-cart add-cart"
+    data-id="health-wellness"
+    data-name="Health &amp; Wellness Collection"
+    data-price="57"
+    data-price-id="price_1UEiWMRtp4gVtODyTO9FPlIb"
+    data-stripe="https://buy.stripe.com/28EdRbakoeGIdzF5uH8N20Q"
+    data-image="images/Health_Wellness_Collection.png"
+    aria-label="Add Health and Wellness Collection to cart">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+</button>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- ULTIMATE -->
+
+<article class="product-card">
+
+<a href="bundles.html">
+
+<div class="product-image">
+
+<img
+    src="images/Ultimate_Collection.png"
+    alt="Ultimate Collection">
+
+</div>
+
+</a>
+
+
+<div class="product-body">
+
+<h3>
+
+Ultimate Collection
+
+</h3>
+
+<div class="product-meta">
+
+10 Premium eBooks + 10 Professional Templates
+
+</div>
+
+
+<div class="product-bottom">
+
+<span class="price">
+
+$97
+
+</span>
+
+
+<a
+    class="buy-now"
+    href="https://buy.stripe.com/aFa4gB9gk1TWbrx4qD8N20R"
+    target="_blank"
+    rel="noopener noreferrer">
+
+Buy Now
+
+</a>
+
+
+<button
+    class="mini-cart add-cart"
+    data-id="ultimate-collection"
+    data-name="Ultimate Collection"
+    data-price="97"
+    data-price-id="price_1UFEbjRtp4gVtODygoSjvZlg"
+    data-stripe="https://buy.stripe.com/aFa4gB9gk1TWbrx4qD8N20R"
+    data-image="images/Ultimate_Collection.png"
+    aria-label="Add Ultimate Collection to cart">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+</button>
+
+</div>
+
+</div>
+
+</article>
+
 
 </div>
 
 </div>
 
 </section>
+
+
+<!-- =====================================================
+     WHY THEBESTBUNDLE
+====================================================== -->
+
+<section class="why-section section">
+
+<div class="container">
+
+<div class="section-kicker">
+
+QUALITY • VALUE • SIMPLICITY
+
+</div>
+
+
+<h2 class="section-title">
+
+Why TheBestBundle?
+
+</h2>
+
+
+<p class="section-intro">
+
+Our collections are designed to make digital
+resources simple, practical and accessible.
+
+</p>
+
+
+<div class="feature-grid">
+
+
+<div class="feature-card">
+
+<div class="feature-icon">
+
+<i class="fa-solid fa-gem"></i>
+
+</div>
+
+<h3>
+
+Premium Content
+
+</h3>
+
+<p>
+
+Professionally structured digital resources
+designed with quality and simplicity in mind.
+
+</p>
+
+</div>
+
+
+<div class="feature-card">
+
+<div class="feature-icon">
+
+<i class="fa-solid fa-lightbulb"></i>
+
+</div>
+
+<h3>
+
+Practical Tools
+
+</h3>
+
+<p>
+
+Resources created to help you organize,
+learn, plan and take action.
+
+</p>
+
+</div>
+
+
+<div class="feature-card">
+
+<div class="feature-icon">
+
+<i class="fa-solid fa-bolt"></i>
+
+</div>
+
+<h3>
+
+Instant Access
+
+</h3>
+
+<p>
+
+Digital products are designed for convenient
+access after purchase.
+
+</p>
+
+</div>
+
+
+<div class="feature-card">
+
+<div class="feature-icon">
+
+<i class="fa-solid fa-scale-balanced"></i>
+
+</div>
+
+<h3>
+
+Affordable Value
+
+</h3>
+
+<p>
+
+Choose individual resources or curated
+collections based on your needs.
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     HOW IT WORKS
+====================================================== -->
+
+<section class="how-section section">
+
+<div class="container">
+
+<div class="section-kicker">
+
+SIMPLE • DIGITAL • CONVENIENT
+
+</div>
+
+
+<h2 class="section-title">
+
+How It Works
+
+</h2>
+
+
+<p class="section-intro">
+
+Getting started with TheBestBundle is simple.
+
+</p>
+
+
+<div class="steps-grid">
+
+
+<div class="step">
+
+<div class="step-number">
+
+01
+
+</div>
+
+<h3>
+
+Explore
+
+</h3>
+
+<p>
+
+Browse our eBooks,
+templates and collections.
+
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">
+
+02
+
+</div>
+
+<h3>
+
+Choose
+
+</h3>
+
+<p>
+
+Select the digital resource
+that fits your needs.
+
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">
+
+03
+
+</div>
+
+<h3>
+
+Purchase
+
+</h3>
+
+<p>
+
+Complete your purchase
+through secure checkout.
+
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">
+
+04
+
+</div>
+
+<h3>
+
+Access
+
+</h3>
+
+<p>
+
+Access your digital product
+and start using it.
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     CUSTOMER REVIEWS
+====================================================== -->
+
+<section class="review-section section">
+
+<div class="container review-layout">
+
+
+<div class="review-intro">
+
+<div class="section-kicker">
+
+REAL • GENUINE • CUSTOMER FEEDBACK
+
+</div>
+
+
+<h2>
+
+What Our<br>
+
+Customers Say
+
+</h2>
+
+
+<p>
+
+We want this section to feature genuine
+customer experiences. As reviews are
+submitted, selected reviews can appear here.
+
+</p>
+
+
+<a
+    class="btn btn-dark"
+    href="reviews.html">
+
+Read All Customer Reviews
+
+<i class="fa-solid fa-arrow-right"></i>
+
+</a>
+
+</div>
+
+
+<div class="review-cards">
+
+
+<!-- DEMO REVIEW 1 -->
+
+<article
+    class="review-card"
+    data-review="1"
+    tabindex="0"
+    role="button"
+    aria-label="Open sample testimonial">
+
+<div class="review-avatar">
+
+SM
+
+</div>
+
+
+<div class="review-stars">
+
+★★★★★
+
+</div>
+
+
+<h3>
+
+Sarah M.
+
+</h3>
+
+
+<div class="review-product">
+
+Digital Marketing Made Simple
+
+</div>
+
+
+<p class="review-text">
+
+“Sample testimonial for design demonstration.
+This text will be replaced with an authentic
+customer review.”
+
+</p>
+
+
+<span class="review-status">
+
+<i class="fa-solid fa-circle-info"></i>
+
+Sample
+
+</span>
+
+
+<span class="demo-label">
+
+Sample Testimonial • Demo Only
+
+</span>
+
+</article>
+
+
+<!-- DEMO REVIEW 2 -->
+
+<article
+    class="review-card"
+    data-review="2"
+    tabindex="0"
+    role="button"
+    aria-label="Open sample testimonial">
+
+<div class="review-avatar">
+
+JM
+
+</div>
+
+
+<div class="review-stars">
+
+★★★★★
+
+</div>
+
+
+<h3>
+
+James M.
+
+</h3>
+
+
+<div class="review-product">
+
+Starter Bundle
+
+</div>
+
+
+<p class="review-text">
+
+“Sample testimonial for design demonstration.
+This text will be replaced with an authentic
+customer review.”
+
+</p>
+
+
+<span class="review-status">
+
+<i class="fa-solid fa-circle-info"></i>
+
+Sample
+
+</span>
+
+
+<span class="demo-label">
+
+Sample Testimonial • Demo Only
+
+</span>
+
+</article>
+
+
+<!-- DEMO REVIEW 3 -->
+
+<article
+    class="review-card"
+    data-review="3"
+    tabindex="0"
+    role="button"
+    aria-label="Open sample testimonial">
+
+<div class="review-avatar">
+
+AL
+
+</div>
+
+
+<div class="review-stars">
+
+★★★★★
+
+</div>
+
+
+<h3>
+
+Amanda L.
+
+</h3>
+
+
+<div class="review-product">
+
+30-Day Wellness Planner
+
+</div>
+
+
+<p class="review-text">
+
+“Sample testimonial for design demonstration.
+This text will be replaced with an authentic
+customer review.”
+
+</p>
+
+
+<span class="review-status">
+
+<i class="fa-solid fa-circle-info"></i>
+
+Sample
+
+</span>
+
+
+<span class="demo-label">
+
+Sample Testimonial • Demo Only
+
+</span>
+
+</article>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     NEWSLETTER
+====================================================== -->
 
 <section class="newsletter">
 
 <div class="container newsletter-inner">
+
 
 <div class="news-copy">
 
@@ -3852,18 +4646,19 @@ Verified Customer
 
 </div>
 
+
 <div>
 
 <h2>
 
-STAY UPDATED
+Stay Connected
 
 </h2>
 
 <p>
 
 Receive new releases, exclusive offers
-and free digital resources straight to your inbox.
+and free digital resources.
 
 </p>
 
@@ -3871,28 +4666,32 @@ and free digital resources straight to your inbox.
 
 </div>
 
+
 <div>
 
 <form
- class="news-form-row"
- action="https://formspree.io/f/xkodngya"
- method="POST">
+    class="news-form-row"
+    action="https://formspree.io/f/xkodngya"
+    method="POST">
+
 
 <input
- type="hidden"
- name="_next"
- value="https://thebestbundle101-stack.github.io/thebestbundle/newsletter-success.html">
+    type="hidden"
+    name="_next"
+    value="https://thebestbundle101-stack.github.io/thebestbundle/newsletter-success.html">
+
 
 <input
- type="email"
- name="email"
- placeholder="Enter your email address"
- autocomplete="email"
- required>
+    type="email"
+    name="email"
+    placeholder="Enter your email address"
+    autocomplete="email"
+    required>
+
 
 <button
- class="btn btn-gold"
- type="submit">
+    class="btn btn-gold"
+    type="submit">
 
 Subscribe Now
 
@@ -3900,7 +4699,9 @@ Subscribe Now
 
 </button>
 
+
 </form>
+
 
 <div class="news-notes">
 
@@ -3920,7 +4721,92 @@ Subscribe Now
 
 </section>
 
+
+<!-- =====================================================
+     HELP & SUPPORT
+====================================================== -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="section-kicker">
+
+HELP • ANSWERS • ASSISTANCE
+
+</div>
+
+
+<h2 class="section-title">
+
+Need Help?
+
+</h2>
+
+
+<p class="section-intro">
+
+Find answers to common questions or contact
+TheBestBundle support.
+
+</p>
+
+
+<div
+    style="
+        display:flex;
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:10px;
+    ">
+
+
+<a
+    class="btn btn-dark"
+    href="faq.html">
+
+FAQ
+
+<i class="fa-solid fa-circle-question"></i>
+
+</a>
+
+
+<a
+    class="btn btn-dark"
+    href="help-support.html">
+
+Help &amp; Support
+
+<i class="fa-solid fa-headset"></i>
+
+</a>
+
+
+<a
+    class="btn btn-gold"
+    href="contact.html">
+
+Contact Us
+
+<i class="fa-regular fa-envelope"></i>
+
+</a>
+
+
+</div>
+
+</div>
+
+</section>
+
+
 </main>
+
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
 
 <footer class="footer">
 
@@ -3928,17 +4814,19 @@ Subscribe Now
 
 <div class="footer-grid">
 
+
+<!-- BRAND -->
+
 <div>
 
 <a
- class="footer-logo"
- href="index.html">
+    class="footer-logo"
+    href="index.html">
 
-<img
- src="images/Thebestbundle-transparent-logo.png"
- alt="TheBestBundle">
+TheBestBundle
 
 </a>
+
 
 <p>
 
@@ -3947,33 +4835,48 @@ creating and growing every day.
 
 </p>
 
+
 <div class="social-row">
 
-<a href="#" aria-label="Instagram">
+<a
+    href="#"
+    aria-label="Instagram">
 
 <i class="fa-brands fa-instagram"></i>
 
 </a>
 
-<a href="#" aria-label="TikTok">
+
+<a
+    href="#"
+    aria-label="TikTok">
 
 <i class="fa-brands fa-tiktok"></i>
 
 </a>
 
-<a href="#" aria-label="Facebook">
+
+<a
+    href="#"
+    aria-label="Facebook">
 
 <i class="fa-brands fa-facebook-f"></i>
 
 </a>
 
-<a href="#" aria-label="Pinterest">
+
+<a
+    href="#"
+    aria-label="Pinterest">
 
 <i class="fa-brands fa-pinterest-p"></i>
 
 </a>
 
-<a href="#" aria-label="YouTube">
+
+<a
+    href="#"
+    aria-label="YouTube">
 
 <i class="fa-brands fa-youtube"></i>
 
@@ -3983,99 +4886,193 @@ creating and growing every day.
 
 </div>
 
-<div>
 
-<h3>QUICK LINKS</h3>
-
-<a href="index.html">Home</a>
-
-<a href="courses.html">Courses</a>
-
-<a href="templates.html">Explore Templates</a>
-
-<a href="ebooks.html">Explore eBooks</a>
-
-<a href="bundles.html">Explore Bundles</a>
-
-<a href="freebie.html">Explore Free Resources</a>
-
-<a href="merchandise.html">Merchandise</a>
-
-<a href="contact.html">Contact</a>
-
-<a href="reviews.html">Customer Reviews</a>
-
-</div>
+<!-- EXPLORE -->
 
 <div>
 
-<h3>HELP &amp; SUPPORT</h3>
+<h3>
 
-<a href="faq.html">FAQ</a>
+EXPLORE
 
-<a href="refund.html">Refund Policy</a>
-
-<a href="terms.html">Terms &amp; Conditions</a>
-
-<a href="privacy.html">Privacy Policy</a>
-
-<a href="cookie.html">Cookie Policy</a>
-
-<a href="secure-checkout.html">Secure Checkout</a>
-
-</div>
-
-<div>
-
-<h3>TOP CATEGORIES</h3>
-
-<a href="merchandise.html">
-
-Health &amp; Wellness
-
-</a>
+</h3>
 
 <a href="ebooks.html">
 
-Personal Development
-
-</a>
-
-<a href="bundles.html">
-
-Business &amp; Finance
+eBooks
 
 </a>
 
 <a href="templates.html">
 
-Productivity
+Templates
+
+</a>
+
+<a href="bundles.html">
+
+Bundles
 
 </a>
 
 <a href="courses.html">
 
-Mindset &amp; Motivation
+Courses
+
+</a>
+
+<a href="freebie.html">
+
+Free Resources
+
+</a>
+
+<a href="french-collection.html">
+
+French Collection
 
 </a>
 
 </div>
 
+
+<!-- COMPANY -->
+
 <div>
 
-<h3>WE ACCEPT</h3>
+<h3>
+
+COMPANY
+
+</h3>
+
+<a href="index.html">
+
+Home
+
+</a>
+
+<a href="reviews.html">
+
+Customer Reviews
+
+</a>
+
+<a href="donate.html">
+
+Donation
+
+</a>
+
+<a href="merchandise.html">
+
+Merchandise
+
+</a>
+
+<a href="contact.html">
+
+Contact
+
+</a>
+
+</div>
+
+
+<!-- HELP -->
+
+<div>
+
+<h3>
+
+HELP &amp; SUPPORT
+
+</h3>
+
+<a href="faq.html">
+
+FAQ
+
+</a>
+
+<a href="help-support.html">
+
+Help &amp; Support
+
+</a>
+
+<a href="refund.html">
+
+Refund Policy
+
+</a>
+
+<a href="terms.html">
+
+Terms &amp; Conditions
+
+</a>
+
+<a href="privacy.html">
+
+Privacy Policy
+
+</a>
+
+<a href="cookie.html">
+
+Cookie Policy
+
+</a>
+
+<a href="secure-checkout.html">
+
+Secure Checkout
+
+</a>
+
+</div>
+
+
+<!-- PAYMENT -->
+
+<div>
+
+<h3>
+
+WE ACCEPT
+
+</h3>
+
 
 <div class="payment-row">
 
-<span class="payment">VISA</span>
+<span class="payment">
 
-<span class="payment">MC</span>
+VISA
 
-<span class="payment">AMEX</span>
+</span>
 
-<span class="payment">DISCOVER</span>
+<span class="payment">
+
+MC
+
+</span>
+
+<span class="payment">
+
+AMEX
+
+</span>
+
+<span class="payment">
+
+DISCOVER
+
+</span>
 
 </div>
+
 
 <div class="secure">
 
@@ -4089,7 +5086,9 @@ CHECKOUT
 
 </div>
 
+
 </div>
+
 
 <div class="copyright">
 
@@ -4101,15 +5100,22 @@ CHECKOUT
 
 </footer>
 
-<div
- class="overlay"
- id="searchOverlay">
-</div>
+
+<!-- =====================================================
+     SEARCH OVERLAY
+====================================================== -->
 
 <div
- class="search-box"
- id="searchBox"
- hidden>
+    class="overlay"
+    id="searchOverlay">
+</div>
+
+
+<div
+    class="search-box"
+    id="searchBox"
+    hidden>
+
 
 <div class="search-title">
 
@@ -4119,10 +5125,11 @@ Search TheBestBundle
 
 </h2>
 
+
 <button
- class="close-btn"
- id="closeSearch"
- aria-label="Close search">
+    class="close-btn"
+    id="closeSearch"
+    aria-label="Close search">
 
 <i class="fa-solid fa-xmark"></i>
 
@@ -4130,19 +5137,22 @@ Search TheBestBundle
 
 </div>
 
+
 <form
- class="search-row"
- id="searchForm">
+    class="search-row"
+    id="searchForm">
+
 
 <input
- id="siteSearch"
- type="search"
- placeholder="Search eBooks, templates, bundles..."
- autocomplete="off">
+    id="siteSearch"
+    type="search"
+    placeholder="Search eBooks, templates, bundles..."
+    autocomplete="off">
+
 
 <button
- class="btn btn-gold"
- type="submit">
+    class="btn btn-gold"
+    type="submit">
 
 Search
 
@@ -4152,15 +5162,22 @@ Search
 
 </div>
 
+
+<!-- =====================================================
+     EXPLORE COLLECTION SLIDE-OUT
+====================================================== -->
+
 <div
- class="overlay"
- id="menuOverlay">
+    class="overlay"
+    id="menuOverlay">
 </div>
 
+
 <aside
- class="panel"
- id="collectionPanel"
- aria-label="Explore Collection">
+    class="panel"
+    id="collectionPanel"
+    aria-label="Explore Collection">
+
 
 <div class="panel-head">
 
@@ -4170,10 +5187,11 @@ Explore Collection
 
 </h2>
 
+
 <button
- class="close-btn"
- id="closeMenu"
- aria-label="Close collection menu">
+    class="close-btn"
+    id="closeMenu"
+    aria-label="Close collection menu">
 
 <i class="fa-solid fa-xmark"></i>
 
@@ -4181,7 +5199,9 @@ Explore Collection
 
 </div>
 
+
 <nav class="collection-links">
+
 
 <a href="freebie.html">
 
@@ -4189,11 +5209,13 @@ Free Resources
 
 </a>
 
+
 <a href="ebooks.html">
 
 eBooks
 
 </a>
+
 
 <a href="bundles.html">
 
@@ -4201,11 +5223,13 @@ Bundles
 
 </a>
 
+
 <a href="templates.html">
 
 Templates
 
 </a>
+
 
 <a href="courses.html">
 
@@ -4213,11 +5237,13 @@ Courses
 
 </a>
 
+
 <a href="french-collection.html">
 
 French Collection
 
 </a>
+
 
 <a href="merchandise.html">
 
@@ -4225,33 +5251,43 @@ Merchandise
 
 </a>
 
+
 <a href="reviews.html">
 
 Customer Reviews
 
 </a>
 
+
 <a
- class="donate-link"
- href="donate.html">
+    class="donate-link"
+    href="donate.html">
 
 Donation
 
 </a>
 
+
 </nav>
 
 </aside>
 
+
+<!-- =====================================================
+     CART
+====================================================== -->
+
 <div
- class="overlay"
- id="cartOverlay">
+    class="overlay"
+    id="cartOverlay">
 </div>
 
+
 <aside
- class="panel"
- id="cartPanel"
- aria-label="Shopping cart">
+    class="panel"
+    id="cartPanel"
+    aria-label="Shopping cart">
+
 
 <div class="panel-head">
 
@@ -4261,10 +5297,11 @@ Your Cart
 
 </h2>
 
+
 <button
- class="close-btn"
- id="closeCart"
- aria-label="Close cart">
+    class="close-btn"
+    id="closeCart"
+    aria-label="Close shopping cart">
 
 <i class="fa-solid fa-xmark"></i>
 
@@ -4272,12 +5309,15 @@ Your Cart
 
 </div>
 
+
 <div
- class="cart-items"
- id="cartItems">
+    class="cart-items"
+    id="cartItems">
 </div>
 
+
 <div class="cart-foot">
+
 
 <div class="cart-total">
 
@@ -4295,10 +5335,11 @@ $0.00
 
 </div>
 
+
 <button
- class="btn btn-gold"
- id="reviewCart"
- style="width:100%">
+    class="btn btn-gold"
+    id="reviewCart"
+    style="width:100%">
 
 Review Cart
 
@@ -4308,587 +5349,904 @@ Review Cart
 
 </aside>
 
+
+<!-- =====================================================
+     REVIEW MODAL
+====================================================== -->
+
 <div
- class="toast"
- id="toast">
+    class="review-modal"
+    id="reviewModal">
+
+
+<div class="review-modal-card">
+
+
+<button
+    class="review-modal-close"
+    id="closeReviewModal"
+    aria-label="Close review">
+
+<i class="fa-solid fa-xmark"></i>
+
+</button>
+
+
+<div
+    class="modal-avatar"
+    id="modalAvatar">
+
+SM
+
 </div>
+
+
+<h2 id="modalName">
+
+Sarah M.
+
+</h2>
+
+
+<div
+    class="modal-product"
+    id="modalProduct">
+
+Digital Marketing Made Simple
+
+</div>
+
+
+<div class="modal-stars">
+
+★★★★★
+
+</div>
+
+
+<p
+    class="modal-review"
+    id="modalReview">
+
+“Sample testimonial for design demonstration.
+This content will be replaced with an authentic
+customer review.”
+
+</p>
+
+
+<div class="modal-note">
+
+<strong>Sample Testimonial • Demo Only</strong><br>
+
+This placeholder is used only to demonstrate
+how authentic customer reviews will appear
+on the website.
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- TOAST -->
+
+<div
+    class="toast"
+    id="toast">
+</div>
+
 
 <script>
 
-const $ =
- id => document.getElementById(id);
+/* =========================================================
+   BASIC HELPER
+========================================================= */
 
-/* EXPLORE COLLECTION */
+const $ = id =>
+    document.getElementById(id);
+
+
+/* =========================================================
+   EXPLORE COLLECTION
+========================================================= */
 
 function openCollection(){
 
- $("collectionPanel")
-  .classList
-  .add("active");
+    $("collectionPanel")
+        .classList
+        .add("active");
 
- $("menuOverlay")
-  .classList
-  .add("active");
+    $("menuOverlay")
+        .classList
+        .add("active");
 
- document.body
-  .classList
-  .add("locked");
+    document.body
+        .classList
+        .add("locked");
 
 }
 
 function closeCollection(){
 
- $("collectionPanel")
-  .classList
-  .remove("active");
+    $("collectionPanel")
+        .classList
+        .remove("active");
 
- $("menuOverlay")
-  .classList
-  .remove("active");
+    $("menuOverlay")
+        .classList
+        .remove("active");
 
- document.body
-  .classList
-  .remove("locked");
+    document.body
+        .classList
+        .remove("locked");
 
 }
 
 $("exploreCollection")
-.addEventListener(
- "click",
- openCollection
-);
+    .addEventListener(
+        "click",
+        openCollection
+    );
 
 $("closeMenu")
-.addEventListener(
- "click",
- closeCollection
-);
+    .addEventListener(
+        "click",
+        closeCollection
+    );
 
 $("menuOverlay")
-.addEventListener(
- "click",
- closeCollection
-);
+    .addEventListener(
+        "click",
+        closeCollection
+    );
 
-/* SEARCH */
+
+/* =========================================================
+   SEARCH
+========================================================= */
 
 function openSearch(){
 
- $("searchBox").hidden = false;
+    $("searchBox").hidden = false;
 
- $("searchOverlay")
-  .classList
-  .add("active");
+    $("searchOverlay")
+        .classList
+        .add("active");
 
- document.body
-  .classList
-  .add("locked");
+    document.body
+        .classList
+        .add("locked");
 
- setTimeout(
-  () => $("siteSearch").focus(),
-  40
- );
+    setTimeout(
+        () => $("siteSearch").focus(),
+        40
+    );
 
 }
 
 function closeSearch(){
 
- $("searchBox").hidden = true;
+    $("searchBox").hidden = true;
 
- $("searchOverlay")
-  .classList
-  .remove("active");
+    $("searchOverlay")
+        .classList
+        .remove("active");
 
- document.body
-  .classList
-  .remove("locked");
+    document.body
+        .classList
+        .remove("locked");
 
 }
 
 $("searchButton")
-.addEventListener(
- "click",
- openSearch
-);
+    .addEventListener(
+        "click",
+        openSearch
+    );
 
 $("closeSearch")
-.addEventListener(
- "click",
- closeSearch
-);
+    .addEventListener(
+        "click",
+        closeSearch
+    );
 
 $("searchOverlay")
-.addEventListener(
- "click",
- closeSearch
-);
+    .addEventListener(
+        "click",
+        closeSearch
+    );
+
 
 $("searchForm")
-.addEventListener(
- "submit",
- e => {
+    .addEventListener(
+        "submit",
+        e => {
 
-  e.preventDefault();
+            e.preventDefault();
 
-  const q =
-   $("siteSearch")
-    .value
-    .trim();
+            const q =
+                $("siteSearch")
+                    .value
+                    .trim();
 
-  if(q){
+            if(q){
 
-   window.location.href =
-    "search.html?q=" +
-    encodeURIComponent(q);
+                window.location.href =
+                    "search.html?q=" +
+                    encodeURIComponent(q);
 
-  }
+            }
 
- }
-);
+        }
+    );
 
-/* CART STORAGE */
+
+/* =========================================================
+   CART STORAGE
+========================================================= */
 
 let cart = [];
 
 try{
 
- cart =
-  JSON.parse(
-   localStorage.getItem(
-    "theBestBundleCart"
-   ) || "[]"
-  );
-
- if(!Array.isArray(cart)){
-
-  cart = [];
-
- }
-
-}catch(e){
-
- cart = [];
-
-}
-
-function saveCart(){
-
- localStorage.setItem(
-  "theBestBundleCart",
-  JSON.stringify(cart)
- );
-
- renderCart();
-
-}
-
-function renderCart(){
-
- const count =
-
-  cart.reduce(
-
-   (n,p) =>
-
-    n +
-    (
-     Number(p.quantity) || 1
-    ),
-
-   0
-
-  );
-
- $("cartCount")
-  .textContent =
-   count;
-
- $("cartCount")
-  .style
-  .display =
-   count
-    ? "flex"
-    : "none";
-
- const box =
-  $("cartItems");
-
- if(!cart.length){
-
-  box.innerHTML =
-
-   '<div class="empty-cart">' +
-
-   '<i class="fa-solid fa-cart-shopping"></i>' +
-
-   '<p>Your cart is empty.</p>' +
-
-   '</div>';
-
-  $("cartTotal")
-   .textContent =
-    "$0.00";
-
-  return;
-
- }
-
- let total = 0;
-
- box.innerHTML = "";
-
- cart.forEach(
-  (p,i) => {
-
-   const qty =
-    Number(p.quantity) || 1;
-
-   const price =
-    Number(p.price) || 0;
-
-   total +=
-    price * qty;
-
-   const row =
-    document.createElement("div");
-
-   row.className =
-    "cart-item";
-
-   row.innerHTML =
-
-    `<img
-      src="${p.image || "images/Starter_Bundle_Cover.png"}"
-      alt="${p.name || "Product"}">
-
-     <div>
-
-      <h3>
-       ${p.name || "Product"}
-      </h3>
-
-      <div class="cart-price">
-       $${(price * qty).toFixed(2)}
-      </div>
-
-     </div>
-
-     <button
-      class="remove-item"
-      data-index="${i}"
-      aria-label="Remove item">
-
-      <i class="fa-solid fa-trash"></i>
-
-     </button>`;
-
-   box.appendChild(row);
-
-  }
- );
-
- $("cartTotal")
-  .textContent =
-   "$" +
-   total.toFixed(2);
-
- box
-  .querySelectorAll(".remove-item")
-  .forEach(
-   b =>
-
-    b.addEventListener(
-     "click",
-     () => {
-
-      cart.splice(
-       Number(b.dataset.index),
-       1
-      );
-
-      saveCart();
-
-     }
-    )
-
-  );
-
-}
-
-function openCart(){
-
- $("cartPanel")
-  .classList
-  .add("active");
-
- $("cartOverlay")
-  .classList
-  .add("active");
-
- document.body
-  .classList
-  .add("locked");
-
- renderCart();
-
-}
-
-function closeCart(){
-
- $("cartPanel")
-  .classList
-  .remove("active");
-
- $("cartOverlay")
-  .classList
-  .remove("active");
-
- document.body
-  .classList
-  .remove("locked");
-
-}
-
-$("cartButton")
-.addEventListener(
- "click",
- openCart
-);
-
-$("closeCart")
-.addEventListener(
- "click",
- closeCart
-);
-
-$("cartOverlay")
-.addEventListener(
- "click",
- closeCart
-);
-
-$("reviewCart")
-.addEventListener(
- "click",
- () => {
-
-  if(cart.length){
-
-   window.location.href =
-    "cart.html";
-
-  }
-
- }
-);
-
-/* ADD TO CART */
-
-document
- .querySelectorAll(".add-cart")
- .forEach(
-  btn => {
-
-   btn.addEventListener(
-    "click",
-    e => {
-
-     e.preventDefault();
-
-     const id =
-      btn.dataset.id;
-
-     const existing =
-
-      cart.find(
-       p => p.id === id
-      );
-
-     if(existing){
-
-      existing.quantity =
-
-       (
-        Number(
-         existing.quantity
-        ) || 1
-       ) + 1;
-
-      /*
-       * Keep the Stripe information
-       * attached to the product.
-       */
-
-      existing.priceId =
-       btn.dataset.priceId ||
-       existing.priceId;
-
-      existing.stripe =
-       btn.dataset.stripe ||
-       existing.stripe;
-
-     }else{
-
-      cart.push({
-
-       id:id,
-
-       name:
-        btn.dataset.name,
-
-       price:
-        Number(
-         btn.dataset.price
-        ),
-
-       image:
-        btn.dataset.image,
-
-       quantity:
-        1,
-
-       priceId:
-        btn.dataset.priceId,
-
-       stripe:
-        btn.dataset.stripe
-
-      });
-
-     }
-
-     saveCart();
-
-     openCart();
-
-    }
-   );
-
-  }
- );
-
-/* ESCAPE CLOSES PANELS */
-
-document.addEventListener(
- "keydown",
- e => {
-
-  if(e.key === "Escape"){
-
-   closeCollection();
-
-   closeSearch();
-
-   closeCart();
-
-  }
-
- }
-);
-
-/* STORAGE SYNCHRONIZATION */
-
-window.addEventListener(
- "storage",
- e => {
-
-  if(
-   e.key ===
-   "theBestBundleCart"
-  ){
-
-   try{
-
     cart =
-     JSON.parse(
-      e.newValue || "[]"
-     );
+        JSON.parse(
+            localStorage.getItem(
+                "theBestBundleCart"
+            ) || "[]"
+        );
 
     if(!Array.isArray(cart)){
 
-     cart = [];
+        cart = [];
 
     }
 
-   }catch(x){
+}catch(e){
 
     cart = [];
 
-   }
+}
 
-   renderCart();
 
-  }
+function saveCart(){
 
- }
+    localStorage.setItem(
+        "theBestBundleCart",
+        JSON.stringify(cart)
+    );
+
+    renderCart();
+
+}
+
+
+function renderCart(){
+
+    const count =
+        cart.reduce(
+            (n,p) =>
+                n +
+                (
+                    Number(p.quantity) || 1
+                ),
+            0
+        );
+
+
+    $("cartCount")
+        .textContent =
+            count;
+
+
+    $("cartCount")
+        .style
+        .display =
+            count
+                ? "flex"
+                : "none";
+
+
+    const box =
+        $("cartItems");
+
+
+    if(!cart.length){
+
+        box.innerHTML =
+
+            '<div class="empty-cart">' +
+
+            '<i class="fa-solid fa-cart-shopping"></i>' +
+
+            '<p>Your cart is empty.</p>' +
+
+            '</div>';
+
+        $("cartTotal")
+            .textContent =
+                "$0.00";
+
+        return;
+
+    }
+
+
+    let total = 0;
+
+    box.innerHTML = "";
+
+
+    cart.forEach(
+        (p,i) => {
+
+            const qty =
+                Number(p.quantity) || 1;
+
+            const price =
+                Number(p.price) || 0;
+
+            total +=
+                price * qty;
+
+
+            const row =
+                document.createElement(
+                    "div"
+                );
+
+            row.className =
+                "cart-item";
+
+
+            const image =
+                p.image ||
+                "images/Starter_Bundle_Cover.png";
+
+
+            const name =
+                p.name ||
+                "Product";
+
+
+            row.innerHTML =
+
+                `<img
+                    src="${image}"
+                    alt="${name}">
+
+                <div>
+
+                    <h3>
+                        ${name}
+                    </h3>
+
+                    <div class="cart-price">
+                        $${(price * qty).toFixed(2)}
+                    </div>
+
+                </div>
+
+                <button
+                    class="remove-item"
+                    data-index="${i}"
+                    aria-label="Remove item">
+
+                    <i class="fa-solid fa-trash"></i>
+
+                </button>`;
+
+
+            box.appendChild(row);
+
+        }
+    );
+
+
+    $("cartTotal")
+        .textContent =
+            "$" +
+            total.toFixed(2);
+
+
+    box
+        .querySelectorAll(
+            ".remove-item"
+        )
+        .forEach(
+            button => {
+
+                button.addEventListener(
+                    "click",
+                    () => {
+
+                        cart.splice(
+                            Number(
+                                button.dataset.index
+                            ),
+                            1
+                        );
+
+                        saveCart();
+
+                    }
+                );
+
+            }
+        );
+
+}
+
+
+function openCart(){
+
+    $("cartPanel")
+        .classList
+        .add("active");
+
+    $("cartOverlay")
+        .classList
+        .add("active");
+
+    document.body
+        .classList
+        .add("locked");
+
+    renderCart();
+
+}
+
+
+function closeCart(){
+
+    $("cartPanel")
+        .classList
+        .remove("active");
+
+    $("cartOverlay")
+        .classList
+        .remove("active");
+
+    document.body
+        .classList
+        .remove("locked");
+
+}
+
+
+$("cartButton")
+    .addEventListener(
+        "click",
+        openCart
+    );
+
+
+$("closeCart")
+    .addEventListener(
+        "click",
+        closeCart
+    );
+
+
+$("cartOverlay")
+    .addEventListener(
+        "click",
+        closeCart
+    );
+
+
+$("reviewCart")
+    .addEventListener(
+        "click",
+        () => {
+
+            if(cart.length){
+
+                window.location.href =
+                    "cart.html";
+
+            }
+
+        }
+    );
+
+
+/* =========================================================
+   ADD TO CART
+========================================================= */
+
+document
+    .querySelectorAll(
+        ".add-cart"
+    )
+    .forEach(
+        button => {
+
+            button.addEventListener(
+                "click",
+                e => {
+
+                    e.preventDefault();
+
+
+                    const id =
+                        button.dataset.id;
+
+
+                    const existing =
+                        cart.find(
+                            p => p.id === id
+                        );
+
+
+                    if(existing){
+
+                        existing.quantity =
+                            (
+                                Number(
+                                    existing.quantity
+                                ) || 1
+                            ) + 1;
+
+
+                        existing.priceId =
+                            button.dataset.priceId ||
+                            existing.priceId;
+
+
+                        existing.stripe =
+                            button.dataset.stripe ||
+                            existing.stripe;
+
+                    }else{
+
+                        cart.push({
+
+                            id:id,
+
+                            name:
+                                button.dataset.name,
+
+                            price:
+                                Number(
+                                    button.dataset.price
+                                ),
+
+                            image:
+                                button.dataset.image,
+
+                            quantity:1,
+
+                            priceId:
+                                button.dataset.priceId,
+
+                            stripe:
+                                button.dataset.stripe
+
+                        });
+
+                    }
+
+
+                    saveCart();
+
+                    openCart();
+
+                }
+            );
+
+        }
+    );
+
+
+/* =========================================================
+   REVIEW MODAL
+========================================================= */
+
+const demoReviews = {
+
+    1:{
+
+        initials:"SM",
+
+        name:"Sarah M.",
+
+        product:"Digital Marketing Made Simple",
+
+        review:
+            "“Sample testimonial for design demonstration. This content will be replaced with an authentic customer review.”"
+
+    },
+
+    2:{
+
+        initials:"JM",
+
+        name:"James M.",
+
+        product:"Starter Bundle",
+
+        review:
+            "“Sample testimonial for design demonstration. This content will be replaced with an authentic customer review.”"
+
+    },
+
+    3:{
+
+        initials:"AL",
+
+        name:"Amanda L.",
+
+        product:"30-Day Wellness Planner",
+
+        review:
+            "“Sample testimonial for design demonstration. This content will be replaced with an authentic customer review.”"
+
+    }
+
+};
+
+
+function openReview(id){
+
+    const review =
+        demoReviews[id];
+
+    if(!review){
+
+        return;
+
+    }
+
+
+    $("modalAvatar")
+        .textContent =
+            review.initials;
+
+
+    $("modalName")
+        .textContent =
+            review.name;
+
+
+    $("modalProduct")
+        .textContent =
+            review.product;
+
+
+    $("modalReview")
+        .textContent =
+            review.review;
+
+
+    $("reviewModal")
+        .classList
+        .add("active");
+
+
+    document.body
+        .classList
+        .add("locked");
+
+}
+
+
+function closeReview(){
+
+    $("reviewModal")
+        .classList
+        .remove("active");
+
+    document.body
+        .classList
+        .remove("locked");
+
+}
+
+
+document
+    .querySelectorAll(
+        ".review-card"
+    )
+    .forEach(
+        card => {
+
+            card.addEventListener(
+                "click",
+                () => {
+
+                    openReview(
+                        card.dataset.review
+                    );
+
+                }
+            );
+
+
+            card.addEventListener(
+                "keydown",
+                e => {
+
+                    if(
+                        e.key === "Enter" ||
+                        e.key === " "
+                    ){
+
+                        e.preventDefault();
+
+                        openReview(
+                            card.dataset.review
+                        );
+
+                    }
+
+                }
+            );
+
+        }
+    );
+
+
+$("closeReviewModal")
+    .addEventListener(
+        "click",
+        closeReview
+    );
+
+
+$("reviewModal")
+    .addEventListener(
+        "click",
+        e => {
+
+            if(
+                e.target ===
+                $("reviewModal")
+            ){
+
+                closeReview();
+
+            }
+
+        }
+    );
+
+
+/* =========================================================
+   ESCAPE
+========================================================= */
+
+document.addEventListener(
+    "keydown",
+    e => {
+
+        if(e.key === "Escape"){
+
+            closeCollection();
+
+            closeSearch();
+
+            closeCart();
+
+            closeReview();
+
+        }
+
+    }
 );
 
-/* PREVENT PLACEHOLDER LINKS */
+
+/* =========================================================
+   STORAGE SYNCHRONIZATION
+========================================================= */
+
+window.addEventListener(
+    "storage",
+    e => {
+
+        if(
+            e.key ===
+            "theBestBundleCart"
+        ){
+
+            try{
+
+                cart =
+                    JSON.parse(
+                        e.newValue || "[]"
+                    );
+
+                if(
+                    !Array.isArray(cart)
+                ){
+
+                    cart = [];
+
+                }
+
+            }catch(x){
+
+                cart = [];
+
+            }
+
+
+            renderCart();
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   EXTERNAL LINK SAFETY
+========================================================= */
 
 document
- .querySelectorAll(
-  'a[href="#"]'
- )
- .forEach(
-  a =>
-
-   a.addEventListener(
-    "click",
-    e => e.preventDefault()
-   )
-
- );
-
-/* EXTERNAL LINK SAFETY */
-
-document
- .querySelectorAll(
-  'a[target="_blank"]'
- )
- .forEach(
-  a => {
-
-   const rel =
-
-    (
-     a.getAttribute("rel") ||
-     ""
+    .querySelectorAll(
+        'a[target="_blank"]'
     )
-    .split(/\s+/)
-    .filter(Boolean);
+    .forEach(
+        a => {
 
-   if(
-    !rel.includes("noopener")
-   ){
+            const rel =
+                (
+                    a.getAttribute("rel") ||
+                    ""
+                )
+                .split(/\s+/)
+                .filter(Boolean);
 
-    rel.push("noopener");
 
-   }
+            if(
+                !rel.includes("noopener")
+            ){
 
-   if(
-    !rel.includes("noreferrer")
-   ){
+                rel.push("noopener");
 
-    rel.push("noreferrer");
+            }
 
-   }
 
-   a.setAttribute(
-    "rel",
-    rel.join(" ")
-   );
+            if(
+                !rel.includes("noreferrer")
+            ){
 
-  }
- );
+                rel.push("noreferrer");
+
+            }
+
+
+            a.setAttribute(
+                "rel",
+                rel.join(" ")
+            );
+
+        }
+    );
+
+
+/* =========================================================
+   LAST PAGE
+========================================================= */
 
 sessionStorage.setItem(
- "theBestBundleLastPage",
- window.location.href
+    "theBestBundleLastPage",
+    window.location.href
 );
+
+
+/* =========================================================
+   INITIAL CART RENDER
+========================================================= */
 
 renderCart();
 
 </script>
+
 
 </body>
 
