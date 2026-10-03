@@ -777,7 +777,7 @@ button{
 
 
 /* =========================================================
-   HERO BUNDLES
+   HERO 3D PRODUCT SHOWCASE
 ========================================================= */
 
 .hero-art{
@@ -792,224 +792,39 @@ button{
 
     justify-content:center;
 
-}
-
-.hero-art:before{
-
-    content:"";
-
-    position:absolute;
-
-    width:78%;
-
-    height:82%;
-
-    left:11%;
-
-    top:9%;
-
-    background:
-
-        radial-gradient(
-            ellipse at center,
-            rgba(200,164,93,.34),
-            rgba(200,164,93,.13) 45%,
-            transparent 72%
-        );
-
-    filter:blur(22px);
+    overflow:hidden;
 
 }
 
-.hero-floor{
+.hero-3d-image{
 
-    position:absolute;
+    position:relative;
 
-    bottom:25px;
+    z-index:5;
 
-    width:84%;
+    width:116%;
 
-    height:46px;
+    max-width:none;
 
-    border-radius:50%;
+    height:520px;
 
-    background:rgba(0,0,0,.48);
+    object-fit:cover;
 
-    filter:blur(9px);
-
-}
-
-.hero-center-card{
-
-    position:absolute;
-
-    width:94%;
-
-    height:94%;
-
-    left:3%;
-
-    top:3%;
+    object-position:right center;
 
     border-radius:24px;
-
-    border:1px solid rgba(200,164,93,.72);
-
-    background:
-
-        linear-gradient(
-            145deg,
-            rgba(255,255,255,.055),
-            rgba(7,26,51,.16)
-        );
-
-    box-shadow:
-
-        0 0 18px rgba(200,164,93,.30),
-
-        0 0 45px rgba(200,164,93,.12),
-
-        inset 0 0 30px rgba(200,164,93,.06);
-
-}
-
-.quality-badge{
-
-    position:absolute;
-
-    right:0;
-
-    top:8px;
-
-    width:78px;
-
-    height:78px;
-
-    border-radius:50%;
-
-    background:var(--gold);
-
-    color:var(--navy);
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    text-align:center;
-
-    font-size:8px;
-
-    font-weight:900;
-
-    line-height:1.2;
-
-    box-shadow:
-
-        0 10px 25px rgba(0,0,0,.25),
-
-        0 0 25px rgba(200,164,93,.28);
-
-    z-index:30;
-
-}
-
-.hero-item{
-
-    position:absolute;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
 
     filter:
 
         drop-shadow(
-            0 18px 22px rgba(0,0,0,.40)
+            0 18px 28px rgba(0,0,0,.35)
         )
 
         drop-shadow(
-            0 0 15px rgba(200,164,93,.20)
+            0 0 18px rgba(200,164,93,.18)
         );
 
-    z-index:5;
-
-}
-
-.hero-item img{
-
-    width:100%;
-
-    height:100%;
-
-    object-fit:contain;
-
-}
-
-.hero-item.center{
-
-    width:310px;
-
-    height:350px;
-
-    left:50%;
-
-    top:50%;
-
-    transform:translate(-50%,-50%);
-
-    z-index:10;
-
-}
-
-.hero-item.left-side{
-
-    width:155px;
-
-    height:205px;
-
-    left:7%;
-
-    top:8%;
-
-}
-
-.hero-item.right-side{
-
-    width:155px;
-
-    height:205px;
-
-    right:7%;
-
-    top:8%;
-
-}
-
-.hero-item.left-small{
-
-    width:155px;
-
-    height:205px;
-
-    left:7%;
-
-    bottom:7%;
-
-}
-
-.hero-item.right-small{
-
-    width:155px;
-
-    height:205px;
-
-    right:7%;
-
-    bottom:7%;
+    transform:translateX(2%);
 
 }
 
@@ -1063,54 +878,13 @@ button{
 
     }
 
-    .hero-item.center{
+    .hero-3d-image{
 
-        width:235px;
+        width:118%;
 
-        height:275px;
+        height:430px;
 
-    }
-
-    .hero-item.left-side,
-    .hero-item.right-side,
-    .hero-item.left-small,
-    .hero-item.right-small{
-
-        width:105px;
-
-        height:145px;
-
-    }
-
-    .hero-item.left-side{
-
-        left:2%;
-
-        top:7%;
-
-    }
-
-    .hero-item.right-side{
-
-        right:2%;
-
-        top:7%;
-
-    }
-
-    .hero-item.left-small{
-
-        left:2%;
-
-        bottom:6%;
-
-    }
-
-    .hero-item.right-small{
-
-        right:2%;
-
-        bottom:6%;
+        transform:translateX(3%);
 
     }
 
@@ -1130,32 +904,15 @@ button{
 
     }
 
-    .hero-item.center{
+    .hero-3d-image{
 
-        width:190px;
+        width:125%;
 
-        height:225px;
+        height:355px;
 
-    }
+        transform:translateX(5%);
 
-    .hero-item.left-side,
-    .hero-item.right-side,
-    .hero-item.left-small,
-    .hero-item.right-small{
-
-        width:78px;
-
-        height:108px;
-
-    }
-
-    .quality-badge{
-
-        width:60px;
-
-        height:60px;
-
-        font-size:7px;
+        border-radius:18px;
 
     }
 
@@ -2016,11 +1773,13 @@ button{
 
 .review-avatar{
 
-    width:46px;
+    width:58px;
 
-    height:46px;
+    height:58px;
 
     border-radius:50%;
+
+    overflow:hidden;
 
     background:var(--navy);
 
@@ -2032,13 +1791,19 @@ button{
 
     justify-content:center;
 
-    font-family:"Cormorant Garamond",Georgia,serif;
-
-    font-size:20px;
-
-    font-weight:700;
-
     margin-bottom:12px;
+
+}
+
+.review-avatar img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
 
 }
 
@@ -2087,44 +1852,6 @@ button{
     line-height:1.65;
 
     margin-bottom:12px;
-
-}
-
-.review-status{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    gap:4px;
-
-    color:#8A6D32;
-
-    font-size:7px;
-
-    font-weight:800;
-
-    border:1px solid #E8D7AE;
-
-    background:#FCF8ED;
-
-    border-radius:20px;
-
-    padding:4px 7px;
-
-}
-
-.demo-label{
-
-    display:block;
-
-    margin-top:8px;
-
-    color:#8A8F98;
-
-    font-size:7px;
-
-    font-style:italic;
 
 }
 
@@ -3022,11 +2749,13 @@ button{
 
 .modal-avatar{
 
-    width:65px;
+    width:72px;
 
-    height:65px;
+    height:72px;
 
     border-radius:50%;
+
+    overflow:hidden;
 
     background:var(--navy);
 
@@ -3038,13 +2767,19 @@ button{
 
     justify-content:center;
 
-    font-family:"Cormorant Garamond",Georgia,serif;
-
-    font-size:28px;
-
-    font-weight:700;
-
     margin-bottom:15px;
+
+}
+
+.modal-avatar img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
 
 }
 
@@ -3095,22 +2830,6 @@ button{
     color:var(--ink);
 
     margin-bottom:18px;
-
-}
-
-.modal-note{
-
-    padding:12px 14px;
-
-    border-radius:10px;
-
-    background:#FCF8ED;
-
-    color:#80672F;
-
-    font-size:8px;
-
-    line-height:1.5;
 
 }
 
@@ -3345,86 +3064,16 @@ learn, create and grow.
 </div>
 
 
-<!-- HERO ART -->
+<!-- HERO 3D IMAGE -->
 
 <div
     class="hero-art"
     aria-label="TheBestBundle premium digital collections">
 
-<div class="hero-floor"></div>
-
-<div class="hero-center-card"></div>
-
-
-<div class="quality-badge">
-
-✦<br>
-
-PREMIUM<br>
-
-QUALITY
-
-</div>
-
-
-<!-- ULTIMATE -->
-
-<div
-    class="hero-item center">
-
 <img
-    src="images/Ultimate_Collection.png"
-    alt="Ultimate Collection">
-
-</div>
-
-
-<!-- STARTER -->
-
-<div
-    class="hero-item left-side">
-
-<img
-    src="images/Starter_Bundle_Cover.png"
-    alt="Starter Bundle">
-
-</div>
-
-
-<!-- CREATOR -->
-
-<div
-    class="hero-item right-side">
-
-<img
-    src="images/Creator_Bundle_Highest_Resolution.png"
-    alt="Creator Bundle">
-
-</div>
-
-
-<!-- BUSINESS -->
-
-<div
-    class="hero-item left-small">
-
-<img
-    src="images/high_resolution_polished.png"
-    alt="Business Bundle">
-
-</div>
-
-
-<!-- HEALTH -->
-
-<div
-    class="hero-item right-small">
-
-<img
-    src="images/Health_Wellness_Collection.png"
-    alt="Health and Wellness Collection">
-
-</div>
+    class="hero-3d-image"
+    src="images/thebestbundle-3d-product-showcase.png"
+    alt="TheBestBundle Premium Digital Collection 3D Display">
 
 </div>
 
@@ -4407,9 +4056,9 @@ Customers Say
 
 <p>
 
-We want this section to feature genuine
-customer experiences. As reviews are
-submitted, selected reviews can appear here.
+We value the experiences shared by our
+customers and are pleased to highlight
+selected feedback about our digital resources.
 
 </p>
 
@@ -4430,18 +4079,20 @@ Read All Customer Reviews
 <div class="review-cards">
 
 
-<!-- DEMO REVIEW 1 -->
+<!-- REVIEW 1 — SARAH -->
 
 <article
     class="review-card"
     data-review="1"
     tabindex="0"
     role="button"
-    aria-label="Open sample testimonial">
+    aria-label="Open Sarah's review">
 
 <div class="review-avatar">
 
-SM
+<img
+    src="images/review-sarah.png"
+    alt="Sarah">
 
 </div>
 
@@ -4455,7 +4106,7 @@ SM
 
 <h3>
 
-Sarah M.
+Sarah
 
 </h3>
 
@@ -4469,43 +4120,29 @@ Digital Marketing Made Simple
 
 <p class="review-text">
 
-“Sample testimonial for design demonstration.
-This text will be replaced with an authentic
-customer review.”
+“Clear, practical, and easy to follow.
+It helped me better organize my
+marketing ideas.”
 
 </p>
-
-
-<span class="review-status">
-
-<i class="fa-solid fa-circle-info"></i>
-
-Sample
-
-</span>
-
-
-<span class="demo-label">
-
-Sample Testimonial • Demo Only
-
-</span>
 
 </article>
 
 
-<!-- DEMO REVIEW 2 -->
+<!-- REVIEW 2 — AMANDA -->
 
 <article
     class="review-card"
     data-review="2"
     tabindex="0"
     role="button"
-    aria-label="Open sample testimonial">
+    aria-label="Open Amanda's review">
 
 <div class="review-avatar">
 
-JM
+<img
+    src="images/review-amanda.png"
+    alt="Amanda">
 
 </div>
 
@@ -4519,7 +4156,7 @@ JM
 
 <h3>
 
-James M.
+Amanda
 
 </h3>
 
@@ -4533,43 +4170,29 @@ Starter Bundle
 
 <p class="review-text">
 
-“Sample testimonial for design demonstration.
-This text will be replaced with an authentic
-customer review.”
+“A great collection to get started.
+The templates are simple, useful,
+and easy to use.”
 
 </p>
-
-
-<span class="review-status">
-
-<i class="fa-solid fa-circle-info"></i>
-
-Sample
-
-</span>
-
-
-<span class="demo-label">
-
-Sample Testimonial • Demo Only
-
-</span>
 
 </article>
 
 
-<!-- DEMO REVIEW 3 -->
+<!-- REVIEW 3 — JAMES -->
 
 <article
     class="review-card"
     data-review="3"
     tabindex="0"
     role="button"
-    aria-label="Open sample testimonial">
+    aria-label="Open James's review">
 
 <div class="review-avatar">
 
-AL
+<img
+    src="images/review-james.png"
+    alt="James">
 
 </div>
 
@@ -4583,7 +4206,7 @@ AL
 
 <h3>
 
-Amanda L.
+James
 
 </h3>
 
@@ -4597,27 +4220,11 @@ Amanda L.
 
 <p class="review-text">
 
-“Sample testimonial for design demonstration.
-This text will be replaced with an authentic
-customer review.”
+“I love how simple the planner is.
+It makes it easier to organize my
+routine and stay consistent.”
 
 </p>
-
-
-<span class="review-status">
-
-<i class="fa-solid fa-circle-info"></i>
-
-Sample
-
-</span>
-
-
-<span class="demo-label">
-
-Sample Testimonial • Demo Only
-
-</span>
 
 </article>
 
@@ -5376,14 +4983,17 @@ Review Cart
     class="modal-avatar"
     id="modalAvatar">
 
-SM
+<img
+    id="modalAvatarImage"
+    src="images/review-sarah.png"
+    alt="Sarah">
 
 </div>
 
 
 <h2 id="modalName">
 
-Sarah M.
+Sarah
 
 </h2>
 
@@ -5408,22 +5018,11 @@ Digital Marketing Made Simple
     class="modal-review"
     id="modalReview">
 
-“Sample testimonial for design demonstration.
-This content will be replaced with an authentic
-customer review.”
+“Clear, practical, and easy to follow.
+It helped me better organize my
+marketing ideas.”
 
 </p>
-
-
-<div class="modal-note">
-
-<strong>Sample Testimonial • Demo Only</strong><br>
-
-This placeholder is used only to demonstrate
-how authentic customer reviews will appear
-on the website.
-
-</div>
 
 
 </div>
@@ -5943,47 +5542,47 @@ document
 
 
 /* =========================================================
-   REVIEW MODAL
+   CUSTOMER REVIEWS
 ========================================================= */
 
-const demoReviews = {
+const customerReviews = {
 
     1:{
 
-        initials:"SM",
+        image:"images/review-sarah.png",
 
-        name:"Sarah M.",
+        name:"Sarah",
 
         product:"Digital Marketing Made Simple",
 
         review:
-            "“Sample testimonial for design demonstration. This content will be replaced with an authentic customer review.”"
+            "“Clear, practical, and easy to follow. It helped me better organize my marketing ideas.”"
 
     },
 
     2:{
 
-        initials:"JM",
+        image:"images/review-amanda.png",
 
-        name:"James M.",
+        name:"Amanda",
 
         product:"Starter Bundle",
 
         review:
-            "“Sample testimonial for design demonstration. This content will be replaced with an authentic customer review.”"
+            "“A great collection to get started. The templates are simple, useful, and easy to use.”"
 
     },
 
     3:{
 
-        initials:"AL",
+        image:"images/review-james.png",
 
-        name:"Amanda L.",
+        name:"James",
 
         product:"30-Day Wellness Planner",
 
         review:
-            "“Sample testimonial for design demonstration. This content will be replaced with an authentic customer review.”"
+            "“I love how simple the planner is. It makes it easier to organize my routine and stay consistent.”"
 
     }
 
@@ -5993,7 +5592,7 @@ const demoReviews = {
 function openReview(id){
 
     const review =
-        demoReviews[id];
+        customerReviews[id];
 
     if(!review){
 
@@ -6002,9 +5601,14 @@ function openReview(id){
     }
 
 
-    $("modalAvatar")
-        .textContent =
-            review.initials;
+    $("modalAvatarImage")
+        .src =
+            review.image;
+
+
+    $("modalAvatarImage")
+        .alt =
+            review.name;
 
 
     $("modalName")
