@@ -1,7 +1,6 @@
-
 <!-- =========================================
-     PART 13 — EBOOKS PAGE
-     CREATE A NEW FILE: ebooks.html
+     SHOPPING CART
+     FILE: cart.html
 ========================================= -->
 
 <!DOCTYPE html>
@@ -16,12 +15,12 @@
     content="width=device-width, initial-scale=1.0">
 
 <title>
-    eBooks | TheBestBundle
+    Shopping Cart | TheBestBundle
 </title>
 
 <meta
     name="description"
-    content="Explore premium digital eBooks from TheBestBundle.">
+    content="Review your selected TheBestBundle products and proceed to secure checkout.">
 
 <meta
     name="theme-color"
@@ -42,6 +41,25 @@
     rel="apple-touch-icon"
     href="/thebestbundle/images/favicon.png">
 
+
+<!-- PREMIUM FONTS -->
+
+<link
+    rel="preconnect"
+    href="https://fonts.googleapis.com">
+
+<link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+
+<!-- FONT AWESOME -->
+
 <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -49,407 +67,1007 @@
 
 <style>
 
+/* =================================================
+   ROOT
+================================================= */
+
 :root{
+
     --navy:#071A33;
-    --navy-light:#0D2B50;
-    --gold:#F4C542;
-    --gold-dark:#D9A91A;
+
+    --gold:#C8A45D;
+
+    --gold-light:#E1C77E;
+
+    --cream:#F8F5ED;
+
     --white:#FFFFFF;
-    --off-white:#F8FAFC;
-    --text-dark:#172033;
-    --text-gray:#64748B;
-    --border:#E2E8F0;
-    --max-width:1200px;
-    --radius:14px;
+
+    --text:#5F6672;
+
+    --border:#E8E2D7;
+
+    --max-width:1000px;
+
 }
+
+
+/* =================================================
+   RESET
+================================================= */
 
 *{
+
     margin:0;
+
     padding:0;
+
     box-sizing:border-box;
+
 }
+
 
 html{
+
     scroll-behavior:smooth;
+
 }
+
 
 body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:var(--off-white);
+
+    font-family:'Montserrat',Arial,Helvetica,sans-serif;
+
+    background:var(--cream);
+
     color:var(--navy);
-    line-height:1.6;
+
+    line-height:1.75;
+
 }
 
-img{
-    max-width:100%;
-    display:block;
-}
 
 a{
+
     color:inherit;
+
     text-decoration:none;
+
 }
+
 
 button{
+
     font:inherit;
+
     cursor:pointer;
+
 }
+
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
 
 .container{
+
     width:90%;
+
     max-width:var(--max-width);
-    margin:0 auto;
+
+    margin:auto;
+
 }
 
 
-/* HEADER */
+/* =================================================
+   HEADER
+================================================= */
 
 .page-header{
+
     background:var(--navy);
+
     color:var(--white);
+
 }
+
 
 .header-inner{
-    min-height:90px;
+
+    min-height:82px;
+
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
-    gap:20px;
+
 }
 
-.header-logo img{
-    height:70px;
-    width:auto;
+
+.header-logo{
+
+    font-family:'Cormorant Garamond',Georgia,serif;
+
+    font-size:30px;
+
+    font-weight:700;
+
+    letter-spacing:.3px;
+
+    color:var(--gold);
+
 }
+
+
+.header-logo:hover{
+
+    color:var(--gold-light);
+
+}
+
 
 .header-actions{
+
     display:flex;
+
     align-items:center;
-    gap:12px;
+
+    gap:8px;
+
 }
+
 
 .header-icon{
+
     position:relative;
-    width:46px;
-    height:46px;
+
+    width:44px;
+
+    height:44px;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     border:none;
-    border-radius:8px;
+
+    border-radius:50%;
+
     background:transparent;
+
     color:var(--white);
-    font-size:24px;
+
+    font-size:18px;
+
+    transition:.25s ease;
+
 }
+
 
 .header-icon:hover{
-    background:rgba(255,255,255,.08);
+
     color:var(--gold);
+
+    background:rgba(255,255,255,.08);
+
 }
+
 
 .cart-count{
+
     position:absolute;
-    top:0;
-    right:0;
-    min-width:19px;
-    height:19px;
+
+    top:-1px;
+
+    right:-1px;
+
+    min-width:18px;
+
+    height:18px;
+
     padding:0 5px;
+
     border-radius:30px;
+
     background:var(--gold);
+
     color:var(--navy);
-    font-size:11px;
+
+    font-size:10px;
+
     font-weight:800;
-    line-height:19px;
+
+    line-height:18px;
+
+    text-align:center;
+
 }
 
 
-/* BACK BUTTON */
+/* =================================================
+   BACK
+================================================= */
 
 .back-row{
-    background:var(--white);
-    border-bottom:1px solid var(--border);
+
+    background:var(--cream);
+
 }
+
 
 .back-inner{
-    min-height:60px;
+
+    min-height:64px;
+
     display:flex;
+
     align-items:center;
+
 }
+
 
 .back-button{
+
     display:inline-flex;
+
     align-items:center;
+
     gap:9px;
-    color:var(--navy);
-    font-weight:700;
+
     border:none;
+
     background:transparent;
+
+    color:var(--navy);
+
+    font-size:13px;
+
+    font-weight:700;
+
+    padding:8px 0;
+
+    transition:.25s ease;
+
 }
+
 
 .back-button:hover{
-    color:var(--gold-dark);
-}
 
-
-/* PAGE INTRO */
-
-.page-hero{
-    background:var(--navy);
-    color:var(--white);
-    padding:75px 0 90px;
-    text-align:center;
-}
-
-.page-hero span{
-    display:block;
     color:var(--gold);
-    font-size:14px;
-    font-weight:800;
-    letter-spacing:2px;
-    text-transform:uppercase;
-    margin-bottom:15px;
-}
 
-.page-hero h1{
-    font-size:clamp(40px,7vw,64px);
-    line-height:1.1;
-    margin-bottom:20px;
-}
-
-.page-hero p{
-    max-width:700px;
-    margin:0 auto;
-    color:rgba(255,255,255,.82);
-    font-size:18px;
 }
 
 
-/* PRODUCTS */
+/* =================================================
+   HERO
+================================================= */
 
-.products-section{
-    padding:80px 0 100px;
-}
+.cart-hero{
 
-.products-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:28px;
-}
+    padding:68px 0 72px;
 
-.product-card{
-    display:flex;
-    flex-direction:column;
-    overflow:hidden;
-    background:var(--white);
-    border:1px solid var(--border);
-    border-radius:var(--radius);
-    box-shadow:0 10px 30px rgba(7,26,51,.08);
-}
+    background:var(--cream);
 
-.product-image{
-    min-height:330px;
-    padding:25px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:var(--off-white);
-}
-
-.product-image img{
-    width:100%;
-    max-width:240px;
-    max-height:300px;
-    object-fit:contain;
-}
-
-.product-info{
-    flex:1;
-    display:flex;
-    flex-direction:column;
-    padding:25px;
-}
-
-.product-label{
-    color:var(--gold-dark);
-    font-size:12px;
-    font-weight:800;
-    letter-spacing:1.5px;
-    text-transform:uppercase;
-    margin-bottom:8px;
-}
-
-.product-info h2{
-    font-size:22px;
-    line-height:1.3;
-    margin-bottom:12px;
-}
-
-.product-info p{
-    color:var(--text-gray);
-    font-size:15px;
-    margin-bottom:18px;
-}
-
-.product-price{
-    margin-top:auto;
-    margin-bottom:18px;
-    font-size:25px;
-    font-weight:800;
-}
-
-.product-actions{
-    display:grid;
-    grid-template-columns:repeat(2,minmax(140px,1fr));
-    gap:10px;
-}
-
-.btn{
-    min-height:48px;
-    padding:12px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:8px;
-    border:none;
-    font-size:14px;
-    font-weight:800;
     text-align:center;
+
 }
 
-.buy-button{
-    background:var(--gold);
+
+.cart-kicker{
+
+    margin-bottom:14px;
+
+    color:var(--gold);
+
+    font-size:11px;
+
+    font-weight:800;
+
+    letter-spacing:2.2px;
+
+    text-transform:uppercase;
+
+}
+
+
+.cart-hero h1{
+
+    margin-bottom:18px;
+
     color:var(--navy);
-}
 
-.cart-button{
-    background:var(--navy);
-    color:var(--white);
-    border:2px solid var(--navy);
-    white-space:nowrap;
-}
+    font-family:'Cormorant Garamond',Georgia,serif;
 
-.cart-button:hover{
-    background:var(--navy);
-    color:var(--white);
+    font-size:clamp(46px,8vw,68px);
+
+    font-weight:600;
+
+    line-height:1.02;
+
 }
 
 
-/* FOOTER */
+.cart-hero h1 span{
 
-.footer{
-    background:var(--navy);
-    color:var(--white);
-    padding:35px 0;
-    text-align:center;
-}
-
-.footer-tagline{
     color:var(--gold);
-    font-weight:800;
-    letter-spacing:1px;
-    margin-bottom:7px;
-}
-
-.footer p{
-    color:rgba(255,255,255,.7);
-    font-size:13px;
-}
-
-
-/* RESPONSIVE */
-
-@media(max-width:950px){
-
-    .products-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
 
 }
 
-@media(max-width:650px){
 
-    .products-grid{
-        grid-template-columns:1fr;
-    }
+.cart-hero p{
 
-    .product-card{
-        max-width:430px;
-        width:100%;
-        margin:0 auto;
-    }
+    max-width:700px;
 
-    .page-hero{
-        padding:60px 0 70px;
-    }
+    margin:0 auto;
+
+    color:var(--text);
+
+    font-size:15px;
+
+    line-height:1.8;
 
 }
 
-@media(max-width:380px){
 
-    .product-actions{
-        grid-template-columns:1fr;
-    }
-
-}
-
-/* =========================
-   SHOPPING CART
-========================= */
+/* =================================================
+   CART SECTION
+================================================= */
 
 .cart-section{
-    max-width:1200px;
-    margin:60px auto;
-    padding:0 20px;
+
+    padding:20px 0 90px;
+
 }
 
-.cart-container{
+
+.cart-layout{
+
     display:grid;
-    grid-template-columns:2fr 1fr;
-    gap:30px;
+
+    grid-template-columns:minmax(0,2fr) minmax(280px,1fr);
+
+    gap:25px;
+
     align-items:start;
+
 }
 
-.cart-items,
-.cart-summary{
-    background:#fff;
-    border:1px solid #e5e7eb;
-    border-radius:16px;
-    padding:24px;
+
+/* =================================================
+   CART CARDS
+================================================= */
+
+.cart-card{
+
+    background:var(--white);
+
+    border:1px solid var(--border);
+
+    border-radius:22px;
+
+    box-shadow:0 18px 45px rgba(7,26,51,.07);
+
+    overflow:hidden;
+
 }
 
-.cart-items h2,
-.cart-summary h2{
-    margin-top:0;
-    margin-bottom:20px;
+
+.cart-card-header{
+
+    padding:28px 32px;
+
+    border-bottom:1px solid var(--border);
+
 }
+
+
+.cart-card-header h2{
+
+    color:var(--navy);
+
+    font-family:'Cormorant Garamond',Georgia,serif;
+
+    font-size:32px;
+
+    font-weight:600;
+
+    line-height:1.2;
+
+}
+
+
+.cart-card-header p{
+
+    margin-top:5px;
+
+    color:var(--text);
+
+    font-size:12px;
+
+}
+
+
+/* =================================================
+   CART ITEMS
+================================================= */
+
+.cart-items{
+
+    padding:28px 32px;
+
+}
+
+
+.cart-item{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+    padding:19px 0;
+
+    border-bottom:1px solid var(--border);
+
+}
+
+
+.cart-item:first-child{
+
+    padding-top:0;
+
+}
+
+
+.cart-item:last-child{
+
+    border-bottom:none;
+
+    padding-bottom:0;
+
+}
+
+
+.cart-item-info{
+
+    min-width:0;
+
+}
+
+
+.cart-item-name{
+
+    color:var(--navy);
+
+    font-size:14px;
+
+    font-weight:700;
+
+    line-height:1.5;
+
+}
+
+
+.cart-item-label{
+
+    margin-top:3px;
+
+    color:var(--text);
+
+    font-size:11px;
+
+}
+
+
+.cart-item-price{
+
+    flex-shrink:0;
+
+    color:var(--navy);
+
+    font-size:16px;
+
+    font-weight:800;
+
+}
+
+
+/* =================================================
+   EMPTY CART
+================================================= */
+
+.empty-cart{
+
+    padding:42px 20px;
+
+    text-align:center;
+
+}
+
+
+.empty-cart-icon{
+
+    width:65px;
+
+    height:65px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin:0 auto 18px;
+
+    border-radius:50%;
+
+    background:#FBF5E7;
+
+    border:1px solid #EAD8A9;
+
+    color:var(--gold);
+
+    font-size:24px;
+
+}
+
+
+.empty-cart h3{
+
+    margin-bottom:7px;
+
+    color:var(--navy);
+
+    font-family:'Cormorant Garamond',Georgia,serif;
+
+    font-size:30px;
+
+    font-weight:600;
+
+}
+
+
+.empty-cart p{
+
+    max-width:430px;
+
+    margin:0 auto 22px;
+
+    color:var(--text);
+
+    font-size:13px;
+
+}
+
+
+/* =================================================
+   SUMMARY
+================================================= */
+
+.summary-content{
+
+    padding:28px 32px 32px;
+
+}
+
 
 .summary-row{
+
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
-    padding:12px 0;
-    border-bottom:1px solid #ececec;
+
+    gap:15px;
+
+    padding:14px 0;
+
+    border-bottom:1px solid var(--border);
+
+    color:var(--text);
+
+    font-size:13px;
+
 }
+
 
 .summary-row:last-of-type{
+
     border-bottom:none;
-    font-size:1.1rem;
-    font-weight:700;
+
 }
 
-.cart-summary .btn{
+
+.summary-total{
+
+    color:var(--navy);
+
+    font-size:21px;
+
+    font-weight:800;
+
+}
+
+
+.summary-note{
+
+    margin:2px 0 22px;
+
+    color:var(--text);
+
+    font-size:11px;
+
+    line-height:1.7;
+
+}
+
+
+/* =================================================
+   BUTTONS
+================================================= */
+
+.btn{
+
+    min-height:48px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
     width:100%;
-    margin-top:15px;
+
+    padding:12px 18px;
+
+    border:none;
+
+    border-radius:30px;
+
+    font-size:12px;
+
+    font-weight:800;
+
+    text-align:center;
+
+    transition:.25s ease;
+
 }
 
-@media (max-width:768px){
 
-    .cart-container{
+.primary-btn{
+
+    background:var(--navy);
+
+    color:var(--white);
+
+}
+
+
+.primary-btn:hover{
+
+    background:#0D2B50;
+
+    transform:translateY(-1px);
+
+}
+
+
+.primary-btn:disabled{
+
+    opacity:.65;
+
+    cursor:not-allowed;
+
+    transform:none;
+
+}
+
+
+.secondary-btn{
+
+    margin-top:11px;
+
+    background:var(--cream);
+
+    border:1px solid var(--border);
+
+    color:var(--navy);
+
+}
+
+
+.secondary-btn:hover{
+
+    border-color:var(--gold);
+
+    color:var(--gold);
+
+    transform:translateY(-1px);
+
+}
+
+
+.shop-button{
+
+    width:auto;
+
+    display:inline-flex;
+
+    padding:12px 24px;
+
+}
+
+
+.secure-note{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:7px;
+
+    margin-top:18px;
+
+    color:var(--text);
+
+    font-size:10px;
+
+}
+
+
+.secure-note i{
+
+    color:var(--gold);
+
+}
+
+
+/* =================================================
+   FOOTER
+================================================= */
+
+.footer{
+
+    padding:38px 0;
+
+    background:var(--navy);
+
+    color:var(--white);
+
+    text-align:center;
+
+}
+
+
+.footer-tagline{
+
+    margin-bottom:8px;
+
+    color:var(--gold);
+
+    font-size:11px;
+
+    font-weight:800;
+
+    letter-spacing:2px;
+
+}
+
+
+.footer p{
+
+    color:rgba(255,255,255,.65);
+
+    font-size:11px;
+
+}
+
+
+/* =================================================
+   MOBILE
+================================================= */
+
+@media(max-width:800px){
+
+    .cart-layout{
+
         grid-template-columns:1fr;
+
+    }
+
+
+    .summary-content{
+
+        padding-top:24px;
+
     }
 
 }
-     
+
+
+@media(max-width:700px){
+
+    .header-inner{
+
+        min-height:72px;
+
+    }
+
+
+    .header-logo{
+
+        font-size:27px;
+
+    }
+
+
+    .header-icon{
+
+        width:40px;
+
+        height:40px;
+
+    }
+
+
+    .cart-hero{
+
+        padding:52px 0 55px;
+
+    }
+
+
+    .cart-hero h1{
+
+        font-size:48px;
+
+    }
+
+
+    .cart-hero p{
+
+        font-size:13px;
+
+        padding:0 5px;
+
+    }
+
+
+    .cart-section{
+
+        padding:10px 0 65px;
+
+    }
+
+
+    .cart-card{
+
+        border-radius:18px;
+
+    }
+
+
+    .cart-card-header{
+
+        padding:24px 20px;
+
+    }
+
+
+    .cart-card-header h2{
+
+        font-size:28px;
+
+    }
+
+
+    .cart-items{
+
+        padding:25px 20px;
+
+    }
+
+
+    .summary-content{
+
+        padding:24px 20px 27px;
+
+    }
+
+
+    .cart-item{
+
+        gap:12px;
+
+    }
+
+
+    .cart-item-name{
+
+        font-size:13px;
+
+    }
+
+
+    .cart-item-price{
+
+        font-size:15px;
+
+    }
+
+}
+
+
+@media(max-width:420px){
+
+    .header-logo{
+
+        font-size:24px;
+
+    }
+
+
+    .cart-hero h1{
+
+        font-size:43px;
+
+    }
+
+
+    .cart-card-header{
+
+        padding:22px 17px;
+
+    }
+
+
+    .cart-items{
+
+        padding:22px 17px;
+
+    }
+
+
+    .summary-content{
+
+        padding:22px 17px 25px;
+
+    }
+
+
+    .cart-item{
+
+        align-items:flex-start;
+
+    }
+
+
+    .cart-item-price{
+
+        font-size:14px;
+
+    }
+
+}
+
 </style>
 
 </head>
@@ -458,158 +1076,330 @@ button{
 <body>
 
 
+<!-- =================================================
+     HEADER
+================================================= -->
+
 <header class="page-header">
 
-    <div class="container header-inner">
-
-        <a
-            href="index.html"
-            class="header-logo">
-
-            <img
-                src="images/logo.png"
-                alt="TheBestBundle">
-
-        </a>
+<div class="container header-inner">
 
 
-        <div class="header-actions">
+    <a
+        href="index.html"
+        class="header-logo">
 
-            <button
-                type="button"
-                class="header-icon"
-                id="pageCartButton"
-                aria-label="Shopping cart">
+        TheBestBundle
 
-                <i class="fa-solid fa-cart-shopping"></i>
-
-                <span
-                    class="cart-count"
-                    id="pageCartCount">
-                    0
-                </span>
-
-            </button>
+    </a>
 
 
-            <a
-                href="index.html"
-                class="header-icon"
-                aria-label="Home">
+    <div class="header-actions">
 
-                <i class="fa-solid fa-house"></i>
-
-            </a>
-
-        </div>
-
-    </div>
-
-</header>
-
-
-<div class="back-row">
-
-    <div class="container back-inner">
 
         <button
             type="button"
-            class="back-button"
-            onclick="returnToPreviousPage()">
+            class="header-icon"
+            id="pageCartButton"
+            aria-label="Shopping cart">
 
-            <i class="fa-solid fa-arrow-left"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
 
-            Back
+            <span
+                class="cart-count"
+                id="pageCartCount">
+
+                0
+
+            </span>
 
         </button>
+
+
+        <a
+            href="index.html"
+            class="header-icon"
+            aria-label="Home">
+
+            <i class="fa-solid fa-house"></i>
+
+        </a>
+
 
     </div>
 
 </div>
 
+</header>
 
-<section class="page-hero">
 
-    <div class="container">
+<!-- =================================================
+     BACK
+================================================= -->
 
-        <span>
-            TheBestBundle Collection
-        </span>
+<div class="back-row">
 
-       
-     <h1>
-       Shopping Cart
-    </h1>
-        
+<div class="container back-inner">
 
-       <p>
-    Review your selected products, update quantities, and proceed to secure checkout whenever you're ready.
-    </p> 
 
+    <button
+        type="button"
+        class="back-button"
+        onclick="returnToPreviousPage()">
+
+        <i class="fa-solid fa-arrow-left"></i>
+
+        Back
+
+    </button>
+
+
+</div>
+
+</div>
+
+
+<!-- =================================================
+     HERO
+================================================= -->
+
+<section class="cart-hero">
+
+<div class="container">
+
+
+    <div class="cart-kicker">
+        THEBESTBUNDLE • YOUR SELECTION
     </div>
+
+
+    <h1>
+        Shopping
+        <span>Cart</span>
+    </h1>
+
+
+    <p>
+        Review your selected products, update your order,
+        and proceed to secure checkout whenever you're ready.
+    </p>
+
+
+</div>
 
 </section>
 
+
+<!-- =================================================
+     MAIN CART
+================================================= -->
+
 <main class="cart-section">
 
-    <div class="cart-container">
+<div class="container">
 
-        <div class="cart-items">
 
-            <h2>Your Cart</h2>
+    <div class="cart-layout">
 
-            <div id="cartItems">
+
+        <!-- CART ITEMS -->
+
+        <section class="cart-card">
+
+
+            <div class="cart-card-header">
+
+                <h2>
+                    Your Cart
+                </h2>
+
+                <p>
+                    Review the digital products you selected.
+                </p>
+
+            </div>
+
+
+            <div
+                class="cart-items"
+                id="cartItems">
+
                 <!-- Cart items will appear here automatically -->
+
             </div>
 
-        </div>
 
-        <aside class="cart-summary">
+            <div
+                class="empty-cart"
+                id="emptyCartMessage"
+                style="display:none;">
 
-            <h2>Order Summary</h2>
+                <div class="empty-cart-icon">
 
-            <div class="summary-row">
-                <span>Items</span>
-                <span id="cartCount">0</span>
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                </div>
+
+
+                <h3>
+                    Your Cart Is Empty
+                </h3>
+
+
+                <p>
+                    Explore our digital collections and
+                    discover products designed to help
+                    you learn, create and grow.
+                </p>
+
+
+                <a
+                    href="ebooks.html"
+                    class="btn primary-btn shop-button">
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                    Continue Shopping
+
+                </a>
+
             </div>
 
-            <div class="summary-row">
-                <span>Total</span>
-                <strong id="cartTotal">$0.00</strong>
+
+        </section>
+
+
+        <!-- ORDER SUMMARY -->
+
+        <aside class="cart-card">
+
+
+            <div class="cart-card-header">
+
+                <h2>
+                    Order Summary
+                </h2>
+
+                <p>
+                    Review your order before checkout.
+                </p>
+
             </div>
 
-            <button id="checkoutButton" class="btn primary-btn">
-                Proceed to Checkout
-            </button>
 
-            <a href="ebooks.html" class="btn secondary-btn">
-                Continue Shopping
-            </a>
+            <div class="summary-content">
+
+
+                <div class="summary-row">
+
+                    <span>
+                        Items
+                    </span>
+
+                    <strong id="cartCount">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-row">
+
+                    <span>
+                        Total
+                    </span>
+
+                    <strong
+                        class="summary-total"
+                        id="cartTotal">
+
+                        $0.00
+
+                    </strong>
+
+                </div>
+
+
+                <p class="summary-note">
+
+                    Your selected digital products will be
+                    processed through secure checkout.
+
+                </p>
+
+
+                <button
+                    id="checkoutButton"
+                    class="btn primary-btn">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    Proceed to Checkout
+
+                </button>
+
+
+                <a
+                    href="ebooks.html"
+                    class="btn secondary-btn">
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    Continue Shopping
+
+                </a>
+
+
+                <div class="secure-note">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    Secure checkout
+
+                </div>
+
+
+            </div>
+
 
         </aside>
 
+
     </div>
+
+
+</div>
 
 </main>
 
 
+<!-- =================================================
+     FOOTER
+================================================= -->
 
 <footer class="footer">
 
-    <div class="container">
+<div class="container">
 
-        <div class="footer-tagline">
-            LEARN • CREATE • GROW
-        </div>
 
-        <p>
-            © 2026 TheBestBundle. All Rights Reserved.
-        </p>
-
+    <div class="footer-tagline">
+        LEARN • CREATE • GROW
     </div>
+
+
+    <p>
+        © 2026 TheBestBundle. All Rights Reserved.
+    </p>
+
+
+</div>
 
 </footer>
 
+
+<!-- =================================================
+     SCRIPT
+================================================= -->
 
 <script>
 
@@ -654,18 +1444,26 @@ document
                 const product = {
 
                     id:this.dataset.id,
-                    name:this.dataset.name,
-                    price:Number(this.dataset.price),
-                    image:this.dataset.image,
-                    stripe:this.dataset.stripe,
-                    priceId:this.dataset.priceId
-                 };
 
-                
-         const alreadyExists =
+                    name:this.dataset.name,
+
+                    price:Number(this.dataset.price),
+
+                    image:this.dataset.image,
+
+                    stripe:this.dataset.stripe,
+
+                    priceId:this.dataset.priceId
+
+                };
+
+
+                const alreadyExists =
                     ebookCart.some(
                         function(item){
+
                             return item.id === product.id;
+
                         }
                     );
 
@@ -682,10 +1480,13 @@ document
                 this.textContent =
                     '✓ Added';
 
+
                 setTimeout(
                     () => {
+
                         this.textContent =
                             'Add to Cart';
+
                     },
                     1200
                 );
@@ -727,117 +1528,231 @@ function returnToPreviousPage(){
 
 updatePageCartCount();
 
+
 function loadCart(){
 
     const cart =
-        JSON.parse(localStorage.getItem('theBestBundleCart')) || [];
+        JSON.parse(
+            localStorage.getItem(
+                'theBestBundleCart'
+            )
+        ) || [];
+
 
     const cartItems =
         document.getElementById('cartItems');
 
+
     const cartCount =
         document.getElementById('cartCount');
+
 
     const cartTotal =
         document.getElementById('cartTotal');
 
+
+    const emptyCartMessage =
+        document.getElementById(
+            'emptyCartMessage'
+        );
+
+
     cartItems.innerHTML = '';
+
 
     let total = 0;
 
-    cart.forEach((item,index)=>{
 
-        total += Number(item.price);
+    if(cart.length === 0){
 
-        cartItems.innerHTML += `
-            <div class="cart-item">
-                <strong>${item.name}</strong><br>
-                $${Number(item.price).toFixed(2)}
-            </div>
-        `;
+        emptyCartMessage.style.display =
+            'block';
 
-    });
+    }else{
 
-    cartCount.textContent = cart.length;
+        emptyCartMessage.style.display =
+            'none';
+
+
+        cart.forEach((item,index)=>{
+
+            total += Number(item.price);
+
+
+            cartItems.innerHTML += `
+
+                <div class="cart-item">
+
+                    <div class="cart-item-info">
+
+                        <div class="cart-item-name">
+                            ${item.name}
+                        </div>
+
+                        <div class="cart-item-label">
+                            Digital Product
+                        </div>
+
+                    </div>
+
+                    <div class="cart-item-price">
+                        $${Number(item.price).toFixed(2)}
+                    </div>
+
+                </div>
+
+            `;
+
+        });
+
+    }
+
+
+    cartCount.textContent =
+        cart.length;
+
+
     cartTotal.textContent =
         '$' + total.toFixed(2);
 
 }
+
 
 document.addEventListener(
     'DOMContentLoaded',
     loadCart
 );
 
-const checkoutButton = document.getElementById('checkoutButton');
 
-if (checkoutButton) {
+const checkoutButton =
+    document.getElementById(
+        'checkoutButton'
+    );
 
-    checkoutButton.addEventListener('click', async function () {
 
-        if (ebookCart.length === 0) {
-            alert('Your cart is empty.');
-            return;
-        }
+if(checkoutButton){
 
-        checkoutButton.disabled = true;
-        checkoutButton.textContent = 'Processing...';
+    checkoutButton.addEventListener(
+        'click',
+        async function(){
 
-        try {
+            if(ebookCart.length === 0){
 
-            const response = await fetch('/api/create-checkout-session', {
-
-                method: 'POST',
-
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-
-                body: JSON.stringify({
-                    items: ebookCart.map(item => ({
-                        id: item.id,
-                        name: item.name,
-                        price: item.price,
-                        priceId: item.priceId,
-                        quantity: 1
-                    }))
-                })
-
-            });
-
-            const data = await response.json();
-
-            if (!response.ok) {
-                throw new Error(
-                    data.error || 'Unable to create checkout session.'
+                alert(
+                    'Your cart is empty.'
                 );
+
+                return;
+
             }
 
-            if (!data.url) {
-                throw new Error(
-                    'Stripe checkout URL was not returned.'
+
+            checkoutButton.disabled =
+                true;
+
+
+            checkoutButton.innerHTML = `
+                <i class="fa-solid fa-spinner fa-spin"></i>
+                Processing...
+            `;
+
+
+            try{
+
+                const response =
+                    await fetch(
+                        '/api/create-checkout-session',
+                        {
+
+                            method:'POST',
+
+                            headers:{
+                                'Content-Type':
+                                    'application/json'
+                            },
+
+                            body:JSON.stringify({
+
+                                items:
+                                    ebookCart.map(
+                                        item => ({
+
+                                            id:item.id,
+
+                                            name:item.name,
+
+                                            price:item.price,
+
+                                            priceId:item.priceId,
+
+                                            quantity:1
+
+                                        })
+                                    )
+
+                            })
+
+                        }
+                    );
+
+
+                const data =
+                    await response.json();
+
+
+                if(!response.ok){
+
+                    throw new Error(
+                        data.error ||
+                        'Unable to create checkout session.'
+                    );
+
+                }
+
+
+                if(!data.url){
+
+                    throw new Error(
+                        'Stripe checkout URL was not returned.'
+                    );
+
+                }
+
+
+                window.location.href =
+                    data.url;
+
+
+            }catch(error){
+
+                console.error(
+                    'Checkout error:',
+                    error
                 );
+
+
+                alert(
+                    error.message ||
+                    'Something went wrong while starting checkout.'
+                );
+
+
+                checkoutButton.disabled =
+                    false;
+
+
+                checkoutButton.innerHTML = `
+                    <i class="fa-solid fa-lock"></i>
+                    Proceed to Checkout
+                `;
+
             }
 
-            window.location.href = data.url;
-
-        } catch (error) {
-
-            console.error('Checkout error:', error);
-
-            alert(
-                error.message ||
-                'Something went wrong while starting checkout.'
-            );
-
-            checkoutButton.disabled = false;
-            checkoutButton.textContent = 'Proceed to Checkout';
-
         }
-
-    });
+    );
 
 }
+
 </script>
 
 
